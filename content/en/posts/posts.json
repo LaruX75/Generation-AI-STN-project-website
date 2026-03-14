@@ -1,0 +1,8 @@
+{
+  "tags": [
+    "posts",
+    "posts-en"
+  ],
+  "lang": "en",
+  "layout": "layouts/post.njk"
+}

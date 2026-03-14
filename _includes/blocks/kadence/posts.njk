@@ -1,7 +1,7 @@
 {# kadence/posts — Eleventy collection fallback for dynamic posts block #}
 {% set b = kadenceBlock.attrs %}
 {% set count = b.postsToShow if b.postsToShow else (b.numberOfItems if b.numberOfItems else 3) %}
-<section class="wp-block-kadence-posts kb-posts kadence-block kadence-posts kb-posts-block{% if b.className %} {{ b.className }}{% endif %}">
+<section class="wp-block-kadence-posts kadence-block kadence-posts kb-posts-block{% if b.className %} {{ b.className }}{% endif %}">
   {% if kadenceInnerHtml | trim %}
     {{ kadenceInnerHtml | safe }}
   {% else %}

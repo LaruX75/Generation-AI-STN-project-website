@@ -66,6 +66,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("pages_sv", col =>
     col.getAll().filter(p => p.data.lang === "sv" && p.data.sourceType === "pages").sort(byDate)
   );
+  eleventyConfig.addCollection("posts_en", col =>
+    col.getAll().filter(p => p.data.lang === "en" && p.data.sourceType === "posts").sort(byDate)
+  );
+  eleventyConfig.addCollection("pages_en", col =>
+    col.getAll().filter(p => p.data.lang === "en" && p.data.sourceType === "pages").sort(byDate)
+  );
 
   eleventyConfig.addFilter("publicationsForPerson", (items, personName) => {
     const target = normalizePersonName(personName);

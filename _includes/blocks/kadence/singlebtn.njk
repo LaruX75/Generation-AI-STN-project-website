@@ -1,7 +1,7 @@
 {# kadence/singlebtn — Single button block #}
 {% set b = kadenceBlock.attrs %}
 <div
-  class="wp-block-kadence-singlebtn kb-btn-wrap kadence-block kadence-singlebtn{% if b.hAlign %} kb-btn-align-{{ b.hAlign }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
+  class="wp-block-kadence-singlebtn kadence-block kadence-singlebtn kb-btn-wrap{% if b.hAlign %} kb-btn-align-{{ b.hAlign }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
 >
   <a
     class="kb-button kb-btn{% if b.size %} kb-btn-size-{{ b.size }}{% endif %}{% if b.style %} kb-btn-style-{{ b.style }}{% endif %}"

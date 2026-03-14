@@ -12,7 +12,6 @@
       var panels = Array.from(wrap.querySelectorAll('.kt-tabs-content-wrap > .kb-tab-panel'));
       var titleItems = Array.from(wrap.querySelectorAll('.kt-tabs-title-list .kt-title-item'));
       var titleLinks = Array.from(wrap.querySelectorAll('.kt-tabs-title-list .kt-tab-title'));
-
       function activate(idx) {
         panels.forEach(function (p, i) { p.classList.toggle('kt-tab-active', i === idx); });
         titleItems.forEach(function (li, i) {
@@ -20,11 +19,8 @@
           li.classList.toggle('kt-tab-title-inactive', i !== idx);
         });
       }
-
-      // Find initially active tab from markup
       var initIdx = titleItems.findIndex(function (li) { return li.classList.contains('kt-tab-title-active'); });
       activate(initIdx >= 0 ? initIdx : 0);
-
       titleLinks.forEach(function (link) {
         link.addEventListener('click', function (e) {
           e.preventDefault();

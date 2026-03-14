@@ -1,4 +1,4 @@
-{# kadence/query — Post list with automatic infinite scroll via IntersectionObserver #}
+{# kadence/query — Post list with client-side load-more (replaces WP infinite scroll) #}
 {% set b = kadenceBlock.attrs %}
 {% set _pageSize = b.postsToShow if b.postsToShow else (b.numberOfItems if b.numberOfItems else 10) %}
 {% set _col = b.collectionName if b.collectionName else "posts" %}

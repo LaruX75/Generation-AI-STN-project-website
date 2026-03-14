@@ -2,7 +2,7 @@
 {% set b = kadenceBlock.attrs %}
 {% set h = b.spacerHeight[0] if (b.spacerHeight and b.spacerHeight[0]) else 60 %}
 <div
-  class="wp-block-kadence-spacer kt-block-spacer kadence-block kadence-spacer{% if b.uniqueID %} kt-block-spacer-id_{{ b.uniqueID }}{% endif %} kt-block-spacer{% if b.className %} {{ b.className }}{% endif %}"
+  class="wp-block-kadence-spacer kadence-block kadence-spacer{% if b.uniqueID %} kt-block-spacer-id_{{ b.uniqueID }}{% endif %} kt-block-spacer{% if b.className %} {{ b.className }}{% endif %}"
   style="height:{{ h }}px;"
   aria-hidden="true"
 >
