@@ -60,6 +60,13 @@ module.exports = function(eleventyConfig) {
     col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).includes("Tutkimus")).sort(byDate)
   );
 
+  eleventyConfig.addCollection("posts_sv", col =>
+    col.getAll().filter(p => p.data.lang === "sv" && p.data.sourceType === "posts").sort(byDate)
+  );
+  eleventyConfig.addCollection("pages_sv", col =>
+    col.getAll().filter(p => p.data.lang === "sv" && p.data.sourceType === "pages").sort(byDate)
+  );
+
   eleventyConfig.addFilter("publicationsForPerson", (items, personName) => {
     const target = normalizePersonName(personName);
     return (items || []).filter(item => {
