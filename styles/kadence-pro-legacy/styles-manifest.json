@@ -1,0 +1,112 @@
+[
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-header.css?ver=3.6.6",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/style-blocks-header.css",
+    "size": 12098
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-navigation.css?ver=3.6.6",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/style-blocks-navigation.css",
+    "size": 106547
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-rowlayout.css?ver=3.6.6",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/style-blocks-rowlayout.css",
+    "size": 10200
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-column.css?ver=3.6.6",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/style-blocks-column.css",
+    "size": 1477
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-identity.css?ver=3.6.6",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/style-blocks-identity.css",
+    "size": 2418
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/embedpress/assets/css/blocks.build.css?ver=1773238883",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/blocks.build.css",
+    "size": 51381
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-includes/css/dist/block-library/style.min.css?ver=563e0050da1e4c5ec80f8cdbd8e1098b",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/style.min.css",
+    "size": 119355
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css?ver=1",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/style.min-1.css",
+    "size": 908
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.min.css?ver=1",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/style.min-2.css",
+    "size": 258
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/complianz-gdpr-premium/assets/css/cookieblocker.min.css?ver=1773276777",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/cookieblocker.min.css",
+    "size": 2782
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/themes/kadence/assets/css/global.min.css?ver=1.4.5",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/global.min.css",
+    "size": 28005
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/themes/kadence/assets/css/content.min.css?ver=1.4.5",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/content.min.css",
+    "size": 34362
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/themes/kadence/assets/css/footer.min.css?ver=1.4.5",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/footer.min.css",
+    "size": 19929
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-pro/dist/mega-menu/menu-addon.css?ver=1.1.16",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/menu-addon.css",
+    "size": 6552
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/betterdocs-pro/assets/public/css/instant-answer.css?ver=82ac3f719faee5c4e6ac",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/instant-answer.css",
+    "size": 71344
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/newsletter/style.css?ver=9.1.7",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/style.css",
+    "size": 6840
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-advancedbtn.css?ver=3.6.6",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/style-blocks-advancedbtn.css",
+    "size": 2974
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-iconlist.css?ver=3.6.6",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/style-blocks-iconlist.css",
+    "size": 3593
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks-pro/dist/style-blocks-postgrid.css?ver=2.8.8",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/style-blocks-postgrid.css",
+    "size": 22003
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/betterdocs-style/reusable-blocks/betterdocs-reusable-2395.min.css?ver=581b3e5aac",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/betterdocs-reusable-2395.min.css",
+    "size": 43999
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/includes/assets/css/kadence-splide.min.css?ver=3.6.6",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/kadence-splide.min.css",
+    "size": 10341
+  },
+  {
+    "sourceUrl": "https://www.generation-ai-stn.fi/(inline)",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/inline-styles.css",
+    "size": 144428
+  }
+]

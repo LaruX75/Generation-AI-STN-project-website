@@ -1,0 +1,19 @@
+{# kadence/image — Image with optional link, alt text and caption #}
+{% set b = kadenceBlock.attrs %}
+<figure
+  class="kadence-block kadence-image wp-block-kadence-image kb-image-wrap{% if b.className %} {{ b.className }}{% endif %}"
+>
+  {% if b.link %}<a href="{{ b.link }}"{% if b.linkTarget %} target="{{ b.linkTarget }}"{% endif %}>{% endif %}
+  {% if b.url %}
+    <img
+      src="{{ b.url }}"
+      alt="{{ b.alt if b.alt else "" }}"
+      {% if b.width %}width="{{ b.width }}"{% endif %}
+      {% if b.height %}height="{{ b.height }}"{% endif %}
+    >
+  {% else %}
+    {{ kadenceInnerHtml | safe }}
+  {% endif %}
+  {% if b.link %}</a>{% endif %}
+  {% if b.caption %}<figcaption>{{ b.caption }}</figcaption>{% endif %}
+</figure>

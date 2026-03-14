@@ -1,0 +1,12 @@
+{# kadence/form — Contact form. Replace <form> action with your static host's handler (Netlify, Formspree…). #}
+{% set b = kadenceBlock.attrs %}
+<section
+  class="wp-block-kadence-form kb-form kadence-block kadence-form{% if b.uniqueID %} kb-form-id_{{ b.uniqueID }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
+>
+  {% if b.formTitle %}<h2 class="kadence-form-title">{{ b.formTitle }}</h2>{% endif %}
+  {# TODO: set action/method/data-netlify for your static site form handler #}
+  <form method="post" data-netlify="true">
+    {{ kadenceInnerHtml | safe }}
+    <button type="submit">{{ b.submitLabel if b.submitLabel else "Submit" }}</button>
+  </form>
+</section>

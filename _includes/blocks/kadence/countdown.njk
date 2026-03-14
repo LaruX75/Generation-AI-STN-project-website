@@ -1,0 +1,15 @@
+{# kadence/countdown (PRO) — Countdown timer; requires JS to tick. Read data-countdown-date. #}
+{% set b = kadenceBlock.attrs %}
+<div
+  class="wp-block-kadence-countdown kb-countdown-wrap kadence-block kadence-countdown{% if b.uniqueID %} kb-countdown-id_{{ b.uniqueID }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
+  {% if b.date %}data-countdown-date="{{ b.date }}"{% endif %}
+  {% if b.timezone %}data-countdown-timezone="{{ b.timezone }}"{% endif %}
+>
+  <div class="kadence-countdown-display" aria-live="polite">
+    <span class="kadence-countdown-days">--</span><span class="kadence-countdown-label">d</span>
+    <span class="kadence-countdown-hours">--</span><span class="kadence-countdown-label">h</span>
+    <span class="kadence-countdown-minutes">--</span><span class="kadence-countdown-label">m</span>
+    <span class="kadence-countdown-seconds">--</span><span class="kadence-countdown-label">s</span>
+  </div>
+  {{ kadenceInnerHtml | safe }}
+</div>

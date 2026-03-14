@@ -1,0 +1,7 @@
+{# kadence/testimonials — Testimonials grid; items are kadence/testimonial blocks #}
+{% set b = kadenceBlock.attrs %}
+<section
+  class="wp-block-kadence-testimonials kb-testimonial-wrap kadence-block kadence-testimonials{% if b.uniqueID %} kb-testimonial-id_{{ b.uniqueID }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
+>
+  {{ kadenceInnerHtml | safe }}
+</section>

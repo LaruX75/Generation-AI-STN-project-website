@@ -1,0 +1,210 @@
+[
+  {
+    "id": 35,
+    "slug": "paavalikko",
+    "title": "Päävalikko",
+    "location": "",
+    "items": [
+      {
+        "id": 325,
+        "parent": 0,
+        "title": "Etusivu",
+        "url": "/",
+        "type": "post_type",
+        "object": "page",
+        "objectId": 306,
+        "classes": [],
+        "target": "",
+        "rel": [
+          ""
+        ],
+        "description": "",
+        "order": 1,
+        "megamenu": false,
+        "megamenuColumns": [],
+        "megamenuRows": [],
+        "megamenuStyle": {},
+        "megamenuWidth": "",
+        "megamenuBackground": {},
+        "children": []
+      },
+      {
+        "id": 413,
+        "parent": 0,
+        "title": "Ajankohtaista",
+        "url": "/ajankohtaista/",
+        "type": "post_type",
+        "object": "page",
+        "objectId": 407,
+        "classes": [],
+        "target": "",
+        "rel": [
+          ""
+        ],
+        "description": "",
+        "order": 2,
+        "megamenu": false,
+        "megamenuColumns": [],
+        "megamenuRows": [],
+        "megamenuStyle": {},
+        "megamenuWidth": "",
+        "megamenuBackground": {},
+        "children": []
+      },
+      {
+        "id": 2631,
+        "parent": 0,
+        "title": "Materiaalit",
+        "url": "/materiaalit/",
+        "type": "post_type",
+        "object": "page",
+        "objectId": 2031,
+        "classes": [],
+        "target": "",
+        "rel": [
+          ""
+        ],
+        "description": "",
+        "order": 3,
+        "megamenu": false,
+        "megamenuColumns": [],
+        "megamenuRows": [],
+        "megamenuStyle": {},
+        "megamenuWidth": "",
+        "megamenuBackground": {},
+        "children": []
+      },
+      {
+        "id": 901,
+        "parent": 0,
+        "title": "Toiminta",
+        "url": "/647-2/",
+        "type": "post_type",
+        "object": "page",
+        "objectId": 647,
+        "classes": [],
+        "target": "_blank",
+        "rel": [
+          ""
+        ],
+        "description": "",
+        "order": 4,
+        "megamenu": true,
+        "megamenuColumns": [
+          {
+            "items": [
+              {
+                "label": "Opettajalle",
+                "url": "/opettajalle/",
+                "target": ""
+              },
+              {
+                "label": "Yleistajuiset julkaisut",
+                "url": "/materiaalit/#tab-julkaisut",
+                "target": ""
+              },
+              {
+                "label": "Materiaalit",
+                "url": "/materiaalit/",
+                "target": ""
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "label": "Tutkijalle",
+                "url": "/generation-ai-hankkeessa-tehtava-tutkimus/",
+                "target": ""
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "label": "Yleisölle",
+                "url": "/tietoa-tekoalysta-kenelle-tahansa/",
+                "target": ""
+              }
+            ]
+          }
+        ],
+        "megamenuRows": [],
+        "megamenuStyle": {},
+        "megamenuWidth": "",
+        "megamenuBackground": {},
+        "children": [
+          {
+            "id": 1119,
+            "parent": 901,
+            "title": "Toiminta sisältö",
+            "url": "/",
+            "type": "custom",
+            "object": "custom",
+            "objectId": 1119,
+            "classes": [],
+            "target": "",
+            "rel": [
+              ""
+            ],
+            "description": "",
+            "order": 5,
+            "megamenu": false,
+            "megamenuColumns": [],
+            "megamenuRows": [],
+            "megamenuStyle": {},
+            "megamenuWidth": "",
+            "megamenuBackground": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 344,
+        "parent": 0,
+        "title": "Konsortio",
+        "url": "/konsortio/",
+        "type": "post_type",
+        "object": "page",
+        "objectId": 341,
+        "classes": [],
+        "target": "",
+        "rel": [
+          ""
+        ],
+        "description": "",
+        "order": 6,
+        "megamenu": false,
+        "megamenuColumns": [],
+        "megamenuRows": [],
+        "megamenuStyle": {},
+        "megamenuWidth": "",
+        "megamenuBackground": {},
+        "children": []
+      },
+      {
+        "id": 1047,
+        "parent": 0,
+        "title": "Ole yhteydessä",
+        "url": "/ollaan-yhteydessa/",
+        "type": "post_type",
+        "object": "page",
+        "objectId": 1041,
+        "classes": [],
+        "target": "",
+        "rel": [
+          ""
+        ],
+        "description": "",
+        "order": 7,
+        "megamenu": false,
+        "megamenuColumns": [],
+        "megamenuRows": [],
+        "megamenuStyle": {},
+        "megamenuWidth": "",
+        "megamenuBackground": {},
+        "children": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,649 @@
+{
+  "startedAt": "2026-03-14T11:29:03.640Z",
+  "configPath": "/Users/jlaru/Documents/www/GenAI7/migration-config.json",
+  "sourceType": "rest",
+  "totals": {
+    "posts": 65,
+    "pages": 25
+  },
+  "redirects": [
+    {
+      "from": "https://www.generation-ai-stn.fi/hankkeen-toiminta/uusi-tyokalut-ja-materiaalit-integroiva-sivusto/",
+      "to": "/hankkeen-toiminta/uusi-tyokalut-ja-materiaalit-integroiva-sivusto/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/generation-ai-educa2025-tapahtumassa/",
+      "to": "/ajankohtaista/generation-ai-educa2025-tapahtumassa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/lasten-ja-nuorten-tekoalylukutaitoa-edistava-generation-ai-hanke-on-voittanut-vuoden-2025-kansallisen-vuoden-avoin-oppimateriaali-palkinnon/",
+      "to": "/ajankohtaista/lasten-ja-nuorten-tekoalylukutaitoa-edistava-generation-ai-hanke-on-voittanut-vuoden-2025-kansallisen-vuoden-avoin-oppimateriaali-palkinnon/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/generation-ai-itk2025-tapahtumassa/",
+      "to": "/ajankohtaista/generation-ai-itk2025-tapahtumassa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/yle-uutispodcast-deepseek-sanoo-olevansa-kilpailijoitaan-tehokkaampi-onko-vaitteissa-peraa/",
+      "to": "/ajankohtaista/yle-uutispodcast-deepseek-sanoo-olevansa-kilpailijoitaan-tehokkaampi-onko-vaitteissa-peraa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/yle-ykkosaamu-haastateltavana-prof-roos/",
+      "to": "/ajankohtaista/yle-ykkosaamu-haastateltavana-prof-roos/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/yle-tekoalyn-kehittyminen-on-ennakoitua-nopeampaa/",
+      "to": "/ajankohtaista/yle-tekoalyn-kehittyminen-on-ennakoitua-nopeampaa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/generation-ai-hanke-mukana-educa25-tapahtumassa/",
+      "to": "/ajankohtaista/generation-ai-hanke-mukana-educa25-tapahtumassa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/hankkeen-toiminta/somekone-2-0-on-julkaistu/",
+      "to": "/hankkeen-toiminta/somekone-2-0-on-julkaistu/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/hankkeen-toiminta/opetettava-kone-sai-xai-tyokalun-nyt-naet-reaaliaikaisesti-kuinka-tekoaly-luokittelee-kuvan/",
+      "to": "/hankkeen-toiminta/opetettava-kone-sai-xai-tyokalun-nyt-naet-reaaliaikaisesti-kuinka-tekoaly-luokittelee-kuvan/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/tutkimus/julkaisu-datafikoituva-peruskoulu-tasapainoilua-lapsen-henkilotietojen-suojan-ja-opetuksen-tavoitteiden-valilla/",
+      "to": "/tutkimus/julkaisu-datafikoituva-peruskoulu-tasapainoilua-lapsen-henkilotietojen-suojan-ja-opetuksen-tavoitteiden-valilla/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/suuri-nobel-keskustelu-24-10-2024/",
+      "to": "/ajankohtaista/suuri-nobel-keskustelu-24-10-2024/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/puhetta-tekoalysta-ita-suomen-aluehallintoviraston-rehtori-ja-johtajuuspaivilla-2024/",
+      "to": "/ajankohtaista/puhetta-tekoalysta-ita-suomen-aluehallintoviraston-rehtori-ja-johtajuuspaivilla-2024/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/tutkimus/icalt2024-paras-julkaisu-a-no-code-ai-education-tool-for-learning-ai-in-k-12-by-making-machine-learning-driven-apps/",
+      "to": "/tutkimus/icalt2024-paras-julkaisu-a-no-code-ai-education-tool-for-learning-ai-in-k-12-by-making-machine-learning-driven-apps/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/ita-savo-kerimaen-koulussa-tekoalya-kaytetaan-jo-osana-opetusta-tavoitteena-oma-ajattelu-ja-sisallon-ymmartaminen/",
+      "to": "/ajankohtaista/ita-savo-kerimaen-koulussa-tekoalya-kaytetaan-jo-osana-opetusta-tavoitteena-oma-ajattelu-ja-sisallon-ymmartaminen/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/waie-monthly-ai-expert-webinar-series/",
+      "to": "/ajankohtaista/waie-monthly-ai-expert-webinar-series/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/susanna-lindroos-hovinheimo-minkalainen-tekoalyasetuksesta-tuli-perustuslakiblogi/",
+      "to": "/ajankohtaista/susanna-lindroos-hovinheimo-minkalainen-tekoalyasetuksesta-tuli-perustuslakiblogi/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/mtv3-nain-ylakoululaiset-jo-kayttavat-chatgptta-tekoaly-halutaan-vahvemmin-osaksi-opetusta/",
+      "to": "/ajankohtaista/mtv3-nain-ylakoululaiset-jo-kayttavat-chatgptta-tekoaly-halutaan-vahvemmin-osaksi-opetusta/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/digital-futures-for-education-explores-ais-impact-on-university-teaching-and-learning/",
+      "to": "/ajankohtaista/digital-futures-for-education-explores-ais-impact-on-university-teaching-and-learning/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/uncategorized-fi/yle-tutkijat-keksivat-miten-nuoret-saa-kiinnostumaan-somen-riskeista/",
+      "to": "/uncategorized-fi/yle-tutkijat-keksivat-miten-nuoret-saa-kiinnostumaan-somen-riskeista/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/yle-areena-uusi-tyokalu-paljastaa-miten-some-toimii/",
+      "to": "/ajankohtaista/yle-areena-uusi-tyokalu-paljastaa-miten-some-toimii/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/lehdistotiedote-suomalaiset-peruskoululaiset-saavat-tekoalyopetukseen-sovelluksen-ja-oppimateriaaleja/",
+      "to": "/ajankohtaista/lehdistotiedote-suomalaiset-peruskoululaiset-saavat-tekoalyopetukseen-sovelluksen-ja-oppimateriaaleja/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/generation-ai-on-mukana-itk2024-tapahtumassa-webinaari-2-4-2024/",
+      "to": "/ajankohtaista/generation-ai-on-mukana-itk2024-tapahtumassa-webinaari-2-4-2024/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/yle-monet-tutkijat-sortuvat-liioitteluun-tekoalyn-tulevaisuudesta-kolme-esimerkkia-osoittaa-miten-todellisuus-tulee-vastaan/",
+      "to": "/ajankohtaista/yle-monet-tutkijat-sortuvat-liioitteluun-tekoalyn-tulevaisuudesta-kolme-esimerkkia-osoittaa-miten-todellisuus-tulee-vastaan/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/mielipidekirjoitus/hs-mielipide-tekoaly-haastaa-jo-nyt-opettajia-ja-oppilaita/",
+      "to": "/ajankohtaista/mielipidekirjoitus/hs-mielipide-tekoaly-haastaa-jo-nyt-opettajia-ja-oppilaita/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/lasten-oikeudet-toteutuvat-vaihtelevasti-internetissa/",
+      "to": "/ajankohtaista/lasten-oikeudet-toteutuvat-vaihtelevasti-internetissa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/sujuva-suomi-tekoalylla-eettisesti-ja-vastuullisesti/",
+      "to": "/ajankohtaista/sujuva-suomi-tekoalylla-eettisesti-ja-vastuullisesti/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/gen-ai-tekoalykuulumiset-uutiskirje/tekoalykuulumiset-11a-2023-genai-opetettava-kone-on-viimeistelya-vaille-valmis-ja-oppimateriaalit-ovat-tyon-alla/",
+      "to": "/gen-ai-tekoalykuulumiset-uutiskirje/tekoalykuulumiset-11a-2023-genai-opetettava-kone-on-viimeistelya-vaille-valmis-ja-oppimateriaalit-ovat-tyon-alla/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/genai-mukana-tyttojen-paivan-tapahtumissa/",
+      "to": "/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/genai-mukana-tyttojen-paivan-tapahtumissa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/oulun-digikarnevaali-keskustelua-tekoalysta-microsoftin-kanssa-ja-workshop-opetettavan-koneen-kaytosta/",
+      "to": "/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/oulun-digikarnevaali-keskustelua-tekoalysta-microsoftin-kanssa-ja-workshop-opetettavan-koneen-kaytosta/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/generation-ai-mukana-tutkijoiden-yossa/",
+      "to": "/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/generation-ai-mukana-tutkijoiden-yossa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/36-saksalaista-opettajaa-tutustui-opetettavaan-koneeseen-unlocking-ai-webinaarissa/",
+      "to": "/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/36-saksalaista-opettajaa-tutustui-opetettavaan-koneeseen-unlocking-ai-webinaarissa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/olimme-edustettuna-ophn-tekoalyn-pyorea-poyta-keskustelussa/",
+      "to": "/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/olimme-edustettuna-ophn-tekoalyn-pyorea-poyta-keskustelussa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/lasten-oikeuksia-ei-ole-otettu-riittavasti-huomioon-eun-tekoalyasetuksessa/",
+      "to": "/ajankohtaista/lasten-oikeuksia-ei-ole-otettu-riittavasti-huomioon-eun-tekoalyasetuksessa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-mediassa/perhetapahtuma-tuo-heurekaan-tekoalya-ja-robotteja-ennakko-osaamista-ei-tarvita-avoimella-mielella-parjaa-hyvin/",
+      "to": "/ajankohtaista/genai-hankkeen-henkilosto-mediassa/perhetapahtuma-tuo-heurekaan-tekoalya-ja-robotteja-ennakko-osaamista-ei-tarvita-avoimella-mielella-parjaa-hyvin/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/helsingin-yliopisto/tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi/",
+      "to": "/helsingin-yliopisto/tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/mtv3/mtv-huomenta-suomi-tekoalya-kansalle/",
+      "to": "/mtv3/mtv-huomenta-suomi-tekoalya-kansalle/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/genai-tyokalut-ja-materiaalit-hankkeen-ulkopuolella/otava-opisto-miten-kone-oppii-genai-tyokalu-mukana-opiston-tulevaisuuspaivassa-1-9-2023/",
+      "to": "/ajankohtaista/genai-tyokalut-ja-materiaalit-hankkeen-ulkopuolella/otava-opisto-miten-kone-oppii-genai-tyokalu-mukana-opiston-tulevaisuuspaivassa-1-9-2023/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos/",
+      "to": "/ajankohtaista/tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/podcast-jakso-koulutus-ja-tekoaly-mita-opetettavaa-tekoalylla-on-meille/",
+      "to": "/ajankohtaista/podcast-jakso-koulutus-ja-tekoaly-mita-opetettavaa-tekoalylla-on-meille/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/keynote-luento-iticse-23-konferenssissa-k-12-tietotekniikkaopetusta-tekoalyaikana-datalukutaidosta-datatoimijuuteen/",
+      "to": "/ajankohtaista/keynote-luento-iticse-23-konferenssissa-k-12-tietotekniikkaopetusta-tekoalyaikana-datalukutaidosta-datatoimijuuteen/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/suomiareena-tutkimusmatkalla-tulevaisuuksiin-ohjaimissa-nuoret-ja-teknologia/",
+      "to": "/ajankohtaista/suomiareena-tutkimusmatkalla-tulevaisuuksiin-ohjaimissa-nuoret-ja-teknologia/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/prof-tedre-osallistui-humanization-of-computing-and-engineering-education-symposiumiin-uppsalassa/",
+      "to": "/ajankohtaista/prof-tedre-osallistui-humanization-of-computing-and-engineering-education-symposiumiin-uppsalassa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/susanna-lindroos-hovinheimo-tekoalyasetuksen-uusia-vaiheita-parlamentin-nakemykset-laajentavat-saantelya/",
+      "to": "/ajankohtaista/susanna-lindroos-hovinheimo-tekoalyasetuksen-uusia-vaiheita-parlamentin-nakemykset-laajentavat-saantelya/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-tutkimus-ja-kokeilutoiminta-kaynnistyi-helsingissa/",
+      "to": "/ajankohtaista/genai-hankkeen-tutkimus-ja-kokeilutoiminta-kaynnistyi-helsingissa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/generation-ai-hanke-vahvasti-mukana-interaktiivinen-tekniikka-koulutuksessa-2023-seminaarissa/",
+      "to": "/ajankohtaista/generation-ai-hanke-vahvasti-mukana-interaktiivinen-tekniikka-koulutuksessa-2023-seminaarissa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/keynote-mita-tietokone-ei-osaa-tehda-vaarien-kasitysten-historia/",
+      "to": "/ajankohtaista/keynote-mita-tietokone-ei-osaa-tehda-vaarien-kasitysten-historia/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/hankkeen-tutkijat-pitivat-asiantuntijapuheenvuorot-enorssi-verkoston-tekoaly-vai-tukialy-webinaarissa/",
+      "to": "/ajankohtaista/hankkeen-tutkijat-pitivat-asiantuntijapuheenvuorot-enorssi-verkoston-tekoaly-vai-tukialy-webinaarissa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/itk-webinaari-generation-ai-kyberturvallisen-ajattelutavan-opettaminen-tekoalysukupolvelle/",
+      "to": "/ajankohtaista/itk-webinaari-generation-ai-kyberturvallisen-ajattelutavan-opettaminen-tekoalysukupolvelle/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/ensimmainen-hankkeessa-kehitetty-sovellus-genai-kuvien-luokittelija/",
+      "to": "/ajankohtaista/ensimmainen-hankkeessa-kehitetty-sovellus-genai-kuvien-luokittelija/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/kouluissa-on-nyt-kiire-lisata-ymmarrysta-tekoalysta-taman-jutun-luettuasi-ymmarrat-miksi-ja-miten/",
+      "to": "/ajankohtaista/kouluissa-on-nyt-kiire-lisata-ymmarrysta-tekoalysta-taman-jutun-luettuasi-ymmarrat-miksi-ja-miten/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/tekoaly-uutisointi-hankkeen-ulkopuolella/yle-podcast-kohistu-chat-gpt-on-tehokas-arvauskone-jonka-uskotaan-mullistavan-asiantuntijatyon/",
+      "to": "/ajankohtaista/tekoaly-uutisointi-hankkeen-ulkopuolella/yle-podcast-kohistu-chat-gpt-on-tehokas-arvauskone-jonka-uskotaan-mullistavan-asiantuntijatyon/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/hankkeen-kouluyhteistyo-kaynnistyi/",
+      "to": "/ajankohtaista/hankkeen-kouluyhteistyo-kaynnistyi/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/yle/yle-tutkija-peraankuuluttaa-tekoalyn-toiminnan-ymmartamista-joka-alkaa-olla-uusi-kansalaistaito/",
+      "to": "/ajankohtaista/yle/yle-tutkija-peraankuuluttaa-tekoalyn-toiminnan-ymmartamista-joka-alkaa-olla-uusi-kansalaistaito/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/gen-ai-tekoalykuulumiset-uutiskirje/tekoalyn-roolin-kasvaessa-yhteiskunnassa-lasten-ja-nuorten-osaamista-tulee-kehittaa-jo-esi-ja-perusopetuksessa/",
+      "to": "/gen-ai-tekoalykuulumiset-uutiskirje/tekoalyn-roolin-kasvaessa-yhteiskunnassa-lasten-ja-nuorten-osaamista-tulee-kehittaa-jo-esi-ja-perusopetuksessa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-mediassa/koululaisen-chatgptlla-tekema-kirjoitelma-meni-taydesta-tekoalyprofessorin-mukaan-hittibotti-on-mestari-lahinna-bullshitissa-ja-mansplainauksessa/",
+      "to": "/ajankohtaista/genai-hankkeen-henkilosto-mediassa/koululaisen-chatgptlla-tekema-kirjoitelma-meni-taydesta-tekoalyprofessorin-mukaan-hittibotti-on-mestari-lahinna-bullshitissa-ja-mansplainauksessa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/hanke-esilla-kasvatustieteiden-paivilla/",
+      "to": "/ajankohtaista/hanke-esilla-kasvatustieteiden-paivilla/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/konsortion-suunnittelukokous-pidettiin-heurekassa-jossa-on-uusi-tekoalya-kasitteleva-nayttely/",
+      "to": "/ajankohtaista/konsortion-suunnittelukokous-pidettiin-heurekassa-jossa-on-uusi-tekoalya-kasitteleva-nayttely/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/vierailuluento-ja-tyopaja-jyvaskylan-yliopistossa-koneoppimista-koulumaailmaan/",
+      "to": "/ajankohtaista/vierailuluento-ja-tyopaja-jyvaskylan-yliopistossa-koneoppimista-koulumaailmaan/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/tekoalyyn-liitetyt-scifi-kuvat-kertovat-vaaraa-tarinaa/",
+      "to": "/ajankohtaista/tekoalyyn-liitetyt-scifi-kuvat-kertovat-vaaraa-tarinaa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/helsingin-yliopisto/vierashuoneessa-julkisoikeuden-professori-susanna-lindroos-hovinheimo-euroopan-unionin-ehdotus-tekoalyn-saantelyksi-liikaa-liian-sekavasti/",
+      "to": "/helsingin-yliopisto/vierashuoneessa-julkisoikeuden-professori-susanna-lindroos-hovinheimo-euroopan-unionin-ehdotus-tekoalyn-saantelyksi-liikaa-liian-sekavasti/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/helsingin-yliopisto/tarvitseeko-tekoaly-kansainvalisia-saantoja-nama-kolme-asiaa-eun-ehdotuksesta-tekoalyn-saantelemiseksi-tulisi-tietaa/",
+      "to": "/helsingin-yliopisto/tarvitseeko-tekoaly-kansainvalisia-saantoja-nama-kolme-asiaa-eun-ehdotuksesta-tekoalyn-saantelemiseksi-tulisi-tietaa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/tekoaly-uutisointi-hankkeen-ulkopuolella/tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista/",
+      "to": "/ajankohtaista/tekoaly-uutisointi-hankkeen-ulkopuolella/tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/helsingin-yliopisto/mita-tekoaly-algoritmit-ja-koneoppiminen-tarkoittavat/",
+      "to": "/helsingin-yliopisto/mita-tekoaly-algoritmit-ja-koneoppiminen-tarkoittavat/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/hs-vieraskyna-29-10-2016-koulutus-ei-reagoi-tyon-muutokseen/",
+      "to": "/ajankohtaista/hs-vieraskyna-29-10-2016-koulutus-ei-reagoi-tyon-muutokseen/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/itk2025-palautelomake/",
+      "to": "/itk2025-palautelomake/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/vastuurajoitus/",
+      "to": "/vastuurajoitus/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/tietosuojalausunto-eu/",
+      "to": "/tietosuojalausunto-eu/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/evastekaytanto-eu/",
+      "to": "/evastekaytanto-eu/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/tietosuojaseloste-generation-ai-hankkeen-www-sivut/",
+      "to": "/tietosuojaseloste-generation-ai-hankkeen-www-sivut/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/educa-2025-palautelomake/",
+      "to": "/educa-2025-palautelomake/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/encyclopedia/",
+      "to": "/encyclopedia/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/materiaalit/",
+      "to": "/materiaalit/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/genai-opetettava-kone/",
+      "to": "/genai-opetettava-kone/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/henkilotietojen-kasittely-alakoulussa/",
+      "to": "/henkilotietojen-kasittely-alakoulussa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/posts-search/",
+      "to": "/posts-search/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/opettajalle/",
+      "to": "/opettajalle/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ollaan-yhteydessa/",
+      "to": "/ollaan-yhteydessa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/generation-ai-hankkeessa-tehtava-tutkimus/",
+      "to": "/generation-ai-hankkeessa-tehtava-tutkimus/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/tietoa-tekoalysta-kenelle-tahansa/",
+      "to": "/tietoa-tekoalysta-kenelle-tahansa/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/647-2/",
+      "to": "/647-2/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/saavutettavuusseloste/",
+      "to": "/saavutettavuusseloste/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/uutiskirjeen-tietosuojaseloste/",
+      "to": "/uutiskirjeen-tietosuojaseloste/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/uutiskirje/",
+      "to": "/uutiskirje/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/tilannekuva-2022-tiivistelma/",
+      "to": "/tilannekuva-2022-tiivistelma/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/ajankohtaista/",
+      "to": "/ajankohtaista/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/konsortio/",
+      "to": "/konsortio/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/etusivu/",
+      "to": "/etusivu/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/shield-ohjelma/",
+      "to": "/shield-ohjelma/"
+    },
+    {
+      "from": "https://www.generation-ai-stn.fi/",
+      "to": "/"
+    }
+  ],
+  "warnings": [
+    "Menu fetch via menus/v1 failed: HTTP 404 for https://www.generation-ai-stn.fi/wp-json/menus/v1/menus\n{\"code\":\"rest_no_route\",\"message\":\"Pyynt\\u00f6tapaa ja URLia koskevaa polkua ei l\\u00f6ytynyt.\",\"data\":{\"status\":404}}",
+    "Menu fetch via wp-api-menus/v2 failed: HTTP 404 for https://www.generation-ai-stn.fi/wp-json/wp-api-menus/v2/menus\n{\"code\":\"rest_no_route\",\"message\":\"Pyynt\\u00f6tapaa ja URLia koskevaa polkua ei l\\u00f6ytynyt.\",\"data\":{\"status\":404}}",
+    "Unsupported Kadence block 'advanced-form' left as inner HTML fallback.",
+    "Unsupported Kadence block 'advanced-form' left as inner HTML fallback.",
+    "Possible unrendered shortcodes in 'pages/materiaalit': [zotpressLib], [bbp-forum-index]",
+    "Unsupported Kadence block 'tableofcontents' left as inner HTML fallback.",
+    "Kadence conversion requested for 'pages/posts-search', but raw block content was unavailable. Use authenticated REST access with context=edit if possible.",
+    "Unsupported Kadence block 'tableofcontents' left as inner HTML fallback.",
+    "Unsupported Kadence block 'advanced-form' left as inner HTML fallback.",
+    "Unsupported Kadence block 'dynamiclist' left as inner HTML fallback.",
+    "Possible unrendered shortcodes in 'pages/generation-ai-hankkeessa-tehtava-tutkimus': [zotpress]",
+    "Possible unrendered shortcodes in 'pages/uutiskirje': [newsletter]",
+    "Possible unrendered shortcodes in 'pages/ajankohtaista': [zotpress]"
+  ],
+  "actionItems": {
+    "unsupportedBlocks": [
+      {
+        "document": "pages/educa-2025-palautelomake.njk",
+        "sourceUrl": "https://www.generation-ai-stn.fi/educa-2025-palautelomake/",
+        "blocks": [
+          "advanced-form"
+        ],
+        "suggestion": "Luo puuttuva Nunjucks-partial tai pidä fallback-HTML valiaikaisena ratkaisuna."
+      },
+      {
+        "document": "pages/henkilotietojen-kasittely-alakoulussa.njk",
+        "sourceUrl": "https://www.generation-ai-stn.fi/henkilotietojen-kasittely-alakoulussa/",
+        "blocks": [
+          "tableofcontents"
+        ],
+        "suggestion": "Luo puuttuva Nunjucks-partial tai pidä fallback-HTML valiaikaisena ratkaisuna."
+      },
+      {
+        "document": "pages/opettajalle.njk",
+        "sourceUrl": "https://www.generation-ai-stn.fi/opettajalle/",
+        "blocks": [
+          "tableofcontents"
+        ],
+        "suggestion": "Luo puuttuva Nunjucks-partial tai pidä fallback-HTML valiaikaisena ratkaisuna."
+      },
+      {
+        "document": "pages/ollaan-yhteydessa.njk",
+        "sourceUrl": "https://www.generation-ai-stn.fi/ollaan-yhteydessa/",
+        "blocks": [
+          "advanced-form"
+        ],
+        "suggestion": "Luo puuttuva Nunjucks-partial tai pidä fallback-HTML valiaikaisena ratkaisuna."
+      },
+      {
+        "document": "pages/generation-ai-hankkeessa-tehtava-tutkimus.njk",
+        "sourceUrl": "https://www.generation-ai-stn.fi/generation-ai-hankkeessa-tehtava-tutkimus/",
+        "blocks": [
+          "dynamiclist"
+        ],
+        "suggestion": "Luo puuttuva Nunjucks-partial tai pidä fallback-HTML valiaikaisena ratkaisuna."
+      }
+    ],
+    "shortcodes": [
+      {
+        "document": "pages/materiaalit.njk",
+        "sourceUrl": "https://www.generation-ai-stn.fi/materiaalit/",
+        "shortcodes": [
+          "zotpressLib",
+          "bbp-forum-index"
+        ]
+      },
+      {
+        "document": "pages/generation-ai-hankkeessa-tehtava-tutkimus.njk",
+        "sourceUrl": "https://www.generation-ai-stn.fi/generation-ai-hankkeessa-tehtava-tutkimus/",
+        "shortcodes": [
+          "zotpress"
+        ]
+      },
+      {
+        "document": "pages/uutiskirje.njk",
+        "sourceUrl": "https://www.generation-ai-stn.fi/uutiskirje/",
+        "shortcodes": [
+          "newsletter"
+        ]
+      },
+      {
+        "document": "pages/ajankohtaista.njk",
+        "sourceUrl": "https://www.generation-ai-stn.fi/ajankohtaista/",
+        "shortcodes": [
+          "zotpress"
+        ]
+      }
+    ],
+    "suggestions": [
+      "Tarkista report.actionItems.unsupportedBlocks ja toteuta puuttuvat blokkipartiaalit ensiksi eniten kaytettyihin lohkoihin.",
+      "Shortcode-viittaukset vaativat manuaalista korvausta Eleventy-komponenteilla tai staattisella HTML:lla."
+    ]
+  },
+  "workflow": [
+    "discover",
+    "configure",
+    "migrate"
+  ],
+  "styles": {
+    "enabled": true,
+    "downloaded": 22,
+    "migrated": 22,
+    "stylesDir": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy",
+    "manifestPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/styles-manifest.json",
+    "tokensPath": "/Users/jlaru/Documents/www/GenAI7/styles/kadence-pro-legacy/design-tokens.json",
+    "legacyStylesInclude": "/Users/jlaru/Documents/www/GenAI7/_includes/legacy-styles.njk",
+    "stylesheetUrls": [
+      "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-header.css?ver=3.6.6",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-navigation.css?ver=3.6.6",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-rowlayout.css?ver=3.6.6",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-column.css?ver=3.6.6",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-identity.css?ver=3.6.6",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/embedpress/assets/css/blocks.build.css?ver=1773238883",
+      "https://www.generation-ai-stn.fi/wp-includes/css/dist/block-library/style.min.css?ver=563e0050da1e4c5ec80f8cdbd8e1098b",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css?ver=1",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.min.css?ver=1",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/complianz-gdpr-premium/assets/css/cookieblocker.min.css?ver=1773276777",
+      "https://www.generation-ai-stn.fi/wp-content/themes/kadence/assets/css/global.min.css?ver=1.4.5",
+      "https://www.generation-ai-stn.fi/wp-content/themes/kadence/assets/css/content.min.css?ver=1.4.5",
+      "https://www.generation-ai-stn.fi/wp-content/themes/kadence/assets/css/footer.min.css?ver=1.4.5",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-pro/dist/mega-menu/menu-addon.css?ver=1.1.16",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/betterdocs-pro/assets/public/css/instant-answer.css?ver=82ac3f719faee5c4e6ac",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/newsletter/style.css?ver=9.1.7",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-advancedbtn.css?ver=3.6.6",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/dist/style-blocks-iconlist.css?ver=3.6.6",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks-pro/dist/style-blocks-postgrid.css?ver=2.8.8",
+      "https://www.generation-ai-stn.fi/wp-content/uploads/betterdocs-style/reusable-blocks/betterdocs-reusable-2395.min.css?ver=581b3e5aac",
+      "https://www.generation-ai-stn.fi/wp-content/plugins/kadence-blocks/includes/assets/css/kadence-splide.min.css?ver=3.6.6"
+    ],
+    "parsedNavs": 3,
+    "parsedNavPath": "/Users/jlaru/Documents/www/GenAI7/_data/navigation-parsed.json"
+  },
+  "kadenceBlocks": {
+    "enabled": true,
+    "partialsPath": "/Users/jlaru/Documents/www/GenAI7/_includes/blocks/kadence",
+    "supportedBlocks": [
+      "advancedheading",
+      "advancedbtn",
+      "singlebtn",
+      "rowlayout",
+      "column",
+      "image",
+      "gallery",
+      "slider",
+      "slide",
+      "tabs",
+      "tab",
+      "accordion",
+      "pane",
+      "infobox",
+      "icon",
+      "iconlist",
+      "listitem",
+      "spacer",
+      "posts",
+      "postgrid",
+      "query",
+      "testimonials",
+      "testimonial",
+      "form",
+      "countdown",
+      "videopopup",
+      "lottie",
+      "modal",
+      "navigation",
+      "off-canvas",
+      "show-more",
+      "dynamichtml",
+      "identity",
+      "contentwidget",
+      "splitcontent",
+      "table-of-contents",
+      "postcarousel",
+      "portfoliogrid"
+    ],
+    "proBlocks": true
+  },
+  "siteProfile": {
+    "profilePath": "/Users/jlaru/Documents/www/GenAI7/site-profile.json",
+    "summaryPath": "/Users/jlaru/Documents/www/GenAI7/site-profile-summary.json",
+    "summary": {
+      "paletteDetected": 9,
+      "separatorsGenerated": 5,
+      "layoutsDetected": 5,
+      "knownBlocks": 692,
+      "unknownBlocks": 6,
+      "unknownBlockTypes": [
+        "kadence/advanced-form",
+        "kadence/dynamiclist",
+        "kadence/tableofcontents"
+      ]
+    }
+  },
+  "configure": {
+    "themeCssPath": "/Users/jlaru/Documents/www/GenAI7/styles/theme.css",
+    "separatorsDir": "/Users/jlaru/Documents/www/GenAI7/assets/separators",
+    "separatorsGenerated": [
+      "/Users/jlaru/Documents/www/GenAI7/assets/separators/mtns.svg"
+    ],
+    "summary": {
+      "paletteDetected": 9,
+      "separatorsGenerated": 5,
+      "layoutsDetected": 5,
+      "knownBlocks": 692,
+      "unknownBlocks": 6,
+      "unknownBlockTypes": [
+        "kadence/advanced-form",
+        "kadence/dynamiclist",
+        "kadence/tableofcontents"
+      ]
+    }
+  },
+  "bootstrap": {
+    "packageJsonPath": "/Users/jlaru/Documents/www/GenAI7/package.json",
+    "configJsPath": "/Users/jlaru/Documents/www/GenAI7/eleventy.config.js",
+    "legacyConfigJsPath": "/Users/jlaru/Documents/www/GenAI7/.eleventy.js",
+    "gitignorePath": "/Users/jlaru/Documents/www/GenAI7/.gitignore",
+    "notesPath": "/Users/jlaru/Documents/www/GenAI7/MIGRATION-NOTES.md",
+    "dependencies": [
+      "@11ty/eleventy"
+    ],
+    "created": [
+      "/Users/jlaru/Documents/www/GenAI7/package.json",
+      "/Users/jlaru/Documents/www/GenAI7/eleventy.config.js",
+      "/Users/jlaru/Documents/www/GenAI7/.eleventy.js",
+      "/Users/jlaru/Documents/www/GenAI7/.gitignore",
+      "/Users/jlaru/Documents/www/GenAI7/MIGRATION-NOTES.md"
+    ]
+  },
+  "install": {
+    "ran": true,
+    "command": "npm install"
+  },
+  "replacementScaffolding": {
+    "enabled": [
+      "wpml",
+      "aioseo",
+      "complianz",
+      "embedpress",
+      "iawp",
+      "kadence-blocks",
+      "kadence-pro"
+    ],
+    "created": [
+      "/Users/jlaru/Documents/www/GenAI7/_data/site.json",
+      "/Users/jlaru/Documents/www/GenAI7/_includes/partials/site-navigation.njk",
+      "/Users/jlaru/Documents/www/GenAI7/_includes/partials/language-switcher.njk",
+      "/Users/jlaru/Documents/www/GenAI7/_includes/partials/cookie-consent-placeholder.njk"
+    ]
+  },
+  "layouts": {
+    "generated": [
+      "/Users/jlaru/Documents/www/GenAI7/_includes/layouts/base.njk",
+      "/Users/jlaru/Documents/www/GenAI7/_includes/layouts/page.njk",
+      "/Users/jlaru/Documents/www/GenAI7/_includes/layouts/post.njk"
+    ]
+  },
+  "menus": {
+    "imported": 1,
+    "source": "wp/v2 menus",
+    "outputPath": "/Users/jlaru/Documents/www/GenAI7/_data/navigation.json"
+  },
+  "eleventyPlugins": {
+    "selected": 12,
+    "enabled": 7,
+    "planPath": "/Users/jlaru/Documents/www/GenAI7/eleventy-plugin-plan.json",
+    "snippetPath": "/Users/jlaru/Documents/www/GenAI7/eleventy-plugin-plan.mjs"
+  },
+  "redirectsPath": "/Users/jlaru/Documents/www/GenAI7/redirects.csv",
+  "outputVerification": {
+    "siteMode": "new",
+    "missing": [],
+    "ok": true
+  },
+  "finishedAt": "2026-03-14T11:29:43.637Z",
+  "outputRoot": "/Users/jlaru/Documents/www/GenAI7",
+  "reportPath": "/Users/jlaru/Documents/www/GenAI7/migration-report.json"
+}

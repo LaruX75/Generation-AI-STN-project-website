@@ -1,0 +1,18 @@
+{# kadence/pane — Accordion pane with Kadence button+panel structure #}
+{% set b = kadenceBlock.attrs %}
+<div class="wp-block-kadence-pane kt-accordion-pane{% if b.startOpen %} is-open{% endif %}{% if b.className %} {{ b.className }}{% endif %}">
+  <div class="kt-accordion-heading kt-accordion-header-wrap">
+    <button class="kt-accordion-header kt-accordion-header-btn"
+      aria-expanded="{{ 'true' if b.startOpen else 'false' }}"
+      {% if b.uniqueID %}aria-controls="kb-panel-{{ b.uniqueID }}"{% endif %}
+    >
+      {% if b.title %}<span class="kt-blocks-accordion-title">{{ b.title }}</span>{% endif %}
+      <span class="kt-accordion-icon-trigger" aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="kt-accordion-panel"{% if b.uniqueID %} id="kb-panel-{{ b.uniqueID }}"{% endif %} role="region">
+    <div class="kt-accordion-panel-inner">
+      {{ kadenceInnerHtml | safe }}
+    </div>
+  </div>
+</div>

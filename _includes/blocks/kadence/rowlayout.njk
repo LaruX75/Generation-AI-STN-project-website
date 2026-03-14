@@ -1,0 +1,24 @@
+{# kadence/rowlayout — Multi-column section with optional separators #}
+{% from "macros/separators.njk" import kbSeparator %}
+{% set b = kadenceBlock.attrs %}
+{% set cols = b.columns if b.columns else 1 %}
+{% set layout = b.colLayout if b.colLayout else "equal" %}
+<section
+  class="wp-block-kadence-rowlayout kb-row-layout-wrap kadence-block kadence-rowlayout{% if b.uniqueID %} kb-row-layout-id{{ b.uniqueID }}{% endif %}{% if b.align == "full" %} alignfull{% endif %}{% if b.bgColorClass %} kb-theme-{{ b.bgColorClass }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
+  {% if b.background or b.bgColor or (b.backgroundImg and b.backgroundImg[0] and b.backgroundImg[0].bgImg) %}style="{% if b.background %}background-color:{{ b.background }};{% endif %}{% if b.bgColor %} background-color:{{ b.bgColor }};{% endif %}{% if b.backgroundImg and b.backgroundImg[0] and b.backgroundImg[0].bgImg %} background-image:url('{{ b.backgroundImg[0].bgImg }}');{% endif %}"{% endif %}
+>
+  {% if b.topSep and b.topSep != "none" %}
+    <div class="kt-row-layout-top-sep kt-svg-for-top-sep" aria-hidden="true"{% if b.topSepColor %} style="color:{{ b.topSepColor }}"{% endif %}>
+      {{ kbSeparator(b.topSep) | safe }}
+    </div>
+  {% endif %}
+  <div class="kt-row-layout-overlay"></div>
+  <div class="kt-row-column-wrap kb-col-{{ cols }} kb-layout-{{ layout }}">
+    {{ kadenceInnerHtml | safe }}
+  </div>
+  {% if b.bottomSep and b.bottomSep != "none" %}
+    <div class="kt-row-layout-bottom-sep kt-svg-for-bottom-sep" aria-hidden="true"{% if b.bottomSepColor %} style="color:{{ b.bottomSepColor }}"{% endif %}>
+      {{ kbSeparator(b.bottomSep) | safe }}
+    </div>
+  {% endif %}
+</section>

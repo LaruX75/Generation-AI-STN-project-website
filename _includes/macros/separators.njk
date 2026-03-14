@@ -1,0 +1,12 @@
+{% macro kbSeparator(name) -%}
+  {% if name == "mtns" %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none"><path fill="currentColor" d="M0,96L80,80C160,64,320,32,480,32C640,32,800,64,960,74.7C1120,85,1280,75,1360,69.3L1440,64L1440,160L1360,160C1280,160,1120,160,960,160C800,160,640,160,480,160C320,160,160,160,80,160L0,160Z"/></svg>
+  {% elif name == "waves" %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none"><path fill="currentColor" d="M0,128L48,122.7C96,117,192,107,288,85.3C384,64,480,32,576,32C672,32,768,64,864,80C960,96,1056,96,1152,80C1248,64,1344,32,1392,16L1440,0L1440,160L1392,160C1344,160,1248,160,1152,160C1056,160,960,160,864,160C768,160,672,160,576,160C480,160,384,160,288,160C192,160,96,160,48,160L0,160Z"/></svg>
+  {% elif name == "tilt" %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none"><polygon fill="currentColor" points="0,0 1440,96 1440,160 0,160"/></svg>
+  {% elif name == "curve" %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none"><path fill="currentColor" d="M0,128C180,85,360,64,540,74.7C720,85,900,128,1080,133.3C1260,139,1350,107,1440,80L1440,160L0,160Z"/></svg>
+  {% elif name == "triangle" %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none"><polygon fill="currentColor" points="0,160 720,0 1440,160"/></svg>
+  {% elif name == "ct" %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none"><path fill="currentColor" d="M0,160L0,80Q360,0,720,0Q1080,0,1440,80L1440,160Z"/></svg>
+  {% elif name == "cti" %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none"><path fill="currentColor" d="M0,160L0,0Q360,160,720,160Q1080,160,1440,0L1440,160Z"/></svg>
+  {% elif name == "ctdi" %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none"><path fill="currentColor" d="M0,160L0,96Q360,0,720,0Q1080,0,1440,96L1440,160Z M0,160L0,128Q360,64,720,64Q1080,64,1440,128L1440,160Z"/></svg>
+  {% elif name == "threelevels" %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none"><polygon fill="currentColor" points="0,160 0,96 480,96 480,64 960,64 960,32 1440,32 1440,160"/></svg>
+  {% endif %}
+{%- endmacro %}

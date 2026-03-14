@@ -1,0 +1,158 @@
+{
+  "generatedAt": "2026-03-14T11:28:16.598Z",
+  "wpBaseUrl": "https://www.generation-ai-stn.fi",
+  "restNamespace": "/wp-json/wp/v2",
+  "preset": "kadence-pro",
+  "palette": {
+    "palette1": "#314e25",
+    "palette2": "#446d33",
+    "palette3": "#000000",
+    "palette4": "#314e25",
+    "palette5": "#3b5e2c",
+    "palette6": "#446d33",
+    "palette7": "#f0f4ec",
+    "palette8": "#f7f9f5",
+    "palette9": "#ffffff"
+  },
+  "headerStyles": {
+    "minHeight": 80,
+    "background": null,
+    "backgroundType": null,
+    "backgroundImg": null
+  },
+  "separatorsUsed": [
+    "ct",
+    "ctdi",
+    "cti",
+    "mtns",
+    "threelevels"
+  ],
+  "colLayouts": [
+    "equal",
+    "first-row",
+    "left-golden",
+    "right-golden",
+    "row"
+  ],
+  "blocksUsed": {
+    "kadence/advancedheading": 252,
+    "paragraph": 530,
+    "heading": 88,
+    "kadence/rowlayout": 91,
+    "kadence/column": 165,
+    "embed": 7,
+    "kadence/image": 18,
+    "quote": 39,
+    "list": 31,
+    "list-item": 84,
+    "image": 21,
+    "embedpress/embedpress": 4,
+    "table": 1,
+    "media-text": 17,
+    "file": 2,
+    "buttons": 3,
+    "button": 3,
+    "kadence/spacer": 10,
+    "kadence/advanced-form": 3,
+    "complianz/document": 3,
+    "kadence/tabs": 4,
+    "kadence/tab": 16,
+    "kadence/advancedbtn": 13,
+    "kadence/singlebtn": 12,
+    "html": 2,
+    "betterdocs/faq": 1,
+    "shortcode": 2,
+    "kadence/infobox": 36,
+    "kadence/tableofcontents": 2,
+    "kadence/iconlist": 8,
+    "kadence/listitem": 35,
+    "separator": 1,
+    "kadence/slider": 1,
+    "kadence/slide": 3,
+    "kadence/accordion": 2,
+    "kadence/pane": 13,
+    "kadence/postgrid": 7,
+    "kadence/dynamiclist": 1,
+    "block": 1,
+    "kadence/query": 4,
+    "kadence/posts": 2
+  },
+  "heroPages": [
+    "/",
+    "/647-2/",
+    "/ajankohtaista/",
+    "/ajankohtaista/generation-ai-itk2025-tapahtumassa/",
+    "/educa-2025-palautelomake/",
+    "/genai-opetettava-kone/",
+    "/generation-ai-hankkeessa-tehtava-tutkimus/",
+    "/henkilotietojen-kasittely-alakoulussa/",
+    "/konsortio/",
+    "/materiaalit/",
+    "/ollaan-yhteydessa/",
+    "/opettajalle/",
+    "/saavutettavuusseloste/",
+    "/shield-ohjelma/",
+    "/tietoa-tekoalysta-kenelle-tahansa/",
+    "/uutiskirje/",
+    "/uutiskirjeen-tietosuojaseloste/"
+  ],
+  "headingColors": [
+    "#313131",
+    "#707981",
+    "palette1",
+    "palette3",
+    "palette4",
+    "palette6",
+    "palette9"
+  ],
+  "headingSizes": [
+    ",,",
+    ",,xxl",
+    "32,,36",
+    "lg,,",
+    "md,,",
+    "sm,,",
+    "xl,,",
+    "xl,,36",
+    "xl,,lg",
+    "xl,,xl",
+    "xl,lg,",
+    "xxl,,",
+    "xxl,,lg",
+    "xxl,,xxl"
+  ],
+  "buttonStyles": [
+    {
+      "hAlign": "left",
+      "size": "",
+      "style": "",
+      "className": ""
+    },
+    {
+      "hAlign": "right",
+      "size": "",
+      "style": "",
+      "className": ""
+    },
+    {
+      "hAlign": "",
+      "size": "",
+      "style": "",
+      "className": ""
+    }
+  ],
+  "inlineStylesSource": "homepage-inline-style",
+  "scannedTypes": [
+    "posts",
+    "pages"
+  ],
+  "configure": {
+    "themeCssPath": "styles/theme.css",
+    "unknownKadenceBlockStrategy": "fallback-html",
+    "unknownBlockTypes": [
+      "kadence/advanced-form",
+      "kadence/dynamiclist",
+      "kadence/tableofcontents"
+    ]
+  }
+}

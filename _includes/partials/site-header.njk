@@ -1,0 +1,96 @@
+{# Site header — logo + primary navigation #}
+{% set menus = navigation if navigation else [] %}
+{% set navItems = menus[0].items if menus and menus.length and menus[0].items else [] %}
+<header class="site-shell-header{% if transparentHeader %} is-transparent{% endif %}">
+  <div class="site-header-inner">
+    <span class="site-logo">
+      {% if site and site.logo %}
+        <img src="{{ site.logo }}" alt="{{ site.name if site.name else 'Generation AI' }}" width="120">
+      {% else %}
+        <span class="site-name">{{ site.name if site and site.name else 'Generation AI' }}</span>
+      {% endif %}
+    </span>
+    <button class="kb-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Toggle navigation">
+      <span aria-hidden="true">&#9776;</span>
+    </button>
+    {% if navItems and navItems.length %}
+    <nav id="site-nav-menu" class="site-navigation kb-navigation" aria-label="Site navigation">
+      <ul class="menu kb-nav-menu">
+        {% for item in navItems %}
+          <li class="menu-item kb-nav-item{% if item.megamenu %} kb-nav-mega-menu-item{% elif item.children and item.children.length %} menu-item-has-children{% endif %}">
+            <a class="kb-nav-link" href="{{ item.url }}"{% if item.target %} target="{{ item.target }}"{% endif %}>{{ item.title }}</a>
+            {# ── Megamenu ─────────────────────────────────────────── #}
+            {% if item.megamenu and item.megamenuColumns and item.megamenuColumns.length %}
+              <div class="kb-mega-menu" role="region" aria-label="{{ item.title }} megamenu">
+                <ul class="kb-mega-menu-cols">
+                  {% for col in item.megamenuColumns %}
+                    <li class="kb-mega-menu-col">
+                      {% if col.items and col.items.length %}
+                        <ul class="kb-mega-col-items">
+                          {% for sub in col.items %}
+                            <li class="menu-item">
+                              <a class="kb-mega-link" href="{{ sub.url }}"{% if sub.target %} target="{{ sub.target }}"{% endif %}>{{ sub.label }}</a>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {# ── Normal dropdown ──────────────────────────────────── #}
+            {% elif item.children and item.children.length %}
+              <ul class="sub-menu kb-nav-sub-menu">
+                {% for child in item.children %}
+                  <li class="menu-item kb-nav-item{% if child.children and child.children.length %} menu-item-has-children{% endif %}">
+                    <a class="kb-nav-link" href="{{ child.url }}">{{ child.title }}</a>
+                    {% if child.children and child.children.length %}
+                      <ul class="sub-menu kb-nav-sub-menu kb-nav-sub-menu--level2">
+                        {% for grandchild in child.children %}
+                          <li class="menu-item"><a class="kb-nav-link" href="{{ grandchild.url }}">{{ grandchild.title }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+  </div>
+</header>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".site-shell-header");
+
+    // Transparent header: add is-stuck when scrolled
+    if (header && header.classList.contains("is-transparent")) {
+      const onScroll = () => {
+        header.classList.toggle("is-stuck", window.scrollY > 10);
+        header.classList.toggle("is-transparent", window.scrollY <= 10);
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+    }
+
+    // Mobile nav toggle
+    const toggle = document.querySelector(".kb-nav-toggle");
+    const menu = document.getElementById("site-nav-menu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", () => {
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        menu.classList.toggle("is-open", !expanded);
+      });
+    }
+
+    // Dropdown/megamenu toggle on mobile
+    document.querySelectorAll(".kb-nav-mega-menu-item > .kb-nav-link, .menu-item-has-children > .kb-nav-link").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        if (window.innerWidth <= 1024) { e.preventDefault(); link.parentElement.classList.toggle("is-open"); }
+      });
+    });
+  });
+</script>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ site.defaultLocale if site and site.defaultLocale else 'fi' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if seoTitle %}{{ seoTitle }}{% elif title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
+  {% set _desc = seoDescription if seoDescription else (ogDescription if ogDescription else excerpt) %}
+  {% if _desc %}<meta name="description" content="{{ _desc }}">{% endif %}
+  {% set _canonical = canonical if canonical else (site.url + page.url) %}
+  <link rel="canonical" href="{{ _canonical }}">
+  {% if noindex %}<meta name="robots" content="noindex">{% endif %}
+  <meta property="og:type" content="{% if sourceType == 'posts' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ _canonical }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ ogTitle if ogTitle else (seoTitle if seoTitle else title) }}">
+  {% set _ogDesc = ogDescription if ogDescription else _desc %}
+  {% if _ogDesc %}<meta property="og:description" content="{{ _ogDesc }}">{% endif %}
+  {% if ogImage %}<meta property="og:image" content="{{ ogImage }}">{% endif %}
+  {% include "legacy-styles.njk" %}
+  <link rel="stylesheet" href="/styles/theme.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+</head>
+<body>
+  {% include "partials/site-header.njk" %}
+  {{ content | safe }}
+  {% include "partials/site-footer.njk" %}
+  {% include "partials/cookie-consent-placeholder.njk" %}
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.kadence-splide-init').forEach(function(el) {
+        var opts = {};
+        try { opts = JSON.parse(el.dataset.splide || '{}'); } catch(e) {}
+        new Splide(el, opts).mount();
+      });
+    });
+  </script>
+</body>
+</html>

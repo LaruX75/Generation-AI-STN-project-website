@@ -1,0 +1,21 @@
+{# Generated navigation shell. Uses _data/navigation.json if available. #}
+{% set menus = navigation if navigation else [] %}
+{% set navItems = menus[0].items if menus and menus.length and menus[0].items else [] %}
+{% if navItems and navItems.length %}
+<nav class="site-navigation" aria-label="Site navigation">
+  <ul class="site-navigation-list">
+    {% for item in navItems %}
+      <li class="site-navigation-item{% if item.children and item.children.length %} has-children{% endif %}">
+        <a href="{{ item.url }}">{{ item.title }}</a>
+        {% if item.children and item.children.length %}
+          <ul class="site-navigation-children">
+            {% for child in item.children %}
+              <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endif %}

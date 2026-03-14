@@ -1,0 +1,11 @@
+{
+  "name": "Generation AI",
+  "url": "https://www.generation-ai-stn.fi",
+  "locales": [
+    "fi",
+    "en"
+  ],
+  "defaultLocale": "fi",
+  "logo": "",
+  "tagline": ""
+}

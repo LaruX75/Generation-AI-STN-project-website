@@ -1,0 +1,12 @@
+{
+  "paletteDetected": 9,
+  "separatorsGenerated": 5,
+  "layoutsDetected": 5,
+  "knownBlocks": 692,
+  "unknownBlocks": 6,
+  "unknownBlockTypes": [
+    "kadence/advanced-form",
+    "kadence/dynamiclist",
+    "kadence/tableofcontents"
+  ]
+}

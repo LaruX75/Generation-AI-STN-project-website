@@ -1,0 +1,21 @@
+{# kadence/identity (PRO) — Site logo, name and tagline from _data/site.json #}
+{% set b = kadenceBlock.attrs %}
+<div
+  class="wp-block-kadence-identity kb-identity kadence-block kadence-identity{% if b.className %} {{ b.className }}{% endif %}"
+>
+  {% if b.showLogo !== false %}
+    <a class="kadence-identity-logo" href="/">
+      {% if site.logo %}
+        <img src="{{ site.logo }}" alt="{{ site.name if site.name else "Home" }}" height="40">
+      {% else %}
+        {# Add logo path to _data/site.json: { "logo": "/img/logo.svg", "name": "Site Name" } #}
+      {% endif %}
+    </a>
+  {% endif %}
+  {% if b.showTitle !== false %}
+    <span class="kadence-identity-title">{{ site.name if site.name else "Site Name" }}</span>
+  {% endif %}
+  {% if b.showTagline !== false and site.tagline %}
+    <span class="kadence-identity-tagline">{{ site.tagline }}</span>
+  {% endif %}
+</div>

@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "wpml",
+    "wordpressPlugin": "WPML",
+    "eleventySolution": "Monikieliset kokoelmat, kielireitit ja language switcher",
+    "packageName": "@11ty/eleventy + custom i18n collections",
+    "enabled": true
+  },
+  {
+    "slug": "gtranslate",
+    "wordpressPlugin": "GTranslate",
+    "eleventySolution": "Kielivalitsin templateihin ilman runtime-käännöspluginia",
+    "packageName": "@11ty/eleventy + custom language switcher",
+    "enabled": false
+  },
+  {
+    "slug": "aioseo",
+    "wordpressPlugin": "All in One SEO",
+    "eleventySolution": "SEO-meta, sitemap ja robots staattisesti",
+    "packageName": "@quasibit/eleventy-plugin-sitemap",
+    "enabled": true
+  },
+  {
+    "slug": "complianz",
+    "wordpressPlugin": "Complianz",
+    "eleventySolution": "Kevyt consent-banneri tai ulkoinen palvelu",
+    "packageName": "No Eleventy plugin / external consent tool",
+    "enabled": true
+  },
+  {
+    "slug": "newsletter",
+    "wordpressPlugin": "Newsletter",
+    "eleventySolution": "Embed-lomake tai oma shortcode",
+    "packageName": "@11ty/eleventy + form embed partial",
+    "enabled": false
+  },
+  {
+    "slug": "betterdocs",
+    "wordpressPlugin": "BetterDocs",
+    "eleventySolution": "Docs-kokoelmat ja navigaatiodata",
+    "packageName": "@11ty/eleventy-navigation",
+    "enabled": false
+  },
+  {
+    "slug": "embedpress",
+    "wordpressPlugin": "EmbedPress",
+    "eleventySolution": "Upotus-shortcodet ja include-komponentit",
+    "packageName": "@11ty/eleventy + custom shortcodes",
+    "enabled": true
+  },
+  {
+    "slug": "iawp",
+    "wordpressPlugin": "Independent Analytics",
+    "eleventySolution": "Kevyt ulkoinen analytiikka",
+    "packageName": "External analytics snippet",
+    "enabled": true
+  },
+  {
+    "slug": "kadence-blocks",
+    "wordpressPlugin": "Kadence / Kadence Blocks",
+    "eleventySolution": "Nunjucks-layoutit ja Kadence-lohkomuunnos",
+    "packageName": "@11ty/eleventy + generated Nunjucks partials",
+    "enabled": true
+  },
+  {
+    "slug": "kadence-pro",
+    "wordpressPlugin": "Kadence Pro",
+    "eleventySolution": "Nunjucks-layoutit, Kadence Pro -lohkomuunnos ja legacy-tyylit",
+    "packageName": "@11ty/eleventy + generated Nunjucks partials",
+    "enabled": true
+  },
+  {
+    "slug": "mailerlite",
+    "wordpressPlugin": "MailerLite integration",
+    "eleventySolution": "MailerLite-upotus komponenttina",
+    "packageName": "@11ty/eleventy + embed partial",
+    "enabled": false
+  },
+  {
+    "slug": "mailchimp",
+    "wordpressPlugin": "Mailchimp integration",
+    "eleventySolution": "Mailchimp-upotus komponenttina",
+    "packageName": "@11ty/eleventy + embed partial",
+    "enabled": false
+  }
+]

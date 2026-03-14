@@ -1,0 +1,677 @@
+---
+title: Konsortio
+date: "2023-01-29T11:44:01"
+updated: "2025-02-12T22:03:51"
+slug: konsortio
+permalink: /konsortio/
+status: publish
+sourceType: pages
+sourceId: 341
+sourceUrl: "https://www.generation-ai-stn.fi/konsortio/"
+excerpt: "Hankkeen johto Matti Tedre Professori, hankkeen johtaja, Itä-Suomen yliopisto (UEF) Prof. Tedre toimii datatoimijuuutta käsittelevän työpaketin (työpaketti 1) ja koko hankkeen johtajana. matti.tedre@uef.fi Kati Mäkitalo Professori, hankkeen vuorovaikutusvastaava, Oulun yliopisto Prof. Mäkitalo toimii vuorovaikutusmekanismeja koskevan työpaketin (työpaketti 5) johtajana. kati.makitalo@oulu.fi Teemme monitieteistä tutkimus- ja kehitystyötä Tiesitkö, että konsortiomme eli hankkeemme eri osapuolet on hyvin monitieteinen…"
+categories: []
+tags: []
+author: admin
+layout: layouts/page.njk
+kadenceBlocks:
+  - advancedheading
+  - image
+  - column
+  - rowlayout
+  - infobox
+  - pane
+  - accordion
+---
+
+{% macro renderResearchfiCard(personName) %}
+{% set publications = researchfi | publicationsForPerson(personName) %}
+{% set first = publications[0] if publications.length else null %}
+{% set profileUrl = first.personId if (first and first.personId and (first.personId | isHttpUrl)) else (first.link if (first and first.link) else "") %}
+<div class="researchfi-card">
+  <h5 class="researchfi-card__title">Viimeisin julkaisu</h5>
+  {% if first %}
+  <ul class="researchfi-card__list">
+    <li class="researchfi-card__item">
+      <div class="researchfi-card__meta">{{ first.year }}{% if first.place %} · {{ first.place }}{% endif %}</div>
+      <strong class="researchfi-card__name">{{ first.title }}</strong>
+      {% if first.authors %}
+      <div class="researchfi-card__authors">{{ first.authors }}</div>
+      {% endif %}
+    </li>
+  </ul>
+  {% if profileUrl %}
+  <a href="{{ profileUrl }}" class="researchfi-card__all-link" target="_blank" rel="noopener">Kaikki julkaisut →</a>
+  {% endif %}
+  {% else %}
+  <p class="researchfi-card__empty">Ei julkaisuja julkisissa tutkimusprofiileissa.</p>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{% macro renderPersonCard(person, featured = false) %}
+<article
+  class="consortium-card{% if featured %} consortium-card--featured{% endif %}"
+  data-card
+  data-name="{{ person.name }}"
+  data-organization="{{ person.organization }}"
+  data-discipline="{{ person.discipline }}"
+>
+  <div class="consortium-card__meta-row">
+    <span class="consortium-card__meta consortium-card__meta--org">{{ person.organization }}</span>
+    {% if person.discipline %}
+    <span class="consortium-card__meta consortium-card__meta--discipline">{{ person.discipline }}</span>
+    {% endif %}
+  </div>
+
+  {% if person.imageUrl %}
+  <img class="consortium-card__image" src="{{ person.imageUrl }}" alt="{{ person.name }}" loading="lazy" />
+  {% endif %}
+
+  <div class="consortium-card__body">
+    <h3 class="consortium-card__name">{{ person.name }}</h3>
+    {% if person.role %}
+    <p class="consortium-card__role">{{ person.role }}</p>
+    {% endif %}
+    {% if person.description %}
+    <p class="consortium-card__description">{{ person.description }}</p>
+    {% endif %}
+    {% if person.email %}
+    <p class="consortium-card__contact"><a href="mailto:{{ person.email }}">{{ person.email }}</a></p>
+    {% endif %}
+    {% if person.profileUrl %}
+    <p class="consortium-card__actions">
+      <a href="{{ person.profileUrl }}" target="_blank" rel="noopener">Profiili</a>
+    </p>
+    {% endif %}
+    {{ renderResearchfiCard(person.publicationName or person.name) }}
+  </div>
+</article>
+{% endmacro %}
+
+{% set workPackageLeaders = [
+  {
+    "name": "Matti Tedre",
+    "publicationName": "Matti Tedre",
+    "organization": "Itä-Suomen yliopisto (UEF)",
+    "discipline": "Tietojenkäsittelytiede",
+    "role": "Professori, hankkeen johtaja",
+    "description": "Prof. Tedre toimii datatoimijuutta käsittelevän työpaketin (TP1) ja koko hankkeen johtajana.",
+    "email": "matti.tedre@uef.fi",
+    "profileUrl": "https://uefconnect.uef.fi/henkilo/matti.tedre/",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/02/matti_2022.jpg"
+  },
+  {
+    "name": "Kati Mäkitalo",
+    "publicationName": "Kati Mäkitalo",
+    "organization": "Oulun yliopisto",
+    "discipline": "Kasvatustiede",
+    "role": "Professori, hankkeen vuorovaikutusvastaava",
+    "description": "Prof. Mäkitalo toimii vuorovaikutusmekanismeja koskevan työpaketin (TP5) johtajana.",
+    "email": "kati.makitalo@oulu.fi",
+    "profileUrl": "https://www.linkedin.com/in/kmsiegl06",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/katimakitalo-e1693400652586.jpeg"
+  },
+  {
+    "name": "Henriikka Vartiainen",
+    "publicationName": "Henriikka Vartiainen",
+    "organization": "Itä-Suomen yliopisto (UEF)",
+    "discipline": "Kasvatustiede",
+    "role": "Yliopistotutkija",
+    "description": "Henriikka Vartiainen toimii datatoimijuutta käsittelevän työpaketin (TP2) johtajana.",
+    "email": "",
+    "profileUrl": "https://uefconnect.uef.fi/henkilo/henriikka.vartiainen/",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/5de138bb500d2061af2abe762604f4ec_profile_file-500x500-1.jpg"
+  },
+  {
+    "name": "Kaiju Kangas",
+    "publicationName": "Kaiju Kangas",
+    "organization": "Helsingin yliopisto",
+    "discipline": "Kasvatustiede",
+    "role": "Apulaisprofessori",
+    "description": "Apulaisprofessori Kangas toimii episteemistä sujuvuutta käsittelevän työpaketin (TP3) johtajana.",
+    "email": "",
+    "profileUrl": "https://researchportal.helsinki.fi/fi/persons/kaiju-kangas",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/kaiju-e1693401117285.webp"
+  },
+  {
+    "name": "Teemu Roos",
+    "publicationName": "Teemu Roos",
+    "organization": "Helsingin yliopisto",
+    "discipline": "Tietojenkäsittelytiede",
+    "role": "Professori",
+    "description": "Professori Roos toimii teknologian kehityksestä vastaavan työpaketin (TP4) johtajana.",
+    "email": "",
+    "profileUrl": "https://researchportal.helsinki.fi/fi/persons/teemu-roos",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/teemu_roos.jpeg"
+  }
+] %}
+
+{% set consortiumMembers = [
+  {
+    "name": "Sini Davies",
+    "publicationName": "Sini Davies",
+    "organization": "Helsingin yliopisto",
+    "discipline": "Kasvatustiede",
+    "role": "Väitöskirjatutkija",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://researchportal.helsinki.fi/fi/persons/sini-maarit-davies",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/sinidavies-e1693401190663.webp"
+  },
+  {
+    "name": "Kamrul Faisal",
+    "publicationName": "Kamrul Faisal",
+    "organization": "Helsingin yliopisto",
+    "discipline": "Kasvatustiede",
+    "role": "Väitöskirjatutkija",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://researchportal.helsinki.fi/fi/persons/kamrul-faisal",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/kamrul-e1693400084175.webp"
+  },
+  {
+    "name": "Eveliina Ignatius",
+    "publicationName": "Eveliina Ignatius",
+    "organization": "Helsingin yliopisto",
+    "discipline": "Kasvatustiede",
+    "role": "Väitöskirjatutkija",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://researchportal.helsinki.fi/fi/persons/jenni-eveliina-ignatius",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/01/pngegg.png"
+  },
+  {
+    "name": "Megumi Iwata",
+    "publicationName": "Megumi Iwata",
+    "organization": "Oulun yliopisto",
+    "discipline": "Kasvatustiede",
+    "role": "Väitöskirjatutkija",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://www.linkedin.com/in/megumi-iwata/",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/megumi.jpeg"
+  },
+  {
+    "name": "Ilkka Jormanainen",
+    "publicationName": "Ilkka Jormanainen",
+    "organization": "Itä-Suomen yliopisto (UEF)",
+    "discipline": "Tietojenkäsittelytiede",
+    "role": "Yliopistonlehtori",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://uefconnect.uef.fi/henkilo/ilkka.jormanainen/",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/ilkkajormanainen.jpeg"
+  },
+  {
+    "name": "Juho Kahila",
+    "publicationName": "Juho Kahila",
+    "organization": "Itä-Suomen yliopisto (UEF)",
+    "discipline": "Kasvatustiede",
+    "role": "Projektitutkija",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://uefconnect.uef.fi/henkilo/juho.kahila/",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/juhokahila.jpeg"
+  },
+  {
+    "name": "Jussi Koivisto, KM",
+    "publicationName": "Jussi Koivisto, KM",
+    "organization": "Suomen koodikoulu (Codeschool Finland)",
+    "discipline": "",
+    "role": "Pedagoginen asiantuntija",
+    "description": "Materiaalintuotanto, opettajankoulutus, pedagogiset mallit ja teknologiaopetus.",
+    "email": "",
+    "profileUrl": "",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/02/thumbnail_CSF-Jussi-Koivisto-2022-12-1772x2658-1.jpg"
+  },
+  {
+    "name": "Jari Laru",
+    "publicationName": "Jari Laru",
+    "organization": "Oulun yliopisto",
+    "discipline": "Kasvatustiede",
+    "role": "Yliopistonlehtori",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://www.oulu.fi/en/researchers/jari-laru",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/jarilaru.jpeg"
+  },
+  {
+    "name": "Lindroos-Hovinheimo, Susanna M",
+    "publicationName": "Lindroos-Hovinheimo, Susanna M",
+    "organization": "Helsingin yliopisto",
+    "discipline": "Oikeustiede",
+    "role": "Professori",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://researchportal.helsinki.fi/fi/persons/susanna-lindroos-hovinheimo",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/Lindroos_Hovinheimo_Susanna_2_photo_Maarit_Kyt_harju-e1693399606558.webp"
+  },
+  {
+    "name": "Sonsoles Lopez-Pernas",
+    "publicationName": "Sonsoles Lopez-Pernas",
+    "organization": "Itä-Suomen yliopisto (UEF)",
+    "discipline": "Tietojenkäsittelytiede",
+    "role": "Vanhempi tutkija",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://uefconnect.uef.fi/henkilo/sonsoles.lopez-pernas/",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/sonsolez.jpeg"
+  },
+  {
+    "name": "Tarja Pietarinen",
+    "publicationName": "Tarja Pietarinen",
+    "organization": "Helsingin yliopisto",
+    "discipline": "Tietojenkäsittelytiede",
+    "role": "Tutkijatohtori",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://researchportal.helsinki.fi/fi/persons/tarja-hannele-pietarinen",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/pngegg-1024x777-1.png"
+  },
+  {
+    "name": "Nicolas Pope",
+    "publicationName": "Nicolas Pope",
+    "organization": "Itä-Suomen yliopisto (UEF)",
+    "discipline": "Tietojenkäsittelytiede",
+    "role": "Yliopistotutkija",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://uefconnect.uef.fi/henkilo/nicolas.pope/",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/01/pngegg.png"
+  },
+  {
+    "name": "Elisa Silvennoinen",
+    "publicationName": "Elisa Silvennoinen",
+    "organization": "Itä-Suomen yliopisto (UEF)",
+    "discipline": "Oikeustiede",
+    "role": "Yliopistonlehtori",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://uefconnect.uef.fi/en/person/elisa.silvennoinen/",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/elisasilvennoinen.jpeg"
+  },
+  {
+    "name": "Kati Sormunen",
+    "publicationName": "Kati Sormunen",
+    "organization": "Helsingin yliopisto",
+    "discipline": "Kasvatustiede",
+    "role": "Yliopistonlehtori",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://researchportal.helsinki.fi/fi/persons/kati-sormunen",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/katisormunen-e1693401085661.webp"
+  },
+  {
+    "name": "Milka Sormunen",
+    "publicationName": "Milka Sormunen",
+    "organization": "Helsingin yliopisto",
+    "discipline": "Oikeustiede",
+    "role": "Tutkijatohtori",
+    "description": "",
+    "email": "",
+    "profileUrl": "https://researchportal.helsinki.fi/fi/persons/milka-sormunen",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/milka-sormunen-e1693399722651.webp"
+  },
+  {
+    "name": "Sirkku Tahvanainen",
+    "publicationName": "Sirkku Tahvanainen",
+    "organization": "Suomen koodikoulu (Codeschool Finland)",
+    "discipline": "",
+    "role": "Opetuspalveluiden kehitys, partneri",
+    "description": "Pääkouluttaja, oppimateriaalikehitys ja sertifiointiprosessi. FM, mielen filosofia.",
+    "email": "",
+    "profileUrl": "",
+    "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/02/thumbnail_CSF-Sirkku-Tahvanainen-2022-12-1772x2658-1.jpg"
+  }
+] %}
+{% set allPeople = workPackageLeaders.concat(consortiumMembers) %}
+
+<style>
+  .konsortio-page {
+    display: grid;
+    gap: 3rem;
+  }
+
+  .konsortio-section {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .konsortio-section__header {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .konsortio-section__lead {
+    max-width: 74ch;
+    margin: 0;
+    color: #475569;
+  }
+
+  .consortium-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    align-items: stretch;
+  }
+
+  .consortium-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 4.5rem 1.25rem 1.25rem;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 1rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbf7 100%);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  }
+
+  .consortium-card--featured {
+    background: linear-gradient(180deg, #ffffff 0%, #f4f8f1 100%);
+    border-color: rgba(49, 78, 37, 0.16);
+  }
+
+  .consortium-card__meta-row {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    pointer-events: none;
+  }
+
+  .consortium-card__meta {
+    display: inline-flex;
+    align-items: center;
+    max-width: 48%;
+    padding: 0.32rem 0.65rem;
+    border-radius: 999px;
+    background: #eef4ea;
+    color: #314e25;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .consortium-card__meta--discipline {
+    margin-left: auto;
+    background: #f3f4f6;
+    color: #334155;
+    text-align: right;
+    justify-content: flex-end;
+  }
+
+  .consortium-card__image {
+    width: 104px;
+    height: 104px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #e5e7eb;
+  }
+
+  .consortium-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .consortium-card__name {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .consortium-card__role {
+    margin: 0.45rem 0 0;
+    color: #334155;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .consortium-card__description,
+  .consortium-card__contact,
+  .consortium-card__actions {
+    margin: 0.85rem 0 0;
+    color: #475569;
+    line-height: 1.55;
+  }
+
+  .consortium-card__contact,
+  .consortium-card__actions {
+    text-align: center;
+  }
+
+  .consortium-card__actions a,
+  .consortium-card__contact a {
+    color: var(--global-palette2, #446d33);
+    text-decoration: none;
+  }
+
+  .consortium-card__actions a:hover,
+  .consortium-card__contact a:hover {
+    text-decoration: underline;
+  }
+
+  .consortium-filters {
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 1rem;
+    background: #f8fafc;
+  }
+
+  .consortium-filters__controls {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .consortium-filters__field {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .consortium-filters__field label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #334155;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .consortium-filters__field select {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid rgba(148, 163, 184, 0.55);
+    border-radius: 0.75rem;
+    background: #fff;
+    color: #0f172a;
+    font: inherit;
+  }
+
+  .consortium-filters__status {
+    margin: 0;
+    color: #475569;
+    font-size: 0.95rem;
+  }
+
+  .researchfi-card {
+    margin-top: auto;
+    padding-top: 1rem;
+  }
+
+  .researchfi-card__title {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .researchfi-card__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .researchfi-card__item + .researchfi-card__item {
+    margin-top: 0.85rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+  }
+
+  .researchfi-card__meta,
+  .researchfi-card__authors,
+  .researchfi-card__empty {
+    color: #4b5563;
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+
+  .researchfi-card__name {
+    display: block;
+    margin-top: 0.2rem;
+    line-height: 1.45;
+  }
+
+  .researchfi-card__authors {
+    margin-top: 0.25rem;
+  }
+
+  .researchfi-card__empty {
+    margin: 0;
+  }
+
+  .researchfi-card__all-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.35rem 0.85rem;
+    background: var(--global-palette1, #314e25);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+
+  .researchfi-card__all-link:hover {
+    background: var(--global-palette2, #446d33);
+  }
+
+  @media (max-width: 767px) {
+    .consortium-card {
+      padding-top: 5rem;
+    }
+
+    .consortium-card__meta-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .consortium-card__meta {
+      max-width: 100%;
+    }
+
+    .consortium-card__meta--discipline {
+      margin-left: 0;
+      justify-content: flex-start;
+      text-align: left;
+    }
+  }
+</style>
+
+<div class="konsortio-page">
+  <section class="konsortio-section">
+    <div class="konsortio-section__header">
+      <h1>Konsortio</h1>
+      <p class="konsortio-section__lead">
+        Työpakettien johtajat näkyvät listassa ensimmäisinä. Muu konsortio seuraa heidän jälkeensä aakkosjärjestyksessä.
+      </p>
+    </div>
+
+    <div class="consortium-filters" data-consortium-filters>
+      <div class="consortium-filters__controls">
+        <div class="consortium-filters__field">
+          <label for="consortium-filter-organization">Organisaatio</label>
+          <select id="consortium-filter-organization" data-filter-organization>
+            <option value="">Kaikki organisaatiot</option>
+            <option value="Helsingin yliopisto">Helsingin yliopisto</option>
+            <option value="Itä-Suomen yliopisto (UEF)">Itä-Suomen yliopisto (UEF)</option>
+            <option value="Oulun yliopisto">Oulun yliopisto</option>
+            <option value="Suomen koodikoulu (Codeschool Finland)">Suomen koodikoulu (Codeschool Finland)</option>
+          </select>
+        </div>
+
+        <div class="consortium-filters__field">
+          <label for="consortium-filter-discipline">Tieteenala</label>
+          <select id="consortium-filter-discipline" data-filter-discipline>
+            <option value="">Kaikki tieteenalat</option>
+            <option value="Kasvatustiede">Kasvatustiede</option>
+            <option value="Tietojenkäsittelytiede">Tietojenkäsittelytiede</option>
+            <option value="Oikeustiede">Oikeustiede</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="consortium-filters__status" data-filter-status>Näytetään {{ allPeople.length }} henkilöä.</p>
+    </div>
+
+    <div class="consortium-grid" data-consortium-grid>
+      {% for person in allPeople %}
+        {{ renderPersonCard(person, loop.index <= workPackageLeaders.length) }}
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<script>
+  function initConsortiumFilters() {
+    var grid = document.querySelector("[data-consortium-grid]");
+    var organizationSelect = document.querySelector("[data-filter-organization]");
+    var disciplineSelect = document.querySelector("[data-filter-discipline]");
+    var status = document.querySelector("[data-filter-status]");
+
+    if (!grid || !organizationSelect || !disciplineSelect || !status) {
+      return;
+    }
+
+    var cards = Array.prototype.slice.call(grid.querySelectorAll("[data-card]"));
+
+    function normalizeValue(value) {
+      return String(value || "").trim().toLowerCase();
+    }
+
+    function applyFilters() {
+      var organization = normalizeValue(organizationSelect.value);
+      var discipline = normalizeValue(disciplineSelect.value);
+
+      var visibleCards = cards.filter(function (card) {
+        var organizationMatch = !organization || normalizeValue(card.dataset.organization) === organization;
+        var disciplineMatch = !discipline || normalizeValue(card.dataset.discipline) === discipline;
+        var visible = organizationMatch && disciplineMatch;
+        card.hidden = !visible;
+        return visible;
+      });
+
+      status.textContent = "Näytetään " + visibleCards.length + " henkilöä.";
+    }
+
+    organizationSelect.addEventListener("change", applyFilters);
+    disciplineSelect.addEventListener("change", applyFilters);
+    applyFilters();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initConsortiumFilters);
+  } else {
+    initConsortiumFilters();
+  }
+</script>

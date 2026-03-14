@@ -1,0 +1,31 @@
+{# kadence/infobox — Info card with link-wrap, optional media, title and body #}
+{% set b = kadenceBlock.attrs %}
+{% from "macros/feather-icons.njk" import featherIcon %}
+<div class="wp-block-kadence-infobox kt-blocks-info-box-wrap{% if b.uniqueID %} kt-info-box_{{ b.uniqueID }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}">
+  {% if b.linkUrl %}
+    <a href="{{ b.linkUrl }}"{% if b.linkTarget %} target="{{ b.linkTarget }}"{% endif %} class="kt-blocks-info-box-link-wrap">
+  {% else %}
+    <div class="kt-blocks-info-box-link-wrap kt-blocks-info-box-link-wrap-hover-only">
+  {% endif %}
+    {% if b.mediaType == "icon" and b.mediaIcon %}
+      <div class="kt-blocks-info-box-media-container kt-info-box-image">
+        <div class="kt-info-svg-div">{{ featherIcon(b.mediaIcon) }}</div>
+      </div>
+    {% elif b.mediaType == "image" and b.mediaUrl %}
+      <div class="kt-blocks-info-box-media-container kt-info-box-image">
+        <div class="kt-info-box-img-wrap"><img src="{{ b.mediaUrl }}" alt="{{ b.title if b.title else '' }}" class="kb-info-box-image"></div>
+      </div>
+    {% endif %}
+    <div class="kt-infobox-textcontent">
+      {% if b.title %}
+        {% set tag = "h" ~ (b.titleLevel if b.titleLevel else 3) %}
+        <{{ tag }} class="kt-blocks-info-box-title">{{ b.title }}</{{ tag }}>
+      {% endif %}
+      <div class="kt-blocks-info-box-body">{{ kadenceInnerHtml | safe }}</div>
+    </div>
+  {% if b.linkUrl %}
+    </a>
+  {% else %}
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,10 @@
+{# Generated multilingual switcher. Edit _data/site.json locales as needed. #}
+{% if site and site.locales and site.locales.length > 1 %}
+<nav class="language-switcher" aria-label="Language switcher">
+  <ul>
+    {% for locale in site.locales %}
+      <li><a href="/{{ locale }}/">{{ locale | upper }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endif %}

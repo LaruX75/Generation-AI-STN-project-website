@@ -1,0 +1,141 @@
+[
+  {
+    "id": "parsed-nav-0",
+    "slug": "parsed-nav-0",
+    "title": "Navigation 1",
+    "location": "",
+    "items": [
+      {
+        "title": "Opettajalle",
+        "url": "/opettajalle/",
+        "classes": [
+          "wp-block-kadence-navigation-link",
+          "kb-nav-link-2692_379385-4c",
+          "menu-item",
+          "menu-item-has-children",
+          "kadence-menu-mega-enabled",
+          "kb-menu-mega-width-custom",
+          "kb-menu-mega-width-tablet-custom",
+          "kb-menu-mega-width-mobile-custom",
+          "kb-menu-has-icon",
+          "kb-menu-has-media",
+          "wp-block-kadence-navigation-link"
+        ],
+        "megamenu": true,
+        "megamenuColumns": [],
+        "children": [
+          {
+            "title": "Opettajalle",
+            "url": "/opettajalle/"
+          }
+        ]
+      },
+      {
+        "title": "Tutkijalle",
+        "url": "/generation-ai-hankkeessa-tehtava-tutkimus/",
+        "classes": [
+          "wp-block-kadence-navigation-link",
+          "kb-nav-link-2692_14e7c2-ee",
+          "menu-item",
+          "wp-block-kadence-navigation-link"
+        ],
+        "megamenu": false,
+        "megamenuColumns": [],
+        "children": []
+      },
+      {
+        "title": "Yleisölle",
+        "url": "/tietoa-tekoalysta-kenelle-tahansa/",
+        "classes": [
+          "wp-block-kadence-navigation-link",
+          "kb-nav-link-2692_d779c5-45",
+          "menu-item",
+          "wp-block-kadence-navigation-link"
+        ],
+        "megamenu": false,
+        "megamenuColumns": [],
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "parsed-nav-1",
+    "slug": "parsed-nav-1",
+    "title": "Navigation 2",
+    "location": "",
+    "items": [
+      {
+        "title": "Opettajalle",
+        "url": "/opettajalle/",
+        "classes": [
+          "wp-block-kadence-navigation-link",
+          "kb-nav-link-2692_379385-4c",
+          "menu-item",
+          "menu-item-has-children",
+          "kadence-menu-mega-enabled",
+          "kb-menu-mega-width-custom",
+          "kb-menu-mega-width-tablet-custom",
+          "kb-menu-mega-width-mobile-custom",
+          "kb-menu-has-icon",
+          "kb-menu-has-media",
+          "wp-block-kadence-navigation-link"
+        ],
+        "megamenu": true,
+        "megamenuColumns": [],
+        "children": [
+          {
+            "title": "Opettajalle",
+            "url": "/opettajalle/"
+          }
+        ]
+      },
+      {
+        "title": "Tutkijalle",
+        "url": "/generation-ai-hankkeessa-tehtava-tutkimus/",
+        "classes": [
+          "wp-block-kadence-navigation-link",
+          "kb-nav-link-2692_14e7c2-ee",
+          "menu-item",
+          "wp-block-kadence-navigation-link"
+        ],
+        "megamenu": false,
+        "megamenuColumns": [],
+        "children": []
+      },
+      {
+        "title": "Yleisölle",
+        "url": "/tietoa-tekoalysta-kenelle-tahansa/",
+        "classes": [
+          "wp-block-kadence-navigation-link",
+          "kb-nav-link-2692_d779c5-45",
+          "menu-item",
+          "wp-block-kadence-navigation-link"
+        ],
+        "megamenu": false,
+        "megamenuColumns": [],
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "footer-navigation",
+    "slug": "footer-navigation",
+    "title": "Alatunniste",
+    "location": "",
+    "items": [
+      {
+        "title": "Materiaalit",
+        "url": "/materiaalit/",
+        "classes": [
+          "menu-item",
+          "menu-item-type-post_type",
+          "menu-item-object-page",
+          "menu-item-2631"
+        ],
+        "megamenu": false,
+        "megamenuColumns": [],
+        "children": []
+      }
+    ]
+  }
+]

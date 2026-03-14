@@ -1,0 +1,104 @@
+{
+  "people": [
+    {
+      "name": "Matti Tedre",
+      "url": "https://uefconnect.uef.fi/matti.tedre/#publications",
+      "limit": 3
+    },
+    {
+      "name": "Kati Mäkitalo",
+      "source": "publicationPages",
+      "pages": [
+        "https://oulu.cris.fi/en/publications/0e19a32a-2460-4f8d-9704-20516a598090",
+        "https://oulu.cris.fi/en/publications/1fcc1af7-36cc-4367-b8e8-292e7029ffb9",
+        "https://oulu.cris.fi/en/publications/ce9809ca-de90-4e1c-ad9f-8d1cce86d1e6"
+      ],
+      "limit": 3
+    },
+    {
+      "name": "Henriikka Vartiainen",
+      "url": "https://uefconnect.uef.fi/en/henriikka.vartiainen#publications",
+      "limit": 3
+    },
+    {
+      "name": "Kaiju Kangas",
+      "url": "https://researchportal.helsinki.fi/fi/persons/kaiju-kangas",
+      "limit": 3
+    },
+    {
+      "name": "Teemu Roos",
+      "url": "https://researchportal.helsinki.fi/fi/persons/teemu-roos",
+      "limit": 3
+    },
+    {
+      "name": "Kati Sormunen",
+      "url": "https://researchportal.helsinki.fi/fi/persons/kati-sormunen",
+      "limit": 3
+    },
+    {
+      "name": "Sini Davies",
+      "url": "https://researchportal.helsinki.fi/fi/persons/sini-maarit-davies",
+      "limit": 3
+    },
+    {
+      "name": "Tarja Pietarinen",
+      "source": "orcid",
+      "orcid": "0000-0003-2816-9580",
+      "limit": 3
+    },
+    {
+      "name": "Lindroos-Hovinheimo, Susanna M",
+      "url": "https://researchportal.helsinki.fi/fi/persons/susanna-lindroos-hovinheimo",
+      "limit": 3
+    },
+    {
+      "name": "Milka Sormunen",
+      "url": "https://researchportal.helsinki.fi/fi/persons/milka-sormunen",
+      "limit": 3
+    },
+    {
+      "name": "Eveliina Ignatius",
+      "url": "https://researchportal.helsinki.fi/fi/persons/jenni-eveliina-ignatius",
+      "limit": 3
+    },
+    {
+      "name": "Kamrul Faisal",
+      "url": "https://researchportal.helsinki.fi/fi/persons/kamrul-faisal",
+      "limit": 3
+    },
+    {
+      "name": "Juho Kahila",
+      "url": "https://uefconnect.uef.fi/henkilo/juho.kahila/",
+      "limit": 3
+    },
+    {
+      "name": "Ilkka Jormanainen",
+      "url": "https://uefconnect.uef.fi/henkilo/ilkka.jormanainen/",
+      "limit": 3
+    },
+    {
+      "name": "Nicolas Pope",
+      "url": "https://uefconnect.uef.fi/henkilo/nicolas.pope/",
+      "limit": 3
+    },
+    {
+      "name": "Sonsoles Lopez-Pernas",
+      "url": "https://uefconnect.uef.fi/henkilo/sonsoles.lopez-pernas/",
+      "limit": 3
+    },
+    {
+      "name": "Elisa Silvennoinen",
+      "url": "https://uefconnect.uef.fi/en/person/elisa.silvennoinen/",
+      "limit": 3
+    },
+    { "name": "Jari Laru", "orcid": "0000-0003-0347-0182", "limit": 3 },
+    {
+      "name": "Megumi Iwata",
+      "source": "orcid",
+      "orcid": "0000-0001-7944-5157",
+      "limit": 3
+    },
+    { "name": "Sirkku Tahvanainen", "limit": 3 },
+    { "name": "Jussi Koivisto, KM", "limit": 3 }
+  ]
+}

@@ -1,0 +1,18 @@
+{# kadence/videopopup (PRO) — Video popup trigger; add JS lightbox to handle .kadence-videopopup-trigger clicks #}
+{% set b = kadenceBlock.attrs %}
+<div
+  class="wp-block-kadence-videopopup kb-video-pop-wrap kadence-block kadence-videopopup{% if b.className %} {{ b.className }}{% endif %}"
+>
+  {% if b.url %}
+    <a
+      class="kadence-videopopup-trigger"
+      href="{{ b.url }}"
+      {% if b.type %}data-video-type="{{ b.type }}"{% endif %}
+      aria-label="Play video"
+    >
+      {{ kadenceInnerHtml | safe }}
+    </a>
+  {% else %}
+    {{ kadenceInnerHtml | safe }}
+  {% endif %}
+</div>

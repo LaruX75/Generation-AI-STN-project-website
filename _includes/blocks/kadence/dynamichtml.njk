@@ -1,0 +1,8 @@
+{# kadence/dynamichtml (PRO) — Dynamic query block; replace with an Eleventy collection loop #}
+{% set b = kadenceBlock.attrs %}
+<div
+  class="wp-block-kadence-dynamichtml kb-dynamic-html kadence-block kadence-dynamichtml{% if b.className %} {{ b.className }}{% endif %}"
+>
+  {# TODO: replace with Eleventy collection loop — e.g. {% for post in collections.posts %} #}
+  {{ kadenceInnerHtml | safe }}
+</div>

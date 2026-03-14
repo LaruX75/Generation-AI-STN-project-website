@@ -1,0 +1,10 @@
+{# kadence/show-more (PRO) — Expandable content using native <details>/<summary>; no JS needed #}
+{% set b = kadenceBlock.attrs %}
+<details
+  class="wp-block-kadence-show-more kb-show-more-wrap kadence-block kadence-show-more{% if b.className %} {{ b.className }}{% endif %}"
+>
+  <summary class="kadence-show-more-toggle">
+    {{ b.showHideMore if b.showHideMore else "Show more" }}
+  </summary>
+  {{ kadenceInnerHtml | safe }}
+</details>

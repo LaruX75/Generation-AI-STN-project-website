@@ -1,0 +1,17 @@
+{# kadence/posts — Eleventy collection fallback for dynamic posts block #}
+{% set b = kadenceBlock.attrs %}
+{% set count = b.postsToShow if b.postsToShow else (b.numberOfItems if b.numberOfItems else 3) %}
+<section class="wp-block-kadence-posts kb-posts kadence-block kadence-posts kb-posts-block{% if b.className %} {{ b.className }}{% endif %}">
+  {% if kadenceInnerHtml | trim %}
+    {{ kadenceInnerHtml | safe }}
+  {% else %}
+    {% for post in collections.posts | reverse %}
+      {% if loop.index <= count %}
+        <article class="kb-posts-item">
+          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          {% if post.data.excerpt %}<p>{{ post.data.excerpt }}</p>{% endif %}
+        </article>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</section>
