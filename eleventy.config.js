@@ -1,4 +1,5 @@
 const { existsSync } = require("node:fs");
+const pluginNavigation = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
   const pad = value => String(value).padStart(2, "0");
@@ -34,10 +35,19 @@ module.exports = function(eleventyConfig) {
       .filter(Boolean)
       .sort()
       .join(" ");
+  const resolveLocale = (lang, url) => {
+    if (lang === "en" || lang === "sv" || lang === "fi") return lang;
+    const normalizedUrl = String(url || "");
+    if (normalizedUrl.startsWith("/en/")) return "en";
+    if (normalizedUrl.startsWith("/sv/")) return "sv";
+    return "fi";
+  };
 
   if (existsSync("media")) eleventyConfig.addPassthroughCopy({ "media": "media" });
   if (existsSync("styles")) eleventyConfig.addPassthroughCopy({ "styles": "styles" });
   if (existsSync("assets")) eleventyConfig.addPassthroughCopy({ "assets": "assets" });
+  if (existsSync("scripts")) eleventyConfig.addPassthroughCopy({ "scripts": "scripts" });
+  eleventyConfig.addPlugin(pluginNavigation);
 
   const byDate = (a, b) => b.date - a.date;
 
@@ -60,6 +70,19 @@ module.exports = function(eleventyConfig) {
     col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).includes("Tutkimus")).sort(byDate)
   );
 
+  eleventyConfig.addCollection("docs", col =>
+    col.getAll().filter(p => p.data.sourceType === "docs").sort((a, b) => (a.data.menuOrder || 0) - (b.data.menuOrder || 0))
+  );
+  eleventyConfig.addCollection("docs_by_kb", col => {
+    const items = col.getAll().filter(p => p.data.sourceType === "docs");
+    const grouped = {};
+    for (const item of items) {
+      const kb = (item.data["knowledge-base"] || ["uncategorized"])[0];
+      (grouped[kb] = grouped[kb] || []).push(item);
+    }
+    return grouped;
+  });
+
   eleventyConfig.addCollection("posts_sv", col =>
     col.getAll().filter(p => p.data.lang === "sv" && p.data.sourceType === "posts").sort(byDate)
   );
@@ -78,6 +101,20 @@ module.exports = function(eleventyConfig) {
     return (items || []).filter(item => {
       return normalizePersonName(item.lookupName || item.personName) === target;
     });
+  });
+  eleventyConfig.addFilter("localizedItems", (items, lang, url) => {
+    const locale = resolveLocale(lang, url);
+    const list = Array.isArray(items) ? items : [];
+    const localized = list.filter(item => {
+      return resolveLocale(item?.data?.lang, item?.url) === locale;
+    });
+    return localized.length ? localized : list;
+  });
+  eleventyConfig.addFilter("limitItems", (items, count) => {
+    const list = Array.isArray(items) ? items : [];
+    const limit = Number(count);
+    if (!Number.isFinite(limit) || limit <= 0) return list;
+    return list.slice(0, limit);
   });
   eleventyConfig.addFilter("date", formatDate);
   eleventyConfig.addFilter("isHttpUrl", value => /^https?:\/\//i.test(String(value || "").trim()));

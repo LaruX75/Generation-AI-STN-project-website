@@ -1,37 +1,31 @@
 {
-  "startedAt": "2026-03-14T21:22:13.887Z",
-  "configPath": "/Users/jlaru/Documents/www/wp-eleventy-migrator/configs/generation-ai-stn.fi.en.json",
+  "startedAt": "2026-03-14T21:50:21.405Z",
+  "configPath": "/Users/jlaru/Documents/www/wp-eleventy-migrator/configs/generation-ai-stn.fi.docs.json",
   "sourceType": "rest",
   "totals": {
-    "posts": 25,
-    "pages": 5
+    "docs": 23,
+    "betterdocs-faq": 15
   },
   "redirects": [],
   "warnings": [
-    "Possible unrendered shortcodes in 'pages/materials-from': [zotpressLib], [bbp-forum-index]",
-    "Possible unrendered shortcodes in 'pages/current-affairs': [zotpress]"
+    "Unsupported Kadence block 'advancedgallery' left as inner HTML fallback.",
+    "Unsupported Kadence block 'advancedgallery' left as inner HTML fallback.",
+    "Unsupported Kadence block 'advancedgallery' left as inner HTML fallback."
   ],
   "actionItems": {
-    "unsupportedBlocks": [],
-    "shortcodes": [
+    "unsupportedBlocks": [
       {
-        "document": "pages/materials-from.njk",
-        "sourceUrl": "https://www.generation-ai-stn.fi/en/materials-from/",
-        "shortcodes": [
-          "zotpressLib",
-          "bbp-forum-index"
-        ]
-      },
-      {
-        "document": "pages/current-affairs.njk",
-        "sourceUrl": "https://www.generation-ai-stn.fi/en/current-affairs/",
-        "shortcodes": [
-          "zotpress"
-        ]
+        "document": "docs/ensimmainen-oppitunti-tekoalyn-perusteet.njk",
+        "sourceUrl": "https://www.generation-ai-stn.fi/materiaalit/opetettavakone/tekoaly-haltuun-yhdessa-opetettavan-koneen-oppimateriaali/ensimmainen-oppitunti-tekoalyn-perusteet/",
+        "blocks": [
+          "advancedgallery"
+        ],
+        "suggestion": "Luo puuttuva Nunjucks-partial tai pidä fallback-HTML valiaikaisena ratkaisuna."
       }
     ],
+    "shortcodes": [],
     "suggestions": [
-      "Shortcode-viittaukset vaativat manuaalista korvausta Eleventy-komponenteilla tai staattisella HTML:lla."
+      "Tarkista report.actionItems.unsupportedBlocks ja toteuta puuttuvat blokkipartiaalit ensiksi eniten kaytettyihin lohkoihin."
     ]
   },
   "workflow": [
@@ -111,7 +105,7 @@
     "missing": [],
     "ok": true
   },
-  "finishedAt": "2026-03-14T21:22:20.039Z",
+  "finishedAt": "2026-03-14T21:50:28.069Z",
   "outputRoot": "/Users/jlaru/Documents/www/GenAI7",
   "reportPath": "/Users/jlaru/Documents/www/GenAI7/migration-report.json"
 }

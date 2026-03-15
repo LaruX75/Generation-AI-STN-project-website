@@ -1,5 +1,5 @@
 ---
-title: "AI News 11a/2023: GenAI Teachable Machine is still being finalised and the learning materials are in progress."
+title: 'AI News 11a/2023: GenAI Teachable Machine is still being finalised and the learning materials are in progress.'
 date: "2023-11-05T21:35:59"
 updated: "2025-02-12T22:38:57"
 slug: ai-news-11a-2023-genai-teachable-machine-is-still-being-finalised-and-the-learning-materials-are-in-progress
@@ -8,7 +8,7 @@ status: publish
 sourceType: posts
 sourceId: 3852
 sourceUrl: "https://www.generation-ai-stn.fi/en/generation-ai-monthly-ai-news-newsletter/ai-news-11a-2023-genai-teachable-machine-is-still-being-finalised-and-the-learning-materials-are-in-progress/"
-excerpt: "Welcome to the monthly newsletter of the Generation AI project. There will be at least one letter per month. You can subscribe to this newsletter either here on LinkedIN or on our project website: https://www.generation-ai-stn.fi/uutiskirje/ 1. GenAI Teachable Machine is our first application and it is starting to be ready During the first full year…"
+excerpt: 'Welcome to the monthly newsletter of the Generation AI project. There will be at least one letter per month. You can subscribe to this newsletter either here on LinkedIN or on our project website: https://www.generation-ai-stn.fi/uutiskirje/ 1. GenAI Teachable Machine is our first application and it is starting to be ready During the first full year…'
 categories:
   - Generation AI Monthly AI News (newsletter)
 tags:
@@ -18,7 +18,6 @@ lang: en
 author: admin
 layout: layouts/post.njk
 ---
-
 <p id="ember559"><strong>Welcome to the monthly newsletter of the Generation AI project.  </strong>There will be at least one letter per month. You can subscribe to this newsletter either here on LinkedIN or on our project website: <a href="https://www.generation-ai-stn.fi/uutiskirje/">https://www.generation-ai-stn.fi/uutiskirje/</a></p>
 
 <h2 class="wp-block-heading" id="ember560">1. GenAI Teachable Machine is our first application and it is starting to be ready</h2>

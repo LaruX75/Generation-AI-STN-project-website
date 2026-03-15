@@ -5,7 +5,7 @@
   {% if b.uniqueID %}id="kb-slider-{{ b.uniqueID }}"{% endif %}
   data-slider-mode="css-snap"
 >
-  <div class="splide__track">
+  <div class="splide__track" style="overflow:hidden;position:relative;">
     <ul class="splide__list" style="display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;list-style:none;padding:0;margin:0;">
       {{ kadenceInnerHtml | safe }}
     </ul>

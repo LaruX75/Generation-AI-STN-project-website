@@ -1,5 +1,5 @@
 ---
-title: "Susanna Lindroos-Hovinheimo: Hur såg AI-förordningen ut? (Konstitutionell blogg)"
+title: 'Susanna Lindroos-Hovinheimo: Hur såg AI-förordningen ut? (Konstitutionell blogg)'
 date: "2024-04-02T16:55:22"
 updated: "2025-02-12T22:39:21"
 slug: susanna-lindroos-hovinheimo-hur-sag-ai-forordningen-ut-konstitutionell-blogg
@@ -8,7 +8,7 @@ status: publish
 sourceType: posts
 sourceId: 3893
 sourceUrl: "https://www.generation-ai-stn.fi/sv/ajankohtaista/susanna-lindroos-hovinheimo-hur-sag-ai-forordningen-ut-konstitutionell-blogg/"
-excerpt: "EU:s AI-förordning var en lång och grundlig process. Nu är texten klar och vi kan reflektera över hur den blev. Det första jag kan säga är att det visade sig vara en lång tid. Förordningen innehåller 113 artiklar och en artikel är normalt längre än en A4-remsa. För att ange tillämpningsområdet enbart i artikel 2…"
+excerpt: 'EU:s AI-förordning var en lång och grundlig process. Nu är texten klar och vi kan reflektera över hur den blev. Det första jag kan säga är att det visade sig vara en lång tid. Förordningen innehåller 113 artiklar och en artikel är normalt längre än en A4-remsa. För att ange tillämpningsområdet enbart i artikel 2…'
 categories:
   - Blogginlägg
   - Helsingfors universitet
@@ -23,7 +23,6 @@ lang: sv
 author: admin
 layout: layouts/post.njk
 ---
-
 <p>EU:s AI-förordning var en lång och grundlig process. Nu är texten klar och vi kan reflektera över hur den blev. Det första jag kan säga är att det visade sig vara en lång tid. Förordningen innehåller 113 artiklar och en artikel är normalt längre än en A4-remsa. För att ange tillämpningsområdet enbart i artikel 2 krävs det 12 punkter i förordningen, varav flera innehåller underpunkter. Ingressen innehåller 180 punkter. Det finns tretton bilagor.</p>
 
 <p>Den första fasen av genomförandet kommer att ske sex månader efter det att förordningen träder i kraft &#8211; i höst &#8211; så Europa, genom sina teknikjurister, bör börja läsa så snart som möjligt. I slutskedet av förordningen ändrades innehållet inte särskilt mycket, men tillräckligt för att vissa av artiklarna skulle bli obekanta även för experter.</p>

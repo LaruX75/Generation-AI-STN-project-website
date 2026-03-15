@@ -3,12 +3,28 @@
 {% set b = kadenceBlock.attrs %}
 {% set cols = b.columns if b.columns else 1 %}
 {% set layout = b.colLayout if b.colLayout else "equal" %}
+{# ── Resolve named padding sizes → rem values ── #}
+{% set _ps = {"xs": "0.5rem", "sm": "1.5rem", "md": "2rem", "lg": "3rem", "xl": "4.5rem", "xxl": "6rem"} %}
+{% set _pads = b.padding if b.padding else [] %}
+{% set _pt = _ps[_pads[0]] if _pads[0] and _ps[_pads[0]] else (_pads[0] if _pads[0] else "") %}
+{% set _pb = _ps[_pads[2]] if _pads[2] and _ps[_pads[2]] else (_pads[2] if _pads[2] else "") %}
+{# Extra bottom clearance when bottomSep is present — must be >= separator height (100px) #}
+{% if b.bottomSep and b.bottomSep != "none" %}
+  {% if not _pb or _pb == "0" %}{% set _pb = "7rem" %}{% endif %}
+{% endif %}
+{# Build inline style string #}
+{% set _style = "" %}
+{% if b.background %}{% set _style = _style + "background-color:" + b.background + ";" %}{% endif %}
+{% if b.bgColor %}{% set _style = _style + "background-color:" + b.bgColor + ";" %}{% endif %}
+{% if b.backgroundImg and b.backgroundImg[0] and b.backgroundImg[0].bgImg %}{% set _style = _style + "background-image:url('" + b.backgroundImg[0].bgImg + "');" %}{% endif %}
+{% if _pt %}{% set _style = _style + "padding-top:" + _pt + ";" %}{% endif %}
+{% if _pb %}{% set _style = _style + "padding-bottom:" + _pb + ";" %}{% endif %}
 <section
   class="wp-block-kadence-rowlayout kb-row-layout-wrap kadence-block kadence-rowlayout{% if b.uniqueID %} kb-row-layout-id{{ b.uniqueID }}{% endif %}{% if b.align == "full" %} alignfull{% endif %}{% if b.bgColorClass %} kb-theme-{{ b.bgColorClass }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
-  {% if b.background or b.bgColor or (b.backgroundImg and b.backgroundImg[0] and b.backgroundImg[0].bgImg) %}style="{% if b.background %}background-color:{{ b.background }};{% endif %}{% if b.bgColor %}background-color:{{ b.bgColor }};{% endif %}{% if b.backgroundImg and b.backgroundImg[0] and b.backgroundImg[0].bgImg %}background-image:url('{{ b.backgroundImg[0].bgImg }}');{% endif %}"{% endif %}
+  {% if _style %}style="{{ _style }}"{% endif %}
 >
   {% if b.topSep and b.topSep != "none" %}
-    <div class="kt-row-layout-top-sep kt-svg-for-top-sep" aria-hidden="true"{% if b.topSepColor %} style="color:{{ b.topSepColor }}"{% endif %}>
+    <div class="kt-row-layout-top-sep kt-svg-for-top-sep" aria-hidden="true" style="height:100px;{% if b.topSepColor %}color:{{ b.topSepColor }};{% endif %}">
       {{ kbSeparator(b.topSep) | safe }}
     </div>
   {% endif %}
@@ -17,7 +33,7 @@
     {{ kadenceInnerHtml | safe }}
   </div>
   {% if b.bottomSep and b.bottomSep != "none" %}
-    <div class="kt-row-layout-bottom-sep kt-svg-for-bottom-sep" aria-hidden="true"{% if b.bottomSepColor %} style="color:{{ b.bottomSepColor }}"{% endif %}>
+    <div class="kt-row-layout-bottom-sep kt-svg-for-bottom-sep" aria-hidden="true" style="height:100px;{% if b.bottomSepColor %}color:{{ b.bottomSepColor }};{% endif %}">
       {{ kbSeparator(b.bottomSep) | safe }}
     </div>
   {% endif %}

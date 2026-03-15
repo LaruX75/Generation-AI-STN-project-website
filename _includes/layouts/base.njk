@@ -16,22 +16,47 @@
   {% set _ogDesc = ogDescription if ogDescription else _desc %}
   {% if _ogDesc %}<meta property="og:description" content="{{ _ogDesc }}">{% endif %}
   {% if ogImage %}<meta property="og:image" content="{{ ogImage }}">{% endif %}
+  <link rel="preload" as="font" type="font/ttf" href="/media/wp-content/uploads/2025/02/Tektur-VariableFont_wdthwght.ttf" crossorigin>
   {% include "legacy-styles.njk" %}
   <link rel="stylesheet" href="/styles/theme.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
 </head>
-<body>
+<body{% if pageHero %} class="has-hero"{% endif %}>
   {% include "partials/site-header.njk" %}
   {{ content | safe }}
   {% include "partials/site-footer.njk" %}
   {% include "partials/cookie-consent-placeholder.njk" %}
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+  <script src="/scripts/nav.js" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.kadence-splide-init').forEach(function(el) {
-        var opts = {};
-        try { opts = JSON.parse(el.dataset.splide || '{}'); } catch(e) {}
-        new Splide(el, opts).mount();
+      var PX_PER_SEC = 120;
+      document.querySelectorAll('.kb-post-feed-carousel-wrap').forEach(function(wrap) {
+        var track = wrap.querySelector('.kb-post-feed-carousel');
+        if (!track) return;
+        // Duplicate cards for seamless loop
+        Array.from(track.children).forEach(function(card) {
+          track.appendChild(card.cloneNode(true));
+        });
+        var halfWidth = track.scrollWidth / 2;
+        var paused = false;
+        var raf = null;
+        var last = null;
+        function tick(ts) {
+          if (!paused) {
+            if (last !== null) {
+              track.scrollLeft += PX_PER_SEC * (ts - last) / 1000;
+              if (track.scrollLeft >= halfWidth) track.scrollLeft -= halfWidth;
+            }
+            last = ts;
+          } else {
+            last = null;
+          }
+          raf = requestAnimationFrame(tick);
+        }
+        wrap.addEventListener('mouseenter', function() { paused = true; });
+        wrap.addEventListener('mouseleave', function() { paused = false; });
+        wrap.addEventListener('touchstart', function() { paused = true; }, { passive: true });
+        wrap.addEventListener('touchend', function() { paused = false; }, { passive: true });
+        raf = requestAnimationFrame(tick);
       });
     });
   </script>

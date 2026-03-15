@@ -1,5 +1,5 @@
 ---
-title: "GenAI engagerat i Girls’ Day-evenemang!"
+title: 'GenAI engagerat i Girls’ Day-evenemang!'
 date: "2023-10-11T13:01:05"
 updated: "2025-02-12T22:38:56"
 slug: genai-engagerat-i-girls-day-evenemang
@@ -8,7 +8,7 @@ status: publish
 sourceType: posts
 sourceId: 3838
 sourceUrl: "https://www.generation-ai-stn.fi/sv/nyheter-fran/genai-projektets-personal-vid-evenemang/genai-engagerat-i-girls-day-evenemang/"
-excerpt: "GenAI engagerat i Girls’ Day-evenemang! 400 flickor (och pojkar) besökte Uleåborgs universitet den 11 oktober som en del av den internationella flickdagen. Generation AI-projektet deltog också i denna dag genom att hålla en workshop på temat ”AI black box – teach the machine”. Visste du att Girls’ Day är ett centralt uppdrag för Soroptimister för…"
+excerpt: 'GenAI engagerat i Girls’ Day-evenemang! 400 flickor (och pojkar) besökte Uleåborgs universitet den 11 oktober som en del av den internationella flickdagen. Generation AI-projektet deltog också i denna dag genom att hålla en workshop på temat ”AI black box – teach the machine”. Visste du att Girls’ Day är ett centralt uppdrag för Soroptimister för…'
 categories:
   - GenAI-projektets personal vid evenemang
 tags:
@@ -20,7 +20,6 @@ lang: sv
 author: admin
 layout: layouts/post.njk
 ---
-
 <p>GenAI engagerat i Girls&#8217; Day-evenemang! 400 flickor (och pojkar) besökte Uleåborgs universitet den 11 oktober som en del av den internationella flickdagen. Generation AI-projektet deltog också i denna dag genom att hålla en workshop på temat &#8221;AI black box &#8211; teach the machine&#8221;. Visste du att Girls&#8217; Day är ett centralt uppdrag för Soroptimister för kvinnor över hela världen. <a href="https://www.soroptimistit.fi/oulu/tyttojen-paivan-tapahtuma-ensi-kertaa-oulussa/" target="_blank" rel="noopener" title="">I Uleåborg organiserades dagen av organisationens lokala klubb.</a><br/><br/>Workshopen inleddes med att ungdomarna fick lära sig hur mycket data deras mobilappar genererar. Det var en överraskning för många att det, i samband med ganska vardaglig användning, genereras i storleksordningen ett 9-sidigt pdf-dokument. Testa det själv: <a href="https://datadonation.ide.tudelft.nl/dataslip" target="_blank" rel="noopener" title="">https://datadonation.ide.tudelft.nl/dataslip</a></p>
 
 <p>Vi gick sedan tillsammans igenom hur data bearbetas med hjälp av AI, med särskilt fokus på de tekniker som används i applikationer för sociala medier. Projektet Generation AI och dess mål presenterades också i allmänna ordalag.  </p>

@@ -1,5 +1,5 @@
 ---
-title: "Susanna Lindroos-Hovinheimo: What did the AI regulation look like? (Constitutional Blog)"
+title: 'Susanna Lindroos-Hovinheimo: What did the AI regulation look like? (Constitutional Blog)'
 date: "2024-04-02T16:55:22"
 updated: "2025-02-12T22:39:21"
 slug: susanna-lindroos-hovinheimo-what-did-the-ai-regulation-look-like-constitutional-blog
@@ -8,7 +8,7 @@ status: publish
 sourceType: posts
 sourceId: 3879
 sourceUrl: "https://www.generation-ai-stn.fi/en/ajankohtaista/susanna-lindroos-hovinheimo-what-did-the-ai-regulation-look-like-constitutional-blog/"
-excerpt: The EU AI Regulation was a long and thorough process. Now the text is ready and we can reflect on how it turned out. The first thing to say is that it turned out to be a long one. The Regulation contains 113 articles and one article is typically longer than one A4 strip. To…
+excerpt: 'The EU AI Regulation was a long and thorough process. Now the text is ready and we can reflect on how it turned out. The first thing to say is that it turned out to be a long one. The Regulation contains 113 articles and one article is typically longer than one A4 strip. To…'
 categories:
   - Blog post
   - News from
@@ -23,7 +23,6 @@ lang: en
 author: admin
 layout: layouts/post.njk
 ---
-
 <p>The EU AI Regulation was a long and thorough process. Now the text is ready and we can reflect on how it turned out. The first thing to say is that it turned out to be a long one. The Regulation contains 113 articles and one article is typically longer than one A4 strip. To declare its scope in Article 2 alone, the Regulation needs 12 paragraphs, several of which contain sub-paragraphs. The preamble contains 180 paragraphs. There are thirteen annexes.</p>
 
 <p>The first phase of implementation will come six months after the regulation enters into force &#8211; in the autumn &#8211; so Europe, through its technology lawyers, should get down to the reading as soon as possible. In the final stages of the regulation, the content was not changed very much, but enough to make some of the articles unfamiliar even to experts.</p>

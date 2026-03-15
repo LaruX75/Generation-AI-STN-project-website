@@ -1,5 +1,5 @@
 ---
-title: "GenAI läraktig maskin (Teachable Machine) AI News 11a/2023: håller fortfarande på att slutföras och utbildningsmaterialet är under utarbetande."
+title: 'GenAI läraktig maskin (Teachable Machine) AI News 11a/2023: håller fortfarande på att slutföras och utbildningsmaterialet är under utarbetande.'
 date: "2023-11-05T21:35:59"
 updated: "2025-02-12T22:38:57"
 slug: genai-laraktig-maskin-teachable-machine-ai-news-11a-2023-haller-fortfarande-pa-att-slutforas-och-utbildningsmaterialet-ar-under-utarbetande
@@ -8,7 +8,7 @@ status: publish
 sourceType: posts
 sourceId: 3847
 sourceUrl: "https://www.generation-ai-stn.fi/sv/generation-ai-monthly-ai-news-nyhetsbrev/genai-laraktig-maskin-teachable-machine-ai-news-11a-2023-haller-fortfarande-pa-att-slutforas-och-utbildningsmaterialet-ar-under-utarbetande/"
-excerpt: "Välkommen till det månatliga nyhetsbrevet från Generation AI-projektet. Det kommer minst ett brev per månad. Du kan prenumerera på detta nyhetsbrev antingen här på LinkedIN eller på vår projektwebbplats: https://www.generation-ai-stn.fi/uutiskirje/ GenAI läraktig maskin (Teachable Machine) 1. är vår första applikation och den börjar bli klar Under det första hela året av vårt projekt har vi…"
+excerpt: 'Välkommen till det månatliga nyhetsbrevet från Generation AI-projektet. Det kommer minst ett brev per månad. Du kan prenumerera på detta nyhetsbrev antingen här på LinkedIN eller på vår projektwebbplats: https://www.generation-ai-stn.fi/uutiskirje/ GenAI läraktig maskin (Teachable Machine) 1. är vår första applikation och den börjar bli klar Under det första hela året av vårt projekt har vi…'
 categories:
   - Generation AI Monthly AI News (nyhetsbrev)
 tags:
@@ -18,7 +18,6 @@ lang: sv
 author: admin
 layout: layouts/post.njk
 ---
-
 <p id="ember559"><strong>Välkommen till det månatliga nyhetsbrevet från Generation AI-projektet.  </strong>Det kommer minst ett brev per månad. Du kan prenumerera på detta nyhetsbrev antingen här på LinkedIN eller på vår projektwebbplats: <a href="https://www.generation-ai-stn.fi/uutiskirje/">https://www.generation-ai-stn.fi/uutiskirje/</a></p>
 
 <h2 class="wp-block-heading" id="ember560">GenAI läraktig maskin (Teachable Machine) 1. är vår första applikation och den börjar bli klar</h2>

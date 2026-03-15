@@ -1,5 +1,5 @@
 ---
-title: "HS Opinion: AI is already challenging teachers and students"
+title: 'HS Opinion: AI is already challenging teachers and students'
 date: "2023-12-16T07:23:06"
 updated: "2025-02-12T22:38:55"
 slug: hs-opinion-ai-is-already-challenging-teachers-and-students
@@ -8,7 +8,7 @@ status: publish
 sourceType: posts
 sourceId: 3853
 sourceUrl: "https://www.generation-ai-stn.fi/en/ajankohtaista/mielipidekirjoitus/hs-opinion-ai-is-already-challenging-teachers-and-students/"
-excerpt: "Opinion piece published in Helsingin Sanomat 16.12.2024. Read the text on the Helsingin Sanomat website: https://www.hs.fi/mielipide/art-2000010050103.html AI-based social media services and mobile games, not to mention other applications, are able to guide and even predict our behaviour. They are able to profile and classify us based on the data they constantly collect. The problem is…"
+excerpt: 'Opinion piece published in Helsingin Sanomat 16.12.2024. Read the text on the Helsingin Sanomat website: https://www.hs.fi/mielipide/art-2000010050103.html AI-based social media services and mobile games, not to mention other applications, are able to guide and even predict our behaviour. They are able to profile and classify us based on the data they constantly collect. The problem is…'
 categories:
   - News from
   - Opinion piece
@@ -23,7 +23,6 @@ lang: en
 author: admin
 layout: layouts/post.njk
 ---
-
 <p><em>Opinion piece published in Helsingin Sanomat 16.12.2024</em>. <em>Read the text on the Helsingin Sanomat website:</em> <a href="https://www.hs.fi/mielipide/art-2000010050103.html">https://www.hs.fi/mielipide/art-2000010050103.html</a></p>
 
 <p>AI-based social media services and mobile games, not to mention other applications, are able to guide and even predict our behaviour. They are able to profile and classify us based on the data they constantly collect. The problem is that AI is a black box for us.</p>

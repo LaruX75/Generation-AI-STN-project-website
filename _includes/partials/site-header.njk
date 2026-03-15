@@ -1,7 +1,7 @@
 {# Site header — logo + primary navigation #}
 {% set menus = navigation if navigation else [] %}
 {% set navItems = menus[0].items if menus and menus.length and menus[0].items else [] %}
-<header class="site-shell-header{% if transparentHeader %} is-transparent{% endif %}">
+<header class="site-shell-header{% if pageHero %} is-transparent{% endif %}">
   <div class="site-header-inner">
     <span class="site-logo">
       {% if site and site.logo %}
@@ -14,14 +14,23 @@
       <span aria-hidden="true">&#9776;</span>
     </button>
     {% if navItems and navItems.length %}
-    <nav id="site-nav-menu" class="site-navigation kb-navigation" aria-label="Site navigation">
-      <ul class="menu kb-nav-menu">
+    <nav id="site-nav-menu" class="site-navigation kb-navigation wp-block-navigation items-justified-space-between" aria-label="Site navigation">
+      <ul class="menu kb-nav-menu wp-block-navigation__container">
         {% for item in navItems %}
-          <li class="menu-item kb-nav-item{% if item.megamenu %} kb-nav-mega-menu-item{% elif item.children and item.children.length %} menu-item-has-children{% endif %}">
-            <a class="kb-nav-link" href="{{ item.url }}"{% if item.target %} target="{{ item.target }}"{% endif %}>{{ item.title }}</a>
+          {% set hasChildren = (item.megamenu and item.megamenuColumns and item.megamenuColumns.length) or (item.children and item.children.length) %}
+          {% set topMenuId = "site-nav-submenu-" ~ loop.index %}
+          <li class="menu-item kb-nav-item wp-block-navigation-item{% if item.megamenu %} kb-nav-mega-menu-item{% endif %}{% if hasChildren %} menu-item-has-children has-child{% endif %}">
+            <div class="kb-nav-link-row">
+              <a class="kb-nav-link wp-block-navigation-item__content" href="{{ item.url }}"{% if item.target %} target="{{ item.target }}"{% endif %}>{{ item.title }}</a>
+              {% if hasChildren %}
+                <button class="kb-nav-item-toggle wp-block-navigation-submenu__toggle" type="button" aria-expanded="false" aria-controls="{{ topMenuId }}" aria-label="Avaa {{ item.title }} alavalikko">
+                  <span aria-hidden="true">▾</span>
+                </button>
+              {% endif %}
+            </div>
             {# ── Megamenu ─────────────────────────────────────────── #}
             {% if item.megamenu and item.megamenuColumns and item.megamenuColumns.length %}
-              <div class="kb-mega-menu" role="region" aria-label="{{ item.title }} megamenu">
+              <div id="{{ topMenuId }}" class="kb-mega-menu wp-block-navigation__submenu-container" role="region" aria-label="{{ item.title }} megamenu">
                 <ul class="kb-mega-menu-cols">
                   {% for col in item.megamenuColumns %}
                     <li class="kb-mega-menu-col">
@@ -29,7 +38,7 @@
                         <ul class="kb-mega-col-items">
                           {% for sub in col.items %}
                             <li class="menu-item">
-                              <a class="kb-mega-link" href="{{ sub.url }}"{% if sub.target %} target="{{ sub.target }}"{% endif %}>{{ sub.label }}</a>
+                              <a class="kb-mega-link wp-block-navigation-item__content" href="{{ sub.url }}"{% if sub.target %} target="{{ sub.target }}"{% endif %}>{{ sub.label }}</a>
                             </li>
                           {% endfor %}
                         </ul>
@@ -40,14 +49,23 @@
               </div>
             {# ── Normal dropdown ──────────────────────────────────── #}
             {% elif item.children and item.children.length %}
-              <ul class="sub-menu kb-nav-sub-menu">
+              <ul id="{{ topMenuId }}" class="sub-menu kb-nav-sub-menu wp-block-navigation__submenu-container">
                 {% for child in item.children %}
-                  <li class="menu-item kb-nav-item{% if child.children and child.children.length %} menu-item-has-children{% endif %}">
-                    <a class="kb-nav-link" href="{{ child.url }}">{{ child.title }}</a>
+                  {% set childHasChildren = child.children and child.children.length %}
+                  {% set childMenuId = topMenuId ~ "-" ~ loop.index %}
+                  <li class="menu-item kb-nav-item wp-block-navigation-item{% if childHasChildren %} menu-item-has-children has-child{% endif %}">
+                    <div class="kb-nav-link-row">
+                      <a class="kb-nav-link wp-block-navigation-item__content" href="{{ child.url }}">{{ child.title }}</a>
+                      {% if childHasChildren %}
+                        <button class="kb-nav-item-toggle wp-block-navigation-submenu__toggle" type="button" aria-expanded="false" aria-controls="{{ childMenuId }}" aria-label="Avaa {{ child.title }} alavalikko">
+                          <span aria-hidden="true">▾</span>
+                        </button>
+                      {% endif %}
+                    </div>
                     {% if child.children and child.children.length %}
-                      <ul class="sub-menu kb-nav-sub-menu kb-nav-sub-menu--level2">
+                      <ul id="{{ childMenuId }}" class="sub-menu kb-nav-sub-menu kb-nav-sub-menu--level2 wp-block-navigation__submenu-container">
                         {% for grandchild in child.children %}
-                          <li class="menu-item"><a class="kb-nav-link" href="{{ grandchild.url }}">{{ grandchild.title }}</a></li>
+                          <li class="menu-item wp-block-navigation-item"><a class="kb-nav-link wp-block-navigation-item__content" href="{{ grandchild.url }}">{{ grandchild.title }}</a></li>
                         {% endfor %}
                       </ul>
                     {% endif %}
@@ -60,38 +78,6 @@
       </ul>
     </nav>
     {% endif %}
+    {% include "partials/language-switcher.njk" %}
   </div>
-  {% include "partials/language-switcher.njk" %}
 </header>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const header = document.querySelector(".site-shell-header");
-
-    // Transparent header: add is-stuck when scrolled
-    if (header && header.classList.contains("is-transparent")) {
-      const onScroll = () => {
-        header.classList.toggle("is-stuck", window.scrollY > 10);
-        header.classList.toggle("is-transparent", window.scrollY <= 10);
-      };
-      window.addEventListener("scroll", onScroll, { passive: true });
-    }
-
-    // Mobile nav toggle
-    const toggle = document.querySelector(".kb-nav-toggle");
-    const menu = document.getElementById("site-nav-menu");
-    if (toggle && menu) {
-      toggle.addEventListener("click", () => {
-        const expanded = toggle.getAttribute("aria-expanded") === "true";
-        toggle.setAttribute("aria-expanded", String(!expanded));
-        menu.classList.toggle("is-open", !expanded);
-      });
-    }
-
-    // Dropdown/megamenu toggle on mobile
-    document.querySelectorAll(".kb-nav-mega-menu-item > .kb-nav-link, .menu-item-has-children > .kb-nav-link").forEach((link) => {
-      link.addEventListener("click", (e) => {
-        if (window.innerWidth <= 1024) { e.preventDefault(); link.parentElement.classList.toggle("is-open"); }
-      });
-    });
-  });
-</script>

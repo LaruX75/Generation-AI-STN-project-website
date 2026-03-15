@@ -1,5 +1,5 @@
 ---
-title: "EDUCA24: Finnish primary school pupils get an app and learning materials for AI education"
+title: 'EDUCA24: Finnish primary school pupils get an app and learning materials for AI education'
 date: "2024-01-24T10:58:50"
 updated: "2025-02-12T22:39:12"
 slug: educa24-finnish-primary-school-pupils-get-an-app-and-learning-materials-for-ai-education
@@ -8,7 +8,7 @@ status: publish
 sourceType: posts
 sourceId: 3859
 sourceUrl: "https://www.generation-ai-stn.fi/en/news-from/educa24-finnish-primary-school-pupils-get-an-app-and-learning-materials-for-ai-education/"
-excerpt: "The Generation AI project will publish an AI application and supporting teaching material for primary school pupils. The research-based service allows children and young people to safely learn to understand AI-based technologies. At EDUCA 2024, we will launch a package of materials offering a research-based solution for teaching AI skills in primary schools. The easy-to-use…"
+excerpt: 'The Generation AI project will publish an AI application and supporting teaching material for primary school pupils. The research-based service allows children and young people to safely learn to understand AI-based technologies. At EDUCA 2024, we will launch a package of materials offering a research-based solution for teaching AI skills in primary schools. The easy-to-use…'
 categories:
   - GenAI project staff at events
   - News from
@@ -21,7 +21,6 @@ lang: en
 author: admin
 layout: layouts/post.njk
 ---
-
 <p><strong>The Generation AI project will publish an AI application and supporting teaching material for primary school pupils. The research-based service allows children and young people to safely learn to understand AI-based technologies.</strong></p>
 
 <p>At EDUCA 2024, we will launch a package of materials offering a research-based solution for teaching AI skills in primary schools.  </p>

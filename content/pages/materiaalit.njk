@@ -13,6 +13,7 @@ categories: []
 tags: []
 author: admin
 layout: layouts/page.njk
+pageHero: true
 kadenceBlocks:
   - column
   - rowlayout
@@ -712,3 +713,24 @@ Kehittämämme sovellukset eivät sijaitse tällä sivustolla ja niillä on omat
 {% endset %}
 {% set kadenceBlock = _kb_save_2 %}
 {% include "blocks/kadence/advancedheading.njk" %}
+
+{# ── BetterDocs-materiaalit ─────────────────────────────────────────────── #}
+{% if collections.docs_by_kb %}
+<section class="docs-index">
+  {% for kb, kbDocs in collections.docs_by_kb %}
+  <div class="docs-kb-section">
+    <h2 class="docs-kb-title">{{ kb }}</h2>
+    <ul class="docs-list">
+      {% for doc in kbDocs %}
+      <li class="docs-list-item">
+        <a href="{{ doc.url }}">{{ doc.data.title }}</a>
+        {% if doc.data["doc-category"] and doc.data["doc-category"][0] %}
+          <span class="docs-cat">{{ doc.data["doc-category"][0] }}</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}

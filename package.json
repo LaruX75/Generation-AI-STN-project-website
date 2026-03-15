@@ -2,10 +2,17 @@
   "name": "generation-ai-stn-fi",
   "private": true,
   "scripts": {
+    "predev": "node scripts/normalize-localized-frontmatter.js",
     "dev": "eleventy --serve",
-    "build": "eleventy"
+    "prebuild": "node scripts/normalize-localized-frontmatter.js",
+    "build": "eleventy && npm run search:index",
+    "search:index": "pagefind --site _site"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-navigation": "^1.0.5"
+  },
+  "devDependencies": {
+    "pagefind": "^1.4.0"
   }
 }

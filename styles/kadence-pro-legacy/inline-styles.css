@@ -111,7 +111,7 @@ aside#betterdocs-sidebar-left.betterdocs-sidebar.betterdocs-full-sidebar-left.be
 --font-headings: Tektur;
 --font-input: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
 }
-@font-face {font-family:'tektur';src:url('https://www.generation-ai-stn.fi/wp-content/uploads/2025/02/Tektur-VariableFont_wdthwght.ttf') format('truetype');}body, #content, .entry-content, .post-content, .page-content, .post-excerpt, .entry-summary, .entry-excerpt, .widget-area, .widget, .sidebar, #sidebar, footer, .footer, #footer, .site-footer {
+@font-face {font-family:'tektur';src:url('/media/wp-content/uploads/2025/02/Tektur-VariableFont_wdthwght.ttf') format('truetype');}body, #content, .entry-content, .post-content, .page-content, .post-excerpt, .entry-summary, .entry-excerpt, .widget-area, .widget, .sidebar, #sidebar, footer, .footer, #footer, .site-footer {
 font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif !important;
  }
 #site-title, .site-title, #site-title a, .site-title a, .entry-title, .entry-title a, h1, h2, h3, h4, h5, h6, .widget-title, .elementor-heading-title {

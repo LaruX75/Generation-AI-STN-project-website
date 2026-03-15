@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+---
+<div class="doc-layout">
+  <aside class="doc-sidebar">
+    {% set _kb = (page and page.data and page.data["knowledge-base"] and page.data["knowledge-base"][0]) or "" %}
+    {% for item in collections.docs %}
+      {% if item.data["knowledge-base"] and item.data["knowledge-base"][0] == _kb %}
+        <a class="doc-sidebar-link{% if item.url == page.url %} is-active{% endif %}" href="{{ item.url }}">{{ item.data.title }}</a>
+      {% endif %}
+    {% endfor %}
+  </aside>
+  <main class="doc-content">
+    <h1 class="doc-title">{{ title }}</h1>
+    {% if page and page.data and page.data["doc-category"] and page.data["doc-category"].length %}
+      <div class="doc-category">{{ page.data["doc-category"] | join(", ") }}</div>
+    {% endif %}
+    <div class="doc-body">{{ content | safe }}</div>
+  </main>
+</div>

@@ -1,0 +1,7 @@
+{
+  "tags": [
+    "docs"
+  ],
+  "sourceType": "docs",
+  "layout": "layouts/doc.njk"
+}

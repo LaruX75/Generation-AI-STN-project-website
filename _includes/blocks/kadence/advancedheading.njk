@@ -1,6 +1,6 @@
 {# kadence/advancedheading — Heading with configurable tag level, alignment and color #}
 {% set b = kadenceBlock.attrs %}
-{% set tag = "h" ~ (b.level if b.level else 2) %}
+{% if b.level == 0 %}{% set tag = "p" %}{% else %}{% set tag = "h" ~ (b.level if b.level else 2) %}{% endif %}
 {% if b.fontSize %}
   {# fontSize may be a scalar string or a [desktop,tablet,mobile] array from older migrations #}
   {% if b.fontSize[0] is defined and b.fontSize[0] != "" %}
@@ -10,12 +10,12 @@
   {% else %}
     {% set fsRaw = b.fontSize %}
   {% endif %}
-  {% if fsRaw == "sm" %}{% set fsCss = "0.875rem" %}
-  {% elif fsRaw == "md" %}{% set fsCss = "1rem" %}
-  {% elif fsRaw == "lg" %}{% set fsCss = "1.25rem" %}
-  {% elif fsRaw == "xl" %}{% set fsCss = "1.75rem" %}
-  {% elif fsRaw == "xxl" %}{% set fsCss = "2.25rem" %}
-  {% elif fsRaw == "3xl" %}{% set fsCss = "3rem" %}
+  {% if fsRaw == "sm" %}{% set fsCss = "var(--global-kb-font-size-sm, 0.875rem)" %}
+  {% elif fsRaw == "md" %}{% set fsCss = "var(--global-kb-font-size-md, 1.25rem)" %}
+  {% elif fsRaw == "lg" %}{% set fsCss = "var(--global-kb-font-size-lg, 1.5rem)" %}
+  {% elif fsRaw == "xl" %}{% set fsCss = "var(--global-kb-font-size-xl, 1.75rem)" %}
+  {% elif fsRaw == "xxl" %}{% set fsCss = "var(--global-kb-font-size-xxl, 2.25rem)" %}
+  {% elif fsRaw == "3xl" %}{% set fsCss = "var(--global-kb-font-size-3xl, 3rem)" %}
   {% elif fsRaw %}{% set fsCss = fsRaw ~ (b.fontSizeType if b.fontSizeType else "") %}
   {% endif %}
 {% endif %}

@@ -1,0 +1,33 @@
+{# kadence/advancedgallery — Advanced gallery with optional lightbox and layout types #}
+{% set b = kadenceBlock.attrs %}
+{% set galleryType = b.type if b.type else "grid" %}
+{% set columns = b.columns if b.columns else 3 %}
+<figure
+  class="wp-block-kadence-advancedgallery kb-gallery-wrap kadence-block kadence-advancedgallery kb-gallery-type-{{ galleryType }}{% if b.uniqueID %} kb-gallery-id_{{ b.uniqueID }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
+>
+  {% if b.images and b.images | length %}
+    <ul class="kadence-gallery-grid kadence-gallery-columns-{{ columns }}">
+      {% for img in b.images %}
+        <li class="kadence-gallery-item">
+          <figure>
+            {% if b.lightbox %}
+              <a href="{{ img.url }}" class="kb-gallery-lightbox-link" data-lightbox="kb-gallery-{{ b.uniqueID }}">
+            {% elif img.link %}
+              <a href="{{ img.link }}"{% if img.linkTarget %} target="{{ img.linkTarget }}"{% endif %}>
+            {% endif %}
+            <img
+              src="{{ img.url }}"
+              alt="{{ img.alt if img.alt else "" }}"
+              {% if img.width %}width="{{ img.width }}"{% endif %}
+              {% if img.height %}height="{{ img.height }}"{% endif %}
+            >
+            {% if b.lightbox or img.link %}</a>{% endif %}
+            {% if img.caption %}<figcaption>{{ img.caption }}</figcaption>{% endif %}
+          </figure>
+        </li>
+      {% endfor %}
+    </ul>
+  {% elif kadenceInnerHtml | trim %}
+    {{ kadenceInnerHtml | safe }}
+  {% endif %}
+</figure>

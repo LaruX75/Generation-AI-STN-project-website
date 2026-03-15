@@ -3,3 +3,4 @@ node_modules/
 .DS_Store
 .cache/
 .tmp-konsortio-build/
+_tmp_hankkeen/
