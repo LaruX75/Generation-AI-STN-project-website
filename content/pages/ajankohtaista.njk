@@ -1,46 +1,23 @@
 ---
 title: Ajankohtaista
+seoTitle: Ajankohtaista — Generation AI
+seoDescription: Hankkeen uusimmat uutiset mediasta, tapahtumat, hankkeen toiminta ja tutkimusjulkaisut.
 date: "2023-01-29T20:19:24"
-updated: "2025-02-12T21:17:34"
+updated: "2026-03-15T00:00:00"
 slug: ajankohtaista
 permalink: /ajankohtaista/
 status: publish
 sourceType: pages
-excerpt: "Hankkeen uusimmat uutiset, tapahtumat, mediatekstit ja tutkimusjulkaisut."
-categories: []
-tags: []
-author: admin
 layout: layouts/page.njk
-pageHero: true
-heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnotized_computer_hyper_reali_7e5fceac-75e4-4087-8364-b0ae1a8e0b00.png"
+pageHero: false
 ---
 
-{% set kadenceBlock = {
-  "name": "kadence/rowlayout",
-  "shortName": "rowlayout",
-  "attrs": {
-    "uniqueID": "407_7fbfb7-d1",
-    "columns": 1,
-    "colLayout": "equal",
-    "align": "full"
-  }
-} %}
-{% set _kb_save_0 = kadenceBlock %}
-{% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/column",
-  "shortName": "column",
-  "attrs": {
-    "uniqueID": "407_c95f24-0d",
-    "borderWidth": [
-      "",
-      "",
-      "",
-      ""
-    ]
-  }
-} %}
-{% set kadenceInnerHtml %}
+<section class="news-intro">
+  <div class="news-intro-inner">
+    <p class="news-intro-desc">Seuraa hankkeen medianäkyvyyttä, tapahtumia, hankkeen toimintaa ja tutkimustuloksia.</p>
+  </div>
+</section>
+
 {% set kadenceBlock = {
   "name": "kadence/tabs",
   "shortName": "tabs",
@@ -49,7 +26,7 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
   }
 } %}
 {% set kadenceInnerHtml %}
-<ul class="kt-tabs-title-list"><li id="tab-media" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-media" data-tab="1" class="kt-tab-title kt-tab-title-1"><span class="kt-title-text">Media</span></a></li><li id="tab-tapahtumat" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-active"><a href="#tab-tapahtumat" data-tab="2" class="kt-tab-title kt-tab-title-2"><span class="kt-title-text">Tapahtumat</span></a></li><li id="tab-toiminta" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-toiminta" data-tab="3" class="kt-tab-title kt-tab-title-3"><span class="kt-title-text">Toiminta</span></a></li><li id="tab-tutkimus" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tutkimus" data-tab="4" class="kt-tab-title kt-tab-title-4"><span class="kt-title-text">Tutkimus</span></a></li><li id="tab-julkaisut" class="kt-title-item kt-title-item-5 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-julkaisut" data-tab="5" class="kt-tab-title kt-tab-title-5"><span class="kt-title-text">Julkaisut</span></a></li></ul><div class="kt-tabs-content-wrap">{% set kadenceBlock = {
+<ul class="kt-tabs-title-list"><li id="tab-media" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-active"><a href="#tab-media" data-tab="1" class="kt-tab-title kt-tab-title-1"><span class="kt-title-text">Media</span></a></li><li id="tab-tapahtumat" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tapahtumat" data-tab="2" class="kt-tab-title kt-tab-title-2"><span class="kt-title-text">Tapahtumat</span></a></li><li id="tab-toiminta" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-toiminta" data-tab="3" class="kt-tab-title kt-tab-title-3"><span class="kt-title-text">Hankkeen toiminta</span></a></li><li id="tab-tutkimus" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tutkimus" data-tab="4" class="kt-tab-title kt-tab-title-4"><span class="kt-title-text">Tutkimus</span></a></li><li id="tab-yliopistot" class="kt-title-item kt-title-item-5 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-yliopistot" data-tab="5" class="kt-tab-title kt-tab-title-5"><span class="kt-title-text">Yliopistot</span></a></li></ul><div class="kt-tabs-content-wrap">{% set kadenceBlock = {
   "name": "kadence/tab",
   "shortName": "tab",
   "attrs": {
@@ -137,31 +114,21 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
   "name": "kadence/tab",
   "shortName": "tab",
   "attrs": {
-    "uniqueID": "6aa9cf-e7"
+    "uniqueID": "inst-visibility-fi"
   }
 } %}
 {% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/advancedheading",
-  "shortName": "advancedheading",
-  "attrs": {
-    "uniqueID": "407_e1af15-3c",
-    "level": 1
-  }
+{% set institutionalVisibilityLabels = {
+  "heading": "Yliopistojen omat sivut, uutiset ja tiedotteet",
+  "lead": "Tassa listassa ovat yliopistojen omilta sivuilta vahvistetut Generation AI -henkiloston uutiset, tiedotteet ja projektisivut.",
+  "date": "Paiva",
+  "source": "Lahde",
+  "title": "Otsikko",
+  "people": "Henkilot",
+  "note": "Huom. Projektisivujen paivana nakyy projektin alkupaiva, ei valttamatta sivun julkaisupaiva."
 } %}
-{% set kadenceInnerHtml %}
-Tieteelliset julkaisut
-{% endset %}
-{% include "blocks/kadence/advancedheading.njk" %}
-
-
-[zotpress style="apa" sortby="date"]
+{% include "partials/institutional-visibility-table.njk" %}
 {% endset %}
 {% include "blocks/kadence/tab.njk" %}</div>
 {% endset %}
 {% include "blocks/kadence/tabs.njk" %}
-{% endset %}
-{% include "blocks/kadence/column.njk" %}
-{% endset %}
-{% set kadenceBlock = _kb_save_0 %}
-{% include "blocks/kadence/rowlayout.njk" %}

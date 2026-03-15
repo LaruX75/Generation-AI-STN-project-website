@@ -51,7 +51,7 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
 } %}
 {% set _kb_save_10 = kadenceBlock %}
 {% set kadenceInnerHtml %}
-<ul class="kt-tabs-title-list"><li id="tab-media" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-media" data-tab="1" class="kt-tab-title kt-tab-title-1"><span class="kt-title-text">Media</span></a></li><li id="tab-events" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-active"><a href="#tab-events" data-tab="2" class="kt-tab-title kt-tab-title-2"><span class="kt-title-text">Events</span></a></li><li id="tab-projectactivities" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-projectactivities" data-tab="3" class="kt-tab-title kt-tab-title-3"><span class="kt-title-text">Project activities</span></a></li><li id="tab-researchactivities" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-researchactivities" data-tab="4" class="kt-tab-title kt-tab-title-4"><span class="kt-title-text">Research activities</span></a></li><li id="tab-publications" class="kt-title-item kt-title-item-5 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-publications" data-tab="5" class="kt-tab-title kt-tab-title-5"><span class="kt-title-text">Publications</span></a></li></ul><div class="kt-tabs-content-wrap">{% set kadenceBlock = {
+<ul class="kt-tabs-title-list"><li id="tab-media" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-media" data-tab="1" class="kt-tab-title kt-tab-title-1"><span class="kt-title-text">Media</span></a></li><li id="tab-events" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-active"><a href="#tab-events" data-tab="2" class="kt-tab-title kt-tab-title-2"><span class="kt-title-text">Events</span></a></li><li id="tab-projectactivities" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-projectactivities" data-tab="3" class="kt-tab-title kt-tab-title-3"><span class="kt-title-text">Project activities</span></a></li><li id="tab-researchactivities" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-researchactivities" data-tab="4" class="kt-tab-title kt-tab-title-4"><span class="kt-title-text">Research activities</span></a></li><li id="tab-publications" class="kt-title-item kt-title-item-5 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-publications" data-tab="5" class="kt-tab-title kt-tab-title-5"><span class="kt-title-text">Publications</span></a></li><li id="tab-universities" class="kt-title-item kt-title-item-6 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-universities" data-tab="6" class="kt-tab-title kt-tab-title-6"><span class="kt-title-text">University pages</span></a></li></ul><div class="kt-tabs-content-wrap">{% set kadenceBlock = {
   "name": "kadence/tab",
   "shortName": "tab",
   "attrs": {
@@ -179,10 +179,54 @@ Scientific publications
 {% set kadenceBlock = _kb_save_8 %}
 {% include "blocks/kadence/advancedheading.njk" %}
 
-
-[zotpress style="apa" sortby="date"]
+{% set publicationTableId = "scientific-publications-en" %}
+{% set publicationTableLabels = {
+  "searchLabel": "Search",
+  "searchPlaceholder": "Search all columns",
+  "authorsLabel": "Authors",
+  "authorsPlaceholder": "Filter authors",
+  "yearLabel": "Year",
+  "allYearsLabel": "All years",
+  "submittedLabel": "Submitted",
+  "inPressLabel": "In press",
+  "titleLabel": "Title",
+  "titlePlaceholder": "Filter titles",
+  "venueLabel": "Publication",
+  "venuePlaceholder": "Filter publications",
+  "linkLabel": "Link",
+  "allLinksLabel": "All",
+  "withLinkLabel": "Link available",
+  "withoutLinkLabel": "No link",
+  "openLinkLabel": "Open",
+  "noLinkLabel": "-",
+  "emptyMessage": "No publications matched the current filters.",
+  "countLabel": "publications",
+  "countLabelSingular": "publication"
+} %}
+{% include "partials/scientific-publications-table.njk" %}
 {% endset %}
 {% set kadenceBlock = _kb_save_9 %}
+{% include "blocks/kadence/tab.njk" %}
+
+{% set kadenceBlock = {
+  "name": "kadence/tab",
+  "shortName": "tab",
+  "attrs": {
+    "uniqueID": "inst-visibility-en"
+  }
+} %}
+{% set kadenceInnerHtml %}
+{% set institutionalVisibilityLabels = {
+  "heading": "University pages, news, and releases",
+  "lead": "This list collects Generation AI staff visibility from university-owned news pages, press releases, and project pages.",
+  "date": "Date",
+  "source": "Source",
+  "title": "Title",
+  "people": "People",
+  "note": "Note: for project pages the date shown is the project start date, not necessarily the page publication date."
+} %}
+{% include "partials/institutional-visibility-table.njk" %}
+{% endset %}
 {% include "blocks/kadence/tab.njk" %}</div>
 {% endset %}
 {% set kadenceBlock = _kb_save_10 %}

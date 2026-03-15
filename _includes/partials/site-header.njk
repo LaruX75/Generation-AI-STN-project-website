@@ -60,14 +60,24 @@
             {# ── Megamenu ─────────────────────────────────────────── #}
             {% if item.megamenu and item.megamenuColumns and item.megamenuColumns.length %}
               <div id="{{ topMenuId }}" class="kb-mega-menu" role="region" aria-label="{{ item.title }} {{ ui.mega }}">
+                <div class="kb-mega-sidebar">
+                  <span class="kb-mega-sidebar-title">{{ item.title }}</span>
+                  {% if item.description %}
+                    <p class="kb-mega-sidebar-desc">{{ item.description }}</p>
+                  {% endif %}
+                  <a class="kb-mega-sidebar-cta" href="{{ item.url }}">Sivulle →</a>
+                </div>
                 <ul class="kb-mega-menu-cols">
                   {% for col in item.megamenuColumns %}
                     <li class="kb-mega-menu-col">
+                      {% if col.heading %}
+                        <p class="kb-mega-col-heading">{{ col.heading }}</p>
+                      {% endif %}
                       {% if col.items and col.items.length %}
                         <ul class="kb-mega-col-items">
                           {% for sub in col.items %}
                             <li class="menu-item">
-                              <a class="kb-mega-link" href="{{ sub.url }}"{% if sub.target %} target="{{ sub.target }}"{% endif %}>{{ sub.label }}</a>
+                              <a class="kb-mega-link" href="{{ sub.url }}"{% if sub.target %} target="{{ sub.target }}"{% endif %}>{{ sub.label }}{% if sub.target == "_blank" %} <span class="kb-mega-ext" aria-hidden="true">↗</span>{% endif %}</a>
                             </li>
                           {% endfor %}
                         </ul>

@@ -1,0 +1,26 @@
+---
+permalink: /sv/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.name }} (SV)</title>
+    <link>{{ site.url }}/sv/</link>
+    <description>Senaste nyheter, evenemang och forskning från Generation AI-projektet.</description>
+    <language>sv</language>
+    <atom:link href="{{ site.url }}/sv/feed.xml" rel="self" type="application/rss+xml"/>
+    {% if collections.posts_sv and collections.posts_sv.length %}
+    <lastBuildDate>{{ collections.posts_sv[0].date | rssDate }}</lastBuildDate>
+    {% for item in collections.posts_sv | limitItems(20) %}
+    <item>
+      <title><![CDATA[{{ item.data.title }}]]></title>
+      <link>{{ site.url }}{{ item.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ item.url }}</guid>
+      <pubDate>{{ item.date | rssDate }}</pubDate>
+      {% if item.data.excerpt %}<description><![CDATA[{{ item.data.excerpt }}]]></description>{% endif %}
+    </item>
+    {% endfor %}
+    {% endif %}
+  </channel>
+</rss>

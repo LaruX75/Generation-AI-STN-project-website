@@ -95,6 +95,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("pages_en", col =>
     col.getAll().filter(p => p.data.lang === "en" && p.data.sourceType === "pages").sort(byDate)
   );
+  eleventyConfig.addCollection("posts_fi", col =>
+    col.getAll().filter(p => p.data.sourceType === "posts" && p.data.lang !== "en" && p.data.lang !== "sv").sort(byDate)
+  );
 
   eleventyConfig.addFilter("publicationsForPerson", (items, personName) => {
     const target = normalizePersonName(personName);
@@ -118,6 +121,10 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.addFilter("date", formatDate);
   eleventyConfig.addFilter("isHttpUrl", value => /^https?:\/\//i.test(String(value || "").trim()));
+  eleventyConfig.addFilter("rssDate", value => {
+    const date = value instanceof Date ? value : new Date(value);
+    return Number.isNaN(date.getTime()) ? new Date().toUTCString() : date.toUTCString();
+  });
 
   return {
     dir: { input: "content", includes: "../_includes", data: "../_data", output: "_site" },

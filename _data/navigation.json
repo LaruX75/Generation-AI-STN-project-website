@@ -15,13 +15,125 @@
         "objectId": 306,
         "classes": [],
         "target": "",
-        "rel": [
-          ""
-        ],
+        "rel": [""],
         "description": "",
         "order": 1,
         "megamenu": false,
         "megamenuColumns": [],
+        "megamenuRows": [],
+        "megamenuStyle": {},
+        "megamenuWidth": "",
+        "megamenuBackground": {},
+        "children": []
+      },
+      {
+        "id": 1053,
+        "parent": 0,
+        "title": "Opettajalle",
+        "url": "/opettajalle/",
+        "type": "post_type",
+        "object": "page",
+        "objectId": 1053,
+        "classes": [],
+        "target": "",
+        "rel": [""],
+        "description": "Ilmaiset tekoälytyökalut ja oppimateriaalit suoraan luokkahuoneeseen. Ei ohjelmointitaitoja tarvita.",
+        "order": 2,
+        "megamenu": true,
+        "megamenuColumns": [
+          {
+            "heading": "Sovellukset",
+            "items": [
+              { "label": "Opetettava kone", "url": "https://www.gen-ai.fi/fi/tools/tm", "target": "_blank" },
+              { "label": "Somekone", "url": "https://www.gen-ai.fi/fi/tools/somekone", "target": "_blank" },
+              { "label": "Pieni kielikone", "url": "https://www.gen-ai.fi/fi/tools/lm", "target": "_blank" },
+              { "label": "Hajoava kone", "url": "https://www.gen-ai.fi/fi/tools/bm", "target": "_blank" },
+              { "label": "Profilointipeli", "url": "https://www.gen-ai.fi/fi/tools/profiling-game", "target": "_blank" },
+              { "label": "Manipulointipeli", "url": "https://www.gen-ai.fi/fi/tools/manipulation-game", "target": "_blank" }
+            ]
+          },
+          {
+            "heading": "Materiaalit",
+            "items": [
+              { "label": "Oppimateriaalit", "url": "/materiaalit/", "target": "" },
+              { "label": "Henkilötietojen käsittely", "url": "/henkilotietojen-kasittely-alakoulussa/", "target": "" },
+              { "label": "50 myyttiä tekoälystä (PDF)", "url": "https://doi.org/10.58181/VP9789523972513", "target": "_blank" }
+            ]
+          }
+        ],
+        "megamenuRows": [],
+        "megamenuStyle": {},
+        "megamenuWidth": "",
+        "megamenuBackground": {},
+        "children": []
+      },
+      {
+        "id": 950,
+        "parent": 0,
+        "title": "Tutkijalle",
+        "url": "/tutkijalle/",
+        "type": "post_type",
+        "object": "page",
+        "objectId": 950,
+        "classes": [],
+        "target": "",
+        "rel": [""],
+        "description": "Tieteelliset julkaisut, tutkimusagenda ja hankkeen kansainvälinen verkosto.",
+        "order": 3,
+        "megamenu": true,
+        "megamenuColumns": [
+          {
+            "heading": "Julkaisut & tutkimus",
+            "items": [
+              { "label": "Tieteelliset julkaisut", "url": "/tutkijalle/#julkaisut", "target": "" },
+              { "label": "Ajankohtaista — tutkimus", "url": "/ajankohtaista/#tab-tutkimus", "target": "" }
+            ]
+          },
+          {
+            "heading": "Hanke",
+            "items": [
+              { "label": "SHIELD-ohjelma", "url": "/shield-ohjelma/", "target": "" },
+              { "label": "Konsortio", "url": "/konsortio/", "target": "" },
+              { "label": "Hankkeen toiminta", "url": "/hankkeen-toiminta/", "target": "" }
+            ]
+          }
+        ],
+        "megamenuRows": [],
+        "megamenuStyle": {},
+        "megamenuWidth": "",
+        "megamenuBackground": {},
+        "children": []
+      },
+      {
+        "id": 903,
+        "parent": 0,
+        "title": "Yleisölle",
+        "url": "/yleisölle/",
+        "type": "post_type",
+        "object": "page",
+        "objectId": 903,
+        "classes": [],
+        "target": "",
+        "rel": [""],
+        "description": "Tekoäly tutuksi: ilmainen kirja, sovellukset ja hankkeen uutiset.",
+        "order": 4,
+        "megamenu": true,
+        "megamenuColumns": [
+          {
+            "heading": "Resurssit",
+            "items": [
+              { "label": "50 myyttiä tekoälystä (PDF)", "url": "https://doi.org/10.58181/VP9789523972513", "target": "_blank" },
+              { "label": "Sovellukset gen-ai.fi:ssä", "url": "https://www.gen-ai.fi/fi", "target": "_blank" }
+            ]
+          },
+          {
+            "heading": "Seuraa",
+            "items": [
+              { "label": "Ajankohtaista", "url": "/ajankohtaista/", "target": "" },
+              { "label": "Uutiskirje", "url": "/uutiskirje/", "target": "" }
+            ]
+          }
+        ],
         "megamenuRows": [],
         "megamenuStyle": {},
         "megamenuWidth": "",
@@ -38,36 +150,28 @@
         "objectId": 407,
         "classes": [],
         "target": "",
-        "rel": [
-          ""
+        "rel": [""],
+        "description": "Hankkeen uusimmat uutiset mediasta, tapahtumat, hankkeen toiminta ja tutkimustulokset.",
+        "order": 5,
+        "megamenu": true,
+        "megamenuColumns": [
+          {
+            "heading": "Kategoriat",
+            "items": [
+              { "label": "Media", "url": "/ajankohtaista/#tab-media", "target": "" },
+              { "label": "Tapahtumat", "url": "/ajankohtaista/#tab-tapahtumat", "target": "" },
+              { "label": "Hankkeen toiminta", "url": "/ajankohtaista/#tab-toiminta", "target": "" },
+              { "label": "Tutkimus", "url": "/ajankohtaista/#tab-tutkimus", "target": "" }
+            ]
+          },
+          {
+            "heading": "Tilaa",
+            "items": [
+              { "label": "Uutiskirje", "url": "/uutiskirje/", "target": "" },
+              { "label": "RSS-syöte", "url": "/feed.xml", "target": "_blank" }
+            ]
+          }
         ],
-        "description": "",
-        "order": 2,
-        "megamenu": false,
-        "megamenuColumns": [],
-        "megamenuRows": [],
-        "megamenuStyle": {},
-        "megamenuWidth": "",
-        "megamenuBackground": {},
-        "children": []
-      },
-      {
-        "id": 2631,
-        "parent": 0,
-        "title": "Materiaalit",
-        "url": "/materiaalit/",
-        "type": "post_type",
-        "object": "page",
-        "objectId": 2031,
-        "classes": [],
-        "target": "",
-        "rel": [
-          ""
-        ],
-        "description": "",
-        "order": 3,
-        "megamenu": false,
-        "megamenuColumns": [],
         "megamenuRows": [],
         "megamenuStyle": {},
         "megamenuWidth": "",
@@ -77,128 +181,41 @@
       {
         "id": 901,
         "parent": 0,
-        "title": "Toiminta",
+        "title": "Hankkeesta",
         "url": "/hankkeen-toiminta/",
         "type": "post_type",
         "object": "page",
         "objectId": 647,
         "classes": [],
-        "target": "_blank",
-        "rel": [
-          ""
-        ],
-        "description": "",
-        "order": 4,
+        "target": "",
+        "rel": [""],
+        "description": "Generation AI on STN:n SHIELD-ohjelman rahoittama monitieteinen tutkimushanke.",
+        "order": 6,
         "megamenu": true,
         "megamenuColumns": [
           {
+            "heading": "Resurssit",
             "items": [
-              {
-                "label": "Opettajalle",
-                "url": "/opettajalle/",
-                "target": ""
-              },
-              {
-                "label": "Yleistajuiset julkaisut",
-                "url": "/materiaalit/#tab-julkaisut",
-                "target": ""
-              },
-              {
-                "label": "Materiaalit",
-                "url": "/materiaalit/",
-                "target": ""
-              }
+              { "label": "Materiaalit", "url": "/materiaalit/", "target": "" },
+              { "label": "Henkilötietojen käsittely", "url": "/henkilotietojen-kasittely-alakoulussa/", "target": "" }
             ]
           },
           {
+            "heading": "Hanke",
             "items": [
-              {
-                "label": "Tutkijalle",
-                "url": "/generation-ai-hankkeessa-tehtava-tutkimus/",
-                "target": ""
-              }
+              { "label": "Hankkeen toiminta", "url": "/hankkeen-toiminta/", "target": "" },
+              { "label": "Konsortio", "url": "/konsortio/", "target": "" },
+              { "label": "SHIELD-ohjelma", "url": "/shield-ohjelma/", "target": "" }
             ]
           },
           {
+            "heading": "Yhteys",
             "items": [
-              {
-                "label": "Yleisölle",
-                "url": "/tietoa-tekoalysta-kenelle-tahansa/",
-                "target": ""
-              }
+              { "label": "Ota yhteyttä", "url": "/ollaan-yhteydessa/", "target": "" },
+              { "label": "Uutiskirje", "url": "/uutiskirje/", "target": "" }
             ]
           }
         ],
-        "megamenuRows": [],
-        "megamenuStyle": {},
-        "megamenuWidth": "",
-        "megamenuBackground": {},
-        "children": [
-          {
-            "id": 1119,
-            "parent": 901,
-            "title": "Toiminta sisältö",
-            "url": "/",
-            "type": "custom",
-            "object": "custom",
-            "objectId": 1119,
-            "classes": [],
-            "target": "",
-            "rel": [
-              ""
-            ],
-            "description": "",
-            "order": 5,
-            "megamenu": false,
-            "megamenuColumns": [],
-            "megamenuRows": [],
-            "megamenuStyle": {},
-            "megamenuWidth": "",
-            "megamenuBackground": {},
-            "children": []
-          }
-        ]
-      },
-      {
-        "id": 344,
-        "parent": 0,
-        "title": "Konsortio",
-        "url": "/konsortio/",
-        "type": "post_type",
-        "object": "page",
-        "objectId": 341,
-        "classes": [],
-        "target": "",
-        "rel": [
-          ""
-        ],
-        "description": "",
-        "order": 6,
-        "megamenu": false,
-        "megamenuColumns": [],
-        "megamenuRows": [],
-        "megamenuStyle": {},
-        "megamenuWidth": "",
-        "megamenuBackground": {},
-        "children": []
-      },
-      {
-        "id": 1047,
-        "parent": 0,
-        "title": "Ole yhteydessä",
-        "url": "/ollaan-yhteydessa/",
-        "type": "post_type",
-        "object": "page",
-        "objectId": 1041,
-        "classes": [],
-        "target": "",
-        "rel": [
-          ""
-        ],
-        "description": "",
-        "order": 7,
-        "megamenu": false,
-        "megamenuColumns": [],
         "megamenuRows": [],
         "megamenuStyle": {},
         "megamenuWidth": "",

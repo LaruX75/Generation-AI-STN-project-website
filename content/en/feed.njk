@@ -1,0 +1,26 @@
+---
+permalink: /en/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.name }} (EN)</title>
+    <link>{{ site.url }}/en/</link>
+    <description>Latest news, events and research from the Generation AI project.</description>
+    <language>en</language>
+    <atom:link href="{{ site.url }}/en/feed.xml" rel="self" type="application/rss+xml"/>
+    {% if collections.posts_en and collections.posts_en.length %}
+    <lastBuildDate>{{ collections.posts_en[0].date | rssDate }}</lastBuildDate>
+    {% for item in collections.posts_en | limitItems(20) %}
+    <item>
+      <title><![CDATA[{{ item.data.title }}]]></title>
+      <link>{{ site.url }}{{ item.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ item.url }}</guid>
+      <pubDate>{{ item.date | rssDate }}</pubDate>
+      {% if item.data.excerpt %}<description><![CDATA[{{ item.data.excerpt }}]]></description>{% endif %}
+    </item>
+    {% endfor %}
+    {% endif %}
+  </channel>
+</rss>

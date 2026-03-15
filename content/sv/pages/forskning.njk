@@ -361,13 +361,6 @@ Generation AI är en del av Strategic Research Councils Shield-program
 
 
 <h2 class="wp-block-heading has-text-align-left has-large-font-size">Vetenskapliga publikationer</h2>
-
-
-
-[zotpress style="apa" sort="ASC" download="yes"]
-
-
-<!-- TODO: kadence/dynamiclist ei tuettu — alkuperäinen sisältö säilytetty -->
-<div class="block-fallback block-fallback--dynamiclist" data-original-block="kadence/dynamiclist">
-
-</div>
+{% set publicationsLead = "Publikationslistan bygger pa projektets rapporterade publikationstabell. DOI- eller kallank oppnas i en ny flik nar den finns tillganglig." %}
+{% set publicationsLinkLabel = "Oppna publikationen" %}
+{% include "partials/scientific-publications.njk" %}
