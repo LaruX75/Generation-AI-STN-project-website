@@ -179,50 +179,30 @@ th { font-weight: 700; border-bottom: 2px solid var(--global-palette6, #446d33);
 
 /* ── Site header ───────────────────────────────────────────────────────────── */
 .site-shell-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  background: var(--global-palette8, #f7f9f5);
-  transition: background 0.3s, transform 0.3s, color 0.3s;
-  border-bottom: 1px solid rgba(49, 78, 37, 0.08);
+  background: var(--global-palette9, #fff);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
-.site-shell-header.is-transparent {
-  background: transparent;
-  border-bottom-color: transparent;
+/* On hero pages: extend header down by the wave height and clip background
+   to the nav area only — wave valleys show the hero image beneath */
+.has-hero .site-shell-header {
+  padding-bottom: 28px;
+  background-clip: content-box;
 }
 .site-shell-header.is-stuck {
-  background: var(--global-palette9, #fff);
-  border-bottom-color: rgba(49, 78, 37, 0.1);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
 }
-/* Hero pages: header floats over hero image */
-.has-hero .site-shell-header {
-  position: absolute;
-  width: 100%;
-}
-.has-hero .site-shell-header.is-stuck {
-  position: fixed;
-}
-/* Transparent header — white text/links */
-.site-shell-header.is-transparent .kb-nav-link,
-.site-shell-header.is-transparent .kb-nav-item-toggle,
-.site-shell-header.is-transparent .site-logo,
-.site-shell-header.is-transparent .site-logo span {
-  color: #fff;
-}
-.site-shell-header.is-transparent .language-switcher a {
-  color: rgba(255, 255, 255, 0.85);
-}
-.site-shell-header.is-transparent .language-switcher a.is-active {
-  color: #fff;
-}
-.site-shell-header.is-transparent .kb-nav-link:hover {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-}
-/* Reveal-on-scroll-up: slide header out of view when scrolling down */
+/* Slide header out of view when scrolling down within hero zone */
 .site-shell-header.is-hidden {
   transform: translateY(-100%);
+}
+/* Non-hero pages: push content below the fixed header */
+body:not(.has-hero) {
+  padding-top: var(--kb-header-height, 60px);
 }
 /* Body padding when mobile menu is open — prevents content shift */
 body.kb-nav-open {
@@ -239,14 +219,30 @@ body.kb-nav-open {
   left: 0;
   right: auto;
 }
+/* Wave decoration at header bottom (hero pages only) */
+.site-header-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  pointer-events: none;
+  color: var(--global-palette9, #fff);
+}
+.site-header-wave svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .site-header-inner {
   display: flex;
   align-items: center;
   gap: 1rem;
   max-width: var(--global-content-width, 1290px);
   margin: 0 auto;
-  padding: 0.5rem 1.5rem;
-  min-height: 60px;
+  padding: 0 1.5rem;
+  min-height: 36px;
 }
 .site-header-inner,
 .site-navigation,
@@ -261,7 +257,7 @@ body.kb-nav-open {
   font-family: var(--global-heading-font-family, Arial, Helvetica, sans-serif);
 }
 .site-name { font-family: inherit; }
-.site-logo img { width: 120px; height: auto; display: block; }
+.site-logo img { width: 90px; height: auto; display: block; }
 
 /* ── Hamburger toggle — hidden on desktop ──────────────────────────────────── */
 .kb-nav-toggle {
@@ -443,8 +439,6 @@ body.kb-nav-open {
   background: rgba(49, 78, 37, 0.1);
   color: var(--global-palette1, #314e25);
 }
-.site-shell-header.is-transparent .site-search-btn { color: #fff; }
-.site-shell-header.is-transparent .site-search-btn:hover { background: rgba(255,255,255,0.15); }
 
 /* ── Pagefind search UI ─────────────────────────────────────────────────────── */
 .search-page { padding: 2rem var(--global-content-edge-padding, 1.5rem); max-width: var(--global-content-narrow-width, 842px); margin: 0 auto; }
@@ -525,6 +519,8 @@ body.kb-nav-open {
 /* ── Kadence image block ───────────────────────────────────────────────────── */
 .kb-image-wrap { display: block; }
 .kb-image-wrap img { display: block; max-width: 100%; height: auto; }
+.kb-image-wrap.kb-icon-block { display: flex; justify-content: flex-start; margin-bottom: 1rem; }
+.kb-image-wrap.kb-icon-block svg { flex-shrink: 0; }
 
 /* ── Page layout — CSS grid for alignfull breakout ─────────────────────────── */
 .page { margin: 0; }
@@ -840,7 +836,7 @@ body.kb-nav-open {
   width: 100%;
   max-width: var(--global-content-width, 1290px);
   margin: 0 auto;
-  padding: 4rem var(--global-content-edge-padding, 1.5rem) 6rem;
+  padding: 0 var(--global-content-edge-padding, 1.5rem);
 }
 .hero-section-overlay {
   position: absolute;
@@ -848,12 +844,14 @@ body.kb-nav-open {
   background: rgba(43, 108, 176, 0.20);
   z-index: 0;
 }
-.entry-header { position: relative; z-index: 1; }
-.page-title.entry-title {
-  color: #fff;
+.page-title {
+  color: var(--global-palette3, #2c5f2e);
   font-size: clamp(1.75rem, 1.5rem + 1.5vw, 2.75rem);
-  text-shadow: 0 2px 8px rgba(0,0,0,0.35);
-  margin: 0;
+  margin: 1.5rem 0 1rem;
+  padding: 0 var(--global-content-edge-padding, 1.5rem);
+  max-width: var(--global-content-width, 1290px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ── Site footer ───────────────────────────────────────────────────────────── */
@@ -938,3 +936,146 @@ body.kb-nav-open {
   .doc-layout { grid-template-columns: 1fr; }
   .doc-sidebar { position: static; }
 }
+
+/* ── 404 page ────────────────────────────────────────────────────────────── */
+.error-404 { min-height: 60vh; display: flex; align-items: center; justify-content: center; }
+.error-404-inner { text-align: center; padding: 3rem 1.5rem; max-width: 560px; margin: 0 auto; }
+.error-404-code { font-size: clamp(5rem, 20vw, 9rem); font-weight: 700; line-height: 1; color: var(--global-palette7, #f0f4ec); letter-spacing: -0.04em; }
+.error-404-title { font-size: clamp(1.4rem, 4vw, 2rem); margin: 0.25rem 0 0.75rem; }
+.error-404-desc { color: #555; margin: 0 0 2rem; }
+.error-404-suggestions { margin: 0 0 2rem; }
+.error-404-suggestions-label { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--global-palette5, #3b5e2c); margin: 0 0 0.75rem; }
+.error-404-suggestions-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; align-items: center; }
+.error-404-suggestions-list a { display: inline-block; padding: 0.5em 1.2em; background: var(--global-palette7, #f0f4ec); border-radius: 5px; text-decoration: none; color: var(--global-palette3, #000); font-weight: 500; transition: background 0.15s; }
+.error-404-suggestions-list a:hover { background: #dde9d5; }
+.e404-ext { font-size: 0.75em; color: var(--global-palette5, #3b5e2c); }
+.error-404-home { display: inline-block; margin-top: 0.5rem; color: var(--global-palette2, #446d33); font-size: 0.9rem; }
+
+/* ── gen-ai.fi tool cards (materiaalit-sivu) ─────────────────────────────── */
+.gen-ai-tools-intro { max-width: 700px; margin: 0 0 2rem; }
+.gen-ai-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 0 0 2.5rem;
+  align-items: stretch;
+}
+.gen-ai-tool-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--global-palette9, #fff);
+  border: 1px solid #dde5d6;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(49,78,37,0.07);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.gen-ai-tool-card:hover { box-shadow: 0 6px 18px rgba(49,78,37,0.14); transform: translateY(-2px); }
+.gen-ai-tool-card-header { margin-bottom: 0.6rem; }
+.gen-ai-tool-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.15em 0.6em;
+  border-radius: 3px;
+}
+.gen-ai-tool-badge--active { background: #e2f0dc; color: #2d5a1e; }
+.gen-ai-tool-badge--beta { background: #dce8f8; color: #1a4a80; }
+.gen-ai-tool-badge--new { background: #fff3cd; color: #7a5c00; }
+.gen-ai-tool-card-title {
+  font-size: 1.15rem;
+  margin: 0 0 0.5rem;
+  color: var(--global-palette3, #000);
+  min-height: 2.8em;
+}
+.gen-ai-tool-card-desc { font-size: 0.9rem; line-height: 1.55; color: #444; flex-grow: 1; margin: 0 0 0.9rem; }
+.gen-ai-tool-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  min-height: 2rem;
+  align-content: flex-start;
+}
+.gen-ai-tool-tag {
+  font-size: 0.72rem;
+  background: var(--global-palette7, #f0f4ec);
+  color: var(--global-palette5, #3b5e2c);
+  padding: 0.15em 0.55em;
+  border-radius: 3px;
+}
+.gen-ai-tool-card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+  align-items: stretch;
+}
+.gen-ai-tool-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--global-palette2, #446d33);
+  text-decoration: none;
+  border: 2px solid var(--global-palette2, #446d33);
+  border-radius: 4px;
+  padding: 0.35em 0.85em;
+  min-height: 2.85rem;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  transition: background 0.15s, color 0.15s;
+}
+.gen-ai-tool-card-link:hover { background: var(--global-palette2, #446d33); color: #fff; }
+.gen-ai-tool-card-link--disabled {
+  opacity: 0.45;
+  cursor: default;
+  border-color: #aaa;
+  color: #666;
+}
+.gen-ai-tool-card-link--disabled:hover { background: transparent; color: #666; }
+.gen-ai-tool-card-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  color: var(--global-palette2, #446d33);
+  text-decoration: underline;
+  min-height: 2.5rem;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.gen-ai-tool-card-about:hover { color: var(--global-palette1, #314e25); }
+.gen-ai-tool-card-curriculum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--global-palette4, #314e25);
+  text-decoration: none;
+  background: var(--global-palette7, #f0f4ec);
+  border-radius: 4px;
+  padding: 0.45em 0.8em;
+  min-height: 2.75rem;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  transition: background 0.15s;
+}
+.gen-ai-tool-card-curriculum:hover { background: #dde9d5; color: var(--global-palette1, #314e25); }
+.gen-ai-tools-curricula {
+  background: var(--global-palette7, #f0f4ec);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin-top: 0.5rem;
+}
+.gen-ai-tools-curricula h3 { margin: 0 0 0.5rem; }
+.gen-ai-tools-curricula ul { margin: 0.5rem 0 1.25rem; padding-left: 1.4rem; }
+.gen-ai-tools-curricula li { margin-bottom: 0.4rem; }

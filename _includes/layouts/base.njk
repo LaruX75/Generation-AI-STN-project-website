@@ -15,11 +15,11 @@
     "/sv/valkommen-till-generation-ai-projektets-webbplats/": { "fi": "/", "en": "/en/home/", "sv": "/sv/startsida/" },
     "/ajankohtaista/": { "fi": "/ajankohtaista/", "en": "/en/current-affairs/", "sv": "/sv/aktuellt/" },
     "/materiaalit/": { "fi": "/materiaalit/", "en": "/en/materials/", "sv": "/sv/material/" },
-    "/hankkeen-toiminta/": { "fi": "/hankkeen-toiminta/", "en": "/en/what-we-do/", "sv": "/sv/verksamhet/" },
-    "/en/activities/": { "fi": "/hankkeen-toiminta/", "en": "/en/what-we-do/", "sv": "/sv/verksamhet/" },
-    "/en/what-we-do/": { "fi": "/hankkeen-toiminta/", "en": "/en/what-we-do/", "sv": "/sv/verksamhet/" },
-    "/sv/atgard/": { "fi": "/hankkeen-toiminta/", "en": "/en/what-we-do/", "sv": "/sv/verksamhet/" },
-    "/sv/verksamhet/": { "fi": "/hankkeen-toiminta/", "en": "/en/what-we-do/", "sv": "/sv/verksamhet/" },
+    "/hankkeen-toiminta/": { "fi": "/hankkeen-toiminta/", "en": "/en/activities/", "sv": "/sv/verksamhet/" },
+    "/en/activities/": { "fi": "/hankkeen-toiminta/", "en": "/en/activities/", "sv": "/sv/verksamhet/" },
+    "/en/what-we-do/": { "fi": "/hankkeen-toiminta/", "en": "/en/activities/", "sv": "/sv/verksamhet/" },
+    "/sv/atgard/": { "fi": "/hankkeen-toiminta/", "en": "/en/activities/", "sv": "/sv/verksamhet/" },
+    "/sv/verksamhet/": { "fi": "/hankkeen-toiminta/", "en": "/en/activities/", "sv": "/sv/verksamhet/" },
     "/konsortio/": { "fi": "/konsortio/", "en": "/en/consortium/", "sv": "/sv/konsortium/" },
     "/ollaan-yhteydessa/": { "fi": "/ollaan-yhteydessa/", "en": "/en/get-in-touch/", "sv": "/sv/kontakta-oss/" },
     "/opettajalle/": { "fi": "/opettajalle/", "en": "/en/for-teachers/", "sv": "/sv/for-larare/" },
@@ -56,7 +56,7 @@
   <link rel="stylesheet" href="/styles/theme.css">
 </head>
 <body{% if pageHero %} class="has-hero"{% endif %}>
-  <div data-pagefind-ignore>{% include "partials/site-header.njk" %}</div>
+  {% include "partials/site-header.njk" %}
   <div data-pagefind-body data-pagefind-meta="language:{{ lang if lang else (site.defaultLocale if site and site.defaultLocale else 'fi') }}">
   {{ content | safe }}
   </div>

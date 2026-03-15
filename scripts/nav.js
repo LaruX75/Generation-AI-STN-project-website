@@ -40,9 +40,6 @@
   var nav     = document.getElementById("site-nav-menu");
   var heroEl  = document.querySelector(".page-hero-section, .entry-hero");
 
-  // Hero threshold: become sticky after hero is fully scrolled out
-  var heroThreshold = heroEl ? heroEl.offsetHeight : 0;
-
   // ── Header height → CSS custom property ─────────────────────────────────────
   function updateHeaderHeight() {
     if (!header) return;
@@ -57,36 +54,33 @@
   }
   updateHeaderHeight();
 
-  // ── Sticky + reveal-on-scroll-up ─────────────────────────────────────────────
+  // ── Fixed header: hide while scrolling in hero zone, show when past hero ──────
   var lastScrollY = window.scrollY;
   var scrollTicking = false;
 
   function onScroll() {
     if (!header) return;
     var y = window.scrollY;
+    var headerH = header.getBoundingClientRect().height;
 
-    // On hero pages use hero height as threshold, otherwise use STICKY_OFFSET
-    var threshold = heroThreshold > 0 ? heroThreshold : STICKY_OFFSET;
+    // Drop-shadow once user has scrolled at all
+    header.classList.toggle("is-stuck", y > STICKY_OFFSET);
 
-    // Stuck state
-    header.classList.toggle("is-stuck", y > threshold);
-
-    // Transparent overlay: remove transparency once hero is scrolled past
-    if (header.classList.contains("is-transparent") || header.dataset.wasTransparent) {
-      if (y > threshold) {
-        header.dataset.wasTransparent = "1";
-        header.classList.remove("is-transparent");
-      } else {
-        header.classList.add("is-transparent");
-        delete header.dataset.wasTransparent;
-      }
-    }
-
-    // Reveal-on-scroll-up: only on non-hero pages — on hero pages header stays visible once stuck
-    if (heroThreshold === 0 && y > REVEAL_OFFSET) {
-      header.classList.toggle("is-hidden", y > lastScrollY);
+    if (heroEl) {
+      // Hero pages:
+      //  - at top (y ≤ STICKY_OFFSET)  → header visible
+      //  - scrolled down, hero visible → header hides
+      //  - hero fully past header      → header visible again (sticky)
+      var heroPastHeader = heroEl.getBoundingClientRect().bottom <= headerH;
+      var atTop = y <= STICKY_OFFSET;
+      header.classList.toggle("is-hidden", !atTop && !heroPastHeader);
     } else {
-      header.classList.remove("is-hidden");
+      // Non-hero pages: reveal-on-scroll-up
+      if (y > REVEAL_OFFSET) {
+        header.classList.toggle("is-hidden", y > lastScrollY);
+      } else {
+        header.classList.remove("is-hidden");
+      }
     }
 
     lastScrollY = y;
@@ -273,7 +267,6 @@
   window.addEventListener("resize", debounce(function () {
     if (isDesktop() && nav && nav.classList.contains("is-open")) closeMobileMenu();
     updateHeaderHeight();
-    if (heroEl) heroThreshold = heroEl.offsetHeight;
   }, RESIZE_DELAY));
 
   // ── Smooth scroll for in-page hash links ──────────────────────────────────────

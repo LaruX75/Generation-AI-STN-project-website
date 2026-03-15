@@ -5,9 +5,260 @@ eleventyExcludeFromCollections: true
 layout: layouts/base.njk
 ---
 <main class="page error-404">
-  <div class="page-content" style="text-align:center; padding: 4rem 1rem;">
-    <h1>404 – Sivua ei löydy</h1>
-    <p>Etsimääsi sivua ei löydy. Se on ehkä siirretty tai poistettu.</p>
-    <a href="/" style="margin-top:1rem; display:inline-block;">← Etusivulle</a>
+  <div class="error-404-inner">
+    <div class="error-404-code">404</div>
+    <h1 class="error-404-title" id="e404-heading">Sivua ei löydy</h1>
+    <p class="error-404-desc" id="e404-desc">Etsimääsi sivua ei löydy. Se on ehkä siirretty tai poistettu.</p>
+    <div id="e404-suggestions" class="error-404-suggestions" hidden>
+      <p class="error-404-suggestions-label" id="e404-label">Tarkoititko ehkä jotain näistä?</p>
+      <ul class="error-404-suggestions-list" id="e404-list"></ul>
+    </div>
+    <a class="error-404-home" href="/" id="e404-home">← Etusivulle</a>
   </div>
 </main>
+
+<script>
+(function () {
+  var path = window.location.pathname.toLowerCase();
+
+  // ── Locale detection ────────────────────────────────────────────────────────
+  var locale = path.startsWith('/en/') ? 'en' : path.startsWith('/sv/') ? 'sv' : 'fi';
+
+  var ui = {
+    fi: { heading: '404 – Sivua ei löydy', desc: 'Etsimääsi sivua ei löydy. Se on ehkä siirretty tai poistettu.', label: 'Tarkoititko ehkä jotain näistä?', home: '← Etusivulle', ext: '↗' },
+    en: { heading: '404 – Page not found',  desc: 'The page you were looking for could not be found. It may have been moved or removed.', label: 'Were you looking for one of these?', home: '← Back to home', ext: '↗' },
+    sv: { heading: '404 – Sidan hittades inte', desc: 'Sidan du sökte kunde inte hittas. Den kan ha flyttats eller tagits bort.', label: 'Menade du kanske något av dessa?', home: '← Till startsidan', ext: '↗' }
+  }[locale];
+
+  document.getElementById('e404-heading').textContent = ui.heading;
+  document.getElementById('e404-desc').textContent    = ui.desc;
+  document.getElementById('e404-label').textContent   = ui.label;
+  var homeEl = document.getElementById('e404-home');
+  homeEl.textContent = ui.home;
+  homeEl.href = locale === 'en' ? '/en/home/' : locale === 'sv' ? '/sv/startsida/' : '/';
+
+  // ── Suggestion catalogue ────────────────────────────────────────────────────
+  var catalogue = [
+    {
+      keywords: ['opetettava', 'classifier', 'luokittelija', 'kone/mika', 'kone/opetettavan', 'kone/tekoaly'],
+      items: {
+        fi: [
+          { title: 'Opetettava kone',                           url: 'https://www.gen-ai.fi/fi/tools/tm',                   ext: true },
+          { title: 'Tee oma mobiiliappi — opetuskokonaisuus',   url: 'https://www.gen-ai.fi/fi/materials/classifier-unit',  ext: true },
+          { title: 'Materiaalit',                               url: '/materiaalit/' }
+        ],
+        en: [
+          { title: 'Teachable Machine',                         url: 'https://www.gen-ai.fi/en/tools/tm',                   ext: true },
+          { title: 'Create Your Own Mobile App — unit',         url: 'https://www.gen-ai.fi/en/materials/classifier-unit',  ext: true },
+          { title: 'Materials',                                 url: '/en/materials/' }
+        ],
+        sv: [
+          { title: 'Opetettava kone',                           url: 'https://www.gen-ai.fi/fi/tools/tm',                   ext: true },
+          { title: 'Material',                                  url: '/sv/material/' }
+        ]
+      }
+    },
+    {
+      keywords: ['somekone', 'some', 'sosiaalinen', 'algoritmi', 'profilointi', 'somekone-unit', 'somekone-lesson'],
+      items: {
+        fi: [
+          { title: 'Somekone',                          url: 'https://www.gen-ai.fi/fi/tools/somekone',             ext: true },
+          { title: 'Somekone oppitunnit',               url: 'https://www.gen-ai.fi/fi/materials/somekone-unit',    ext: true },
+          { title: 'Materiaalit',                       url: '/materiaalit/' }
+        ],
+        en: [
+          { title: 'Somekone',                          url: 'https://www.gen-ai.fi/en/tools/somekone',             ext: true },
+          { title: 'Understand social media algorithms',url: 'https://www.gen-ai.fi/en/materials/somekone-unit',    ext: true },
+          { title: 'Materials',                         url: '/en/materials/' }
+        ],
+        sv: [
+          { title: 'Somekone',                          url: 'https://www.gen-ai.fi/fi/tools/somekone',             ext: true },
+          { title: 'Material',                          url: '/sv/material/' }
+        ]
+      }
+    },
+    {
+      keywords: ['hajoava', 'spoof', 'rikkoutuv', 'breakable'],
+      items: {
+        fi: [
+          { title: 'Hajoava kone',  url: 'https://www.gen-ai.fi/fi/tools/bm', ext: true },
+          { title: 'Materiaalit',   url: '/materiaalit/' }
+        ],
+        en: [
+          { title: 'Breakable Machine', url: 'https://www.gen-ai.fi/en/tools/bm', ext: true },
+          { title: 'Materials',         url: '/en/materials/' }
+        ],
+        sv: [
+          { title: 'Hajoava kone',  url: 'https://www.gen-ai.fi/fi/tools/bm', ext: true },
+          { title: 'Material',      url: '/sv/material/' }
+        ]
+      }
+    },
+    {
+      keywords: ['kielimalli', 'kielikone', '/lm', 'language'],
+      items: {
+        fi: [
+          { title: 'Pieni kielikone',   url: 'https://www.gen-ai.fi/fi/tools/lm', ext: true },
+          { title: 'Materiaalit',       url: '/materiaalit/' }
+        ],
+        en: [
+          { title: 'Little Language Machine', url: 'https://www.gen-ai.fi/en/tools/lm', ext: true },
+          { title: 'Materials',               url: '/en/materials/' }
+        ],
+        sv: [
+          { title: 'Pieni kielikone',   url: 'https://www.gen-ai.fi/fi/tools/lm', ext: true },
+          { title: 'Material',          url: '/sv/material/' }
+        ]
+      }
+    },
+    {
+      keywords: ['profilointipeli', 'classroom', 'profiling'],
+      items: {
+        fi: [
+          { title: 'Profilointipeli',   url: 'https://www.gen-ai.fi/fi/tools/profiling-game', ext: true },
+          { title: 'Materiaalit',       url: '/materiaalit/' }
+        ],
+        en: [
+          { title: 'Profiling Game',    url: 'https://www.gen-ai.fi/en/tools/profiling-game', ext: true },
+          { title: 'Materials',         url: '/en/materials/' }
+        ],
+        sv: [
+          { title: 'Profilointipeli',   url: 'https://www.gen-ai.fi/fi/tools/profiling-game', ext: true },
+          { title: 'Material',          url: '/sv/material/' }
+        ]
+      }
+    },
+    {
+      keywords: ['materiaali', 'material', 'oppitunti', 'oppimat', 'betterdocs', 'docs'],
+      items: {
+        fi: [
+          { title: 'Materiaalit',                     url: '/materiaalit/' },
+          { title: 'Kaikki sovellukset — gen-ai.fi',  url: 'https://www.gen-ai.fi/fi', ext: true }
+        ],
+        en: [
+          { title: 'Materials',                       url: '/en/materials/' },
+          { title: 'All tools — gen-ai.fi',           url: 'https://www.gen-ai.fi/en', ext: true }
+        ],
+        sv: [
+          { title: 'Material',                        url: '/sv/material/' },
+          { title: 'Alla verktyg — gen-ai.fi',        url: 'https://www.gen-ai.fi/fi', ext: true }
+        ]
+      }
+    },
+    {
+      keywords: ['ajankohtai', 'current', 'uutis', 'news', 'aktuell', 'posts'],
+      items: {
+        fi: [{ title: 'Ajankohtaista', url: '/ajankohtaista/' }],
+        en: [{ title: 'Current affairs', url: '/en/current-affairs/' }],
+        sv: [{ title: 'Aktuellt', url: '/sv/aktuellt/' }]
+      }
+    },
+    {
+      keywords: ['konsortio', 'consortium', 'konsortium', 'partner'],
+      items: {
+        fi: [{ title: 'Konsortio', url: '/konsortio/' }],
+        en: [{ title: 'Consortium', url: '/en/consortium/' }],
+        sv: [{ title: 'Konsortium', url: '/sv/konsortium/' }]
+      }
+    },
+    {
+      keywords: ['opettaja', 'teacher', 'larare', 'for-teacher', 'opettajalle'],
+      items: {
+        fi: [
+          { title: 'Opettajalle',         url: '/opettajalle/' },
+          { title: 'Opetuskokonaisuudet', url: 'https://www.gen-ai.fi/fi/materials/classifier-unit', ext: true }
+        ],
+        en: [
+          { title: 'For teachers',        url: '/en/for-teachers/' },
+          { title: 'Classroom units',     url: 'https://www.gen-ai.fi/en/materials/classifier-unit', ext: true }
+        ],
+        sv: [
+          { title: 'För lärare',          url: '/sv/for-larare/' }
+        ]
+      }
+    },
+    {
+      keywords: ['tutki', 'research', 'forskning', 'hanke', 'projekt', 'toiminta', 'activit', 'verksamhet'],
+      items: {
+        fi: [
+          { title: 'Hankkeen toiminta',   url: '/hankkeen-toiminta/' },
+          { title: 'Tutkimus',            url: '/generation-ai-hankkeessa-tehtava-tutkimus/' }
+        ],
+        en: [
+          { title: 'Activities',          url: '/en/activities/' },
+          { title: 'Research',            url: '/en/research/' }
+        ],
+        sv: [
+          { title: 'Verksamhet',          url: '/sv/verksamhet/' },
+          { title: 'Forskning',           url: '/sv/forskning/' }
+        ]
+      }
+    },
+    {
+      keywords: ['tietosuoja', 'gdpr', 'privacy', 'dataskydd', 'cookie', 'eväste'],
+      items: {
+        fi: [
+          { title: 'Tietosuoja',          url: '/materiaalit/#tab-tietosuoja' },
+          { title: 'Henkilötietojen käsittely', url: '/henkilotietojen-kasittely-alakoulussa/' }
+        ],
+        en: [
+          { title: 'Privacy statement',   url: '/en/privacy-statement-eu/' }
+        ],
+        sv: [
+          { title: 'Dataskydd',           url: '/sv/dataskyddserklaring-eu/' }
+        ]
+      }
+    },
+    {
+      keywords: ['yhteystied', 'contact', 'kontakt', 'yhteys', 'ollaan'],
+      items: {
+        fi: [{ title: 'Ota yhteyttä', url: '/ollaan-yhteydessa/' }],
+        en: [{ title: 'Get in touch',  url: '/en/get-in-touch/' }],
+        sv: [{ title: 'Kontakta oss', url: '/sv/kontakta-oss/' }]
+      }
+    },
+    {
+      keywords: ['haku', 'search', 'sok'],
+      items: {
+        fi: [{ title: 'Haku', url: '/haku/' }],
+        en: [{ title: 'Search', url: '/en/search/' }],
+        sv: [{ title: 'Sök', url: '/sv/sok/' }]
+      }
+    }
+  ];
+
+  // ── Score and match ─────────────────────────────────────────────────────────
+  var best = null, bestScore = 0;
+  catalogue.forEach(function (group) {
+    var score = 0;
+    group.keywords.forEach(function (kw) { if (path.indexOf(kw) !== -1) score++; });
+    if (score > bestScore) { bestScore = score; best = group; }
+  });
+
+  if (!best || bestScore === 0) return; // no match — plain 404
+
+  var items = (best.items[locale] || best.items['fi'] || []).slice(0, 3);
+  if (!items.length) return;
+
+  var list = document.getElementById('e404-list');
+  items.forEach(function (item) {
+    var li = document.createElement('li');
+    var a  = document.createElement('a');
+    a.href = item.url;
+    a.textContent = item.title;
+    if (item.ext) {
+      a.target = '_blank';
+      a.rel    = 'noopener';
+      var sup  = document.createElement('span');
+      sup.textContent = ' ' + ui.ext;
+      sup.setAttribute('aria-hidden', 'true');
+      sup.className = 'e404-ext';
+      a.appendChild(sup);
+    }
+    li.appendChild(a);
+    list.appendChild(li);
+  });
+
+  document.getElementById('e404-suggestions').hidden = false;
+}());
+</script>

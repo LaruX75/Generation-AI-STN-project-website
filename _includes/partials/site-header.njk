@@ -30,7 +30,7 @@
   }
 } %}
 {% set ui = navUi[localeCode] if navUi[localeCode] else navUi["fi"] %}
-<header class="site-shell-header{% if pageHero %} is-transparent{% endif %}">
+<header class="site-shell-header" data-pagefind-ignore>
   <div class="site-header-inner">
     <span class="site-logo">
       {% if site and site.logo %}
@@ -113,4 +113,9 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
     </a>
   </div>
+  {% if pageHero %}
+  <div class="site-header-wave" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" style="transform:scaleY(-1)"><path fill="currentColor" d="M1000,50l-182.69,-45.286l-292.031,61.197l-190.875,-41.075l-143.748,28.794l-190.656,-23.63l0,70l1000,0l0,-50Z" style="opacity:0.4"/><path fill="currentColor" d="M1000,57l-152.781,-22.589l-214.383,19.81l-159.318,-21.471l-177.44,25.875l-192.722,5.627l-103.356,-27.275l0,63.023l1000,0l0,-43Z"/></svg>
+  </div>
+  {% endif %}
 </header>

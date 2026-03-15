@@ -6,11 +6,6 @@ layout: layouts/base.njk
 <div class="entry-hero page-hero-section"{% if _heroImg %} style="background-image:url('{{ _heroImg }}');"{% endif %}>
   <div class="entry-hero-container-inner">
     <div class="hero-section-overlay"></div>
-    <header class="entry-header">
-      {% if title and not kadenceBlocks %}
-        <h1 class="page-title entry-title">{{ title }}</h1>
-      {% endif %}
-    </header>
   </div>
   <div class="kt-row-layout-bottom-sep kt-svg-for-bottom-sep" aria-hidden="true" style="height:100px;color:var(--global-palette9);">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path fill="currentColor" d="M1000,50l-182.69,-45.286l-292.031,61.197l-190.875,-41.075l-143.748,28.794l-190.656,-23.63l0,70l1000,0l0,-50Z" style="opacity:0.4"/><path fill="currentColor" d="M1000,57l-152.781,-22.589l-214.383,19.81l-159.318,-21.471l-177.44,25.875l-192.722,5.627l-103.356,-27.275l0,63.023l1000,0l0,-43Z"/></svg>
@@ -18,7 +13,7 @@ layout: layouts/base.njk
 </div>
 {% endif %}
 <main class="page">
-  {% if title and not kadenceBlocks and not pageHero and not featuredImage %}
+  {% if title and not kadenceBlocks %}
     <h1 class="page-title">{{ title }}</h1>
   {% endif %}
   <div class="page-content">{{ content | safe }}</div>
