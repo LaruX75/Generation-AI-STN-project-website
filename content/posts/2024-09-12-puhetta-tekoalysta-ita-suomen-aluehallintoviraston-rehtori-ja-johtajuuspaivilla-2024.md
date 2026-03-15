@@ -6,8 +6,6 @@ slug: puhetta-tekoalysta-ita-suomen-aluehallintoviraston-rehtori-ja-johtajuuspai
 permalink: /ajankohtaista/puhetta-tekoalysta-ita-suomen-aluehallintoviraston-rehtori-ja-johtajuuspaivilla-2024/
 status: publish
 sourceType: posts
-sourceId: 2342
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/puhetta-tekoalysta-ita-suomen-aluehallintoviraston-rehtori-ja-johtajuuspaivilla-2024/"
 excerpt: "Generation AI:n professori Matti Tedre ja tutkija Henriikka Vartiainen ovat mukana Itä-Suomen aluehallintoviraston ja Pohjois-Karjalan Rehtorit ry:n järjestämillä rehtori- ja johtajuuspäivillä Nurmeksessa. He luennoivat aiheesta tekoäly perjantaina 13.9. Lisätietoa tapahtumasta löydät täältä."
 categories:
   - Ajankohtaista

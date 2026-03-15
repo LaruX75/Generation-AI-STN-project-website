@@ -6,8 +6,6 @@ slug: search
 permalink: /en/search/
 status: publish
 sourceType: pages
-sourceId: 1099
-sourceUrl: "https://www.generation-ai-stn.fi/posts-search/"
 excerpt: ""
 categories: []
 tags: []

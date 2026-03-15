@@ -6,8 +6,6 @@ slug: lasten-oikeudet-toteutuvat-vaihtelevasti-internetissa
 permalink: /ajankohtaista/lasten-oikeudet-toteutuvat-vaihtelevasti-internetissa/
 status: publish
 sourceType: posts
-sourceId: 1614
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/lasten-oikeudet-toteutuvat-vaihtelevasti-internetissa/"
 excerpt: "EU:n yleinen tietosuoja-asetus (GDPR) asettaa palveluntarjoajille vaatimuksia, joiden mukaan niiden tulee selvittää, ovatko palveluiden käyttäjät lapsia. Tutkimukset ovat kuitenkin osoittaneet, että nykyiset iänvarmistustyökalut ovat epäluotettavia. Eniten käytetty menetelmä on itseilmoitus, jossa käyttäjän on ilmoitettava ikänsä esimerkiksi syöttämällä syntymäaikansa rekisteröinnin yhteydessä. On helppo nähdä, että tällainen menetelmä sisältää epävarmuustekijöitä. Lapset voivat helposti ohittaa iän varmistuksen ilmoittamalla…"
 categories:
   - Ajankohtaista

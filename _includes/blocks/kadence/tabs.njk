@@ -1,6 +1,6 @@
 {# kadence/tabs — Tab group with title nav and switchable panels #}
 {% set b = kadenceBlock.attrs %}
-<div class="wp-block-kadence-tabs kb-tabs{% if b.uniqueID %} kb-tabs-id_{{ b.uniqueID }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}">
+<div class="kb-tabs{% if b.uniqueID %} kb-tabs-id_{{ b.uniqueID }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}">
   {{ kadenceInnerHtml | safe }}
 </div>
 <script>
@@ -8,7 +8,7 @@
   if (window._ktTabsInit) return;
   window._ktTabsInit = true;
   document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.wp-block-kadence-tabs.kb-tabs').forEach(function (wrap) {
+    document.querySelectorAll('..kb-tabs').forEach(function (wrap) {
       var panels = Array.from(wrap.querySelectorAll('.kt-tabs-content-wrap > .kb-tab-panel'));
       var titleItems = Array.from(wrap.querySelectorAll('.kt-tabs-title-list .kt-title-item'));
       var titleLinks = Array.from(wrap.querySelectorAll('.kt-tabs-title-list .kt-tab-title'));

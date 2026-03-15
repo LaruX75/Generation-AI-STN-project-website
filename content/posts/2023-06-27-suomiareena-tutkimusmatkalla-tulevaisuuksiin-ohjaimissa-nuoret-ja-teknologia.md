@@ -6,8 +6,6 @@ slug: suomiareena-tutkimusmatkalla-tulevaisuuksiin-ohjaimissa-nuoret-ja-teknolog
 permalink: /ajankohtaista/suomiareena-tutkimusmatkalla-tulevaisuuksiin-ohjaimissa-nuoret-ja-teknologia/
 status: publish
 sourceType: posts
-sourceId: 1086
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/suomiareena-tutkimusmatkalla-tulevaisuuksiin-ohjaimissa-nuoret-ja-teknologia/"
 excerpt: "Prof. Teemu Roos osallistui 27.6.2023 Suomi Areenan paneeliin ”tutkimusmatkalla tulevaisuuksiin, ohjaimissa nuoret ja teknologia” .. Paneelia voi katsoa tallenteena täältä:https://www.mtv.fi/sarja/suomiareena-1464/tutkimusmatkalla-tulevaisuuksiin-ohjaimisssa-nuoret-ja-teknologia-20594602 Lähde nuorten kanssa tutkimusmatkalle tulevaisuuteen etsimään vastauksia koulun, oppimisen ja teknologian kehitykseen: Mitä ja miten opimme? Entä minkälainen rooli teknologialla on arjessamme? Tulevaisuuskoulu on mukana SuomiAreenassa – tule mukaan seuraamaan keskustelua! Mitä: Paneelikeskustelu Tutkimusmatkalla tulevaisuuksiin…"
 categories:
   - Ajankohtaista

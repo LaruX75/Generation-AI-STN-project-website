@@ -6,8 +6,6 @@ slug: tietosuojalausunto-eu
 permalink: /tietosuojalausunto-eu/
 status: publish
 sourceType: pages
-sourceId: 4014
-sourceUrl: "https://www.generation-ai-stn.fi/tietosuojalausunto-eu/"
 excerpt: "[object Object]"
 categories: []
 tags: []

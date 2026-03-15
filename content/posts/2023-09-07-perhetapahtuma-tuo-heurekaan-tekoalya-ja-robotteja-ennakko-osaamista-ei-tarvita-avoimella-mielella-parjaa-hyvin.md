@@ -6,8 +6,6 @@ slug: perhetapahtuma-tuo-heurekaan-tekoalya-ja-robotteja-ennakko-osaamista-ei-ta
 permalink: /ajankohtaista/genai-hankkeen-henkilosto-mediassa/perhetapahtuma-tuo-heurekaan-tekoalya-ja-robotteja-ennakko-osaamista-ei-tarvita-avoimella-mielella-parjaa-hyvin/
 status: publish
 sourceType: posts
-sourceId: 1331
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-mediassa/perhetapahtuma-tuo-heurekaan-tekoalya-ja-robotteja-ennakko-osaamista-ei-tarvita-avoimella-mielella-parjaa-hyvin/"
 excerpt: "Uutinen on julkaistu alunperin Vantaan Sanomat -lehdessä 7.9.2023. Lue alkuperäinen juttu tästä: https://www.vantaansanomat.fi/paikalliset/6191468 Älyä Kone! -perhepäivä järjestetään Heurekassa lauantaina 23. syyskuuta. – Tavoitteena on tehdä tekoälyä, teknologiaa, robotiikkaa ja ohjelmointia tutummaksi ja lähestyttävämmäksi. Haluamme saada ihmiset innostumaan aiheista ja tutustumaan niihin elämyksellisin keinoin. Tapahtumassa tietoisuus kasvaa ja aiheita voi lähestyä matalalla kynnyksellä, Heurekan ohjelmatuotantopäällikkö Jutta Kujasalo sanoo. Tapahtumassa on…"
 categories:
   - GenAI hankkeen henkilöstö mediassa

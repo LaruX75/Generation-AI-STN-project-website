@@ -6,8 +6,6 @@ slug: kolmas-oppitunti-projektityo
 permalink: /materiaalit/opetettavakone/tekoaly-haltuun-yhdessa-opetettavan-koneen-oppimateriaali/kolmas-oppitunti-projektityo/
 status: publish
 sourceType: docs
-sourceId: 2198
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/opetettavakone/tekoaly-haltuun-yhdessa-opetettavan-koneen-oppimateriaali/kolmas-oppitunti-projektityo/"
 excerpt: "Oppitunnin tavoitteet Keskeiset käsitteet Tarvikkeet: Työskentelytapa: Tehtävä: Jatkakaa edellisellä kerralla aloitettua työskentelyä Työskentelytapa: työskennelkää pienissä ryhmissä tai pareittain"
 categories: []
 tags: []

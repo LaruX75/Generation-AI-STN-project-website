@@ -6,8 +6,6 @@ slug: mtv-gomoron-artificiell-intelligens-for-folket
 permalink: /sv/nyheter-fran/mtv-gomoron-artificiell-intelligens-for-folket/
 status: publish
 sourceType: posts
-sourceId: 1079
-sourceUrl: "https://www.generation-ai-stn.fi/mtv3/mtv-huomenta-suomi-tekoalya-kansalle/"
 excerpt: 'Prof. Teemu Roos var gäst i MTV Gomoron 6.9.2023. Han diskuterade artificiell intelligens tillsammans med Reaktors chef för AI-affärsverksamhet Hanna Hagström. Se inspelningen här: https://www.mtv.fi/sarja/huomenta-suomi-1485/tekoalya-kansalle-20358397'
 categories:
   - Aktuellt

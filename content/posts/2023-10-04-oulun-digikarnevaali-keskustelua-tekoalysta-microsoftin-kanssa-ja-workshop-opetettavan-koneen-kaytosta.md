@@ -6,8 +6,6 @@ slug: oulun-digikarnevaali-keskustelua-tekoalysta-microsoftin-kanssa-ja-workshop
 permalink: /ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/oulun-digikarnevaali-keskustelua-tekoalysta-microsoftin-kanssa-ja-workshop-opetettavan-koneen-kaytosta/
 status: publish
 sourceType: posts
-sourceId: 1352
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/oulun-digikarnevaali-keskustelua-tekoalysta-microsoftin-kanssa-ja-workshop-opetettavan-koneen-kaytosta/"
 excerpt: "Tiistaina 3.10.2023 Oulun kaupunki järjesti sivistys- ja kulttuuripalveluiden henkilökunnalle digikarnevaalin, jossa myös Generation AI hanke oli vahvasti mukana. Oulun kaupunki on hankkeen yhteistyökumppani, eli kehitämme sovelluksia ja materiaaleja yhdessä vapaaehtoisten kehittäjäopettajien ja oppilaiden kanssa. Digikarnevaalissa esittelimme hankkeessa kehitettyä opetettavaa konetta kahdessa työpajassa ja hankkeen edustaja, Jari Laru, osallistui tilaisuuden aluksi keskusteluun Microsoftin Vesa Äyräksen ja…"
 categories:
   - GenAI hankkeen henkilöstö tapahtumissa

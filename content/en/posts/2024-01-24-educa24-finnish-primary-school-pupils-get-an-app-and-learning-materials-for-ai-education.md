@@ -6,8 +6,6 @@ slug: educa24-finnish-primary-school-pupils-get-an-app-and-learning-materials-fo
 permalink: /en/news-from/educa24-finnish-primary-school-pupils-get-an-app-and-learning-materials-for-ai-education/
 status: publish
 sourceType: posts
-sourceId: 3859
-sourceUrl: "https://www.generation-ai-stn.fi/en/news-from/educa24-finnish-primary-school-pupils-get-an-app-and-learning-materials-for-ai-education/"
 excerpt: 'The Generation AI project will publish an AI application and supporting teaching material for primary school pupils. The research-based service allows children and young people to safely learn to understand AI-based technologies. At EDUCA 2024, we will launch a package of materials offering a research-based solution for teaching AI skills in primary schools. The easy-to-use…'
 categories:
   - GenAI project staff at events

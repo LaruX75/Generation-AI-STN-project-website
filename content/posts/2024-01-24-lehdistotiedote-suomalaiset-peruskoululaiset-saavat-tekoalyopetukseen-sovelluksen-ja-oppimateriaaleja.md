@@ -6,8 +6,6 @@ slug: lehdistotiedote-suomalaiset-peruskoululaiset-saavat-tekoalyopetukseen-sove
 permalink: /ajankohtaista/lehdistotiedote-suomalaiset-peruskoululaiset-saavat-tekoalyopetukseen-sovelluksen-ja-oppimateriaaleja/
 status: publish
 sourceType: posts
-sourceId: 2099
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/lehdistotiedote-suomalaiset-peruskoululaiset-saavat-tekoalyopetukseen-sovelluksen-ja-oppimateriaaleja/"
 excerpt: "Generation AI -hanke julkaisee perusopetusikäisille suunnatun tekoälysovelluksen ja sitä tukevan oppimateriaalin. Tutkimukseen perustuvan palvelun avulla lapset ja nuoret voivat turvallisesti opetella ymmärtämään tekoälyyn perustuvia teknologioita. Vuoden 2024 EDUCA-messuilla julkaisemme materiaalipaketin, joka tarjoaa tutkimusperustaisen ratkaisun tekoälytaitojen opettamiseen peruskouluissa.  Helppokäyttöinen palvelu sisältää lapsille- ja nuorille suunnitellun Opetettava kone- tekoälysovelluksen ja siihen liittyvät tehtävät, joita ovat aiemmin päässeet…"
 categories:
   - Ajankohtaista

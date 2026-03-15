@@ -6,8 +6,6 @@ slug: projektets-forskare-holl-expertforedrag-vid-enorssi-natverkets-webinar-om-
 permalink: /sv/nyheter-fran/projektets-forskare-holl-expertforedrag-vid-enorssi-natverkets-webinar-om-artifi/
 status: publish
 sourceType: posts
-sourceId: 1337
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/hankkeen-tutkijat-pitivat-asiantuntijapuheenvuorot-enorssi-verkoston-tekoaly-vai-tukialy-webinaarissa/"
 excerpt: 'Det nationella samarbetsnätverket för normalskolor eNorssi ordnade en webbinarium om artificiell intelligens den 4.4.2023, där Henriikka Vartiainen och Jari Laru från vårt projekt höll expertföredrag.'
 categories:
   - Aktuellt

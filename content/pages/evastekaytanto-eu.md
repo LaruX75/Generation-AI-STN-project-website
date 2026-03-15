@@ -6,8 +6,6 @@ slug: evastekaytanto-eu
 permalink: /evastekaytanto-eu/
 status: publish
 sourceType: pages
-sourceId: 4013
-sourceUrl: "https://www.generation-ai-stn.fi/evastekaytanto-eu/"
 excerpt: "[object Object]"
 categories: []
 tags: []

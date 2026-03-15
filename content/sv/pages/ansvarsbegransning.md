@@ -6,8 +6,6 @@ slug: ansvarsbegransning
 permalink: /sv/ansvarsbegransning/
 status: publish
 sourceType: pages
-sourceId: 4015
-sourceUrl: "https://www.generation-ai-stn.fi/vastuurajoitus/"
 excerpt: ""
 categories: []
 tags: []

@@ -6,8 +6,6 @@ slug: children-s-rights-have-not-been-adequately-considered-in-the-eu-s-artifici
 permalink: /en/current-affairs/children-s-rights-have-not-been-adequately-considered-in-the-eu-s-artificial-int/
 status: publish
 sourceType: posts
-sourceId: 1068
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/lasten-oikeuksia-ei-ole-otettu-riittavasti-huomioon-eun-tekoalyasetuksessa/"
 excerpt: 'Susanna Lindroos-Hovinheimo wrote a blog post to the European Law Blog on 12.9.2023. Below is a brief summary of the text: Negotiations on the EU''s artificial intelligence regulation are ongoing and the topic is widely discussed. However, children''s rights have not been given special consideration in the preparation process. Although the regulation proposal has developed in the direction of taking fundamental rights into account, the articles of the regulation have not been written with child protection in mind. The positions of the Commission, Council and Parliament…'
 categories:
   - News

@@ -6,8 +6,6 @@ slug: what-do-artificial-intelligence-algorithms-and-machine-learning-mean
 permalink: /en/current-affairs/what-do-artificial-intelligence-algorithms-and-machine-learning-mean/
 status: publish
 sourceType: posts
-sourceId: 80
-sourceUrl: "https://www.generation-ai-stn.fi/helsingin-yliopisto/mita-tekoaly-algoritmit-ja-koneoppiminen-tarkoittavat/"
 excerpt: 'Journalist Jari Hanska interviewed Assistant Professor Teemu Roos from the University of Helsinki on the topic: "What do artificial intelligence, algorithms, and machine learning mean?" The interview was conducted at the University of Helsinki''s Science Corner on 25.11.2019 at the beginning of the AI Decides event. Watch all the event videos on the Science Corner''s YouTube channel: https://www.youtube.com/watch?v=b4ZGTa-Vczk'
 categories:
   - News and Updates

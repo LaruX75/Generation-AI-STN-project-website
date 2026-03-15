@@ -1,8 +1,0 @@
-{# kadence/contentwidget (PRO) — Widget area; replace with your Eleventy sidebar include #}
-{% set b = kadenceBlock.attrs %}
-<aside
-  class="wp-block-kadence-contentwidget kb-widget-area kadence-block kadence-contentwidget{% if b.className %} {{ b.className }}{% endif %}"
->
-  {# TODO: replace with your sidebar partial — {% include "partials/sidebar.njk" %} #}
-  {{ kadenceInnerHtml | safe }}
-</aside>

@@ -6,8 +6,6 @@ slug: encyclopedia
 permalink: /en/encyclopedia/
 status: publish
 sourceType: pages
-sourceId: 2359
-sourceUrl: "https://www.generation-ai-stn.fi/encyclopedia/"
 excerpt: ""
 categories: []
 tags: []

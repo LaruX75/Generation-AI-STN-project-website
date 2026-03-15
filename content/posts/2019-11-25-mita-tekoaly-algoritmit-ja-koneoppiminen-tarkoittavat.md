@@ -6,8 +6,6 @@ slug: mita-tekoaly-algoritmit-ja-koneoppiminen-tarkoittavat
 permalink: /helsingin-yliopisto/mita-tekoaly-algoritmit-ja-koneoppiminen-tarkoittavat/
 status: publish
 sourceType: posts
-sourceId: 80
-sourceUrl: "https://www.generation-ai-stn.fi/helsingin-yliopisto/mita-tekoaly-algoritmit-ja-koneoppiminen-tarkoittavat/"
 excerpt: "Toimittaja Jari Hanska haastatteli Helsingin yliopiston apulaisprofessori Teemu Roosia aiheesta: ”Mitä tekoäly, algoritmit ja koneoppiminen tarkoittavat?” Haastattelu tehtiin Helsingin yliopiston tiedekulmassa 25.11.2019 Tekoäly päättää -tapahtuman alussa. Katso kaikki tapahtuman videot tiedekulman Youtube-kanavalta: https://www.youtube.com/watch?v=b4ZGTa-Vczk"
 categories:
   - Ajankohtaista

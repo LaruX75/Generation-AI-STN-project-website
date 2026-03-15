@@ -6,8 +6,6 @@ slug: milla-kielilla-somekone-on-julkaistu
 permalink: /betterdocs-faq/milla-kielilla-somekone-on-julkaistu/
 status: publish
 sourceType: betterdocs-faq
-sourceId: 2687
-sourceUrl: "https://www.generation-ai-stn.fi/?betterdocs_faq=milla-kielilla-somekone-on-julkaistu"
 excerpt: "Somekone on julkaistu suomen- ja englanninkielisenä. Käännöstyö on vielä kesken, joten paikka paikoin englantia ja suomea on sekaisin. "
 categories: []
 tags: []

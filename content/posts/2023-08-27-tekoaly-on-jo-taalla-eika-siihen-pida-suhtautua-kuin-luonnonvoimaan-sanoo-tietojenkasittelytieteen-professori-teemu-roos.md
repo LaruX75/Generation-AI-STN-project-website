@@ -6,8 +6,6 @@ slug: tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-
 permalink: /ajankohtaista/tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos/
 status: publish
 sourceType: posts
-sourceId: 1082
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos/"
 excerpt: "Kansanuutiset (KU) julkaisi 27.8.2023 Toivo Haimin kirjoittaman artikkelin. Alkuperäinen teksti löytyy ilman maksumuuria tästä osoitteesta: https://www.ku.fi/artikkeli/4906774-tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos Tekoäly ei ole mitään science fictionia, vaan se on jo läsnä arjessamme, sanoo Helsingin yliopiston tietojenkäsittelytieteen professoriHän johtaa tekoälyn opetusta Suomen tekoälykeskus FCAI:ssa ja toimii suositun Elements of AI -verkkokurssin vastuuopettajana. Tietojenkäsittelytieteen professori Teemu Roos, ennen kuin aloitamme, on…"
 categories:
   - Ajankohtaista

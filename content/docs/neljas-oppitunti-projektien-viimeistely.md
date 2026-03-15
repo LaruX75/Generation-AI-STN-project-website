@@ -6,8 +6,6 @@ slug: neljas-oppitunti-projektien-viimeistely
 permalink: /materiaalit/opetettavakone/tekoaly-haltuun-yhdessa-opetettavan-koneen-oppimateriaali/neljas-oppitunti-projektien-viimeistely/
 status: publish
 sourceType: docs
-sourceId: 2203
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/opetettavakone/tekoaly-haltuun-yhdessa-opetettavan-koneen-oppimateriaali/neljas-oppitunti-projektien-viimeistely/"
 excerpt: "Oppitunnin tavoitteet Keskeiset käsitteet Tarvikkeet: Työskentelytapa: Tehtävä: Viimeistele luokittelija sovellus Työskentelytapa: työskennelkää pienissä ryhmissä tai pareittain Tehtävä: Pohdi oman sovelluksen arviointia ja kuinka esitellä se muille Toimi tässä tehtävässä ”oman sovelluksen arviointi ja esittely” tehtävälomakkeen ohjeiden mukaisesti:"
 categories: []
 tags: []

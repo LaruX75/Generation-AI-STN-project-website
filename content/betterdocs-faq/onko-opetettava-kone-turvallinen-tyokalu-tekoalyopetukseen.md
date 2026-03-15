@@ -6,8 +6,6 @@ slug: onko-opetettava-kone-turvallinen-tyokalu-tekoalyopetukseen
 permalink: /betterdocs-faq/onko-opetettava-kone-turvallinen-tyokalu-tekoalyopetukseen/
 status: publish
 sourceType: betterdocs-faq
-sourceId: 2166
-sourceUrl: "https://www.generation-ai-stn.fi/?betterdocs_faq=onko-opetettava-kone-turvallinen-tyokalu-tekoalyopetukseen"
 excerpt: "Opetettava kone on ilmainen sovellus ja se löytyy osoitteesta https://tm.generation-ai-stn.fi"
 categories: []
 tags: []

@@ -6,8 +6,6 @@ slug: educa24-finska-grundskoleelever-far-en-app-och-laromedel-for-ai-utbildning
 permalink: /sv/nyheter-fran/educa24-finska-grundskoleelever-far-en-app-och-laromedel-for-ai-utbildning/
 status: publish
 sourceType: posts
-sourceId: 3873
-sourceUrl: "https://www.generation-ai-stn.fi/sv/nyheter-fran/educa24-finska-grundskoleelever-far-en-app-och-laromedel-for-ai-utbildning/"
 excerpt: 'Generation AI-projektet kommer att publicera en AI-applikation och stödjande undervisningsmaterial för grundskoleelever. Den forskningsbaserade tjänsten gör det möjligt för barn och ungdomar att på ett säkert sätt lära sig förstå AI-baserad teknik. På EDUCA 2024 kommer vi att lansera ett materialpaket som erbjuder en forskningsbaserad lösning för undervisning i AI-färdigheter i grundskolan. Den lättanvända tjänsten…'
 categories:
   - GenAI-projektets personal vid evenemang

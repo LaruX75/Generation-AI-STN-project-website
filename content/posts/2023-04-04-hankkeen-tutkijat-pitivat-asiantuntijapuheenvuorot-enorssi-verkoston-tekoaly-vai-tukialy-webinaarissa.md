@@ -6,8 +6,6 @@ slug: hankkeen-tutkijat-pitivat-asiantuntijapuheenvuorot-enorssi-verkoston-tekoa
 permalink: /ajankohtaista/hankkeen-tutkijat-pitivat-asiantuntijapuheenvuorot-enorssi-verkoston-tekoaly-vai-tukialy-webinaarissa/
 status: publish
 sourceType: posts
-sourceId: 1337
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/hankkeen-tutkijat-pitivat-asiantuntijapuheenvuorot-enorssi-verkoston-tekoaly-vai-tukialy-webinaarissa/"
 excerpt: "Valtakunnallinen normaalikoulujen yhteistyöverkosto eNorssi järjesti 4.4.2023 tekoälywebinaarin, jossa hankkeestamme asiantuntijapuheenvuorot pitivät Henriikka Vartiainen ja Jari laru."
 categories:
   - Ajankohtaista

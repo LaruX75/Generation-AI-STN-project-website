@@ -6,8 +6,6 @@ slug: consortium-planning-meeting-held-at-heureka-which-features-a-new-artificia
 permalink: /en/current-affairs/consortium-planning-meeting-held-at-heureka-which-features-a-new-artificial-inte/
 status: publish
 sourceType: posts
-sourceId: 402
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/konsortion-suunnittelukokous-pidettiin-heurekassa-jossa-on-uusi-tekoalya-kasitteleva-nayttely/"
 excerpt: 'Generation AI held the project''s first planning meeting at Heureka, which is a member of the project consortium. The location was indeed perfect for the meeting, as Heureka opened a new artificial intelligence-themed exhibition on 22.6.2022. After the planning meeting, consortium members familiarized themselves with Heureka''s Artificial Intelligence exhibition and other Heureka activities related to artificial intelligence, robotics, and programming. What is the Artificial Intelligence Exhibition About? On Heureka''s website, the exhibition is described as follows: Artificial Intelligence – Me, Myself &…'
 categories:
   - News

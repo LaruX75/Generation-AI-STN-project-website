@@ -6,8 +6,6 @@ slug: itk-webinaari-generation-ai-kyberturvallisen-ajattelutavan-opettaminen-tek
 permalink: /ajankohtaista/itk-webinaari-generation-ai-kyberturvallisen-ajattelutavan-opettaminen-tekoalysukupolvelle/
 status: publish
 sourceType: posts
-sourceId: 1335
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/itk-webinaari-generation-ai-kyberturvallisen-ajattelutavan-opettaminen-tekoalysukupolvelle/"
 excerpt: "ITK-webinaari 28.3.2023 Jari Laru, Oulun yliopisto Matti Tedre, Itä-Suomen yliopisto Henriikka Vartiainen, Itä-Suomen yliopisto Hahmotatko millaisia haasteita dataistuneeseen, algoritmien hallitsemassa yhteiskunnassa on? ChatGPT ja vastaavat tekoälysovellukset ovat herättäneet ihmisissä paljon innostusta ja uteliaisuutta, mutta myös paljon kysymyksiä ja huolta. Strategisen tutkimuksen neuvoston (STN) rahoittamassa Generation AI hankkeessa raotetaan tekoälyn mustaa laatikkoa, eli kehitetään sisältöjä, menetelmiä…"
 categories:
   - Ajankohtaista

@@ -6,8 +6,6 @@ slug: ordbok
 permalink: /sv/ordbok/
 status: publish
 sourceType: pages
-sourceId: 2359
-sourceUrl: "https://www.generation-ai-stn.fi/encyclopedia/"
 excerpt: ""
 categories: []
 tags: []

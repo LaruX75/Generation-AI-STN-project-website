@@ -6,8 +6,6 @@ slug: hs-vieraskyna-29-10-2016-koulutus-ei-reagoi-tyon-muutokseen
 permalink: /ajankohtaista/hs-vieraskyna-29-10-2016-koulutus-ei-reagoi-tyon-muutokseen/
 status: publish
 sourceType: posts
-sourceId: 448
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/hs-vieraskyna-29-10-2016-koulutus-ei-reagoi-tyon-muutokseen/"
 excerpt: "Tietotyö vähenee koneiden kehittyessä, ja opetuksessa pitäisi antaa valmiuksia uudenlaiseen designtyöhön, kirjoittavat Matti Tedre ja Peter J. Denning. TIETOTEKNINEN vallankumous etenee huimaa vauhtia. Yksilöllisiin tarpeisiin räätälöidyt älypuhelimet yltävät vuosituhannen alun supertietokoneiden tehoon ja pitävät meidät verkossa lähes kaikkialla. Itsestään ajavat autot kulkevat jo teillä. Uberin ja Airbnb:n kaltaiset firmat haastavat vanhat liiketoimintamallit. Tietokoneet tarkkailevat terveyttä ja…"
 categories:
   - Ajankohtaista

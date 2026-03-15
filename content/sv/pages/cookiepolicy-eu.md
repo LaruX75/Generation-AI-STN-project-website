@@ -6,8 +6,6 @@ slug: cookiepolicy-eu
 permalink: /sv/cookiepolicy-eu/
 status: publish
 sourceType: pages
-sourceId: 4013
-sourceUrl: "https://www.generation-ai-stn.fi/evastekaytanto-eu/"
 excerpt: ""
 categories: []
 tags: []

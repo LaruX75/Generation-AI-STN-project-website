@@ -1,7 +1,7 @@
 {# kadence/column — Single column within a rowlayout #}
 {% set b = kadenceBlock.attrs %}
 <div
-  class="kadence-block kadence-column wp-block-kadence-column kb-section-container{% if b.uniqueID %} kb-section_{{ b.uniqueID }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
+  class="kb-section-container{% if b.uniqueID %} kb-section_{{ b.uniqueID }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
 >
   <div class="kt-inside-inner-col">
     {{ kadenceInnerHtml | safe }}

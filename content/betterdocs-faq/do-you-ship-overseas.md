@@ -6,8 +6,6 @@ slug: do-you-ship-overseas
 permalink: /betterdocs-faq/do-you-ship-overseas/
 status: publish
 sourceType: betterdocs-faq
-sourceId: 1684
-sourceUrl: "https://www.generation-ai-stn.fi/?betterdocs_faq=do-you-ship-overseas"
 excerpt: "Yes, we ship all over the world. Please note that additional shipping costs will be applied based on your delivery location."
 categories: []
 tags: []

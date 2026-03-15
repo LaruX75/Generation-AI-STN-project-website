@@ -6,8 +6,6 @@ slug: yle-forskare-efterlyser-forstaelse-for-hur-artificiell-intelligens-fungera
 permalink: /sv/nyheter-fran/yle-forskare-efterlyser-forstaelse-for-hur-artificiell-intelligens-fungerar-som-/
 status: publish
 sourceType: posts
-sourceId: 492
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/yle/yle-tutkija-peraankuuluttaa-tekoalyn-toiminnan-ymmartamista-joka-alkaa-olla-uusi-kansalaistaito/"
 excerpt: 'Universitetslektor Anna-Mari Rusanen från Helsingfors universitet, som är känd av vår projektforskar prof. Teemu Roos, berättar i en YLE-intervju hur förståelsen för hur artificiell intelligens fungerar snart blir en ny medborgarskicklighet. Intervjun passar väl in i vårt projekts tema, eftersom vi utvecklar innehål, metoder och applikationer genom vilka dessa medborgarskickligheter undervisas till grundskolelever, lärare och lärarstudenter. Läs YLEs omfattande artikel där Anna-Mari Rusanen intervjuas: https://yle.fi/aihe/a/20-10004202 Artificiell intelligens och dess…'
 categories:
   - GenAI-projektets personal i media

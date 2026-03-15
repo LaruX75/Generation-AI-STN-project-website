@@ -6,8 +6,6 @@ slug: opetettava-kone-ja-materiaalit-perustuvat-tutkimukseen
 permalink: /materiaalit/opetettavakone/mika-on-opetettava-kone/opetettava-kone-ja-materiaalit-perustuvat-tutkimukseen/
 status: publish
 sourceType: docs
-sourceId: 2219
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/opetettavakone/mika-on-opetettava-kone/opetettava-kone-ja-materiaalit-perustuvat-tutkimukseen/"
 excerpt: "Opetettava kone on ensimmäinen hankkeessamme kehitetty sovellus, joka on suunniteltu erityisesti perusopetusikäisten käyttöön soveltuvaksi. Hankkeemme tavoitteena on saada oppijat, opettajat ja opettajaksi opiskelevat ymmärtämään tekoälyyn / koneoppimiseen liittyviä turvallisuuskysymyksiä, teknologioita ja malleja kokeilujen ja keksimisen kautta. Kaikki kehitystyö perustuu korkeatasoiseen kansainväliseen tutkimukseen. Opetettavan koneen kehitystyön yhteydessä on toteutettu Joensuussa ja Oulussa koulukokeiluja, joihin on osallistunut…"
 categories: []
 tags: []

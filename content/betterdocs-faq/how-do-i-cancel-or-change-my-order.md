@@ -6,8 +6,6 @@ slug: how-do-i-cancel-or-change-my-order
 permalink: /betterdocs-faq/how-do-i-cancel-or-change-my-order/
 status: publish
 sourceType: betterdocs-faq
-sourceId: 1681
-sourceUrl: "https://www.generation-ai-stn.fi/?betterdocs_faq=how-do-i-cancel-or-change-my-order"
 excerpt: "Unfortunately, it’s not possible to make any changes to an order or cancel it once it has been placed. However, you could ask for a refund."
 categories: []
 tags: []

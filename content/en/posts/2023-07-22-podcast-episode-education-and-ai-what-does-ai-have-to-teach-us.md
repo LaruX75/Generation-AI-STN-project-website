@@ -6,8 +6,6 @@ slug: podcast-episode-education-and-ai-what-does-ai-have-to-teach-us
 permalink: /en/current-affairs/podcast-episode-education-and-ai-what-does-ai-have-to-teach-us/
 status: publish
 sourceType: posts
-sourceId: 1095
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/podcast-jakso-koulutus-ja-tekoaly-mita-opetettavaa-tekoalylla-on-meille/"
 excerpt: 'An interesting episode was published on the Technically Optimistic blog on 22.7.2023. The discussion on artificial intelligence included student advocate Shena Revanur, Khan Academy founder Sal Khan, Code.org''s Director of Education Pat Yongpradit, prof. Teemu Roos who works in our project, and machine learning pioneer Tom Mitchell. Read the episode''s English introduction Can we use AI as a tool that enriches learning, rather than replacing it? We''re seeing AI rapidly revolutionize…'
 categories:
   - News

@@ -6,8 +6,6 @@ slug: genai-involved-in-girls-day-events
 permalink: /en/news-from/genai-project-staff-at-events/genai-involved-in-girls-day-events/
 status: publish
 sourceType: posts
-sourceId: 3843
-sourceUrl: "https://www.generation-ai-stn.fi/en/news-from/genai-project-staff-at-events/genai-involved-in-girls-day-events/"
 excerpt: 'GenAI involved in Girls’ Day events! 400 girls (and boys) visited the University of Oulu on 11 October as part of International Girls’ Day. The Generation AI project also participated in this day by running a workshop on “AI black box – teach the machine”. Did you know that Girls’ Day is a central mission…'
 categories:
   - GenAI project staff at events

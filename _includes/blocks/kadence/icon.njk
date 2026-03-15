@@ -1,9 +1,0 @@
-{# kadence/icon — Single icon; innerHtml contains the rendered SVG or icon font markup #}
-{% set b = kadenceBlock.attrs %}
-{% from "macros/feather-icons.njk" import featherIcon %}
-<span
-  class="wp-block-kadence-icon kb-svg-icon-wrap kadence-block kadence-icon{% if b.className %} {{ b.className }}{% endif %}"
-  aria-hidden="true"
->
-  {% if b.icon %}{{ featherIcon(b.icon) }}{% else %}{{ kadenceInnerHtml | safe }}{% endif %}
-</span>

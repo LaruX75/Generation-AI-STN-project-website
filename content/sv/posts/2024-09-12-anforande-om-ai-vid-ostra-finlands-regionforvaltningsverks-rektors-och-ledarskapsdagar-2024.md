@@ -6,8 +6,6 @@ slug: anforande-om-ai-vid-ostra-finlands-regionforvaltningsverks-rektors-och-led
 permalink: /sv/nyheter-fran/anforande-om-ai-vid-ostra-finlands-regionforvaltningsverks-rektors-och-ledarskapsdagar-2024/
 status: publish
 sourceType: posts
-sourceId: 3907
-sourceUrl: "https://www.generation-ai-stn.fi/sv/nyheter-fran/anforande-om-ai-vid-ostra-finlands-regionforvaltningsverks-rektors-och-ledarskapsdagar-2024/"
 excerpt: 'Generation AI:s professor Matti Tedre och forskare Henriikka Vartiainen deltar i rektors- och ledarskapsdagarna som ordnas av Östra Finlands regionförvaltningsverk och Norra Karelens rektorsförening i Nurmes. De kommer att hålla en föreläsning om artificiell intelligens på fredag 13.9. Mer information om evenemanget finns här.'
 categories:
   - GenAI-projektets personal vid evenemang

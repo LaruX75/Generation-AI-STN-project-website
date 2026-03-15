@@ -6,8 +6,6 @@ slug: generation-ai-project-strongly-present-at-interactive-technology-in-educat
 permalink: /en/current-affairs/generation-ai-project-strongly-present-at-interactive-technology-in-education-20/
 status: publish
 sourceType: posts
-sourceId: 535
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/generation-ai-hanke-vahvasti-mukana-interaktiivinen-tekniikka-koulutuksessa-2023-seminaarissa/"
 excerpt: 'Our project participated with a strong contribution to Finland''s largest educational technology event "Interactive Technology in Education", which is held annually at Aulanko in Hämeenlinna. The seminar program and its pre-event schedule included Generation AI topics featuring two keynote speeches, a poster, TM classifier demonstration, and a panel discussion. This year the event was full of various AI-related presentations, which were very practice-oriented reviews especially on the use of ChatGPT-type applications in education….'
 categories:
   - News

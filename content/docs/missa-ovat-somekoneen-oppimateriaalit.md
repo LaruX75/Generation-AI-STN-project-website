@@ -6,8 +6,6 @@ slug: missa-ovat-somekoneen-oppimateriaalit
 permalink: /materiaalit/somekone/somekone-yleista/missa-ovat-somekoneen-oppimateriaalit/
 status: publish
 sourceType: docs
-sourceId: 2253
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/somekone/somekone-yleista/missa-ovat-somekoneen-oppimateriaalit/"
 excerpt: "Huom! Somekonetta testataan ja yhteiskehitetään seuraavaksi hankkeen kumppanikoulujen kanssa Joensuussa ja Oulussa! Koneen ja sille tarkoitettujen oppimateriaalien kehittäminen on parhaillaan kesken. Emme julkaise tutkimusvaiheessa olevia oppimateriaaleja, mutta pohdimme parhaillaan millaista tukimateriaalia voisimme julkaista varhaisille omaksujille. Oppimateriaalit somekoneelle julkaistaan EDUCA 2025 tapahtumassa!"
 categories: []
 tags: []

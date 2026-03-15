@@ -6,8 +6,6 @@ slug: 36-tyska-larare-bekantade-sig-med-den-undervisande-maskinen-pa-unlocking-a
 permalink: /sv/nyheter-fran/36-tyska-larare-bekantade-sig-med-den-undervisande-maskinen-pa-unlocking-ai-webb/
 status: publish
 sourceType: posts
-sourceId: 1325
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/36-saksalaista-opettajaa-tutustui-opetettavaan-koneeseen-unlocking-ai-webinaarissa/"
 excerpt: 'Codeschool Finland arrangerade ett kostnadsfritt webbinarium för tyska lärare, där de undervisade om hur artificiell intelligens kan användas a) vid planering av undervisning och b) som ett undervisningsämne (dvs. hur elever kan lära sig förstå artificiell intelligens). GenAI-undervisningmaskinen som utvecklades i projektet fungerade som ett verktyg när lärare undervisades om hur artificiell intelligens bör undervisas och vad relationen mellan artificiell intelligens och data är. Läs mer om webbinariet på CodeSchool Finlands webbplats: https://courses.codeschool.fi/course/ai-webinar'
 categories:
   - GenAI-projektets personal på evenemang

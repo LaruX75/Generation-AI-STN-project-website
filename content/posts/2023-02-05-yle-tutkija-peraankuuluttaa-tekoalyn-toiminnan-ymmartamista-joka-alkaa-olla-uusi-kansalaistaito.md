@@ -6,8 +6,6 @@ slug: yle-tutkija-peraankuuluttaa-tekoalyn-toiminnan-ymmartamista-joka-alkaa-oll
 permalink: /ajankohtaista/yle/yle-tutkija-peraankuuluttaa-tekoalyn-toiminnan-ymmartamista-joka-alkaa-olla-uusi-kansalaistaito/
 status: publish
 sourceType: posts
-sourceId: 492
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/yle/yle-tutkija-peraankuuluttaa-tekoalyn-toiminnan-ymmartamista-joka-alkaa-olla-uusi-kansalaistaito/"
 excerpt: "Hankkeemme tutkijan prof. Teemu Roosin tuntema yliopistonlehtori Anna-Mari Rusanen Helsingin yliopistosta kertoo YLEn haastattelussa, kuinka tekoälyn toiminnan ymmärtäminen on pian uusi kansalaistaito. Haastattelu sopii hyvin hankkeemme teemaan, sillä me kehitämme sisältöjä, menetelmiä ja sovelluksia joiden avulla näitä kansalaistaitoja opetetaan peruskoululaisille, opettajille ja opettajaopiskelijoille. Lue YLEN laaja juttu, jossa haastatellaan Anna-Mari Rusasta: https://yle.fi/aihe/a/20-10004202 Tekoälyyn ja sen…"
 categories:
   - GenAI hankkeen henkilöstö mediassa

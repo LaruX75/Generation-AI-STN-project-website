@@ -6,8 +6,6 @@ slug: keynote-mita-tietokone-ei-osaa-tehda-vaarien-kasitysten-historia
 permalink: /ajankohtaista/keynote-mita-tietokone-ei-osaa-tehda-vaarien-kasitysten-historia/
 status: publish
 sourceType: posts
-sourceId: 514
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/keynote-mita-tietokone-ei-osaa-tehda-vaarien-kasitysten-historia/"
 excerpt: "Prof. Matti Tedre piti avajaispuheenvuoron ”Mitä tietokone ei osaa tehdä? Väärien käsitysten historia” Interaktiivinen tekniikka koulutuksessa 20.4.2023. MIKÄ ITK? Suomen suurin digitaalisen koulutuksen ja oppimisen tapahtuma Interaktiivinen Tekniikka Koulutuksessa järjestetään Hämeenlinnassa Aulangolla 19.-21.4.2023. Lue lisää: https://itk-konferenssi.fi/"
 categories:
   - Ajankohtaista

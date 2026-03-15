@@ -6,8 +6,6 @@ slug: johdanto-2
 permalink: /materiaalit/opetettavakone/tekoaly-haltuun-yhdessa-opetettavan-koneen-oppimateriaali/johdanto-2/
 status: publish
 sourceType: docs
-sourceId: 2189
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/opetettavakone/tekoaly-haltuun-yhdessa-opetettavan-koneen-oppimateriaali/johdanto-2/"
 excerpt: "Tämä materiaali on tarkoitettu ensisijaisesti perusopetuksessa hyödynnettäväksi. Tämä soveltuu kuitenkin myös kenen tahansa asiasta kiinnostuneen käyttöön. Tavoitteet ja keskeiset käsitteet Katso kaikki tavoitteet ja käsitteet viereisestä kuvasta! Tuntien sisällöt ja tehtävät Ensimmäinen oppitunti: Tekoälyn perusteet! Toinen oppitunti: Tekoälyä hyödyntävän luokittelijan ideointi ja suunnittelu Kolmas oppitunti: Projektityöskentely Neljäs oppitunti: Projektien viimeistely Viides oppitunti: Projektien esittely Kuudes…"
 categories: []
 tags: []

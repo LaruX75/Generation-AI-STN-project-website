@@ -6,8 +6,6 @@ slug: ensimmainen-hankkeessa-kehitetty-sovellus-genai-kuvien-luokittelija
 permalink: /ajankohtaista/ensimmainen-hankkeessa-kehitetty-sovellus-genai-kuvien-luokittelija/
 status: publish
 sourceType: posts
-sourceId: 539
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/ensimmainen-hankkeessa-kehitetty-sovellus-genai-kuvien-luokittelija/"
 excerpt: "Hankkeessa kehitetään erilaisia työkaluja ja välineitä, jotka on suunnattu erityisesti lasten ja nuorten käyttöön. Ensimmäinen työkalu on ”GenAI opetettava kone”, joka on yksinkertaistettu esimerkki ohjatusta koneoppimisesta. Sovellus on toteutettu siten, että siihen ladattuja kuvia ei siirretä muualle www-selaimesta. Se on kaupallisia verrokkejaan turvallisempi tapa lähestyä koneoppimisen ja tekoälyn maailmaa juuri tästä syystä. Koneoppiminen arjessamme: Tämä…"
 categories:
   - Ajankohtaista

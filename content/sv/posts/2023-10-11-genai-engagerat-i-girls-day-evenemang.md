@@ -6,8 +6,6 @@ slug: genai-engagerat-i-girls-day-evenemang
 permalink: /sv/nyheter-fran/genai-projektets-personal-vid-evenemang/genai-engagerat-i-girls-day-evenemang/
 status: publish
 sourceType: posts
-sourceId: 3838
-sourceUrl: "https://www.generation-ai-stn.fi/sv/nyheter-fran/genai-projektets-personal-vid-evenemang/genai-engagerat-i-girls-day-evenemang/"
 excerpt: 'GenAI engagerat i Girls’ Day-evenemang! 400 flickor (och pojkar) besökte Uleåborgs universitet den 11 oktober som en del av den internationella flickdagen. Generation AI-projektet deltog också i denna dag genom att hålla en workshop på temat ”AI black box – teach the machine”. Visste du att Girls’ Day är ett centralt uppdrag för Soroptimister för…'
 categories:
   - GenAI-projektets personal vid evenemang

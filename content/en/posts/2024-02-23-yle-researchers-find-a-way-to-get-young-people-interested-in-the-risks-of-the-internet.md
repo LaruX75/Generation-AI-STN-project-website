@@ -6,8 +6,6 @@ slug: yle-researchers-find-a-way-to-get-young-people-interested-in-the-risks-of-
 permalink: /en/uncategorized/yle-researchers-find-a-way-to-get-young-people-interested-in-the-risks-of-the-internet/
 status: publish
 sourceType: posts
-sourceId: 3876
-sourceUrl: "https://www.generation-ai-stn.fi/en/uncategorized/yle-researchers-find-a-way-to-get-young-people-interested-in-the-risks-of-the-internet/"
 excerpt: 'Yle wrote an article about the Some Machine developed by Generation AI. In the article, Professor Matti Tedre talks about the Some machine, which is currently being tested in schools with fifth and eighth graders. Somekone is an application designed to simulate social media activity. Students first browse through the image stream fed into the…'
 categories:
   - Media

@@ -6,8 +6,6 @@ slug: sok
 permalink: /sv/sok/
 status: publish
 sourceType: pages
-sourceId: 1099
-sourceUrl: "https://www.generation-ai-stn.fi/posts-search/"
 excerpt: ""
 categories: []
 tags: []

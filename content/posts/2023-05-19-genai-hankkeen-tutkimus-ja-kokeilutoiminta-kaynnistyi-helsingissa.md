@@ -6,8 +6,6 @@ slug: genai-hankkeen-tutkimus-ja-kokeilutoiminta-kaynnistyi-helsingissa
 permalink: /ajankohtaista/genai-hankkeen-tutkimus-ja-kokeilutoiminta-kaynnistyi-helsingissa/
 status: publish
 sourceType: posts
-sourceId: 555
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-tutkimus-ja-kokeilutoiminta-kaynnistyi-helsingissa/"
 excerpt: "Helsingin GenAI-hanke käynnistettiin 11.5. Helsingin kaupungin kasvatuksen ja koulutuksen toimialan Oppimisen digikarnevaalit -tapahtumassa. Tavoitteena on opetella tunnistamaan, käyttämään ja ymmärtäämään tekoälyä esiopetusikäisten kontekstissa Iltapäivän aluksi Sini Davies esitteli hankkeen toteutumista Helsingin kaupungissa, jonka jälkeen kertoi konkreettisen esimerkin esiopetuksessa toteutettavasta pilotista. Eskareiden kanssa opetellaan tunnistamaan, käyttämään ja ymmärtämään tekoälyä ikätasolle sopivilla tehtävillä. Tunnistaisitko sinä kumpi siivousrobotti-piirroksista…"
 categories:
   - Ajankohtaista

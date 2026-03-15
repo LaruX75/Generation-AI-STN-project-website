@@ -5,7 +5,7 @@
 {% set sourceItems = collections[collectionName] if collections and collections[collectionName] else collections.posts %}
 {% set items = sourceItems | localizedItems(lang, page.url) | limitItems(count) %}
 {% set isCarousel = b.postLayout == "carousel" %}
-<section class="wp-block-kadence-posts kadence-block kadence-posts kb-posts-block{% if b.className %} {{ b.className }}{% endif %}">
+<section class="kb-posts-block{% if b.className %} {{ b.className }}{% endif %}">
   {% if kadenceInnerHtml | trim %}
     {{ kadenceInnerHtml | safe }}
   {% elif isCarousel %}
@@ -14,33 +14,26 @@
         <h2 class="kb-post-feed-title">{{ b.title }}</h2>
       </header>
     {% endif %}
-    <div
-      class="kt-blocks-carousel kb-splide kadence-splide-init kb-post-feed-carousel"
-      data-splide='{"type":"slide","perPage":3,"perMove":1,"gap":"24px","pagination":true,"arrows":true,"breakpoints":{"1024":{"perPage":2},"767":{"perPage":1}}}'
-    >
-      <div class="splide__track">
-        <ul class="splide__list">
-          {% for post in items %}
-            <li class="splide__slide">
-              <article class="kb-post-card">
-                {% if post.data.featuredImage %}
-                  <a class="kb-post-card__image-link" href="{{ post.url }}">
-                    <img class="kb-post-card__image" src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}">
-                  </a>
-                {% endif %}
-                <div class="kb-post-card__body">
-                  {% if post.date %}
-                    <time class="kb-post-card__date" datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date('d.m.Y') }}</time>
-                  {% endif %}
-                  <h3 class="kb-post-card__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-                  {% if post.data.excerpt %}
-                    <p class="kb-post-card__excerpt">{{ post.data.excerpt }}</p>
-                  {% endif %}
-                </div>
-              </article>
-            </li>
-          {% endfor %}
-        </ul>
+    <div class="kb-post-feed-carousel-wrap">
+      <div class="kb-post-feed-carousel">
+        {% for post in items %}
+          <article class="kb-post-card">
+            {% if post.data.featuredImage %}
+              <a class="kb-post-card__image-link" href="{{ post.url }}">
+                <img class="kb-post-card__image" src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}">
+              </a>
+            {% endif %}
+            <div class="kb-post-card__body">
+              {% if post.date %}
+                <time class="kb-post-card__date" datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date('d.m.Y') }}</time>
+              {% endif %}
+              <h3 class="kb-post-card__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+              {% if post.data.excerpt %}
+                <p class="kb-post-card__excerpt">{{ post.data.excerpt }}</p>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
       </div>
     </div>
   {% else %}

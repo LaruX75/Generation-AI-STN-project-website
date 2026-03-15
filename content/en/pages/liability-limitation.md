@@ -6,8 +6,6 @@ slug: liability-limitation
 permalink: /en/liability-limitation/
 status: publish
 sourceType: pages
-sourceId: 4015
-sourceUrl: "https://www.generation-ai-stn.fi/vastuurajoitus/"
 excerpt: ""
 categories: []
 tags: []

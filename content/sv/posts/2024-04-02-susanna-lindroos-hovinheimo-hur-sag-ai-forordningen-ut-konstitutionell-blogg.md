@@ -6,8 +6,6 @@ slug: susanna-lindroos-hovinheimo-hur-sag-ai-forordningen-ut-konstitutionell-blo
 permalink: /sv/ajankohtaista/susanna-lindroos-hovinheimo-hur-sag-ai-forordningen-ut-konstitutionell-blogg/
 status: publish
 sourceType: posts
-sourceId: 3893
-sourceUrl: "https://www.generation-ai-stn.fi/sv/ajankohtaista/susanna-lindroos-hovinheimo-hur-sag-ai-forordningen-ut-konstitutionell-blogg/"
 excerpt: 'EU:s AI-förordning var en lång och grundlig process. Nu är texten klar och vi kan reflektera över hur den blev. Det första jag kan säga är att det visade sig vara en lång tid. Förordningen innehåller 113 artiklar och en artikel är normalt längre än en A4-remsa. För att ange tillämpningsområdet enbart i artikel 2…'
 categories:
   - Blogginlägg

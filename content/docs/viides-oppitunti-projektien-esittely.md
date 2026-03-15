@@ -6,8 +6,6 @@ slug: viides-oppitunti-projektien-esittely
 permalink: /materiaalit/opetettavakone/tekoaly-haltuun-yhdessa-opetettavan-koneen-oppimateriaali/viides-oppitunti-projektien-esittely/
 status: publish
 sourceType: docs
-sourceId: 2207
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/opetettavakone/tekoaly-haltuun-yhdessa-opetettavan-koneen-oppimateriaali/viides-oppitunti-projektien-esittely/"
 excerpt: "Oppitunnin tavoitteet: Keskeiset käsitteet: Tarvikkeet ja materiaalit: Tehtävä: esitelkää tekemänne luokittelijat Työskentelytapa: Ryhmät/parit esittelevät tekemänsä luokittelijat muille oppilaille Vinkki: Käyttäkää esittelyyn ”esitä” toimintoa, jolloin muut oppilaat voivat käyttää tehtyä luokittelijasovellusta omilla puhelimillaan tai tableteillaan! Esitä toiminto löytyy luokittelijan aivan oikeasta reunasta ”tuloslaatikon yläkulmasta”"
 categories: []
 tags: []

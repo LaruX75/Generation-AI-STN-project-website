@@ -6,8 +6,6 @@ slug: tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista
 permalink: /ajankohtaista/tekoaly-uutisointi-hankkeen-ulkopuolella/tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista/
 status: publish
 sourceType: posts
-sourceId: 95
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/tekoaly-uutisointi-hankkeen-ulkopuolella/tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista/"
 excerpt: "Helsingin yliopiston matemaattis-luonnontieteellisen tiedekunnan Prof. Teemu Roosin professorinimitykseen liittyvä tiedekunnan lyhyt haastattelu sekä videoluento. Julkaistu Helsingin yliopiston sivuilla uutisena 17.8.2020 Tekoälystä on tullut reilussa kymmenessä vuodessa olennainen osa maailmaamme. Sitä täytyy tutkia, jotta todellisen elämän epävarmuudet ja tarpeet osataan ottaa huomioon järjestelmien kehitykseen. https://www.helsinki.fi/fi/matemaattis-luonnontieteellinen-tiedekunta/ajankohtaista/teemu-roos-tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista"
 categories:
   - Ajankohtaista hankkeen ulkopuolella

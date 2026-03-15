@@ -6,8 +6,6 @@ slug: generation-ai-hanke-vahvasti-mukana-interaktiivinen-tekniikka-koulutuksess
 permalink: /ajankohtaista/generation-ai-hanke-vahvasti-mukana-interaktiivinen-tekniikka-koulutuksessa-2023-seminaarissa/
 status: publish
 sourceType: posts
-sourceId: 535
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/generation-ai-hanke-vahvasti-mukana-interaktiivinen-tekniikka-koulutuksessa-2023-seminaarissa/"
 excerpt: "Hankkeemme oli mukana vahvalla panoksella maamme suurimmassa opetusteknologia-alan tapahtumassa ”Interaktiivinen tekniikka koulutuksessa”, joka järjestetään vuosittain Hämeenlinnan Aulangolla. Varsinaisesta seminaariohjelmasta tai sen esipäivän ohjelmasta löytyi Generation AI aiheella mm. kaksi keynote puheenvuoroa, posteri, tm-luokittelijan esittelyä sekä paneeli Tänä vuonna tapahtuma suorastaan pursusi erilaisia tekoälyaiheisia esityksiä, jotka olivat varsin käytännönläheisiä katsauksia erityisesti chatgpt -tyyppisten sovellusten hyödyntämisestä opetuksessa…."
 categories:
   - Ajankohtaista

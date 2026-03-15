@@ -1,6 +1,6 @@
 {# kadence/accordion — Accordion wrapper with Kadence-compatible button+panel toggle #}
 {% set b = kadenceBlock.attrs %}
-<div class="wp-block-kadence-accordion kb-accordion{% if b.uniqueID %} kb-accordion-id_{{ b.uniqueID }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
+<div class="kb-accordion{% if b.uniqueID %} kb-accordion-id_{{ b.uniqueID }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
   data-allow-multiple-open="{{ 'true' if b.allowMultipleOpen else 'false' }}"
   data-start-open="{{ 'true' if b.startOpen else 'false' }}"
 >
@@ -11,7 +11,7 @@
   if (typeof window._ktAccordionInit === 'undefined') {
     window._ktAccordionInit = true;
     document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('.wp-block-kadence-accordion').forEach(function (wrap) {
+      document.querySelectorAll('.').forEach(function (wrap) {
         var allowMultiple = wrap.getAttribute('data-allow-multiple-open') === 'true';
         wrap.querySelectorAll('.kt-accordion-header-btn').forEach(function (btn) {
           btn.addEventListener('click', function () {

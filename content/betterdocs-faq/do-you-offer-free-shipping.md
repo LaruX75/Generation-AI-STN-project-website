@@ -6,8 +6,6 @@ slug: do-you-offer-free-shipping
 permalink: /betterdocs-faq/do-you-offer-free-shipping/
 status: publish
 sourceType: betterdocs-faq
-sourceId: 1683
-sourceUrl: "https://www.generation-ai-stn.fi/?betterdocs_faq=do-you-offer-free-shipping"
 excerpt: "Yes, free shipping is available for all the orders that’s placed inside the United States. We charge shipping fees for overseas orders."
 categories: []
 tags: []

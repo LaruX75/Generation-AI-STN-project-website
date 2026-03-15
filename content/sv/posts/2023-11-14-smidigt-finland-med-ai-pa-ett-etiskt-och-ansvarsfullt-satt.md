@@ -6,8 +6,6 @@ slug: smidigt-finland-med-ai-pa-ett-etiskt-och-ansvarsfullt-satt
 permalink: /sv/nyheter-fran/smidigt-finland-med-ai-pa-ett-etiskt-och-ansvarsfullt-satt/
 status: publish
 sourceType: posts
-sourceId: 3856
-sourceUrl: "https://www.generation-ai-stn.fi/sv/nyheter-fran/smidigt-finland-med-ai-pa-ett-etiskt-och-ansvarsfullt-satt/"
 excerpt: 'Fyra gånger om året ordnar Finlands byrå för digitalisering och befolkningsinformation evenemanget Sujuva Suomi, där man diskuterar aktuella fenomen inom digitaliseringen. Den här gången handlade det om etik och ansvar i samband med AI. Professor Susanna Lindroos-Hovinheimo från Generation AI deltog som paneldeltagare. Du kan se en inspelning av webinariet här.'
 categories:
   - GenAI-projektets personal vid evenemang

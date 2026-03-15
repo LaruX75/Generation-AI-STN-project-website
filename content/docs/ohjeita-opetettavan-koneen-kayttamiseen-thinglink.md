@@ -6,8 +6,6 @@ slug: ohjeita-opetettavan-koneen-kayttamiseen-thinglink
 permalink: /materiaalit/opetettavakone/opetettavan-koneen-ohjeet/ohjeita-opetettavan-koneen-kayttamiseen-thinglink/
 status: publish
 sourceType: docs
-sourceId: 2215
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/opetettavakone/opetettavan-koneen-ohjeet/ohjeita-opetettavan-koneen-kayttamiseen-thinglink/"
 excerpt: "Opetusdatan lisääminen ja tekoälyn opettaminen: avausnäkymä eli tyhjä opetettava kone Generation Ai hankkeessa kehitetty opetettava kone edustaa ohjattua koneoppimista. Opetusdata: Käytännössä se tarkoittaa sitä, että opetusdatan syöttämisen yhteydessä kerrotaan myös tieto mihin luokkaan lisätty kuva kuuluu. HUOM! opetusdataa voi kerätä yhdessä! kolmen pisteen takaa löytyy toiminto, jonka avulla voit lisätä esim. puhelimia mukaan työskentelyyn. Opettaminen:…"
 categories: []
 tags: []

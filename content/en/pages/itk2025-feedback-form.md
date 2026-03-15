@@ -6,8 +6,6 @@ slug: itk2025-feedback-form
 permalink: /en/itk2025-feedback-form/
 status: publish
 sourceType: pages
-sourceId: 4049
-sourceUrl: "https://www.generation-ai-stn.fi/itk2025-palautelomake/"
 excerpt: ""
 categories: []
 tags: []

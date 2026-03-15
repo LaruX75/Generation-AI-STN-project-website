@@ -6,8 +6,6 @@ slug: yle-forskare-hittar-ett-satt-att-fa-unga-att-intressera-sig-for-riskerna-m
 permalink: /sv/okategoriserad/yle-forskare-hittar-ett-satt-att-fa-unga-att-intressera-sig-for-riskerna-med-internet/
 status: publish
 sourceType: posts
-sourceId: 3872
-sourceUrl: "https://www.generation-ai-stn.fi/sv/okategoriserad/yle-forskare-hittar-ett-satt-att-fa-unga-att-intressera-sig-for-riskerna-med-internet/"
 excerpt: 'Yle skrev en artikel om Some Machine som utvecklats av Generation AI. I artikeln berättar professor Matti Tedre om Some-maskinen, som för närvarande testas i skolor med femte- och åttondeklassare. Somekone är en applikation som är utformad för att simulera aktivitet på sociala medier. Studenterna bläddrar först igenom det bildflöde som matas in i maskinen….'
 categories:
   - Media

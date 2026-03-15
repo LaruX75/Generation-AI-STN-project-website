@@ -6,8 +6,6 @@ slug: barns-rattigheter-pa-internet-tillampas-pa-ett-ojamnt-satt
 permalink: /sv/nyheter-fran/barns-rattigheter-pa-internet-tillampas-pa-ett-ojamnt-satt/
 status: publish
 sourceType: posts
-sourceId: 3842
-sourceUrl: "https://www.generation-ai-stn.fi/sv/nyheter-fran/barns-rattigheter-pa-internet-tillampas-pa-ett-ojamnt-satt/"
 excerpt: 'EU:s allmänna dataskyddsförordning (GDPR) ställer krav på tjänsteleverantörer att avgöra om användare av deras tjänster är barn. Studier har dock visat att de nuvarande verktygen för åldersverifiering är otillförlitliga. Den vanligaste metoden är självdeklaration, där användaren måste uppge sin ålder, t.ex. genom att ange sitt födelsedatum vid registreringen. Det är lätt att inse att en…'
 categories:
   - Barns rättigheter

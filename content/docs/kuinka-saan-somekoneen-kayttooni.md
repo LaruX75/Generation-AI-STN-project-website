@@ -6,8 +6,6 @@ slug: kuinka-saan-somekoneen-kayttooni
 permalink: /materiaalit/somekone/somekone-yleista/kuinka-saan-somekoneen-kayttooni/
 status: publish
 sourceType: docs
-sourceId: 2255
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/somekone/somekone-yleista/kuinka-saan-somekoneen-kayttooni/"
 excerpt: Opettaja tai muu somekoneen pääkäyttäjä (vain tietokone tai tablet) Somekoneeseen liittyvä käyttäjä (mikä tahansa laite) Mitä tehdä kun käyttäjät ovat liittyneet koneeseen ja se on käynnissä
 categories: []
 tags: []

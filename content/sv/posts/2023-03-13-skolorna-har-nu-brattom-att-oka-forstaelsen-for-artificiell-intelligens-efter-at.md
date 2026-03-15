@@ -6,8 +6,6 @@ slug: skolorna-har-nu-brattom-att-oka-forstaelsen-for-artificiell-intelligens-ef
 permalink: /sv/nyheter-fran/skolorna-har-nu-brattom-att-oka-forstaelsen-for-artificiell-intelligens-efter-at/
 status: publish
 sourceType: posts
-sourceId: 928
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/kouluissa-on-nyt-kiire-lisata-ymmarrysta-tekoalysta-taman-jutun-luettuasi-ymmarrat-miksi-ja-miten/"
 excerpt: 'Texten nedan publicerades 13.3.2023 i YLE-nyheter. Läs originalartikeln här: https://yle.fi/a/74-20021837 OBS! originalartikeln innehåller mediamaterial som inte visas här! Vad är artificiell intelligens? Frågan borde vara lätt för en professor i datavetenskap, men Matti Tedre säger att ordet är dåligt. – Artificiell intelligens är en mycket vag term. Beroende på årtionde är det olika vad som anses vara artificiell intelligens, säger Tedre som arbetar vid Östra Finlands universitet. Genast efter det medger han själv att han talar om…'
 categories:
   - Aktuellt

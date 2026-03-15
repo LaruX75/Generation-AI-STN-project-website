@@ -6,8 +6,6 @@ slug: generation-ai-med-i-forskarnattens-arbetsshop
 permalink: /sv/nyheter-fran/generation-ai-med-i-forskarnattens-arbetsshop/
 status: publish
 sourceType: posts
-sourceId: 1346
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/generation-ai-mukana-tutkijoiden-yossa/"
 excerpt: 'Forskarnattens arbetsshop är ett europeiskt vetenskapsevent som genomfördes 2023-09-29. Generation AI-projektet deltog vid Uleå universitet med en AI-workshop kallad "Artificiell intelligens i en svart låda", där barn, ungdomar och föräldrar kunde bekanta sig med applikationen "Gen AI-träningsbar maskin" som utvecklades i projektet. Beskrivning av workshopen: I workshopen lär man sig om artificiell intelligens genom maskinlärning och klassificering. Med Generation AI-projektets forskare får deltagarna prova klassificeringsappen själva. Kom och…'
 categories:
   - GenAI-projektets personal på evenemang

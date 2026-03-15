@@ -6,8 +6,6 @@ slug: den-forsta-applikationen-som-utvecklats-i-projektet-genai-larbar-maskin
 permalink: /sv/nyheter-fran/den-forsta-applikationen-som-utvecklats-i-projektet-genai-larbar-maskin/
 status: publish
 sourceType: posts
-sourceId: 539
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/ensimmainen-hankkeessa-kehitetty-sovellus-genai-kuvien-luokittelija/"
 excerpt: 'I projektet utvecklas olika verktyg och resurser som är särskilt utformade för barn och ungdomar. Det första verktyget är "GenAI lärbar maskin", som är ett förenklat exempel på övervakad maskininlärning. Applikationen är implementerad så att bilder som laddas upp inte överförs någon annanstans från webbläsaren. Det är ett säkrare sätt att närma sig världen för maskininlärning och artificiell intelligens än kommersiella motsvarigheter just av denna anledning. Maskininlärning i vårt dagliga liv: Detta…'
 categories:
   - Aktuellt

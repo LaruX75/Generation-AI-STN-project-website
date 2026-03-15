@@ -6,8 +6,6 @@ slug: generation-ai-sovellukset
 permalink: /materiaalit/somekone/uncategorized/generation-ai-sovellukset/
 status: publish
 sourceType: docs
-sourceId: 3117
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/somekone/uncategorized/generation-ai-sovellukset/"
 excerpt: ""
 categories: []
 tags: []

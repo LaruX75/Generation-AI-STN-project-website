@@ -6,8 +6,6 @@ slug: project-school-collaboration-launched
 permalink: /en/current-affairs/project-school-collaboration-launched/
 status: publish
 sourceType: posts
-sourceId: 468
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/hankkeen-kouluyhteistyo-kaynnistyi/"
 excerpt: 'The GenAI project''s school collaboration launched on Friday, February 3, 2023 from 9-14 at a joint planning meeting in Joensuu. The event included 7 primary schools, 3 lower secondary schools, and 2 comprehensive schools from the Joensuu area. During the workshop, GenAI project director Professor Matti Tedre introduced the basic concepts of artificial intelligence and machine learning, as well as the transformation in data-driven thinking. After the lecture, participants had the opportunity to practically test various cutting-edge technologies with the support of computer scientists. Since school interventions are planned through collaboration between teachers and researchers, the day also included outlining the project''s implementation and the spring 2023 schedule...'
 categories:
   - News

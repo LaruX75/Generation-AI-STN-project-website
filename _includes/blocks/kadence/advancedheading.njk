@@ -20,6 +20,6 @@
   {% endif %}
 {% endif %}
 <{{ tag }}
-  class="wp-block-kadence-advancedheading kb-adv-heading kadence-block kadence-advancedheading{% if b.className %} {{ b.className }}{% endif %}{% if b.uniqueID %} kt-adv-heading_{{ b.uniqueID }}{% endif %}"
+  class="kb-adv-heading {% if b.className %} {{ b.className }}{% endif %}{% if b.uniqueID %} kt-adv-heading_{{ b.uniqueID }}{% endif %}"
   {% if b.align or b.color or fsCss or b.textTransform or b.fontWeight %}style="{% if b.align %}text-align:{{ b.align }};{% endif %}{% if b.color %} color:{{ b.color }};{% endif %}{% if fsCss %} font-size:{{ fsCss }};{% endif %}{% if b.textTransform %} text-transform:{{ b.textTransform }};{% endif %}{% if b.fontWeight %} font-weight:{{ b.fontWeight }};{% endif %}"{% endif %}
 >{{ kadenceInnerHtml | safe }}</{{ tag }}>

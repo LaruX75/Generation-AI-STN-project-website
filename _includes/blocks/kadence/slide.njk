@@ -1,7 +1,7 @@
 {# kadence/slide — Single slide item #}
 {% set b = kadenceBlock.attrs %}
 <li
-  class="wp-block-kadence-slide kb-slide-item kadence-block kadence-slide splide__slide{% if b.className %} {{ b.className }}{% endif %}"
+  class="kb-slide-item{% if b.className %} {{ b.className }}{% endif %}"
   style="scroll-snap-align:start;flex:0 0 100%;"
 >
   {{ kadenceInnerHtml | safe }}

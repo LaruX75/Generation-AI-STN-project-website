@@ -1,7 +1,7 @@
 {# kadence/iconlist — List with icon bullets; items are kadence/listitem blocks #}
 {% set b = kadenceBlock.attrs %}
 <ul
-  class="wp-block-kadence-iconlist kb-icon-list kadence-block kadence-iconlist{% if b.uniqueID %} kb-icon-list-id_{{ b.uniqueID }}{% endif %} kt-svg-icon-list-items kt-svg-icon-list-columns-{{ b.columns if b.columns else 1 }} alignnone{% if b.className %} {{ b.className }}{% endif %}"
+  class="kb-icon-list {% if b.uniqueID %} kb-icon-list-id_{{ b.uniqueID }}{% endif %} kt-svg-icon-list-items kt-svg-icon-list-columns-{{ b.columns if b.columns else 1 }} alignnone{% if b.className %} {{ b.className }}{% endif %}"
 >
   {{ kadenceInnerHtml | safe }}
 </ul>

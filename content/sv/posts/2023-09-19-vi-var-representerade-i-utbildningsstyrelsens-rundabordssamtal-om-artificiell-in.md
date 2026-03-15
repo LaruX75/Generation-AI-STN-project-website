@@ -6,8 +6,6 @@ slug: vi-var-representerade-i-utbildningsstyrelsens-rundabordssamtal-om-artifici
 permalink: /sv/nyheter-fran/vi-var-representerade-i-utbildningsstyrelsens-rundabordssamtal-om-artificiell-in/
 status: publish
 sourceType: posts
-sourceId: 1329
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/olimme-edustettuna-ophn-tekoalyn-pyorea-poyta-keskustelussa/"
 excerpt: 'Generation AI-projektet deltog i ett rundabordssamtal om artificiell intelligens arrangerat av Utbildningsstyrelsen den 19.9.2023. Vid tillfället deltog en omfattande grupp av finska forskare, utvecklare och lärare från olika utbildningsnivåer. Före rundabordssamtalet fungerade Jari Laru som representant för Generation AI-projektet och diskuterade samarbete med representanter från Utbildningsstyrelsen och Undervisningsministeriet och presenterade Generation AI-projektets mål. Mer information om rundabordssamtalet om artificiell intelligens: Artificiell intelligens är för närvarande föremål för aktiv diskussion...'
 categories:
   - GenAI-projektets personal på evenemang

@@ -6,8 +6,6 @@ slug: onko-opetettava-kone-gdpr-yhteensopiva-keraako-sovellus-tietoja
 permalink: /betterdocs-faq/onko-opetettava-kone-gdpr-yhteensopiva-keraako-sovellus-tietoja/
 status: publish
 sourceType: betterdocs-faq
-sourceId: 2245
-sourceUrl: "https://www.generation-ai-stn.fi/?betterdocs_faq=onko-opetettava-kone-gdpr-yhteensopiva-keraako-sovellus-tietoja"
 excerpt: "Sovellus on 100% GDPR yhteensopiva. Se ei kerää käyttäjästä tietoja tai seuraa sen toimintaa. Oppilaan tuotos tallennetaan paikallisesti käytettävälle laitteelle."
 categories: []
 tags: []

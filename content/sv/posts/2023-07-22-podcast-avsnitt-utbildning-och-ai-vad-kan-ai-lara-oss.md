@@ -6,8 +6,6 @@ slug: podcast-avsnitt-utbildning-och-ai-vad-kan-ai-lara-oss
 permalink: /sv/nyheter-fran/podcast-avsnitt-utbildning-och-ai-vad-kan-ai-lara-oss/
 status: publish
 sourceType: posts
-sourceId: 1095
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/podcast-jakso-koulutus-ja-tekoaly-mita-opetettavaa-tekoalylla-on-meille/"
 excerpt: 'Tekniskt optimistisk blogg publicerade den 22.7.2023 ett intressant avsnitt. I det diskuterade studentrepresentanten Shena Revanur, Khan Academys grundare Sal Khan, Code.orgs utbildningschef Pat Yongpradit, prof. Teemu Roos som arbetar i vårt projekt och maskininlärningspioneran Tom Mitchell om AI. Läs avsnittets engelska introduktion Can we use AI as a tool that enriches learning, rather than replacing it? We''re seeing AI rapidly revolutionize…'
 categories:
   - Aktuellt

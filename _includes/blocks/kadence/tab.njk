@@ -1,7 +1,7 @@
 {# kadence/tab — Single tab panel, shown/hidden by tabs.njk JS #}
 {% set b = kadenceBlock.attrs %}
 <div
-  class="wp-block-kadence-tab kb-tab-panel{% if b.className %} {{ b.className }}{% endif %}"
+  class="kb-tab-panel{% if b.className %} {{ b.className }}{% endif %}"
   {% if b.uniqueID %}id="kt-tab_{{ b.uniqueID }}"{% endif %}
   role="tabpanel"
 >

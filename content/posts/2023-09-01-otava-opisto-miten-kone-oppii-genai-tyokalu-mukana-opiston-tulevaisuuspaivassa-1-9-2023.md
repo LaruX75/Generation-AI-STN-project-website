@@ -6,8 +6,6 @@ slug: otava-opisto-miten-kone-oppii-genai-tyokalu-mukana-opiston-tulevaisuuspaiv
 permalink: /ajankohtaista/genai-tyokalut-ja-materiaalit-hankkeen-ulkopuolella/otava-opisto-miten-kone-oppii-genai-tyokalu-mukana-opiston-tulevaisuuspaivassa-1-9-2023/
 status: publish
 sourceType: posts
-sourceId: 1341
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/genai-tyokalut-ja-materiaalit-hankkeen-ulkopuolella/otava-opisto-miten-kone-oppii-genai-tyokalu-mukana-opiston-tulevaisuuspaivassa-1-9-2023/"
 excerpt: "Generation AI opetettava kone: Miten kone oppii? Kolmannella rastilla sukelsimme syvemmälle tekoälyn maailmaan Generation AI hankkeessa kehitetyn opetettavan koneen avulla. Miten koneoppiminen voi auttaa meitä ymmärtämään monimutkaisia konsepteja tai jopa tukea opetuksessa? Aikuisten perusopetuksen opiskelijat tutustuivat rastilla siihen miten konetta opetetaan ja miten sen oppiminen eroaa ihmisten oppimisesta. Tämän rastin tarkoituksena oli laajemminkin konkretisoida monien koneoppimista…"
 categories:
   - GenAI työkalut ja materiaalit hankkeen ulkopuolella

@@ -6,8 +6,6 @@ slug: hs-guest-column-29-10-2016-education-does-not-respond-to-changes-in-work
 permalink: /en/current-affairs/hs-guest-column-29-10-2016-education-does-not-respond-to-changes-in-work/
 status: publish
 sourceType: posts
-sourceId: 448
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/hs-vieraskyna-29-10-2016-koulutus-ei-reagoi-tyon-muutokseen/"
 excerpt: 'As machines develop, information work decreases, and education should provide skills for new kinds of design work, write Matti Tedre and Peter J. Denning. THE information technology revolution is advancing at a rapid pace. Customized smartphones for individual needs have the power of supercomputers from the turn of the millennium and keep us online almost everywhere. Self-driving cars are already on the roads. Companies like Uber and Airbnb challenge old business models. Computers monitor health and…'
 categories:
   - Current News

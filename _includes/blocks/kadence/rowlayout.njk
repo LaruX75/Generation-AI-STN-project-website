@@ -4,7 +4,7 @@
 {% set cols = b.columns if b.columns else 1 %}
 {% set layout = b.colLayout if b.colLayout else "equal" %}
 {# ── Resolve named padding sizes → rem values ── #}
-{% set _ps = {"xs": "0.5rem", "sm": "1.5rem", "md": "2rem", "lg": "3rem", "xl": "4.5rem", "xxl": "6rem"} %}
+{% set _ps = {"xs":"0.5rem","sm":"1.5rem","md":"2rem","lg":"3rem","xl":"4.5rem","xxl":"6rem"} %}
 {% set _pads = b.padding if b.padding else [] %}
 {% set _pt = _ps[_pads[0]] if _pads[0] and _ps[_pads[0]] else (_pads[0] if _pads[0] else "") %}
 {% set _pb = _ps[_pads[2]] if _pads[2] and _ps[_pads[2]] else (_pads[2] if _pads[2] else "") %}
@@ -20,7 +20,7 @@
 {% if _pt %}{% set _style = _style + "padding-top:" + _pt + ";" %}{% endif %}
 {% if _pb %}{% set _style = _style + "padding-bottom:" + _pb + ";" %}{% endif %}
 <section
-  class="wp-block-kadence-rowlayout kb-row-layout-wrap kadence-block kadence-rowlayout{% if b.uniqueID %} kb-row-layout-id{{ b.uniqueID }}{% endif %}{% if b.align == "full" %} alignfull{% endif %}{% if b.bgColorClass %} kb-theme-{{ b.bgColorClass }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
+  class="kb-row-layout-wrap {% if b.uniqueID %} kb-row-layout-id{{ b.uniqueID }}{% endif %}{% if b.align == "full" %} alignfull{% endif %}{% if b.bgColorClass %} kb-theme-{{ b.bgColorClass }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
   {% if _style %}style="{{ _style }}"{% endif %}
 >
   {% if b.topSep and b.topSep != "none" %}

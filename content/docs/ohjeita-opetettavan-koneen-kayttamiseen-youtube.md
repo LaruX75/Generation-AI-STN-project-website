@@ -6,8 +6,6 @@ slug: ohjeita-opetettavan-koneen-kayttamiseen-youtube
 permalink: /materiaalit/opetettavakone/opetettavan-koneen-ohjeet/ohjeita-opetettavan-koneen-kayttamiseen-youtube/
 status: publish
 sourceType: docs
-sourceId: 2217
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/opetettavakone/opetettavan-koneen-ohjeet/ohjeita-opetettavan-koneen-kayttamiseen-youtube/"
 excerpt: ""
 categories: []
 tags: []

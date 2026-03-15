@@ -6,8 +6,6 @@ slug: ai-news-11a-2023-genai-teachable-machine-is-still-being-finalised-and-the-
 permalink: /en/generation-ai-monthly-ai-news-newsletter/ai-news-11a-2023-genai-teachable-machine-is-still-being-finalised-and-the-learning-materials-are-in-progress/
 status: publish
 sourceType: posts
-sourceId: 3852
-sourceUrl: "https://www.generation-ai-stn.fi/en/generation-ai-monthly-ai-news-newsletter/ai-news-11a-2023-genai-teachable-machine-is-still-being-finalised-and-the-learning-materials-are-in-progress/"
 excerpt: 'Welcome to the monthly newsletter of the Generation AI project. There will be at least one letter per month. You can subscribe to this newsletter either here on LinkedIN or on our project website: https://www.generation-ai-stn.fi/uutiskirje/ 1. GenAI Teachable Machine is our first application and it is starting to be ready During the first full year…'
 categories:
   - Generation AI Monthly AI News (newsletter)

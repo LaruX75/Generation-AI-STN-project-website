@@ -6,8 +6,6 @@ slug: mtv-huomenta-suomi-ai-for-everyone
 permalink: /en/current-affairs/mtv-huomenta-suomi-ai-for-everyone/
 status: publish
 sourceType: posts
-sourceId: 1079
-sourceUrl: "https://www.generation-ai-stn.fi/mtv3/mtv-huomenta-suomi-tekoalya-kansalle/"
 excerpt: 'Prof. Teemu Roos was a guest on MTV Huomenta Suomi on September 6, 2023. Discussing AI with him was also Hanna Hagström, head of Reaktor''s AI business. Watch the recording here: https://www.mtv.fi/sarja/huomenta-suomi-1485/tekoalya-kansalle-20358397'
 categories:
   - Current affairs

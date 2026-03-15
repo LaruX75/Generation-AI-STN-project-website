@@ -6,8 +6,6 @@ slug: inspiroidu-esimerkeista
 permalink: /materiaalit/opetettavakone/opetettavan-koneen-esimerkit-ja-vinkit/inspiroidu-esimerkeista/
 status: publish
 sourceType: docs
-sourceId: 1657
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/opetettavakone/opetettavan-koneen-esimerkit-ja-vinkit/inspiroidu-esimerkeista/"
 excerpt: "Jos sinulla ei ole paljoa aikaa käytettävissä, ole hyvä ja katso vain pelkät videot. Jos sinulla on käytettävissä enemmän aikaa esimerkkeihin tutustumiseen, voit myös avata esimerkkikoneen selaimeen ja tutkia sen toimintaa. Katso alta eri vaihtoehdot. Esimerkki: Puiden tunnistaja Onko puu mänty, kuusi vai koivu? Puun tunnistaja on opetettu tunnistamaan nämä kolme puulajia. Luokittelija toistaa lyhyen…"
 categories: []
 tags: []

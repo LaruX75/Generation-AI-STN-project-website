@@ -6,8 +6,6 @@ slug: what-are-my-payment-options
 permalink: /betterdocs-faq/what-are-my-payment-options/
 status: publish
 sourceType: betterdocs-faq
-sourceId: 1679
-sourceUrl: "https://www.generation-ai-stn.fi/?betterdocs_faq=what-are-my-payment-options"
 excerpt: "We accept all the popular payment methods such as PayPal, Visa, MasterCard, Discover, Amazon Pay, American Express and Google Pay."
 categories: []
 tags: []

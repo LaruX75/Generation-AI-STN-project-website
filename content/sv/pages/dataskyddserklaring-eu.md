@@ -6,8 +6,6 @@ slug: dataskyddserklaring-eu
 permalink: /sv/dataskyddserklaring-eu/
 status: publish
 sourceType: pages
-sourceId: 4014
-sourceUrl: "https://www.generation-ai-stn.fi/tietosuojalausunto-eu/"
 excerpt: ""
 categories: []
 tags: []

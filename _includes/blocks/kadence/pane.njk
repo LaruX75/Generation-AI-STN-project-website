@@ -1,6 +1,6 @@
 {# kadence/pane — Accordion pane with Kadence button+panel structure #}
 {% set b = kadenceBlock.attrs %}
-<div class="wp-block-kadence-pane kt-accordion-pane{% if b.startOpen %} is-open{% endif %}{% if b.className %} {{ b.className }}{% endif %}">
+<div class="kt-accordion-pane{% if b.startOpen %} is-open{% endif %}{% if b.className %} {{ b.className }}{% endif %}">
   <div class="kt-accordion-heading kt-accordion-header-wrap">
     <button class="kt-accordion-header kt-accordion-header-btn"
       aria-expanded="{{ 'true' if b.startOpen else 'false' }}"

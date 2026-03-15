@@ -1,7 +1,7 @@
 {# kadence/listitem — Single icon list item #}
 {% set b = kadenceBlock.attrs %}
 {% from "macros/feather-icons.njk" import featherIcon %}
-<li class="wp-block-kadence-listitem kb-icon-list-item kadence-block kadence-listitem kt-svg-icon-list-item-wrap{% if b.className %} {{ b.className }}{% endif %}">
+<li class="kb-icon-list-item kt-svg-icon-list-item-wrap{% if b.className %} {{ b.className }}{% endif %}">
   {% if b.icon %}
     {{ featherIcon(b.icon) }}
   {% endif %}

@@ -6,8 +6,6 @@ slug: susanna-lindroos-hovinheimo-minkalainen-tekoalyasetuksesta-tuli-perustusla
 permalink: /ajankohtaista/susanna-lindroos-hovinheimo-minkalainen-tekoalyasetuksesta-tuli-perustuslakiblogi/
 status: publish
 sourceType: posts
-sourceId: 2298
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/susanna-lindroos-hovinheimo-minkalainen-tekoalyasetuksesta-tuli-perustuslakiblogi/"
 excerpt: "EU:n tekoälyasetusta säädettiin pitkään ja perusteellisesti. Nyt teksti on valmis ja voimme pohtia, minkälainen siitä tuli. Ensimmäiseksi täytyy todeta, että siitä tuli pitkä. Asetus sisältää 113 artiklaa ja yksi artikla on tyypillisesti pidempi kuin yksi A4-liuska. Pelkän soveltamisalansa julistamiseksi 2 artiklassa asetus tarvitsee 12 kohtaa, joista useampi sisältää alakohtia. Johdanto-osassa on 180 kohtaa. Liitteitä on…"
 categories:
   - Ajankohtaista

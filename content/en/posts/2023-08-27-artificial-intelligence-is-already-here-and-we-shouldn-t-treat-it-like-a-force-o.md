@@ -6,8 +6,6 @@ slug: artificial-intelligence-is-already-here-and-we-shouldn-t-treat-it-like-a-f
 permalink: /en/current-affairs/artificial-intelligence-is-already-here-and-we-shouldn-t-treat-it-like-a-force-o/
 status: publish
 sourceType: posts
-sourceId: 1082
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos/"
 excerpt: 'Kansanuutiset (KU) published an article by Toivo Haimi on 27.8.2023. The original text can be found without a paywall at this address: https://www.ku.fi/artikkeli/4906774-tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos Artificial intelligence is not science fiction, it is already present in our everyday lives, says a professor of computer science at the University of Helsinki. He leads AI education at Finland''s AI center FCAI and serves as the responsible instructor for the popular Elements of AI online course. Computer Science Professor Teemu Roos, before we begin, it''s probably worth clarifying some concepts. What exactly are we talking about when we talk about artificial intelligence in popular discussion...'
 categories:
   - Current Affairs

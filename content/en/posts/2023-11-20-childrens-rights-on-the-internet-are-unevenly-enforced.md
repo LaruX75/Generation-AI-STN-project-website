@@ -6,8 +6,6 @@ slug: childrens-rights-on-the-internet-are-unevenly-enforced
 permalink: /en/news-from/childrens-rights-on-the-internet-are-unevenly-enforced/
 status: publish
 sourceType: posts
-sourceId: 3846
-sourceUrl: "https://www.generation-ai-stn.fi/en/news-from/childrens-rights-on-the-internet-are-unevenly-enforced/"
 excerpt: 'The EU’s General Data Protection Regulation (GDPR) imposes requirements on service providers to determine whether users of their services are children. However, studies have shown that current age verification tools are unreliable. The most commonly used method is self-declaration, where the user has to declare their age, for example by entering their date of birth…'
 categories:
   - Children's rights

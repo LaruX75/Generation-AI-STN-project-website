@@ -6,8 +6,6 @@ slug: testaa-opetettavaa-konetta-oppilaiden-kanssa
 permalink: /materiaalit/opetettavakone/mika-on-opetettava-kone/testaa-opetettavaa-konetta-oppilaiden-kanssa/
 status: publish
 sourceType: docs
-sourceId: 2270
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/opetettavakone/mika-on-opetettava-kone/testaa-opetettavaa-konetta-oppilaiden-kanssa/"
 excerpt: "Huom! Tämä materiaali on vain opetettavan koneen kokeilua varten (kyseessä on varsinaisen opetusmateriaalin ensimmäinen tunti). Olemme testanneet opetusmateriaalit ja opetettavan koneen 500+ suomalaisella perusopetuksen oppilaalla. Tutkimukseen perustuvan kokonaisuuden löydät täältä: Kokeilutunnin tavoitteet Keskeiset käsitteet: Tarvikkeet: Tehtävä: mitä tekoäly on? Työskentelytapa: Opettajajohtoinen keskustelu videon katsomisen jälkeen. Tekoäly on monin tavoin mukana arkipäiväisessä elämässämme. Tekoäly osana tuttuja…"
 categories: []
 tags: []

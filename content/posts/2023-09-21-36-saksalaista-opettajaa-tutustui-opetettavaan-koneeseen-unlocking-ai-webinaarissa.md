@@ -6,8 +6,6 @@ slug: 36-saksalaista-opettajaa-tutustui-opetettavaan-koneeseen-unlocking-ai-webi
 permalink: /ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/36-saksalaista-opettajaa-tutustui-opetettavaan-koneeseen-unlocking-ai-webinaarissa/
 status: publish
 sourceType: posts
-sourceId: 1325
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/36-saksalaista-opettajaa-tutustui-opetettavaan-koneeseen-unlocking-ai-webinaarissa/"
 excerpt: "Codeschool Finland järjesti saksalaisille opettajille ilmaisen webinaarin, jossa he opettivat kuinka tekoälyä voi hyödyntää a) opetuksen suunnittelussa ja b) opetuksen kohteena (eli kuinka oppilaita voi opettaa ymmärtämään tekoälyä). Hankkeessa kehitetty GenAI opetettava kone toimi työkaluna opetettaessa opetttajille kuinka tekoälyä pitää opettaa ja mikä on tekoälyn suhde dataan. Lue lisää Webinaarista CodeSchool Finlandin sivuilta: https://courses.codeschool.fi/course/ai-webinar"
 categories:
   - GenAI hankkeen henkilöstö tapahtumissa

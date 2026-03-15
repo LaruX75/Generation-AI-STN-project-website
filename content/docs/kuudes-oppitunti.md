@@ -6,8 +6,6 @@ slug: kuudes-oppitunti
 permalink: /materiaalit/opetettavakone/tekoaly-haltuun-yhdessa-opetettavan-koneen-oppimateriaali/kuudes-oppitunti/
 status: publish
 sourceType: docs
-sourceId: 2209
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/opetettavakone/tekoaly-haltuun-yhdessa-opetettavan-koneen-oppimateriaali/kuudes-oppitunti/"
 excerpt: "Oppitunnin tavoitteet: Keskeiset käsitteet: Tarvikkeet ja materiaalit: Tehtävä: Mitä voit päätellä alla olevista kuvista? Työskentelytapa: Opettajajohtoinen keskustelu Tekoälyllä voi nykyään tehdä helposti kuvia. Alla on kaksi tekoälyn tekemää kuvaa. Tekoälyn tekemiä kuvia johtajista Tekoälyn tekemiä kuvia opettajista Tehtävä: Pohdi tekoälyn merkitystä ja vaikutuksia Työskentelytapa: oppilas vastaa itse lomakkeen kysymyksiin tai lomake toimii ryhmän keskustelun pohjana…"
 categories: []
 tags: []

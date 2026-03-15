@@ -6,8 +6,6 @@ slug: privacy-statement-eu
 permalink: /en/privacy-statement-eu/
 status: publish
 sourceType: pages
-sourceId: 4014
-sourceUrl: "https://www.generation-ai-stn.fi/tietosuojalausunto-eu/"
 excerpt: ""
 categories: []
 tags: []

@@ -6,8 +6,6 @@ slug: mika-on-somekone
 permalink: /materiaalit/somekone/somekone-yleista/mika-on-somekone/
 status: publish
 sourceType: docs
-sourceId: 1723
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/somekone/somekone-yleista/mika-on-somekone/"
 excerpt: "Kun avaat TikTokin, Instagramin tai muun sosiaalisen median sovelluksen, olet tarkkailun kohteena: jokainen tykkäys, jakaminen, kommentti tai pelkästään sisällön silmäily jättää jälkeensä tiedonmurusia eli dataa. Näin kertyvän datan pohjalta käyttäjästä rakentuu profiili, jonka avulla algoritmi osaa suositella meille sisältöjä, joita emme voi vastustaa. Somekone on helppo ja hauska Instagram-tyylinen, opetuksellinen sovellus, jonka avulla voi turvallisesti…"
 categories: []
 tags: []

@@ -6,8 +6,6 @@ slug: konsortiums-planeringsmote-holls-pa-heureka-som-har-en-ny-utstallning-om-a
 permalink: /sv/nyheter-fran/konsortiums-planeringsmote-holls-pa-heureka-som-har-en-ny-utstallning-om-artific/
 status: publish
 sourceType: posts
-sourceId: 402
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/konsortion-suunnittelukokous-pidettiin-heurekassa-jossa-on-uusi-tekoalya-kasitteleva-nayttely/"
 excerpt: 'Generation AI höll projektets första planeringsmöte på Heureka, som är medlem i projektets konsortium. Platsen var perfekt för mötet, eftersom Heureka öppnade en ny utställning om artificiell intelligens den 22.6.2022. Efter planeringsmötet bekantade sig medlemmarna av konsortiet med Heurekas AI-utställning samt andra Heureka-aktiviteter relaterade till artificiell intelligens, robotik och programmering. Vad handlar AI-utställningen om? På Heurekas webbplatser beskrivs utställningen enligt följande AI – Me, Myself &…'
 categories:
   - Aktuellt

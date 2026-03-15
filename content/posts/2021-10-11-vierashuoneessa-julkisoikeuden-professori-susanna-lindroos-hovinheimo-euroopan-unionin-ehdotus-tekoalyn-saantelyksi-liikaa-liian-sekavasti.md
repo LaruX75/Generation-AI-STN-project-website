@@ -6,8 +6,6 @@ slug: vierashuoneessa-julkisoikeuden-professori-susanna-lindroos-hovinheimo-euro
 permalink: /helsingin-yliopisto/vierashuoneessa-julkisoikeuden-professori-susanna-lindroos-hovinheimo-euroopan-unionin-ehdotus-tekoalyn-saantelyksi-liikaa-liian-sekavasti/
 status: publish
 sourceType: posts
-sourceId: 450
-sourceUrl: "https://www.generation-ai-stn.fi/helsingin-yliopisto/vierashuoneessa-julkisoikeuden-professori-susanna-lindroos-hovinheimo-euroopan-unionin-ehdotus-tekoalyn-saantelyksi-liikaa-liian-sekavasti/"
 excerpt: "Hankkeemme tutkija Professori Susanna Lindroos-Hovinheimo käsitteli vuonna 2021 Edilexin vierashuoneessa Euroopan Union ehdotusta tekoälyn säätelyksi otsikolla ”liikaa liian sekavasti” LÄHDE: Lindroos-Hovinheimo, S. (2021). Vierashuoneessa julkisoikeuden professori Susanna Lindroos-Hovinheimo: Euroopan unionin ehdotus tekoälyn sääntelyksi – liikaa liian sekavasti? Edilex. https://www.edilex.fi/uutiset/71684 Komissio julkisti huhtikuussa 2021 ehdotuksensa asetukseksi, jolla säädeltäisiin tekoälyä. Asetusehdotuksessa jää auki, minkä verran se jättäisi kansallista liikkumavaraa. Ehdotuksen tavoitteena…"
 categories:
   - Ajankohtaista

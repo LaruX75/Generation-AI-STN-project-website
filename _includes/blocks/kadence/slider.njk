@@ -1,12 +1,12 @@
 {# kadence/slider — CSS scroll-snap slider fallback #}
 {% set b = kadenceBlock.attrs %}
 <section
-  class="wp-block-kadence-slider kb-slider-wrap kadence-block kadence-slider{% if b.uniqueID %} kb-slider-id_{{ b.uniqueID }}{% endif %} splide kb-slider-container{% if b.className %} {{ b.className }}{% endif %}"
+  class="kb-slider-wrap {% if b.uniqueID %} kb-slider-id_{{ b.uniqueID }}{% endif %}  kb-slider-container{% if b.className %} {{ b.className }}{% endif %}"
   {% if b.uniqueID %}id="kb-slider-{{ b.uniqueID }}"{% endif %}
   data-slider-mode="css-snap"
 >
-  <div class="splide__track" style="overflow:hidden;position:relative;">
-    <ul class="splide__list" style="display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;list-style:none;padding:0;margin:0;">
+  <div class="kb-slider-track" style="overflow:hidden;position:relative;">
+    <ul class="kb-slider-list" style="display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;list-style:none;padding:0;margin:0;">
       {{ kadenceInnerHtml | safe }}
     </ul>
   </div>

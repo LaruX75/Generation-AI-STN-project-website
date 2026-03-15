@@ -6,8 +6,6 @@ slug: vastuurajoitus
 permalink: /vastuurajoitus/
 status: publish
 sourceType: pages
-sourceId: 4015
-sourceUrl: "https://www.generation-ai-stn.fi/vastuurajoitus/"
 excerpt: "[object Object]"
 categories: []
 tags: []

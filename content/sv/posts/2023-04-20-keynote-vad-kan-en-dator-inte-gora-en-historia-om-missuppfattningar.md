@@ -6,8 +6,6 @@ slug: keynote-vad-kan-en-dator-inte-gora-en-historia-om-missuppfattningar
 permalink: /sv/nyheter-fran/keynote-vad-kan-en-dator-inte-gora-en-historia-om-missuppfattningar/
 status: publish
 sourceType: posts
-sourceId: 514
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/keynote-mita-tietokone-ei-osaa-tehda-vaarien-kasitysten-historia/"
 excerpt: 'Prof. Matti Tedre höll invigningsanförandet "Vad kan en dator inte göra? En historia om missuppfattningar" på Interaktiv teknik i utbildningen 20.4.2023. VAD ÄR ITK? Finlands största evenemang för digital utbildning och lärande Interaktiv Teknik i Utbildningen arrangeras i Hämeenlinna på Aulango 19.-21.4.2023. Läs mer: https://itk-konferenssi.fi/'
 categories:
   - Aktuellt

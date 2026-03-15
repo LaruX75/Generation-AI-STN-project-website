@@ -6,8 +6,6 @@ slug: genai-mukana-tyttojen-paivan-tapahtumissa
 permalink: /ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/genai-mukana-tyttojen-paivan-tapahtumissa/
 status: publish
 sourceType: posts
-sourceId: 1559
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/genai-mukana-tyttojen-paivan-tapahtumissa/"
 excerpt: "GenAI mukana tyttöjen päivän tapahtumissa! 400 tyttöä (ja poikaa) vieraili Oulun yliopistolla 11.10 osana kansainvälistä tyttöjen päivää. Myös Generation AI hanke osallistui tähän päivään toteuttamalla ”tekoälyn musta laatikko – opeta konetta” työpajan. Tiesitkö, että tyttöjen päivä on Soroptimistit naisjärjestön keskeinen tehtävä kaikkialla maailmassa. Oulussa järjestelyistä vastasi järjestön paikallinen klubi. Pajan aluksi nuoret perehtyivät siihen, kuinka…"
 categories:
   - GenAI hankkeen henkilöstö tapahtumissa

@@ -6,8 +6,6 @@ slug: yle-tutkijat-keksivat-miten-nuoret-saa-kiinnostumaan-somen-riskeista
 permalink: /uncategorized-fi/yle-tutkijat-keksivat-miten-nuoret-saa-kiinnostumaan-somen-riskeista/
 status: publish
 sourceType: posts
-sourceId: 2335
-sourceUrl: "https://www.generation-ai-stn.fi/uncategorized-fi/yle-tutkijat-keksivat-miten-nuoret-saa-kiinnostumaan-somen-riskeista/"
 excerpt: "Yle kirjoitti artikkelin Generation AI:n kehittelemästä Somekoneesta. Artikkelissa professori Matti Tedre kertoo Somekoneesta, jota parhaillaan testataan kouluissa viides- ja kahdeksasluokkalaisilla. Somekone on sovellus, jonka tarkoituksena on simuloida sosiaalisen median toimintaa. Oppilaat selaavat ensin koneeseen syötettyä kuvavirtaa. Aivan kuten todellisessakin sosiaalisessa mediassa, kuvia voidaan kommentoida, niistä voidaan tykätä ja niitä voidaan jakaa, sekä ryhtyä leikisti seuraamaan…"
 categories:
   - Ajankohtaista

@@ -6,8 +6,6 @@ slug: project-researchers-delivered-expert-presentations-at-enorssi-network-s-ai
 permalink: /en/current-affairs/project-researchers-delivered-expert-presentations-at-enorssi-network-s-ai-or-su/
 status: publish
 sourceType: posts
-sourceId: 1337
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/hankkeen-tutkijat-pitivat-asiantuntijapuheenvuorot-enorssi-verkoston-tekoaly-vai-tukialy-webinaarissa/"
 excerpt: 'The national teacher training college cooperation network eNorssi held an AI webinar on 4.4.2023, where expert presentations from our project were delivered by Henriikka Vartiainen and Jari Laru.'
 categories:
   - News

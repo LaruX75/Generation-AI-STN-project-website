@@ -6,8 +6,6 @@ slug: itk-webinar-generation-ai-teaching-cybersecure-thinking-to-the-ai-generati
 permalink: /en/current-affairs/itk-webinar-generation-ai-teaching-cybersecure-thinking-to-the-ai-generation/
 status: publish
 sourceType: posts
-sourceId: 1335
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/itk-webinaari-generation-ai-kyberturvallisen-ajattelutavan-opettaminen-tekoalysukupolvelle/"
 excerpt: 'ITK Webinar 28.3.2023 Jari Laru, University of Oulu Matti Tedre, University of Eastern Finland Henriikka Vartiainen, University of Eastern Finland Do you understand what challenges exist in a data-driven, algorithm-governed society? ChatGPT and similar AI applications have sparked a lot of enthusiasm and curiosity in people, but also many questions and concerns. In the Generation AI project funded by the Strategic Research Council (SRC), we are opening the black box of artificial intelligence by developing content, methods…'
 categories:
   - News

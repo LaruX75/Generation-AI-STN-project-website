@@ -6,8 +6,6 @@ slug: hanke-esilla-kasvatustieteiden-paivilla
 permalink: /ajankohtaista/hanke-esilla-kasvatustieteiden-paivilla/
 status: publish
 sourceType: posts
-sourceId: 415
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/hanke-esilla-kasvatustieteiden-paivilla/"
 excerpt: "Generation AI hanke osallistui vuoden 2022 kasvatustieteiden päiville 24-25.11.2022. Kasvatustieteellinen seura järjestää vuosittain yhteistyössä jonkin suomalaisen yliopiston kanssa Kasvatustieteen päivät. Kasvatustieteen päivät on merkittävin kotimainen kasvatusalan tiedetapahtuma. Oulussa järjestetyillä päivillä vieraili yli 600 kasvatustieteilijää. Generation AI hankkeessa työskentelee kasvatustieteilijöitä Helsingin, Itä-suomen ja Oulun yliopistoista. Hankkeen vuorovaikutuksesta vastaava professori Kati Mäkitalo oli Oulun kasvatustieteiden päivien suunnitteluryhmän…"
 categories:
   - Ajankohtaista

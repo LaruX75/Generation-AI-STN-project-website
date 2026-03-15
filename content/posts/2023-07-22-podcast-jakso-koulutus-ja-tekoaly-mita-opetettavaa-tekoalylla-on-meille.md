@@ -6,8 +6,6 @@ slug: podcast-jakso-koulutus-ja-tekoaly-mita-opetettavaa-tekoalylla-on-meille
 permalink: /ajankohtaista/podcast-jakso-koulutus-ja-tekoaly-mita-opetettavaa-tekoalylla-on-meille/
 status: publish
 sourceType: posts
-sourceId: 1095
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/podcast-jakso-koulutus-ja-tekoaly-mita-opetettavaa-tekoalylla-on-meille/"
 excerpt: "Tehnically Optimistic blogissa julkaistiin 22.7.2023 mielenkiintoinen jakso. Siinä tekoälystä keskustelivat opiskelijaedustaja Shena Revanur, Khan Akacemyn perustaja Sal Khan, Code.orgin koulutusjohtaja Pat Yongpradit, hankkeessamme työskentelevä prof. Teemu Roos ja koneoppimisen pioneeri Tom Mitchell. Lue jakson englanninkielinen esittely Can we use AI as a tool that enriches learning, rather than replacing it? We’re seeing AI rapidly revolutionize…"
 categories:
   - Ajankohtaista

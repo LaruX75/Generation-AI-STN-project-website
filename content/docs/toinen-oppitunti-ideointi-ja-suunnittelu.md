@@ -6,8 +6,6 @@ slug: toinen-oppitunti-ideointi-ja-suunnittelu
 permalink: /materiaalit/opetettavakone/tekoaly-haltuun-yhdessa-opetettavan-koneen-oppimateriaali/toinen-oppitunti-ideointi-ja-suunnittelu/
 status: publish
 sourceType: docs
-sourceId: 2196
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/opetettavakone/tekoaly-haltuun-yhdessa-opetettavan-koneen-oppimateriaali/toinen-oppitunti-ideointi-ja-suunnittelu/"
 excerpt: "Oppitunnin tavoitteet Keskeiset käsitteet Tarvikkeet: Työskentelytapa: Tehtävä: inspiroidu esimerkeistä ja ota mallia! Työskentelytapa: työskennelkää pienissä ryhmissä tai pareittain Edellisellä kerralla tutustuitte opetettavan koneen toimintaan ja teitte yksinkertaisen luokittelijan. Tällä kertaa aloitetaan projekti, jossa tehdään luokittelija joka ratkaisee jonkin käytännön ongelman tai haasteen. Sitä ennen on kuitenkin aika perehtyä esimerkkeihin. Tehtäväsi on tutustua neljään erilaiseen luokittelijaan…."
 categories: []
 tags: []

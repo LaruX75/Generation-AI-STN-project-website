@@ -6,8 +6,6 @@ slug: tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi
 permalink: /helsingin-yliopisto/tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi/
 status: publish
 sourceType: posts
-sourceId: 1073
-sourceUrl: "https://www.generation-ai-stn.fi/helsingin-yliopisto/tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi/"
 excerpt: "Alla oleva teksti, jossa haastatellaan julkisoikeuden professori Susanna Lindroos-Hovinheimoa ja apulaisprofessori Riikka Kolua on julkaistu 7.9.2023 Helsingin yliopiston uutisena. Lue alkuperäinen uutisteksti täältä: https://www.helsinki.fi/fi/uutiset/demokratia/tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi EU:ssa tehdään hartiavoimin töitä, jotta kaavailtu tekoälyasetus saataisiin valmiiksi lähitulevaisuudessa. Tekoälyä hyödyntävien järjestelmien kehittyessä huimaa vauhtia lakipaketti uhkaa kuitenkin kasvaa vaikeasti sovellettavaksi kokonaisuudeksi. – Alkaa näyttää siltä, että asetuksesta tulee hyvin…"
 categories:
   - Ajankohtaista

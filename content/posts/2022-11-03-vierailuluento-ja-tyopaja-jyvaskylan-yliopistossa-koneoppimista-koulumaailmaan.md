@@ -6,8 +6,6 @@ slug: vierailuluento-ja-tyopaja-jyvaskylan-yliopistossa-koneoppimista-koulumaail
 permalink: /ajankohtaista/vierailuluento-ja-tyopaja-jyvaskylan-yliopistossa-koneoppimista-koulumaailmaan/
 status: publish
 sourceType: posts
-sourceId: 445
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/vierailuluento-ja-tyopaja-jyvaskylan-yliopistossa-koneoppimista-koulumaailmaan/"
 excerpt: "Hankkeen tutkijat Prof. Matti Tedre ja yliopistotutkija Henriikka Vartiainen pitivät vierailuluennon ja työpajan ”Koneoppimista koulumaailmaan” Jyväskylän yliopistossa 4.11.2022 Koneoppimiseen, ja yleisemmällä tasolla tekoälyyn, perustuvat teknologiat ovat tulleet osaksi lasten ja nuorten jokapäiväistä elämää esimerkiksi erilaisten sosiaalisen median sovellusten kautta. Luento ja työpaja tuovat esiin koneoppimisen aiheuttamiin murroslinjoihin liittyviä näkökulmia. Koneoppimiseen, ja yleisemmällä tasolla tekoälyyn, perustuvat…"
 categories:
   - Ajankohtaista

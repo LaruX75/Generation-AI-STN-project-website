@@ -6,8 +6,6 @@ slug: yle-podcast-kohistu-chat-gpt-on-tehokas-arvauskone-jonka-uskotaan-mullista
 permalink: /ajankohtaista/tekoaly-uutisointi-hankkeen-ulkopuolella/yle-podcast-kohistu-chat-gpt-on-tehokas-arvauskone-jonka-uskotaan-mullistavan-asiantuntijatyon/
 status: publish
 sourceType: posts
-sourceId: 506
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/tekoaly-uutisointi-hankkeen-ulkopuolella/yle-podcast-kohistu-chat-gpt-on-tehokas-arvauskone-jonka-uskotaan-mullistavan-asiantuntijatyon/"
 excerpt: "Chat GPT:tä on kutsuttu tekoälyksi, jolta voi kysyä mitä tahansa, mutta jonka puolesta pitää tarkistaa faktat. Marraskuussa julkaistun Chat GPT:n on sanottu mullistavan koko tapamme käyttää internetiä ja tehdä töitä. Samalla on kasvanut huoli sen väärinkäytöstä esimerkiksi opinnoissa. Uutispodcastissa yliopistonlehtori Anna-Mari Rusanen Helsingin yliopistosta kertoo, mikä Chat GPT oikeastaan on ja miten sitä tulisi käyttää…."
 categories:
   - Ajankohtaista hankkeen ulkopuolella

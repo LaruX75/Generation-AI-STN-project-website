@@ -1,6 +1,32 @@
 {# Site header — logo + primary navigation #}
-{% set menus = navigation if navigation else [] %}
+{% set localeCode = lang if lang else (site.defaultLocale if site and site.defaultLocale else "fi") %}
+{% set localeMenus = localizedNavigation[localeCode] if localizedNavigation and localizedNavigation[localeCode] else null %}
+{% set menus = localeMenus if localeMenus else (navigation if navigation else []) %}
 {% set navItems = menus[0].items if menus and menus.length and menus[0].items else [] %}
+{% set navUi = {
+  "fi": {
+    "toggle": "Avaa navigaatio",
+    "nav": "Sivun navigaatio",
+    "open": "Avaa",
+    "submenu": "alavalikko",
+    "mega": "megamenu"
+  },
+  "en": {
+    "toggle": "Toggle navigation",
+    "nav": "Site navigation",
+    "open": "Open",
+    "submenu": "submenu",
+    "mega": "mega menu"
+  },
+  "sv": {
+    "toggle": "Öppna navigering",
+    "nav": "Webbplatsnavigering",
+    "open": "Öppna",
+    "submenu": "undermeny",
+    "mega": "megameny"
+  }
+} %}
+{% set ui = navUi[localeCode] if navUi[localeCode] else navUi["fi"] %}
 <header class="site-shell-header{% if pageHero %} is-transparent{% endif %}">
   <div class="site-header-inner">
     <span class="site-logo">
@@ -10,27 +36,27 @@
         <span class="site-name">{{ site.name if site and site.name else 'Generation AI' }}</span>
       {% endif %}
     </span>
-    <button class="kb-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Toggle navigation">
+    <button class="kb-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="{{ ui.toggle }}">
       <span aria-hidden="true">&#9776;</span>
     </button>
     {% if navItems and navItems.length %}
-    <nav id="site-nav-menu" class="site-navigation kb-navigation wp-block-navigation items-justified-space-between" aria-label="Site navigation">
-      <ul class="menu kb-nav-menu wp-block-navigation__container">
+    <nav id="site-nav-menu" class="site-navigation" aria-label="{{ ui.nav }}">
+      <ul class="kb-nav-menu">
         {% for item in navItems %}
           {% set hasChildren = (item.megamenu and item.megamenuColumns and item.megamenuColumns.length) or (item.children and item.children.length) %}
           {% set topMenuId = "site-nav-submenu-" ~ loop.index %}
-          <li class="menu-item kb-nav-item wp-block-navigation-item{% if item.megamenu %} kb-nav-mega-menu-item{% endif %}{% if hasChildren %} menu-item-has-children has-child{% endif %}">
+          <li class="menu-item kb-nav-item{% if item.megamenu %} kb-nav-mega-menu-item{% endif %}{% if hasChildren %} menu-item-has-children{% endif %}">
             <div class="kb-nav-link-row">
-              <a class="kb-nav-link wp-block-navigation-item__content" href="{{ item.url }}"{% if item.target %} target="{{ item.target }}"{% endif %}>{{ item.title }}</a>
+              <a class="kb-nav-link" href="{{ item.url }}"{% if item.target %} target="{{ item.target }}"{% endif %}>{{ item.title }}</a>
               {% if hasChildren %}
-                <button class="kb-nav-item-toggle wp-block-navigation-submenu__toggle" type="button" aria-expanded="false" aria-controls="{{ topMenuId }}" aria-label="Avaa {{ item.title }} alavalikko">
+                <button class="kb-nav-item-toggle" type="button" aria-expanded="false" aria-controls="{{ topMenuId }}" aria-label="{{ ui.open }} {{ item.title }} {{ ui.submenu }}">
                   <span aria-hidden="true">▾</span>
                 </button>
               {% endif %}
             </div>
             {# ── Megamenu ─────────────────────────────────────────── #}
             {% if item.megamenu and item.megamenuColumns and item.megamenuColumns.length %}
-              <div id="{{ topMenuId }}" class="kb-mega-menu wp-block-navigation__submenu-container" role="region" aria-label="{{ item.title }} megamenu">
+              <div id="{{ topMenuId }}" class="kb-mega-menu" role="region" aria-label="{{ item.title }} {{ ui.mega }}">
                 <ul class="kb-mega-menu-cols">
                   {% for col in item.megamenuColumns %}
                     <li class="kb-mega-menu-col">
@@ -38,7 +64,7 @@
                         <ul class="kb-mega-col-items">
                           {% for sub in col.items %}
                             <li class="menu-item">
-                              <a class="kb-mega-link wp-block-navigation-item__content" href="{{ sub.url }}"{% if sub.target %} target="{{ sub.target }}"{% endif %}>{{ sub.label }}</a>
+                              <a class="kb-mega-link" href="{{ sub.url }}"{% if sub.target %} target="{{ sub.target }}"{% endif %}>{{ sub.label }}</a>
                             </li>
                           {% endfor %}
                         </ul>
@@ -49,23 +75,23 @@
               </div>
             {# ── Normal dropdown ──────────────────────────────────── #}
             {% elif item.children and item.children.length %}
-              <ul id="{{ topMenuId }}" class="sub-menu kb-nav-sub-menu wp-block-navigation__submenu-container">
+              <ul id="{{ topMenuId }}" class="sub-menu kb-nav-sub-menu">
                 {% for child in item.children %}
                   {% set childHasChildren = child.children and child.children.length %}
                   {% set childMenuId = topMenuId ~ "-" ~ loop.index %}
-                  <li class="menu-item kb-nav-item wp-block-navigation-item{% if childHasChildren %} menu-item-has-children has-child{% endif %}">
+                  <li class="menu-item kb-nav-item{% if childHasChildren %} menu-item-has-children{% endif %}">
                     <div class="kb-nav-link-row">
-                      <a class="kb-nav-link wp-block-navigation-item__content" href="{{ child.url }}">{{ child.title }}</a>
+                      <a class="kb-nav-link" href="{{ child.url }}">{{ child.title }}</a>
                       {% if childHasChildren %}
-                        <button class="kb-nav-item-toggle wp-block-navigation-submenu__toggle" type="button" aria-expanded="false" aria-controls="{{ childMenuId }}" aria-label="Avaa {{ child.title }} alavalikko">
+                        <button class="kb-nav-item-toggle" type="button" aria-expanded="false" aria-controls="{{ childMenuId }}" aria-label="{{ ui.open }} {{ child.title }} {{ ui.submenu }}">
                           <span aria-hidden="true">▾</span>
                         </button>
                       {% endif %}
                     </div>
                     {% if child.children and child.children.length %}
-                      <ul id="{{ childMenuId }}" class="sub-menu kb-nav-sub-menu kb-nav-sub-menu--level2 wp-block-navigation__submenu-container">
+                      <ul id="{{ childMenuId }}" class="sub-menu kb-nav-sub-menu kb-nav-sub-menu--level2">
                         {% for grandchild in child.children %}
-                          <li class="menu-item wp-block-navigation-item"><a class="kb-nav-link wp-block-navigation-item__content" href="{{ grandchild.url }}">{{ grandchild.title }}</a></li>
+                          <li class="menu-item"><a class="kb-nav-link" href="{{ grandchild.url }}">{{ grandchild.title }}</a></li>
                         {% endfor %}
                       </ul>
                     {% endif %}

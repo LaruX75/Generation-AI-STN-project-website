@@ -98,6 +98,24 @@ function normalizeTextLines(frontMatter) {
   return next;
 }
 
+function trimDuplicatedBody(body) {
+  const duplicateMarkers = ["\n---title:", "\n---<p", "\n---excerpt:"];
+  let cutIndex = -1;
+
+  for (const marker of duplicateMarkers) {
+    const markerIndex = body.indexOf(marker);
+    if (markerIndex !== -1 && (cutIndex === -1 || markerIndex < cutIndex)) {
+      cutIndex = markerIndex;
+    }
+  }
+
+  if (cutIndex === -1) {
+    return body;
+  }
+
+  return `${body.slice(0, cutIndex).replace(/\s+$/, "")}\n`;
+}
+
 function normalizeFile(source, filePath) {
   if (!source.startsWith("---\n")) {
     return { changed: false, content: source };
@@ -116,14 +134,15 @@ function normalizeFile(source, filePath) {
   nextFrontMatter = foldBlockTextScalars(nextFrontMatter);
   nextFrontMatter = normalizePermalinks(nextFrontMatter, locale);
   nextFrontMatter = normalizeTextLines(nextFrontMatter);
+  const nextBody = trimDuplicatedBody(body);
 
-  if (nextFrontMatter === originalFrontMatter) {
+  if (nextFrontMatter === originalFrontMatter && nextBody === body) {
     return { changed: false, content: source };
   }
 
   return {
     changed: true,
-    content: `---\n${nextFrontMatter}\n---\n${body}`
+    content: `---\n${nextFrontMatter}\n---\n${nextBody}`
   };
 }
 

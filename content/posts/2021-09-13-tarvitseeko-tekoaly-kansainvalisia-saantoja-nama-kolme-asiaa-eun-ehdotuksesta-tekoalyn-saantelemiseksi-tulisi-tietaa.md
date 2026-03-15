@@ -6,8 +6,6 @@ slug: tarvitseeko-tekoaly-kansainvalisia-saantoja-nama-kolme-asiaa-eun-ehdotukse
 permalink: /helsingin-yliopisto/tarvitseeko-tekoaly-kansainvalisia-saantoja-nama-kolme-asiaa-eun-ehdotuksesta-tekoalyn-saantelemiseksi-tulisi-tietaa/
 status: publish
 sourceType: posts
-sourceId: 455
-sourceUrl: "https://www.generation-ai-stn.fi/helsingin-yliopisto/tarvitseeko-tekoaly-kansainvalisia-saantoja-nama-kolme-asiaa-eun-ehdotuksesta-tekoalyn-saantelemiseksi-tulisi-tietaa/"
 excerpt: "Hankkeemme tutkija Susanna Lindroos-Hovila kertoo 14.9.2021 Helsingin yliopiston tiedekulman jutussa EU:n ehdotuksesta tekoälyn sääntelemiseksi. Alla lainaus tiedekulmassa julkaistusta jutusta. 1. Sääntely kohdistuu tekoälytuotteisiin Komissio näkee sääntelyn ennen kaikkea tuotesääntelynä. Lainsäädännöllä on tarkoitus rajoittaa niitä järjestelmiä, joita saadaan käyttää EU:n sisämarkkinoilla ja tuoda tänne. Tarkoituksena on lisätä kansalaisten luottamusta tuotteisiin eli tekoälyjärjestelmiin EU:n sisällä sekä luoda…"
 categories:
   - GenAI hankkeen henkilöstö mediassa

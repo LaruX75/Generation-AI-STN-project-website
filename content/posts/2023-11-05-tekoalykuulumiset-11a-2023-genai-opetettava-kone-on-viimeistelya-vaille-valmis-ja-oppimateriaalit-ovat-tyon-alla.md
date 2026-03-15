@@ -6,8 +6,6 @@ slug: tekoalykuulumiset-11a-2023-genai-opetettava-kone-on-viimeistelya-vaille-va
 permalink: /gen-ai-tekoalykuulumiset-uutiskirje/tekoalykuulumiset-11a-2023-genai-opetettava-kone-on-viimeistelya-vaille-valmis-ja-oppimateriaalit-ovat-tyon-alla/
 status: publish
 sourceType: posts
-sourceId: 1607
-sourceUrl: "https://www.generation-ai-stn.fi/gen-ai-tekoalykuulumiset-uutiskirje/tekoalykuulumiset-11a-2023-genai-opetettava-kone-on-viimeistelya-vaille-valmis-ja-oppimateriaalit-ovat-tyon-alla/"
 excerpt: "Tervetuloa lukemaan Generation AI hankkeen kuukausittaista uutiskirjettä. Kirjeitä tulee vähintään yksi kirje kuukautta kohti. Voit tilata tämän uutiskirjeen joko täällä LinkedIN palvelussa tai hankkeemme www-sivuilta: https://www.generation-ai-stn.fi/uutiskirje/ 1. GenAI opetettava kone on ensimmäisen sovelluksemme ja se alkaa olla valmis Hankkeemme ensimmäisen täyden toimintavuoden aikana olemme kehittäneet opetettavan koneen, jonka avulla lapset ja nuoret pystyvät kehittämään tekoälyä hyödyntäviä sovelluksia…"
 categories:
   - Generation AI kuukausittaiset tekoälykuulumiset (uutiskirje)

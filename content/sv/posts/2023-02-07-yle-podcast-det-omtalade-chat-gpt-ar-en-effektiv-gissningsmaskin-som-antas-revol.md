@@ -6,8 +6,6 @@ slug: yle-podcast-det-omtalade-chat-gpt-ar-en-effektiv-gissningsmaskin-som-antas
 permalink: /sv/nyheter-fran/yle-podcast-det-omtalade-chat-gpt-ar-en-effektiv-gissningsmaskin-som-antas-revol/
 status: publish
 sourceType: posts
-sourceId: 506
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/tekoaly-uutisointi-hankkeen-ulkopuolella/yle-podcast-kohistu-chat-gpt-on-tehokas-arvauskone-jonka-uskotaan-mullistavan-asiantuntijatyon/"
 excerpt: 'Chat GPT har kallats artificiell intelligens som man kan fråga vad som helst, men vars svar man måste verifiera. Det sägs att Chat GPT, som släpptes i november, kan revolutionera hela vårt sätt att använda internet och arbeta. Samtidigt har oron över dess missbruk, till exempel inom utbildning, ökat. I nyhetspodcasten berättar universitetslektor Anna-Mari Rusanen från Helsingfors universitet vad Chat GPT egentligen är och hur det bör användas….'
 categories:
   - Aktuellt utanför projektet

@@ -6,8 +6,6 @@ slug: we-were-represented-at-the-ministry-of-education-s-ai-round-table-discussi
 permalink: /en/current-affairs/we-were-represented-at-the-ministry-of-education-s-ai-round-table-discussion/
 status: publish
 sourceType: posts
-sourceId: 1329
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/olimme-edustettuna-ophn-tekoalyn-pyorea-poyta-keskustelussa/"
 excerpt: 'The Generation AI project participated in a round table discussion organized by the Ministry of Education on 19.9.2023. The event brought together a comprehensive group of Finnish researchers, developers and teachers from different levels of education. Before the round table, Jari Laru, representing the Generation AI project, discussed cooperation with representatives of the Ministry of Education and presented the objectives of the Generation AI project. For more information about the AI round table discussion: Artificial intelligence is currently the subject of active discussion…'
 categories:
   - GenAI project staff at events

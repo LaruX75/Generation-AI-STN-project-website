@@ -6,8 +6,6 @@ slug: vinkkeja-onnistuneen-lopputuloksen-saamiseen
 permalink: /materiaalit/opetettavakone/opetettavan-koneen-esimerkit-ja-vinkit/vinkkeja-onnistuneen-lopputuloksen-saamiseen/
 status: publish
 sourceType: docs
-sourceId: 1689
-sourceUrl: "https://www.generation-ai-stn.fi/materiaalit/opetettavakone/opetettavan-koneen-esimerkit-ja-vinkit/vinkkeja-onnistuneen-lopputuloksen-saamiseen/"
 excerpt: "Alla olevat vinkit auttavat onnistumaan opetettavan koneen opettamisessa eli luokittelijan tekemisessä! Tarvitset sopivan määrän opetusaineistoa eli kuvia Opetusaineistoa ei tarvita valtavasti. Yleensä 20-30 kuvaa per luokka riittää, joskus pärjää jopa 4-5 kuvalla. Tarvittaessa ota lisää kuvia, mutta muista kiinnittää huomiota datan laatuun. Opetusaineiston laatuun kannattaa satsata! Opetusaineiston laatu on yleensä tärkeämpää kuin sen määrä. Jos…"
 categories: []
 tags: []

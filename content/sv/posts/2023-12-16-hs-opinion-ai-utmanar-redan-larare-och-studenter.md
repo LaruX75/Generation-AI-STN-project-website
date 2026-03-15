@@ -6,8 +6,6 @@ slug: hs-opinion-ai-utmanar-redan-larare-och-studenter
 permalink: /sv/ajankohtaista/mielipidekirjoitus/hs-opinion-ai-utmanar-redan-larare-och-studenter/
 status: publish
 sourceType: posts
-sourceId: 3850
-sourceUrl: "https://www.generation-ai-stn.fi/sv/ajankohtaista/mielipidekirjoitus/hs-opinion-ai-utmanar-redan-larare-och-studenter/"
 excerpt: 'Debattartikel publicerad i Helsingin Sanomat 16.12.2024. Läs texten på Helsingin Sanomats webbplats: https://www.hs.fi/mielipide/art-2000010050103.html AI-baserade sociala medietjänster och mobilspel, för att inte tala om andra applikationer, kan vägleda och till och med förutsäga vårt beteende. De kan profilera och klassificera oss utifrån de uppgifter som de ständigt samlar in. Problemet är att AI är en svart…'
 categories:
   - Debattartikel

@@ -6,8 +6,6 @@ slug: how-to-track-my-order
 permalink: /betterdocs-faq/how-to-track-my-order/
 status: publish
 sourceType: betterdocs-faq
-sourceId: 1680
-sourceUrl: "https://www.generation-ai-stn.fi/?betterdocs_faq=how-to-track-my-order"
 excerpt: You will receive an email from us after you have placed the order. You’ll get confirmation in your email when you purchase and we’ll let you know when your order is on the move. You will be able to track your order through your preferred shipping partner.
 categories: []
 tags: []

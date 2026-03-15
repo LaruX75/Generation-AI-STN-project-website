@@ -6,8 +6,6 @@ slug: first-application-developed-in-the-project-genai-teachable-machine
 permalink: /en/current-affairs/first-application-developed-in-the-project-genai-teachable-machine/
 status: publish
 sourceType: posts
-sourceId: 539
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/ensimmainen-hankkeessa-kehitetty-sovellus-genai-kuvien-luokittelija/"
 excerpt: 'The project develops various tools and resources specifically designed for children and young people. The first tool is the "GenAI Teachable Machine," which is a simplified example of supervised machine learning. The application is implemented so that images uploaded to it are not transferred outside the web browser. For this reason, it is a safer way to approach the world of machine learning and artificial intelligence compared to commercial alternatives. Machine Learning in Our Everyday Lives: This…'
 categories:
   - News

@@ -6,8 +6,6 @@ slug: how-do-i-track-my-refund
 permalink: /betterdocs-faq/how-do-i-track-my-refund/
 status: publish
 sourceType: betterdocs-faq
-sourceId: 1686
-sourceUrl: "https://www.generation-ai-stn.fi/?betterdocs_faq=how-do-i-track-my-refund"
 excerpt: "To track the status of your refund, kindly refer to your confirmation email that you have received from us."
 categories: []
 tags: []

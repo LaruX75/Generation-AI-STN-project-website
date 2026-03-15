@@ -6,8 +6,6 @@ slug: hankkeen-kouluyhteistyo-kaynnistyi
 permalink: /ajankohtaista/hankkeen-kouluyhteistyo-kaynnistyi/
 status: publish
 sourceType: posts
-sourceId: 468
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/hankkeen-kouluyhteistyo-kaynnistyi/"
 excerpt: "GenAI-hankkeen kouluyhteistyö käynnistyi perjantaina 3.2.2023 klo 9-14 Joensuussa yhteissuunnittelukokouksella. Mukana tilaisuudessa oli 7 alakoulua, 3 yläkoulua ja 2 yhtenäiskoulua Joensuun alueelta. Työpajassa GenAI-hankkeen johtaja professori Matti Tedre avasi tekoälyn ja koneoppimisen peruskäsitteitä sekä datalähtöisen ajattelun murrosta. Luento-osuuden jälkeen osallistujat pääsivät käytännössä kokeilemaan erilaisia huipputeknologioita tietojenkäsittelytieteilijöiden tuella. Koska kouluinterventiot suunnitellaan opettajien ja tutkijoiden yhteistyönä, kuului päivään…"
 categories:
   - Ajankohtaista

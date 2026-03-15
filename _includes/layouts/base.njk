@@ -7,7 +7,41 @@
   {% set _desc = seoDescription if seoDescription else (ogDescription if ogDescription else excerpt) %}
   {% if _desc %}<meta name="description" content="{{ _desc }}">{% endif %}
   {% set _canonical = canonical if canonical else (site.url + page.url) %}
+  {% set localeUrlOverrides = {
+    "/": { "fi": "/", "en": "/en/home/", "sv": "/sv/startsida/" },
+    "/en/home/": { "fi": "/", "en": "/en/home/", "sv": "/sv/startsida/" },
+    "/en/welcome-to-the-generation-ai-project-website/": { "fi": "/", "en": "/en/home/", "sv": "/sv/startsida/" },
+    "/sv/startsida/": { "fi": "/", "en": "/en/home/", "sv": "/sv/startsida/" },
+    "/sv/valkommen-till-generation-ai-projektets-webbplats/": { "fi": "/", "en": "/en/home/", "sv": "/sv/startsida/" },
+    "/ajankohtaista/": { "fi": "/ajankohtaista/", "en": "/en/current-affairs/", "sv": "/sv/aktuellt/" },
+    "/materiaalit/": { "fi": "/materiaalit/", "en": "/en/materials/", "sv": "/sv/material/" },
+    "/hankkeen-toiminta/": { "fi": "/hankkeen-toiminta/", "en": "/en/what-we-do/", "sv": "/sv/verksamhet/" },
+    "/en/activities/": { "fi": "/hankkeen-toiminta/", "en": "/en/what-we-do/", "sv": "/sv/verksamhet/" },
+    "/en/what-we-do/": { "fi": "/hankkeen-toiminta/", "en": "/en/what-we-do/", "sv": "/sv/verksamhet/" },
+    "/sv/atgard/": { "fi": "/hankkeen-toiminta/", "en": "/en/what-we-do/", "sv": "/sv/verksamhet/" },
+    "/sv/verksamhet/": { "fi": "/hankkeen-toiminta/", "en": "/en/what-we-do/", "sv": "/sv/verksamhet/" },
+    "/konsortio/": { "fi": "/konsortio/", "en": "/en/consortium/", "sv": "/sv/konsortium/" },
+    "/ollaan-yhteydessa/": { "fi": "/ollaan-yhteydessa/", "en": "/en/get-in-touch/", "sv": "/sv/kontakta-oss/" },
+    "/opettajalle/": { "fi": "/opettajalle/", "en": "/en/for-teachers/", "sv": "/sv/for-larare/" },
+    "/generation-ai-hankkeessa-tehtava-tutkimus/": { "fi": "/generation-ai-hankkeessa-tehtava-tutkimus/", "en": "/en/research/", "sv": "/sv/forskning/" },
+    "/tietoa-tekoalysta-kenelle-tahansa/": { "fi": "/tietoa-tekoalysta-kenelle-tahansa/", "en": "/en/generation-ai-project-in-the-media/", "sv": "/sv/generation-ai-projektet-i-media/" }
+  } %}
+  {% set _localeLinks = translations.byUrl[page.url] if translations and translations.byUrl and page and page.url else {} %}
+  {% set _overrideLinks = localeUrlOverrides[page.url] if page and page.url and localeUrlOverrides[page.url] else null %}
   <link rel="canonical" href="{{ _canonical }}">
+  {% if _overrideLinks %}
+    {% for locale, url in _overrideLinks %}
+      {% if url %}
+        <link rel="alternate" hreflang="{{ locale }}" href="{{ site.url + url }}">
+      {% endif %}
+    {% endfor %}
+  {% elif _localeLinks %}
+    {% for locale, item in _localeLinks %}
+      {% if item and item.url %}
+        <link rel="alternate" hreflang="{{ locale }}" href="{{ site.url + item.url }}">
+      {% endif %}
+    {% endfor %}
+  {% endif %}
   {% if noindex %}<meta name="robots" content="noindex">{% endif %}
   <meta property="og:type" content="{% if sourceType == 'posts' %}article{% else %}website{% endif %}">
   <meta property="og:url" content="{{ _canonical }}">
@@ -17,7 +51,6 @@
   {% if _ogDesc %}<meta property="og:description" content="{{ _ogDesc }}">{% endif %}
   {% if ogImage %}<meta property="og:image" content="{{ ogImage }}">{% endif %}
   <link rel="preload" as="font" type="font/ttf" href="/media/wp-content/uploads/2025/02/Tektur-VariableFont_wdthwght.ttf" crossorigin>
-  {% include "legacy-styles.njk" %}
   <link rel="stylesheet" href="/styles/theme.css">
 </head>
 <body{% if pageHero %} class="has-hero"{% endif %}>

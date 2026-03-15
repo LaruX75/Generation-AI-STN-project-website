@@ -6,8 +6,6 @@ slug: millaiset-saavutettavuusohjeistukset-sovellus-tayttaa
 permalink: /betterdocs-faq/millaiset-saavutettavuusohjeistukset-sovellus-tayttaa/
 status: publish
 sourceType: betterdocs-faq
-sourceId: 2247
-sourceUrl: "https://www.generation-ai-stn.fi/?betterdocs_faq=millaiset-saavutettavuusohjeistukset-sovellus-tayttaa"
 excerpt: "Sovellus on suunniteltu siten, että se täyttää WCAG 2.1 AA saavutettavuusohjeistuksen vaatimukset. Sovellus on testattu huolellisesti käytettävyystutkijoiden toimesta ja käyttää moderneja käyttöliittymäkirjastoja."
 categories: []
 tags: []

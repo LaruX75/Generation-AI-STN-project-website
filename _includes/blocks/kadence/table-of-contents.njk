@@ -1,9 +1,0 @@
-{# kadence/table-of-contents (PRO) — Auto-generated TOC; replace with eleventy-plugin-toc or a macro #}
-{% set b = kadenceBlock.attrs %}
-<nav
-  class="wp-block-kadence-table-of-contents kb-toc-wrap kadence-block kadence-table-of-contents{% if b.uniqueID %} kb-toc-id_{{ b.uniqueID }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
-  aria-label="Table of contents"
->
-  {# TODO: generate with eleventy-plugin-toc or a custom Nunjucks macro #}
-  {{ kadenceInnerHtml | safe }}
-</nav>

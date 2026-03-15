@@ -2,13 +2,13 @@
 {% set b = kadenceBlock.attrs %}
 {% set h = b.spacerHeight[0] if (b.spacerHeight and b.spacerHeight[0]) else 60 %}
 <div
-  class="wp-block-kadence-spacer kadence-block kadence-spacer{% if b.uniqueID %} kt-block-spacer-id_{{ b.uniqueID }}{% endif %} kt-block-spacer{% if b.className %} {{ b.className }}{% endif %}"
+  class="{% if b.uniqueID %} kt-block-spacer-id_{{ b.uniqueID }}{% endif %} kt-block-spacer{% if b.className %} {{ b.className }}{% endif %}"
   style="height:{{ h }}px;"
   aria-hidden="true"
 >
   {% if b.dividerEnable %}
     <hr
-      class="kadence-spacer-divider"
+      class="-divider"
       style="{% if b.dividerStyle %}border-style:{{ b.dividerStyle }};{% endif %}{% if b.dividerColor %} border-color:{{ b.dividerColor }};{% endif %}{% if b.dividerWidth %} width:{{ b.dividerWidth }}%;{% endif %}"
     >
   {% endif %}

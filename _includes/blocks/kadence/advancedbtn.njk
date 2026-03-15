@@ -1,7 +1,7 @@
 {# kadence/advancedbtn — Button group; innerHtml contains individual button elements #}
 {% set b = kadenceBlock.attrs %}
 <div
-  class="wp-block-kadence-advancedbtn kadence-block kadence-advancedbtn kb-btn-align-wrap kb-buttons-wrap{% if b.uniqueID %} kb-btns{{ b.uniqueID }}{% endif %}{% if b.hAlign %} kb-btn-align-{{ b.hAlign }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
+  class="kb-btn-align-wrap kb-buttons-wrap{% if b.uniqueID %} kb-btns{{ b.uniqueID }}{% endif %}{% if b.hAlign %} kb-btn-align-{{ b.hAlign }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
 >
   {{ kadenceInnerHtml | safe }}
 </div>

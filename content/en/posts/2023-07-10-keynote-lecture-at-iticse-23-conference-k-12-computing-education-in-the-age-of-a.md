@@ -6,8 +6,6 @@ slug: keynote-lecture-at-iticse-23-conference-k-12-computing-education-in-the-ag
 permalink: /en/current-affairs/keynote-lecture-at-iticse-23-conference-k-12-computing-education-in-the-age-of-a/
 status: publish
 sourceType: posts
-sourceId: 952
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/keynote-luento-iticse-23-konferenssissa-k-12-tietotekniikkaopetusta-tekoalyaikana-datalukutaidosta-datatoimijuuteen/"
 excerpt: 'Background: Prof. Matti Tedre and University Researcher Henriikka Vartiainen delivered the keynote speech at the ITICSE conference in July 2023. The presentation''s English title is: "K-12 Computing Education for the AI Era: From Data Literacy to Data Agency". Read more here: https://iticse.acm.org/2023/keynote-speakers-2/ Machine-translated (chatGPT) summary of the presentation: The question of how to teach traditional rule-based programming has guided much of computing education research since the 1950s. In K-12 (school) contexts, a consensus has emerged over time regarding paradigmatic elements of computing education that assume the computer executes series of instructions guided by a sequence of commands. Within this framework, many researchers have focused on how to help learners develop an accurate mental model of what the computer does when executing a code snippet.'
 categories:
   - News

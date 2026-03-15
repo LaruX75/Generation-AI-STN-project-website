@@ -6,8 +6,6 @@ slug: hs-gastkronika-29-10-2016-utbildningen-reagerar-inte-pa-arbetets-forandrin
 permalink: /sv/nyheter-fran/hs-gastkronika-29-10-2016-utbildningen-reagerar-inte-pa-arbetets-forandring/
 status: publish
 sourceType: posts
-sourceId: 448
-sourceUrl: "https://www.generation-ai-stn.fi/ajankohtaista/hs-vieraskyna-29-10-2016-koulutus-ei-reagoi-tyon-muutokseen/"
 excerpt: 'Kunskapsarbete minskar när maskinerna utvecklas, och undervisningen bör ge beredskap för nya former av designarbete, skriver Matti Tedre och Peter J. Denning. DEN DATATEKNISKA revolutionen framskrider i rasande fart. Smarttelefoner anpassade efter individuella behov når prestationen från världens superdatorer vid årtusendet början och håller oss online nästan överallt. Självkörande bilar kör redan på vägarna. Företag som Uber och Airbnb utmanar gamla affärsmodeller. Datorer övervakar hälsan och diagnostiserar sjukdomar. Många traditionella jobb och yrken har försvunnit.'
 categories:
   - Aktuellt
