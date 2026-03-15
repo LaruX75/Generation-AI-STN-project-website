@@ -21,6 +21,12 @@
   --global-content-width: 1290px;
   --global-content-edge-padding: 1.5rem;
   --global-content-narrow-width: 842px;
+  --global-kb-font-size-sm: 0.875rem;
+  --global-kb-font-size-md: 1.125rem;
+  --global-kb-font-size-lg: 1.5rem;
+  --global-kb-font-size-xl: 1.75rem;
+  --global-kb-font-size-xxl: 2.25rem;
+  --global-kb-font-size-3xl: 3rem;
 }
 
 /* ── Base reset ────────────────────────────────────────────────────────────── */
@@ -623,11 +629,25 @@ body.kb-nav-open {
   padding: 1rem 0;
 }
 
+/* Carousel postgrids break out full-width with dark green background */
+.kb-post-grid--carousel {
+  background: var(--global-palette1, #314e25);
+  padding: 3rem 0 2.5rem;
+}
+.kb-post-grid--carousel .kb-post-feed-header,
+.kb-post-grid--carousel .kb-post-feed-carousel-wrap {
+  max-width: var(--global-content-width, 1290px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--global-content-edge-padding, 1.5rem);
+  padding-right: var(--global-content-edge-padding, 1.5rem);
+}
+
 .kb-post-feed-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 0 1rem;
+  margin: 0 0 1.25rem;
 }
 
 .kb-post-feed-title {
@@ -684,8 +704,7 @@ body.kb-nav-open {
   background: var(--global-palette9, #fff);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 15px 15px -10px rgba(0,0,0,0.05);
   height: 100%;
 }
 

@@ -5,7 +5,7 @@
 {% set sourceItems = collections[collectionName] if collections and collections[collectionName] else collections.posts %}
 {% set items = sourceItems | localizedItems(lang, page.url) | limitItems(count) %}
 {% set isCarousel = b.postLayout == "carousel" %}
-<section class="kb-post-grid{% if b.className %} {{ b.className }}{% endif %}">
+<section class="kb-post-grid{% if isCarousel %} kb-post-grid--carousel alignfull{% endif %}{% if b.className %} {{ b.className }}{% endif %}">
   {% if kadenceInnerHtml | trim %}
     {{ kadenceInnerHtml | safe }}
   {% elif isCarousel %}
