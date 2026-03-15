@@ -556,6 +556,11 @@ body.kb-nav-open {
   inset: 0;
   pointer-events: none;
 }
+.kb-has-bg-img > .kt-row-layout-overlay {
+  background: linear-gradient(135deg, var(--global-palette1, #314e25) 50%, var(--global-palette9, #fff) 100%);
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
 
 /* Auto-detect column count via :has() — works regardless of kb-col-N class value */
 @media (min-width: 768px) {
@@ -806,6 +811,7 @@ body.kb-nav-open {
   background-image: linear-gradient(135deg, #314e25 0%, #2b6cb0 100%);
   background-size: cover;
   background-position: 67% 36%;
+  background-attachment: fixed;
 }
 .entry-hero-container-inner {
   position: relative;

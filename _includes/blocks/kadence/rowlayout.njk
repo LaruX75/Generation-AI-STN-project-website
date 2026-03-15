@@ -16,11 +16,11 @@
 {% set _style = "" %}
 {% if b.background %}{% set _style = _style + "background-color:" + b.background + ";" %}{% endif %}
 {% if b.bgColor %}{% set _style = _style + "background-color:" + b.bgColor + ";" %}{% endif %}
-{% if b.backgroundImg and b.backgroundImg[0] and b.backgroundImg[0].bgImg %}{% set _style = _style + "background-image:url('" + b.backgroundImg[0].bgImg + "');" %}{% endif %}
+{% if b.backgroundImg and b.backgroundImg[0] and b.backgroundImg[0].bgImg %}{% set _style = _style + "background-image:url('" + b.backgroundImg[0].bgImg + "');" %}{% set _style = _style + "background-size:" + (b.backgroundSize if b.backgroundSize else "cover") + ";" %}{% set _style = _style + "background-position:" + (b.backgroundPosition if b.backgroundPosition else "center") + ";" %}{% if b.backgroundAttach %}{% set _style = _style + "background-attachment:" + b.backgroundAttach + ";" %}{% endif %}{% endif %}
 {% if _pt %}{% set _style = _style + "padding-top:" + _pt + ";" %}{% endif %}
 {% if _pb %}{% set _style = _style + "padding-bottom:" + _pb + ";" %}{% endif %}
 <section
-  class="kb-row-layout-wrap {% if b.uniqueID %} kb-row-layout-id{{ b.uniqueID }}{% endif %}{% if b.align == "full" %} alignfull{% endif %}{% if b.bgColorClass %} kb-theme-{{ b.bgColorClass }}{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
+  class="kb-row-layout-wrap {% if b.uniqueID %} kb-row-layout-id{{ b.uniqueID }}{% endif %}{% if b.align == "full" %} alignfull{% endif %}{% if b.bgColorClass %} kb-theme-{{ b.bgColorClass }}{% endif %}{% if b.backgroundImg and b.backgroundImg[0] and b.backgroundImg[0].bgImg %} kb-has-bg-img{% endif %}{% if b.className %} {{ b.className }}{% endif %}"
   {% if _style %}style="{{ _style }}"{% endif %}
 >
   {% if b.topSep and b.topSep != "none" %}
