@@ -4,7 +4,7 @@
 {% set cols = b.columns if b.columns else 1 %}
 {% set layout = b.colLayout if b.colLayout else "equal" %}
 {# ── Resolve named padding sizes → rem values ── #}
-{% set _ps = {"xs":"0.5rem","sm":"1.5rem","md":"2rem","lg":"3rem","xl":"4.5rem","xxl":"6rem"} %}
+{% set _ps = {"xxs":"0.25rem","xs":"0.5rem","sm":"1.5rem","md":"2rem","lg":"3rem","xl":"4.5rem","xxl":"6rem","3xl":"7.5rem","4xl":"9rem"} %}
 {% set _pads = b.padding if b.padding else [] %}
 {% set _pt = _ps[_pads[0]] if _pads[0] and _ps[_pads[0]] else (_pads[0] if _pads[0] else "") %}
 {% set _pb = _ps[_pads[2]] if _pads[2] and _ps[_pads[2]] else (_pads[2] if _pads[2] else "") %}
