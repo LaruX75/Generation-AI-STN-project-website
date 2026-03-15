@@ -1,5 +1,5 @@
 ---
-title: Sök
+title: 'Sök'
 slug: sok
 permalink: /sv/sok/
 layout: layouts/search.njk

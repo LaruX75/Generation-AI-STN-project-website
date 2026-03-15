@@ -1,5 +1,5 @@
 ---
-title: Search
+title: 'Search'
 slug: search
 permalink: /en/search/
 layout: layouts/search.njk

@@ -2,7 +2,8 @@
 layout: layouts/base.njk
 ---
 {% if pageHero or featuredImage %}
-<div class="entry-hero page-hero-section">
+{% set _heroImg = heroImage if heroImage else (featuredImage if featuredImage else null) %}
+<div class="entry-hero page-hero-section"{% if _heroImg %} style="background-image:url('{{ _heroImg }}');"{% endif %}>
   <div class="entry-hero-container-inner">
     <div class="hero-section-overlay"></div>
     <header class="entry-header">

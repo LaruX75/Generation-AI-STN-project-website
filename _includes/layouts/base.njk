@@ -53,7 +53,6 @@
   {% set _ogDesc = ogDescription if ogDescription else _desc %}
   {% if _ogDesc %}<meta property="og:description" content="{{ _ogDesc }}">{% endif %}
   {% if ogImage %}<meta property="og:image" content="{{ ogImage }}">{% endif %}
-  <link rel="preload" as="font" type="font/ttf" href="/media/wp-content/uploads/2025/02/Tektur-VariableFont_wdthwght.ttf" crossorigin>
   <link rel="stylesheet" href="/styles/theme.css">
 </head>
 <body{% if pageHero %} class="has-hero"{% endif %}>
