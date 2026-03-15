@@ -12,7 +12,7 @@ tags: []
 author: admin
 layout: layouts/page.njk
 pageHero: true
-heroImage: "/media/wp-content/uploads/2024/01/1.png"
+heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnotized_computer_hyper_reali_7e5fceac-75e4-4087-8364-b0ae1a8e0b00.png"
 ---
 
 {% set kadenceBlock = {
@@ -138,7 +138,42 @@ Generation AI
 {% include "blocks/kadence/rowlayout.njk" %}
 
 
-<h2 class="wp-block-heading has-text-align-center has-larger-font-size">Valitse jokin kolmesta vaihtoehdosta:</h2>
+{% set kadenceBlock = {
+  "name": "kadence/rowlayout",
+  "shortName": "rowlayout",
+  "attrs": {
+    "uniqueID": "647_heading_wrap",
+    "columns": 1,
+    "colLayout": "equal",
+    "bgColor": "var(--global-palette7)",
+    "padding": ["md", "", "xs", ""],
+    "align": "full",
+    "bgColorClass": "theme-palette7"
+  }
+} %}
+{% set kadenceInnerHtml %}
+{% set kadenceBlock = {
+  "name": "kadence/column",
+  "shortName": "column",
+  "attrs": { "uniqueID": "647_heading_col" }
+} %}
+{% set kadenceInnerHtml %}
+{% set kadenceBlock = {
+  "name": "kadence/advancedheading",
+  "shortName": "advancedheading",
+  "attrs": {
+    "uniqueID": "647_heading_h2",
+    "align": "center",
+    "color": "var(--global-palette3)",
+    "fontSize": ["xxl", "", ""]
+  }
+} %}
+{% set kadenceInnerHtml %}Valitse jokin kolmesta vaihtoehdosta:{% endset %}
+{% include "blocks/kadence/advancedheading.njk" %}
+{% endset %}
+{% include "blocks/kadence/column.njk" %}
+{% endset %}
+{% include "blocks/kadence/rowlayout.njk" %}
 
 
 {% set kadenceBlock = {
@@ -177,10 +212,16 @@ Generation AI
 {% set kadenceBlock = {
   "name": "kadence/image",
   "shortName": "image",
-  "attrs": {}
+  "attrs": { "className": "kb-icon-block" }
 } %}
 {% set kadenceInnerHtml %}
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="80" height="80" aria-hidden="true" fill="var(--global-palette3,#2c5f2e)">
+  <circle cx="32" cy="18" r="10"/>
+  <rect x="14" y="34" width="36" height="4" rx="2"/>
+  <rect x="10" y="42" width="44" height="14" rx="3"/>
+  <rect x="22" y="30" width="4" height="12" rx="2"/>
+  <rect x="38" y="30" width="4" height="12" rx="2"/>
+</svg>
 {% endset %}
 {% include "blocks/kadence/image.njk" %}
 
@@ -231,7 +272,7 @@ Tutki hankkeessa kehitettyjä ilmaisia  sovelluksia, materiaaleja ja menetelmiä
   "shortName": "singlebtn",
   "attrs": {
     "uniqueID": "647_ada0dc-47",
-    "text": "Lue lisää",
+    "text": "Opettajalle",
     "link": "/opettajalle/"
   }
 } %}
@@ -262,10 +303,18 @@ Tutki hankkeessa kehitettyjä ilmaisia  sovelluksia, materiaaleja ja menetelmiä
 {% set kadenceBlock = {
   "name": "kadence/image",
   "shortName": "image",
-  "attrs": {}
+  "attrs": { "className": "kb-icon-block" }
 } %}
 {% set kadenceInnerHtml %}
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="80" height="80" aria-hidden="true" fill="var(--global-palette3,#2c5f2e)">
+  <circle cx="32" cy="16" r="9"/>
+  <path d="M16 50 Q20 36 32 36 Q44 36 48 50Z"/>
+  <rect x="28" y="38" width="8" height="12" rx="1"/>
+  <circle cx="20" cy="46" r="4"/>
+  <circle cx="44" cy="46" r="4"/>
+  <rect x="10" y="54" width="20" height="4" rx="2"/>
+  <rect x="34" y="54" width="20" height="4" rx="2"/>
+</svg>
 {% endset %}
 {% include "blocks/kadence/image.njk" %}
 
@@ -316,7 +365,7 @@ Perehdy hankkeessa tehtävään korkealuokkaiseen ja kansainväliseen tutkimukse
   "shortName": "singlebtn",
   "attrs": {
     "uniqueID": "647_faba52-06",
-    "text": "Lue lisää",
+    "text": "Tutkijalle",
     "link": "/generation-ai-hankkeessa-tehtava-tutkimus/"
   }
 } %}
@@ -347,10 +396,17 @@ Perehdy hankkeessa tehtävään korkealuokkaiseen ja kansainväliseen tutkimukse
 {% set kadenceBlock = {
   "name": "kadence/image",
   "shortName": "image",
-  "attrs": {}
+  "attrs": { "className": "kb-icon-block" }
 } %}
 {% set kadenceInnerHtml %}
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="80" height="80" aria-hidden="true" fill="var(--global-palette3,#2c5f2e)">
+  <circle cx="32" cy="16" r="9"/>
+  <path d="M14 54 C14 40 50 40 50 54Z"/>
+  <circle cx="32" cy="36" r="5" fill="none" stroke="var(--global-palette3,#2c5f2e)" stroke-width="3"/>
+  <line x1="32" y1="28" x2="32" y2="24" stroke="var(--global-palette3,#2c5f2e)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="40" y1="31" x2="43" y2="28" stroke="var(--global-palette3,#2c5f2e)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="43" y1="39" x2="47" y2="39" stroke="var(--global-palette3,#2c5f2e)" stroke-width="3" stroke-linecap="round"/>
+</svg>
 {% endset %}
 {% include "blocks/kadence/image.njk" %}
 
@@ -401,7 +457,7 @@ Hankkeessamme työskentelee useita kansainvälisesti tunnettuja tekoälyä tunte
   "shortName": "singlebtn",
   "attrs": {
     "uniqueID": "647_f1e98b-b6",
-    "text": "Lue lisää",
+    "text": "Yleisölle",
     "link": "/medialle/"
   }
 } %}

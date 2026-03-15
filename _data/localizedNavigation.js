@@ -19,13 +19,15 @@ const URL_OVERRIDES = {
   "/": { fi: "/", en: "/en/home/", sv: "/sv/startsida/" },
   "/ajankohtaista/": { fi: "/ajankohtaista/", en: "/en/current-affairs/", sv: "/sv/aktuellt/" },
   "/materiaalit/": { fi: "/materiaalit/", en: "/en/materials/", sv: "/sv/material/" },
-  "/hankkeen-toiminta/": { fi: "/hankkeen-toiminta/", en: "/en/what-we-do/", sv: "/sv/verksamhet/" },
+  "/hankkeen-toiminta/": { fi: "/hankkeen-toiminta/", en: "/en/activities/", sv: "/sv/verksamhet/" },
   "/konsortio/": { fi: "/konsortio/", en: "/en/consortium/", sv: "/sv/konsortium/" },
   "/ollaan-yhteydessa/": { fi: "/ollaan-yhteydessa/", en: "/en/get-in-touch/", sv: "/sv/kontakta-oss/" },
   "/opettajalle/": { fi: "/opettajalle/", en: "/en/for-teachers/", sv: "/sv/for-larare/" },
   "/generation-ai-hankkeessa-tehtava-tutkimus/": { fi: "/generation-ai-hankkeessa-tehtava-tutkimus/", en: "/en/research/", sv: "/sv/forskning/" },
   "/tietoa-tekoalysta-kenelle-tahansa/": { fi: "/tietoa-tekoalysta-kenelle-tahansa/", en: "/en/generation-ai-project-in-the-media/", sv: "/sv/generation-ai-projektet-i-media/" },
-  "/materiaalit/#tab-julkaisut": { fi: "/materiaalit/#tab-julkaisut", en: "/en/materials/#tab-julkaisut", sv: "/sv/material/#tab-julkaisut" }
+  "/materiaalit/#tab-julkaisut": { fi: "/materiaalit/#tab-julkaisut", en: "/en/materials/#tab-julkaisut", sv: "/sv/material/#tab-julkaisut" },
+  "/en/activities/": { fi: "/hankkeen-toiminta/", en: "/en/activities/", sv: "/sv/verksamhet/" },
+  "/en/what-we-do/": { fi: "/hankkeen-toiminta/", en: "/en/activities/", sv: "/sv/verksamhet/" }
 };
 
 function splitHash(url = "") {

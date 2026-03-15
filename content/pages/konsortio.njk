@@ -17,6 +17,9 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
 
 {% macro renderResearchfiCard(personName) %}
 {% set publications = researchfi | publicationsForPerson(personName) %}
+{% if not publications.length %}
+{% set publications = scholarlyPublications | publicationsForPerson(personName) %}
+{% endif %}
 {% set first = publications[0] if publications.length else null %}
 {% set profileUrl = first.personId if (first and first.personId and (first.personId | isHttpUrl)) else (first.link if (first and first.link) else "") %}
 <div class="researchfi-card">
@@ -217,6 +220,17 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/02/thumbnail_CSF-Jussi-Koivisto-2022-12-1772x2658-1.jpg"
   },
   {
+    "name": "Matias Koivulehto",
+    "publicationName": "Matias Koivulehto",
+    "organization": "Helsingin yliopisto",
+    "discipline": "Oikeustiede",
+    "role": "Lakitutkija",
+    "description": "Tutkii sosiaalisen median addiktoivaa suunnittelua teknologisen manipuloinnin muotona.",
+    "email": "",
+    "profileUrl": "",
+    "imageUrl": "https://strapi.gen-ai.fi/uploads/Matias_Koivulehto_9fe2629192.jpg"
+  },
+  {
     "name": "Jari Laru",
     "publicationName": "Jari Laru",
     "organization": "Oulun yliopisto",
@@ -303,6 +317,17 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     "email": "",
     "profileUrl": "https://researchportal.helsinki.fi/fi/persons/milka-sormunen",
     "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/milka-sormunen-e1693399722651.webp"
+  },
+  {
+    "name": "Eva Suomi",
+    "publicationName": "Eva Suomi",
+    "organization": "Helsingin yliopisto",
+    "discipline": "",
+    "role": "Projektikoordinaattori",
+    "description": "Auttaa tekoälylukutaitohankkeita hallinnollisissa tehtävissä.",
+    "email": "",
+    "profileUrl": "",
+    "imageUrl": "https://strapi.gen-ai.fi/uploads/Eva_Suomi_ca1490b550.jpg"
   },
   {
     "name": "Sirkku Tahvanainen",

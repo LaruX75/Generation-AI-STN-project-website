@@ -1,8 +1,142 @@
-{# Site footer — update with actual footer content #}
+{# Site footer — locale-aware with site map and utility links #}
+{% set localeCode = lang if lang else (site.defaultLocale if site and site.defaultLocale else "fi") %}
+
+{% set footerUi = {
+  "fi": {
+    "sitemap":   "Sivukartta",
+    "tools":     "Sovellukset",
+    "utility":   "Hyödyllistä",
+    "copy":      "Generation AI -hanke",
+    "links": {
+      "sitemap": [
+        { "label": "Etusivu",         "url": "/" },
+        { "label": "Ajankohtaista",   "url": "/ajankohtaista/" },
+        { "label": "Materiaalit",     "url": "/materiaalit/" },
+        { "label": "Opettajalle",     "url": "/opettajalle/" },
+        { "label": "Tutkimus",        "url": "/generation-ai-hankkeessa-tehtava-tutkimus/" },
+        { "label": "Konsortio",       "url": "/konsortio/" },
+        { "label": "Ota yhteyttä",    "url": "/ollaan-yhteydessa/" }
+      ],
+      "tools": [
+        { "label": "Opetettava kone",   "url": "https://www.gen-ai.fi/fi/tools/tm",              "ext": true },
+        { "label": "Somekone",          "url": "https://www.gen-ai.fi/fi/tools/somekone",         "ext": true },
+        { "label": "Pieni kielikone",   "url": "https://www.gen-ai.fi/fi/tools/lm",              "ext": true },
+        { "label": "Hajoava kone",      "url": "https://www.gen-ai.fi/fi/tools/bm",              "ext": true },
+        { "label": "Profilointipeli",   "url": "https://www.gen-ai.fi/fi/tools/profiling-game",  "ext": true },
+        { "label": "Manipulointipeli",  "url": "https://www.gen-ai.fi/fi/tools/manipulation-game", "ext": true }
+      ],
+      "utility": [
+        { "label": "Sanasto",                     "url": "/encyclopedia/" },
+        { "label": "Haku",                        "url": "/haku/" },
+        { "label": "Saavutettavuusseloste",       "url": "/saavutettavuusseloste/" },
+        { "label": "Henkilötietojen käsittely",   "url": "/henkilotietojen-kasittely-alakoulussa/" },
+        { "label": "Uutiskirje",                  "url": "/uutiskirje/" }
+      ]
+    }
+  },
+  "en": {
+    "sitemap":   "Site map",
+    "tools":     "Tools",
+    "utility":   "Useful links",
+    "copy":      "Generation AI project",
+    "links": {
+      "sitemap": [
+        { "label": "Home",            "url": "/en/home/" },
+        { "label": "Current affairs", "url": "/en/current-affairs/" },
+        { "label": "Materials",       "url": "/en/materials/" },
+        { "label": "For teachers",    "url": "/en/for-teachers/" },
+        { "label": "Research",        "url": "/en/research/" },
+        { "label": "Consortium",      "url": "/en/consortium/" },
+        { "label": "Get in touch",    "url": "/en/get-in-touch/" }
+      ],
+      "tools": [
+        { "label": "Teachable Machine",      "url": "https://www.gen-ai.fi/en/tools/tm",              "ext": true },
+        { "label": "Somekone",               "url": "https://www.gen-ai.fi/en/tools/somekone",         "ext": true },
+        { "label": "Little Language Machine","url": "https://www.gen-ai.fi/en/tools/lm",              "ext": true },
+        { "label": "Breakable Machine",      "url": "https://www.gen-ai.fi/en/tools/bm",              "ext": true },
+        { "label": "Profiling Game",         "url": "https://www.gen-ai.fi/en/tools/profiling-game",  "ext": true }
+      ],
+      "utility": [
+        { "label": "Encyclopedia",            "url": "/en/encyclopedia/" },
+        { "label": "Search",                  "url": "/en/search/" },
+        { "label": "Accessibility statement", "url": "/en/accessibility-statement/" },
+        { "label": "Newsletter",              "url": "/en/newsletter/" }
+      ]
+    }
+  },
+  "sv": {
+    "sitemap":   "Webbplatskarta",
+    "tools":     "Verktyg",
+    "utility":   "Nyttiga länkar",
+    "copy":      "Generation AI-projektet",
+    "links": {
+      "sitemap": [
+        { "label": "Startsida",       "url": "/sv/startsida/" },
+        { "label": "Aktuellt",        "url": "/sv/aktuellt/" },
+        { "label": "Material",        "url": "/sv/material/" },
+        { "label": "För lärare",      "url": "/sv/for-larare/" },
+        { "label": "Forskning",       "url": "/sv/forskning/" },
+        { "label": "Konsortium",      "url": "/sv/konsortium/" },
+        { "label": "Kontakta oss",    "url": "/sv/kontakta-oss/" }
+      ],
+      "tools": [
+        { "label": "Opetettava kone",   "url": "https://www.gen-ai.fi/fi/tools/tm",              "ext": true },
+        { "label": "Somekone",          "url": "https://www.gen-ai.fi/fi/tools/somekone",         "ext": true },
+        { "label": "Pieni kielikone",   "url": "https://www.gen-ai.fi/fi/tools/lm",              "ext": true },
+        { "label": "Hajoava kone",      "url": "https://www.gen-ai.fi/fi/tools/bm",              "ext": true },
+        { "label": "Profilointipeli",   "url": "https://www.gen-ai.fi/fi/tools/profiling-game",  "ext": true }
+      ],
+      "utility": [
+        { "label": "Ordbok",                    "url": "/sv/ordbok/" },
+        { "label": "Sök",                       "url": "/sv/sok/" },
+        { "label": "Tillgänglighetsredogörelse","url": "/sv/tillganglighetsredogorelse/" },
+        { "label": "Nyhetsbrev",                "url": "/sv/nyhetsbrev/" }
+      ]
+    }
+  }
+} %}
+
+{% set ui = footerUi[localeCode] if footerUi[localeCode] else footerUi["fi"] %}
+
 <footer class="site-footer">
   <div class="site-footer-inner">
-    <p class="site-footer-copy">
-      &copy; Generation AI -hanke
-    </p>
+    <div class="site-footer-cols">
+
+      <div class="site-footer-col">
+        <h2 class="site-footer-col-heading">{{ ui.sitemap }}</h2>
+        <ul class="site-footer-links">
+          {% for link in ui.links.sitemap %}
+            <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="site-footer-col">
+        <h2 class="site-footer-col-heading">{{ ui.tools }}</h2>
+        <ul class="site-footer-links">
+          {% for link in ui.links.tools %}
+            <li>
+              <a href="{{ link.url }}"{% if link.ext %} target="_blank" rel="noopener"{% endif %}>
+                {{ link.label }}{% if link.ext %} <span aria-hidden="true" class="site-footer-ext">↗</span>{% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="site-footer-col">
+        <h2 class="site-footer-col-heading">{{ ui.utility }}</h2>
+        <ul class="site-footer-links">
+          {% for link in ui.links.utility %}
+            <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="site-footer-bottom">
+      <p class="site-footer-copy">&copy; {{ ui.copy }}</p>
+    </div>
   </div>
 </footer>
