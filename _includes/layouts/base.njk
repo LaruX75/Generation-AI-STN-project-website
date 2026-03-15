@@ -24,7 +24,10 @@
     "/ollaan-yhteydessa/": { "fi": "/ollaan-yhteydessa/", "en": "/en/get-in-touch/", "sv": "/sv/kontakta-oss/" },
     "/opettajalle/": { "fi": "/opettajalle/", "en": "/en/for-teachers/", "sv": "/sv/for-larare/" },
     "/generation-ai-hankkeessa-tehtava-tutkimus/": { "fi": "/generation-ai-hankkeessa-tehtava-tutkimus/", "en": "/en/research/", "sv": "/sv/forskning/" },
-    "/tietoa-tekoalysta-kenelle-tahansa/": { "fi": "/tietoa-tekoalysta-kenelle-tahansa/", "en": "/en/generation-ai-project-in-the-media/", "sv": "/sv/generation-ai-projektet-i-media/" }
+    "/tietoa-tekoalysta-kenelle-tahansa/": { "fi": "/tietoa-tekoalysta-kenelle-tahansa/", "en": "/en/generation-ai-project-in-the-media/", "sv": "/sv/generation-ai-projektet-i-media/" },
+    "/haku/": { "fi": "/haku/", "en": "/en/search/", "sv": "/sv/sok/" },
+    "/en/search/": { "fi": "/haku/", "en": "/en/search/", "sv": "/sv/sok/" },
+    "/sv/sok/": { "fi": "/haku/", "en": "/en/search/", "sv": "/sv/sok/" }
   } %}
   {% set _localeLinks = translations.byUrl[page.url] if translations and translations.byUrl and page and page.url else {} %}
   {% set _overrideLinks = localeUrlOverrides[page.url] if page and page.url and localeUrlOverrides[page.url] else null %}
@@ -54,9 +57,11 @@
   <link rel="stylesheet" href="/styles/theme.css">
 </head>
 <body{% if pageHero %} class="has-hero"{% endif %}>
-  {% include "partials/site-header.njk" %}
+  <div data-pagefind-ignore>{% include "partials/site-header.njk" %}</div>
+  <div data-pagefind-body data-pagefind-meta="language:{{ lang if lang else (site.defaultLocale if site and site.defaultLocale else 'fi') }}">
   {{ content | safe }}
-  {% include "partials/site-footer.njk" %}
+  </div>
+  <div data-pagefind-ignore>{% include "partials/site-footer.njk" %}</div>
   {% include "partials/cookie-consent-placeholder.njk" %}
   <script src="/scripts/nav.js" defer></script>
   <script>
