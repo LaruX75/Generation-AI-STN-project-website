@@ -8,7 +8,7 @@
   if (window._ktTabsInit) return;
   window._ktTabsInit = true;
   document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('..kb-tabs').forEach(function (wrap) {
+    document.querySelectorAll('.kb-tabs').forEach(function (wrap) {
       var panels = Array.from(wrap.querySelectorAll('.kt-tabs-content-wrap > .kb-tab-panel'));
       var titleItems = Array.from(wrap.querySelectorAll('.kt-tabs-title-list .kt-title-item'));
       var titleLinks = Array.from(wrap.querySelectorAll('.kt-tabs-title-list .kt-tab-title'));
@@ -19,6 +19,7 @@
           li.classList.toggle('kt-tab-title-inactive', i !== idx);
         });
       }
+      wrap.classList.add('kb-tabs-js-ready');
       var initIdx = titleItems.findIndex(function (li) { return li.classList.contains('kt-tab-title-active'); });
       activate(initIdx >= 0 ? initIdx : 0);
       titleLinks.forEach(function (link) {

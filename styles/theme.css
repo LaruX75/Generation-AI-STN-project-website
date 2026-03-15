@@ -749,6 +749,8 @@ body.kb-nav-open {
 .kt-tabs-content-wrap { padding: 1.5rem 0 0; }
 .kb-tab-panel { display: none; }
 .kb-tab-panel.kt-tab-active { display: block; }
+/* Fallback: show first panel before JS runs */
+.kb-tabs:not(.kb-tabs-js-ready) .kb-tab-panel:first-child { display: block; }
 
 /* ── Kadence query grid ──────────────────────────────────────────────────────── */
 .kb-query-loop { margin: 1rem 0; }
