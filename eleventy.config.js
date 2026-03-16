@@ -48,7 +48,6 @@ module.exports = function(eleventyConfig) {
   // Allow .well-known directory (dot-prefixed dirs are ignored by default)
   eleventyConfig.watchIgnores.delete("**/.well-known/**");
 
-  if (existsSync("CNAME")) eleventyConfig.addPassthroughCopy({ "CNAME": "CNAME" });
   if (existsSync("media")) eleventyConfig.addPassthroughCopy({ "media": "media" });
   if (existsSync("styles")) eleventyConfig.addPassthroughCopy({ "styles": "styles" });
   if (existsSync("assets")) eleventyConfig.addPassthroughCopy({ "assets": "assets" });
@@ -223,6 +222,19 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("rssDate", value => {
     const date = value instanceof Date ? value : new Date(value);
     return Number.isNaN(date.getTime()) ? new Date().toUTCString() : date.toUTCString();
+  });
+
+  // Prefix all root-relative paths in output HTML for GitHub Pages project site.
+  // Remove this transform when switching to a custom domain served from /.
+  const REPO_PREFIX = "/Generation-AI-STN-project-website";
+  eleventyConfig.addTransform("repoPathPrefix", function(content, outputPath) {
+    if (!outputPath || !outputPath.endsWith(".html")) return content;
+    return content
+      .replace(/(href=")\/(?!\/)/g,    `$1${REPO_PREFIX}/`)
+      .replace(/(src=")\/(?!\/)/g,     `$1${REPO_PREFIX}/`)
+      .replace(/(action=")\/(?!\/)/g,  `$1${REPO_PREFIX}/`)
+      .replace(/(content=")\/(?!\/)/g, `$1${REPO_PREFIX}/`)
+      .replace(/(url=)\/(?!\/)/g,      `$1${REPO_PREFIX}/`);
   });
 
   return {
