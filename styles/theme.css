@@ -871,7 +871,6 @@ body.kb-nav-open {
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  scroll-behavior: smooth;
   scroll-snap-type: x proximity;
   -webkit-overflow-scrolling: touch;
   user-select: none;
@@ -1007,6 +1006,95 @@ body.kb-nav-open {
 .shield-project-meta { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: .2rem .75rem; font-size: .82rem; }
 .shield-project-meta dt { color: #888; font-weight: 600; white-space: nowrap; }
 .shield-project-meta dd { margin: 0; color: #333; }
+/* Shield section heading variant (used outside shield-projects) */
+.shield-section-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--global-palette2, #446d33);
+  margin: 0 0 0.75rem;
+}
+.shield-section-lead {
+  color: #555;
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+}
+.shield-section-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+/* Report document card */
+.hankkeen-report-section {
+  padding: 2.5rem 1.5rem 3.5rem;
+}
+.hankkeen-report-card {
+  max-width: 340px;
+  background: #fff;
+  border: 1px solid #dde5d6;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+}
+.hankkeen-report-card__cover {
+  background: var(--global-palette1, #314e25);
+  padding: 2rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.hankkeen-report-card__type {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.12);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+.hankkeen-report-card__cover svg {
+  color: rgba(255,255,255,0.9);
+}
+.hankkeen-report-card__body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+}
+.hankkeen-report-card__year {
+  font-size: 0.78rem;
+  color: #888;
+  font-weight: 600;
+}
+.hankkeen-report-card__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a2e14;
+  line-height: 1.35;
+  margin: 0;
+}
+.hankkeen-report-card__desc {
+  font-size: 0.875rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0.25rem 0 0.75rem;
+}
+.hankkeen-report-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--global-palette2, #446d33);
+  text-decoration: none;
+  margin-top: auto;
+}
+.hankkeen-report-card__link:hover { text-decoration: underline; }
 @media (max-width: 640px) {
   .shield-intro-inner { grid-template-columns: 1fr; }
   .shield-intro-image { order: -1; }
@@ -2710,7 +2798,7 @@ a.publication-hero-author-name:hover {
 
 /* ── Toiminta digest ─────────────────────────────────────────────────────── */
 .toiminta-digest {
-  background: var(--global-palette7, #f0f4ec);
+  background: var(--global-palette9, #fff);
   padding: 3.5rem 1.5rem 4rem;
 }
 .toiminta-digest-inner {
@@ -2764,6 +2852,13 @@ a.publication-hero-author-name:hover {
   line-height: 1.35;
 }
 .toiminta-digest-item a:hover { text-decoration: underline; color: var(--global-palette2, #446d33); }
+.toiminta-digest-citation {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--global-palette3, #202124);
+  line-height: 1.4;
+  font-style: normal;
+}
 .toiminta-digest-date {
   font-size: 0.75rem;
   color: #888;
@@ -2787,6 +2882,13 @@ a.publication-hero-author-name:hover {
 .home-challenges {
   background: var(--global-palette9, #fff);
   padding: 3.5rem 1.5rem;
+}
+.home-challenges--tinted {
+  background: var(--global-palette7, #f0f4ec);
+}
+.home-challenges-report-link {
+  text-align: center;
+  margin-top: 2rem;
 }
 .home-challenges-inner {
   max-width: 900px;
@@ -2919,6 +3021,9 @@ a.publication-hero-author-name:hover {
 .home-paths {
   background: var(--global-palette7, #f0f4ec);
   padding: 3.5rem 1.5rem;
+}
+.home-paths--white {
+  background: var(--global-palette9, #fff);
 }
 .home-paths-inner {
   max-width: 900px;
@@ -4142,6 +4247,8 @@ a.publication-hero-author-name:hover {
   vertical-align: top;
   border-bottom: 1px solid #eef0f3;
   line-height: 1.45;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .media-table-row:last-child td {
@@ -4153,11 +4260,14 @@ a.publication-hero-author-name:hover {
 }
 
 /* Column widths */
-.media-table-col--date    { width: 110px; }
-.media-table-col--source  { width: 140px; }
-.media-table-col--title   { width: 28%; }
-.media-table-col--content { width: auto; }
-.media-table-col--link    { width: 90px; text-align: center; }
+.media-table-col--date         { width: 100px; }
+.media-table-col--source       { width: 130px; }
+.media-table-col--title        { width: 28%; }
+.media-table-col--content      { width: auto; }
+.media-table-col--link         { width: 88px; text-align: center; }
+.media-table-col--authors      { width: 18%; }
+.media-table-col--venue        { width: auto; color: #555; font-size: 0.88rem; }
+.media-table-col--participants { width: 88px; text-align: center; }
 
 /* Date cell */
 .media-table-col--date time {

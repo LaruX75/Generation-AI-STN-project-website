@@ -3,12 +3,12 @@
 {% if lang == "en" %}
   {% set lbl = {
     "heading": "Scientific publications",
-    "search": "Search publications", "placeholder": "Search by title…",
+    "search": "Search publications", "placeholder": "Search by title or author…",
     "catLabel": "Filter by publication type", "catAll": "All types",
     "catA": "A — Peer-reviewed articles", "catBE": "B/E — Books and edited volumes", "catOther": "Other",
     "yrLabel": "Filter by year", "yrAll": "All years",
     "aria": "Scientific publications", "ariaPag": "Result page",
-    "colYear": "Year", "colCode": "Code", "colTitle": "Title", "colContent": "Authors / Venue", "colLink": "Link",
+    "colAuthors": "Authors", "colYear": "Year", "colTitle": "Title", "colVenue": "Publication", "colLink": "Link", "colCode": "Code",
     "open": "Open", "newTab": "(opens in new tab)", "na": "—", "empty": "No results.",
     "prev": "← Previous", "next": "Next →",
     "jsPage": "Page", "jsSep": "/", "jsResults": "results"
@@ -16,12 +16,12 @@
 {% elif lang == "sv" %}
   {% set lbl = {
     "heading": "Vetenskapliga publikationer",
-    "search": "Sök publikationer", "placeholder": "Sök på rubrik…",
+    "search": "Sök publikationer", "placeholder": "Sök på rubrik eller författare…",
     "catLabel": "Filtrera efter publikationstyp", "catAll": "Alla typer",
     "catA": "A — Referentgranskade artiklar", "catBE": "B/E — Böcker och antologier", "catOther": "Övriga",
     "yrLabel": "Filtrera efter år", "yrAll": "Alla år",
     "aria": "Vetenskapliga publikationer", "ariaPag": "Resultatsida",
-    "colYear": "År", "colCode": "Kod", "colTitle": "Titel", "colContent": "Författare / Publikation", "colLink": "Länk",
+    "colAuthors": "Författare", "colYear": "År", "colTitle": "Titel", "colVenue": "Publikation", "colLink": "Länk", "colCode": "Kod",
     "open": "Öppna", "newTab": "(öppnas i ny flik)", "na": "—", "empty": "Inga resultat.",
     "prev": "← Föregående", "next": "Nästa →",
     "jsPage": "Sida", "jsSep": "/", "jsResults": "resultat"
@@ -29,12 +29,12 @@
 {% else %}
   {% set lbl = {
     "heading": "Tieteelliset julkaisut",
-    "search": "Hae julkaisuista", "placeholder": "Hae otsikolla…",
+    "search": "Hae julkaisuista", "placeholder": "Hae otsikolla tai tekijällä…",
     "catLabel": "Suodata julkaisutyypin mukaan", "catAll": "Kaikki julkaisutyypit",
     "catA": "A — Vertaisarvioidut artikkelit", "catBE": "B/E — Kirjat ja kokoomateokset", "catOther": "Muut",
     "yrLabel": "Suodata vuoden mukaan", "yrAll": "Kaikki vuodet",
     "aria": "Tieteelliset julkaisut", "ariaPag": "Tulossivu",
-    "colYear": "Vuosi", "colCode": "Koodi", "colTitle": "Otsikko", "colContent": "Tekijät / Julkaisupaikka", "colLink": "Linkki",
+    "colAuthors": "Tekijät", "colYear": "Vuosi", "colTitle": "Otsikko", "colVenue": "Julkaisun nimi", "colLink": "Linkki", "colCode": "Koodi",
     "open": "Avaa", "newTab": "(avautuu uudessa välilehdessä)", "na": "—", "empty": "Ei tuloksia.",
     "prev": "← Edellinen", "next": "Seuraava →",
     "jsPage": "Sivu", "jsSep": "/", "jsResults": "tulosta"
@@ -71,11 +71,12 @@
     <table class="media-table" id="scipub-table">
       <thead>
         <tr>
+          <th scope="col" class="media-table-col--authors">{{ lbl.colAuthors }}</th>
           <th scope="col" class="media-table-col--date">{{ lbl.colYear }}</th>
-          <th scope="col" class="media-table-col--source">{{ lbl.colCode }}</th>
           <th scope="col" class="media-table-col--title">{{ lbl.colTitle }}</th>
-          <th scope="col" class="media-table-col--content">{{ lbl.colContent }}</th>
+          <th scope="col" class="media-table-col--venue">{{ lbl.colVenue }}</th>
           <th scope="col" class="media-table-col--link">{{ lbl.colLink }}</th>
+          <th scope="col" class="media-table-col--source">{{ lbl.colCode }}</th>
         </tr>
       </thead>
       <tbody id="scipub-table-body">
@@ -83,22 +84,20 @@
           <tr class="media-table-row"
             data-year="{{ item.year | default('') }}"
             data-category="{% if item.code and item.code | truncate(1, true, '') == 'A' %}a{% elif item.code and (item.code | truncate(1, true, '') == 'B' or item.code | truncate(1, true, '') == 'E') %}be{% else %}other{% endif %}"
-            data-search="{{ item.searchText | lower | default('') }}">
+            data-search="{{ item.searchText | lower | default('') }} {{ item.authorsText | lower | default('') }}">
+            <td class="media-table-col--authors">{{ item.authorsText | default('—') }}</td>
             <td class="media-table-col--date">{{ item.year | default('—') }}</td>
-            <td class="media-table-col--source">
-              <span class="scipub-badge">{{ item.code | default('—') }}</span>
-            </td>
             <td class="media-table-col--title">{{ item.title | default('—') }}</td>
-            <td class="media-table-col--content">
-              {{ item.authorsText | default('') }}
-              <span class="scipub-venue">{{ item.venue | default('') }}</span>
-            </td>
+            <td class="media-table-col--venue">{{ item.venue | default('—') }}</td>
             <td class="media-table-col--link">
               {% if item.link %}
                 <a href="{{ item.link }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ item.linkLabel | default(lbl.open) }}&nbsp;<span aria-hidden="true">↗</span><span class="sr-only">{{ lbl.newTab }}</span></a>
               {% else %}
                 <span class="media-table-na">{{ lbl.na }}</span>
               {% endif %}
+            </td>
+            <td class="media-table-col--source">
+              <span class="scipub-badge">{{ item.code | default('—') }}</span>
             </td>
           </tr>
         {% endfor %}

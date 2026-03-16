@@ -2,39 +2,39 @@
 
 {% if lang == "en" %}
   {% set lbl = {
-    "heading": "Conferences and publications", "search": "Search", "placeholder": "Search by title…",
+    "heading": "Conferences and other scientific events", "search": "Search", "placeholder": "Search by title…",
     "typeLabel": "Filter by type", "typeAll": "All types",
     "typePost": "Publications and presentations", "typeStake": "Conferences",
     "badgePost": "Publication", "badgeStake": "Conference",
     "yrLabel": "Filter by year", "yrAll": "All years",
-    "aria": "Conferences and publications", "ariaPag": "Result page",
-    "colDate": "Date", "colType": "Type", "colTitle": "Title / Topic", "colExtra": "Details", "colLink": "Link",
+    "aria": "Conferences and other scientific events", "ariaPag": "Result page",
+    "colDate": "Date", "colType": "Type", "colTitle": "Title / Topic", "colExtra": "Organisation", "colParticipants": "Participants", "colLink": "Link",
     "open": "Open", "na": "—", "empty": "No results.",
     "prev": "← Previous", "next": "Next →",
     "jsPage": "Page", "jsSep": "/", "jsResults": "results"
   } %}
 {% elif lang == "sv" %}
   {% set lbl = {
-    "heading": "Konferenser och publikationer", "search": "Sök", "placeholder": "Sök på rubrik…",
+    "heading": "Konferenser och andra vetenskapliga evenemang", "search": "Sök", "placeholder": "Sök på rubrik…",
     "typeLabel": "Filtrera efter typ", "typeAll": "Alla typer",
     "typePost": "Publikationer och presentationer", "typeStake": "Konferenser",
     "badgePost": "Publikation", "badgeStake": "Konferens",
     "yrLabel": "Filtrera efter år", "yrAll": "Alla år",
-    "aria": "Konferenser och publikationer", "ariaPag": "Resultatsida",
-    "colDate": "Datum", "colType": "Typ", "colTitle": "Rubrik / Ämne", "colExtra": "Detaljer", "colLink": "Länk",
+    "aria": "Konferenser och andra vetenskapliga evenemang", "ariaPag": "Resultatsida",
+    "colDate": "Datum", "colType": "Typ", "colTitle": "Rubrik / Ämne", "colExtra": "Organisation", "colParticipants": "Deltagare", "colLink": "Länk",
     "open": "Öppna", "na": "—", "empty": "Inga resultat.",
     "prev": "← Föregående", "next": "Nästa →",
     "jsPage": "Sida", "jsSep": "/", "jsResults": "resultat"
   } %}
 {% else %}
   {% set lbl = {
-    "heading": "Konferenssit ja julkaisut", "search": "Hae", "placeholder": "Hae otsikolla…",
+    "heading": "Konferenssit ja muut tieteelliset tapahtumat", "search": "Hae", "placeholder": "Hae otsikolla…",
     "typeLabel": "Suodata tyypeittäin", "typeAll": "Kaikki tyypit",
     "typePost": "Julkaisut ja esitykset", "typeStake": "Konferenssit",
     "badgePost": "Julkaisu", "badgeStake": "Konferenssi",
     "yrLabel": "Suodata vuoden mukaan", "yrAll": "Kaikki vuodet",
-    "aria": "Konferenssit ja julkaisut", "ariaPag": "Tulossivu",
-    "colDate": "Päivämäärä", "colType": "Tyyppi", "colTitle": "Otsikko / Aihe", "colExtra": "Lisätiedot", "colLink": "Linkki",
+    "aria": "Konferenssit ja muut tieteelliset tapahtumat", "ariaPag": "Tulossivu",
+    "colDate": "Päivämäärä", "colType": "Tyyppi", "colTitle": "Otsikko / Aihe", "colExtra": "Organisaatio", "colParticipants": "Osallistujia", "colLink": "Linkki",
     "open": "Avaa", "na": "—", "empty": "Ei tuloksia.",
     "prev": "← Edellinen", "next": "Seuraava →",
     "jsPage": "Sivu", "jsSep": "/", "jsResults": "tulosta"
@@ -74,6 +74,7 @@
           <th scope="col" class="media-table-col--source">{{ lbl.colType }}</th>
           <th scope="col" class="media-table-col--title">{{ lbl.colTitle }}</th>
           <th scope="col" class="toiminta-table-col--extra">{{ lbl.colExtra }}</th>
+          <th scope="col" class="media-table-col--participants">{{ lbl.colParticipants }}</th>
           <th scope="col" class="media-table-col--link">{{ lbl.colLink }}</th>
         </tr>
       </thead>
@@ -99,6 +100,7 @@
                   <span class="media-table-na">{{ lbl.na }}</span>
                 {% endif %}
               </td>
+              <td class="media-table-col--participants"><span class="media-table-na">{{ lbl.na }}</span></td>
               <td class="media-table-col--link">
                 <a href="{{ post.url }}" class="media-table-link">{{ lbl.open }}&nbsp;↗</a>
               </td>
@@ -118,8 +120,12 @@
               <td class="media-table-col--title">{{ (row.title or row.stakeholder) | default("—") }}</td>
               <td class="toiminta-table-col--extra">
                 <span class="toiminta-stakeholder-name">{{ row.stakeholder | default("") }}</span>
-                {% if row.participants %}
-                  <span class="toiminta-participants">{{ row.participants }}</span>
+              </td>
+              <td class="media-table-col--participants">
+                {% if row.participants and row.participants != "N" and row.participants != "n" %}
+                  {{ row.participants }}
+                {% else %}
+                  <span class="media-table-na">{{ lbl.na }}</span>
                 {% endif %}
               </td>
               <td class="media-table-col--link">

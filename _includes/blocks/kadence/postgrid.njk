@@ -41,10 +41,13 @@
       (function () {
         var track = document.getElementById('kbc-{{ b.uniqueID }}');
         if (!track) return;
-        var wrap  = track.parentElement;
+        var wrap    = track.parentElement;
         var btnPrev = wrap.querySelector('.kb-carousel-btn--prev');
         var btnNext = wrap.querySelector('.kb-carousel-btn--next');
         if (!btnPrev || !btnNext) return;
+
+        var DURATION = 360;
+        var animId   = null;
 
         function cardStep() {
           var card = track.querySelector('.kb-post-card');
@@ -53,22 +56,41 @@
           return card.offsetWidth + gap;
         }
 
+        function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+
+        function scrollTo(target) {
+          if (animId) cancelAnimationFrame(animId);
+          var from  = track.scrollLeft;
+          var delta = Math.max(0, Math.min(target, track.scrollWidth - track.clientWidth)) - from;
+          if (Math.abs(delta) < 1) return;
+          var t0 = null;
+          function step(now) {
+            if (!t0) t0 = now;
+            var p = Math.min((now - t0) / DURATION, 1);
+            track.scrollLeft = from + delta * ease(p);
+            if (p < 1) { animId = requestAnimationFrame(step); }
+            else { animId = null; sync(); }
+          }
+          animId = requestAnimationFrame(step);
+        }
+
         function sync() {
-          var atStart = track.scrollLeft <= 4;
-          var atEnd   = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+          var atStart = track.scrollLeft <= 2;
+          var atEnd   = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
           btnPrev.classList.toggle('kb-carousel-btn--edge', atStart);
           btnNext.classList.toggle('kb-carousel-btn--edge', atEnd);
         }
 
-        requestAnimationFrame(sync);
-        btnPrev.addEventListener('click', function () {
-          track.scrollBy({ left: -cardStep(), behavior: 'smooth' });
-        });
-        btnNext.addEventListener('click', function () {
-          track.scrollBy({ left: cardStep(), behavior: 'smooth' });
-        });
+        btnPrev.addEventListener('click', function () { scrollTo(track.scrollLeft - cardStep()); });
+        btnNext.addEventListener('click', function () { scrollTo(track.scrollLeft + cardStep()); });
         track.addEventListener('scroll', sync, { passive: true });
         window.addEventListener('resize', function () { requestAnimationFrame(sync); }, { passive: true });
+
+        if (document.readyState === 'complete') {
+          requestAnimationFrame(function () { requestAnimationFrame(sync); });
+        } else {
+          window.addEventListener('load', function () { requestAnimationFrame(sync); }, { once: true });
+        }
       })();
       </script>
     </div>

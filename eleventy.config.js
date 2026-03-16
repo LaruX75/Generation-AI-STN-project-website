@@ -154,6 +154,21 @@ module.exports = function(eleventyConfig) {
     if (!Number.isFinite(limit) || limit <= 0) return list;
     return list.slice(0, limit);
   });
+  eleventyConfig.addFilter("mergeConferencesAndPubs", (collectionItems, pubItems, limit) => {
+    const confCards = (Array.isArray(collectionItems) ? collectionItems : []).map(item => {
+      const rawDate = item?.date instanceof Date ? item.date : new Date(item?.date);
+      const timestamp = Number.isNaN(rawDate.getTime()) ? 0 : rawDate.getTime();
+      return { cardType: "conference", item, timestamp };
+    });
+    const pubCards = (Array.isArray(pubItems) ? pubItems : []).map(pub => {
+      const year = Number(pub?.year || 0);
+      const timestamp = year ? new Date(year, 11, 31).getTime() : 0;
+      return { cardType: "publication", item: pub, timestamp };
+    });
+    const merged = [...confCards, ...pubCards].sort((a, b) => b.timestamp - a.timestamp);
+    const n = Number(limit);
+    return Number.isFinite(n) && n > 0 ? merged.slice(0, n) : merged;
+  });
   eleventyConfig.addFilter("mergeChronologicalCards", (posts, stakeholderRows) => {
     const postCards = (Array.isArray(posts) ? posts : []).map(post => {
       const rawDate = post?.date instanceof Date ? post.date : new Date(post?.date);

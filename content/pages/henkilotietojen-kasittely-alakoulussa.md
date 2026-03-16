@@ -7,7 +7,7 @@ permalink: /henkilotietojen-kasittely-alakoulussa/
 sourceType: pages
 layout: layouts/publication.njk
 pubType: Opas
-pageHero: false
+pageHero: true
 authors:
   - name: "Susanna Lindroos-Hovinheimo"
     title: "Professori, oikeustiede, Helsingin yliopisto"

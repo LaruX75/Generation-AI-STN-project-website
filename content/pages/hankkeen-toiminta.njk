@@ -1,7 +1,7 @@
 ---
 title: Hankkeen toiminta
 seoTitle: Hankkeen toiminta — Generation AI
-seoDescription: "Generation AI toimii kolmella alueella: opetus, tutkimus ja yleinen tekoälylukutaito."
+seoDescription: "Generation AI rakentaa perustaa AI-sukupolven teknologiakasvatukselle — ilmaisten sovellusten, tieteellisen tutkimuksen ja laajan sidosryhmäyhteistyön kautta."
 date: "2023-09-14T14:43:00"
 updated: "2026-03-16T00:00:00"
 slug: hankkeen-toiminta
@@ -10,21 +10,57 @@ status: publish
 sourceType: pages
 layout: layouts/page.njk
 pageHero: true
-kadenceBlocks: true
 ---
 
-{# ── Intro ──────────────────────────────────────────────────────────────── #}
+{# ── Intro — valkoinen ───────────────────────────────────────────────────── #}
 <section class="researcher-intro">
   <div class="researcher-intro-inner">
     <p class="researcher-intro-text">
-      Generation AI rakentaa perustaa AI-sukupolven teknologiakasvatukselle — kehittämällä ilmaisia sovelluksia, tutkimalla tekoälyn vaikutuksia lapsiin ja nuoriin, sekä kouluttamalla opettajia ja vaikuttamalla yhteiskunnalliseen keskusteluun.
+      Generation AI on suomalainen tutkimushanke, joka rakentaa perustaa AI-sukupolven teknologiakasvatukselle. Hanke syntyi vastauksena kolmeen toisiinsa liittyvään yhteiskunnalliseen haasteeseen.
     </p>
+    <div class="researcher-intro-actions">
+      <a class="researcher-intro-btn researcher-intro-btn--primary" href="/materiaalit/">Sovellukset ja materiaalit</a>
+      <a class="researcher-intro-btn researcher-intro-btn--secondary" href="/tutkijalle/">Tutkimus</a>
+    </div>
   </div>
 </section>
 
-{# ── Kolme polkua ────────────────────────────────────────────────────────── #}
-<section class="home-paths" style="padding-top:0;">
+{# ── Kolme haastetta (lähtökohta) — vaalea vihreä ────────────────────────── #}
+<section class="home-challenges home-challenges--tinted">
+  <div class="home-challenges-inner">
+    <h2 class="home-challenges-heading">Mistä lähdettiin liikkeelle</h2>
+    <p class="home-challenges-lead">Hanke syntyi vastauksena kolmeen toisiinsa liittyvään yhteiskunnalliseen haasteeseen, jotka kuvataan hankkeen tilannekuvassa.</p>
+    <div class="home-challenges-grid">
+
+      <div class="home-challenge-card">
+        <div class="home-challenge-num">01</div>
+        <h3 class="home-challenge-title">Turvallisuuden ja kontrollin tunteen heikkeneminen</h3>
+        <p class="home-challenge-text">Dataistuminen ja tekoälyjärjestelmät murentavat ihmisten tunnetta siitä, että he hallitsevat omaa elämäänsä ja päätöksiään.</p>
+      </div>
+
+      <div class="home-challenge-card">
+        <div class="home-challenge-num">02</div>
+        <h3 class="home-challenge-title">Luottamuksen rapautuminen</h3>
+        <p class="home-challenge-text">Algoritminen ympäristö heikentää luottamusta viranomaisiin, tieteeseen, tiedotusvälineisiin ja kansalaisyhteiskuntaan.</p>
+      </div>
+
+      <div class="home-challenge-card">
+        <div class="home-challenge-num">03</div>
+        <h3 class="home-challenge-title">Kasvava digitaalinen eriarvoisuus</h3>
+        <p class="home-challenge-text">Nopeasti muuttuva teknologia syventää osaamiskuiluja — ne joilla on digitaalinen toimijuus pärjäävät, muut jäävät jälkeen.</p>
+      </div>
+
+    </div>
+    <div class="home-challenges-report-link">
+      <a class="shield-intro-link" href="/tilannekuva-2022-tiivistelma/">Lue tilannekuvaraportti 2022 →</a>
+    </div>
+  </div>
+</section>
+
+{# ── Kolme polkua (vastaus haasteisiin) — valkoinen ──────────────────────── #}
+<section class="home-paths home-paths--white">
   <div class="home-paths-inner">
+    <h2 class="home-paths-heading">Näin Generation AI vastaa</h2>
     <div class="home-paths-grid">
 
       <a class="home-path-card" href="/opettajalle/">
@@ -58,21 +94,107 @@ kadenceBlocks: true
   </div>
 </section>
 
-{# ── Synteesi ajankohtaisista ────────────────────────────────────────────── #}
-{% set mediaItems    = collections["media"]             | localizedItems(lang, page.url) %}
-{% set tapahtumaItems = collections["tapahtumat"]        | localizedItems(lang, page.url) %}
-{% set toimintaItems = collections["hankkeen-toiminta"]  | localizedItems(lang, page.url) %}
-{% set tutkimusItems = collections["tutkimus"]           | localizedItems(lang, page.url) %}
+{# ── STN ja SHIELD — valkoinen ────────────────────────────────────────────── #}
+<section class="shield-intro">
+  <div class="shield-intro-inner">
+    <div class="shield-intro-text">
+      <p class="shield-intro-eyebrow">Strategisen tutkimuksen neuvosto</p>
+      <h2 class="shield-section-heading">SHIELD-ohjelman osa</h2>
+      <p class="shield-intro-body">
+        <strong>Generation AI</strong> on Suomen Akatemian yhteydessä toimivan Strategisen tutkimuksen neuvoston (STN) rahoittama hanke. Se on yksi <em>Turvallisuus ja luottamus algoritmien aikakaudella (SHIELD)</em> -ohjelman neljästä hankkeesta.
+      </p>
+      <p class="shield-intro-body">
+        SHIELD-ohjelma keskittyy turvallisuuteen ja luottamukseen informaatioteknologioiden ja hybridivaikuttamisen maailmanajassa. Hanke toimii yhdessä muiden ohjelman hankkeiden — Trust-M, REPAIR ja DECA — kanssa.
+      </p>
+      <div class="shield-section-links">
+        <a class="shield-intro-link" href="/shield-ohjelma/">SHIELD-ohjelma →</a>
+        <a class="shield-intro-link" href="https://www.aka.fi/strateginen-tutkimus/strateginen-tutkimus/strateginen-tutkimus-pahkinankuoressa/ohjelmat-ja-hankkeet/shield" target="_blank" rel="noopener">aka.fi ↗</a>
+      </div>
+    </div>
+    <div class="shield-intro-image">
+      <img src="/media/wp-content/uploads/2023/01/72a0207c-4463-469d-803c-10c9a2abb3db-w_960_h_960.jpg" alt="SHIELD-ohjelma" loading="lazy">
+    </div>
+  </div>
+</section>
+
+{# ── Konsortio — vaalea vihreä (shield-projects oma bg) ───────────────────── #}
+<section class="shield-projects">
+  <div class="shield-projects-inner">
+    <h2 class="shield-projects-heading">Konsortio</h2>
+    <p class="shield-section-lead">
+      Generation AI on monitieteinen tutkimuskonsortio, jossa yhdistyvät kasvatustieteen, tietojenkäsittelytieteen ja oikeustieteen asiantuntijuus neljästä suomalaisesta organisaatiosta.
+    </p>
+    <div class="shield-projects-grid">
+
+      <div class="shield-project-card shield-project-card--current">
+        <div class="shield-project-acronym">UEF</div>
+        <h3 class="shield-project-title">Itä-Suomen yliopisto</h3>
+        <dl class="shield-project-meta">
+          <dt>Konsortion johtaja</dt>
+          <dd><strong>Matti Tedre</strong>, Professori — TP1</dd>
+          <dt>Työpaketin vetäjä</dt>
+          <dd><strong>Henriikka Vartiainen</strong>, Yliopistotutkija — TP2</dd>
+          <dt>Tieteenalat</dt>
+          <dd>Tietojenkäsittelytiede, Kasvatustiede, Oikeustiede</dd>
+        </dl>
+      </div>
+
+      <div class="shield-project-card">
+        <div class="shield-project-acronym">OY</div>
+        <h3 class="shield-project-title">Oulun yliopisto</h3>
+        <dl class="shield-project-meta">
+          <dt>Työpaketin vetäjä</dt>
+          <dd><strong>Kati Mäkitalo</strong>, Professori — TP5 (vuorovaikutus)</dd>
+          <dt>Tieteenala</dt>
+          <dd>Kasvatustiede</dd>
+        </dl>
+      </div>
+
+      <div class="shield-project-card">
+        <div class="shield-project-acronym">HY</div>
+        <h3 class="shield-project-title">Helsingin yliopisto</h3>
+        <dl class="shield-project-meta">
+          <dt>Työpakettien vetäjät</dt>
+          <dd><strong>Kaiju Kangas</strong>, Apulaisprofessori — TP3</dd>
+          <dd><strong>Teemu Roos</strong>, Professori — TP4</dd>
+          <dt>Tieteenalat</dt>
+          <dd>Kasvatustiede, Tietojenkäsittelytiede, Oikeustiede</dd>
+        </dl>
+      </div>
+
+      <div class="shield-project-card">
+        <div class="shield-project-acronym">★</div>
+        <h3 class="shield-project-title">Asiantuntijaorganisaatiot</h3>
+        <dl class="shield-project-meta">
+          <dt>Suomen Koodikoulu</dt>
+          <dd>Materiaalintuotanto ja opettajankoulutus</dd>
+          <dt>Heureka – Suomen Tiedekeskus</dt>
+          <dd>Tapahtumat ja yleisöyhteistyö</dd>
+          <dt>Science Fest</dt>
+          <dd>Viestintä ja tapahtumatoiminta</dd>
+        </dl>
+      </div>
+
+    </div>
+    <a class="shield-intro-link" style="display:inline-block;margin-top:1.5rem;" href="/konsortio/">Tutustu konsortion jäseniin →</a>
+  </div>
+</section>
+
+{# ── Ajankohtaista — vaalea vihreä ───────────────────────────────────────── #}
+{% set mediaItems     = collections["media"]            | localizedItems(lang, page.url) %}
+{% set tapahtumaItems = collections["tapahtumat"]       | localizedItems(lang, page.url) %}
+{% set toimintaItems  = collections["hankkeen-toiminta"]| localizedItems(lang, page.url) %}
+{% set tutkimusItems  = collections["tutkimus"]         | localizedItems(lang, page.url) %}
 
 <section class="toiminta-digest">
   <div class="toiminta-digest-inner">
-    <h2 class="toiminta-digest-heading">Tuoreinta ajankohtaisista</h2>
+    <h2 class="toiminta-digest-heading">Ajankohtaista</h2>
     <div class="toiminta-digest-grid">
 
       <div class="toiminta-digest-col">
         <h3 class="toiminta-digest-col-heading">Uutiset ja media</h3>
         <ul class="toiminta-digest-list">
-          {% for item in mediaItems | reverse | first(3) %}
+          {% for item in mediaItems | limitItems(3) %}
           <li class="toiminta-digest-item">
             <a href="{{ item.url }}">{{ item.data.title }}</a>
             <span class="toiminta-digest-date">{{ item.date | date("d.m.Y") }}</span>
@@ -87,7 +209,7 @@ kadenceBlocks: true
       <div class="toiminta-digest-col">
         <h3 class="toiminta-digest-col-heading">Tapahtumat</h3>
         <ul class="toiminta-digest-list">
-          {% for item in tapahtumaItems | reverse | first(3) %}
+          {% for item in tapahtumaItems | limitItems(3) %}
           <li class="toiminta-digest-item">
             <a href="{{ item.url }}">{{ item.data.title }}</a>
             <span class="toiminta-digest-date">{{ item.date | date("d.m.Y") }}</span>
@@ -102,7 +224,7 @@ kadenceBlocks: true
       <div class="toiminta-digest-col">
         <h3 class="toiminta-digest-col-heading">Hankkeen toiminta</h3>
         <ul class="toiminta-digest-list">
-          {% for item in toimintaItems | reverse | first(3) %}
+          {% for item in toimintaItems | limitItems(3) %}
           <li class="toiminta-digest-item">
             <a href="{{ item.url }}">{{ item.data.title }}</a>
             <span class="toiminta-digest-date">{{ item.date | date("d.m.Y") }}</span>
@@ -111,16 +233,26 @@ kadenceBlocks: true
           <li class="toiminta-digest-empty">Ei sisältöjä.</li>
           {% endfor %}
         </ul>
-        <a class="toiminta-digest-cta" href="/ajankohtaista/#tab-toiminta">Kaikki →</a>
+        <a class="toiminta-digest-cta" href="/ajankohtaista/#tab-toiminta">Kaikki toiminta →</a>
       </div>
 
       <div class="toiminta-digest-col">
         <h3 class="toiminta-digest-col-heading">Konferenssit ja julkaisut</h3>
         <ul class="toiminta-digest-list">
-          {% for item in tutkimusItems | reverse | first(3) %}
+          {% set mergedPubs = tutkimusItems | mergeConferencesAndPubs(scientificPublications.tableItems, 4) %}
+          {% for card in mergedPubs %}
           <li class="toiminta-digest-item">
-            <a href="{{ item.url }}">{{ item.data.title }}</a>
-            <span class="toiminta-digest-date">{{ item.date | date("d.m.Y") }}</span>
+            {% if card.cardType == "conference" %}
+              <a href="{{ card.item.url }}">{{ card.item.data.title }}</a>
+              <span class="toiminta-digest-date">{{ card.item.date | date("d.m.Y") }}</span>
+            {% else %}
+              {% if card.item.link %}
+              <a href="{{ card.item.link }}" target="_blank" rel="noopener" class="toiminta-digest-citation">{{ card.item.citation }}</a>
+              {% else %}
+              <span class="toiminta-digest-citation">{{ card.item.citation }}</span>
+              {% endif %}
+              <span class="toiminta-digest-date">{{ card.item.year }}</span>
+            {% endif %}
           </li>
           {% else %}
           <li class="toiminta-digest-empty">Ei sisältöjä.</li>

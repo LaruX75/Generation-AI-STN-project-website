@@ -21,21 +21,13 @@ layout: layouts/base.njk
     </div>
     {% endif %}
   </div>
-  <div class="kt-row-layout-bottom-sep kt-svg-for-bottom-sep" aria-hidden="true" style="position:absolute;bottom:0;left:0;right:0;height:100px;color:var(--global-palette9);z-index:3;">
+  <div class="kt-row-layout-bottom-sep kt-svg-for-bottom-sep" aria-hidden="true" style="position:absolute;bottom:0;left:0;right:0;height:100px;color:var(--global-palette9);z-index:3;filter:drop-shadow(0 -6px 10px rgba(0,0,0,0.35));">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path fill="currentColor" d="M1000,50l-182.69,-45.286l-292.031,61.197l-190.875,-41.075l-143.748,28.794l-190.656,-23.63l0,70l1000,0l0,-50Z" style="opacity:0.4"/><path fill="currentColor" d="M1000,57l-152.781,-22.589l-214.383,19.81l-159.318,-21.471l-177.44,25.875l-192.722,5.627l-103.356,-27.275l0,63.023l1000,0l0,-43Z"/></svg>
   </div>
 </div>
 <script>
 (function () {
-  var fixed = '{{ heroBgImage | default("") }}';
-  var imgs = [
-    '/assets/hero/tm_screenshot_collage_1b4dfa5288.png',
-    '/assets/hero/somekone_screenshot_collage_17da94877f.png',
-    '/assets/hero/llm_screenshot_collage_82a45dfa6f.png',
-    '/assets/hero/breakable_machine_screenshot_1a3e444fbf.png',
-    '/assets/hero/profilinggame_screenshot_collage_a58510867f.png'
-  ];
-  var src = fixed || imgs[Math.floor(Math.random() * imgs.length)];
+  var src = '/assets/hero/heroloikkija.png';
   document.querySelectorAll('.hero-bg-blur, .hero-bg-sharp').forEach(function (el) {
     el.style.backgroundImage = "url('" + src + "')";
   });
