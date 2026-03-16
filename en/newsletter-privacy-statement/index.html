@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script>!function(){try{var s=JSON.parse(localStorage.getItem('genai_a11y')||'{}'),h=document.documentElement;if(s.dyslexia)h.classList.add('a11y-dyslexia');if(s.contrast)h.classList.add('a11y-contrast');if(s.spacing)h.classList.add('a11y-spacing');if(s.bg)h.dataset.a11yBg=s.bg;if(s.fontSize)h.style.fontSize=(100+s.fontSize*12.5)+'%';}catch(e){}}();</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.mailerlite.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.web3forms.com https://assets.mailerlite.com https://api.github.com; font-src 'self' data:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com;">
@@ -1011,6 +1012,118 @@ Newsletter Privacy Statement
   </div>
 </footer>
 </div>
+  
+
+
+
+<div class="a11y-toolbar" id="a11y-toolbar" role="region" aria-label="Accessibility tools">
+
+  <button class="a11y-trigger" id="a11y-trigger"
+          aria-expanded="false" aria-controls="a11y-panel"
+          title="Accessibility tools">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </svg>
+    <span aria-hidden="true">Aa</span>
+  </button>
+
+  <div class="a11y-panel" id="a11y-panel" role="dialog" aria-label="Accessibility tools" hidden>
+
+    <div class="a11y-panel-header">
+      <span class="a11y-panel-title">Accessibility tools</span>
+      <button class="a11y-close" id="a11y-close" aria-label="Close">&#x2715;</button>
+    </div>
+
+    
+    <div class="a11y-section">
+      <span class="a11y-section-label">Font size</span>
+      <div class="a11y-btn-row">
+        <button class="a11y-btn" id="a11y-font-dec"   aria-label="Font size, pienempi">A&#x2212;</button>
+        <button class="a11y-btn" id="a11y-font-reset" aria-label="Font size, oletus" style="font-size:1rem">A</button>
+        <button class="a11y-btn" id="a11y-font-inc"   aria-label="Font size, suurempi" style="font-size:1.15rem">A+</button>
+      </div>
+    </div>
+
+    
+    <div class="a11y-section">
+      <button class="a11y-toggle" id="a11y-dyslexia" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><text x="0" y="18" font-size="18" font-family="Trebuchet MS,Arial">Aa</text></svg>
+        Dyslexia font
+      </button>
+    </div>
+
+    
+    <div class="a11y-section">
+      <button class="a11y-toggle" id="a11y-contrast" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="#000" stroke="none"/>
+          <path d="M12 2a10 10 0 0 1 0 20z" fill="#fff"/>
+        </svg>
+        High contrast
+      </button>
+    </div>
+
+    
+    <div class="a11y-section">
+      <span class="a11y-section-label">Background colour</span>
+      <div class="a11y-swatches">
+        <button class="a11y-swatch a11y-swatch--white"  data-bg=""       aria-label="Valkoinen / White"></button>
+        <button class="a11y-swatch a11y-swatch--beige"  data-bg="beige"  aria-label="Beige"></button>
+        <button class="a11y-swatch a11y-swatch--yellow" data-bg="yellow" aria-label="Keltainen / Yellow"></button>
+        <button class="a11y-swatch a11y-swatch--blue"   data-bg="blue"   aria-label="Sininen / Blue"></button>
+        <button class="a11y-swatch a11y-swatch--green"  data-bg="green"  aria-label="Vihreä / Green"></button>
+      </div>
+    </div>
+
+    
+    <div class="a11y-section">
+      <button class="a11y-toggle" id="a11y-spacing" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        Wider text spacing
+      </button>
+    </div>
+
+    
+    <div class="a11y-section">
+      <button class="a11y-toggle" id="a11y-guide" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="3" y="9" width="18" height="6" rx="1"/>
+        </svg>
+        Reading guide
+      </button>
+    </div>
+
+    
+    <div class="a11y-section a11y-tts-section">
+      <div class="a11y-btn-row">
+        <button class="a11y-btn a11y-btn--tts" id="a11y-tts">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+          Read aloud
+        </button>
+        <button class="a11y-btn a11y-btn--tts" id="a11y-tts-stop" disabled>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="4" y="4" width="16" height="16"/></svg>
+          Stop
+        </button>
+      </div>
+    </div>
+
+    
+    <div class="a11y-section">
+      <button class="a11y-btn a11y-btn--reset" id="a11y-reset">&#x21BA; Reset all</button>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="a11y-guide-line" aria-hidden="true" hidden></div>
+
   <script src="/Generation-AI-STN-project-website/scripts/cookieconsent.umd.js" defer></script>
 <script>
 window.addEventListener('load', function () {
@@ -1168,6 +1281,7 @@ function loadConsentedScripts() {
   </script>
   
   <script src="/Generation-AI-STN-project-website/scripts/nav.js" defer></script>
+  <script src="/Generation-AI-STN-project-website/scripts/accessibility.js" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var PX_PER_SEC = 120;
