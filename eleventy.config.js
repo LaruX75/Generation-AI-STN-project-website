@@ -44,6 +44,10 @@ module.exports = function(eleventyConfig) {
     return "fi";
   };
 
+  eleventyConfig.setWatchThrottleWaitTime(200);
+  // Allow .well-known directory (dot-prefixed dirs are ignored by default)
+  eleventyConfig.watchIgnores.delete("**/.well-known/**");
+
   if (existsSync("media")) eleventyConfig.addPassthroughCopy({ "media": "media" });
   if (existsSync("styles")) eleventyConfig.addPassthroughCopy({ "styles": "styles" });
   if (existsSync("assets")) eleventyConfig.addPassthroughCopy({ "assets": "assets" });
