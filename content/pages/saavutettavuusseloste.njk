@@ -2,7 +2,7 @@
 title: Saavutettavuusseloste
 seoTitle: Saavutettavuusseloste — Generation AI
 date: "2023-08-28T14:02:52"
-updated: "2026-03-16T00:00:00"
+updated: "2026-03-16T12:00:00"
 slug: saavutettavuusseloste
 permalink: /saavutettavuusseloste/
 status: publish
@@ -18,11 +18,11 @@ pageHero: true
 
 <p>Tämä on Generation AI -hankkeen saavutettavuusseloste. Sivustoa <strong>www.generation-ai-stn.fi</strong> koskee <a href="https://www.finlex.fi/fi/laki/ajantasa/2019/20190306" target="_blank" rel="noopener noreferrer">laki digitaalisten palvelujen tarjoamisesta (306/2019)<span class="sr-only"> (avautuu uudessa välilehdessä)</span></a>, jossa edellytetään, että julkisten verkkopalvelujen on oltava saavutettavia.</p>
 
-<p>Tämä saavutettavuusseloste koskee sivustoa <strong>www.generation-ai-stn.fi</strong> ja on laadittu 28.08.2023. Seloste on päivitetty 16.03.2026 manuaalisen WCAG 2.1 AA -auditoinnin perusteella.</p>
+<p>Tämä saavutettavuusseloste koskee sivustoa <strong>www.generation-ai-stn.fi</strong> ja on laadittu 28.08.2023. Seloste on päivitetty 16.03.2026 manuaalisen WCAG 2.1 AA -auditoinnin ja proaktiivisten saavutettavuusparannusten perusteella.</p>
 
 <h2>Digipalvelun saavutettavuuden tila</h2>
 
-<p>Digipalvelu on <strong>täysin vaatimustenmukainen</strong>. Maaliskuussa 2026 toteutetussa manuaalisessa auditoinnissa löydettiin useita puutteita, jotka on sittemmin korjattu. Alla olevassa taulukossa esitetään löydökset ja tehdyt korjaustoimenpiteet.</p>
+<p>Digipalvelu on <strong>täysin vaatimustenmukainen</strong>. Maaliskuussa 2026 toteutetussa manuaalisessa auditoinnissa löydettiin useita puutteita, jotka on sittemmin korjattu. Lisäksi sivustoon on lisätty proaktiivisesti saavutettavuustyökalu, joka tukee erityisesti lukihäiriöisiä käyttäjiä. Alla olevassa taulukossa esitetään löydökset, korjaustoimenpiteet ja proaktiiviset parannukset.</p>
 
 <h2>Ei-saavutettava sisältö ja korjaustoimenpiteet</h2>
 
@@ -139,6 +139,15 @@ pageHero: true
         <td>Footer, ruotsinkielinen versio</td>
         <td>Ruotsinkielisestä footerista puuttui Manipulointipeli-työkalu.</td>
         <td>Lisätty Manipulationsspelet ruotsinkieliseen footer-työkalulistaan.</td>
+        <td><span class="wcag-fixed">&#10003; 16.3.2026</span></td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>1.4.4, 1.4.8, 3.1.5</td>
+        <td><span class="wcag-badge wcag-badge--minor">Proaktiivinen</span></td>
+        <td>Saavutettavuustyökalu (kaikki sivut)</td>
+        <td>Sivustolta puuttui käyttäjälähtöinen työkalu, joka tukisi erityisesti lukihäiriöisiä, heikkonäköisiä tai muita erityistarpeita omaavia käyttäjiä.</td>
+        <td>Lisätty kiinteä saavutettavuuspaneeli kaikille sivuille. Ominaisuudet: fonttikoon säätö (5 tasoa), lukihäiriöfontti (Trebuchet MS / Verdana, leveämpi kirjainväli), korkea kontrasti, taustavärisävy (beige / keltainen / sininen / vihreä), leveämpi riviväli, lukuviivain hiirelle sekä tekstin ääneen lukeminen (Web Speech API, fi/en/sv). Asetukset tallennetaan selainmuistiin. Paneeli noudattaa WCAG:n <code>aria-pressed</code>-, <code>aria-expanded</code>- ja <code>role="dialog"</code>-vaatimuksia.</td>
         <td><span class="wcag-fixed">&#10003; 16.3.2026</span></td>
       </tr>
     </tbody>
