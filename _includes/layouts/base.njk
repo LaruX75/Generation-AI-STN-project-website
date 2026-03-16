@@ -50,14 +50,35 @@
       {% endif %}
     {% endfor %}
   {% endif %}
+  {# ── Favicon ──────────────────────────────────────────────────────────── #}
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/media/wp-content/uploads/2023/04/cropped-GenAI-logoluonnos.jpg">
+  {# ── Robots / indexing ────────────────────────────────────────────────── #}
   {% if noindex %}<meta name="robots" content="noindex">{% endif %}
-  <meta property="og:type" content="{% if sourceType == 'posts' %}article{% else %}website{% endif %}">
+  {# ── Open Graph ───────────────────────────────────────────────────────── #}
+  {% set _ogType = "article" if sourceType == "posts" else "website" %}
+  {% set _ogTitle = ogTitle if ogTitle else (seoTitle if seoTitle else title) %}
+  {% set _ogDesc = ogDescription if ogDescription else _desc %}
+  {% set _ogLocale = "fi_FI" %}
+  {% if lang == "en" %}{% set _ogLocale = "en_GB" %}{% elif lang == "sv" %}{% set _ogLocale = "sv_SE" %}{% endif %}
+  {% set _ogImage = ogImage if ogImage else (site.url + "/media/wp-content/uploads/2023/04/cropped-GenAI-logoluonnos.jpg") %}
+  <meta property="og:type" content="{{ _ogType }}">
   <meta property="og:url" content="{{ _canonical }}">
   <meta property="og:site_name" content="{{ site.name }}">
-  <meta property="og:title" content="{{ ogTitle if ogTitle else (seoTitle if seoTitle else title) }}">
-  {% set _ogDesc = ogDescription if ogDescription else _desc %}
+  <meta property="og:locale" content="{{ _ogLocale }}">
+  <meta property="og:title" content="{{ _ogTitle }}">
   {% if _ogDesc %}<meta property="og:description" content="{{ _ogDesc }}">{% endif %}
-  {% if ogImage %}<meta property="og:image" content="{{ ogImage }}">{% endif %}
+  <meta property="og:image" content="{{ _ogImage }}">
+  {% if _ogType == "article" %}
+  <meta property="article:published_time" content="{{ date | rssDate if date else "" }}">
+  {% if updated %}<meta property="article:modified_time" content="{{ updated | rssDate }}">{% endif %}
+  {% endif %}
+  {# ── Twitter / X Card ────────────────────────────────────────────────── #}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ _ogTitle }}">
+  {% if _ogDesc %}<meta name="twitter:description" content="{{ _ogDesc }}">{% endif %}
+  <meta name="twitter:image" content="{{ _ogImage }}">
+  {# ── RSS feeds ────────────────────────────────────────────────────────── #}
   {% set _feedLocale = lang if lang else (site.defaultLocale if site and site.defaultLocale else "fi") %}
   {% if _feedLocale == "en" %}
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} (EN)" href="{{ site.url }}/en/feed.xml">
