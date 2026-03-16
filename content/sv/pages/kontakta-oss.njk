@@ -1,110 +1,59 @@
 ---
 title: 'Kontakta oss'
+seoTitle: Kontakta oss — Generation AI
+seoDescription: Skicka oss ett meddelande om samarbete, forskning eller annat relaterat till Generation AI-projektet. Vi svarar så snart som möjligt.
 date: "2023-09-21T13:03:10"
 updated: "2025-02-12T22:33:21"
 slug: kontakta-oss
 permalink: /sv/kontakta-oss/
 status: publish
 sourceType: pages
-excerpt: 'Skicka oss ett meddelande Vill ni att vi ska kontakta er för samarbete? Vänligen fyll i formuläret nedan och skicka ett meddelande till oss!'
-categories: []
-tags: []
-author: admin
 layout: layouts/page.njk
+pageHero: false
 lang: sv
-pageHero: true
-heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnotized_computer_hyper_reali_7e5fceac-75e4-4087-8364-b0ae1a8e0b00.png"
 ---
-{% set kadenceBlock = {
-  "name": "kadence/rowlayout",
-  "shortName": "rowlayout",
-  "attrs": {
-    "uniqueID": "1041_ba2ac5-ce",
-    "colLayout": "equal",
-    "bgColor": "var(--global-palette7)",
-    "padding": [
-      "xl",
-      "",
-      "xl",
-      ""
-    ],
-    "bgColorClass": "theme-palette7"
-  }
-} %}
-{% set _kb_save_0 = kadenceBlock %}
-{% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/column",
-  "shortName": "column",
-  "attrs": {
-    "uniqueID": "1041_2b4c10-6c",
-    "borderWidth": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "className": "inner-column-1"
-  }
-} %}
-{% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/advancedheading",
-  "shortName": "advancedheading",
-  "attrs": {
-    "uniqueID": "1041_f1275d-78",
-    "color": "var(--global-palette3)",
-    "fontSize": [
-      "xl",
-      "",
-      "lg"
-    ]
-  }
-} %}
-{% set kadenceInnerHtml %}
-Skicka oss ett meddelande
-{% endset %}
-{% include "blocks/kadence/advancedheading.njk" %}
 
-{% set kadenceBlock = {
-  "name": "kadence/advancedheading",
-  "shortName": "advancedheading",
-  "attrs": {
-    "uniqueID": "1041_db2b8a-d1",
-    "color": "var(--global-palette3)"
-  }
-} %}
-{% set kadenceInnerHtml %}
-Vill ni att vi ska kontakta er för samarbete? Vänligen fyll i formuläret nedan och skicka ett meddelande till oss!
-{% endset %}
-{% include "blocks/kadence/advancedheading.njk" %}
+<section class="contact-page">
+  <div class="contact-page-inner">
 
+    <div class="contact-info">
+      <p class="contact-lead">Vill du veta mer om projektet, föreslå ett samarbete eller komma i kontakt med forskarteamet? Skicka oss ett meddelande — vi svarar så snart som möjligt.</p>
 
-<p></p>
-{% endset %}
-{% include "blocks/kadence/column.njk" %}
+      <ul class="contact-details">
+        <li>
+          <span class="contact-detail-label">E-post</span>
+          <a href="mailto:info@generation-ai-stn.fi">info@generation-ai-stn.fi</a>
+        </li>
+        <li>
+          <span class="contact-detail-label">Projekt</span>
+          Generation AI — AI-utbildning för framtidens generation
+        </li>
+      </ul>
+    </div>
 
-{% set kadenceBlock = {
-  "name": "kadence/column",
-  "shortName": "column",
-  "attrs": {
-    "uniqueID": "1041_39d8bd-01",
-    "borderWidth": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "className": "inner-column-2"
-  }
-} %}
-{% set kadenceInnerHtml %}
-<!-- TODO: kadence/advanced-form ei tuettu — alkuperäinen sisältö säilytetty -->
-<div class="block-fallback block-fallback--advanced-form" data-original-block="kadence/advanced-form">
+    <div class="contact-form-wrap">
+      {# Ersätt YOUR_FORM_ID med ditt Formspree-formulär-ID (t.ex. xpwzabcd)     #}
+      {# Registrera dig på https://formspree.io och skapa ett formulär            #}
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="contact-form-field">
+          <label for="cf-name-sv">Namn</label>
+          <input id="cf-name-sv" type="text" name="name" required placeholder="Förnamn Efternamn">
+        </div>
+        <div class="contact-form-field">
+          <label for="cf-email-sv">E-post</label>
+          <input id="cf-email-sv" type="email" name="email" required placeholder="du@exempel.fi">
+        </div>
+        <div class="contact-form-field">
+          <label for="cf-subject-sv">Ämne</label>
+          <input id="cf-subject-sv" type="text" name="subject" placeholder="Vad handlar det om?">
+        </div>
+        <div class="contact-form-field">
+          <label for="cf-message-sv">Meddelande</label>
+          <textarea id="cf-message-sv" name="message" rows="5" required placeholder="Skriv ditt meddelande här…"></textarea>
+        </div>
+        <button class="contact-form-btn" type="submit">Skicka meddelande</button>
+      </form>
+    </div>
 
-</div>
-{% endset %}
-{% include "blocks/kadence/column.njk" %}
-{% endset %}
-{% set kadenceBlock = _kb_save_0 %}
-{% include "blocks/kadence/rowlayout.njk" %}
+  </div>
+</section>

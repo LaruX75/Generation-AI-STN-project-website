@@ -472,3 +472,31 @@ Hankkeessamme työskentelee useita kansainvälisesti tunnettuja tekoälyä tunte
 {% endset %}
 {% set kadenceBlock = _kb_save_1 %}
 {% include "blocks/kadence/rowlayout.njk" %}
+
+{% set codeschoolLabels = {
+  "heading": "Code School Finland",
+  "lead": "Code School Finlandin blogi- ja kurssivirroista poimitut Generation AI -sisallot on koottu tahan. Mukana ovat hanketta esittelevat sisallot seka tekoalylukutaidon opetukseen liittyvat kurssit.",
+  "source": "Lahde",
+  "button": "Avaa sisalto",
+  "article": "Artikkeli",
+  "course": "Kurssi",
+  "empty": "Code School -sisaltoja ei ole saatavilla juuri nyt."
+} %}
+{% include "partials/codeschool-showcase.njk" %}
+
+<section class="stakeholder-activities-page">
+  <div class="stakeholder-activities-page__inner">
+    {% set stakeholderRows = stakeholderPageData.projectItems or [] %}
+    {% set stakeholderLabels = {
+      "heading": "Sidosryhmayhteistyo ja koulutukset",
+      "lead": "Tahan koottu luettelo kuvaa hankkeen toimintaa verkostoissa, koulutuksissa, kunnissa, ministerioissa, kouluissa ja muissa yhteistyoymparistoissa.",
+      "stakeholder": "Sidosryhma",
+      "title": "Esityksen nimi / teema",
+      "participants": "Osallistujia",
+      "date": "Paivamaara",
+      "consortium": "Konsortio",
+      "empty": "Ei kirjauksia."
+    } %}
+    {% include "partials/stakeholder-activities-table.njk" %}
+  </div>
+</section>

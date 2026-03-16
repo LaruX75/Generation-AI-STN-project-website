@@ -1,41 +1,97 @@
 {% set allItems = tapahtumatItems or [] %}
 
+{% if lang == "en" %}
+  {% set lbl = {
+    "heading": "Events", "search": "Search events", "placeholder": "Search by title…",
+    "typeLabel": "Filter by type", "typeAll": "All types",
+    "typeConf": "Conferences and seminars", "typeConfVal": "conferences and seminars",
+    "typeWeb": "Webinar", "typeWebVal": "webinar",
+    "typeWS": "Workshop", "typeWSVal": "workshop",
+    "typeEvent": "Staff at events", "typeEventVal": "genai project staff at events",
+    "badgeConf": "Conference", "badgeWeb": "Webinar", "badgeWS": "Workshop", "badgeEvent": "Event",
+    "catConf": "Conferences and seminars", "catWeb": "Webinar", "catWS": "Workshop",
+    "catEvent1": "GenAI project staff at events", "catEvent2": "GenAI Project Staff at Events",
+    "yrLabel": "Filter by year", "yrAll": "All years",
+    "aria": "Events", "ariaPag": "Result page",
+    "colDate": "Date", "colType": "Type", "colTitle": "Title", "colDesc": "Description", "colLink": "Link",
+    "open": "Open", "na": "Not available", "empty": "No results.",
+    "prev": "← Previous", "next": "Next →",
+    "jsPage": "Page", "jsSep": "/", "jsResults": "results"
+  } %}
+{% elif lang == "sv" %}
+  {% set lbl = {
+    "heading": "Evenemang", "search": "Sök evenemang", "placeholder": "Sök på rubrik…",
+    "typeLabel": "Filtrera efter typ", "typeAll": "Alla typer",
+    "typeConf": "Konferenser och seminarier", "typeConfVal": "konferenser och seminarier",
+    "typeWeb": "Webbinarium", "typeWebVal": "webbinarium",
+    "typeWS": "Workshop", "typeWSVal": "workshop",
+    "typeEvent": "Personal vid evenemang", "typeEventVal": "genai-projektets personal vid evenemang",
+    "badgeConf": "Konferens", "badgeWeb": "Webbinarium", "badgeWS": "Workshop", "badgeEvent": "Evenemang",
+    "catConf": "Konferenser och seminarier", "catWeb": "Webbinarium", "catWS": "Workshop",
+    "catEvent1": "GenAI-projektets personal vid evenemang", "catEvent2": "GenAI-projektets personal på evenemang",
+    "yrLabel": "Filtrera efter år", "yrAll": "Alla år",
+    "aria": "Evenemang", "ariaPag": "Resultatsida",
+    "colDate": "Datum", "colType": "Typ", "colTitle": "Rubrik", "colDesc": "Beskrivning", "colLink": "Länk",
+    "open": "Öppna", "na": "Ej tillgänglig", "empty": "Inga resultat.",
+    "prev": "← Föregående", "next": "Nästa →",
+    "jsPage": "Sida", "jsSep": "/", "jsResults": "resultat"
+  } %}
+{% else %}
+  {% set lbl = {
+    "heading": "Tapahtumat", "search": "Hae tapahtumista", "placeholder": "Hae otsikolla…",
+    "typeLabel": "Suodata tyypeittäin", "typeAll": "Kaikki tyypit",
+    "typeConf": "Konferenssit ja seminaarit", "typeConfVal": "konferenssit ja seminaarit",
+    "typeWeb": "Webinaari", "typeWebVal": "webinaari",
+    "typeWS": "Työpaja", "typeWSVal": "työpaja",
+    "typeEvent": "Hankkeen henkilöstö tapahtumissa", "typeEventVal": "genai hankkeen henkilöstö tapahtumissa",
+    "badgeConf": "Konferenssi", "badgeWeb": "Webinaari", "badgeWS": "Työpaja", "badgeEvent": "Tapahtuma",
+    "catConf": "Konferenssit ja seminaarit", "catWeb": "Webinaari", "catWS": "Työpaja",
+    "catEvent1": "GenAI hankkeen henkilöstö tapahtumissa", "catEvent2": "GenAI Hankkeen henkilöstö tapahtumissa",
+    "yrLabel": "Suodata vuoden mukaan", "yrAll": "Kaikki vuodet",
+    "aria": "Tapahtumat", "ariaPag": "Tulossivu",
+    "colDate": "Päivämäärä", "colType": "Tyyppi", "colTitle": "Otsikko", "colDesc": "Kuvaus", "colLink": "Linkki",
+    "open": "Avaa", "na": "Ei saatavilla", "empty": "Ei tuloksia.",
+    "prev": "← Edellinen", "next": "Seuraava →",
+    "jsPage": "Sivu", "jsSep": "/", "jsResults": "tulosta"
+  } %}
+{% endif %}
+
 <section class="media-table-section" id="tapahtumat-table-section">
 
   <div class="media-table-header">
-    <h2 class="media-table-heading">Tapahtumat</h2>
+    <h2 class="media-table-heading">{{ lbl.heading }}</h2>
     <div class="media-table-controls">
       <div class="media-table-search-wrap">
-        <label for="tapahtumat-search" class="sr-only">Hae tapahtumista</label>
-        <input type="search" id="tapahtumat-search" class="media-table-search" placeholder="Hae otsikolla…" autocomplete="off">
+        <label for="tapahtumat-search" class="sr-only">{{ lbl.search }}</label>
+        <input type="search" id="tapahtumat-search" class="media-table-search" placeholder="{{ lbl.placeholder }}" autocomplete="off">
       </div>
       <div class="media-table-filters">
-        <label for="tapahtumat-filter-type" class="sr-only">Suodata tyypeittäin</label>
+        <label for="tapahtumat-filter-type" class="sr-only">{{ lbl.typeLabel }}</label>
         <select id="tapahtumat-filter-type" class="media-table-filter">
-          <option value="">Kaikki tyypit</option>
-          <option value="konferenssit ja seminaarit">Konferenssit ja seminaarit</option>
-          <option value="webinaari">Webinaari</option>
-          <option value="työpaja">Työpaja</option>
-          <option value="genai hankkeen henkilöstö tapahtumissa">Hankkeen henkilöstö tapahtumissa</option>
+          <option value="">{{ lbl.typeAll }}</option>
+          <option value="{{ lbl.typeConfVal }}">{{ lbl.typeConf }}</option>
+          <option value="{{ lbl.typeWebVal }}">{{ lbl.typeWeb }}</option>
+          <option value="{{ lbl.typeWSVal }}">{{ lbl.typeWS }}</option>
+          <option value="{{ lbl.typeEventVal }}">{{ lbl.typeEvent }}</option>
         </select>
-        <label for="tapahtumat-filter-year" class="sr-only">Suodata vuoden mukaan</label>
+        <label for="tapahtumat-filter-year" class="sr-only">{{ lbl.yrLabel }}</label>
         <select id="tapahtumat-filter-year" class="media-table-filter">
-          <option value="">Kaikki vuodet</option>
+          <option value="">{{ lbl.yrAll }}</option>
         </select>
       </div>
       <p class="media-table-count" id="tapahtumat-count" aria-live="polite"></p>
     </div>
   </div>
 
-  <div class="media-table-wrap" role="region" aria-label="Tapahtumat" tabindex="0">
+  <div class="media-table-wrap" role="region" aria-label="{{ lbl.aria }}" tabindex="0">
     <table class="media-table" id="tapahtumat-table">
       <thead>
         <tr>
-          <th scope="col" class="media-table-col--date">Päivämäärä</th>
-          <th scope="col" class="media-table-col--source">Tyyppi</th>
-          <th scope="col" class="media-table-col--title">Otsikko</th>
-          <th scope="col" class="media-table-col--content">Kuvaus</th>
-          <th scope="col" class="media-table-col--link">Linkki</th>
+          <th scope="col" class="media-table-col--date">{{ lbl.colDate }}</th>
+          <th scope="col" class="media-table-col--source">{{ lbl.colType }}</th>
+          <th scope="col" class="media-table-col--title">{{ lbl.colTitle }}</th>
+          <th scope="col" class="media-table-col--content">{{ lbl.colDesc }}</th>
+          <th scope="col" class="media-table-col--link">{{ lbl.colLink }}</th>
         </tr>
       </thead>
       <tbody id="tapahtumat-table-body">
@@ -48,17 +104,16 @@
               <time datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date("d.m.Y") }}</time>
             </td>
             <td class="media-table-col--source">
-              {% set badgeCat = "" %}
               {% if post.data.categories %}
                 {% for cat in post.data.categories %}
-                  {% if cat == "Konferenssit ja seminaarit" %}
-                    <span class="media-table-source-badge tapahtumat-badge--konferenssi">Konferenssi</span>
-                  {% elif cat == "Webinaari" %}
-                    <span class="media-table-source-badge tapahtumat-badge--webinaari">Webinaari</span>
-                  {% elif cat == "Työpaja" %}
-                    <span class="media-table-source-badge tapahtumat-badge--tyopaja">Työpaja</span>
-                  {% elif cat == "GenAI hankkeen henkilöstö tapahtumissa" %}
-                    <span class="media-table-source-badge tapahtumat-badge--tapahtuma">Tapahtuma</span>
+                  {% if cat == lbl.catConf %}
+                    <span class="media-table-source-badge tapahtumat-badge--konferenssi">{{ lbl.badgeConf }}</span>
+                  {% elif cat == lbl.catWeb %}
+                    <span class="media-table-source-badge tapahtumat-badge--webinaari">{{ lbl.badgeWeb }}</span>
+                  {% elif cat == lbl.catWS %}
+                    <span class="media-table-source-badge tapahtumat-badge--tyopaja">{{ lbl.badgeWS }}</span>
+                  {% elif cat == lbl.catEvent1 or cat == lbl.catEvent2 %}
+                    <span class="media-table-source-badge tapahtumat-badge--tapahtuma">{{ lbl.badgeEvent }}</span>
                   {% endif %}
                 {% endfor %}
               {% endif %}
@@ -68,12 +123,12 @@
               {% if post.data.excerpt and post.data.excerpt != "[object Object]" %}
                 {{ post.data.excerpt | truncate(200) }}
               {% else %}
-                <span class="media-table-na">Ei saatavilla</span>
+                <span class="media-table-na">{{ lbl.na }}</span>
               {% endif %}
             </td>
             <td class="media-table-col--link">
               {% if post.url %}
-                <a href="{{ post.url }}" class="media-table-link">Avaa&nbsp;↗</a>
+                <a href="{{ post.url }}" class="media-table-link">{{ lbl.open }}&nbsp;↗</a>
               {% else %}
                 <span class="media-table-na">—</span>
               {% endif %}
@@ -82,13 +137,13 @@
         {% endfor %}
       </tbody>
     </table>
-    <p class="media-table-empty" id="tapahtumat-empty" hidden>Ei tuloksia.</p>
+    <p class="media-table-empty" id="tapahtumat-empty" hidden>{{ lbl.empty }}</p>
   </div>
 
-  <nav class="media-table-pagination" id="tapahtumat-pagination" aria-label="Tulossivu">
-    <button class="media-table-page-btn" id="tapahtumat-prev" aria-label="Edellinen sivu">← Edellinen</button>
+  <nav class="media-table-pagination" id="tapahtumat-pagination" aria-label="{{ lbl.ariaPag }}">
+    <button class="media-table-page-btn" id="tapahtumat-prev" aria-label="{{ lbl.prev }}">{{ lbl.prev }}</button>
     <span class="media-table-page-info" id="tapahtumat-page-info" aria-live="polite"></span>
-    <button class="media-table-page-btn" id="tapahtumat-next" aria-label="Seuraava sivu">Seuraava →</button>
+    <button class="media-table-page-btn" id="tapahtumat-next" aria-label="{{ lbl.next }}">{{ lbl.next }}</button>
   </nav>
 
 </section>
@@ -111,7 +166,6 @@
   var filtered = allRows.slice();
   var currentPage = 1;
 
-  // Populate year filter
   (function () {
     var years = {};
     allRows.forEach(function (row) { var y = row.dataset.year; if (y) years[y] = true; });
@@ -145,8 +199,8 @@
     emptyEl.hidden = total > 0;
     prevBtn.disabled = currentPage <= 1;
     nextBtn.disabled = currentPage >= totalPages;
-    pageInfo.textContent = 'Sivu\u00a0' + currentPage + '\u00a0/\u00a0' + totalPages;
-    countEl.textContent  = total + '\u00a0tulosta';
+    pageInfo.textContent = '{{ lbl.jsPage }}\u00a0' + currentPage + '\u00a0{{ lbl.jsSep }}\u00a0' + totalPages;
+    countEl.textContent  = total + '\u00a0{{ lbl.jsResults }}';
   }
 
   searchEl.addEventListener('input',  function () { currentPage = 1; render(); });

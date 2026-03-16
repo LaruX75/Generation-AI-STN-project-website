@@ -416,3 +416,14 @@ I vårt projekt arbetar flera internationellt kända experter på artificiell in
 {% endset %}
 {% set kadenceBlock = _kb_save_1 %}
 {% include "blocks/kadence/rowlayout.njk" %}
+
+{% set codeschoolLabels = {
+  "heading": "Code School Finland",
+  "lead": "Har samlas Generation AI-relaterat innehall fran Code School Finlands blogg och kursplattform, inklusive partneruppdateringar och kurser i AI-lasfardighet for utbildare.",
+  "source": "Kalla",
+  "button": "Oppna innehall",
+  "article": "Artikel",
+  "course": "Kurs",
+  "empty": "Inget Code School-innehall finns tillgangligt just nu."
+} %}
+{% include "partials/codeschool-showcase.njk" %}

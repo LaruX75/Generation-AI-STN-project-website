@@ -1,40 +1,81 @@
 {% set allItems = scientificPublications.items or [] %}
 
+{% if lang == "en" %}
+  {% set lbl = {
+    "heading": "Scientific publications",
+    "search": "Search publications", "placeholder": "Search by title…",
+    "catLabel": "Filter by publication type", "catAll": "All types",
+    "catA": "A — Peer-reviewed articles", "catBE": "B/E — Books and edited volumes", "catOther": "Other",
+    "yrLabel": "Filter by year", "yrAll": "All years",
+    "aria": "Scientific publications", "ariaPag": "Result page",
+    "colYear": "Year", "colCode": "Code", "colTitle": "Title", "colContent": "Authors / Venue", "colLink": "Link",
+    "open": "Open", "na": "—", "empty": "No results.",
+    "prev": "← Previous", "next": "Next →",
+    "jsPage": "Page", "jsSep": "/", "jsResults": "results"
+  } %}
+{% elif lang == "sv" %}
+  {% set lbl = {
+    "heading": "Vetenskapliga publikationer",
+    "search": "Sök publikationer", "placeholder": "Sök på rubrik…",
+    "catLabel": "Filtrera efter publikationstyp", "catAll": "Alla typer",
+    "catA": "A — Referentgranskade artiklar", "catBE": "B/E — Böcker och antologier", "catOther": "Övriga",
+    "yrLabel": "Filtrera efter år", "yrAll": "Alla år",
+    "aria": "Vetenskapliga publikationer", "ariaPag": "Resultatsida",
+    "colYear": "År", "colCode": "Kod", "colTitle": "Titel", "colContent": "Författare / Publikation", "colLink": "Länk",
+    "open": "Öppna", "na": "—", "empty": "Inga resultat.",
+    "prev": "← Föregående", "next": "Nästa →",
+    "jsPage": "Sida", "jsSep": "/", "jsResults": "resultat"
+  } %}
+{% else %}
+  {% set lbl = {
+    "heading": "Tieteelliset julkaisut",
+    "search": "Hae julkaisuista", "placeholder": "Hae otsikolla…",
+    "catLabel": "Suodata julkaisutyypin mukaan", "catAll": "Kaikki julkaisutyypit",
+    "catA": "A — Vertaisarvioidut artikkelit", "catBE": "B/E — Kirjat ja kokoomateokset", "catOther": "Muut",
+    "yrLabel": "Suodata vuoden mukaan", "yrAll": "Kaikki vuodet",
+    "aria": "Tieteelliset julkaisut", "ariaPag": "Tulossivu",
+    "colYear": "Vuosi", "colCode": "Koodi", "colTitle": "Otsikko", "colContent": "Tekijät / Julkaisupaikka", "colLink": "Linkki",
+    "open": "Avaa", "na": "—", "empty": "Ei tuloksia.",
+    "prev": "← Edellinen", "next": "Seuraava →",
+    "jsPage": "Sivu", "jsSep": "/", "jsResults": "tulosta"
+  } %}
+{% endif %}
+
 <section class="media-table-section" id="scipub-table-section">
 
   <div class="media-table-header">
-    <h2 class="media-table-heading">Tieteelliset julkaisut</h2>
+    <h2 class="media-table-heading">{{ lbl.heading }}</h2>
     <div class="media-table-controls">
       <div class="media-table-search-wrap">
-        <label for="scipub-search" class="sr-only">Hae julkaisuista</label>
-        <input type="search" id="scipub-search" class="media-table-search" placeholder="Hae otsikolla…" autocomplete="off">
+        <label for="scipub-search" class="sr-only">{{ lbl.search }}</label>
+        <input type="search" id="scipub-search" class="media-table-search" placeholder="{{ lbl.placeholder }}" autocomplete="off">
       </div>
       <div class="media-table-filters">
-        <label for="scipub-filter-cat" class="sr-only">Suodata julkaisutyypin mukaan</label>
+        <label for="scipub-filter-cat" class="sr-only">{{ lbl.catLabel }}</label>
         <select id="scipub-filter-cat" class="media-table-filter">
-          <option value="">Kaikki julkaisutyypit</option>
-          <option value="a">A — Vertaisarvioidut artikkelit</option>
-          <option value="be">B/E — Kirjat ja kokoomateokset</option>
-          <option value="other">Muut</option>
+          <option value="">{{ lbl.catAll }}</option>
+          <option value="a">{{ lbl.catA }}</option>
+          <option value="be">{{ lbl.catBE }}</option>
+          <option value="other">{{ lbl.catOther }}</option>
         </select>
-        <label for="scipub-filter-year" class="sr-only">Suodata vuoden mukaan</label>
+        <label for="scipub-filter-year" class="sr-only">{{ lbl.yrLabel }}</label>
         <select id="scipub-filter-year" class="media-table-filter">
-          <option value="">Kaikki vuodet</option>
+          <option value="">{{ lbl.yrAll }}</option>
         </select>
       </div>
       <p class="media-table-count" id="scipub-count" aria-live="polite"></p>
     </div>
   </div>
 
-  <div class="media-table-wrap" role="region" aria-label="Tieteelliset julkaisut" tabindex="0">
+  <div class="media-table-wrap" role="region" aria-label="{{ lbl.aria }}" tabindex="0">
     <table class="media-table" id="scipub-table">
       <thead>
         <tr>
-          <th scope="col" class="media-table-col--date">Vuosi</th>
-          <th scope="col" class="media-table-col--source">Koodi</th>
-          <th scope="col" class="media-table-col--title">Otsikko</th>
-          <th scope="col" class="media-table-col--content">Tekijät / Julkaisupaikka</th>
-          <th scope="col" class="media-table-col--link">Linkki</th>
+          <th scope="col" class="media-table-col--date">{{ lbl.colYear }}</th>
+          <th scope="col" class="media-table-col--source">{{ lbl.colCode }}</th>
+          <th scope="col" class="media-table-col--title">{{ lbl.colTitle }}</th>
+          <th scope="col" class="media-table-col--content">{{ lbl.colContent }}</th>
+          <th scope="col" class="media-table-col--link">{{ lbl.colLink }}</th>
         </tr>
       </thead>
       <tbody id="scipub-table-body">
@@ -54,22 +95,22 @@
             </td>
             <td class="media-table-col--link">
               {% if item.link %}
-                <a href="{{ item.link }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ item.linkLabel | default('Avaa') }}&nbsp;↗</a>
+                <a href="{{ item.link }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ item.linkLabel | default(lbl.open) }}&nbsp;↗</a>
               {% else %}
-                <span class="media-table-na">—</span>
+                <span class="media-table-na">{{ lbl.na }}</span>
               {% endif %}
             </td>
           </tr>
         {% endfor %}
       </tbody>
     </table>
-    <p class="media-table-empty" id="scipub-empty" hidden>Ei tuloksia.</p>
+    <p class="media-table-empty" id="scipub-empty" hidden>{{ lbl.empty }}</p>
   </div>
 
-  <nav class="media-table-pagination" id="scipub-pagination" aria-label="Tulossivu">
-    <button class="media-table-page-btn" id="scipub-prev" aria-label="Edellinen sivu">← Edellinen</button>
+  <nav class="media-table-pagination" id="scipub-pagination" aria-label="{{ lbl.ariaPag }}">
+    <button class="media-table-page-btn" id="scipub-prev" aria-label="{{ lbl.prev }}">{{ lbl.prev }}</button>
     <span class="media-table-page-info" id="scipub-page-info" aria-live="polite"></span>
-    <button class="media-table-page-btn" id="scipub-next" aria-label="Seuraava sivu">Seuraava →</button>
+    <button class="media-table-page-btn" id="scipub-next" aria-label="{{ lbl.next }}">{{ lbl.next }}</button>
   </nav>
 
 </section>
@@ -92,7 +133,6 @@
   var filtered = allRows.slice();
   var currentPage = 1;
 
-  // Populate year filter dynamically from row data, sorted descending
   (function () {
     var years = {};
     allRows.forEach(function (row) { var y = row.dataset.year; if (y) years[y] = true; });
@@ -126,8 +166,8 @@
     emptyEl.hidden = total > 0;
     prevBtn.disabled = currentPage <= 1;
     nextBtn.disabled = currentPage >= totalPages;
-    pageInfo.textContent = 'Sivu\u00a0' + currentPage + '\u00a0/\u00a0' + totalPages;
-    countEl.textContent  = total + '\u00a0tulosta';
+    pageInfo.textContent = '{{ lbl.jsPage }}\u00a0' + currentPage + '\u00a0{{ lbl.jsSep }}\u00a0' + totalPages;
+    countEl.textContent  = total + '\u00a0{{ lbl.jsResults }}';
   }
 
   searchEl.addEventListener('input',  function () { currentPage = 1; render(); });

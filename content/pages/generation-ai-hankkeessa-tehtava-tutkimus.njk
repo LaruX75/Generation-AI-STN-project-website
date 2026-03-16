@@ -118,6 +118,23 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
   </div>
 </section>
 
+<section class="researcher-presentations">
+  <div class="researcher-presentations-inner">
+    {% set stakeholderRows = stakeholderPageData.researchItems or [] %}
+    {% set stakeholderLabels = {
+      "heading": "Tutkimusesitykset ja keynote-puheenvuorot",
+      "lead": "Rakenteinen luettelo kokoaa hankkeen tieteelliset esitykset, keynote-puheenvuorot, workshopit ja muut tutkimukseen liittyvat esiintymiset.",
+      "stakeholder": "Sidosryhma / tapahtuma",
+      "title": "Esityksen nimi / teema",
+      "participants": "Osallistujia",
+      "date": "Paivamaara",
+      "consortium": "Konsortio",
+      "empty": "Ei kirjauksia."
+    } %}
+    {% include "partials/stakeholder-activities-table.njk" %}
+  </div>
+</section>
+
 {# ── Tieteelliset julkaisut ───────────────────────────────────────────────── #}
 <section class="researcher-publications" id="julkaisut">
   <div class="researcher-publications-inner">

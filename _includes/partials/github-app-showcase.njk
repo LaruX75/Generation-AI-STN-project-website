@@ -1,0 +1,50 @@
+{% set githubApps = githubApps or [] %}
+{% if githubApps.length %}
+<section class="mat-section mat-section--alt">
+  <div class="mat-section-inner">
+    <h2 class="mat-section-heading">{{ githubShowcaseLabels.heading }}</h2>
+    <div class="gen-ai-tools-intro">
+      <p>{{ githubShowcaseLabels.lead }}</p>
+    </div>
+
+    <div class="gen-ai-tool-grid">
+      {% for item in githubApps %}
+        <div class="gen-ai-tool-card gen-ai-tool-card--github">
+          <span class="gen-ai-tool-card-type">{{ githubShowcaseLabels.type }}</span>
+          <div class="gen-ai-tool-card-header">
+            <span class="gen-ai-tool-badge gen-ai-tool-badge--active">{{ githubShowcaseLabels.active }}</span>
+            {% if item.pushedAt %}
+              <span class="gen-ai-tool-badge gen-ai-tool-badge--beta">
+                {{ githubShowcaseLabels.updated }} {{ item.pushedAt | date("d.m.Y") }}
+              </span>
+            {% endif %}
+          </div>
+          <h3 class="gen-ai-tool-card-title">{{ item.appTitle }}</h3>
+          <p class="gen-ai-tool-card-desc">
+            <strong>{{ item.fullName }}</strong>
+            {% if item.description %}
+              <br>{{ item.description }}
+            {% endif %}
+          </p>
+          <div class="gen-ai-tool-card-meta">
+            <span class="gen-ai-tool-tag">{{ item.ownerLogin }}</span>
+            {% if item.language %}
+              <span class="gen-ai-tool-tag">{{ item.language }}</span>
+            {% endif %}
+            {% if item.license %}
+              <span class="gen-ai-tool-tag">{{ item.license }}</span>
+            {% endif %}
+            <span class="gen-ai-tool-tag">{{ item.stargazersCount }} {{ githubShowcaseLabels.stars }}</span>
+            <span class="gen-ai-tool-tag">{{ item.forksCount }} {{ githubShowcaseLabels.forks }}</span>
+            <span class="gen-ai-tool-tag">{{ item.openIssuesCount }} {{ githubShowcaseLabels.issues }}</span>
+          </div>
+          <div class="gen-ai-tool-card-links">
+            <a class="gen-ai-tool-card-about" href="{{ item.repoUrl }}" target="_blank" rel="noopener">GitHub</a>
+            <a class="gen-ai-tool-card-link" href="{{ item.appUrl }}" target="_blank" rel="noopener">{{ githubShowcaseLabels.openApp }}</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

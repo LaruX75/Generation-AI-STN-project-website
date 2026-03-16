@@ -1,253 +1,91 @@
 ---
 title: 'Current affairs'
+seoTitle: Current affairs — Generation AI
+seoDescription: Follow the project's media visibility, events, activities, and research results.
 date: "2023-01-29T20:19:24"
-updated: "2025-02-12T21:19:16"
+updated: "2026-03-16T00:00:00"
 slug: current-affairs
 permalink: /en/current-affairs/
 status: publish
 sourceType: pages
-excerpt: ""
-categories: []
-tags: []
 lang: en
 author: admin
 layout: layouts/page.njk
-pageHero: true
-heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnotized_computer_hyper_reali_7e5fceac-75e4-4087-8364-b0ae1a8e0b00.png"
+pageHero: false
 ---
-{% set kadenceBlock = {
-  "name": "kadence/rowlayout",
-  "shortName": "rowlayout",
-  "attrs": {
-    "uniqueID": "3797_c59fe0-48",
-    "columns": 1,
-    "colLayout": "equal",
-    "align": "full"
-  }
-} %}
-{% set _kb_save_12 = kadenceBlock %}
-{% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/column",
-  "shortName": "column",
-  "attrs": {
-    "uniqueID": "3797_f15104-16",
-    "borderWidth": [
-      "",
-      "",
-      "",
-      ""
-    ]
-  }
-} %}
-{% set _kb_save_11 = kadenceBlock %}
-{% set kadenceInnerHtml %}
+
+<section class="news-intro">
+  <div class="news-intro-inner">
+    <p class="news-intro-desc">Follow the project's media visibility, events, activities, and research results.</p>
+  </div>
+</section>
+
+{% set projectPosts = collections["hankkeen-toiminta"] | localizedItems(lang, page.url) %}
+{% set researchPosts = collections["tutkimus"] | localizedItems(lang, page.url) %}
+{% set projectCards = projectPosts | mergeChronologicalCards(stakeholderPageData.projectItems or []) %}
+{% set researchCards = researchPosts | mergeChronologicalCards(stakeholderPageData.researchItems or []) %}
+
 {% set kadenceBlock = {
   "name": "kadence/tabs",
   "shortName": "tabs",
   "attrs": {
-    "uniqueID": "3797_98f5be-64"
+    "uniqueID": "407_d2c3b0-en"
   }
 } %}
-{% set _kb_save_10 = kadenceBlock %}
 {% set kadenceInnerHtml %}
-<ul class="kt-tabs-title-list"><li id="tab-media" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-media" data-tab="1" class="kt-tab-title kt-tab-title-1"><span class="kt-title-text">Media</span></a></li><li id="tab-events" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-active"><a href="#tab-events" data-tab="2" class="kt-tab-title kt-tab-title-2"><span class="kt-title-text">Events</span></a></li><li id="tab-projectactivities" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-projectactivities" data-tab="3" class="kt-tab-title kt-tab-title-3"><span class="kt-title-text">Project activities</span></a></li><li id="tab-researchactivities" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-researchactivities" data-tab="4" class="kt-tab-title kt-tab-title-4"><span class="kt-title-text">Research activities</span></a></li><li id="tab-publications" class="kt-title-item kt-title-item-5 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-publications" data-tab="5" class="kt-tab-title kt-tab-title-5"><span class="kt-title-text">Publications</span></a></li><li id="tab-universities" class="kt-title-item kt-title-item-6 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-universities" data-tab="6" class="kt-tab-title kt-tab-title-6"><span class="kt-title-text">University pages</span></a></li></ul><div class="kt-tabs-content-wrap">{% set kadenceBlock = {
+<ul class="kt-tabs-title-list"><li id="tab-media" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-active"><a href="#tab-media" data-tab="1" class="kt-tab-title kt-tab-title-1"><span class="kt-title-text">News</span></a></li><li id="tab-tapahtumat" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tapahtumat" data-tab="2" class="kt-tab-title kt-tab-title-2"><span class="kt-title-text">Events</span></a></li><li id="tab-toiminta" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-toiminta" data-tab="3" class="kt-tab-title kt-tab-title-3"><span class="kt-title-text">Project activities</span></a></li><li id="tab-tutkimus" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tutkimus" data-tab="4" class="kt-tab-title kt-tab-title-4"><span class="kt-title-text">Conferences and publications</span></a></li></ul><div class="kt-tabs-content-wrap">{% set mediaItems = collections["media"] | localizedItems(lang, page.url) %}
+{% set kadenceBlock = {
   "name": "kadence/tab",
   "shortName": "tab",
   "attrs": {
-    "uniqueID": "8958a6-8d"
+    "uniqueID": "8958a6-en"
   }
 } %}
-{% set _kb_save_1 = kadenceBlock %}
 {% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/query",
-  "shortName": "query",
-  "attrs": {
-    "uniqueID": "3797_6bfa02-ed"
-  }
-} %}
-{% set _kb_save_0 = kadenceBlock %}
-{% set kadenceInnerHtml %}
-
+{% include "partials/media-table.njk" %}
 {% endset %}
-{% set kadenceBlock = _kb_save_0 %}
-{% include "blocks/kadence/query.njk" %}
-{% endset %}
-{% set kadenceBlock = _kb_save_1 %}
 {% include "blocks/kadence/tab.njk" %}
 
 {% set kadenceBlock = {
   "name": "kadence/tab",
   "shortName": "tab",
   "attrs": {
-    "uniqueID": "857bf9-b0"
+    "uniqueID": "857bf9-en"
   }
 } %}
-{% set _kb_save_3 = kadenceBlock %}
+{% set tapahtumatItems = collections["tapahtumat"] | localizedItems(lang, page.url) %}
 {% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/query",
-  "shortName": "query",
-  "attrs": {
-    "uniqueID": "3797_2aa64a-46"
-  }
-} %}
-{% set _kb_save_2 = kadenceBlock %}
-{% set kadenceInnerHtml %}
-
+{% include "partials/tapahtumat-table.njk" %}
 {% endset %}
-{% set kadenceBlock = _kb_save_2 %}
-{% include "blocks/kadence/query.njk" %}
-{% endset %}
-{% set kadenceBlock = _kb_save_3 %}
 {% include "blocks/kadence/tab.njk" %}
 
 {% set kadenceBlock = {
   "name": "kadence/tab",
   "shortName": "tab",
   "attrs": {
-    "uniqueID": "6c5534-c7"
+    "uniqueID": "6c5534-en"
   }
 } %}
-{% set _kb_save_5 = kadenceBlock %}
+{% set toimintaCards = projectCards %}
 {% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/query",
-  "shortName": "query",
-  "attrs": {
-    "uniqueID": "3797_6ef8b4-56"
-  }
-} %}
-{% set _kb_save_4 = kadenceBlock %}
-{% set kadenceInnerHtml %}
-
+{% include "partials/toiminta-table.njk" %}
 {% endset %}
-{% set kadenceBlock = _kb_save_4 %}
-{% include "blocks/kadence/query.njk" %}
-{% endset %}
-{% set kadenceBlock = _kb_save_5 %}
 {% include "blocks/kadence/tab.njk" %}
 
 {% set kadenceBlock = {
   "name": "kadence/tab",
   "shortName": "tab",
   "attrs": {
-    "uniqueID": "defcbe-f1"
+    "uniqueID": "defcbe-en"
   }
 } %}
-{% set _kb_save_7 = kadenceBlock %}
+{% set tutkimusCards = researchCards %}
 {% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/query",
-  "shortName": "query",
-  "attrs": {
-    "uniqueID": "3797_d2b8b4-bf"
-  }
-} %}
-{% set _kb_save_6 = kadenceBlock %}
-{% set kadenceInnerHtml %}
-
-{% endset %}
-{% set kadenceBlock = _kb_save_6 %}
-{% include "blocks/kadence/query.njk" %}
-{% endset %}
-{% set kadenceBlock = _kb_save_7 %}
-{% include "blocks/kadence/tab.njk" %}
-
-{% set kadenceBlock = {
-  "name": "kadence/tab",
-  "shortName": "tab",
-  "attrs": {
-    "uniqueID": "6aa9cf-e7"
-  }
-} %}
-{% set _kb_save_9 = kadenceBlock %}
-{% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/advancedheading",
-  "shortName": "advancedheading",
-  "attrs": {
-    "uniqueID": "3797_b45fed-7a",
-    "level": 1
-  }
-} %}
-{% set _kb_save_8 = kadenceBlock %}
-{% set kadenceInnerHtml %}
-Scientific publications
-{% endset %}
-{% set kadenceBlock = _kb_save_8 %}
-{% include "blocks/kadence/advancedheading.njk" %}
-
-{% set publicationTableId = "scientific-publications-en" %}
-{% set publicationTableLabels = {
-  "searchLabel": "Search",
-  "searchPlaceholder": "Search all columns",
-  "authorsLabel": "Authors",
-  "authorsPlaceholder": "Filter authors",
-  "yearLabel": "Year",
-  "allYearsLabel": "All years",
-  "submittedLabel": "Submitted",
-  "inPressLabel": "In press",
-  "titleLabel": "Title",
-  "titlePlaceholder": "Filter titles",
-  "venueLabel": "Publication",
-  "venuePlaceholder": "Filter publications",
-  "linkLabel": "Link",
-  "allLinksLabel": "All",
-  "withLinkLabel": "Link available",
-  "withoutLinkLabel": "No link",
-  "openLinkLabel": "Open",
-  "noLinkLabel": "-",
-  "emptyMessage": "No publications matched the current filters.",
-  "countLabel": "publications",
-  "countLabelSingular": "publication"
-} %}
+{% include "partials/tutkimus-table.njk" %}
 {% include "partials/scientific-publications-table.njk" %}
 {% endset %}
-{% set kadenceBlock = _kb_save_9 %}
 {% include "blocks/kadence/tab.njk" %}
 
-{% set kadenceBlock = {
-  "name": "kadence/tab",
-  "shortName": "tab",
-  "attrs": {
-    "uniqueID": "inst-visibility-en"
-  }
-} %}
-{% set kadenceInnerHtml %}
-{% set institutionalVisibilityLabels = {
-  "heading": "University pages, news, and releases",
-  "lead": "This list collects Generation AI staff visibility from university-owned news pages, press releases, and project pages.",
-  "date": "Date",
-  "source": "Source",
-  "title": "Title",
-  "people": "People",
-  "note": "Note: for project pages the date shown is the project start date, not necessarily the page publication date."
-} %}
-{% include "partials/institutional-visibility-table.njk" %}
+</div>
 {% endset %}
-{% include "blocks/kadence/tab.njk" %}</div>
-{% endset %}
-{% set kadenceBlock = _kb_save_10 %}
 {% include "blocks/kadence/tabs.njk" %}
-{% endset %}
-{% set kadenceBlock = _kb_save_11 %}
-{% include "blocks/kadence/column.njk" %}
-{% endset %}
-{% set kadenceBlock = _kb_save_12 %}
-{% include "blocks/kadence/rowlayout.njk" %}
-
-{% set kadenceBlock = {
-  "name": "kadence/advancedheading",
-  "shortName": "advancedheading",
-  "attrs": {
-    "uniqueID": "3797_f6b5f8-b8"
-  }
-} %}
-{% set _kb_save_13 = kadenceBlock %}
-{% set kadenceInnerHtml %}
-
-{% endset %}
-{% set kadenceBlock = _kb_save_13 %}
-{% include "blocks/kadence/advancedheading.njk" %}

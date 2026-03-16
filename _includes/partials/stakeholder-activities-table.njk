@@ -1,0 +1,30 @@
+{% set rows = stakeholderRows or [] %}
+{% set labels = stakeholderLabels or {
+  "heading": "Sidosryhmaesitykset",
+  "lead": "",
+  "stakeholder": "Sidosryhma",
+  "title": "Esityksen nimi / teema",
+  "participants": "Osallistujia",
+  "date": "Paivamaara",
+  "empty": "Ei kirjauksia.",
+  "participantsSuffix": "osallistujaa"
+} %}
+
+<section class="stakeholder-activities">
+  <div class="stakeholder-activities__header">
+    <h2 class="stakeholder-activities__title">{{ labels.heading }}</h2>
+    {% if labels.lead %}
+      <p class="stakeholder-activities__lead">{{ labels.lead }}</p>
+    {% endif %}
+  </div>
+  <div class="stakeholder-activities__grid">
+    {% for row in rows %}
+      {% set stakeholderRow = row %}
+      {% include "partials/stakeholder-activity-card.njk" %}
+    {% else %}
+      <div class="stakeholder-activities__empty">
+        {{ labels.empty }}
+      </div>
+    {% endfor %}
+  </div>
+</section>

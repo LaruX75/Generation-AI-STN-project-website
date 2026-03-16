@@ -1,0 +1,53 @@
+{% set codeschoolItems = codeschool_generation_ai_combined or [] %}
+<section class="codeschool-showcase">
+  <div class="codeschool-showcase__inner">
+    <div class="codeschool-showcase__header">
+      <h2 class="codeschool-showcase__heading">{{ codeschoolLabels.heading }}</h2>
+      {% if codeschoolLabels.lead %}
+        <p class="codeschool-showcase__lead">{{ codeschoolLabels.lead }}</p>
+      {% endif %}
+    </div>
+
+    {% if codeschoolItems.length %}
+      <div class="kb-query-grid codeschool-showcase__grid">
+        {% for item in codeschoolItems %}
+          {% set summary = (item.excerpt or item.description or item.contentText or "") | striptags | trim %}
+          <article class="kb-query-item codeschool-showcase__card">
+            {% if item.imageUrl %}
+              <a href="{{ item.url }}" class="kb-query-item__thumb" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+                <img src="{{ item.imageUrl }}" alt="{{ item.title }}" loading="lazy" />
+              </a>
+            {% endif %}
+            <div class="kb-query-item__body codeschool-showcase__body">
+              <div class="kb-query-item__cats codeschool-showcase__cats">
+                <span class="kb-query-item__cat">{{ codeschoolLabels[item.contentType] or item.contentTypeLabel or item.contentType }}</span>
+                {% if item.datePublished %}
+                  <span class="kb-query-item__cat">{{ item.datePublished | date("d.m.Y") }}</span>
+                {% elseif item.price %}
+                  <span class="kb-query-item__cat">{{ item.price }}</span>
+                {% endif %}
+              </div>
+              <h3 class="kb-query-item__title">
+                <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+              </h3>
+              {% if summary %}
+                <p class="kb-query-item__excerpt">{{ summary | truncate(170) }}</p>
+              {% endif %}
+              <p class="codeschool-showcase__source">
+                <span class="codeschool-showcase__source-label">{{ codeschoolLabels.source }}</span>
+                <span>{{ item.sourceLabel }}</span>
+              </p>
+              <p class="codeschool-showcase__actions">
+                <a href="{{ item.url }}" class="codeschool-showcase__link" target="_blank" rel="noopener noreferrer">
+                  {{ codeschoolLabels.button }}
+                </a>
+              </p>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="codeschool-showcase__empty">{{ codeschoolLabels.empty }}</p>
+    {% endif %}
+  </div>
+</section>

@@ -1,72 +1,48 @@
 ---
 title: 'Aktuellt'
+seoTitle: Aktuellt — Generation AI
+seoDescription: Följ projektets mediesynlighet, evenemang, verksamhet och forskningsresultat.
 date: "2023-01-29T20:19:24"
-updated: "2025-02-12T21:17:34"
+updated: "2026-03-16T00:00:00"
 slug: aktuellt
 permalink: /sv/aktuellt/
 status: publish
 sourceType: pages
-excerpt: 'Projektets senaste nyheter, evenemang, medietext och forskningspublikationer.'
-categories: []
-tags: []
+lang: sv
 author: admin
 layout: layouts/page.njk
-lang: sv
-pageHero: true
-heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnotized_computer_hyper_reali_7e5fceac-75e4-4087-8364-b0ae1a8e0b00.png"
+pageHero: false
 ---
-{% set kadenceBlock = {
-  "name": "kadence/rowlayout",
-  "shortName": "rowlayout",
-  "attrs": {
-    "uniqueID": "407_7fbfb7-d1",
-    "columns": 1,
-    "colLayout": "equal",
-    "align": "full"
-  }
-} %}
-{% set _kb_save_0 = kadenceBlock %}
-{% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/column",
-  "shortName": "column",
-  "attrs": {
-    "uniqueID": "407_c95f24-0d",
-    "borderWidth": [
-      "",
-      "",
-      "",
-      ""
-    ]
-  }
-} %}
-{% set kadenceInnerHtml %}
+
+<section class="news-intro">
+  <div class="news-intro-inner">
+    <p class="news-intro-desc">Följ projektets mediesynlighet, evenemang, verksamhet och forskningsresultat.</p>
+  </div>
+</section>
+
+{% set projectPosts = collections["hankkeen-toiminta"] | localizedItems(lang, page.url) %}
+{% set researchPosts = collections["tutkimus"] | localizedItems(lang, page.url) %}
+{% set projectCards = projectPosts | mergeChronologicalCards(stakeholderPageData.projectItems or []) %}
+{% set researchCards = researchPosts | mergeChronologicalCards(stakeholderPageData.researchItems or []) %}
+
 {% set kadenceBlock = {
   "name": "kadence/tabs",
   "shortName": "tabs",
   "attrs": {
-    "uniqueID": "407_d2c3b0-78"
+    "uniqueID": "407_d2c3b0-sv"
   }
 } %}
 {% set kadenceInnerHtml %}
-<ul class="kt-tabs-title-list"><li id="tab-media" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-media" data-tab="1" class="kt-tab-title kt-tab-title-1"><span class="kt-title-text">Media</span></a></li><li id="tab-tapahtumat" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-active"><a href="#tab-tapahtumat" data-tab="2" class="kt-tab-title kt-tab-title-2"><span class="kt-title-text">Evenemang</span></a></li><li id="tab-toiminta" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-toiminta" data-tab="3" class="kt-tab-title kt-tab-title-3"><span class="kt-title-text">Verksamhet</span></a></li><li id="tab-tutkimus" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tutkimus" data-tab="4" class="kt-tab-title kt-tab-title-4"><span class="kt-title-text">Forskning</span></a></li><li id="tab-julkaisut" class="kt-title-item kt-title-item-5 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-julkaisut" data-tab="5" class="kt-tab-title kt-tab-title-5"><span class="kt-title-text">Publikationer</span></a></li><li id="tab-universitet" class="kt-title-item kt-title-item-6 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-universitet" data-tab="6" class="kt-tab-title kt-tab-title-6"><span class="kt-title-text">Universitet</span></a></li></ul><div class="kt-tabs-content-wrap">{% set kadenceBlock = {
+<ul class="kt-tabs-title-list"><li id="tab-media" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-active"><a href="#tab-media" data-tab="1" class="kt-tab-title kt-tab-title-1"><span class="kt-title-text">Nyheter</span></a></li><li id="tab-tapahtumat" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tapahtumat" data-tab="2" class="kt-tab-title kt-tab-title-2"><span class="kt-title-text">Evenemang</span></a></li><li id="tab-toiminta" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-toiminta" data-tab="3" class="kt-tab-title kt-tab-title-3"><span class="kt-title-text">Projektverksamhet</span></a></li><li id="tab-tutkimus" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tutkimus" data-tab="4" class="kt-tab-title kt-tab-title-4"><span class="kt-title-text">Konferenser och publikationer</span></a></li></ul><div class="kt-tabs-content-wrap">{% set mediaItems = collections["media"] | localizedItems(lang, page.url) %}
+{% set kadenceBlock = {
   "name": "kadence/tab",
   "shortName": "tab",
   "attrs": {
-    "uniqueID": "8958a6-8d"
+    "uniqueID": "8958a6-sv"
   }
 } %}
 {% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/query",
-  "shortName": "query",
-  "attrs": {
-    "uniqueID": "407_efb356-b8",
-    "collectionName": "media"
-  }
-} %}
-{% set kadenceInnerHtml %}{% endset %}
-{% include "blocks/kadence/query.njk" %}
+{% include "partials/media-table.njk" %}
 {% endset %}
 {% include "blocks/kadence/tab.njk" %}
 
@@ -74,20 +50,12 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
   "name": "kadence/tab",
   "shortName": "tab",
   "attrs": {
-    "uniqueID": "857bf9-b0"
+    "uniqueID": "857bf9-sv"
   }
 } %}
+{% set tapahtumatItems = collections["tapahtumat"] | localizedItems(lang, page.url) %}
 {% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/query",
-  "shortName": "query",
-  "attrs": {
-    "uniqueID": "407_03c40a-fc",
-    "collectionName": "tapahtumat"
-  }
-} %}
-{% set kadenceInnerHtml %}{% endset %}
-{% include "blocks/kadence/query.njk" %}
+{% include "partials/tapahtumat-table.njk" %}
 {% endset %}
 {% include "blocks/kadence/tab.njk" %}
 
@@ -95,20 +63,12 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
   "name": "kadence/tab",
   "shortName": "tab",
   "attrs": {
-    "uniqueID": "6c5534-c7"
+    "uniqueID": "6c5534-sv"
   }
 } %}
+{% set toimintaCards = projectCards %}
 {% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/query",
-  "shortName": "query",
-  "attrs": {
-    "uniqueID": "407_544f7f-28",
-    "collectionName": "hankkeen-toiminta"
-  }
-} %}
-{% set kadenceInnerHtml %}{% endset %}
-{% include "blocks/kadence/query.njk" %}
+{% include "partials/toiminta-table.njk" %}
 {% endset %}
 {% include "blocks/kadence/tab.njk" %}
 
@@ -116,96 +76,16 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
   "name": "kadence/tab",
   "shortName": "tab",
   "attrs": {
-    "uniqueID": "defcbe-f1"
+    "uniqueID": "defcbe-sv"
   }
 } %}
+{% set tutkimusCards = researchCards %}
 {% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/query",
-  "shortName": "query",
-  "attrs": {
-    "uniqueID": "407_e5dfa8-cc",
-    "collectionName": "tutkimus"
-  }
-} %}
-{% set kadenceInnerHtml %}{% endset %}
-{% include "blocks/kadence/query.njk" %}
-{% endset %}
-{% include "blocks/kadence/tab.njk" %}
-
-{% set kadenceBlock = {
-  "name": "kadence/tab",
-  "shortName": "tab",
-  "attrs": {
-    "uniqueID": "6aa9cf-e7"
-  }
-} %}
-{% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/advancedheading",
-  "shortName": "advancedheading",
-  "attrs": {
-    "uniqueID": "407_e1af15-3c",
-    "level": 1
-  }
-} %}
-{% set kadenceInnerHtml %}
-Vetenskapliga publikationer
-{% endset %}
-{% include "blocks/kadence/advancedheading.njk" %}
-
-{% set publicationTableId = "scientific-publications-sv" %}
-{% set publicationTableLabels = {
-  "searchLabel": "Sok",
-  "searchPlaceholder": "Sok i alla kolumner",
-  "authorsLabel": "Forfattare",
-  "authorsPlaceholder": "Filtrera forfattare",
-  "yearLabel": "Ar",
-  "allYearsLabel": "Alla ar",
-  "submittedLabel": "Submitted",
-  "inPressLabel": "In press",
-  "titleLabel": "Titel",
-  "titlePlaceholder": "Filtrera titlar",
-  "venueLabel": "Publikation",
-  "venuePlaceholder": "Filtrera publikationer",
-  "linkLabel": "Lank",
-  "allLinksLabel": "Alla",
-  "withLinkLabel": "Lank tillganglig",
-  "withoutLinkLabel": "Ingen lank",
-  "openLinkLabel": "Oppna",
-  "noLinkLabel": "-",
-  "emptyMessage": "Inga publikationer matchade filtren.",
-  "countLabel": "publikationer",
-  "countLabelSingular": "publikation"
-} %}
+{% include "partials/tutkimus-table.njk" %}
 {% include "partials/scientific-publications-table.njk" %}
 {% endset %}
 {% include "blocks/kadence/tab.njk" %}
 
-{% set kadenceBlock = {
-  "name": "kadence/tab",
-  "shortName": "tab",
-  "attrs": {
-    "uniqueID": "inst-visibility-sv"
-  }
-} %}
-{% set kadenceInnerHtml %}
-{% set institutionalVisibilityLabels = {
-  "heading": "Universitetens egna sidor, nyheter och pressmeddelanden",
-  "lead": "Listan samlar Generation AI-personalens synlighet pa universitetens egna nyhetssidor, pressmeddelanden och projektsidor.",
-  "date": "Datum",
-  "source": "Kalla",
-  "title": "Rubrik",
-  "people": "Personer",
-  "note": "Obs. For projektsidor visas projektets startdatum, inte nodvandigtvis sidans publiceringsdatum."
-} %}
-{% include "partials/institutional-visibility-table.njk" %}
-{% endset %}
-{% include "blocks/kadence/tab.njk" %}</div>
+</div>
 {% endset %}
 {% include "blocks/kadence/tabs.njk" %}
-{% endset %}
-{% include "blocks/kadence/column.njk" %}
-{% endset %}
-{% set kadenceBlock = _kb_save_0 %}
-{% include "blocks/kadence/rowlayout.njk" %}

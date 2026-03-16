@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+---
+<article class="publication">
+
+  <div class="publication-hero">
+    <div class="publication-hero-inner">
+      <span class="publication-hero-type">{{ pubType if pubType else "Julkaisu" }}</span>
+      <h1 class="publication-hero-title">{{ title }}</h1>
+      {% if authors or date %}
+      <div class="publication-hero-meta">
+        {% if authors %}
+          {% for author in authors %}
+          <span class="publication-hero-author">
+            {% if author.url %}
+            <a class="publication-hero-author-name" href="{{ author.url }}" target="_blank" rel="noopener">{{ author.name }}</a>
+            {% else %}
+            <span class="publication-hero-author-name">{{ author.name }}</span>
+            {% endif %}
+            {% if author.title %}<span class="publication-hero-author-title">{{ author.title }}</span>{% endif %}
+          </span>
+          {% endfor %}
+        {% endif %}
+        {% if date %}
+        <time class="publication-hero-date" datetime="{{ date }}">{{ date | date("d.m.Y") }}</time>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="publication-layout">
+
+    <aside class="publication-toc" id="pub-toc" aria-label="Sisällysluettelo">
+      <div class="publication-toc-inner">
+        <button class="publication-toc-toggle" id="pub-toc-toggle" aria-expanded="true" aria-controls="pub-toc-nav">
+          Sisällysluettelo
+        </button>
+        <nav id="pub-toc-nav" class="publication-toc-nav"></nav>
+      </div>
+    </aside>
+
+    <div class="publication-body" id="pub-body">{{ content | safe }}</div>
+
+  </div>
+</article>
+
+<script>
+(function () {
+  var nav = document.getElementById('pub-toc-nav');
+  var btn = document.getElementById('pub-toc-toggle');
+  var body = document.getElementById('pub-body');
+  if (!nav || !body) return;
+
+  /* Active-section highlighting via IntersectionObserver */
+  var links = Array.prototype.slice.call(nav.querySelectorAll('.pub-toc-link'));
+  if (links.length && 'IntersectionObserver' in window) {
+    var headings = Array.prototype.slice.call(body.querySelectorAll('h2[id], h3[id]'));
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          links.forEach(function (a) { a.classList.remove('is-active'); });
+          var active = nav.querySelector('a[href="#' + entry.target.id + '"]');
+          if (active) active.classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -75% 0px' });
+    headings.forEach(function (h) { observer.observe(h); });
+  }
+
+  /* Mobile toggle */
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('is-hidden', expanded);
+    });
+  }
+})();
+</script>

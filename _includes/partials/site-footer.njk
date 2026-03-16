@@ -13,7 +13,7 @@
         { "label": "Ajankohtaista",   "url": "/ajankohtaista/" },
         { "label": "Materiaalit",     "url": "/materiaalit/" },
         { "label": "Opettajalle",     "url": "/opettajalle/" },
-        { "label": "Tutkimus",        "url": "/generation-ai-hankkeessa-tehtava-tutkimus/" },
+        { "label": "Tutkimus",        "url": "/tutkijalle/" },
         { "label": "Konsortio",       "url": "/konsortio/" },
         { "label": "Ota yhteyttä",    "url": "/ollaan-yhteydessa/" }
       ],
@@ -26,10 +26,8 @@
         { "label": "Manipulointipeli",  "url": "https://www.gen-ai.fi/fi/tools/manipulation-game", "ext": true }
       ],
       "utility": [
-        { "label": "Sanasto",                     "url": "/encyclopedia/" },
         { "label": "Haku",                        "url": "/haku/" },
         { "label": "Saavutettavuusseloste",       "url": "/saavutettavuusseloste/" },
-        { "label": "Henkilötietojen käsittely",   "url": "/henkilotietojen-kasittely-alakoulussa/" },
         { "label": "Uutiskirje",                  "url": "/uutiskirje/" }
       ]
     }
@@ -57,7 +55,6 @@
         { "label": "Profiling Game",         "url": "https://www.gen-ai.fi/en/tools/profiling-game",  "ext": true }
       ],
       "utility": [
-        { "label": "Encyclopedia",            "url": "/en/encyclopedia/" },
         { "label": "Search",                  "url": "/en/search/" },
         { "label": "Accessibility statement", "url": "/en/accessibility-statement/" },
         { "label": "Newsletter",              "url": "/en/newsletter/" }
@@ -87,7 +84,6 @@
         { "label": "Profilointipeli",   "url": "https://www.gen-ai.fi/fi/tools/profiling-game",  "ext": true }
       ],
       "utility": [
-        { "label": "Ordbok",                    "url": "/sv/ordbok/" },
         { "label": "Sök",                       "url": "/sv/sok/" },
         { "label": "Tillgänglighetsredogörelse","url": "/sv/tillganglighetsredogorelse/" },
         { "label": "Nyhetsbrev",                "url": "/sv/nyhetsbrev/" }
@@ -97,6 +93,231 @@
 } %}
 
 {% set ui = footerUi[localeCode] if footerUi[localeCode] else footerUi["fi"] %}
+
+{% set brandUi = {
+  "fi": { "eyebrow": "Hankkeen sovellukset", "lead": "Kokeile ilmaisia tekoälytyökaluja oppitunneilla ja kotona.", "cta": "Avaa gen-ai.fi", "url": "https://www.gen-ai.fi/fi" },
+  "en": { "eyebrow": "Project tools", "lead": "Try free AI tools for classrooms and home use.", "cta": "Open gen-ai.fi", "url": "https://www.gen-ai.fi/en" },
+  "sv": { "eyebrow": "Projektets verktyg", "lead": "Prova gratis AI-verktyg för klassrummet och hemma.", "cta": "Öppna gen-ai.fi", "url": "https://www.gen-ai.fi/fi" }
+} %}
+{% set brand = brandUi[localeCode] if brandUi[localeCode] else brandUi["fi"] %}
+
+{% set logosUi = {
+  "fi": {
+    "funderLabel": "Rahoittaja",
+    "partnerLabel": "Konsortiojäsenet",
+    "funder": [
+      {
+        "name": "Suomen Akatemia",
+        "url": "https://www.aka.fi/fi/",
+        "logoUrl": "https://www.aka.fi/globalassets/aka_fi_vaaka_sininen.svg",
+        "logoClass": ""
+      },
+      {
+        "name": "Strategisen tutkimuksen neuvosto",
+        "url": "https://www.aka.fi/fi/strateginen-tutkimus/",
+        "logoUrl": "https://www.aka.fi/globalassets/3-stn/stn_logo.svg",
+        "logoClass": ""
+      }
+    ],
+    "partners": [
+      {
+        "name": "Helsingin yliopisto",
+        "url": "https://www.helsinki.fi/fi",
+        "logoUrl": "/assets/logos/helsinki.jpg",
+        "logoClass": "footer-logo-img--png"
+      },
+      {
+        "name": "Itä-Suomen yliopisto",
+        "url": "https://www.uef.fi/fi",
+        "logoUrl": "https://www.uef.fi/themes/custom/uef/images/icons/src/LOGO_vaaka.svg",
+        "logoClass": ""
+      },
+      {
+        "name": "Oulun yliopisto",
+        "url": "https://www.oulu.fi/fi",
+        "logoUrl": "/assets/logos/oulu-fi.png",
+        "logoClass": "footer-logo-img--png"
+      },
+      {
+        "name": "Suomen koodikoulu",
+        "url": "https://koodikoulu.fi",
+        "logoUrl": "/assets/logos/koodikoulu.png",
+        "logoClass": "footer-logo-img--png"
+      },
+      {
+        "name": "Heureka – Suomen tiedekeskus",
+        "url": "https://www.heureka.fi/",
+        "logoUrl": "/assets/logos/heureka-logo.svg",
+        "logoClass": ""
+      },
+      {
+        "name": "SciFest Joensuu",
+        "url": "https://www.scifest.fi/",
+        "logoUrl": "https://www.scifest.fi/wp-content/uploads/2025/12/scifest-2026-logo-valkoinen-transparent-CMYK-1.png",
+        "logoClass": ""
+      }
+    ]
+  },
+  "en": {
+    "funderLabel": "Funder",
+    "partnerLabel": "Consortium members",
+    "funder": [
+      {
+        "name": "Research Council of Finland",
+        "url": "https://www.aka.fi/en/",
+        "logoUrl": "https://www.aka.fi/globalassets/etusivujen-kuvat/aka_en_vaaka_sininen.svg",
+        "logoClass": ""
+      },
+      {
+        "name": "Strategic Research Council",
+        "url": "https://www.aka.fi/en/strategic-research/",
+        "logoUrl": "https://www.aka.fi/globalassets/3-stn/stn_logo.svg",
+        "logoClass": ""
+      }
+    ],
+    "partners": [
+      {
+        "name": "University of Helsinki",
+        "url": "https://www.helsinki.fi/en",
+        "logoUrl": "/assets/logos/helsinki.jpg",
+        "logoClass": "footer-logo-img--png"
+      },
+      {
+        "name": "University of Eastern Finland",
+        "url": "https://www.uef.fi/en",
+        "logoUrl": "https://www.uef.fi/themes/custom/uef/images/icons/src/LOGO_vaaka.svg",
+        "logoClass": ""
+      },
+      {
+        "name": "University of Oulu",
+        "url": "https://www.oulu.fi/en",
+        "logoUrl": "/assets/logos/oulu-en.png",
+        "logoClass": "footer-logo-img--png"
+      },
+      {
+        "name": "Codeschool Finland",
+        "url": "https://koodikoulu.fi",
+        "logoUrl": "/assets/logos/koodikoulu.png",
+        "logoClass": "footer-logo-img--png"
+      },
+      {
+        "name": "Heureka – The Finnish Science Centre",
+        "url": "https://www.heureka.fi/en/",
+        "logoUrl": "/assets/logos/heureka-logo.svg",
+        "logoClass": ""
+      },
+      {
+        "name": "SciFest Joensuu",
+        "url": "https://www.scifest.fi/",
+        "logoUrl": "https://www.scifest.fi/wp-content/uploads/2025/12/scifest-2026-logo-valkoinen-transparent-CMYK-1.png",
+        "logoClass": ""
+      }
+    ]
+  },
+  "sv": {
+    "funderLabel": "Finansiär",
+    "partnerLabel": "Konsortiummedlemmar",
+    "funder": [
+      {
+        "name": "Finlands Akademi",
+        "url": "https://www.aka.fi/sv/",
+        "logoUrl": "https://www.aka.fi/globalassets/aka_fi_vaaka_sininen.svg",
+        "logoClass": ""
+      },
+      {
+        "name": "Rådet för strategisk forskning",
+        "url": "https://www.aka.fi/sv/strategisk-forskning/",
+        "logoUrl": "https://www.aka.fi/globalassets/3-stn/stn_logo.svg",
+        "logoClass": ""
+      }
+    ],
+    "partners": [
+      {
+        "name": "Helsingfors universitet",
+        "url": "https://www.helsinki.fi/sv",
+        "logoUrl": "/assets/logos/helsinki.jpg",
+        "logoClass": "footer-logo-img--png"
+      },
+      {
+        "name": "Östra Finlands universitet",
+        "url": "https://www.uef.fi/sv",
+        "logoUrl": "https://www.uef.fi/themes/custom/uef/images/icons/src/LOGO_vaaka.svg",
+        "logoClass": ""
+      },
+      {
+        "name": "Uleåborgs universitet",
+        "url": "https://www.oulu.fi/sv",
+        "logoUrl": "/assets/logos/oulu-fi.png",
+        "logoClass": "footer-logo-img--png"
+      },
+      {
+        "name": "Finlands kodskola",
+        "url": "https://koodikoulu.fi",
+        "logoUrl": "/assets/logos/koodikoulu.png",
+        "logoClass": "footer-logo-img--png"
+      },
+      {
+        "name": "Heureka – Finlands vetenskapscenter",
+        "url": "https://www.heureka.fi/sv/",
+        "logoUrl": "/assets/logos/heureka-logo.svg",
+        "logoClass": ""
+      },
+      {
+        "name": "SciFest Joensuu",
+        "url": "https://www.scifest.fi/",
+        "logoUrl": "https://www.scifest.fi/wp-content/uploads/2025/12/scifest-2026-logo-valkoinen-transparent-CMYK-1.png",
+        "logoClass": ""
+      }
+    ]
+  }
+} %}
+{% set logos = logosUi[localeCode] if logosUi[localeCode] else logosUi["fi"] %}
+
+<div class="footer-logos">
+  <div class="footer-logos-inner">
+    <div class="footer-logos-group">
+      <span class="footer-logos-label">{{ logos.funderLabel }}</span>
+      <div class="footer-logos-list">
+        {% for org in logos.funder %}
+        <a class="footer-logo-item" href="{{ org.url }}" target="_blank" rel="noopener" aria-label="{{ org.name }}">
+          {% if org.logoUrl %}
+          <img class="footer-logo-img {{ org.logoClass }}" src="{{ org.logoUrl }}" alt="{{ org.name }}">
+          {% else %}
+          <span class="footer-logo-text">{{ org.name }}</span>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="footer-logos-group">
+      <span class="footer-logos-label">{{ logos.partnerLabel }}</span>
+      <div class="footer-logos-list">
+        {% for org in logos.partners %}
+        <a class="footer-logo-item" href="{{ org.url }}" target="_blank" rel="noopener" aria-label="{{ org.name }}">
+          {% if org.logoUrl %}
+          <img class="footer-logo-img {{ org.logoClass }}" src="{{ org.logoUrl }}" alt="{{ org.name }}">
+          {% else %}
+          <span class="footer-logo-text">{{ org.name }}</span>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="genai-brand-strip">
+  <div class="genai-brand-strip-inner">
+    <div class="genai-brand-strip-text">
+      <span class="genai-brand-strip-eyebrow">{{ brand.eyebrow }}</span>
+      <span class="genai-brand-strip-wordmark">gen&#8209;ai.fi</span>
+      <p class="genai-brand-strip-lead">{{ brand.lead }}</p>
+    </div>
+    <a class="genai-brand-strip-cta" href="{{ brand.url }}" target="_blank" rel="noopener">
+      {{ brand.cta }} ↗
+    </a>
+  </div>
+</div>
 
 <footer class="site-footer">
   <div class="site-footer-inner">

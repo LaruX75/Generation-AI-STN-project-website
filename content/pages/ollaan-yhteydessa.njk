@@ -1,110 +1,59 @@
 ---
 title: Ollaan yhteydessä
+seoTitle: Ota yhteyttä — Generation AI
+seoDescription: Lähetä meille viesti yhteistyöstä, tutkimuksesta tai muusta Generation AI -hankkeeseen liittyvästä. Vastaamme mahdollisimman pian.
 date: "2023-09-21T13:03:10"
 updated: "2025-02-12T22:33:21"
 slug: ollaan-yhteydessa
 permalink: /ollaan-yhteydessa/
 status: publish
 sourceType: pages
-excerpt: "Laita meille viestiä Haluatteko, että olemme sinuun yhteydessä yhteistyön merkeissä? Ole hyvä ja laita oheisella lomakkeella terveiset meille!"
-categories: []
-tags: []
-author: admin
 layout: layouts/page.njk
-pageHero: true
-heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnotized_computer_hyper_reali_7e5fceac-75e4-4087-8364-b0ae1a8e0b00.png"
+pageHero: false
+lang: fi
 ---
 
-{% set kadenceBlock = {
-  "name": "kadence/rowlayout",
-  "shortName": "rowlayout",
-  "attrs": {
-    "uniqueID": "1041_ba2ac5-ce",
-    "colLayout": "equal",
-    "bgColor": "var(--global-palette7)",
-    "padding": [
-      "xl",
-      "",
-      "xl",
-      ""
-    ],
-    "bgColorClass": "theme-palette7"
-  }
-} %}
-{% set _kb_save_0 = kadenceBlock %}
-{% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/column",
-  "shortName": "column",
-  "attrs": {
-    "uniqueID": "1041_2b4c10-6c",
-    "borderWidth": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "className": "inner-column-1"
-  }
-} %}
-{% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/advancedheading",
-  "shortName": "advancedheading",
-  "attrs": {
-    "uniqueID": "1041_f1275d-78",
-    "color": "var(--global-palette3)",
-    "fontSize": [
-      "xl",
-      "",
-      "lg"
-    ]
-  }
-} %}
-{% set kadenceInnerHtml %}
-Laita meille viestiä
-{% endset %}
-{% include "blocks/kadence/advancedheading.njk" %}
+<section class="contact-page">
+  <div class="contact-page-inner">
 
-{% set kadenceBlock = {
-  "name": "kadence/advancedheading",
-  "shortName": "advancedheading",
-  "attrs": {
-    "uniqueID": "1041_db2b8a-d1",
-    "color": "var(--global-palette3)"
-  }
-} %}
-{% set kadenceInnerHtml %}
-Haluatteko, että olemme sinuun yhteydessä yhteistyön merkeissä? Ole hyvä ja laita oheisella lomakkeella terveiset meille!
-{% endset %}
-{% include "blocks/kadence/advancedheading.njk" %}
+    <div class="contact-info">
+      <p class="contact-lead">Haluatko tietää lisää hankkeesta, ehdottaa yhteistyötä tai ottaa yhteyttä tutkimustiimiin? Laita meille viestiä — vastaamme mahdollisimman pian.</p>
 
+      <ul class="contact-details">
+        <li>
+          <span class="contact-detail-label">Sähköposti</span>
+          <a href="mailto:info@generation-ai-stn.fi">info@generation-ai-stn.fi</a>
+        </li>
+        <li>
+          <span class="contact-detail-label">Hanke</span>
+          Generation AI — Tekoälykasvatus tulevaisuuden sukupolvelle
+        </li>
+      </ul>
+    </div>
 
-<p></p>
-{% endset %}
-{% include "blocks/kadence/column.njk" %}
+    <div class="contact-form-wrap">
+      {# Korvaa YOUR_FORM_ID Formspree-lomakkeen ID:llä (esim. xpwzabcd)          #}
+      {# Rekisteröidy osoitteessa https://formspree.io ja luo lomake              #}
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="contact-form-field">
+          <label for="cf-name-fi">Nimi</label>
+          <input id="cf-name-fi" type="text" name="name" required placeholder="Etunimi Sukunimi">
+        </div>
+        <div class="contact-form-field">
+          <label for="cf-email-fi">Sähköposti</label>
+          <input id="cf-email-fi" type="email" name="email" required placeholder="sinä@esimerkki.fi">
+        </div>
+        <div class="contact-form-field">
+          <label for="cf-subject-fi">Aihe</label>
+          <input id="cf-subject-fi" type="text" name="subject" placeholder="Mistä asiasta on kyse?">
+        </div>
+        <div class="contact-form-field">
+          <label for="cf-message-fi">Viesti</label>
+          <textarea id="cf-message-fi" name="message" rows="5" required placeholder="Kirjoita viestisi tähän…"></textarea>
+        </div>
+        <button class="contact-form-btn" type="submit">Lähetä viesti</button>
+      </form>
+    </div>
 
-{% set kadenceBlock = {
-  "name": "kadence/column",
-  "shortName": "column",
-  "attrs": {
-    "uniqueID": "1041_39d8bd-01",
-    "borderWidth": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "className": "inner-column-2"
-  }
-} %}
-{% set kadenceInnerHtml %}
-<!-- TODO: kadence/advanced-form ei tuettu — alkuperäinen sisältö säilytetty -->
-<div class="block-fallback block-fallback--advanced-form" data-original-block="kadence/advanced-form">
-
-</div>
-{% endset %}
-{% include "blocks/kadence/column.njk" %}
-{% endset %}
-{% set kadenceBlock = _kb_save_0 %}
-{% include "blocks/kadence/rowlayout.njk" %}
+  </div>
+</section>

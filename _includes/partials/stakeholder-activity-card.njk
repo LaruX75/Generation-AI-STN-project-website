@@ -1,0 +1,28 @@
+{% set row = stakeholderRow %}
+{% set labels = stakeholderLabels or {} %}
+{% set participantsSuffix = labels.participantsSuffix or "osallistujaa" %}
+
+<article class="stakeholder-activities__card kb-query-item">
+  <div class="stakeholder-activities__card-body kb-query-item__body">
+    <div class="stakeholder-activities__topline">
+      {% if row.displayDate or row.date %}
+        <span class="kb-query-item__cat stakeholder-activities__badge">{{ row.displayDate or row.date }}</span>
+      {% endif %}
+      {% if row.participants %}
+        <span class="kb-query-item__cat stakeholder-activities__badge stakeholder-activities__badge--muted">
+          {{ row.participants }} {{ participantsSuffix }}
+        </span>
+      {% endif %}
+    </div>
+
+    <h3 class="stakeholder-activities__card-title kb-query-item__title">
+      {{ row.title or row.stakeholder }}
+    </h3>
+
+    {% if row.title and row.stakeholder %}
+      <p class="stakeholder-activities__stakeholder">
+        <strong>{{ labels.stakeholder or "Sidosryhma" }}:</strong> {{ row.stakeholder }}
+      </p>
+    {% endif %}
+  </div>
+</article>

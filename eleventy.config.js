@@ -1,5 +1,6 @@
 const { existsSync } = require("node:fs");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const pluginPublicationToc = require("./_plugins/publication-toc.js");
 
 module.exports = function(eleventyConfig) {
   const pad = value => String(value).padStart(2, "0");
@@ -48,6 +49,7 @@ module.exports = function(eleventyConfig) {
   if (existsSync("assets")) eleventyConfig.addPassthroughCopy({ "assets": "assets" });
   if (existsSync("scripts")) eleventyConfig.addPassthroughCopy({ "scripts": "scripts" });
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(pluginPublicationToc);
 
   const byDate = (a, b) => b.date - a.date;
 
@@ -58,16 +60,47 @@ module.exports = function(eleventyConfig) {
     col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).includes("Ajankohtaista")).sort(byDate)
   );
   eleventyConfig.addCollection("media", col =>
-    col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).some(c => ["GenAI hankkeen henkilöstö mediassa", "Media", "Haastattelu"].includes(c))).sort(byDate)
+    col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).some(c => [
+      // fi
+      "GenAI hankkeen henkilöstö mediassa", "Media", "Haastattelu",
+      // en
+      "GenAI project staff in the media", "GenAI Project Staff in Media", "GenAI project staff in media",
+      "GenAI Project Staff in the Media", "Interview", "interview",
+      // sv
+      "GenAI-projektets personal i media", "GenAI-projektets medarbetare i media", "Intervju"
+    ].includes(c))).sort(byDate)
   );
   eleventyConfig.addCollection("tapahtumat", col =>
-    col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).some(c => ["GenAI hankkeen henkilöstö tapahtumissa", "Konferenssit ja seminaarit", "Webinaari", "Työpaja"].includes(c))).sort(byDate)
+    col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).some(c => [
+      // fi
+      "GenAI hankkeen henkilöstö tapahtumissa", "Konferenssit ja seminaarit", "Webinaari", "Työpaja",
+      // en
+      "GenAI project staff at events", "GenAI Project Staff at Events", "GenAI project staff events",
+      "Conferences and seminars", "Conferences and Seminars", "Webinar", "Workshop",
+      // sv
+      "GenAI-projektets personal vid evenemang", "GenAI-projektets personal på evenemang",
+      "GenAI-projektpersonalens evenemang", "Konferenser och seminarier", "Webbinarium"
+    ].includes(c))).sort(byDate)
   );
   eleventyConfig.addCollection("hankkeen-toiminta", col =>
-    col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).includes("Hankkeen toiminta")).sort(byDate)
+    col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).some(c => [
+      // fi
+      "Hankkeen toiminta",
+      // en
+      "Project activities", "Project Activities",
+      // sv
+      "Projektaktiviteter", "Projektverksamhet"
+    ].includes(c))).sort(byDate)
   );
   eleventyConfig.addCollection("tutkimus", col =>
-    col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).includes("Tutkimus")).sort(byDate)
+    col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).some(c => [
+      // fi
+      "Tutkimus",
+      // en
+      "Research",
+      // sv
+      "Forskning"
+    ].includes(c))).sort(byDate)
   );
 
   eleventyConfig.addCollection("docs", col =>
@@ -119,8 +152,52 @@ module.exports = function(eleventyConfig) {
     if (!Number.isFinite(limit) || limit <= 0) return list;
     return list.slice(0, limit);
   });
+  eleventyConfig.addFilter("mergeChronologicalCards", (posts, stakeholderRows) => {
+    const postCards = (Array.isArray(posts) ? posts : []).map(post => {
+      const rawDate = post?.date instanceof Date ? post.date : new Date(post?.date);
+      const timestamp = Number.isNaN(rawDate.getTime()) ? Number.NEGATIVE_INFINITY : rawDate.getTime();
+      return {
+        cardType: "post",
+        post,
+        sortTimestamp: timestamp,
+        sortLabel: String(post?.data?.title || "")
+      };
+    });
+
+    const stakeholderCards = (Array.isArray(stakeholderRows) ? stakeholderRows : []).map(row => {
+      const isoDate = String(row?.sortDate || "").trim();
+      const timestamp = isoDate ? Date.parse(`${isoDate}T00:00:00Z`) : Number.NEGATIVE_INFINITY;
+      return {
+        cardType: "stakeholder",
+        row,
+        sortTimestamp: Number.isNaN(timestamp) ? Number.NEGATIVE_INFINITY : timestamp,
+        sortLabel: String(row?.title || row?.stakeholder || "")
+      };
+    });
+
+    return [...postCards, ...stakeholderCards].sort((a, b) => {
+      if (a.sortTimestamp !== b.sortTimestamp) {
+        return b.sortTimestamp - a.sortTimestamp;
+      }
+      return a.sortLabel.localeCompare(b.sortLabel, "fi");
+    });
+  });
   eleventyConfig.addFilter("date", formatDate);
   eleventyConfig.addFilter("isHttpUrl", value => /^https?:\/\//i.test(String(value || "").trim()));
+  eleventyConfig.addFilter("urlencode", value => encodeURIComponent(String(value || "")));
+  eleventyConfig.addFilter("relatedPosts", (collection, currentUrl, currentTags, limit) => {
+    limit = limit || 3;
+    if (!currentTags || !currentTags.length) return [];
+    const currentTagsLower = currentTags.map(t => String(t).toLowerCase());
+    return (collection || [])
+      .filter(p => p.url !== currentUrl &&
+        (p.data.tags || []).some(t => currentTagsLower.includes(String(t).toLowerCase())))
+      .sort((a, b) => {
+        const score = p => (p.data.tags || []).filter(t => currentTagsLower.includes(String(t).toLowerCase())).length;
+        return score(b) - score(a);
+      })
+      .slice(0, limit);
+  });
   eleventyConfig.addFilter("rssDate", value => {
     const date = value instanceof Date ? value : new Date(value);
     return Number.isNaN(date.getTime()) ? new Date().toUTCString() : date.toUTCString();

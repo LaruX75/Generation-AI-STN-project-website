@@ -416,3 +416,14 @@ Our project includes several internationally renowned AI experts. Here you will 
 {% endset %}
 {% set kadenceBlock = _kb_save_1 %}
 {% include "blocks/kadence/rowlayout.njk" %}
+
+{% set codeschoolLabels = {
+  "heading": "Code School Finland",
+  "lead": "This section brings together Generation AI related content from Code School Finland's blog and course platform, including partner updates and AI literacy courses for educators.",
+  "source": "Source",
+  "button": "Open content",
+  "article": "Article",
+  "course": "Course",
+  "empty": "No Code School content is available right now."
+} %}
+{% include "partials/codeschool-showcase.njk" %}

@@ -1,14 +1,81 @@
 ---
 layout: layouts/base.njk
 ---
+{% set _lang = lang if lang else "fi" %}
+{% set _searchBase = "/en/search/" if _lang == "en" else ("/sv/sok/" if _lang == "sv" else "/haku/") %}
+{% set _postCollection = collections.posts_en if _lang == "en" else (collections.posts_sv if _lang == "sv" else collections.posts_fi) %}
+{% set _relPosts = _postCollection | relatedPosts(page.url, tags) %}
+
+{% set _catUrls = {
+  "Ajankohtaista": "/ajankohtaista/",
+  "Hankkeen toiminta": "/hankkeen-toiminta/",
+  "Tutkimus": "/generation-ai-hankkeessa-tehtava-tutkimus/",
+  "GenAI hankkeen henkilöstö mediassa": "/medialle/",
+  "GenAI hankkeen henkilöstö tapahtumissa": "/tapahtumat/",
+  "Konferenssit ja seminaarit": "/tapahtumat/",
+  "Webinaari": "/tapahtumat/",
+  "Työpaja": "/tapahtumat/",
+  "Haastattelu": "/medialle/",
+  "News": "/en/current-affairs/",
+  "News from": "/en/current-affairs/",
+  "Project activities": "/en/activities/",
+  "Research": "/en/research/",
+  "GenAI project staff at events": "/en/activities/",
+  "GenAI project staff in the media": "/en/generation-ai-project-in-the-media/",
+  "GenAI Project Staff in Media": "/en/generation-ai-project-in-the-media/",
+  "GenAI Project Staff at Events": "/en/activities/",
+  "Webinar": "/en/activities/",
+  "Interview": "/en/generation-ai-project-in-the-media/",
+  "Nyheter": "/sv/aktuellt/",
+  "Projektets verksamhet": "/sv/verksamhet/",
+  "Forskning": "/sv/forskning/"
+} %}
+
 <main class="post">
-  <header class="post-header">
-    <h1>{{ title }}</h1>
-    {% if date %}<time class="post-date" datetime="{{ date }}">{{ date }}</time>{% endif %}
-    {% if author %}<span class="post-author">{{ author }}</span>{% endif %}
-    {% if featuredImage %}<img class="post-featured-image" src="{{ featuredImage }}" alt="{{ title }}">{% endif %}
-    {% if categories and categories.length %}<div class="post-categories">{% for c in categories %}<span>{{ c }}</span>{% endfor %}</div>{% endif %}
-  </header>
-  <div class="post-content">{{ content | safe }}</div>
-  {% if tags and tags.length %}<footer class="post-footer"><div class="post-tags">{% for tag in tags %}<span>{{ tag }}</span>{% endfor %}</div></footer>{% endif %}
+  <div class="post-inner">
+    <header class="post-header">
+      {% if categories and categories.length %}
+      <div class="post-categories">
+        {% for c in categories %}
+        {% set _href = _catUrls[c] if _catUrls[c] else (_searchBase + "?q=" + (c | urlencode)) %}
+        <a class="post-category" href="{{ _href }}">{{ c }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <h1 class="post-title">{{ title }}</h1>
+      {% if date %}<time class="post-date" datetime="{{ date }}">{{ date | date("d.m.Y") }}</time>{% endif %}
+      {% if featuredImage %}<img class="post-featured-image" src="{{ featuredImage }}" alt="{{ title }}">{% endif %}
+    </header>
+
+    <div class="post-content">{{ content | safe }}</div>
+
+    {% if tags and tags.length %}
+    <footer class="post-footer">
+      <div class="post-tags">
+        {% for tag in tags %}
+        <a class="post-tag" href="{{ _searchBase }}?q={{ tag | urlencode }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    </footer>
+    {% endif %}
+
+    {% if _relPosts and _relPosts.length %}
+    <section class="post-related">
+      <h2 class="post-related__heading">
+        {% if _lang == "en" %}Read also{% elif _lang == "sv" %}Läs också{% else %}Lue myös{% endif %}
+      </h2>
+      <div class="post-related__grid">
+        {% for p in _relPosts %}
+        <a class="post-related__card" href="{{ p.url }}">
+          {% if p.data.categories and p.data.categories.length %}
+          <span class="post-related__cat">{{ p.data.categories[0] }}</span>
+          {% endif %}
+          <span class="post-related__title">{{ p.data.title }}</span>
+          <span class="post-related__date">{{ p.data.date | date("d.m.Y") }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  </div>
 </main>

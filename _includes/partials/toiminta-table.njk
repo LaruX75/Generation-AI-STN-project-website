@@ -1,39 +1,80 @@
 {% set allCards = toimintaCards or [] %}
 
+{% if lang == "en" %}
+  {% set lbl = {
+    "heading": "Project activities", "search": "Search activities", "placeholder": "Search by title…",
+    "typeLabel": "Filter by type", "typeAll": "All types",
+    "typePost": "Publications", "typeStake": "Stakeholder collaboration",
+    "badgePost": "Publication", "badgeStake": "Stakeholder",
+    "yrLabel": "Filter by year", "yrAll": "All years",
+    "aria": "Project activities", "ariaPag": "Result page",
+    "colDate": "Date", "colType": "Type", "colTitle": "Title / Topic", "colExtra": "Stakeholder / Details", "colLink": "Link",
+    "open": "Open", "na": "—", "empty": "No results.",
+    "prev": "← Previous", "next": "Next →",
+    "jsPage": "Page", "jsSep": "/", "jsResults": "results"
+  } %}
+{% elif lang == "sv" %}
+  {% set lbl = {
+    "heading": "Projektverksamhet", "search": "Sök verksamhet", "placeholder": "Sök på rubrik…",
+    "typeLabel": "Filtrera efter typ", "typeAll": "Alla typer",
+    "typePost": "Publikationer", "typeStake": "Intressentsamarbete",
+    "badgePost": "Publikation", "badgeStake": "Intressent",
+    "yrLabel": "Filtrera efter år", "yrAll": "Alla år",
+    "aria": "Projektverksamhet", "ariaPag": "Resultatsida",
+    "colDate": "Datum", "colType": "Typ", "colTitle": "Rubrik / Ämne", "colExtra": "Intressent / Detaljer", "colLink": "Länk",
+    "open": "Öppna", "na": "—", "empty": "Inga resultat.",
+    "prev": "← Föregående", "next": "Nästa →",
+    "jsPage": "Sida", "jsSep": "/", "jsResults": "resultat"
+  } %}
+{% else %}
+  {% set lbl = {
+    "heading": "Hankkeen toiminta", "search": "Hae toiminnasta", "placeholder": "Hae otsikolla…",
+    "typeLabel": "Suodata tyypeittäin", "typeAll": "Kaikki tyypit",
+    "typePost": "Julkaisut ja raportit", "typeStake": "Sidosryhmäyhteistyö",
+    "badgePost": "Julkaisu", "badgeStake": "Sidosryhmä",
+    "yrLabel": "Suodata vuoden mukaan", "yrAll": "Kaikki vuodet",
+    "aria": "Hankkeen toiminta", "ariaPag": "Tulossivu",
+    "colDate": "Päivämäärä", "colType": "Tyyppi", "colTitle": "Otsikko / Aihe", "colExtra": "Sidosryhmä / Lisätiedot", "colLink": "Linkki",
+    "open": "Avaa", "na": "—", "empty": "Ei tuloksia.",
+    "prev": "← Edellinen", "next": "Seuraava →",
+    "jsPage": "Sivu", "jsSep": "/", "jsResults": "tulosta"
+  } %}
+{% endif %}
+
 <section class="media-table-section" id="toiminta-table-section">
 
   <div class="media-table-header">
-    <h2 class="media-table-heading">Hankkeen toiminta</h2>
+    <h2 class="media-table-heading">{{ lbl.heading }}</h2>
     <div class="media-table-controls">
       <div class="media-table-search-wrap">
-        <label for="toiminta-search" class="sr-only">Hae toiminnasta</label>
-        <input type="search" id="toiminta-search" class="media-table-search" placeholder="Hae otsikolla…" autocomplete="off">
+        <label for="toiminta-search" class="sr-only">{{ lbl.search }}</label>
+        <input type="search" id="toiminta-search" class="media-table-search" placeholder="{{ lbl.placeholder }}" autocomplete="off">
       </div>
       <div class="media-table-filters">
-        <label for="toiminta-filter-type" class="sr-only">Suodata tyypeittäin</label>
+        <label for="toiminta-filter-type" class="sr-only">{{ lbl.typeLabel }}</label>
         <select id="toiminta-filter-type" class="media-table-filter">
-          <option value="">Kaikki tyypit</option>
-          <option value="post">Julkaisut ja raportit</option>
-          <option value="stakeholder">Sidosryhmäyhteistyö</option>
+          <option value="">{{ lbl.typeAll }}</option>
+          <option value="post">{{ lbl.typePost }}</option>
+          <option value="stakeholder">{{ lbl.typeStake }}</option>
         </select>
-        <label for="toiminta-filter-year" class="sr-only">Suodata vuoden mukaan</label>
+        <label for="toiminta-filter-year" class="sr-only">{{ lbl.yrLabel }}</label>
         <select id="toiminta-filter-year" class="media-table-filter">
-          <option value="">Kaikki vuodet</option>
+          <option value="">{{ lbl.yrAll }}</option>
         </select>
       </div>
       <p class="media-table-count" id="toiminta-count" aria-live="polite"></p>
     </div>
   </div>
 
-  <div class="media-table-wrap" role="region" aria-label="Hankkeen toiminta" tabindex="0">
+  <div class="media-table-wrap" role="region" aria-label="{{ lbl.aria }}" tabindex="0">
     <table class="media-table" id="toiminta-table">
       <thead>
         <tr>
-          <th scope="col" class="media-table-col--date">Päivämäärä</th>
-          <th scope="col" class="media-table-col--source">Tyyppi</th>
-          <th scope="col" class="media-table-col--title">Otsikko / Aihe</th>
-          <th scope="col" class="toiminta-table-col--extra">Sidosryhmä / Lisätiedot</th>
-          <th scope="col" class="media-table-col--link">Linkki</th>
+          <th scope="col" class="media-table-col--date">{{ lbl.colDate }}</th>
+          <th scope="col" class="media-table-col--source">{{ lbl.colType }}</th>
+          <th scope="col" class="media-table-col--title">{{ lbl.colTitle }}</th>
+          <th scope="col" class="toiminta-table-col--extra">{{ lbl.colExtra }}</th>
+          <th scope="col" class="media-table-col--link">{{ lbl.colLink }}</th>
         </tr>
       </thead>
       <tbody id="toiminta-table-body">
@@ -48,18 +89,18 @@
                 <time datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date("d.m.Y") }}</time>
               </td>
               <td class="media-table-col--source">
-                <span class="media-table-source-badge toiminta-badge--post">Julkaisu</span>
+                <span class="media-table-source-badge toiminta-badge--post">{{ lbl.badgePost }}</span>
               </td>
               <td class="media-table-col--title">{{ post.data.title | default("—") }}</td>
               <td class="toiminta-table-col--extra">
                 {% if post.data.excerpt and post.data.excerpt != "[object Object]" %}
                   {{ post.data.excerpt | truncate(200) }}
                 {% else %}
-                  <span class="media-table-na">—</span>
+                  <span class="media-table-na">{{ lbl.na }}</span>
                 {% endif %}
               </td>
               <td class="media-table-col--link">
-                <a href="{{ post.url }}" class="media-table-link">Avaa&nbsp;↗</a>
+                <a href="{{ post.url }}" class="media-table-link">{{ lbl.open }}&nbsp;↗</a>
               </td>
             </tr>
           {% else %}
@@ -72,13 +113,13 @@
                 <time datetime="{{ row.sortDate | default('') }}">{{ row.displayDate or row.date | default("—") }}</time>
               </td>
               <td class="media-table-col--source">
-                <span class="media-table-source-badge toiminta-badge--stakeholder">Sidosryhmä</span>
+                <span class="media-table-source-badge toiminta-badge--stakeholder">{{ lbl.badgeStake }}</span>
               </td>
               <td class="media-table-col--title">{{ (row.title or row.stakeholder) | default("—") }}</td>
               <td class="toiminta-table-col--extra">
                 <span class="toiminta-stakeholder-name">{{ row.stakeholder | default("") }}</span>
                 {% if row.participants %}
-                  <span class="toiminta-participants">{{ row.participants }}&nbsp;osallistujaa</span>
+                  <span class="toiminta-participants">{{ row.participants }}&nbsp;{{ lbl.participantsSuffix if lbl.participantsSuffix else "osallistujaa" }}</span>
                 {% endif %}
               </td>
               <td class="media-table-col--link">
@@ -89,13 +130,13 @@
         {% endfor %}
       </tbody>
     </table>
-    <p class="media-table-empty" id="toiminta-empty" hidden>Ei tuloksia.</p>
+    <p class="media-table-empty" id="toiminta-empty" hidden>{{ lbl.empty }}</p>
   </div>
 
-  <nav class="media-table-pagination" id="toiminta-pagination" aria-label="Tulossivu">
-    <button class="media-table-page-btn" id="toiminta-prev" aria-label="Edellinen sivu">← Edellinen</button>
+  <nav class="media-table-pagination" id="toiminta-pagination" aria-label="{{ lbl.ariaPag }}">
+    <button class="media-table-page-btn" id="toiminta-prev" aria-label="{{ lbl.prev }}">{{ lbl.prev }}</button>
     <span class="media-table-page-info" id="toiminta-page-info" aria-live="polite"></span>
-    <button class="media-table-page-btn" id="toiminta-next" aria-label="Seuraava sivu">Seuraava →</button>
+    <button class="media-table-page-btn" id="toiminta-next" aria-label="{{ lbl.next }}">{{ lbl.next }}</button>
   </nav>
 
 </section>
@@ -118,7 +159,6 @@
   var filtered = allRows.slice();
   var currentPage = 1;
 
-  // Populate year filter
   (function () {
     var years = {};
     allRows.forEach(function (row) { var y = row.dataset.year; if (y) years[y] = true; });
@@ -152,8 +192,8 @@
     emptyEl.hidden = total > 0;
     prevBtn.disabled = currentPage <= 1;
     nextBtn.disabled = currentPage >= totalPages;
-    pageInfo.textContent = 'Sivu\u00a0' + currentPage + '\u00a0/\u00a0' + totalPages;
-    countEl.textContent  = total + '\u00a0tulosta';
+    pageInfo.textContent = '{{ lbl.jsPage }}\u00a0' + currentPage + '\u00a0{{ lbl.jsSep }}\u00a0' + totalPages;
+    countEl.textContent  = total + '\u00a0{{ lbl.jsResults }}';
   }
 
   searchEl.addEventListener('input',  function () { currentPage = 1; render(); });

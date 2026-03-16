@@ -15,7 +15,8 @@
       </header>
     {% endif %}
     <div class="kb-post-feed-carousel-wrap">
-      <div class="kb-post-feed-carousel">
+      <button class="kb-carousel-btn kb-carousel-btn--prev kb-carousel-btn--edge" aria-label="Edellinen">&#8249;</button>
+      <div class="kb-post-feed-carousel" id="kbc-{{ b.uniqueID }}">
         {% for post in items %}
           <article class="kb-post-card">
             {% if post.data.featuredImage %}
@@ -35,6 +36,41 @@
           </article>
         {% endfor %}
       </div>
+      <button class="kb-carousel-btn kb-carousel-btn--next" aria-label="Seuraava">&#8250;</button>
+      <script>
+      (function () {
+        var track = document.getElementById('kbc-{{ b.uniqueID }}');
+        if (!track) return;
+        var wrap  = track.parentElement;
+        var btnPrev = wrap.querySelector('.kb-carousel-btn--prev');
+        var btnNext = wrap.querySelector('.kb-carousel-btn--next');
+        if (!btnPrev || !btnNext) return;
+
+        function cardStep() {
+          var card = track.querySelector('.kb-post-card');
+          if (!card) return 300;
+          var gap = parseFloat(getComputedStyle(track).columnGap) || 20;
+          return card.offsetWidth + gap;
+        }
+
+        function sync() {
+          var atStart = track.scrollLeft <= 4;
+          var atEnd   = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+          btnPrev.classList.toggle('kb-carousel-btn--edge', atStart);
+          btnNext.classList.toggle('kb-carousel-btn--edge', atEnd);
+        }
+
+        requestAnimationFrame(sync);
+        btnPrev.addEventListener('click', function () {
+          track.scrollBy({ left: -cardStep(), behavior: 'smooth' });
+        });
+        btnNext.addEventListener('click', function () {
+          track.scrollBy({ left: cardStep(), behavior: 'smooth' });
+        });
+        track.addEventListener('scroll', sync, { passive: true });
+        window.addEventListener('resize', function () { requestAnimationFrame(sync); }, { passive: true });
+      })();
+      </script>
     </div>
   {% else %}
     {% if b.title %}

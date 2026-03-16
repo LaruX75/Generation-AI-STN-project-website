@@ -1,0 +1,41 @@
+{% set publicationData = scientificPublications %}
+<div class="scientific-publications">
+  {% if publicationsLead %}
+  <p class="scientific-publications__lead">{{ publicationsLead }}</p>
+  {% endif %}
+
+  {% for group in publicationData.groups %}
+  <section class="scientific-publications__group" aria-labelledby="scientific-publications-{{ group.id }}">
+    <h3 id="scientific-publications-{{ group.id }}" class="scientific-publications__year">{{ group.label }}</h3>
+    <ol class="scientific-publications__list">
+      {% for item in group.items %}
+      <li class="scientific-publications__item">
+        <div class="scientific-publications__meta">
+          <span class="scientific-publications__code">{{ item.code }}</span>
+          {% if item.status != "Published" %}
+          <span class="scientific-publications__status">{{ item.status }}</span>
+          {% endif %}
+        </div>
+        {% if item.authorsText %}
+        <p class="scientific-publications__authors">{{ item.authorsText }}{% if item.year %} ({{ item.year }}){% endif %}</p>
+        {% endif %}
+        {% if item.title %}
+        <p class="scientific-publications__title">{{ item.title }}</p>
+        {% endif %}
+        {% if item.venue %}
+        <p class="scientific-publications__venue">{{ item.venue }}</p>
+        {% endif %}
+        {% if item.notes %}
+        <p class="scientific-publications__notes">{{ item.notes }}</p>
+        {% endif %}
+        {% if item.link %}
+        <p class="scientific-publications__link-row">
+          <a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.linkLabel or publicationsLinkLabel or "Linkki" }}</a>
+        </p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endfor %}
+</div>

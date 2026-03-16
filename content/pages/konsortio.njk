@@ -1,24 +1,27 @@
 ---
 title: Konsortio
+seoTitle: Konsortio — Generation AI
+seoDescription: Generation AI on monitieteinen tutkimuskonsortio, jossa yhdistyvät kasvatustieteen, tietojenkäsittelytieteen ja oikeustieteen asiantuntijuus neljästä suomalaisesta organisaatiosta.
 date: "2023-01-29T11:44:01"
-updated: "2025-02-12T22:03:51"
+updated: "2026-03-16T00:00:00"
 slug: konsortio
 permalink: /konsortio/
 status: publish
 sourceType: pages
-excerpt: "Hankkeen johto Matti Tedre Professori, hankkeen johtaja, Itä-Suomen yliopisto (UEF) Prof. Tedre toimii datatoimijuuutta käsittelevän työpaketin (työpaketti 1) ja koko hankkeen johtajana. matti.tedre@uef.fi Kati Mäkitalo Professori, hankkeen vuorovaikutusvastaava, Oulun yliopisto Prof. Mäkitalo toimii vuorovaikutusmekanismeja koskevan työpaketin (työpaketti 5) johtajana. kati.makitalo@oulu.fi Teemme monitieteistä tutkimus- ja kehitystyötä Tiesitkö, että konsortiomme eli hankkeemme eri osapuolet on hyvin monitieteinen…"
 categories: []
 tags: []
 author: admin
 layout: layouts/page.njk
-pageHero: true
-heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnotized_computer_hyper_reali_7e5fceac-75e4-4087-8364-b0ae1a8e0b00.png"
+pageHero: false
 ---
 
 {% macro renderResearchfiCard(personName) %}
 {% set publications = researchfi | publicationsForPerson(personName) %}
 {% if not publications.length %}
 {% set publications = scholarlyPublications | publicationsForPerson(personName) %}
+{% endif %}
+{% if not publications.length %}
+{% set publications = scientificPublications.items | publicationsForPerson(personName) %}
 {% endif %}
 {% set first = publications[0] if publications.length else null %}
 {% set profileUrl = first.personId if (first and first.personId and (first.personId | isHttpUrl)) else (first.link if (first and first.link) else "") %}
@@ -27,10 +30,11 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
   {% if first %}
   <ul class="researchfi-card__list">
     <li class="researchfi-card__item">
-      <div class="researchfi-card__meta">{{ first.year }}{% if first.place %} · {{ first.place }}{% endif %}</div>
+      <div class="researchfi-card__meta">{{ first.year }}{% if first.place or first.venue %} · {{ first.place or first.venue }}{% endif %}</div>
       <strong class="researchfi-card__name">{{ first.title }}</strong>
-      {% if first.authors %}
-      <div class="researchfi-card__authors">{{ first.authors }}</div>
+      <button class="researchfi-card__expand-btn" type="button" aria-label="Näytä koko otsikko">Lisää</button>
+      {% if first.authors or first.authorsText %}
+      <div class="researchfi-card__authors">{{ first.authors or first.authorsText }}</div>
       {% endif %}
     </li>
   </ul>
@@ -43,23 +47,34 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
 </div>
 {% endmacro %}
 
+{% macro renderOrgContent(partner) %}
+{% if partner.featuredContent and partner.featuredContent.length %}
+<div class="researchfi-card">
+  <h5 class="researchfi-card__title">Ajankohtaista</h5>
+  <ul class="researchfi-card__list">
+    {% for item in partner.featuredContent %}
+    <li class="researchfi-card__item">
+      <div class="researchfi-card__meta">{{ item.date }}</div>
+      <strong class="researchfi-card__name"><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a></strong>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% endmacro %}
+
 {% macro renderPersonCard(person, featured = false) %}
 <article
   class="consortium-card{% if featured %} consortium-card--featured{% endif %}"
-  data-card
+  {% if not person.isOrgCard %}data-card{% endif %}
   data-name="{{ person.name }}"
   data-organization="{{ person.organization }}"
   data-discipline="{{ person.discipline }}"
 >
-  <div class="consortium-card__meta-row">
-    <span class="consortium-card__meta consortium-card__meta--org">{{ person.organization }}</span>
-    {% if person.discipline %}
-    <span class="consortium-card__meta consortium-card__meta--discipline">{{ person.discipline }}</span>
-    {% endif %}
-  </div>
-
   {% if person.imageUrl %}
-  <img class="consortium-card__image" src="{{ person.imageUrl }}" alt="{{ person.name }}" loading="lazy" />
+  <img class="consortium-card__image{% if person.isOrgCard %} consortium-card__image--org{% endif %}" src="{{ person.imageUrl }}" alt="{{ person.name }}" loading="lazy" />
+  {% elif person.isOrgCard %}
+  <div class="consortium-card__org-placeholder">{{ person.orgInitials if person.orgInitials else person.name[0] }}</div>
   {% endif %}
 
   <div class="consortium-card__body">
@@ -67,18 +82,35 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     {% if person.role %}
     <p class="consortium-card__role">{{ person.role }}</p>
     {% endif %}
+    <div class="consortium-card__meta-row">
+      <span class="consortium-card__meta consortium-card__meta--org">{{ person.organization }}</span>
+      {% if person.discipline %}
+      <span class="consortium-card__meta consortium-card__meta--discipline">{{ person.discipline }}</span>
+      {% endif %}
+    </div>
     {% if person.description %}
     <p class="consortium-card__description">{{ person.description }}</p>
     {% endif %}
-    {% if person.email %}
-    <p class="consortium-card__contact"><a href="mailto:{{ person.email }}">{{ person.email }}</a></p>
+    <div class="consortium-card__links">
+      {% if person.email %}
+      <a class="consortium-card__email" href="mailto:{{ person.email }}">{{ person.email }}</a>
+      {% endif %}
+      {% if person.profileUrl or person.orcidUrl %}
+      <div class="consortium-card__profile-links">
+        {% if person.profileUrl %}
+        <a href="{{ person.profileUrl }}" class="consortium-card__profile-link" target="_blank" rel="noopener">{% if "uefconnect" in person.profileUrl %}UEF Connect{% elif "researchportal.helsinki" in person.profileUrl %}Research Portal{% elif "oulu.fi/en/researchers" in person.profileUrl %}OuluCris{% elif "linkedin.com" in person.profileUrl %}LinkedIn{% else %}Profiili{% endif %}</a>
+        {% endif %}
+        {% if person.orcidUrl %}
+        <a href="{{ person.orcidUrl }}" class="consortium-card__profile-link consortium-card__profile-link--orcid" target="_blank" rel="noopener">ORCID</a>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+    {% if person.isOrgCard %}
+      {{ renderOrgContent(person) }}
+    {% else %}
+      {{ renderResearchfiCard(person.publicationName or person.name) }}
     {% endif %}
-    {% if person.profileUrl %}
-    <p class="consortium-card__actions">
-      <a href="{{ person.profileUrl }}" target="_blank" rel="noopener">Profiili</a>
-    </p>
-    {% endif %}
-    {{ renderResearchfiCard(person.publicationName or person.name) }}
   </div>
 </article>
 {% endmacro %}
@@ -209,7 +241,7 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/juhokahila.jpeg"
   },
   {
-    "name": "Jussi Koivisto, KM",
+    "name": "Jussi Koivisto",
     "publicationName": "Jussi Koivisto, KM",
     "organization": "Suomen koodikoulu (Codeschool Finland)",
     "discipline": "",
@@ -225,9 +257,9 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     "organization": "Helsingin yliopisto",
     "discipline": "Oikeustiede",
     "role": "Lakitutkija",
-    "description": "Tutkii sosiaalisen median addiktoivaa suunnittelua teknologisen manipuloinnin muotona.",
+    "description": "Generation AI -hankkeen oikeustieteellinen tutkija. Tutkii alustojen vallankayttoa, julkista etua ja sosiaalisen median addiktoivaa suunnittelua oikeudellisesta nakokulmasta.",
     "email": "",
-    "profileUrl": "",
+    "profileUrl": "https://researchportal.helsinki.fi/fi/projects/generation-ai",
     "imageUrl": "https://strapi.gen-ai.fi/uploads/Matias_Koivulehto_9fe2629192.jpg"
   },
   {
@@ -242,7 +274,7 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/08/jarilaru.jpeg"
   },
   {
-    "name": "Lindroos-Hovinheimo, Susanna M",
+    "name": "Susanna Lindroos-Hovinheimo",
     "publicationName": "Lindroos-Hovinheimo, Susanna M",
     "organization": "Helsingin yliopisto",
     "discipline": "Oikeustiede",
@@ -341,354 +373,172 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     "imageUrl": "https://www.generation-ai-stn.fi/wp-content/uploads/2023/02/thumbnail_CSF-Sirkku-Tahvanainen-2022-12-1772x2658-1.jpg"
   }
 ] %}
-{% set allPeople = workPackageLeaders.concat(consortiumMembers) %}
 
-<style>
-  .konsortio-page {
-    display: grid;
-    gap: 3rem;
+{% set partners = [
+  {
+    "name": "Heureka – Suomen Tiedekeskus",
+    "organization": "Heureka",
+    "discipline": "",
+    "role": "Yhteistyökumppani",
+    "description": "Heureka on Suomen suurin tiedekeskus. Generation AI -hanke on toteuttanut Heurekassa tapahtumia ja yhteistyöprojekteja.",
+    "email": "",
+    "profileUrl": "https://www.heureka.fi",
+    "imageUrl": "",
+    "isOrgCard": true,
+    "orgInitials": "H",
+    "featuredContent": [
+      {
+        "date": "2026-03-13",
+        "title": "Heurekan oppimateriaali: Taitava tekoaly",
+        "url": "/hankkeen-toiminta/heurekan-oppimateriaali-taitava-tekoaly/"
+      },
+      {
+        "date": "2026-03-13",
+        "title": "Heurekan tyopaja: Tekoalylajittelija Arduinolla",
+        "url": "/hankkeen-toiminta/heurekan-tyopaja-tekoalylajittelija-arduinolla/"
+      },
+      {
+        "date": "2024-10-03",
+        "title": "Heurekan opettajailta 3.10.2024",
+        "url": "/ajankohtaista/heurekan-opettajailta-somekone/"
+      },
+      {
+        "date": "2024-09-07",
+        "title": "Tekoäly- ja robotiikkateemainen perhepäivä Heurekassa",
+        "url": "/ajankohtaista/tekoaly-ja-robotiikkateemainen-perhepaiva-heurekassa/"
+      }
+    ]
+  },
+  {
+    "name": "Science Fest",
+    "organization": "Science Fest",
+    "discipline": "",
+    "role": "Yhteistyökumppani",
+    "description": "Science Fest on hankkeen yhteistyökumppani viestintä- ja tapahtumatoiminnassa.",
+    "email": "",
+    "profileUrl": "https://www.sciencefest.fi",
+    "imageUrl": "",
+    "isOrgCard": true,
+    "orgInitials": "SF",
+    "featuredContent": []
   }
+] %}
 
-  .konsortio-section {
-    display: grid;
-    gap: 1.5rem;
-  }
-
-  .konsortio-section__header {
-    display: grid;
-    gap: 0.75rem;
-  }
-
-  .konsortio-section__lead {
-    max-width: 74ch;
-    margin: 0;
-    color: #475569;
-  }
-
-  .consortium-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    align-items: stretch;
-  }
-
-  .consortium-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    padding: 4.5rem 1.25rem 1.25rem;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 1rem;
-    background: linear-gradient(180deg, #ffffff 0%, #f8fbf7 100%);
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-  }
-
-  .consortium-card--featured {
-    background: linear-gradient(180deg, #ffffff 0%, #f4f8f1 100%);
-    border-color: rgba(49, 78, 37, 0.16);
-  }
-
-  .consortium-card__meta-row {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    right: 1rem;
-    display: flex;
-    justify-content: space-between;
-    gap: 0.75rem;
-    pointer-events: none;
-  }
-
-  .consortium-card__meta {
-    display: inline-flex;
-    align-items: center;
-    max-width: 48%;
-    padding: 0.32rem 0.65rem;
-    border-radius: 999px;
-    background: #eef4ea;
-    color: #314e25;
-    font-size: 0.72rem;
-    font-weight: 700;
-    line-height: 1.2;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-
-  .consortium-card__meta--discipline {
-    margin-left: auto;
-    background: #f3f4f6;
-    color: #334155;
-    text-align: right;
-    justify-content: flex-end;
-  }
-
-  .consortium-card__image {
-    width: 104px;
-    height: 104px;
-    margin: 0 auto 1rem;
-    border-radius: 50%;
-    object-fit: cover;
-    background: #e5e7eb;
-  }
-
-  .consortium-card__body {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-  }
-
-  .consortium-card__name {
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.2;
-    text-align: center;
-  }
-
-  .consortium-card__role {
-    margin: 0.45rem 0 0;
-    color: #334155;
-    font-weight: 600;
-    text-align: center;
-  }
-
-  .consortium-card__description,
-  .consortium-card__contact,
-  .consortium-card__actions {
-    margin: 0.85rem 0 0;
-    color: #475569;
-    line-height: 1.55;
-  }
-
-  .consortium-card__contact,
-  .consortium-card__actions {
-    text-align: center;
-  }
-
-  .consortium-card__actions a,
-  .consortium-card__contact a {
-    color: var(--global-palette2, #446d33);
-    text-decoration: none;
-  }
-
-  .consortium-card__actions a:hover,
-  .consortium-card__contact a:hover {
-    text-decoration: underline;
-  }
-
-  .consortium-filters {
-    display: grid;
-    gap: 1rem;
-    padding: 1.25rem;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 1rem;
-    background: #f8fafc;
-  }
-
-  .consortium-filters__controls {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  }
-
-  .consortium-filters__field {
-    display: grid;
-    gap: 0.35rem;
-  }
-
-  .consortium-filters__field label {
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: #334155;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-
-  .consortium-filters__field select {
-    width: 100%;
-    min-height: 44px;
-    padding: 0.7rem 0.85rem;
-    border: 1px solid rgba(148, 163, 184, 0.55);
-    border-radius: 0.75rem;
-    background: #fff;
-    color: #0f172a;
-    font: inherit;
-  }
-
-  .consortium-filters__status {
-    margin: 0;
-    color: #475569;
-    font-size: 0.95rem;
-  }
-
-  .researchfi-card {
-    margin-top: auto;
-    padding-top: 1rem;
-  }
-
-  .researchfi-card__title {
-    margin: 0 0 0.75rem;
-    font-size: 1rem;
-    line-height: 1.3;
-  }
-
-  .researchfi-card__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .researchfi-card__item + .researchfi-card__item {
-    margin-top: 0.85rem;
-    padding-top: 0.85rem;
-    border-top: 1px solid rgba(15, 23, 42, 0.08);
-  }
-
-  .researchfi-card__meta,
-  .researchfi-card__authors,
-  .researchfi-card__empty {
-    color: #4b5563;
-    font-size: 0.92rem;
-    line-height: 1.45;
-  }
-
-  .researchfi-card__name {
-    display: block;
-    margin-top: 0.2rem;
-    line-height: 1.45;
-  }
-
-  .researchfi-card__authors {
-    margin-top: 0.25rem;
-  }
-
-  .researchfi-card__empty {
-    margin: 0;
-  }
-
-  .researchfi-card__all-link {
-    display: inline-block;
-    margin-top: 0.75rem;
-    padding: 0.35rem 0.85rem;
-    background: var(--global-palette1, #314e25);
-    color: #fff;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.15s;
-  }
-
-  .researchfi-card__all-link:hover {
-    background: var(--global-palette2, #446d33);
-  }
-
-  @media (max-width: 767px) {
-    .consortium-card {
-      padding-top: 5rem;
-    }
-
-    .consortium-card__meta-row {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .consortium-card__meta {
-      max-width: 100%;
-    }
-
-    .consortium-card__meta--discipline {
-      margin-left: 0;
-      justify-content: flex-start;
-      text-align: left;
-    }
-  }
-</style>
+{% set totalPeople = workPackageLeaders.concat(consortiumMembers) %}
 
 <div class="konsortio-page">
-  <section class="konsortio-section">
-    <div class="konsortio-section__header">
-      <h1>Konsortio</h1>
-      <p class="konsortio-section__lead">
-        Työpakettien johtajat näkyvät listassa ensimmäisinä. Muu konsortio seuraa heidän jälkeensä aakkosjärjestyksessä.
-      </p>
-    </div>
 
-    <div class="consortium-filters" data-consortium-filters>
-      <div class="consortium-filters__controls">
-        <div class="consortium-filters__field">
-          <label for="consortium-filter-organization">Organisaatio</label>
-          <select id="consortium-filter-organization" data-filter-organization>
-            <option value="">Kaikki organisaatiot</option>
-            <option value="Helsingin yliopisto">Helsingin yliopisto</option>
-            <option value="Itä-Suomen yliopisto (UEF)">Itä-Suomen yliopisto (UEF)</option>
-            <option value="Oulun yliopisto">Oulun yliopisto</option>
-            <option value="Suomen koodikoulu (Codeschool Finland)">Suomen koodikoulu (Codeschool Finland)</option>
-          </select>
-        </div>
+  <p class="konsortio-section__lead">Generation AI on monitieteinen tutkimuskonsortio, jossa yhdistyvät kasvatustieteen, tietojenkäsittelytieteen ja oikeustieteen asiantuntijuus. Hankkeessa on mukana tutkijoita neljästä organisaatiosta: Helsingin yliopistosta, Itä-Suomen yliopistosta (UEF), Oulun yliopistosta ja Suomen koodikoulusta.</p>
 
-        <div class="consortium-filters__field">
-          <label for="consortium-filter-discipline">Tieteenala</label>
-          <select id="consortium-filter-discipline" data-filter-discipline>
-            <option value="">Kaikki tieteenalat</option>
-            <option value="Kasvatustiede">Kasvatustiede</option>
-            <option value="Tietojenkäsittelytiede">Tietojenkäsittelytiede</option>
-            <option value="Oikeustiede">Oikeustiede</option>
-          </select>
-        </div>
+  <div class="consortium-filters" data-consortium-filters>
+    <div class="consortium-filters__controls">
+      <div class="consortium-filters__field">
+        <label for="consortium-filter-organization">Organisaatio</label>
+        <select id="consortium-filter-organization" data-filter-organization>
+          <option value="">Kaikki organisaatiot</option>
+          <option value="Helsingin yliopisto">Helsingin yliopisto</option>
+          <option value="Itä-Suomen yliopisto (UEF)">Itä-Suomen yliopisto (UEF)</option>
+          <option value="Oulun yliopisto">Oulun yliopisto</option>
+          <option value="Suomen koodikoulu (Codeschool Finland)">Suomen koodikoulu (Codeschool Finland)</option>
+        </select>
       </div>
-
-      <p class="consortium-filters__status" data-filter-status>Näytetään {{ allPeople.length }} henkilöä.</p>
+      <div class="consortium-filters__field">
+        <label for="consortium-filter-discipline">Tieteenala</label>
+        <select id="consortium-filter-discipline" data-filter-discipline>
+          <option value="">Kaikki tieteenalat</option>
+          <option value="Kasvatustiede">Kasvatustiede</option>
+          <option value="Tietojenkäsittelytiede">Tietojenkäsittelytiede</option>
+          <option value="Oikeustiede">Oikeustiede</option>
+        </select>
+      </div>
     </div>
+    <p class="consortium-filters__status" data-filter-status>Näytetään {{ totalPeople.length }} henkilöä.</p>
+  </div>
 
-    <div class="consortium-grid" data-consortium-grid>
-      {% for person in allPeople %}
-        {{ renderPersonCard(person, loop.index <= workPackageLeaders.length) }}
+  <section data-consortium-section>
+    <h2 class="consortium-group-title">Hankkeen johto</h2>
+    <div class="consortium-grid">
+      {% for person in workPackageLeaders %}
+        {{ renderPersonCard(person, true) }}
       {% endfor %}
     </div>
   </section>
+
+  <section data-consortium-section>
+    <h2 class="consortium-group-title">Konsortion jäsenet</h2>
+    <div class="consortium-grid">
+      {% for person in consortiumMembers %}
+        {{ renderPersonCard(person) }}
+      {% endfor %}
+    </div>
+  </section>
+
+  <section>
+    <h2 class="consortium-group-title">Yhteistyökumppanit</h2>
+    <div class="consortium-grid">
+      {% for partner in partners %}
+        {{ renderPersonCard(partner) }}
+      {% endfor %}
+    </div>
+  </section>
+
 </div>
 
 <script>
-  function initConsortiumFilters() {
-    var grid = document.querySelector("[data-consortium-grid]");
-    var organizationSelect = document.querySelector("[data-filter-organization]");
-    var disciplineSelect = document.querySelector("[data-filter-discipline]");
-    var status = document.querySelector("[data-filter-status]");
+(function () {
+  var orgSel  = document.querySelector('[data-filter-organization]');
+  var discSel = document.querySelector('[data-filter-discipline]');
+  var status  = document.querySelector('[data-filter-status]');
+  if (!orgSel || !discSel || !status) return;
 
-    if (!grid || !organizationSelect || !disciplineSelect || !status) {
-      return;
-    }
+  var cards    = Array.prototype.slice.call(document.querySelectorAll('[data-card]'));
+  var sections = Array.prototype.slice.call(document.querySelectorAll('[data-consortium-section]'));
 
-    var cards = Array.prototype.slice.call(grid.querySelectorAll("[data-card]"));
+  function normalize(v) { return String(v || '').trim().toLowerCase(); }
 
-    function normalizeValue(value) {
-      return String(value || "").trim().toLowerCase();
-    }
+  function applyFilters() {
+    var org  = normalize(orgSel.value);
+    var disc = normalize(discSel.value);
+    var count = 0;
 
-    function applyFilters() {
-      var organization = normalizeValue(organizationSelect.value);
-      var discipline = normalizeValue(disciplineSelect.value);
+    cards.forEach(function (card) {
+      var show = (!org  || normalize(card.dataset.organization) === org) &&
+                 (!disc || normalize(card.dataset.discipline)   === disc);
+      card.hidden = !show;
+      if (show) count++;
+    });
 
-      var visibleCards = cards.filter(function (card) {
-        var organizationMatch = !organization || normalizeValue(card.dataset.organization) === organization;
-        var disciplineMatch = !discipline || normalizeValue(card.dataset.discipline) === discipline;
-        var visible = organizationMatch && disciplineMatch;
-        card.hidden = !visible;
-        return visible;
-      });
+    sections.forEach(function (section) {
+      var any = Array.prototype.some.call(
+        section.querySelectorAll('[data-card]'),
+        function (c) { return !c.hidden; }
+      );
+      section.hidden = !any;
+    });
 
-      status.textContent = "Näytetään " + visibleCards.length + " henkilöä.";
-    }
-
-    organizationSelect.addEventListener("change", applyFilters);
-    disciplineSelect.addEventListener("change", applyFilters);
-    applyFilters();
+    status.textContent = 'Näytetään ' + count + ' henkilöä.';
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initConsortiumFilters);
-  } else {
-    initConsortiumFilters();
-  }
+  orgSel.addEventListener('change', applyFilters);
+  discSel.addEventListener('change', applyFilters);
+  applyFilters();
+})();
+
+// Publication title truncation
+(function () {
+  requestAnimationFrame(function () {
+    document.querySelectorAll('.researchfi-card__name').forEach(function (el) {
+      if (el.scrollHeight > el.clientHeight + 2) {
+        var btn = el.nextElementSibling;
+        if (btn && btn.classList.contains('researchfi-card__expand-btn')) {
+          btn.classList.add('is-visible');
+          btn.addEventListener('click', function () {
+            el.classList.toggle('is-expanded');
+            btn.textContent = el.classList.contains('is-expanded') ? 'Vähemmän' : 'Lisää';
+          });
+        }
+      }
+    });
+  });
+})();
 </script>

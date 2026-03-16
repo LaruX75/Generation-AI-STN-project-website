@@ -1,69 +1,123 @@
-{% set allItems = media_generation_ai or [] %}
+{% set allItems = mediaItems or [] %}
 {% set ivNewsItems = institutionalVisibility.items or [] %}
+
+{% if lang == "en" %}
+  {% set lbl = {
+    "heading": "News", "search": "Search news", "placeholder": "Search by title…",
+    "srcLabel": "Filter by source", "srcAll": "All sources",
+    "mtv": "MTV News", "hs": "Helsingin Sanomat", "hanke": "Project", "iv": "Universities",
+    "yrLabel": "Filter by year", "yrAll": "All years",
+    "aria": "Media publications", "ariaPag": "Result page",
+    "colDate": "Date", "colSrc": "Source", "colTitle": "Title", "colContent": "Content", "colLink": "Link",
+    "open": "Open", "na": "Not available", "empty": "No results.",
+    "prev": "← Previous", "next": "Next →",
+    "jsPage": "Page", "jsSep": "/", "jsResults": "results",
+    "hankeBadge": "Project"
+  } %}
+{% elif lang == "sv" %}
+  {% set lbl = {
+    "heading": "Nyheter", "search": "Sök i nyheter", "placeholder": "Sök på rubrik…",
+    "srcLabel": "Filtrera efter källa", "srcAll": "Alla källor",
+    "mtv": "MTV Nyheter", "hs": "Helsingin Sanomat", "hanke": "Projekt", "iv": "Universitet",
+    "yrLabel": "Filtrera efter år", "yrAll": "Alla år",
+    "aria": "Mediapublikationer", "ariaPag": "Resultatsida",
+    "colDate": "Datum", "colSrc": "Källa", "colTitle": "Rubrik", "colContent": "Innehåll", "colLink": "Länk",
+    "open": "Öppna", "na": "Ej tillgänglig", "empty": "Inga resultat.",
+    "prev": "← Föregående", "next": "Nästa →",
+    "jsPage": "Sida", "jsSep": "/", "jsResults": "resultat",
+    "hankeBadge": "Projekt"
+  } %}
+{% else %}
+  {% set lbl = {
+    "heading": "Uutiset", "search": "Hae uutisista", "placeholder": "Hae otsikolla…",
+    "srcLabel": "Suodata lähteen mukaan", "srcAll": "Kaikki lähteet",
+    "mtv": "MTV Uutiset", "hs": "Helsingin Sanomat", "hanke": "Hanke", "iv": "Yliopistot",
+    "yrLabel": "Suodata vuoden mukaan", "yrAll": "Kaikki vuodet",
+    "aria": "Mediajulkaisut", "ariaPag": "Tulossivu",
+    "colDate": "Päivämäärä", "colSrc": "Lähde", "colTitle": "Otsikko", "colContent": "Sisältö", "colLink": "Linkki",
+    "open": "Avaa", "na": "Ei saatavilla", "empty": "Ei tuloksia.",
+    "prev": "← Edellinen", "next": "Seuraava →",
+    "jsPage": "Sivu", "jsSep": "/", "jsResults": "tulosta",
+    "hankeBadge": "Hanke"
+  } %}
+{% endif %}
 
 <section class="media-table-section" id="media-table-section">
 
   <div class="media-table-header">
-    <h2 class="media-table-heading">Uutiset</h2>
+    <h2 class="media-table-heading">{{ lbl.heading }}</h2>
     <div class="media-table-controls">
       <div class="media-table-search-wrap">
-        <label for="media-search" class="sr-only">Hae uutisista</label>
-        <input type="search" id="media-search" class="media-table-search" placeholder="Hae otsikolla…" autocomplete="off">
+        <label for="media-search" class="sr-only">{{ lbl.search }}</label>
+        <input type="search" id="media-search" class="media-table-search" placeholder="{{ lbl.placeholder }}" autocomplete="off">
       </div>
       <div class="media-table-filters">
-        <label for="media-filter-source" class="sr-only">Suodata lähteen mukaan</label>
+        <label for="media-filter-source" class="sr-only">{{ lbl.srcLabel }}</label>
         <select id="media-filter-source" class="media-table-filter">
-          <option value="">Kaikki lähteet</option>
-          <option value="mtv">MTV Uutiset</option>
+          <option value="">{{ lbl.srcAll }}</option>
+          <option value="mtv">{{ lbl.mtv }}</option>
           <option value="yle">Yle</option>
-          <option value="hs">Helsingin Sanomat</option>
-          <option value="iv">Yliopistot</option>
+          <option value="hs">{{ lbl.hs }}</option>
+          <option value="hanke">{{ lbl.hanke }}</option>
+          <option value="iv">{{ lbl.iv }}</option>
         </select>
-        <label for="media-filter-year" class="sr-only">Suodata vuoden mukaan</label>
+        <label for="media-filter-year" class="sr-only">{{ lbl.yrLabel }}</label>
         <select id="media-filter-year" class="media-table-filter">
-          <option value="">Kaikki vuodet</option>
+          <option value="">{{ lbl.yrAll }}</option>
         </select>
       </div>
       <p class="media-table-count" id="media-count" aria-live="polite"></p>
     </div>
   </div>
 
-  <div class="media-table-wrap" role="region" aria-label="Mediajulkaisut" tabindex="0">
+  <div class="media-table-wrap" role="region" aria-label="{{ lbl.aria }}" tabindex="0">
     <table class="media-table" id="media-table">
       <thead>
         <tr>
-          <th scope="col" class="media-table-col--date">Päivämäärä</th>
-          <th scope="col" class="media-table-col--source">Lähde</th>
-          <th scope="col" class="media-table-col--title">Otsikko</th>
-          <th scope="col" class="media-table-col--content">Sisältö</th>
-          <th scope="col" class="media-table-col--link">Linkki</th>
+          <th scope="col" class="media-table-col--date">{{ lbl.colDate }}</th>
+          <th scope="col" class="media-table-col--source">{{ lbl.colSrc }}</th>
+          <th scope="col" class="media-table-col--title">{{ lbl.colTitle }}</th>
+          <th scope="col" class="media-table-col--content">{{ lbl.colContent }}</th>
+          <th scope="col" class="media-table-col--link">{{ lbl.colLink }}</th>
         </tr>
       </thead>
       <tbody id="media-table-body">
-        {% for item in allItems %}
+        {% for post in allItems %}
+          {% set postSource = "hanke" %}
+          {% set postSourceLabel = lbl.hankeBadge %}
+          {% if post.data.categories %}
+            {% if "YLE" in post.data.categories or "Yle" in post.data.categories or "yle" in post.data.categories %}
+              {% set postSource = "yle" %}
+              {% set postSourceLabel = "Yle" %}
+            {% elif "MTV3" in post.data.categories or "MTV Uutiset" in post.data.categories or "MTV" in post.data.categories %}
+              {% set postSource = "mtv" %}
+              {% set postSourceLabel = lbl.mtv %}
+            {% elif "Helsingin Sanomat" in post.data.categories or "HS" in post.data.categories %}
+              {% set postSource = "hs" %}
+              {% set postSourceLabel = lbl.hs %}
+            {% endif %}
+          {% endif %}
           <tr class="media-table-row"
-            data-source="{{ item.source | default('') }}"
-            data-year="{{ item.datePublished | truncate(4, true, '') if item.datePublished else '' }}"
-            data-search="{{ item.title | lower | default('') }} {{ item.sourceLabel | lower | default('') }}">
+            data-source="{{ postSource }}"
+            data-year="{{ post.date | date('Y') }}"
+            data-search="{{ post.data.title | lower | default('') }}">
             <td class="media-table-col--date">
-              <time datetime="{{ item.datePublished | default('') }}">{{ item.datePublished | truncate(10, true, '') if item.datePublished else '—' }}</time>
+              <time datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date("d.m.Y") }}</time>
             </td>
             <td class="media-table-col--source">
-              <span class="media-table-source-badge media-table-source-badge--{{ item.source | default('') }}">{{ item.sourceLabel | default('—') }}</span>
+              <span class="media-table-source-badge media-table-source-badge--{{ postSource }}">{{ postSourceLabel }}</span>
             </td>
-            <td class="media-table-col--title">{{ item.title | default('—') }}</td>
+            <td class="media-table-col--title">{{ post.data.title | default("—") }}</td>
             <td class="media-table-col--content">
-              {% if item.lead %}
-                {{ item.lead | truncate(200) }}
-              {% elif item.description %}
-                {{ item.description | truncate(200) }}
+              {% if post.data.excerpt and post.data.excerpt != "[object Object]" %}
+                {{ post.data.excerpt | truncate(200) }}
               {% else %}
-                <span class="media-table-na">Ei saatavilla</span>
+                <span class="media-table-na">{{ lbl.na }}</span>
               {% endif %}
             </td>
             <td class="media-table-col--link">
-              {% if item.url %}
-                <a href="{{ item.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">Avaa&nbsp;↗</a>
+              {% if post.url %}
+                <a href="{{ post.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;↗</a>
               {% else %}
                 <span class="media-table-na">—</span>
               {% endif %}
@@ -93,12 +147,12 @@
               {% if item.summary %}
                 {{ item.summary | truncate(200) }}
               {% else %}
-                <span class="media-table-na">Ei saatavilla</span>
+                <span class="media-table-na">{{ lbl.na }}</span>
               {% endif %}
             </td>
             <td class="media-table-col--link">
               {% if item.url %}
-                <a href="{{ item.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">Avaa&nbsp;↗</a>
+                <a href="{{ item.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;↗</a>
               {% else %}
                 <span class="media-table-na">—</span>
               {% endif %}
@@ -108,13 +162,13 @@
         {% endfor %}
       </tbody>
     </table>
-    <p class="media-table-empty" id="media-empty" hidden>Ei tuloksia.</p>
+    <p class="media-table-empty" id="media-empty" hidden>{{ lbl.empty }}</p>
   </div>
 
-  <nav class="media-table-pagination" id="media-pagination" aria-label="Tulossivu">
-    <button class="media-table-page-btn" id="media-prev" aria-label="Edellinen sivu">← Edellinen</button>
+  <nav class="media-table-pagination" id="media-pagination" aria-label="{{ lbl.ariaPag }}">
+    <button class="media-table-page-btn" id="media-prev" aria-label="{{ lbl.prev }}">{{ lbl.prev }}</button>
     <span class="media-table-page-info" id="media-page-info" aria-live="polite"></span>
-    <button class="media-table-page-btn" id="media-next" aria-label="Seuraava sivu">Seuraava →</button>
+    <button class="media-table-page-btn" id="media-next" aria-label="{{ lbl.next }}">{{ lbl.next }}</button>
   </nav>
 
 </section>
@@ -139,17 +193,12 @@
   var filtered   = allRows.slice();
   var currentPage = 1;
 
-  // Populate year filter dynamically from row data
   (function () {
     var years = {};
-    allRows.forEach(function (row) {
-      var yr = row.dataset.year;
-      if (yr) years[yr] = true;
-    });
+    allRows.forEach(function (row) { var yr = row.dataset.year; if (yr) years[yr] = true; });
     Object.keys(years).sort().reverse().forEach(function (yr) {
       var opt = document.createElement('option');
-      opt.value = yr;
-      opt.textContent = yr;
+      opt.value = yr; opt.textContent = yr;
       yrEl.appendChild(opt);
     });
   }());
@@ -166,38 +215,19 @@
     });
   }
 
-  function formatDate(iso) {
-    if (!iso || iso.length < 10) return iso || '';
-    var parts = iso.slice(0, 10).split('-');
-    if (parts.length !== 3) return iso.slice(0, 10);
-    return parts[2] + '.' + parts[1] + '.' + parts[0];
-  }
-
   function render() {
     applyFilters();
     var total      = filtered.length;
     var totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
     if (currentPage > totalPages) currentPage = totalPages;
-
     var start = (currentPage - 1) * PAGE_SIZE;
-    var end   = start + PAGE_SIZE;
-
     allRows.forEach(function (row) { row.hidden = true; });
-    filtered.slice(start, end).forEach(function (row) {
-      row.hidden = false;
-      // Format date cells on first render
-      var timeEl = row.querySelector('time');
-      if (timeEl && timeEl.dataset.fmt !== '1') {
-        timeEl.textContent = formatDate(timeEl.getAttribute('datetime'));
-        timeEl.dataset.fmt = '1';
-      }
-    });
-
+    filtered.slice(start, start + PAGE_SIZE).forEach(function (row) { row.hidden = false; });
     emptyNote.hidden = total > 0;
     prevBtn.disabled = currentPage <= 1;
     nextBtn.disabled = currentPage >= totalPages;
-    pageInfo.textContent = 'Sivu\u00a0' + currentPage + '\u00a0/\u00a0' + totalPages;
-    countEl.textContent  = total + '\u00a0tulosta';
+    pageInfo.textContent = '{{ lbl.jsPage }}\u00a0' + currentPage + '\u00a0{{ lbl.jsSep }}\u00a0' + totalPages;
+    countEl.textContent  = total + '\u00a0{{ lbl.jsResults }}';
   }
 
   searchEl.addEventListener('input',  function () { currentPage = 1; render(); });
@@ -205,8 +235,7 @@
   yrEl.addEventListener('change',     function () { currentPage = 1; render(); });
   prevBtn.addEventListener('click',   function () { if (currentPage > 1) { currentPage--; render(); } });
   nextBtn.addEventListener('click',   function () {
-    var totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
-    if (currentPage < totalPages) { currentPage++; render(); }
+    if (currentPage < Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))) { currentPage++; render(); }
   });
 
   render();

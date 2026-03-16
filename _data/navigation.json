@@ -56,7 +56,7 @@
             "heading": "Materiaalit",
             "items": [
               { "label": "Oppimateriaalit", "url": "/materiaalit/", "target": "" },
-              { "label": "Henkilötietojen käsittely", "url": "/henkilotietojen-kasittely-alakoulussa/", "target": "" },
+              { "label": "Opas: tietosuoja & sovellukset", "url": "/henkilotietojen-kasittely-alakoulussa/", "target": "" },
               { "label": "50 myyttiä tekoälystä (PDF)", "url": "https://doi.org/10.58181/VP9789523972513", "target": "_blank" }
             ]
           }
@@ -197,7 +197,7 @@
             "heading": "Resurssit",
             "items": [
               { "label": "Materiaalit", "url": "/materiaalit/", "target": "" },
-              { "label": "Henkilötietojen käsittely", "url": "/henkilotietojen-kasittely-alakoulussa/", "target": "" }
+              { "label": "Opas: tietosuoja & sovellukset", "url": "/henkilotietojen-kasittely-alakoulussa/", "target": "" }
             ]
           },
           {

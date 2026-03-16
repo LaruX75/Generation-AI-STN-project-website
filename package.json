@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-navigation": "^1.0.5"
+    "@11ty/eleventy-navigation": "^1.0.5",
+    "@uncenter/eleventy-plugin-toc": "^2.0.0"
   },
   "devDependencies": {
     "pagefind": "^1.4.0"

@@ -75,7 +75,10 @@ function getLocalizedLabel(originalLabel, url, locale, translations) {
 
   if (!isInternalUrl(url)) return originalLabel;
 
-  const { path } = splitHash(url);
+  const { path, hash } = splitHash(url);
+  // Hash links point to a page section — keep the original label, not the page title
+  if (hash) return originalLabel;
+
   const localizedTarget = translations.byUrl[path] && translations.byUrl[path][locale];
   if (localizedTarget && localizedTarget.title) {
     return localizedTarget.title;
