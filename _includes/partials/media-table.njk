@@ -1,9 +1,10 @@
 {% set allItems = media_generation_ai or [] %}
+{% set ivNewsItems = institutionalVisibility.items or [] %}
 
 <section class="media-table-section" id="media-table-section">
 
   <div class="media-table-header">
-    <h2 class="media-table-heading">Mediajulkaisut</h2>
+    <h2 class="media-table-heading">Uutiset</h2>
     <div class="media-table-controls">
       <div class="media-table-search-wrap">
         <label for="media-search" class="sr-only">Hae uutisista</label>
@@ -16,6 +17,7 @@
           <option value="mtv">MTV Uutiset</option>
           <option value="yle">Yle</option>
           <option value="hs">Helsingin Sanomat</option>
+          <option value="iv">Yliopistot</option>
         </select>
         <label for="media-filter-year" class="sr-only">Suodata vuoden mukaan</label>
         <select id="media-filter-year" class="media-table-filter">
@@ -67,6 +69,42 @@
               {% endif %}
             </td>
           </tr>
+        {% endfor %}
+        {% for item in ivNewsItems %}
+          {% if item.sourceLabel != "Helsingin yliopiston tutkimusportaali" %}
+          <tr class="media-table-row"
+            data-source="iv"
+            data-year="{{ item.sortDate | truncate(4, true, '') if item.sortDate else '' }}"
+            data-search="{{ item.title | lower | default('') }} {{ item.sourceLabel | lower | default('') }}">
+            <td class="media-table-col--date">
+              <time datetime="{{ item.sortDate | default('') }}">{{ item.dateLabel | default('—') }}</time>
+            </td>
+            <td class="media-table-col--source">
+              <span class="media-table-source-badge media-table-source-badge--iv">{{ item.sourceLabel | default('—') }}</span>
+            </td>
+            <td class="media-table-col--title">
+              {% if item.url %}
+                <a href="{{ item.url }}" class="media-table-title-link" target="_blank" rel="noopener">{{ item.title | default('—') }}</a>
+              {% else %}
+                {{ item.title | default('—') }}
+              {% endif %}
+            </td>
+            <td class="media-table-col--content">
+              {% if item.summary %}
+                {{ item.summary | truncate(200) }}
+              {% else %}
+                <span class="media-table-na">Ei saatavilla</span>
+              {% endif %}
+            </td>
+            <td class="media-table-col--link">
+              {% if item.url %}
+                <a href="{{ item.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">Avaa&nbsp;↗</a>
+              {% else %}
+                <span class="media-table-na">—</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% endif %}
         {% endfor %}
       </tbody>
     </table>

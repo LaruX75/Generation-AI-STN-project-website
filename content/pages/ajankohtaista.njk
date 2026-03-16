@@ -31,7 +31,7 @@ pageHero: false
   }
 } %}
 {% set kadenceInnerHtml %}
-<ul class="kt-tabs-title-list"><li id="tab-media" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-active"><a href="#tab-media" data-tab="1" class="kt-tab-title kt-tab-title-1"><span class="kt-title-text">Media</span></a></li><li id="tab-tapahtumat" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tapahtumat" data-tab="2" class="kt-tab-title kt-tab-title-2"><span class="kt-title-text">Tapahtumat</span></a></li><li id="tab-toiminta" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-toiminta" data-tab="3" class="kt-tab-title kt-tab-title-3"><span class="kt-title-text">Hankkeen toiminta</span></a></li><li id="tab-tutkimus" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tutkimus" data-tab="4" class="kt-tab-title kt-tab-title-4"><span class="kt-title-text">Konferenssit ja julkaisut</span></a></li><li id="tab-yliopistot" class="kt-title-item kt-title-item-5 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-yliopistot" data-tab="5" class="kt-tab-title kt-tab-title-5"><span class="kt-title-text">Yliopistot</span></a></li></ul><div class="kt-tabs-content-wrap">{% set kadenceBlock = {
+<ul class="kt-tabs-title-list"><li id="tab-media" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-active"><a href="#tab-media" data-tab="1" class="kt-tab-title kt-tab-title-1"><span class="kt-title-text">Uutiset</span></a></li><li id="tab-tapahtumat" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tapahtumat" data-tab="2" class="kt-tab-title kt-tab-title-2"><span class="kt-title-text">Tapahtumat</span></a></li><li id="tab-toiminta" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-toiminta" data-tab="3" class="kt-tab-title kt-tab-title-3"><span class="kt-title-text">Hankkeen toiminta</span></a></li><li id="tab-tutkimus" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tutkimus" data-tab="4" class="kt-tab-title kt-tab-title-4"><span class="kt-title-text">Konferenssit ja julkaisut</span></a></li></ul><div class="kt-tabs-content-wrap">{% set kadenceBlock = {
   "name": "kadence/tab",
   "shortName": "tab",
   "attrs": {
@@ -83,25 +83,6 @@ pageHero: false
 {% endset %}
 {% include "blocks/kadence/tab.njk" %}
 
-{% set kadenceBlock = {
-  "name": "kadence/tab",
-  "shortName": "tab",
-  "attrs": {
-    "uniqueID": "inst-visibility-fi"
-  }
-} %}
-{% set kadenceInnerHtml %}
-{% set institutionalVisibilityLabels = {
-  "heading": "Yliopistojen omat sivut, uutiset ja tiedotteet",
-  "lead": "Tassa listassa ovat yliopistojen omilta sivuilta vahvistetut Generation AI -henkiloston uutiset, tiedotteet ja projektisivut.",
-  "date": "Paiva",
-  "source": "Lahde",
-  "title": "Otsikko",
-  "people": "Henkilot",
-  "note": "Huom. Projektisivujen paivana nakyy projektin alkupaiva, ei valttamatta sivun julkaisupaiva."
-} %}
-{% include "partials/institutional-visibility-table.njk" %}
-{% endset %}
-{% include "blocks/kadence/tab.njk" %}</div>
+</div>
 {% endset %}
 {% include "blocks/kadence/tabs.njk" %}
