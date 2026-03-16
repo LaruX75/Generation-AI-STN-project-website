@@ -1,0 +1,147 @@
+{% set _a11y = {
+  label:    "Saavutettavuustyökalut",
+  close:    "Sulje",
+  fontSize: "Fonttikoko",
+  font:     "Lukihäiriöfontti",
+  contrast: "Korkea kontrasti",
+  bg:       "Taustaväri",
+  spacing:  "Leveämpi tekstiväli",
+  guide:    "Lukuviivain",
+  tts:      "Lue ääneen",
+  stop:     "Pysäytä",
+  reset:    "Nollaa kaikki"
+} %}
+{% if lang == "en" %}{% set _a11y = {
+  label:    "Accessibility tools",
+  close:    "Close",
+  fontSize: "Font size",
+  font:     "Dyslexia font",
+  contrast: "High contrast",
+  bg:       "Background colour",
+  spacing:  "Wider text spacing",
+  guide:    "Reading guide",
+  tts:      "Read aloud",
+  stop:     "Stop",
+  reset:    "Reset all"
+} %}{% endif %}
+{% if lang == "sv" %}{% set _a11y = {
+  label:    "Tillgänglighetsverktyg",
+  close:    "Stäng",
+  fontSize: "Teckenstorlek",
+  font:     "Lässvårighetsfont",
+  contrast: "Hög kontrast",
+  bg:       "Bakgrundsfärg",
+  spacing:  "Större textavstånd",
+  guide:    "Läslinjal",
+  tts:      "Läs upp",
+  stop:     "Stoppa",
+  reset:    "Återställ allt"
+} %}{% endif %}
+
+<div class="a11y-toolbar" id="a11y-toolbar" role="region" aria-label="{{ _a11y.label }}">
+
+  <button class="a11y-trigger" id="a11y-trigger"
+          aria-expanded="false" aria-controls="a11y-panel"
+          title="{{ _a11y.label }}">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </svg>
+    <span aria-hidden="true">Aa</span>
+  </button>
+
+  <div class="a11y-panel" id="a11y-panel" role="dialog" aria-label="{{ _a11y.label }}" hidden>
+
+    <div class="a11y-panel-header">
+      <span class="a11y-panel-title">{{ _a11y.label }}</span>
+      <button class="a11y-close" id="a11y-close" aria-label="{{ _a11y.close }}">&#x2715;</button>
+    </div>
+
+    {# Font size #}
+    <div class="a11y-section">
+      <span class="a11y-section-label">{{ _a11y.fontSize }}</span>
+      <div class="a11y-btn-row">
+        <button class="a11y-btn" id="a11y-font-dec"   aria-label="{{ _a11y.fontSize }}, pienempi">A&#x2212;</button>
+        <button class="a11y-btn" id="a11y-font-reset" aria-label="{{ _a11y.fontSize }}, oletus" style="font-size:1rem">A</button>
+        <button class="a11y-btn" id="a11y-font-inc"   aria-label="{{ _a11y.fontSize }}, suurempi" style="font-size:1.15rem">A+</button>
+      </div>
+    </div>
+
+    {# Dyslexia font #}
+    <div class="a11y-section">
+      <button class="a11y-toggle" id="a11y-dyslexia" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><text x="0" y="18" font-size="18" font-family="Trebuchet MS,Arial">Aa</text></svg>
+        {{ _a11y.font }}
+      </button>
+    </div>
+
+    {# High contrast #}
+    <div class="a11y-section">
+      <button class="a11y-toggle" id="a11y-contrast" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="#000" stroke="none"/>
+          <path d="M12 2a10 10 0 0 1 0 20z" fill="#fff"/>
+        </svg>
+        {{ _a11y.contrast }}
+      </button>
+    </div>
+
+    {# Background colour #}
+    <div class="a11y-section">
+      <span class="a11y-section-label">{{ _a11y.bg }}</span>
+      <div class="a11y-swatches">
+        <button class="a11y-swatch a11y-swatch--white"  data-bg=""       aria-label="Valkoinen / White"></button>
+        <button class="a11y-swatch a11y-swatch--beige"  data-bg="beige"  aria-label="Beige"></button>
+        <button class="a11y-swatch a11y-swatch--yellow" data-bg="yellow" aria-label="Keltainen / Yellow"></button>
+        <button class="a11y-swatch a11y-swatch--blue"   data-bg="blue"   aria-label="Sininen / Blue"></button>
+        <button class="a11y-swatch a11y-swatch--green"  data-bg="green"  aria-label="Vihreä / Green"></button>
+      </div>
+    </div>
+
+    {# Text spacing #}
+    <div class="a11y-section">
+      <button class="a11y-toggle" id="a11y-spacing" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6"  x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        {{ _a11y.spacing }}
+      </button>
+    </div>
+
+    {# Reading guide #}
+    <div class="a11y-section">
+      <button class="a11y-toggle" id="a11y-guide" aria-pressed="false">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="3" y="9" width="18" height="6" rx="1"/>
+        </svg>
+        {{ _a11y.guide }}
+      </button>
+    </div>
+
+    {# Text-to-speech #}
+    <div class="a11y-section a11y-tts-section">
+      <div class="a11y-btn-row">
+        <button class="a11y-btn a11y-btn--tts" id="a11y-tts">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
+          {{ _a11y.tts }}
+        </button>
+        <button class="a11y-btn a11y-btn--tts" id="a11y-tts-stop" disabled>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="4" y="4" width="16" height="16"/></svg>
+          {{ _a11y.stop }}
+        </button>
+      </div>
+    </div>
+
+    {# Reset #}
+    <div class="a11y-section">
+      <button class="a11y-btn a11y-btn--reset" id="a11y-reset">&#x21BA; {{ _a11y.reset }}</button>
+    </div>
+
+  </div>{# /panel #}
+</div>
+
+{# Reading guide line element #}
+<div id="a11y-guide-line" aria-hidden="true" hidden></div>
