@@ -4117,3 +4117,74 @@ a.publication-hero-author-name:hover {
   color: #777;
   margin-right: 0.5em;
 }
+
+/* ============================================================
+   Media table — shared header (title + controls in one bar)
+   ============================================================ */
+
+.media-table-header {
+  margin-bottom: 0;
+}
+.media-table-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 0.65rem;
+}
+.media-table-section + .media-table-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e9ef;
+}
+
+/* Scientific publications */
+.scipub-badge {
+  display: inline-block;
+  padding: 0.18em 0.55em;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #f0edf8;
+  color: #4a1d7a;
+  font-family: monospace;
+}
+.scipub-venue {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.2em;
+  font-style: italic;
+}
+
+/* Institutional visibility */
+.iv-type {
+  display: block;
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 0.15em;
+}
+.iv-badge {
+  display: inline-block;
+  padding: 0.18em 0.6em;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: #e8f0f8;
+  color: #1a3a6a;
+}
+.iv-summary {
+  font-size: 0.82rem;
+  color: #666;
+  margin-top: 0.25em;
+}
+.media-table-col--people {
+  width: 150px;
+  font-size: 0.82rem;
+  color: #555;
+}
+
+@media (max-width: 700px) {
+  .media-table-heading {
+    font-size: 0.95rem;
+  }
+}

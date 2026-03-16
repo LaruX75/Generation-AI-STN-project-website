@@ -31,7 +31,7 @@ pageHero: false
   }
 } %}
 {% set kadenceInnerHtml %}
-<ul class="kt-tabs-title-list"><li id="tab-media" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-active"><a href="#tab-media" data-tab="1" class="kt-tab-title kt-tab-title-1"><span class="kt-title-text">Media</span></a></li><li id="tab-tapahtumat" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tapahtumat" data-tab="2" class="kt-tab-title kt-tab-title-2"><span class="kt-title-text">Tapahtumat</span></a></li><li id="tab-toiminta" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-toiminta" data-tab="3" class="kt-tab-title kt-tab-title-3"><span class="kt-title-text">Hankkeen toiminta</span></a></li><li id="tab-tutkimus" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tutkimus" data-tab="4" class="kt-tab-title kt-tab-title-4"><span class="kt-title-text">Tutkimus</span></a></li><li id="tab-yliopistot" class="kt-title-item kt-title-item-5 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-yliopistot" data-tab="5" class="kt-tab-title kt-tab-title-5"><span class="kt-title-text">Yliopistot</span></a></li></ul><div class="kt-tabs-content-wrap">{% set kadenceBlock = {
+<ul class="kt-tabs-title-list"><li id="tab-media" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-active"><a href="#tab-media" data-tab="1" class="kt-tab-title kt-tab-title-1"><span class="kt-title-text">Media</span></a></li><li id="tab-tapahtumat" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tapahtumat" data-tab="2" class="kt-tab-title kt-tab-title-2"><span class="kt-title-text">Tapahtumat</span></a></li><li id="tab-toiminta" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-toiminta" data-tab="3" class="kt-tab-title kt-tab-title-3"><span class="kt-title-text">Hankkeen toiminta</span></a></li><li id="tab-tutkimus" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tutkimus" data-tab="4" class="kt-tab-title kt-tab-title-4"><span class="kt-title-text">Konferenssit ja julkaisut</span></a></li><li id="tab-yliopistot" class="kt-title-item kt-title-item-5 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-yliopistot" data-tab="5" class="kt-tab-title kt-tab-title-5"><span class="kt-title-text">Yliopistot</span></a></li></ul><div class="kt-tabs-content-wrap">{% set kadenceBlock = {
   "name": "kadence/tab",
   "shortName": "tab",
   "attrs": {
@@ -76,44 +76,10 @@ pageHero: false
     "uniqueID": "defcbe-f1"
   }
 } %}
+{% set tutkimusCards = researchCards %}
 {% set kadenceInnerHtml %}
-{% set stakeholderLabels = {
-  "stakeholder": "Sidosryhma / tapahtuma",
-  "participantsSuffix": "osallistujaa"
-} %}
-<section class="kb-query-loop stakeholder-activities stakeholder-activities--combined" data-kb-query-id="407_e5dfa8-cc">
-  <div class="kb-query-grid stakeholder-activities__grid stakeholder-activities__grid--combined">
-    {% for card in researchCards %}
-      {% if card.cardType == "post" %}
-        {% set post = card.post %}
-        <article class="kb-query-item">
-          {% if post.data.featuredImage %}
-            <a href="{{ post.url }}" class="kb-query-item__thumb" tabindex="-1" aria-hidden="true">
-              <img src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}" loading="lazy">
-            </a>
-          {% endif %}
-          <div class="kb-query-item__body">
-            {% if post.data.categories and post.data.categories.length %}
-              <div class="kb-query-item__cats">
-                <span class="kb-query-item__cat">{{ post.data.categories[0] }}</span>
-              </div>
-            {% endif %}
-            <h3 class="kb-query-item__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-            {% if post.date %}
-              <time class="kb-query-item__date" datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date("d.m.Y") }}</time>
-            {% endif %}
-            {% if post.data.excerpt and post.data.excerpt != "[object Object]" %}
-              <p class="kb-query-item__excerpt">{{ post.data.excerpt | truncate(160) }}</p>
-            {% endif %}
-          </div>
-        </article>
-      {% else %}
-        {% set stakeholderRow = card.row %}
-        {% include "partials/stakeholder-activity-card.njk" %}
-      {% endif %}
-    {% endfor %}
-  </div>
-</section>
+{% include "partials/tutkimus-table.njk" %}
+{% include "partials/scientific-publications-table.njk" %}
 {% endset %}
 {% include "blocks/kadence/tab.njk" %}
 

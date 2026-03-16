@@ -1,0 +1,143 @@
+{% set allItems = scientificPublications.items or [] %}
+
+<section class="media-table-section" id="scipub-table-section">
+
+  <div class="media-table-header">
+    <h2 class="media-table-heading">Tieteelliset julkaisut</h2>
+    <div class="media-table-controls">
+      <div class="media-table-search-wrap">
+        <label for="scipub-search" class="sr-only">Hae julkaisuista</label>
+        <input type="search" id="scipub-search" class="media-table-search" placeholder="Hae otsikolla…" autocomplete="off">
+      </div>
+      <div class="media-table-filters">
+        <label for="scipub-filter-cat" class="sr-only">Suodata julkaisutyypin mukaan</label>
+        <select id="scipub-filter-cat" class="media-table-filter">
+          <option value="">Kaikki julkaisutyypit</option>
+          <option value="a">A — Vertaisarvioidut artikkelit</option>
+          <option value="be">B/E — Kirjat ja kokoomateokset</option>
+          <option value="other">Muut</option>
+        </select>
+        <label for="scipub-filter-year" class="sr-only">Suodata vuoden mukaan</label>
+        <select id="scipub-filter-year" class="media-table-filter">
+          <option value="">Kaikki vuodet</option>
+        </select>
+      </div>
+      <p class="media-table-count" id="scipub-count" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <div class="media-table-wrap" role="region" aria-label="Tieteelliset julkaisut" tabindex="0">
+    <table class="media-table" id="scipub-table">
+      <thead>
+        <tr>
+          <th scope="col" class="media-table-col--date">Vuosi</th>
+          <th scope="col" class="media-table-col--source">Koodi</th>
+          <th scope="col" class="media-table-col--title">Otsikko</th>
+          <th scope="col" class="media-table-col--content">Tekijät / Julkaisupaikka</th>
+          <th scope="col" class="media-table-col--link">Linkki</th>
+        </tr>
+      </thead>
+      <tbody id="scipub-table-body">
+        {% for item in allItems %}
+          <tr class="media-table-row"
+            data-year="{{ item.year | default('') }}"
+            data-category="{% if item.code and item.code | truncate(1, true, '') == 'A' %}a{% elif item.code and (item.code | truncate(1, true, '') == 'B' or item.code | truncate(1, true, '') == 'E') %}be{% else %}other{% endif %}"
+            data-search="{{ item.searchText | lower | default('') }}">
+            <td class="media-table-col--date">{{ item.year | default('—') }}</td>
+            <td class="media-table-col--source">
+              <span class="scipub-badge">{{ item.code | default('—') }}</span>
+            </td>
+            <td class="media-table-col--title">{{ item.title | default('—') }}</td>
+            <td class="media-table-col--content">
+              {{ item.authorsText | default('') }}
+              <span class="scipub-venue">{{ item.venue | default('') }}</span>
+            </td>
+            <td class="media-table-col--link">
+              {% if item.link %}
+                <a href="{{ item.link }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ item.linkLabel | default('Avaa') }}&nbsp;↗</a>
+              {% else %}
+                <span class="media-table-na">—</span>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="media-table-empty" id="scipub-empty" hidden>Ei tuloksia.</p>
+  </div>
+
+  <nav class="media-table-pagination" id="scipub-pagination" aria-label="Tulossivu">
+    <button class="media-table-page-btn" id="scipub-prev" aria-label="Edellinen sivu">← Edellinen</button>
+    <span class="media-table-page-info" id="scipub-page-info" aria-live="polite"></span>
+    <button class="media-table-page-btn" id="scipub-next" aria-label="Seuraava sivu">Seuraava →</button>
+  </nav>
+
+</section>
+
+<script>
+(function () {
+  var PAGE_SIZE = 10;
+  var tbody    = document.getElementById('scipub-table-body');
+  var emptyEl  = document.getElementById('scipub-empty');
+  var searchEl = document.getElementById('scipub-search');
+  var catEl    = document.getElementById('scipub-filter-cat');
+  var yrEl     = document.getElementById('scipub-filter-year');
+  var prevBtn  = document.getElementById('scipub-prev');
+  var nextBtn  = document.getElementById('scipub-next');
+  var pageInfo = document.getElementById('scipub-page-info');
+  var countEl  = document.getElementById('scipub-count');
+  if (!tbody) return;
+
+  var allRows = Array.from(tbody.querySelectorAll('.media-table-row'));
+  var filtered = allRows.slice();
+  var currentPage = 1;
+
+  // Populate year filter dynamically from row data, sorted descending
+  (function () {
+    var years = {};
+    allRows.forEach(function (row) { var y = row.dataset.year; if (y) years[y] = true; });
+    Object.keys(years).sort().reverse().forEach(function (yr) {
+      var opt = document.createElement('option');
+      opt.value = yr; opt.textContent = yr;
+      yrEl.appendChild(opt);
+    });
+  }());
+
+  function applyFilters() {
+    var q   = searchEl.value.toLowerCase().trim();
+    var cat = catEl.value;
+    var yr  = yrEl.value;
+    filtered = allRows.filter(function (row) {
+      if (yr  && row.dataset.year !== yr) return false;
+      if (cat && row.dataset.category !== cat) return false;
+      if (q   && row.dataset.search.indexOf(q) === -1) return false;
+      return true;
+    });
+  }
+
+  function render() {
+    applyFilters();
+    var total = filtered.length;
+    var totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    if (currentPage > totalPages) currentPage = totalPages;
+    var start = (currentPage - 1) * PAGE_SIZE;
+    allRows.forEach(function (row) { row.hidden = true; });
+    filtered.slice(start, start + PAGE_SIZE).forEach(function (row) { row.hidden = false; });
+    emptyEl.hidden = total > 0;
+    prevBtn.disabled = currentPage <= 1;
+    nextBtn.disabled = currentPage >= totalPages;
+    pageInfo.textContent = 'Sivu\u00a0' + currentPage + '\u00a0/\u00a0' + totalPages;
+    countEl.textContent  = total + '\u00a0tulosta';
+  }
+
+  searchEl.addEventListener('input',  function () { currentPage = 1; render(); });
+  catEl.addEventListener('change',    function () { currentPage = 1; render(); });
+  yrEl.addEventListener('change',     function () { currentPage = 1; render(); });
+  prevBtn.addEventListener('click',   function () { if (currentPage > 1) { currentPage--; render(); } });
+  nextBtn.addEventListener('click',   function () {
+    if (currentPage < Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))) { currentPage++; render(); }
+  });
+
+  render();
+}());
+</script>

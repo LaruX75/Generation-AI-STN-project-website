@@ -2,26 +2,29 @@
 
 <section class="media-table-section" id="tapahtumat-table-section">
 
-  <div class="media-table-controls">
-    <div class="media-table-search-wrap">
-      <label for="tapahtumat-search" class="sr-only">Hae tapahtumista</label>
-      <input type="search" id="tapahtumat-search" class="media-table-search" placeholder="Hae otsikolla…" autocomplete="off">
+  <div class="media-table-header">
+    <h2 class="media-table-heading">Tapahtumat</h2>
+    <div class="media-table-controls">
+      <div class="media-table-search-wrap">
+        <label for="tapahtumat-search" class="sr-only">Hae tapahtumista</label>
+        <input type="search" id="tapahtumat-search" class="media-table-search" placeholder="Hae otsikolla…" autocomplete="off">
+      </div>
+      <div class="media-table-filters">
+        <label for="tapahtumat-filter-type" class="sr-only">Suodata tyypeittäin</label>
+        <select id="tapahtumat-filter-type" class="media-table-filter">
+          <option value="">Kaikki tyypit</option>
+          <option value="konferenssit ja seminaarit">Konferenssit ja seminaarit</option>
+          <option value="webinaari">Webinaari</option>
+          <option value="työpaja">Työpaja</option>
+          <option value="genai hankkeen henkilöstö tapahtumissa">Hankkeen henkilöstö tapahtumissa</option>
+        </select>
+        <label for="tapahtumat-filter-year" class="sr-only">Suodata vuoden mukaan</label>
+        <select id="tapahtumat-filter-year" class="media-table-filter">
+          <option value="">Kaikki vuodet</option>
+        </select>
+      </div>
+      <p class="media-table-count" id="tapahtumat-count" aria-live="polite"></p>
     </div>
-    <div class="media-table-filters">
-      <label for="tapahtumat-filter-type" class="sr-only">Suodata tyypeittäin</label>
-      <select id="tapahtumat-filter-type" class="media-table-filter">
-        <option value="">Kaikki tyypit</option>
-        <option value="konferenssit ja seminaarit">Konferenssit ja seminaarit</option>
-        <option value="webinaari">Webinaari</option>
-        <option value="työpaja">Työpaja</option>
-        <option value="genai hankkeen henkilöstö tapahtumissa">Hankkeen henkilöstö tapahtumissa</option>
-      </select>
-      <label for="tapahtumat-filter-year" class="sr-only">Suodata vuoden mukaan</label>
-      <select id="tapahtumat-filter-year" class="media-table-filter">
-        <option value="">Kaikki vuodet</option>
-      </select>
-    </div>
-    <p class="media-table-count" id="tapahtumat-count" aria-live="polite"></p>
   </div>
 
   <div class="media-table-wrap" role="region" aria-label="Tapahtumat" tabindex="0">

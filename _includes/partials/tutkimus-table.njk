@@ -1,32 +1,32 @@
-{% set allCards = toimintaCards or [] %}
+{% set allCards = tutkimusCards or [] %}
 
-<section class="media-table-section" id="toiminta-table-section">
+<section class="media-table-section" id="tutkimus-table-section">
 
   <div class="media-table-header">
-    <h2 class="media-table-heading">Hankkeen toiminta</h2>
+    <h2 class="media-table-heading">Konferenssit ja julkaisut</h2>
     <div class="media-table-controls">
       <div class="media-table-search-wrap">
-        <label for="toiminta-search" class="sr-only">Hae toiminnasta</label>
-        <input type="search" id="toiminta-search" class="media-table-search" placeholder="Hae otsikolla…" autocomplete="off">
+        <label for="tutkimus-search" class="sr-only">Hae toiminnasta</label>
+        <input type="search" id="tutkimus-search" class="media-table-search" placeholder="Hae otsikolla…" autocomplete="off">
       </div>
       <div class="media-table-filters">
-        <label for="toiminta-filter-type" class="sr-only">Suodata tyypeittäin</label>
-        <select id="toiminta-filter-type" class="media-table-filter">
+        <label for="tutkimus-filter-type" class="sr-only">Suodata tyypeittäin</label>
+        <select id="tutkimus-filter-type" class="media-table-filter">
           <option value="">Kaikki tyypit</option>
-          <option value="post">Julkaisut ja raportit</option>
-          <option value="stakeholder">Sidosryhmäyhteistyö</option>
+          <option value="post">Julkaisut ja esitykset</option>
+          <option value="stakeholder">Konferenssit</option>
         </select>
-        <label for="toiminta-filter-year" class="sr-only">Suodata vuoden mukaan</label>
-        <select id="toiminta-filter-year" class="media-table-filter">
+        <label for="tutkimus-filter-year" class="sr-only">Suodata vuoden mukaan</label>
+        <select id="tutkimus-filter-year" class="media-table-filter">
           <option value="">Kaikki vuodet</option>
         </select>
       </div>
-      <p class="media-table-count" id="toiminta-count" aria-live="polite"></p>
+      <p class="media-table-count" id="tutkimus-count" aria-live="polite"></p>
     </div>
   </div>
 
-  <div class="media-table-wrap" role="region" aria-label="Hankkeen toiminta" tabindex="0">
-    <table class="media-table" id="toiminta-table">
+  <div class="media-table-wrap" role="region" aria-label="Konferenssit ja julkaisut" tabindex="0">
+    <table class="media-table" id="tutkimus-table">
       <thead>
         <tr>
           <th scope="col" class="media-table-col--date">Päivämäärä</th>
@@ -36,7 +36,7 @@
           <th scope="col" class="media-table-col--link">Linkki</th>
         </tr>
       </thead>
-      <tbody id="toiminta-table-body">
+      <tbody id="tutkimus-table-body">
         {% for card in allCards %}
           {% if card.cardType == "post" %}
             {% set post = card.post %}
@@ -72,7 +72,7 @@
                 <time datetime="{{ row.sortDate | default('') }}">{{ row.displayDate or row.date | default("—") }}</time>
               </td>
               <td class="media-table-col--source">
-                <span class="media-table-source-badge toiminta-badge--stakeholder">Sidosryhmä</span>
+                <span class="media-table-source-badge toiminta-badge--stakeholder">Konferenssi</span>
               </td>
               <td class="media-table-col--title">{{ (row.title or row.stakeholder) | default("—") }}</td>
               <td class="toiminta-table-col--extra">
@@ -92,13 +92,13 @@
         {% endfor %}
       </tbody>
     </table>
-    <p class="media-table-empty" id="toiminta-empty" hidden>Ei tuloksia.</p>
+    <p class="media-table-empty" id="tutkimus-empty" hidden>Ei tuloksia.</p>
   </div>
 
-  <nav class="media-table-pagination" id="toiminta-pagination" aria-label="Tulossivu">
-    <button class="media-table-page-btn" id="toiminta-prev" aria-label="Edellinen sivu">← Edellinen</button>
-    <span class="media-table-page-info" id="toiminta-page-info" aria-live="polite"></span>
-    <button class="media-table-page-btn" id="toiminta-next" aria-label="Seuraava sivu">Seuraava →</button>
+  <nav class="media-table-pagination" id="tutkimus-pagination" aria-label="Tulossivu">
+    <button class="media-table-page-btn" id="tutkimus-prev" aria-label="Edellinen sivu">← Edellinen</button>
+    <span class="media-table-page-info" id="tutkimus-page-info" aria-live="polite"></span>
+    <button class="media-table-page-btn" id="tutkimus-next" aria-label="Seuraava sivu">Seuraava →</button>
   </nav>
 
 </section>
@@ -106,15 +106,15 @@
 <script>
 (function () {
   var PAGE_SIZE = 10;
-  var tbody    = document.getElementById('toiminta-table-body');
-  var emptyEl  = document.getElementById('toiminta-empty');
-  var searchEl = document.getElementById('toiminta-search');
-  var typeEl   = document.getElementById('toiminta-filter-type');
-  var yrEl     = document.getElementById('toiminta-filter-year');
-  var prevBtn  = document.getElementById('toiminta-prev');
-  var nextBtn  = document.getElementById('toiminta-next');
-  var pageInfo = document.getElementById('toiminta-page-info');
-  var countEl  = document.getElementById('toiminta-count');
+  var tbody    = document.getElementById('tutkimus-table-body');
+  var emptyEl  = document.getElementById('tutkimus-empty');
+  var searchEl = document.getElementById('tutkimus-search');
+  var typeEl   = document.getElementById('tutkimus-filter-type');
+  var yrEl     = document.getElementById('tutkimus-filter-year');
+  var prevBtn  = document.getElementById('tutkimus-prev');
+  var nextBtn  = document.getElementById('tutkimus-next');
+  var pageInfo = document.getElementById('tutkimus-page-info');
+  var countEl  = document.getElementById('tutkimus-count');
   if (!tbody) return;
 
   var allRows = Array.from(tbody.querySelectorAll('.media-table-row'));
