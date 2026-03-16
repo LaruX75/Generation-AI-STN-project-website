@@ -1,0 +1,30 @@
+{# Search modal — opened by .site-search-btn in header #}
+{% set _ml = lang if lang else (site.defaultLocale if site and site.defaultLocale else "fi") %}
+{% set _sUi = {
+  "fi": { "title": "Haku",  "placeholder": "Hakusana...",  "zero": "Ei hakutuloksia haulle \"{0}\"",  "close": "Sulje haku" },
+  "en": { "title": "Search","placeholder": "Search...",    "zero": "No results for \"{0}\"",           "close": "Close search" },
+  "sv": { "title": "Sök",   "placeholder": "Sök...",       "zero": "Inga resultat för \"{0}\"",        "close": "Stäng sökning" }
+} %}
+{% set _s = _sUi[_ml] if _sUi[_ml] else _sUi["fi"] %}
+<div
+  id="search-modal"
+  class="search-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="search-modal-label"
+  hidden
+  data-placeholder="{{ _s.placeholder }}"
+  data-zero="{{ _s.zero }}"
+  data-pagefind-ignore
+>
+  <div class="search-modal-backdrop" aria-hidden="true"></div>
+  <div class="search-modal-box">
+    <div class="search-modal-header">
+      <span id="search-modal-label" class="search-modal-title">{{ _s.title }}</span>
+      <button class="search-modal-close" type="button" aria-label="{{ _s.close }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="search-modal-ui"></div>
+  </div>
+</div>

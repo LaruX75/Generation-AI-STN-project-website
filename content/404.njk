@@ -14,6 +14,10 @@ layout: layouts/base.njk
       <ul class="error-404-suggestions-list" id="e404-list"></ul>
     </div>
     <a class="error-404-home" href="/" id="e404-home">← Etusivulle</a>
+    <div class="error-404-search">
+      <p class="error-404-search-label" id="e404-search-label">Etsi sivustolta</p>
+      <div id="e404-search-ui"></div>
+    </div>
   </div>
 </main>
 
@@ -234,6 +238,37 @@ layout: layouts/base.njk
     group.keywords.forEach(function (kw) { if (path.indexOf(kw) !== -1) score++; });
     if (score > bestScore) { bestScore = score; best = group; }
   });
+
+  // ── Inline search ───────────────────────────────────────────────────────────
+  var searchLabels = {
+    fi: { label: 'Etsi sivustolta',     placeholder: 'Hakusana...',  zero: 'Ei hakutuloksia haulle "{0}"' },
+    en: { label: 'Search the site',     placeholder: 'Search...',    zero: 'No results for "{0}"' },
+    sv: { label: 'Sök på webbplatsen',  placeholder: 'Sök...',       zero: 'Inga resultat för "{0}"' }
+  }[locale];
+  document.getElementById('e404-search-label').textContent = searchLabels.label;
+
+  function initE404Search() {
+    new PagefindUI({
+      element: '#e404-search-ui',
+      showImages: false,
+      showEmptyFilters: false,
+      excerptLength: 20,
+      translations: { placeholder: searchLabels.placeholder, zero_results: searchLabels.zero }
+    });
+  }
+  if (window.PagefindUI) {
+    initE404Search();
+  } else if (document.querySelector('script[src="/pagefind/pagefind-ui.js"]')) {
+    var _t = setInterval(function () { if (window.PagefindUI) { clearInterval(_t); initE404Search(); } }, 30);
+  } else {
+    var _lnk = document.createElement('link');
+    _lnk.rel = 'stylesheet'; _lnk.href = '/pagefind/pagefind-ui.css';
+    document.head.appendChild(_lnk);
+    var _s = document.createElement('script');
+    _s.src = '/pagefind/pagefind-ui.js';
+    _s.onload = initE404Search;
+    document.head.appendChild(_s);
+  }
 
   if (!best || bestScore === 0) return; // no match — plain 404
 

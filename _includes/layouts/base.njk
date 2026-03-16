@@ -29,7 +29,7 @@
     "/ollaan-yhteydessa/": { "fi": "/ollaan-yhteydessa/", "en": "/en/get-in-touch/", "sv": "/sv/kontakta-oss/" },
     "/opettajalle/": { "fi": "/opettajalle/", "en": "/en/for-teachers/", "sv": "/sv/for-larare/" },
     "/tutkijalle/": { "fi": "/tutkijalle/", "en": "/en/research/", "sv": "/sv/forskning/" },
-    "/yleisölle/": { "fi": "/yleisölle/", "en": "/en/generation-ai-project-in-the-media/", "sv": "/sv/generation-ai-projektet-i-media/" },
+    "/yleisölle/": { "fi": "/yleisölle/", "en": "/en/for-everyone/", "sv": "/sv/for-allmanheten/" },
     "/haku/": { "fi": "/haku/", "en": "/en/search/", "sv": "/sv/sok/" },
     "/en/search/": { "fi": "/haku/", "en": "/en/search/", "sv": "/sv/sok/" },
     "/sv/sok/": { "fi": "/haku/", "en": "/en/search/", "sv": "/sv/sok/" }
@@ -102,6 +102,7 @@
   <div data-pagefind-ignore>{% include "partials/site-footer.njk" %}</div>
   {% include "partials/accessibility-toolbar.njk" %}
   {% include "partials/cookie-consent-placeholder.njk" %}
+  {% include "partials/search-modal.njk" %}
   {% if mailerlite and mailerlite.accountId %}
   <script data-mailerlite-account="{{ mailerlite.accountId }}" data-cookiecategory="marketing" type="text/plain">
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
@@ -110,6 +111,81 @@
   {% endif %}
   <script src="/scripts/nav.js" defer></script>
   <script src="/scripts/accessibility.js" defer></script>
+  <script>
+  (function () {
+    var modal = document.getElementById('search-modal');
+    if (!modal) return;
+    var closeBtn = modal.querySelector('.search-modal-close');
+    var backdrop = modal.querySelector('.search-modal-backdrop');
+    var pfInited = false;
+
+    function loadPagefind(cb) {
+      if (window.PagefindUI) { cb(); return; }
+      if (document.querySelector('script[src="/pagefind/pagefind-ui.js"]')) {
+        var t = setInterval(function () { if (window.PagefindUI) { clearInterval(t); cb(); } }, 30);
+        return;
+      }
+      var lnk = document.createElement('link');
+      lnk.rel = 'stylesheet'; lnk.href = '/pagefind/pagefind-ui.css';
+      document.head.appendChild(lnk);
+      var s = document.createElement('script');
+      s.src = '/pagefind/pagefind-ui.js';
+      s.onload = cb;
+      document.head.appendChild(s);
+    }
+
+    function openModal() {
+      modal.hidden = false;
+      document.body.classList.add('search-modal-open');
+      loadPagefind(function () {
+        if (!pfInited) {
+          pfInited = true;
+          new PagefindUI({
+            element: '#search-modal-ui',
+            showImages: true,
+            showEmptyFilters: false,
+            excerptLength: 20,
+            translations: {
+              placeholder: modal.dataset.placeholder,
+              zero_results: modal.dataset.zero
+            }
+          });
+        }
+        setTimeout(function () {
+          var inp = modal.querySelector('.pagefind-ui__search-input');
+          if (inp) inp.focus();
+        }, 60);
+      });
+    }
+
+    function closeModal() {
+      modal.hidden = true;
+      document.body.classList.remove('search-modal-open');
+      var btn = document.querySelector('.site-search-btn');
+      if (btn) btn.focus();
+    }
+
+    var searchBtn = document.querySelector('.site-search-btn');
+    if (searchBtn) {
+      searchBtn.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
+    }
+    backdrop.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.hidden) { e.preventDefault(); closeModal(); }
+    });
+    modal.addEventListener('keydown', function (e) {
+      if (e.key !== 'Tab') return;
+      var focusable = Array.prototype.slice.call(
+        modal.querySelectorAll('button:not([disabled]), input, a[href], [tabindex]:not([tabindex="-1"])')
+      );
+      if (!focusable.length) return;
+      var first = focusable[0], last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+  }());
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var PX_PER_SEC = 120;
