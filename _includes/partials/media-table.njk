@@ -18,18 +18,6 @@
       <label for="media-filter-year" class="sr-only">Suodata vuoden mukaan</label>
       <select id="media-filter-year" class="media-table-filter">
         <option value="">Kaikki vuodet</option>
-        {% set seenYears = [] %}
-        {% for item in allItems %}
-          {% if item.datePublished %}
-            {% set yr = item.datePublished[0:4] %}
-            {% if yr and (yr not in seenYears) %}
-              {% set seenYears = (seenYears.push(yr), seenYears) %}
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-        {% for yr in seenYears | sort | reverse %}
-          <option value="{{ yr }}">{{ yr }}</option>
-        {% endfor %}
       </select>
     </div>
     <p class="media-table-count" id="media-count" aria-live="polite"></p>
@@ -50,10 +38,10 @@
         {% for item in allItems %}
           <tr class="media-table-row"
             data-source="{{ item.source | default('') }}"
-            data-year="{{ item.datePublished[0:4] if item.datePublished else '' }}"
-            data-search="{{ (item.title + ' ' + (item.sourceLabel or '')) | lower | replace('"', '') }}">
+            data-year="{{ item.datePublished | truncate(4, true, '') if item.datePublished else '' }}"
+            data-search="{{ item.title | lower | default('') }} {{ item.sourceLabel | lower | default('') }}">
             <td class="media-table-col--date">
-              <time datetime="{{ item.datePublished | default('') }}">{{ item.datePublished[0:10] if item.datePublished else '—' }}</time>
+              <time datetime="{{ item.datePublished | default('') }}">{{ item.datePublished | truncate(10, true, '') if item.datePublished else '—' }}</time>
             </td>
             <td class="media-table-col--source">
               <span class="media-table-source-badge media-table-source-badge--{{ item.source | default('') }}">{{ item.sourceLabel | default('—') }}</span>
@@ -109,6 +97,21 @@
   var allRows    = Array.from(tbody.querySelectorAll('.media-table-row'));
   var filtered   = allRows.slice();
   var currentPage = 1;
+
+  // Populate year filter dynamically from row data
+  (function () {
+    var years = {};
+    allRows.forEach(function (row) {
+      var yr = row.dataset.year;
+      if (yr) years[yr] = true;
+    });
+    Object.keys(years).sort().reverse().forEach(function (yr) {
+      var opt = document.createElement('option');
+      opt.value = yr;
+      opt.textContent = yr;
+      yrEl.appendChild(opt);
+    });
+  }());
 
   function applyFilters() {
     var q   = searchEl.value.toLowerCase().trim();
