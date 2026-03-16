@@ -4736,18 +4736,35 @@ a.publication-hero-author-name:hover {
 }
 
 /* ── High contrast ────────────────────────────────────────────────────── */
-.a11y-contrast,
-.a11y-contrast body             { background: #000 !important; color: #fff !important; }
-.a11y-contrast a                { color: #ffe066 !important; }
-.a11y-contrast a:visited        { color: #cc99ff !important; }
-.a11y-contrast h1, .a11y-contrast h2, .a11y-contrast h3,
-.a11y-contrast h4, .a11y-contrast h5, .a11y-contrast h6 { color: #fff !important; }
-.a11y-contrast .site-header,
-.a11y-contrast .site-footer     { background: #111 !important; border-color: #555 !important; }
-.a11y-contrast button:not(.a11y-trigger):not(.a11y-btn):not(.a11y-toggle):not(.a11y-close) {
-  background: #222 !important; color: #fff !important; border-color: #777 !important;
-}
-.a11y-contrast img              { filter: contrast(1.15); }
+/* Target all elements so no white backgrounds slip through */
+html.a11y-contrast *            { background-color: #000 !important; color: #fff !important; border-color: #555 !important; }
+html.a11y-contrast a            { color: #ffe066 !important; }
+html.a11y-contrast a:visited    { color: #cc99ff !important; }
+html.a11y-contrast img          { filter: contrast(1.2) brightness(0.85) !important; }
+html.a11y-contrast svg path,
+html.a11y-contrast svg circle,
+html.a11y-contrast svg line,
+html.a11y-contrast svg rect,
+html.a11y-contrast svg polygon  { fill: currentColor !important; stroke: currentColor !important; }
+
+/* Keep the toolbar itself legible */
+html.a11y-contrast .a11y-trigger               { background-color: #fff !important; color: #000 !important; border-color: #fff !important; }
+html.a11y-contrast .a11y-panel                 { background-color: #111 !important; border-color: #fff !important; }
+html.a11y-contrast .a11y-panel-header          { background-color: #222 !important; }
+html.a11y-contrast .a11y-panel-title           { color: #fff !important; }
+html.a11y-contrast .a11y-section-label         { color: #ccc !important; }
+html.a11y-contrast .a11y-btn                   { background-color: #222 !important; border-color: #aaa !important; color: #fff !important; }
+html.a11y-contrast .a11y-btn--reset            { background-color: #300 !important; border-color: #f88 !important; color: #faa !important; }
+html.a11y-contrast .a11y-toggle                { background-color: #222 !important; border-color: #aaa !important; color: #fff !important; }
+html.a11y-contrast .a11y-toggle[aria-pressed="true"] { background-color: #ffe066 !important; color: #000 !important; border-color: #ffe066 !important; }
+html.a11y-contrast .a11y-close                 { color: #fff !important; }
+html.a11y-contrast .a11y-swatch                { border-color: #888 !important; }
+html.a11y-contrast .a11y-swatch--white         { background-color: #ffffff !important; }
+html.a11y-contrast .a11y-swatch--beige         { background-color: #f5ead4 !important; }
+html.a11y-contrast .a11y-swatch--yellow        { background-color: #fef9c3 !important; }
+html.a11y-contrast .a11y-swatch--blue          { background-color: #cfe2ff !important; }
+html.a11y-contrast .a11y-swatch--green         { background-color: #d3edcc !important; }
+html.a11y-contrast .a11y-swatch--active        { border-color: #fff !important; }
 
 /* ── Background tints ─────────────────────────────────────────────────── */
 html[data-a11y-bg="beige"]  { background-color: #f5ead4 !important; }
