@@ -1,0 +1,159 @@
+{% set allItems = tapahtumatItems or [] %}
+
+<section class="media-table-section" id="tapahtumat-table-section">
+
+  <div class="media-table-controls">
+    <div class="media-table-search-wrap">
+      <label for="tapahtumat-search" class="sr-only">Hae tapahtumista</label>
+      <input type="search" id="tapahtumat-search" class="media-table-search" placeholder="Hae otsikolla…" autocomplete="off">
+    </div>
+    <div class="media-table-filters">
+      <label for="tapahtumat-filter-type" class="sr-only">Suodata tyypeittäin</label>
+      <select id="tapahtumat-filter-type" class="media-table-filter">
+        <option value="">Kaikki tyypit</option>
+        <option value="konferenssit ja seminaarit">Konferenssit ja seminaarit</option>
+        <option value="webinaari">Webinaari</option>
+        <option value="työpaja">Työpaja</option>
+        <option value="genai hankkeen henkilöstö tapahtumissa">Hankkeen henkilöstö tapahtumissa</option>
+      </select>
+      <label for="tapahtumat-filter-year" class="sr-only">Suodata vuoden mukaan</label>
+      <select id="tapahtumat-filter-year" class="media-table-filter">
+        <option value="">Kaikki vuodet</option>
+      </select>
+    </div>
+    <p class="media-table-count" id="tapahtumat-count" aria-live="polite"></p>
+  </div>
+
+  <div class="media-table-wrap" role="region" aria-label="Tapahtumat" tabindex="0">
+    <table class="media-table" id="tapahtumat-table">
+      <thead>
+        <tr>
+          <th scope="col" class="media-table-col--date">Päivämäärä</th>
+          <th scope="col" class="media-table-col--source">Tyyppi</th>
+          <th scope="col" class="media-table-col--title">Otsikko</th>
+          <th scope="col" class="media-table-col--content">Kuvaus</th>
+          <th scope="col" class="media-table-col--link">Linkki</th>
+        </tr>
+      </thead>
+      <tbody id="tapahtumat-table-body">
+        {% for post in allItems %}
+          <tr class="media-table-row"
+            data-year="{{ post.date | date('Y') }}"
+            data-categories="{{ post.data.categories | join(',') | lower | default('') }}"
+            data-search="{{ post.data.title | lower | default('') }}">
+            <td class="media-table-col--date">
+              <time datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date("d.m.Y") }}</time>
+            </td>
+            <td class="media-table-col--source">
+              {% set badgeCat = "" %}
+              {% if post.data.categories %}
+                {% for cat in post.data.categories %}
+                  {% if cat == "Konferenssit ja seminaarit" %}
+                    <span class="media-table-source-badge tapahtumat-badge--konferenssi">Konferenssi</span>
+                  {% elif cat == "Webinaari" %}
+                    <span class="media-table-source-badge tapahtumat-badge--webinaari">Webinaari</span>
+                  {% elif cat == "Työpaja" %}
+                    <span class="media-table-source-badge tapahtumat-badge--tyopaja">Työpaja</span>
+                  {% elif cat == "GenAI hankkeen henkilöstö tapahtumissa" %}
+                    <span class="media-table-source-badge tapahtumat-badge--tapahtuma">Tapahtuma</span>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            </td>
+            <td class="media-table-col--title">{{ post.data.title | default("—") }}</td>
+            <td class="media-table-col--content">
+              {% if post.data.excerpt and post.data.excerpt != "[object Object]" %}
+                {{ post.data.excerpt | truncate(200) }}
+              {% else %}
+                <span class="media-table-na">Ei saatavilla</span>
+              {% endif %}
+            </td>
+            <td class="media-table-col--link">
+              {% if post.url %}
+                <a href="{{ post.url }}" class="media-table-link">Avaa&nbsp;↗</a>
+              {% else %}
+                <span class="media-table-na">—</span>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="media-table-empty" id="tapahtumat-empty" hidden>Ei tuloksia.</p>
+  </div>
+
+  <nav class="media-table-pagination" id="tapahtumat-pagination" aria-label="Tulossivu">
+    <button class="media-table-page-btn" id="tapahtumat-prev" aria-label="Edellinen sivu">← Edellinen</button>
+    <span class="media-table-page-info" id="tapahtumat-page-info" aria-live="polite"></span>
+    <button class="media-table-page-btn" id="tapahtumat-next" aria-label="Seuraava sivu">Seuraava →</button>
+  </nav>
+
+</section>
+
+<script>
+(function () {
+  var PAGE_SIZE = 10;
+  var tbody    = document.getElementById('tapahtumat-table-body');
+  var emptyEl  = document.getElementById('tapahtumat-empty');
+  var searchEl = document.getElementById('tapahtumat-search');
+  var typeEl   = document.getElementById('tapahtumat-filter-type');
+  var yrEl     = document.getElementById('tapahtumat-filter-year');
+  var prevBtn  = document.getElementById('tapahtumat-prev');
+  var nextBtn  = document.getElementById('tapahtumat-next');
+  var pageInfo = document.getElementById('tapahtumat-page-info');
+  var countEl  = document.getElementById('tapahtumat-count');
+  if (!tbody) return;
+
+  var allRows = Array.from(tbody.querySelectorAll('.media-table-row'));
+  var filtered = allRows.slice();
+  var currentPage = 1;
+
+  // Populate year filter
+  (function () {
+    var years = {};
+    allRows.forEach(function (row) { var y = row.dataset.year; if (y) years[y] = true; });
+    Object.keys(years).sort().reverse().forEach(function (yr) {
+      var opt = document.createElement('option');
+      opt.value = yr; opt.textContent = yr;
+      yrEl.appendChild(opt);
+    });
+  }());
+
+  function applyFilters() {
+    var q   = searchEl.value.toLowerCase().trim();
+    var typ = typeEl.value.toLowerCase();
+    var yr  = yrEl.value;
+    filtered = allRows.filter(function (row) {
+      if (yr  && row.dataset.year !== yr) return false;
+      if (typ && row.dataset.categories.indexOf(typ) === -1) return false;
+      if (q   && row.dataset.search.indexOf(q) === -1) return false;
+      return true;
+    });
+  }
+
+  function render() {
+    applyFilters();
+    var total = filtered.length;
+    var totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    if (currentPage > totalPages) currentPage = totalPages;
+    var start = (currentPage - 1) * PAGE_SIZE;
+    allRows.forEach(function (row) { row.hidden = true; });
+    filtered.slice(start, start + PAGE_SIZE).forEach(function (row) { row.hidden = false; });
+    emptyEl.hidden = total > 0;
+    prevBtn.disabled = currentPage <= 1;
+    nextBtn.disabled = currentPage >= totalPages;
+    pageInfo.textContent = 'Sivu\u00a0' + currentPage + '\u00a0/\u00a0' + totalPages;
+    countEl.textContent  = total + '\u00a0tulosta';
+  }
+
+  searchEl.addEventListener('input',  function () { currentPage = 1; render(); });
+  typeEl.addEventListener('change',   function () { currentPage = 1; render(); });
+  yrEl.addEventListener('change',     function () { currentPage = 1; render(); });
+  prevBtn.addEventListener('click',   function () { if (currentPage > 1) { currentPage--; render(); } });
+  nextBtn.addEventListener('click',   function () {
+    if (currentPage < Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))) { currentPage++; render(); }
+  });
+
+  render();
+}());
+</script>

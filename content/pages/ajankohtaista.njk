@@ -50,17 +50,9 @@ pageHero: false
     "uniqueID": "857bf9-b0"
   }
 } %}
+{% set tapahtumatItems = collections["tapahtumat"] | localizedItems(lang, page.url) %}
 {% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/query",
-  "shortName": "query",
-  "attrs": {
-    "uniqueID": "407_03c40a-fc",
-    "collectionName": "tapahtumat"
-  }
-} %}
-{% set kadenceInnerHtml %}{% endset %}
-{% include "blocks/kadence/query.njk" %}
+{% include "partials/tapahtumat-table.njk" %}
 {% endset %}
 {% include "blocks/kadence/tab.njk" %}
 
@@ -71,44 +63,9 @@ pageHero: false
     "uniqueID": "6c5534-c7"
   }
 } %}
+{% set toimintaCards = projectCards %}
 {% set kadenceInnerHtml %}
-{% set stakeholderLabels = {
-  "stakeholder": "Sidosryhma",
-  "participantsSuffix": "osallistujaa"
-} %}
-<section class="kb-query-loop stakeholder-activities stakeholder-activities--combined" data-kb-query-id="407_544f7f-28">
-  <div class="kb-query-grid stakeholder-activities__grid stakeholder-activities__grid--combined">
-    {% for card in projectCards %}
-      {% if card.cardType == "post" %}
-        {% set post = card.post %}
-        <article class="kb-query-item">
-          {% if post.data.featuredImage %}
-            <a href="{{ post.url }}" class="kb-query-item__thumb" tabindex="-1" aria-hidden="true">
-              <img src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}" loading="lazy">
-            </a>
-          {% endif %}
-          <div class="kb-query-item__body">
-            {% if post.data.categories and post.data.categories.length %}
-              <div class="kb-query-item__cats">
-                <span class="kb-query-item__cat">{{ post.data.categories[0] }}</span>
-              </div>
-            {% endif %}
-            <h3 class="kb-query-item__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
-            {% if post.date %}
-              <time class="kb-query-item__date" datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date("d.m.Y") }}</time>
-            {% endif %}
-            {% if post.data.excerpt and post.data.excerpt != "[object Object]" %}
-              <p class="kb-query-item__excerpt">{{ post.data.excerpt | truncate(160) }}</p>
-            {% endif %}
-          </div>
-        </article>
-      {% else %}
-        {% set stakeholderRow = card.row %}
-        {% include "partials/stakeholder-activity-card.njk" %}
-      {% endif %}
-    {% endfor %}
-  </div>
-</section>
+{% include "partials/toiminta-table.njk" %}
 {% endset %}
 {% include "blocks/kadence/tab.njk" %}
 

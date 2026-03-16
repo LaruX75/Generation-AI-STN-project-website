@@ -4087,3 +4087,33 @@ a.publication-hero-author-name:hover {
   .media-table-col--source { width: 110px; }
   .media-table-col--link   { width: 72px; }
 }
+
+/* Tapahtumat badges */
+.tapahtumat-badge--konferenssi { background: #edf2fb; color: #1d3a7a; }
+.tapahtumat-badge--webinaari   { background: #f0edf8; color: #4a1d7a; }
+.tapahtumat-badge--tyopaja     { background: #fdf3e8; color: #7a3a00; }
+.tapahtumat-badge--tapahtuma   { background: #e8f5ec; color: #1a5c28; }
+
+/* Toiminta badges */
+.toiminta-badge--post        { background: #e8f0fb; color: #1a3a7a; }
+.toiminta-badge--stakeholder { background: #f5f0e8; color: #5c3d1a; }
+
+/* Toiminta extra column */
+.toiminta-table-col--extra {
+  width: auto;
+  font-size: 0.84rem;
+  color: #555;
+}
+.toiminta-stakeholder-name {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.15em;
+}
+.toiminta-participants,
+.toiminta-consortium {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: #777;
+  margin-right: 0.5em;
+}
