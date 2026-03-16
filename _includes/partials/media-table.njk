@@ -1,0 +1,170 @@
+{% set allItems = media_generation_ai or [] %}
+
+<section class="media-table-section" id="media-table-section">
+
+  <div class="media-table-controls">
+    <div class="media-table-search-wrap">
+      <label for="media-search" class="sr-only">Hae uutisista</label>
+      <input type="search" id="media-search" class="media-table-search" placeholder="Hae otsikolla…" autocomplete="off">
+    </div>
+    <div class="media-table-filters">
+      <label for="media-filter-source" class="sr-only">Suodata lähteen mukaan</label>
+      <select id="media-filter-source" class="media-table-filter">
+        <option value="">Kaikki lähteet</option>
+        <option value="mtv">MTV Uutiset</option>
+        <option value="yle">Yle</option>
+        <option value="hs">Helsingin Sanomat</option>
+      </select>
+      <label for="media-filter-year" class="sr-only">Suodata vuoden mukaan</label>
+      <select id="media-filter-year" class="media-table-filter">
+        <option value="">Kaikki vuodet</option>
+        {% set seenYears = [] %}
+        {% for item in allItems %}
+          {% if item.datePublished %}
+            {% set yr = item.datePublished[0:4] %}
+            {% if yr and (yr not in seenYears) %}
+              {% set seenYears = (seenYears.push(yr), seenYears) %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+        {% for yr in seenYears | sort | reverse %}
+          <option value="{{ yr }}">{{ yr }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <p class="media-table-count" id="media-count" aria-live="polite"></p>
+  </div>
+
+  <div class="media-table-wrap" role="region" aria-label="Mediajulkaisut" tabindex="0">
+    <table class="media-table" id="media-table">
+      <thead>
+        <tr>
+          <th scope="col" class="media-table-col--date">Päivämäärä</th>
+          <th scope="col" class="media-table-col--source">Lähde</th>
+          <th scope="col" class="media-table-col--title">Otsikko</th>
+          <th scope="col" class="media-table-col--content">Sisältö</th>
+          <th scope="col" class="media-table-col--link">Linkki</th>
+        </tr>
+      </thead>
+      <tbody id="media-table-body">
+        {% for item in allItems %}
+          <tr class="media-table-row"
+            data-source="{{ item.source | default('') }}"
+            data-year="{{ item.datePublished[0:4] if item.datePublished else '' }}"
+            data-search="{{ (item.title + ' ' + (item.sourceLabel or '')) | lower | replace('"', '') }}">
+            <td class="media-table-col--date">
+              <time datetime="{{ item.datePublished | default('') }}">{{ item.datePublished[0:10] if item.datePublished else '—' }}</time>
+            </td>
+            <td class="media-table-col--source">
+              <span class="media-table-source-badge media-table-source-badge--{{ item.source | default('') }}">{{ item.sourceLabel | default('—') }}</span>
+            </td>
+            <td class="media-table-col--title">{{ item.title | default('—') }}</td>
+            <td class="media-table-col--content">
+              {% if item.lead %}
+                {{ item.lead | truncate(200) }}
+              {% elif item.description %}
+                {{ item.description | truncate(200) }}
+              {% else %}
+                <span class="media-table-na">Ei saatavilla</span>
+              {% endif %}
+            </td>
+            <td class="media-table-col--link">
+              {% if item.url %}
+                <a href="{{ item.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">Avaa&nbsp;↗</a>
+              {% else %}
+                <span class="media-table-na">—</span>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="media-table-empty" id="media-empty" hidden>Ei tuloksia.</p>
+  </div>
+
+  <nav class="media-table-pagination" id="media-pagination" aria-label="Tulossivu">
+    <button class="media-table-page-btn" id="media-prev" aria-label="Edellinen sivu">← Edellinen</button>
+    <span class="media-table-page-info" id="media-page-info" aria-live="polite"></span>
+    <button class="media-table-page-btn" id="media-next" aria-label="Seuraava sivu">Seuraava →</button>
+  </nav>
+
+</section>
+
+<script>
+(function () {
+  var PAGE_SIZE = 10;
+  var section    = document.getElementById('media-table-section');
+  if (!section) return;
+
+  var tbody      = document.getElementById('media-table-body');
+  var emptyNote  = document.getElementById('media-empty');
+  var searchEl   = document.getElementById('media-search');
+  var srcEl      = document.getElementById('media-filter-source');
+  var yrEl       = document.getElementById('media-filter-year');
+  var prevBtn    = document.getElementById('media-prev');
+  var nextBtn    = document.getElementById('media-next');
+  var pageInfo   = document.getElementById('media-page-info');
+  var countEl    = document.getElementById('media-count');
+
+  var allRows    = Array.from(tbody.querySelectorAll('.media-table-row'));
+  var filtered   = allRows.slice();
+  var currentPage = 1;
+
+  function applyFilters() {
+    var q   = searchEl.value.toLowerCase().trim();
+    var src = srcEl.value;
+    var yr  = yrEl.value;
+    filtered = allRows.filter(function (row) {
+      if (src && row.dataset.source !== src) return false;
+      if (yr  && row.dataset.year   !== yr)  return false;
+      if (q   && row.dataset.search.indexOf(q) === -1) return false;
+      return true;
+    });
+  }
+
+  function formatDate(iso) {
+    if (!iso || iso.length < 10) return iso || '';
+    var parts = iso.slice(0, 10).split('-');
+    if (parts.length !== 3) return iso.slice(0, 10);
+    return parts[2] + '.' + parts[1] + '.' + parts[0];
+  }
+
+  function render() {
+    applyFilters();
+    var total      = filtered.length;
+    var totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    if (currentPage > totalPages) currentPage = totalPages;
+
+    var start = (currentPage - 1) * PAGE_SIZE;
+    var end   = start + PAGE_SIZE;
+
+    allRows.forEach(function (row) { row.hidden = true; });
+    filtered.slice(start, end).forEach(function (row) {
+      row.hidden = false;
+      // Format date cells on first render
+      var timeEl = row.querySelector('time');
+      if (timeEl && timeEl.dataset.fmt !== '1') {
+        timeEl.textContent = formatDate(timeEl.getAttribute('datetime'));
+        timeEl.dataset.fmt = '1';
+      }
+    });
+
+    emptyNote.hidden = total > 0;
+    prevBtn.disabled = currentPage <= 1;
+    nextBtn.disabled = currentPage >= totalPages;
+    pageInfo.textContent = 'Sivu\u00a0' + currentPage + '\u00a0/\u00a0' + totalPages;
+    countEl.textContent  = total + '\u00a0tulosta';
+  }
+
+  searchEl.addEventListener('input',  function () { currentPage = 1; render(); });
+  srcEl.addEventListener('change',    function () { currentPage = 1; render(); });
+  yrEl.addEventListener('change',     function () { currentPage = 1; render(); });
+  prevBtn.addEventListener('click',   function () { if (currentPage > 1) { currentPage--; render(); } });
+  nextBtn.addEventListener('click',   function () {
+    var totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+    if (currentPage < totalPages) { currentPage++; render(); }
+  });
+
+  render();
+}());
+</script>

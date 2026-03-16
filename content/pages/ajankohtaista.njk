@@ -1,7 +1,7 @@
 ---
 title: Ajankohtaista
 seoTitle: Ajankohtaista — Generation AI
-seoDescription: Hankkeen uusimmat uutiset mediasta, tapahtumat, hankkeen toiminta ja tutkimusjulkaisut.
+seoDescription: Hankkeen uusimmat uutiset mediasta, tapahtumat, hankkeen toiminta ja tutkimustulokset.
 date: "2023-01-29T20:19:24"
 updated: "2026-03-15T00:00:00"
 slug: ajankohtaista
@@ -17,6 +17,11 @@ pageHero: false
     <p class="news-intro-desc">Seuraa hankkeen medianäkyvyyttä, tapahtumia, hankkeen toimintaa ja tutkimustuloksia.</p>
   </div>
 </section>
+
+{% set projectPosts = collections["hankkeen-toiminta"] | localizedItems(lang, page.url) %}
+{% set researchPosts = collections["tutkimus"] | localizedItems(lang, page.url) %}
+{% set projectCards = projectPosts | mergeChronologicalCards(stakeholderPageData.projectItems or []) %}
+{% set researchCards = researchPosts | mergeChronologicalCards(stakeholderPageData.researchItems or []) %}
 
 {% set kadenceBlock = {
   "name": "kadence/tabs",
@@ -34,16 +39,7 @@ pageHero: false
   }
 } %}
 {% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/query",
-  "shortName": "query",
-  "attrs": {
-    "uniqueID": "407_efb356-b8",
-    "collectionName": "media"
-  }
-} %}
-{% set kadenceInnerHtml %}{% endset %}
-{% include "blocks/kadence/query.njk" %}
+{% include "partials/media-table.njk" %}
 {% endset %}
 {% include "blocks/kadence/tab.njk" %}
 
@@ -76,16 +72,43 @@ pageHero: false
   }
 } %}
 {% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/query",
-  "shortName": "query",
-  "attrs": {
-    "uniqueID": "407_544f7f-28",
-    "collectionName": "hankkeen-toiminta"
-  }
+{% set stakeholderLabels = {
+  "stakeholder": "Sidosryhma",
+  "participantsSuffix": "osallistujaa"
 } %}
-{% set kadenceInnerHtml %}{% endset %}
-{% include "blocks/kadence/query.njk" %}
+<section class="kb-query-loop stakeholder-activities stakeholder-activities--combined" data-kb-query-id="407_544f7f-28">
+  <div class="kb-query-grid stakeholder-activities__grid stakeholder-activities__grid--combined">
+    {% for card in projectCards %}
+      {% if card.cardType == "post" %}
+        {% set post = card.post %}
+        <article class="kb-query-item">
+          {% if post.data.featuredImage %}
+            <a href="{{ post.url }}" class="kb-query-item__thumb" tabindex="-1" aria-hidden="true">
+              <img src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}" loading="lazy">
+            </a>
+          {% endif %}
+          <div class="kb-query-item__body">
+            {% if post.data.categories and post.data.categories.length %}
+              <div class="kb-query-item__cats">
+                <span class="kb-query-item__cat">{{ post.data.categories[0] }}</span>
+              </div>
+            {% endif %}
+            <h3 class="kb-query-item__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+            {% if post.date %}
+              <time class="kb-query-item__date" datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date("d.m.Y") }}</time>
+            {% endif %}
+            {% if post.data.excerpt and post.data.excerpt != "[object Object]" %}
+              <p class="kb-query-item__excerpt">{{ post.data.excerpt | truncate(160) }}</p>
+            {% endif %}
+          </div>
+        </article>
+      {% else %}
+        {% set stakeholderRow = card.row %}
+        {% include "partials/stakeholder-activity-card.njk" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 {% endset %}
 {% include "blocks/kadence/tab.njk" %}
 
@@ -97,16 +120,43 @@ pageHero: false
   }
 } %}
 {% set kadenceInnerHtml %}
-{% set kadenceBlock = {
-  "name": "kadence/query",
-  "shortName": "query",
-  "attrs": {
-    "uniqueID": "407_e5dfa8-cc",
-    "collectionName": "tutkimus"
-  }
+{% set stakeholderLabels = {
+  "stakeholder": "Sidosryhma / tapahtuma",
+  "participantsSuffix": "osallistujaa"
 } %}
-{% set kadenceInnerHtml %}{% endset %}
-{% include "blocks/kadence/query.njk" %}
+<section class="kb-query-loop stakeholder-activities stakeholder-activities--combined" data-kb-query-id="407_e5dfa8-cc">
+  <div class="kb-query-grid stakeholder-activities__grid stakeholder-activities__grid--combined">
+    {% for card in researchCards %}
+      {% if card.cardType == "post" %}
+        {% set post = card.post %}
+        <article class="kb-query-item">
+          {% if post.data.featuredImage %}
+            <a href="{{ post.url }}" class="kb-query-item__thumb" tabindex="-1" aria-hidden="true">
+              <img src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}" loading="lazy">
+            </a>
+          {% endif %}
+          <div class="kb-query-item__body">
+            {% if post.data.categories and post.data.categories.length %}
+              <div class="kb-query-item__cats">
+                <span class="kb-query-item__cat">{{ post.data.categories[0] }}</span>
+              </div>
+            {% endif %}
+            <h3 class="kb-query-item__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+            {% if post.date %}
+              <time class="kb-query-item__date" datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date("d.m.Y") }}</time>
+            {% endif %}
+            {% if post.data.excerpt and post.data.excerpt != "[object Object]" %}
+              <p class="kb-query-item__excerpt">{{ post.data.excerpt | truncate(160) }}</p>
+            {% endif %}
+          </div>
+        </article>
+      {% else %}
+        {% set stakeholderRow = card.row %}
+        {% include "partials/stakeholder-activity-card.njk" %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 {% endset %}
 {% include "blocks/kadence/tab.njk" %}
 
