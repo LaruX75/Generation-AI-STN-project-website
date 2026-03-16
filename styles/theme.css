@@ -4738,17 +4738,14 @@ a.publication-hero-author-name:hover {
 /* ── High contrast ────────────────────────────────────────────────────── */
 /* filter: invert+hue-rotate works at compositing level — bypasses all
    CSS specificity wars with background/color shorthand properties.      */
-html.a11y-contrast body {
+/* Apply invert on the root element — nothing can escape this */
+html.a11y-contrast {
   filter: invert(1) hue-rotate(180deg);
 }
-/* Double-invert images and videos to restore their natural appearance */
+/* Double-invert images, videos and iframes to restore natural appearance */
 html.a11y-contrast img,
 html.a11y-contrast video,
 html.a11y-contrast iframe {
-  filter: invert(1) hue-rotate(180deg);
-}
-/* Double-invert the toolbar so it stays in its normal colours */
-html.a11y-contrast .a11y-toolbar {
   filter: invert(1) hue-rotate(180deg);
 }
 
