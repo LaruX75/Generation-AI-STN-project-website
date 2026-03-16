@@ -20,7 +20,7 @@ const PAGE_ALIAS_GROUPS = [
   ["ollaan-yhteydessa", "get-in-touch", "kontakta-oss"],
   ["opettajalle", "for-teachers", "for-larare"],
   ["tutkijalle", "research", "forskning"],
-  ["yleisölle", "generation-ai-project-in-the-media", "generation-ai-projektet-i-media"],
+  ["yleisölle", "for-everyone", "for-allmanheten"],
   ["tietosuojalausunto-eu", "privacy-statement-eu", "dataskyddserklaring-eu"],
   ["vastuurajoitus", "liability-limitation", "ansvarsbegransning"],
   ["evastekaytanto-eu", "cookie-policy-eu", "cookiepolicy-eu"],

@@ -4748,6 +4748,16 @@ html.a11y-contrast video,
 html.a11y-contrast iframe {
   filter: invert(1) hue-rotate(180deg);
 }
+/* Fix: semi-transparent white text (rgba <0.7 alpha) on dark backgrounds composites to
+   a medium gray that inverts to another medium gray — insufficient contrast (~3:1).
+   Force full opacity so the filter produces pure black on the inverted light background. */
+html.a11y-contrast .site-footer-col-heading,
+html.a11y-contrast .site-footer-copy,
+html.a11y-contrast .researcher-shield-projects-heading,
+html.a11y-contrast .researcher-shield-pi,
+html.a11y-contrast .home-stat-label {
+  color: #fff;
+}
 
 /* ── Background tints ─────────────────────────────────────────────────── */
 html[data-a11y-bg="beige"]  { background-color: #f5ead4 !important; }

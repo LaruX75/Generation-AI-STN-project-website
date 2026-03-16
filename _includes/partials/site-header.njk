@@ -10,7 +10,8 @@
     "open": "Avaa",
     "submenu": "alavalikko",
     "mega": "megamenu",
-    "search": "Haku"
+    "search": "Haku",
+    "toPage": "Sivulle →"
   },
   "en": {
     "toggle": "Toggle navigation",
@@ -18,7 +19,8 @@
     "open": "Open",
     "submenu": "submenu",
     "mega": "mega menu",
-    "search": "Search"
+    "search": "Search",
+    "toPage": "To the page →"
   },
   "sv": {
     "toggle": "Öppna navigering",
@@ -26,7 +28,8 @@
     "open": "Öppna",
     "submenu": "undermeny",
     "mega": "megameny",
-    "search": "Sök"
+    "search": "Sök",
+    "toPage": "Till sidan →"
   }
 } %}
 {% set ui = navUi[localeCode] if navUi[localeCode] else navUi["fi"] %}
@@ -65,7 +68,7 @@
                   {% if item.description %}
                     <p class="kb-mega-sidebar-desc">{{ item.description }}</p>
                   {% endif %}
-                  <a class="kb-mega-sidebar-cta" href="{{ item.url }}">Sivulle →</a>
+                  <a class="kb-mega-sidebar-cta" href="{{ item.url }}">{{ ui.toPage }}</a>
                 </div>
                 <ul class="kb-mega-menu-cols">
                   {% for col in item.megamenuColumns %}

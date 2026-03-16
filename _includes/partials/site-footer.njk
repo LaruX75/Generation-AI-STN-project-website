@@ -1,5 +1,8 @@
 {# Site footer — locale-aware with site map and utility links #}
 {% set localeCode = lang if lang else (site.defaultLocale if site and site.defaultLocale else "fi") %}
+{% set _localeMenus = localizedNavigation[localeCode] if localizedNavigation and localizedNavigation[localeCode] else null %}
+{% set _menus = _localeMenus if _localeMenus else (navigation if navigation else []) %}
+{% set footerNavItems = _menus[0].items if _menus and _menus.length and _menus[0].items else [] %}
 
 {% set footerUi = {
   "fi": {
@@ -8,15 +11,6 @@
     "utility":   "Hyödyllistä",
     "copy":      "Generation AI -hanke",
     "links": {
-      "sitemap": [
-        { "label": "Etusivu",         "url": "/" },
-        { "label": "Ajankohtaista",   "url": "/ajankohtaista/" },
-        { "label": "Materiaalit",     "url": "/materiaalit/" },
-        { "label": "Opettajalle",     "url": "/opettajalle/" },
-        { "label": "Tutkimus",        "url": "/tutkijalle/" },
-        { "label": "Konsortio",       "url": "/konsortio/" },
-        { "label": "Ota yhteyttä",    "url": "/ollaan-yhteydessa/" }
-      ],
       "tools": [
         { "label": "Opetettava kone",   "url": "https://www.gen-ai.fi/fi/tools/tm",              "ext": true },
         { "label": "Somekone",          "url": "https://www.gen-ai.fi/fi/tools/somekone",         "ext": true },
@@ -39,15 +33,6 @@
     "utility":   "Useful links",
     "copy":      "Generation AI project",
     "links": {
-      "sitemap": [
-        { "label": "Home",            "url": "/en/home/" },
-        { "label": "Current affairs", "url": "/en/current-affairs/" },
-        { "label": "Materials",       "url": "/en/materials/" },
-        { "label": "For teachers",    "url": "/en/for-teachers/" },
-        { "label": "Research",        "url": "/en/research/" },
-        { "label": "Consortium",      "url": "/en/consortium/" },
-        { "label": "Get in touch",    "url": "/en/get-in-touch/" }
-      ],
       "tools": [
         { "label": "Teachable Machine",      "url": "https://www.gen-ai.fi/en/tools/tm",              "ext": true },
         { "label": "Somekone",               "url": "https://www.gen-ai.fi/en/tools/somekone",         "ext": true },
@@ -68,15 +53,6 @@
     "utility":   "Nyttiga länkar",
     "copy":      "Generation AI-projektet",
     "links": {
-      "sitemap": [
-        { "label": "Startsida",       "url": "/sv/startsida/" },
-        { "label": "Aktuellt",        "url": "/sv/aktuellt/" },
-        { "label": "Material",        "url": "/sv/material/" },
-        { "label": "För lärare",      "url": "/sv/for-larare/" },
-        { "label": "Forskning",       "url": "/sv/forskning/" },
-        { "label": "Konsortium",      "url": "/sv/konsortium/" },
-        { "label": "Kontakta oss",    "url": "/sv/kontakta-oss/" }
-      ],
       "tools": [
         { "label": "Undervisbar maskin",   "url": "https://www.gen-ai.fi/sv/tools/tm",               "ext": true },
         { "label": "Sociala medier-maskin","url": "https://www.gen-ai.fi/sv/tools/somekone",         "ext": true },
@@ -99,7 +75,7 @@
 {% set brandUi = {
   "fi": { "eyebrow": "Hankkeen sovellukset", "lead": "Kokeile ilmaisia tekoälytyökaluja oppitunneilla ja kotona.", "cta": "Avaa gen-ai.fi", "url": "https://www.gen-ai.fi/fi" },
   "en": { "eyebrow": "Project tools", "lead": "Try free AI tools for classrooms and home use.", "cta": "Open gen-ai.fi", "url": "https://www.gen-ai.fi/en" },
-  "sv": { "eyebrow": "Projektets verktyg", "lead": "Prova gratis AI-verktyg för klassrummet och hemma.", "cta": "Öppna gen-ai.fi", "url": "https://www.gen-ai.fi/fi" }
+  "sv": { "eyebrow": "Projektets verktyg", "lead": "Prova gratis AI-verktyg för klassrummet och hemma.", "cta": "Öppna gen-ai.fi", "url": "https://www.gen-ai.fi/sv" }
 } %}
 {% set brand = brandUi[localeCode] if brandUi[localeCode] else brandUi["fi"] %}
 
@@ -330,8 +306,8 @@
       <div class="site-footer-col">
         <h2 class="site-footer-col-heading">{{ ui.sitemap }}</h2>
         <ul class="site-footer-links">
-          {% for link in ui.links.sitemap %}
-            <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+          {% for item in footerNavItems %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
           {% endfor %}
         </ul>
       </div>
