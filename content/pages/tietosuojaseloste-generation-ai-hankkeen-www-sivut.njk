@@ -1,7 +1,7 @@
 ---
 title: Tietosuojaseloste – Generation AI hankkeen www-sivut
 date: "2025-01-23T11:46:15"
-updated: "2025-02-13T14:33:04"
+updated: "2026-03-16T00:00:00"
 slug: tietosuojaseloste-generation-ai-hankkeen-www-sivut
 permalink: /tietosuojaseloste-generation-ai-hankkeen-www-sivut/
 status: publish
@@ -154,7 +154,7 @@ Generation Ai hankkeen www-sivusto
 } %}
 {% set _kb_save_9 = kadenceBlock %}
 {% set kadenceInnerHtml %}
-Tietojasi käytetään Generation AI hankkeen www-sivujen käytännön toteuttamiseen. Keräämme vain välttämättömät tiedot ja pyrimme välttämään ulkopuolisten palveluiden käyttämistä mahdollisimman paljon. Emme esimerkiksi käytä sivustolla ulkopuolista käyttäjäanalytiikkaa, kielenkääntäjää, upotettuja fontteja tai upotettuja videoita.
+Tietojasi käytetään Generation AI hankkeen www-sivujen käytännön toteuttamiseen. Keräämme vain välttämättömät tiedot ja pyrimme välttämään ulkopuolisten palveluiden käyttämistä mahdollisimman paljon. Emme esimerkiksi käytä sivustolla ulkopuolista käyttäjäanalytiikkaa tai upotettuja fontteja. Sivusto käyttää seuraavia kolmannen osapuolen palveluita: <strong>MailerLite</strong> (uutiskirjeen hallinta — käytetään vain markkinointievästeiden hyväksymisen jälkeen), <strong>Web3Forms</strong> (yhteystietolomakkeen välitys), <strong>YouTube-nocookie</strong> (videoupotukset — käyttää privacy-enhanced-moodia, ei tallenna evästeitä ilman toistoa) sekä <strong>vanilla-cookieconsent</strong> (evästeilmoitus, tallennetaan paikallisesti selaimeesi). Päivitetty 16.3.2026.
 {% endset %}
 {% set kadenceBlock = _kb_save_9 %}
 {% include "blocks/kadence/advancedheading.njk" %}
@@ -411,7 +411,7 @@ Verkkosivuston rekisteriin tallennettavat tiedot saadaan verkkosivuston vieraili
 } %}
 {% set _kb_save_26 = kadenceBlock %}
 {% set kadenceInnerHtml %}
-Sivuston kävijäseurantaan ei käytetä evästeitä tarvitsevia työkaluja, kuten Google Analyticsiä, vaan Wordpress järjestelmään integroituvaa Independent Analytics laajennusta. Independent Analytics tarjoaa hyvin läpinäkyvästi tietoa toimintaperiaatteistaan, lisätietoja täällä: <a href="https://independentwp.com/" target="_blank" rel="noopener" title="">https://independentwp.com/</a>
+Sivusto on toteutettu staattisena Eleventy-sivustona. Sivuston kävijäseurantaan ei käytetä evästeitä tarvitsevia työkaluja, kuten Google Analyticsiä. Sivuston hakutoiminto (Pagefind) toimii täysin paikallisesti eikä lähetä tietoja ulkopuolelle. Evästeilmoitus on toteutettu vanilla-cookieconsent-kirjastolla, joka tallentaa suostumustietosi <code>cc_cookie</code>-evästeeseen paikallisesti selaimeesi (365 päivää).
 {% endset %}
 {% set kadenceBlock = _kb_save_26 %}
 {% include "blocks/kadence/advancedheading.njk" %}
@@ -497,7 +497,7 @@ Huom! Emme käytä evästepohjaista analytiikkaa (esim. Google Analytics) käytt
 } %}
 {% set _kb_save_32 = kadenceBlock %}
 {% set kadenceInnerHtml %}
-Kuten useimmat verkkopalvelut, verkkosivustomme käyttää ensimmäisen osapuolen ja kolmannen osapuolen evästeitä useisiin eri tarkoituksiin. Ensimmäisen osapuolen evästeet ovat useimmiten välttämättömiä, jotta verkkosivusto toimisi oikein, eivätkä ne kerää mitään henkilökohtaisesti tunnistettavia tietojasi.<br><br>Verkkosivustollamme käytettävät kolmannen osapuolen evästeet ovat pääasiassa tarkoitettu ymmärtämään, miten verkkosivusto toimii, miten olet vuorovaikutuksessa verkkosivustomme kanssa, pitämään palvelumme turvallisena, tarjoamaan sinulle merkityksellisiä mainoksia ja kaiken kaikkiaan tarjoamaan sinulle paremman ja paremman käyttökokemuksen ja nopeuttamaan tulevia vuorovaikutustapojasi verkkosivustomme kanssa. <em>Oppimateriaalipankkimme on toteutettu BetterDocs laajennuksella, joka seuraa materiaalien käyttöä evästeiden avulla. Materiaalimme sisältävät myös thinglink-sisältöjä, jotka käyttävät evästeitä osana toimintojaan.</em>
+Verkkosivustomme käyttää ensimmäisen osapuolen evästeitä sivuston toimintaan sekä evästeilmoituksen suostumustiedon tallentamiseen (<code>cc_cookie</code>). Kolmannen osapuolen evästeitä käytetään vain suostumuksellasi: <strong>MailerLite</strong> (uutiskirjeen seuranta, ml_*-evästeet) ladataan vasta markkinointikategorian hyväksymisen jälkeen. YouTube-nocookie-videoita voidaan toistaa ilman evästeitä; evästeet asetetaan vasta kun käyttäjä aloittaa videon toiston.
 {% endset %}
 {% set kadenceBlock = _kb_save_32 %}
 {% include "blocks/kadence/advancedheading.njk" %}

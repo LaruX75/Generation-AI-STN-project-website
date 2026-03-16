@@ -9,7 +9,7 @@
     "yrLabel": "Filter by year", "yrAll": "All years",
     "aria": "Scientific publications", "ariaPag": "Result page",
     "colYear": "Year", "colCode": "Code", "colTitle": "Title", "colContent": "Authors / Venue", "colLink": "Link",
-    "open": "Open", "na": "—", "empty": "No results.",
+    "open": "Open", "newTab": "(opens in new tab)", "na": "—", "empty": "No results.",
     "prev": "← Previous", "next": "Next →",
     "jsPage": "Page", "jsSep": "/", "jsResults": "results"
   } %}
@@ -22,7 +22,7 @@
     "yrLabel": "Filtrera efter år", "yrAll": "Alla år",
     "aria": "Vetenskapliga publikationer", "ariaPag": "Resultatsida",
     "colYear": "År", "colCode": "Kod", "colTitle": "Titel", "colContent": "Författare / Publikation", "colLink": "Länk",
-    "open": "Öppna", "na": "—", "empty": "Inga resultat.",
+    "open": "Öppna", "newTab": "(öppnas i ny flik)", "na": "—", "empty": "Inga resultat.",
     "prev": "← Föregående", "next": "Nästa →",
     "jsPage": "Sida", "jsSep": "/", "jsResults": "resultat"
   } %}
@@ -35,7 +35,7 @@
     "yrLabel": "Suodata vuoden mukaan", "yrAll": "Kaikki vuodet",
     "aria": "Tieteelliset julkaisut", "ariaPag": "Tulossivu",
     "colYear": "Vuosi", "colCode": "Koodi", "colTitle": "Otsikko", "colContent": "Tekijät / Julkaisupaikka", "colLink": "Linkki",
-    "open": "Avaa", "na": "—", "empty": "Ei tuloksia.",
+    "open": "Avaa", "newTab": "(avautuu uudessa välilehdessä)", "na": "—", "empty": "Ei tuloksia.",
     "prev": "← Edellinen", "next": "Seuraava →",
     "jsPage": "Sivu", "jsSep": "/", "jsResults": "tulosta"
   } %}
@@ -67,7 +67,7 @@
     </div>
   </div>
 
-  <div class="media-table-wrap" role="region" aria-label="{{ lbl.aria }}" tabindex="0">
+  <div class="media-table-wrap" role="region" aria-label="{{ lbl.aria }}">
     <table class="media-table" id="scipub-table">
       <thead>
         <tr>
@@ -95,7 +95,7 @@
             </td>
             <td class="media-table-col--link">
               {% if item.link %}
-                <a href="{{ item.link }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ item.linkLabel | default(lbl.open) }}&nbsp;↗</a>
+                <a href="{{ item.link }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ item.linkLabel | default(lbl.open) }}&nbsp;<span aria-hidden="true">↗</span><span class="sr-only">{{ lbl.newTab }}</span></a>
               {% else %}
                 <span class="media-table-na">{{ lbl.na }}</span>
               {% endif %}

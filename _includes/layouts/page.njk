@@ -3,17 +3,47 @@ layout: layouts/base.njk
 ---
 {% if pageHero or featuredImage %}
 {% set _heroImg = heroImage if heroImage else (featuredImage if featuredImage else null) %}
-<div class="entry-hero page-hero-section"{% if _heroImg %} style="background-image:url('{{ _heroImg }}');"{% endif %}>
+<div class="entry-hero page-hero-section">
+  <div class="hero-bg-sharp" id="hero-bg-sharp"></div>
+  <div class="hero-bg-blur" id="hero-bg-blur"></div>
   <div class="entry-hero-container-inner">
     <div class="hero-section-overlay"></div>
+    {% if heroHeadline %}
+    <div class="hero-content">
+      <h1 class="hero-headline">{{ heroHeadline }}</h1>
+      {% if heroTagline %}<p class="hero-tagline">{{ heroTagline }}</p>{% endif %}
+      {% if heroCtaPrimary %}
+      <div class="hero-cta-actions">
+        <a class="hero-cta-btn hero-cta-btn--primary" href="{{ heroCtaPrimaryUrl }}">{{ heroCtaPrimary }}</a>
+        {% if heroCtaSecondary %}<a class="hero-cta-btn hero-cta-btn--secondary" href="{{ heroCtaSecondaryUrl }}">{{ heroCtaSecondary }}</a>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
   </div>
-  <div class="kt-row-layout-bottom-sep kt-svg-for-bottom-sep" aria-hidden="true" style="height:100px;color:var(--global-palette9);">
+  <div class="kt-row-layout-bottom-sep kt-svg-for-bottom-sep" aria-hidden="true" style="position:absolute;bottom:0;left:0;right:0;height:100px;color:var(--global-palette9);z-index:3;">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path fill="currentColor" d="M1000,50l-182.69,-45.286l-292.031,61.197l-190.875,-41.075l-143.748,28.794l-190.656,-23.63l0,70l1000,0l0,-50Z" style="opacity:0.4"/><path fill="currentColor" d="M1000,57l-152.781,-22.589l-214.383,19.81l-159.318,-21.471l-177.44,25.875l-192.722,5.627l-103.356,-27.275l0,63.023l1000,0l0,-43Z"/></svg>
   </div>
 </div>
+<script>
+(function () {
+  var fixed = '{{ heroBgImage | default("") }}';
+  var imgs = [
+    '/assets/hero/tm_screenshot_collage_1b4dfa5288.png',
+    '/assets/hero/somekone_screenshot_collage_17da94877f.png',
+    '/assets/hero/llm_screenshot_collage_82a45dfa6f.png',
+    '/assets/hero/breakable_machine_screenshot_1a3e444fbf.png',
+    '/assets/hero/profilinggame_screenshot_collage_a58510867f.png'
+  ];
+  var src = fixed || imgs[Math.floor(Math.random() * imgs.length)];
+  document.querySelectorAll('.hero-bg-blur, .hero-bg-sharp').forEach(function (el) {
+    el.style.backgroundImage = "url('" + src + "')";
+  });
+})();
+</script>
 {% endif %}
-<main class="page">
-  {% if title and not kadenceBlocks %}
+<main class="page" id="main-content">
+  {% if title and not kadenceBlocks and not heroHeadline %}
     <h1 class="page-title">{{ title }}</h1>
   {% endif %}
   <div class="page-content">{{ content | safe }}</div>

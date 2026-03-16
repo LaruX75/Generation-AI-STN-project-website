@@ -15,7 +15,7 @@
       </header>
     {% endif %}
     <div class="kb-post-feed-carousel-wrap">
-      <button class="kb-carousel-btn kb-carousel-btn--prev kb-carousel-btn--edge" aria-label="Edellinen">&#8249;</button>
+      <button class="kb-carousel-btn kb-carousel-btn--prev kb-carousel-btn--edge" aria-label="Edellinen"><span aria-hidden="true">&#8249;</span></button>
       <div class="kb-post-feed-carousel" id="kbc-{{ b.uniqueID }}">
         {% for post in items %}
           <article class="kb-post-card">
@@ -36,7 +36,7 @@
           </article>
         {% endfor %}
       </div>
-      <button class="kb-carousel-btn kb-carousel-btn--next" aria-label="Seuraava">&#8250;</button>
+      <button class="kb-carousel-btn kb-carousel-btn--next" aria-label="Seuraava"><span aria-hidden="true">&#8250;</span></button>
       <script>
       (function () {
         var track = document.getElementById('kbc-{{ b.uniqueID }}');

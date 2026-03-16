@@ -1,0 +1,13 @@
+{
+  "people": [
+    {
+      "name": "Teemu Roos",
+      "limit": 10
+    },
+    {
+      "name": "tekoäly",
+      "topicSlug": "tekoaly",
+      "limit": 10
+    }
+  ]
+}

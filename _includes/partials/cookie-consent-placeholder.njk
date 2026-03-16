@@ -1,2 +1,149 @@
-{# Generated cookie consent placeholder. Replace with your preferred consent tool if tracking is used. #}
-<div class="cookie-consent-placeholder" hidden data-cookie-consent-placeholder="true"></div>
+<script src="/scripts/cookieconsent.umd.js" defer></script>
+<script>
+window.addEventListener('load', function () {
+  var lang = document.documentElement.lang || 'fi';
+  if (lang !== 'en' && lang !== 'sv') lang = 'fi';
+
+  CookieConsent.run({
+    guiOptions: {
+      consentModal: { layout: 'box', position: 'bottom left' },
+      preferencesModal: { layout: 'box' }
+    },
+
+    categories: {
+      necessary: {
+        enabled: true,
+        readOnly: true
+      },
+      marketing: {
+        enabled: false,
+        autoClear: {
+          cookies: [{ name: /^ml_/ }]
+        }
+      }
+    },
+
+    onConsent: function () {
+      if (CookieConsent.acceptedCategory('marketing')) {
+        loadConsentedScripts();
+      }
+    },
+
+    onChange: function () {
+      if (CookieConsent.acceptedCategory('marketing')) {
+        loadConsentedScripts();
+      }
+    },
+
+    language: {
+      default: lang,
+      translations: {
+        fi: {
+          consentModal: {
+            title: 'Käytämme evästeitä',
+            description: 'Käytämme välttämättömiä evästeitä sivuston toimintaan. Markkinointievästeet (MailerLite) ovat valinnaisia ja vaativat suostumuksesi.',
+            acceptAllBtn: 'Hyväksy kaikki',
+            acceptNecessaryBtn: 'Vain välttämättömät',
+            showPreferencesBtn: 'Hallinnoi asetuksia'
+          },
+          preferencesModal: {
+            title: 'Evästeasetukset',
+            acceptAllBtn: 'Hyväksy kaikki',
+            acceptNecessaryBtn: 'Vain välttämättömät',
+            savePreferencesBtn: 'Tallenna asetukset',
+            closeIconLabel: 'Sulje',
+            sections: [
+              {
+                title: 'Välttämättömät evästeet',
+                description: 'Nämä evästeet ovat välttämättömiä sivuston toiminnalle eikä niitä voi poistaa käytöstä.',
+                linkedCategory: 'necessary'
+              },
+              {
+                title: 'Markkinointievästeet',
+                description: 'Käytetään uutiskirjeen hallintaan (MailerLite). Ladataan vain suostumuksellasi.',
+                linkedCategory: 'marketing'
+              },
+              {
+                title: 'Lisätietoja',
+                description: 'Lisätietoja on <a href="/saavutettavuusseloste/">saavutettavuusselosteessa</a>.'
+              }
+            ]
+          }
+        },
+        en: {
+          consentModal: {
+            title: 'We use cookies',
+            description: 'We use necessary cookies for site functionality. Marketing cookies (MailerLite) are optional and require your consent.',
+            acceptAllBtn: 'Accept all',
+            acceptNecessaryBtn: 'Necessary only',
+            showPreferencesBtn: 'Manage preferences'
+          },
+          preferencesModal: {
+            title: 'Cookie preferences',
+            acceptAllBtn: 'Accept all',
+            acceptNecessaryBtn: 'Necessary only',
+            savePreferencesBtn: 'Save preferences',
+            closeIconLabel: 'Close',
+            sections: [
+              {
+                title: 'Necessary cookies',
+                description: 'These cookies are required for the site to function and cannot be disabled.',
+                linkedCategory: 'necessary'
+              },
+              {
+                title: 'Marketing cookies',
+                description: 'Used for newsletter management (MailerLite). Only loaded with your consent.',
+                linkedCategory: 'marketing'
+              },
+              {
+                title: 'More information',
+                description: 'See our <a href="/en/accessibility-statement/">accessibility statement</a> for more details.'
+              }
+            ]
+          }
+        },
+        sv: {
+          consentModal: {
+            title: 'Vi använder cookies',
+            description: 'Vi använder nödvändiga cookies för webbplatsens funktion. Marknadsföringscookies (MailerLite) är valfria och kräver ditt samtycke.',
+            acceptAllBtn: 'Acceptera alla',
+            acceptNecessaryBtn: 'Endast nödvändiga',
+            showPreferencesBtn: 'Hantera inställningar'
+          },
+          preferencesModal: {
+            title: 'Cookie-inställningar',
+            acceptAllBtn: 'Acceptera alla',
+            acceptNecessaryBtn: 'Endast nödvändiga',
+            savePreferencesBtn: 'Spara inställningar',
+            closeIconLabel: 'Stäng',
+            sections: [
+              {
+                title: 'Nödvändiga cookies',
+                description: 'Dessa cookies krävs för att webbplatsen ska fungera och kan inte inaktiveras.',
+                linkedCategory: 'necessary'
+              },
+              {
+                title: 'Marknadsföringscookies',
+                description: 'Används för nyhetsbrevhantering (MailerLite). Laddas endast med ditt samtycke.',
+                linkedCategory: 'marketing'
+              },
+              {
+                title: 'Mer information',
+                description: 'Se vår <a href="/sv/tillganglighetsredogorelse/">tillgänglighetsredogörelse</a> för mer information.'
+              }
+            ]
+          }
+        }
+      }
+    }
+  });
+});
+
+function loadConsentedScripts() {
+  document.querySelectorAll('script[data-cookiecategory="marketing"][type="text/plain"]').forEach(function (el) {
+    var s = document.createElement('script');
+    s.textContent = el.textContent;
+    document.head.appendChild(s);
+  });
+}
+</script>

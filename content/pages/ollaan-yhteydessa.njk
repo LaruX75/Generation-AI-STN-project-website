@@ -32,9 +32,11 @@ lang: fi
     </div>
 
     <div class="contact-form-wrap">
-      {# Korvaa YOUR_FORM_ID Formspree-lomakkeen ID:llä (esim. xpwzabcd)          #}
-      {# Rekisteröidy osoitteessa https://formspree.io ja luo lomake              #}
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form class="contact-form" id="contact-form-fi" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="e7668089-af89-471f-b97a-42bdfbc92f57">
+        <input type="hidden" name="subject" value="Yhteydenotto — Generation AI">
+        <input type="hidden" name="from_name" value="Generation AI -sivusto">
+        <input type="checkbox" name="botcheck" style="display:none">
         <div class="contact-form-field">
           <label for="cf-name-fi">Nimi</label>
           <input id="cf-name-fi" type="text" name="name" required placeholder="Etunimi Sukunimi">
@@ -44,16 +46,52 @@ lang: fi
           <input id="cf-email-fi" type="email" name="email" required placeholder="sinä@esimerkki.fi">
         </div>
         <div class="contact-form-field">
-          <label for="cf-subject-fi">Aihe</label>
-          <input id="cf-subject-fi" type="text" name="subject" placeholder="Mistä asiasta on kyse?">
+          <label for="cf-topic-fi">Aihe</label>
+          <input id="cf-topic-fi" type="text" name="topic" placeholder="Mistä asiasta on kyse?">
         </div>
         <div class="contact-form-field">
           <label for="cf-message-fi">Viesti</label>
           <textarea id="cf-message-fi" name="message" rows="5" required placeholder="Kirjoita viestisi tähän…"></textarea>
         </div>
         <button class="contact-form-btn" type="submit">Lähetä viesti</button>
+        <p class="contact-form-status" id="contact-status-fi" aria-live="polite" hidden></p>
       </form>
     </div>
+<script>
+(function () {
+  var form = document.getElementById('contact-form-fi');
+  var status = document.getElementById('contact-status-fi');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Lähetetään…';
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data.success) {
+          form.reset();
+          status.textContent = 'Kiitos viestistäsi! Vastaamme mahdollisimman pian.';
+          status.className = 'contact-form-status contact-form-status--ok';
+        } else {
+          status.textContent = 'Lähetys epäonnistui. Yritä uudelleen tai lähetä sähköpostia osoitteeseen info@generation-ai-stn.fi';
+          status.className = 'contact-form-status contact-form-status--err';
+          btn.disabled = false;
+          btn.textContent = 'Lähetä viesti';
+        }
+        status.hidden = false;
+      })
+      .catch(function () {
+        status.textContent = 'Verkkovirhe. Lähetä sähköpostia osoitteeseen info@generation-ai-stn.fi';
+        status.className = 'contact-form-status contact-form-status--err';
+        status.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Lähetä viesti';
+      });
+  });
+}());
+</script>
 
   </div>
 </section>

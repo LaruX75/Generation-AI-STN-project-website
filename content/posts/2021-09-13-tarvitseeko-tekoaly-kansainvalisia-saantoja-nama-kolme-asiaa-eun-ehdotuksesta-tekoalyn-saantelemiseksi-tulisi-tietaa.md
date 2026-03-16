@@ -86,5 +86,5 @@ layout: layouts/post.njk
 
 
 <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-<iframe loading="lazy" title="Nämä kolme asiaa sinun kannattaa tietää EU:n tekoälylainsäädännöstä" width="720" height="405" src="https://www.youtube.com/embed/7a6G-CHIl7Q?start=2&#038;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe loading="lazy" title="Nämä kolme asiaa sinun kannattaa tietää EU:n tekoälylainsäädännöstä" width="720" height="405" src="https://www.youtube-nocookie.com/embed/7a6G-CHIl7Q?start=2&#038;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div></figure>

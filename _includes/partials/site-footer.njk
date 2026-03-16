@@ -77,11 +77,12 @@
         { "label": "Kontakta oss",    "url": "/sv/kontakta-oss/" }
       ],
       "tools": [
-        { "label": "Opetettava kone",   "url": "https://www.gen-ai.fi/fi/tools/tm",              "ext": true },
-        { "label": "Somekone",          "url": "https://www.gen-ai.fi/fi/tools/somekone",         "ext": true },
-        { "label": "Pieni kielikone",   "url": "https://www.gen-ai.fi/fi/tools/lm",              "ext": true },
-        { "label": "Hajoava kone",      "url": "https://www.gen-ai.fi/fi/tools/bm",              "ext": true },
-        { "label": "Profilointipeli",   "url": "https://www.gen-ai.fi/fi/tools/profiling-game",  "ext": true }
+        { "label": "Opetettava kone",    "url": "https://www.gen-ai.fi/fi/tools/tm",               "ext": true },
+        { "label": "Somekone",           "url": "https://www.gen-ai.fi/fi/tools/somekone",          "ext": true },
+        { "label": "Pieni kielikone",    "url": "https://www.gen-ai.fi/fi/tools/lm",               "ext": true },
+        { "label": "Hajoava kone",       "url": "https://www.gen-ai.fi/fi/tools/bm",               "ext": true },
+        { "label": "Profilointipeli",    "url": "https://www.gen-ai.fi/fi/tools/profiling-game",   "ext": true },
+        { "label": "Manipulationsspelet","url": "https://www.gen-ai.fi/fi/tools/manipulation-game","ext": true }
       ],
       "utility": [
         { "label": "Sök",                       "url": "/sv/sok/" },
@@ -279,7 +280,8 @@
       <span class="footer-logos-label">{{ logos.funderLabel }}</span>
       <div class="footer-logos-list">
         {% for org in logos.funder %}
-        <a class="footer-logo-item" href="{{ org.url }}" target="_blank" rel="noopener" aria-label="{{ org.name }}">
+        {% if localeCode == "en" %}{% set _newTab = " (opens in new tab)" %}{% elif localeCode == "sv" %}{% set _newTab = " (öppnas i ny flik)" %}{% else %}{% set _newTab = " (avautuu uudessa välilehdessä)" %}{% endif %}
+        <a class="footer-logo-item" href="{{ org.url }}" target="_blank" rel="noopener" aria-label="{{ org.name }}{{ _newTab }}">
           {% if org.logoUrl %}
           <img class="footer-logo-img {{ org.logoClass }}" src="{{ org.logoUrl }}" alt="{{ org.name }}">
           {% else %}
@@ -293,7 +295,8 @@
       <span class="footer-logos-label">{{ logos.partnerLabel }}</span>
       <div class="footer-logos-list">
         {% for org in logos.partners %}
-        <a class="footer-logo-item" href="{{ org.url }}" target="_blank" rel="noopener" aria-label="{{ org.name }}">
+        {% if localeCode == "en" %}{% set _newTab = " (opens in new tab)" %}{% elif localeCode == "sv" %}{% set _newTab = " (öppnas i ny flik)" %}{% else %}{% set _newTab = " (avautuu uudessa välilehdessä)" %}{% endif %}
+        <a class="footer-logo-item" href="{{ org.url }}" target="_blank" rel="noopener" aria-label="{{ org.name }}{{ _newTab }}">
           {% if org.logoUrl %}
           <img class="footer-logo-img {{ org.logoClass }}" src="{{ org.logoUrl }}" alt="{{ org.name }}">
           {% else %}
@@ -314,7 +317,7 @@
       <p class="genai-brand-strip-lead">{{ brand.lead }}</p>
     </div>
     <a class="genai-brand-strip-cta" href="{{ brand.url }}" target="_blank" rel="noopener">
-      {{ brand.cta }} ↗
+      {{ brand.cta }} <span aria-hidden="true">↗</span><span class="sr-only">{% if localeCode == "en" %}(opens in new tab){% elif localeCode == "sv" %}(öppnas i ny flik){% else %}(avautuu uudessa välilehdessä){% endif %}</span>
     </a>
   </div>
 </div>
@@ -338,7 +341,7 @@
           {% for link in ui.links.tools %}
             <li>
               <a href="{{ link.url }}"{% if link.ext %} target="_blank" rel="noopener"{% endif %}>
-                {{ link.label }}{% if link.ext %} <span aria-hidden="true" class="site-footer-ext">↗</span>{% endif %}
+                {{ link.label }}{% if link.ext %} <span aria-hidden="true" class="site-footer-ext">↗</span><span class="sr-only">{% if lang == "en" %}(opens in new tab){% elif lang == "sv" %}(öppnas i ny flik){% else %}(avautuu uudessa välilehdessä){% endif %}</span>{% endif %}
               </a>
             </li>
           {% endfor %}

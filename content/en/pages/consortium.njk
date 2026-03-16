@@ -99,7 +99,7 @@ pageHero: false
       {% if person.profileUrl or person.orcidUrl %}
       <div class="consortium-card__profile-links">
         {% if person.profileUrl %}
-        <a href="{{ person.profileUrl }}" class="consortium-card__profile-link" target="_blank" rel="noopener">{% if "uefconnect" in person.profileUrl %}UEF Connect{% elif "researchportal.helsinki" in person.profileUrl %}Research Portal{% elif "oulu.fi/en/researchers" in person.profileUrl %}OuluCris{% elif "linkedin.com" in person.profileUrl %}LinkedIn{% else %}Profile{% endif %}</a>
+        <a href="{{ person.profileUrl }}" class="consortium-card__profile-link" target="_blank" rel="noopener noreferrer">{% if "uefconnect" in person.profileUrl %}UEF Connect{% elif "researchportal.helsinki" in person.profileUrl %}Research Portal{% elif "oulu.fi/en/researchers" in person.profileUrl %}OuluCris{% elif "linkedin.com" in person.profileUrl %}LinkedIn{% else %}Profile{% endif %}<span class="sr-only"> (opens in new tab)</span></a>
         {% endif %}
         {% if person.orcidUrl %}
         <a href="{{ person.orcidUrl }}" class="consortium-card__profile-link consortium-card__profile-link--orcid" target="_blank" rel="noopener">ORCID</a>

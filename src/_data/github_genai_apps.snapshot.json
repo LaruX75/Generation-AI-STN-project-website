@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-03-16T00:00:00Z",
+  "owners": [
+    {
+      "login": "knicos",
+      "label": "Knicos",
+      "profileUrl": "https://github.com/knicos",
+      "publicRepos": 36,
+      "followers": 29,
+      "following": 5,
+      "genaiReposFound": 9
+    },
+    {
+      "login": "bughit",
+      "label": "Bughit",
+      "profileUrl": "https://github.com/bughit",
+      "publicRepos": 22,
+      "followers": 4,
+      "following": 0,
+      "genaiReposFound": 0,
+      "note": "Tarkistetulta tililta ei loytynyt julkisia Generation AI -repositorioita."
+    }
+  ],
+  "items": [
+    {
+      "id": "tm",
+      "appTitle": "Opetettava kone",
+      "appUrl": "https://tm.gen-ai.fi",
+      "fullName": "knicos/genai-tm",
+      "repoUrl": "https://github.com/knicos/genai-tm",
+      "description": "GenAI Teachable Machine",
+      "createdAt": "2023-03-20T17:21:16Z",
+      "updatedAt": "2026-03-05T00:12:10Z",
+      "pushedAt": "2025-11-20T08:34:20Z",
+      "stargazersCount": 22,
+      "forksCount": 10,
+      "openIssuesCount": 8,
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "license": "MIT License",
+      "ownerLogin": "knicos"
+    },
+    {
+      "id": "somekone",
+      "appTitle": "Somekone",
+      "appUrl": "https://somekone.gen-ai.fi",
+      "fullName": "knicos/genai-somekone",
+      "repoUrl": "https://github.com/knicos/genai-somekone",
+      "description": "Social Media Machine",
+      "createdAt": "2024-05-14T06:26:06Z",
+      "updatedAt": "2026-03-13T11:45:59Z",
+      "pushedAt": "2025-10-29T23:06:57Z",
+      "stargazersCount": 17,
+      "forksCount": 3,
+      "openIssuesCount": 4,
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "license": "MIT License",
+      "ownerLogin": "knicos"
+    },
+    {
+      "id": "lm",
+      "appTitle": "Pieni kielikone",
+      "appUrl": "https://lm.gen-ai.fi",
+      "fullName": "knicos/genai-lm",
+      "repoUrl": "https://github.com/knicos/genai-lm",
+      "description": "Little Language Machine App",
+      "createdAt": "2025-11-20T16:34:27Z",
+      "updatedAt": "2026-03-14T12:53:08Z",
+      "pushedAt": "2026-03-14T12:53:10Z",
+      "stargazersCount": 3,
+      "forksCount": 0,
+      "openIssuesCount": 2,
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "license": null,
+      "ownerLogin": "knicos"
+    },
+    {
+      "id": "profiling",
+      "appTitle": "Profilointipeli",
+      "appUrl": "https://classroom.gen-ai.fi",
+      "fullName": "knicos/genai-profiling",
+      "repoUrl": "https://github.com/knicos/genai-profiling",
+      "description": "Profiling game",
+      "createdAt": "2024-05-06T06:36:18Z",
+      "updatedAt": "2025-02-12T06:24:13Z",
+      "pushedAt": "2025-02-12T06:24:15Z",
+      "stargazersCount": 1,
+      "forksCount": 1,
+      "openIssuesCount": 1,
+      "language": "TypeScript",
+      "defaultBranch": "main",
+      "license": "MIT License",
+      "ownerLogin": "knicos"
+    }
+  ]
+}

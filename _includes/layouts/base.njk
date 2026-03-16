@@ -63,8 +63,12 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
   {% endif %}
   <link rel="stylesheet" href="/styles/theme.css">
+  <link rel="stylesheet" href="/styles/cookieconsent.css">
 </head>
 <body{% if pageHero %} class="has-hero"{% endif %}>
+  {% set _skipLabel = "Siirry pääsisältöön" %}
+  {% if lang == "en" %}{% set _skipLabel = "Skip to main content" %}{% elif lang == "sv" %}{% set _skipLabel = "Hoppa till huvudinnehåll" %}{% endif %}
+  <a class="skip-to-main" href="#main-content">{{ _skipLabel }}</a>
   {% include "partials/site-header.njk" %}
   <div data-pagefind-body data-pagefind-meta="language:{{ lang if lang else (site.defaultLocale if site and site.defaultLocale else 'fi') }}">
   {{ content | safe }}
@@ -72,7 +76,10 @@
   <div data-pagefind-ignore>{% include "partials/site-footer.njk" %}</div>
   {% include "partials/cookie-consent-placeholder.njk" %}
   {% if mailerlite and mailerlite.accountId %}
-  <script>(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account','{{ mailerlite.accountId }}');</script>
+  <script data-mailerlite-account="{{ mailerlite.accountId }}" data-cookiecategory="marketing" type="text/plain">
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account','{{ mailerlite.accountId }}');
+  </script>
   {% endif %}
   <script src="/scripts/nav.js" defer></script>
   <script>

@@ -48,6 +48,8 @@ module.exports = function(eleventyConfig) {
   if (existsSync("styles")) eleventyConfig.addPassthroughCopy({ "styles": "styles" });
   if (existsSync("assets")) eleventyConfig.addPassthroughCopy({ "assets": "assets" });
   if (existsSync("scripts")) eleventyConfig.addPassthroughCopy({ "scripts": "scripts" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/vanilla-cookieconsent/dist/cookieconsent.css": "styles/cookieconsent.css" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/vanilla-cookieconsent/dist/cookieconsent.umd.js": "scripts/cookieconsent.umd.js" });
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(pluginPublicationToc);
 

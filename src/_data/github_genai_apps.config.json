@@ -1,0 +1,38 @@
+{
+  "owners": [
+    {
+      "login": "knicos",
+      "label": "Knicos"
+    },
+    {
+      "login": "bughit",
+      "label": "Bughit"
+    }
+  ],
+  "apps": [
+    {
+      "id": "tm",
+      "appTitle": "Opetettava kone",
+      "appUrl": "https://tm.gen-ai.fi",
+      "repo": "knicos/genai-tm"
+    },
+    {
+      "id": "somekone",
+      "appTitle": "Somekone",
+      "appUrl": "https://somekone.gen-ai.fi",
+      "repo": "knicos/genai-somekone"
+    },
+    {
+      "id": "lm",
+      "appTitle": "Pieni kielikone",
+      "appUrl": "https://lm.gen-ai.fi",
+      "repo": "knicos/genai-lm"
+    },
+    {
+      "id": "profiling",
+      "appTitle": "Profilointipeli",
+      "appUrl": "https://classroom.gen-ai.fi",
+      "repo": "knicos/genai-profiling"
+    }
+  ]
+}

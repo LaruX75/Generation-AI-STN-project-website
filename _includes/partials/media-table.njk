@@ -12,7 +12,7 @@
     "open": "Open", "na": "Not available", "empty": "No results.",
     "prev": "← Previous", "next": "Next →",
     "jsPage": "Page", "jsSep": "/", "jsResults": "results",
-    "hankeBadge": "Project"
+    "hankeBadge": "Project", "newTab": "(opens in new tab)"
   } %}
 {% elif lang == "sv" %}
   {% set lbl = {
@@ -25,7 +25,7 @@
     "open": "Öppna", "na": "Ej tillgänglig", "empty": "Inga resultat.",
     "prev": "← Föregående", "next": "Nästa →",
     "jsPage": "Sida", "jsSep": "/", "jsResults": "resultat",
-    "hankeBadge": "Projekt"
+    "hankeBadge": "Projekt", "newTab": "(öppnas i ny flik)"
   } %}
 {% else %}
   {% set lbl = {
@@ -38,7 +38,7 @@
     "open": "Avaa", "na": "Ei saatavilla", "empty": "Ei tuloksia.",
     "prev": "← Edellinen", "next": "Seuraava →",
     "jsPage": "Sivu", "jsSep": "/", "jsResults": "tulosta",
-    "hankeBadge": "Hanke"
+    "hankeBadge": "Hanke", "newTab": "(avautuu uudessa välilehdessä)"
   } %}
 {% endif %}
 
@@ -70,7 +70,7 @@
     </div>
   </div>
 
-  <div class="media-table-wrap" role="region" aria-label="{{ lbl.aria }}" tabindex="0">
+  <div class="media-table-wrap" role="region" aria-label="{{ lbl.aria }}">
     <table class="media-table" id="media-table">
       <thead>
         <tr>
@@ -117,7 +117,7 @@
             </td>
             <td class="media-table-col--link">
               {% if post.url %}
-                <a href="{{ post.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;↗</a>
+                <a href="{{ post.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;<span aria-hidden="true">↗</span><span class="sr-only">{{ lbl.newTab }}</span></a>
               {% else %}
                 <span class="media-table-na">—</span>
               {% endif %}
@@ -138,7 +138,7 @@
             </td>
             <td class="media-table-col--title">
               {% if item.url %}
-                <a href="{{ item.url }}" class="media-table-title-link" target="_blank" rel="noopener">{{ item.title | default('—') }}</a>
+                <a href="{{ item.url }}" class="media-table-title-link" target="_blank" rel="noopener">{{ item.title | default('—') }}<span class="sr-only"> {{ lbl.newTab }}</span></a>
               {% else %}
                 {{ item.title | default('—') }}
               {% endif %}
@@ -152,7 +152,7 @@
             </td>
             <td class="media-table-col--link">
               {% if item.url %}
-                <a href="{{ item.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;↗</a>
+                <a href="{{ item.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;<span aria-hidden="true">↗</span><span class="sr-only">{{ lbl.newTab }}</span></a>
               {% else %}
                 <span class="media-table-na">—</span>
               {% endif %}

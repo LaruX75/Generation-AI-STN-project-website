@@ -1,0 +1,12 @@
+{
+  "people": [
+    {
+      "name": "Teemu Roos",
+      "language": "fi",
+      "uiLanguage": "fi",
+      "type": "article",
+      "limit": 10,
+      "maxPages": 2
+    }
+  ]
+}

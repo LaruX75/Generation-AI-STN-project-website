@@ -1,0 +1,134 @@
+[
+  {
+    "id": "hy-genai-education-2025",
+    "sortDate": "2025-10-01",
+    "dateLabel": "01.10.2025",
+    "type": "project_page",
+    "sourceLabel": "Helsingin yliopiston tutkimusportaali",
+    "title": "Generation AI",
+    "url": "https://researchportal.helsinki.fi/en/projects/generation-ai-7",
+    "people": ["Kaiju Kangas", "Kati Sormunen", "Sini Davies"],
+    "summary": "Tutkimusportaalin aktiivinen projektisivu kasvatustieteiden Generation AI -kokonaisuudelle."
+  },
+  {
+    "id": "hy-genai-law-2025",
+    "sortDate": "2025-10-01",
+    "dateLabel": "01.10.2025",
+    "type": "project_page",
+    "sourceLabel": "Helsingin yliopiston tutkimusportaali",
+    "title": "Generation AI",
+    "url": "https://researchportal.helsinki.fi/en/projects/generation-ai-5/",
+    "people": ["Susanna Lindroos-Hovinheimo", "Milka Sormunen", "Kamrul Faisal", "Eveliina Ignatius"],
+    "summary": "Tutkimusportaalin aktiivinen projektisivu oikeustieteelliselle Generation AI -kokonaisuudelle."
+  },
+  {
+    "id": "hy-genai-cs-2025",
+    "sortDate": "2025-10-01",
+    "dateLabel": "01.10.2025",
+    "type": "project_page",
+    "sourceLabel": "Helsingin yliopiston tutkimusportaali",
+    "title": "Generation AI",
+    "url": "https://researchportal.helsinki.fi/en/projects/generation-ai-6",
+    "people": ["Teemu Roos"],
+    "summary": "Tutkimusportaalin aktiivinen projektisivu tietojenkäsittelytieteen Generation AI -kokonaisuudelle."
+  },
+  {
+    "id": "uef-book-2025",
+    "sortDate": "2025-11-19",
+    "dateLabel": "19.11.2025",
+    "type": "news",
+    "sourceLabel": "Itä-Suomen yliopisto",
+    "title": "Tutkijat avaavat myyttejä tekoälystä ja datasta uutuuskirjassa",
+    "url": "https://www.uef.fi/fi/artikkeli/tutkijat-avaavat-myytteja-tekoalysta-ja-datasta-uutuuskirjassa",
+    "people": ["Elisa Silvennoinen", "Kati Mäkitalo", "Matti Tedre", "Henriikka Vartiainen", "Juho Kahila"],
+    "summary": "UEF:n uutinen 50 myyttiä tekoälystä ja datasta -kirjasta ja hankkeen kirjoittajista."
+  },
+  {
+    "id": "oulu-award-2025",
+    "sortDate": "2025-05-27",
+    "dateLabel": "27.05.2025",
+    "type": "news",
+    "sourceLabel": "Oulun yliopisto",
+    "title": "Lasten ja nuorten tekoälylukutaitoa edistävä hanke voitti Vuoden avoin oppimateriaali -palkinnon",
+    "url": "https://www.oulu.fi/fi/uutiset/lasten-ja-nuorten-tekoalylukutaitoa-edistava-hanke-voitti-vuoden-avoin-oppimateriaali-palkinnon",
+    "people": ["Kati Mäkitalo", "Jari Laru", "Megumi Iwata"],
+    "summary": "Oulun yliopiston uutinen palkinnosta sekä Oulun tiimin roolista hankkeessa."
+  },
+  {
+    "id": "uef-genai-project-2022",
+    "sortDate": "2022-10-01",
+    "dateLabel": "01.10.2022",
+    "type": "project_page",
+    "sourceLabel": "UEFConnect",
+    "title": "Generation AI - Teknologiataitoja",
+    "url": "https://uefconnect.uef.fi/genai/",
+    "people": ["Matti Tedre", "Henriikka Vartiainen", "Nicolas Pope", "Ilkka Jormanainen", "Elisa Silvennoinen", "Juho Kahila"],
+    "summary": "UEFConnectin projektisivu Generation AI -hankkeesta ja sen UEF-tiimistä."
+  },
+  {
+    "id": "uef-launch-2022",
+    "sortDate": "2022-09-21",
+    "dateLabel": "21.09.2022",
+    "type": "news",
+    "sourceLabel": "Itä-Suomen yliopisto",
+    "title": "GenAI -tutkimus vahvistaa lasten ja nuorten kykyä ymmärtää tekoälyyn perustuvia teknologioita",
+    "url": "https://www.uef.fi/fi/artikkeli/genai-tutkimus-vahvistaa-lasten-ja-nuorten-kykya-ymmartaa-tekoalyyn-perustuvia-teknologioita",
+    "people": ["Matti Tedre", "Henriikka Vartiainen"],
+    "summary": "UEF:n hankkeen käynnistymistä esittelevä uutinen."
+  },
+  {
+    "id": "hy-roos-project-2022",
+    "sortDate": "2022-10-01",
+    "dateLabel": "01.10.2022",
+    "type": "project_page",
+    "sourceLabel": "Helsingin yliopiston tutkimusportaali",
+    "title": "Generation AI",
+    "url": "https://researchportal.helsinki.fi/en/projects/generation-ai-4",
+    "people": ["Teemu Roos", "Tarja Pietarinen", "Eva Suomi"],
+    "summary": "Tutkimusportaalin projektisivu Generation AI:n tietojenkäsittelytieteen kokonaisuudelle."
+  },
+  {
+    "id": "hy-kangas-project-2022",
+    "sortDate": "2022-10-01",
+    "dateLabel": "01.10.2022",
+    "type": "project_page",
+    "sourceLabel": "Helsingin yliopiston tutkimusportaali",
+    "title": "Generation AI / Kangas",
+    "url": "https://researchportal.helsinki.fi/en/projects/generation-ai-2",
+    "people": ["Kaiju Kangas", "Kati Sormunen", "Sini Davies"],
+    "summary": "Tutkimusportaalin projektisivu Generation AI:n kasvatustieteelliselle kokonaisuudelle."
+  },
+  {
+    "id": "hy-lindroos-project-2022",
+    "sortDate": "2022-10-01",
+    "dateLabel": "01.10.2022",
+    "type": "project_page",
+    "sourceLabel": "Helsingin yliopiston tutkimusportaali",
+    "title": "Generation AI",
+    "url": "https://researchportal.helsinki.fi/fi/projects/generation-ai",
+    "people": ["Susanna Lindroos-Hovinheimo", "Kamrul Faisal", "Eveliina Ignatius", "Matias Koivulehto", "Milka Sormunen"],
+    "summary": "Tutkimusportaalin projektisivu Generation AI:n oikeustieteelliselle kokonaisuudelle."
+  },
+  {
+    "id": "hy-roos-scifi-2022",
+    "sortDate": "2022-04-25",
+    "dateLabel": "25.04.2022",
+    "type": "news",
+    "sourceLabel": "Helsingin yliopisto",
+    "title": "Tekoälyyn liitetyt scifi-kuvat kertovat väärää tarinaa",
+    "url": "https://www.helsinki.fi/fi/uutiset/tekoaly/tekoalyyn-liitetyt-scifi-kuvat-kertovat-vaaraa-tarinaa",
+    "people": ["Teemu Roos"],
+    "summary": "Helsingin yliopiston uutinen, jossa Teemu Roos kommentoi tekoälymielikuvia ja scifi-estetiikkaa."
+  },
+  {
+    "id": "hy-ai-act-2023",
+    "sortDate": "2023-09-07",
+    "dateLabel": "07.09.2023",
+    "type": "news",
+    "sourceLabel": "Helsingin yliopisto",
+    "title": "Tekoälyasetus paisumassa vaikeasti sovellettavaksi möykyksi",
+    "url": "https://www.helsinki.fi/fi/uutiset/demokratia/tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi",
+    "people": ["Susanna Lindroos-Hovinheimo"],
+    "summary": "Helsingin yliopiston uutinen EU:n tekoälyasetuksesta ja sen soveltamisen haasteista."
+  }
+]
