@@ -5,6 +5,7 @@ const LABEL_OVERRIDES = {
   "Etusivu": { fi: "Etusivu", en: "Home", sv: "Startsida" },
   "Ajankohtaista": { fi: "Ajankohtaista", en: "Current affairs", sv: "Aktuellt" },
   "Materiaalit": { fi: "Materiaalit", en: "Materials", sv: "Material" },
+  "Hankkeesta": { fi: "Hankkeesta", en: "About the project", sv: "Om projektet" },
   "Toiminta": { fi: "Toiminta", en: "What we do", sv: "Verksamhet" },
   "Konsortio": { fi: "Konsortio", en: "Consortium", sv: "Konsortium" },
   "Ole yhteydessä": { fi: "Ole yhteydessä", en: "Get in touch", sv: "Kontakta oss" },
