@@ -4480,3 +4480,61 @@ a.publication-hero-author-name:hover {
     font-size: 0.95rem;
   }
 }
+
+/* ── Prose page (tietosuojaseloste, saavutettavuusseloste, jne.) ─────────── */
+.prose-page {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+.prose-page-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+.prose-section {
+  margin-bottom: 2.5rem;
+}
+.prose-section h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--global-palette1, #1a1a2e);
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--global-palette4, #4a90d9);
+}
+.prose-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.4rem;
+  color: var(--global-palette2, #2c2c54);
+}
+.prose-section h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 1rem 0 0.35rem;
+  color: #444;
+}
+.prose-section p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0 0 0.85rem;
+}
+.prose-section ul {
+  margin: 0.5rem 0 1rem 1.25rem;
+  padding: 0;
+}
+.prose-section li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+}
+.prose-section code {
+  font-size: 0.85em;
+  background: #f4f4f4;
+  border-radius: 3px;
+  padding: 0.1em 0.4em;
+}
