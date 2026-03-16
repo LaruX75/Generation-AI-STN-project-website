@@ -4,4 +4,4 @@ Disallow: /haku/
 Disallow: /en/search/
 Disallow: /sv/sok/
 
-Sitemap: https://www.generation-ai-stn.fi/sitemap.xml
+Sitemap: https://larux75.github.io/Generation-AI-STN-project-website/sitemap.xml
