@@ -3,4 +3,7 @@ node_modules/
 .DS_Store
 .cache/
 .tmp-konsortio-build/
+migration-config.json
+MIGRATION-NOTES.md
+codex-korjaukset.md
 _tmp_hankkeen/
