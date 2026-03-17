@@ -226,7 +226,7 @@ module.exports = function(eleventyConfig) {
 
   // Prefix all root-relative paths in output HTML for GitHub Pages project site.
   // Remove this transform when switching to a custom domain served from /.
-  const REPO_PREFIX = "/Generation-AI-STN-project-website";
+  const REPO_PREFIX = "";
   eleventyConfig.addTransform("repoPathPrefix", function(content, outputPath) {
     if (!outputPath || !outputPath.endsWith(".html")) return content;
     return content
