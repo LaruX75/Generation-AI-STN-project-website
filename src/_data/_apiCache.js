@@ -5,6 +5,10 @@ const path = require("node:path");
 const DEFAULT_CACHE_DIR = path.join(process.cwd(), ".cache", "researchfi");
 const DEFAULT_TTL_SECONDS = 60 * 60 * 24;
 
+function parseBoolean(value) {
+  return ["1", "true", "yes", "on"].includes(String(value || "").toLowerCase());
+}
+
 function getCacheDir() {
   return process.env.RESEARCHFI_CACHE_DIR || DEFAULT_CACHE_DIR;
 }
@@ -14,6 +18,11 @@ function getTtlSeconds(ttlSeconds) {
 
   const fromEnv = Number(process.env.RESEARCHFI_CACHE_TTL_SECONDS);
   return Number.isFinite(fromEnv) && fromEnv >= 0 ? fromEnv : DEFAULT_TTL_SECONDS;
+}
+
+function isNetworkEnabled() {
+  if (process.env.DATA_FETCH_ENABLED === undefined) return true;
+  return parseBoolean(process.env.DATA_FETCH_ENABLED);
 }
 
 function buildCachePath(key) {
@@ -54,8 +63,10 @@ async function remember(key, factory, options = {}) {
     if (cached !== null) return cached;
 
     const stale = await readCache(key, { ttlSeconds: 0 });
-    if (stale !== null) return stale;
+    if (stale !== null && !isNetworkEnabled()) return stale;
   }
+
+  if (!options.forceRefresh && !isNetworkEnabled()) return null;
 
   const value = await factory();
   await writeCache(key, value);
@@ -65,6 +76,8 @@ async function remember(key, factory, options = {}) {
 module.exports = {
   buildCachePath,
   getCacheDir,
+  isNetworkEnabled,
+  parseBoolean,
   readCache,
   remember,
   writeCache

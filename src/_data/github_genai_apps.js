@@ -1,15 +1,13 @@
 const config = require("./github_genai_apps.config.json");
 const snapshot = require("./github_genai_apps.snapshot.json");
-const { readCache, writeCache } = require("./_apiCache");
+const { isNetworkEnabled, parseBoolean, readCache, writeCache } = require("./_apiCache");
 
 const GITHUB_API_BASE_URL = "https://api.github.com";
 
-function parseBoolean(value) {
-  return ["1", "true", "yes", "on"].includes(String(value || "").toLowerCase());
-}
-
 function shouldUseNetwork() {
-  return parseBoolean(process.env.GITHUB_ENABLE_NETWORK) || parseBoolean(process.env.GITHUB_FORCE_REFRESH);
+  if (parseBoolean(process.env.GITHUB_FORCE_REFRESH)) return true;
+  if (!isNetworkEnabled()) return false;
+  return parseBoolean(process.env.GITHUB_ENABLE_NETWORK);
 }
 
 function cacheKeyForRepo(fullName) {

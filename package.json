@@ -3,9 +3,14 @@
   "private": true,
   "scripts": {
     "predev": "node scripts/normalize-localized-frontmatter.js",
-    "dev": "eleventy --serve",
+    "dev": "npm run dev:offline",
+    "dev:offline": "node scripts/run-with-data-mode.js offline eleventy --serve",
+    "dev:live": "node scripts/run-with-data-mode.js live eleventy --serve",
     "prebuild": "node scripts/normalize-localized-frontmatter.js && node scripts/clean-output.js",
-    "build": "eleventy && npm run search:index",
+    "build": "npm run build:offline",
+    "build:offline": "node scripts/run-with-data-mode.js offline eleventy && npm run search:index",
+    "build:live": "node scripts/run-with-data-mode.js live eleventy && npm run search:index",
+    "data:refresh": "node scripts/refresh-data-cache.js",
     "search:index": "pagefind --site _site"
   },
   "dependencies": {
@@ -17,6 +22,7 @@
     "vanilla-cookieconsent": "^3.1.0"
   },
   "devDependencies": {
-    "pagefind": "^1.4.0"
+    "pagefind": "^1.4.0",
+    "playwright-core": "^1.58.2"
   }
 }
