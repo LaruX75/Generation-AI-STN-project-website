@@ -291,6 +291,7 @@ th { font-weight: 700; border-bottom: 2px solid var(--global-palette6, #446d33);
   z-index: 1000;
   background: var(--global-palette9, #fff);
   transition: transform 0.3s ease, filter 0.3s ease;
+  overflow: visible;
 }
 /* On hero pages: extend header down by the wave height and clip background
    to the nav area only — wave valleys show the hero image beneath */
@@ -304,6 +305,9 @@ th { font-weight: 700; border-bottom: 2px solid var(--global-palette6, #446d33);
 /* Slide header out of view when scrolling down within hero zone */
 .site-shell-header.is-hidden {
   transform: translateY(-100%);
+}
+.site-shell-header.is-nav-open {
+  transform: none;
 }
 /* Non-hero pages: push content below the fixed header */
 body:not(.has-hero) {
@@ -1598,13 +1602,17 @@ body.search-modal-open { overflow: hidden; }
 
   .site-navigation {
     display: none;
-    position: fixed;
-    inset: 60px 0 0 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     background: var(--global-palette9, #fff);
     overflow-y: auto;
     z-index: 999;
     padding: 1rem;
     margin-left: 0;
+    max-height: calc(100dvh - var(--kb-header-height, 60px));
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.08);
   }
   .site-navigation.is-open { display: block; }
 
@@ -1637,8 +1645,14 @@ body.search-modal-open { overflow: hidden; }
     background: var(--global-palette7, #f0f4ec);
     padding: 0.25rem 0 0.25rem 1rem;
   }
+  .kb-nav-sub-menu .kb-nav-sub-menu,
+  .kb-nav-sub-menu .kb-mega-menu {
+    padding-left: 0.75rem;
+  }
   .kb-mega-sidebar { display: none; }
-  .kb-mega-menu-cols { display: flex; flex-direction: column; gap: 0; padding: 0.25rem 0 0.25rem 1rem; }
+  .kb-mega-menu-cols { display: flex; flex-direction: column; gap: 0; padding: 0.25rem 0 0.25rem 0; }
+  .kb-mega-menu-col + .kb-mega-menu-col { border-top: 1px solid rgba(49, 78, 37, 0.12); }
+  .kb-mega-link { padding: 0.7rem 0.5rem; }
 }
 
 /* ── BetterDocs listing ───────────────────────────────────────────────────── */

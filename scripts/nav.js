@@ -40,6 +40,39 @@
   var nav     = document.getElementById("site-nav-menu");
   var heroEl  = document.querySelector(".page-hero-section, .entry-hero");
 
+  function isMobileMenuOpen() {
+    return !!(nav && nav.classList.contains("is-open"));
+  }
+
+  function getItemRow(item) {
+    if (!item) return null;
+    for (var i = 0; i < item.children.length; i += 1) {
+      if (item.children[i].classList && item.children[i].classList.contains("kb-nav-link-row")) {
+        return item.children[i];
+      }
+    }
+    return null;
+  }
+
+  function getItemToggle(item) {
+    var row = getItemRow(item);
+    return row ? row.querySelector(".kb-nav-item-toggle") : null;
+  }
+
+  function getItemPanel(item) {
+    if (!item) return null;
+    for (var i = 0; i < item.children.length; i += 1) {
+      var child = item.children[i];
+      if (
+        child.classList &&
+        (child.classList.contains("kb-nav-sub-menu") || child.classList.contains("kb-mega-menu"))
+      ) {
+        return child;
+      }
+    }
+    return null;
+  }
+
   // ── Header height → CSS custom property ─────────────────────────────────────
   function updateHeaderHeight() {
     if (!header) return;
@@ -66,7 +99,9 @@
     // Drop-shadow once user has scrolled at all
     header.classList.toggle("is-stuck", y > STICKY_OFFSET);
 
-    if (heroEl) {
+    if (isMobileMenuOpen()) {
+      header.classList.remove("is-hidden");
+    } else if (heroEl) {
       // Hero pages:
       //  - at top (y ≤ STICKY_OFFSET)  → header visible
       //  - scrolled down, hero visible → header hides
@@ -131,17 +166,22 @@
     if (!toggle || !nav) return;
     toggle.setAttribute("aria-expanded", "true");
     nav.classList.add("is-open");
+    header.classList.add("is-nav-open");
+    header.classList.remove("is-hidden");
     document.body.classList.add("kb-nav-open");
     trapFocus(nav);
+    updateHeaderHeight();
   }
 
   function closeMobileMenu() {
     if (!toggle || !nav) return;
     toggle.setAttribute("aria-expanded", "false");
     nav.classList.remove("is-open");
+    header.classList.remove("is-nav-open");
     document.body.classList.remove("kb-nav-open");
     releaseFocus();
     closeAllSubmenus();
+    updateHeaderHeight();
     toggle.focus();
   }
 
@@ -154,30 +194,46 @@
   }
 
   // ── Submenu helpers ───────────────────────────────────────────────────────────
-  function closeAllSubmenus(except) {
-    document.querySelectorAll(".kb-nav-item.is-open").forEach(function (item) {
+  function closeAllSubmenus(except, root) {
+    var scope = root || nav || document;
+    scope.querySelectorAll(".kb-nav-item.is-open").forEach(function (item) {
       if (item === except) return;
       item.classList.remove("is-open");
-      var btn = item.querySelector(".kb-nav-item-toggle");
+      var btn = getItemToggle(item);
       if (btn) btn.setAttribute("aria-expanded", "false");
     });
   }
 
+  function closeSiblingSubmenus(item) {
+    var parent = item && item.parentElement;
+    if (!parent) return;
+    Array.from(parent.children).forEach(function (sibling) {
+      if (sibling === item || !sibling.classList || !sibling.classList.contains("kb-nav-item")) return;
+      sibling.classList.remove("is-open");
+      var siblingBtn = getItemToggle(sibling);
+      if (siblingBtn) siblingBtn.setAttribute("aria-expanded", "false");
+      closeAllSubmenus(null, sibling);
+    });
+  }
+
   function openSubmenu(item, btn) {
-    closeAllSubmenus(item);
+    closeSiblingSubmenus(item);
     item.classList.add("is-open");
     if (btn) btn.setAttribute("aria-expanded", "true");
     if (isDesktop()) detectEdge(item);
+    updateHeaderHeight();
   }
 
   function closeSubmenu(item, btn) {
     item.classList.remove("is-open");
+    closeAllSubmenus(null, item);
     if (btn) btn.setAttribute("aria-expanded", "false");
+    updateHeaderHeight();
   }
 
   // ── Viewport edge detection ────────────────────────────────────────────────
   function detectEdge(item) {
-    var sub = item.querySelector(".kb-nav-sub-menu, .kb-mega-menu");
+    var sub = getItemPanel(item);
     if (!sub) return;
     sub.classList.remove("sub-menu-right-edge", "sub-menu-left-edge");
     var rect = sub.getBoundingClientRect();
@@ -225,7 +281,7 @@
       if (e.key === "Escape") {
         var openItem = nav.querySelector(".kb-nav-item.is-open");
         if (openItem) {
-          var btn = openItem.querySelector(".kb-nav-item-toggle");
+          var btn = getItemToggle(openItem);
           closeSubmenu(openItem, btn);
           (btn || openItem.querySelector(".kb-nav-link") || openItem).focus();
         } else if (!isDesktop()) {
@@ -240,7 +296,7 @@
         if (parentOpen) {
           var focusable = Array.from(parentOpen.querySelectorAll(FOCUSABLE_SEL));
           if (focusable[focusable.length - 1] === e.target) {
-            var toggleBtn = parentOpen.querySelector(".kb-nav-item-toggle");
+            var toggleBtn = getItemToggle(parentOpen);
             closeSubmenu(parentOpen, toggleBtn);
           }
         }
