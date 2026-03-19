@@ -56,18 +56,18 @@
   } %}
 {% endif %}
 
-<section class="media-table-section" id="tapahtumat-table-section">
+<section class="media-table-section" id="tapahtumat-table-section" data-grid-enhance>
 
   <div class="media-table-header">
     <h2 class="media-table-heading">{{ lbl.heading }}</h2>
     <div class="media-table-controls">
       <div class="media-table-search-wrap">
         <label for="tapahtumat-search" class="sr-only">{{ lbl.search }}</label>
-        <input type="search" id="tapahtumat-search" class="media-table-search" placeholder="{{ lbl.placeholder }}" autocomplete="off">
+        <input type="search" id="tapahtumat-search" class="media-table-search" placeholder="{{ lbl.placeholder }}" autocomplete="off" data-grid-search>
       </div>
       <div class="media-table-filters">
         <label for="tapahtumat-filter-type" class="sr-only">{{ lbl.typeLabel }}</label>
-        <select id="tapahtumat-filter-type" class="media-table-filter">
+        <select id="tapahtumat-filter-type" class="media-table-filter" data-grid-filter="categories" data-grid-filter-mode="contains">
           <option value="">{{ lbl.typeAll }}</option>
           <option value="{{ lbl.typeConfVal }}">{{ lbl.typeConf }}</option>
           <option value="{{ lbl.typeWebVal }}">{{ lbl.typeWeb }}</option>
@@ -75,16 +75,16 @@
           <option value="{{ lbl.typeEventVal }}">{{ lbl.typeEvent }}</option>
         </select>
         <label for="tapahtumat-filter-year" class="sr-only">{{ lbl.yrLabel }}</label>
-        <select id="tapahtumat-filter-year" class="media-table-filter">
+        <select id="tapahtumat-filter-year" class="media-table-filter" data-grid-filter="year" data-grid-populate-options="year">
           <option value="">{{ lbl.yrAll }}</option>
         </select>
       </div>
-      <p class="media-table-count" id="tapahtumat-count" aria-live="polite"></p>
+      <p class="media-table-count" id="tapahtumat-count" aria-live="polite" data-grid-count></p>
     </div>
   </div>
 
   <div class="media-table-wrap" role="region" aria-label="{{ lbl.aria }}">
-    <table class="media-table" id="tapahtumat-table">
+    <table class="media-table" id="tapahtumat-table" data-grid-source>
       <thead>
         <tr>
           <th scope="col" class="media-table-col--date">{{ lbl.colDate }}</th>
@@ -153,70 +153,3 @@
   </nav>
 
 </section>
-
-<script>
-(function () {
-  var PAGE_SIZE = 10;
-  var tbody    = document.getElementById('tapahtumat-table-body');
-  var emptyEl  = document.getElementById('tapahtumat-empty');
-  var searchEl = document.getElementById('tapahtumat-search');
-  var typeEl   = document.getElementById('tapahtumat-filter-type');
-  var yrEl     = document.getElementById('tapahtumat-filter-year');
-  var prevBtn  = document.getElementById('tapahtumat-prev');
-  var nextBtn  = document.getElementById('tapahtumat-next');
-  var pageInfo = document.getElementById('tapahtumat-page-info');
-  var countEl  = document.getElementById('tapahtumat-count');
-  if (!tbody) return;
-
-  var allRows = Array.from(tbody.querySelectorAll('.media-table-row'));
-  var filtered = allRows.slice();
-  var currentPage = 1;
-
-  (function () {
-    var years = {};
-    allRows.forEach(function (row) { var y = row.dataset.year; if (y) years[y] = true; });
-    Object.keys(years).sort().reverse().forEach(function (yr) {
-      var opt = document.createElement('option');
-      opt.value = yr; opt.textContent = yr;
-      yrEl.appendChild(opt);
-    });
-  }());
-
-  function applyFilters() {
-    var q   = searchEl.value.toLowerCase().trim();
-    var typ = typeEl.value.toLowerCase();
-    var yr  = yrEl.value;
-    filtered = allRows.filter(function (row) {
-      if (yr  && row.dataset.year !== yr) return false;
-      if (typ && row.dataset.categories.indexOf(typ) === -1) return false;
-      if (q   && row.dataset.search.indexOf(q) === -1) return false;
-      return true;
-    });
-  }
-
-  function render() {
-    applyFilters();
-    var total = filtered.length;
-    var totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
-    if (currentPage > totalPages) currentPage = totalPages;
-    var start = (currentPage - 1) * PAGE_SIZE;
-    allRows.forEach(function (row) { row.hidden = true; });
-    filtered.slice(start, start + PAGE_SIZE).forEach(function (row) { row.hidden = false; });
-    emptyEl.hidden = total > 0;
-    prevBtn.disabled = currentPage <= 1;
-    nextBtn.disabled = currentPage >= totalPages;
-    pageInfo.textContent = '{{ lbl.jsPage }}\u00a0' + currentPage + '\u00a0{{ lbl.jsSep }}\u00a0' + totalPages;
-    countEl.textContent  = total + '\u00a0{{ lbl.jsResults }}';
-  }
-
-  searchEl.addEventListener('input',  function () { currentPage = 1; render(); });
-  typeEl.addEventListener('change',   function () { currentPage = 1; render(); });
-  yrEl.addEventListener('change',     function () { currentPage = 1; render(); });
-  prevBtn.addEventListener('click',   function () { if (currentPage > 1) { currentPage--; render(); } });
-  nextBtn.addEventListener('click',   function () {
-    if (currentPage < Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))) { currentPage++; render(); }
-  });
-
-  render();
-}());
-</script>

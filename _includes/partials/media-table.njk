@@ -42,18 +42,18 @@
   } %}
 {% endif %}
 
-<section class="media-table-section" id="media-table-section">
+<section class="media-table-section" id="media-table-section" data-grid-enhance>
 
   <div class="media-table-header">
     <h2 class="media-table-heading">{{ lbl.heading }}</h2>
     <div class="media-table-controls">
       <div class="media-table-search-wrap">
         <label for="media-search" class="sr-only">{{ lbl.search }}</label>
-        <input type="search" id="media-search" class="media-table-search" placeholder="{{ lbl.placeholder }}" autocomplete="off">
+        <input type="search" id="media-search" class="media-table-search" placeholder="{{ lbl.placeholder }}" autocomplete="off" data-grid-search>
       </div>
       <div class="media-table-filters">
         <label for="media-filter-source" class="sr-only">{{ lbl.srcLabel }}</label>
-        <select id="media-filter-source" class="media-table-filter">
+        <select id="media-filter-source" class="media-table-filter" data-grid-filter="source">
           <option value="">{{ lbl.srcAll }}</option>
           <option value="mtv">{{ lbl.mtv }}</option>
           <option value="yle">Yle</option>
@@ -62,16 +62,16 @@
           <option value="iv">{{ lbl.iv }}</option>
         </select>
         <label for="media-filter-year" class="sr-only">{{ lbl.yrLabel }}</label>
-        <select id="media-filter-year" class="media-table-filter">
+        <select id="media-filter-year" class="media-table-filter" data-grid-filter="year" data-grid-populate-options="year">
           <option value="">{{ lbl.yrAll }}</option>
         </select>
       </div>
-      <p class="media-table-count" id="media-count" aria-live="polite"></p>
+      <p class="media-table-count" id="media-count" aria-live="polite" data-grid-count></p>
     </div>
   </div>
 
   <div class="media-table-wrap" role="region" aria-label="{{ lbl.aria }}">
-    <table class="media-table" id="media-table">
+    <table class="media-table" id="media-table" data-grid-source>
       <thead>
         <tr>
           <th scope="col" class="media-table-col--date">{{ lbl.colDate }}</th>
@@ -178,72 +178,3 @@
   </nav>
 
 </section>
-
-<script>
-(function () {
-  var PAGE_SIZE = 10;
-  var section    = document.getElementById('media-table-section');
-  if (!section) return;
-
-  var tbody      = document.getElementById('media-table-body');
-  var emptyNote  = document.getElementById('media-empty');
-  var searchEl   = document.getElementById('media-search');
-  var srcEl      = document.getElementById('media-filter-source');
-  var yrEl       = document.getElementById('media-filter-year');
-  var prevBtn    = document.getElementById('media-prev');
-  var nextBtn    = document.getElementById('media-next');
-  var pageInfo   = document.getElementById('media-page-info');
-  var countEl    = document.getElementById('media-count');
-
-  var allRows    = Array.from(tbody.querySelectorAll('.media-table-row'));
-  var filtered   = allRows.slice();
-  var currentPage = 1;
-
-  (function () {
-    var years = {};
-    allRows.forEach(function (row) { var yr = row.dataset.year; if (yr) years[yr] = true; });
-    Object.keys(years).sort().reverse().forEach(function (yr) {
-      var opt = document.createElement('option');
-      opt.value = yr; opt.textContent = yr;
-      yrEl.appendChild(opt);
-    });
-  }());
-
-  function applyFilters() {
-    var q   = searchEl.value.toLowerCase().trim();
-    var src = srcEl.value;
-    var yr  = yrEl.value;
-    filtered = allRows.filter(function (row) {
-      if (src && row.dataset.source !== src) return false;
-      if (yr  && row.dataset.year   !== yr)  return false;
-      if (q   && row.dataset.search.indexOf(q) === -1) return false;
-      return true;
-    });
-  }
-
-  function render() {
-    applyFilters();
-    var total      = filtered.length;
-    var totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
-    if (currentPage > totalPages) currentPage = totalPages;
-    var start = (currentPage - 1) * PAGE_SIZE;
-    allRows.forEach(function (row) { row.hidden = true; });
-    filtered.slice(start, start + PAGE_SIZE).forEach(function (row) { row.hidden = false; });
-    emptyNote.hidden = total > 0;
-    prevBtn.disabled = currentPage <= 1;
-    nextBtn.disabled = currentPage >= totalPages;
-    pageInfo.textContent = '{{ lbl.jsPage }}\u00a0' + currentPage + '\u00a0{{ lbl.jsSep }}\u00a0' + totalPages;
-    countEl.textContent  = total + '\u00a0{{ lbl.jsResults }}';
-  }
-
-  searchEl.addEventListener('input',  function () { currentPage = 1; render(); });
-  srcEl.addEventListener('change',    function () { currentPage = 1; render(); });
-  yrEl.addEventListener('change',     function () { currentPage = 1; render(); });
-  prevBtn.addEventListener('click',   function () { if (currentPage > 1) { currentPage--; render(); } });
-  nextBtn.addEventListener('click',   function () {
-    if (currentPage < Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))) { currentPage++; render(); }
-  });
-
-  render();
-}());
-</script>

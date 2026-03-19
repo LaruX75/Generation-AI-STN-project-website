@@ -103,6 +103,7 @@
   {% if _heroPreload %}
     <link rel="preload" as="image" href="{{ _heroPreload }}" fetchpriority="high">
   {% endif %}
+  <link rel="stylesheet" href="/styles/gridjs-mermaid.css">
   <link rel="stylesheet" href="/styles/theme.css">
   <link rel="stylesheet" href="/styles/cookieconsent.css">
 </head>
@@ -126,6 +127,8 @@
   {% endif %}
   <script src="/scripts/nav.js" defer></script>
   <script src="/scripts/accessibility.js" defer></script>
+  <script src="/scripts/gridjs.umd.js" defer></script>
+  <script src="/scripts/grid-tables.js" defer></script>
   <script>
   (function () {
     var modal = document.getElementById('search-modal');

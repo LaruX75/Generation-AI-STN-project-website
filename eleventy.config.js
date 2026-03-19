@@ -56,6 +56,8 @@ module.exports = function(eleventyConfig) {
   if (existsSync("scripts")) eleventyConfig.addPassthroughCopy({ "scripts": "scripts" });
   eleventyConfig.addPassthroughCopy({ "node_modules/vanilla-cookieconsent/dist/cookieconsent.css": "styles/cookieconsent.css" });
   eleventyConfig.addPassthroughCopy({ "node_modules/vanilla-cookieconsent/dist/cookieconsent.umd.js": "scripts/cookieconsent.umd.js" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/gridjs/dist/gridjs.umd.js": "scripts/gridjs.umd.js" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/gridjs/dist/theme/mermaid.min.css": "styles/gridjs-mermaid.css" });
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(pluginPublicationToc);
 

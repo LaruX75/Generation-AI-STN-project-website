@@ -4503,6 +4503,104 @@ a.publication-hero-author-name:hover {
   text-align: center;
 }
 
+.grid-table-enhanced .media-table-pagination {
+  display: none;
+}
+
+.media-gridjs {
+  min-height: 3rem;
+}
+
+.media-gridjs-container.gridjs {
+  border: 0;
+  box-shadow: none;
+}
+
+.media-gridjs-container .gridjs-wrapper {
+  border: 0;
+  box-shadow: none;
+}
+
+.media-gridjs-container .gridjs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.media-gridjs-container .gridjs-th {
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #555;
+  background: #f5f7fa;
+  border-bottom: 2px solid #e5e9ef;
+}
+
+.media-gridjs-container .gridjs-td {
+  padding: 0.65rem 0.85rem;
+  vertical-align: top;
+  border-bottom: 1px solid #eef0f3;
+  line-height: 1.45;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.media-gridjs-container .gridjs-tr:hover .gridjs-td {
+  background: #fafbfc;
+}
+
+.media-gridjs-container .gridjs-footer {
+  box-shadow: none;
+  border-top: 0;
+  padding: 1rem 0 0;
+  background: transparent;
+}
+
+.media-gridjs-container .gridjs-pagination {
+  gap: 0.35rem;
+}
+
+.media-gridjs-container .media-gridjs-page-btn,
+.media-gridjs-container .gridjs-pagination .gridjs-pages button {
+  padding: 0.45rem 0.75rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #333;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.media-gridjs-container .media-gridjs-page-btn:hover,
+.media-gridjs-container .gridjs-pagination .gridjs-pages button:hover {
+  background: #f0f4f0;
+  border-color: var(--global-palette1, #3a7c3a);
+  color: var(--global-palette1, #3a7c3a);
+}
+
+.media-gridjs-container .gridjs-pagination .gridjs-pages button[disabled] {
+  opacity: 0.38;
+  cursor: default;
+}
+
+.media-gridjs-container .gridjs-pagination .gridjs-pages button.gridjs-currentPage,
+.media-gridjs-container .gridjs-pagination .gridjs-pages button.is-current {
+  background: var(--global-palette1, #3a7c3a);
+  border-color: var(--global-palette1, #3a7c3a);
+  color: #fff;
+}
+
+.media-gridjs-container .media-gridjs-notfound td {
+  padding: 2rem;
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
 /* Responsive */
 @media (max-width: 700px) {
   .media-table-controls {
@@ -4521,6 +4619,10 @@ a.publication-hero-author-name:hover {
   }
   .media-table {
     table-layout: auto;
+  }
+  .media-gridjs-container .gridjs-th,
+  .media-gridjs-container .gridjs-td {
+    padding: 0.5rem 0.6rem;
   }
   .media-table-col--title {
     width: auto;
