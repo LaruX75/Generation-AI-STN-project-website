@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1200" viewBox="0 0 960 1200" fill="none">
+  <rect width="960" height="1200" rx="28" fill="#D9DEE7"/>
+  <rect x="118" y="60" width="724" height="1020" rx="18" fill="#F7F8FA"/>
+  <path d="M744 60H842V158L744 60Z" fill="#E6EAF0"/>
+  <rect x="176" y="132" width="210" height="34" rx="8" fill="#D35D47"/>
+  <rect x="176" y="198" width="446" height="28" rx="10" fill="#2D3C58"/>
+  <rect x="176" y="242" width="522" height="18" rx="9" fill="#B5BFCD"/>
+  <rect x="176" y="286" width="468" height="18" rx="9" fill="#CAD1DB"/>
+  <rect x="176" y="356" width="608" height="268" rx="18" fill="#FDECE6"/>
+  <rect x="212" y="400" width="144" height="144" rx="72" fill="#E88B74"/>
+  <rect x="392" y="414" width="318" height="22" rx="11" fill="#D06D59"/>
+  <rect x="392" y="454" width="250" height="18" rx="9" fill="#E4A495"/>
+  <rect x="392" y="490" width="212" height="18" rx="9" fill="#E4A495"/>
+  <rect x="176" y="674" width="580" height="20" rx="10" fill="#CBD3DE"/>
+  <rect x="176" y="716" width="548" height="20" rx="10" fill="#D6DCE5"/>
+  <rect x="176" y="758" width="566" height="20" rx="10" fill="#D6DCE5"/>
+  <rect x="176" y="800" width="522" height="20" rx="10" fill="#D6DCE5"/>
+  <rect x="176" y="842" width="492" height="20" rx="10" fill="#D6DCE5"/>
+  <rect x="176" y="908" width="224" height="70" rx="18" fill="#2F6C55"/>
+  <rect x="436" y="908" width="168" height="70" rx="18" fill="#E9EDF3"/>
+  <rect x="630" y="908" width="112" height="70" rx="18" fill="#E9EDF3"/>
+  <text x="176" y="1038" fill="#6C788A" font-family="Arial, sans-serif" font-size="32" font-weight="700">Tyttojen-paiva-2023.pdf</text>
+</svg>
