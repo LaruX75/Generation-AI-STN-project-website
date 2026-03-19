@@ -3,8 +3,9 @@ layout: layouts/base.njk
 ---
 {% if pageHero or featuredImage %}
 {% set _heroImg = heroImage if heroImage else (featuredImage if featuredImage else null) %}
+{% set _repoPrefix = site.repoPrefix if site.repoPrefix and site.repoPrefix != "/" else "" %}
 {% if _heroImg and _heroImg[0] == "/" %}
-  {% set _heroImgUrl = (site.repoPrefix if site.repoPrefix else "") + _heroImg %}
+  {% set _heroImgUrl = _repoPrefix + _heroImg %}
 {% else %}
   {% set _heroImgUrl = _heroImg %}
 {% endif %}

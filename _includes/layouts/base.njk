@@ -63,12 +63,13 @@
   {% set _ogLocale = "fi_FI" %}
   {% if lang == "en" %}{% set _ogLocale = "en_GB" %}{% elif lang == "sv" %}{% set _ogLocale = "sv_SE" %}{% endif %}
   {% set _ogImage = ogImage if ogImage else (site.url + "/media/wp-content/uploads/2023/04/cropped-GenAI-logoluonnos.jpg") %}
+  {% set _repoPrefix = site.repoPrefix if site.repoPrefix and site.repoPrefix != "/" else "" %}
   {% set _heroPreload = null %}
   {% if pageHero or featuredImage %}
     {% set _heroCandidate = heroImage if heroImage else (featuredImage if featuredImage else null) %}
     {% if _heroCandidate %}
       {% if _heroCandidate[0] == "/" %}
-        {% set _heroPreload = (site.repoPrefix if site.repoPrefix else "") + _heroCandidate %}
+        {% set _heroPreload = _repoPrefix + _heroCandidate %}
       {% else %}
         {% set _heroPreload = _heroCandidate %}
       {% endif %}
