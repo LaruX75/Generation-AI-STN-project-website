@@ -77,8 +77,8 @@
           <th scope="col" class="media-table-col--date">{{ lbl.colDate }}</th>
           <th scope="col" class="media-table-col--source">{{ lbl.colSrc }}</th>
           <th scope="col" class="media-table-col--title">{{ lbl.colTitle }}</th>
-          <th scope="col" class="media-table-col--content">{{ lbl.colContent }}</th>
-          <th scope="col" class="media-table-col--link">{{ lbl.colLink }}</th>
+          <th scope="col" class="media-table-col--content media-table-col--mobile-hide">{{ lbl.colContent }}</th>
+          <th scope="col" class="media-table-col--link media-table-col--mobile-hide">{{ lbl.colLink }}</th>
         </tr>
       </thead>
       <tbody id="media-table-body">
@@ -107,15 +107,21 @@
             <td class="media-table-col--source">
               <span class="media-table-source-badge media-table-source-badge--{{ postSource }}">{{ postSourceLabel }}</span>
             </td>
-            <td class="media-table-col--title">{{ post.data.title | default("—") }}</td>
-            <td class="media-table-col--content">
+            <td class="media-table-col--title">
+              {% if post.url %}
+                <a href="{{ post.url }}" class="media-table-title-link" target="_blank" rel="noopener noreferrer">{{ post.data.title | default("—") }}<span class="sr-only"> {{ lbl.newTab }}</span></a>
+              {% else %}
+                {{ post.data.title | default("—") }}
+              {% endif %}
+            </td>
+            <td class="media-table-col--content media-table-col--mobile-hide">
               {% if post.data.excerpt and post.data.excerpt != "[object Object]" %}
                 {{ post.data.excerpt | truncate(200) }}
               {% else %}
                 <span class="media-table-na">{{ lbl.na }}</span>
               {% endif %}
             </td>
-            <td class="media-table-col--link">
+            <td class="media-table-col--link media-table-col--mobile-hide">
               {% if post.url %}
                 <a href="{{ post.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;<span aria-hidden="true">↗</span><span class="sr-only">{{ lbl.newTab }}</span></a>
               {% else %}

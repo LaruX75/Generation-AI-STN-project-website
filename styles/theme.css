@@ -4341,6 +4341,15 @@ a.publication-hero-author-name:hover {
   text-decoration: none;
   white-space: nowrap;
 }
+.media-table-title-link {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+.media-table-title-link:hover {
+  color: var(--global-palette1, #3a7c3a);
+  text-decoration: underline;
+}
 .media-table-link:hover {
   text-decoration: underline;
 }
@@ -4402,12 +4411,18 @@ a.publication-hero-author-name:hover {
   .media-table td {
     padding: 0.5rem 0.6rem;
   }
-  .media-table-col--content {
+  .media-table-col--mobile-hide {
     display: none;
+  }
+  .media-table {
+    table-layout: auto;
+  }
+  .media-table-col--title {
+    width: auto;
+    min-width: 14rem;
   }
   .media-table-col--date   { width: 90px; }
   .media-table-col--source { width: 110px; }
-  .media-table-col--link   { width: 72px; }
 }
 
 /* Tapahtumat badges */

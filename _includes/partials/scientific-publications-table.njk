@@ -74,9 +74,9 @@
           <th scope="col" class="media-table-col--authors">{{ lbl.colAuthors }}</th>
           <th scope="col" class="media-table-col--date">{{ lbl.colYear }}</th>
           <th scope="col" class="media-table-col--title">{{ lbl.colTitle }}</th>
-          <th scope="col" class="media-table-col--venue">{{ lbl.colVenue }}</th>
-          <th scope="col" class="media-table-col--link">{{ lbl.colLink }}</th>
-          <th scope="col" class="media-table-col--source">{{ lbl.colCode }}</th>
+          <th scope="col" class="media-table-col--venue media-table-col--mobile-hide">{{ lbl.colVenue }}</th>
+          <th scope="col" class="media-table-col--link media-table-col--mobile-hide">{{ lbl.colLink }}</th>
+          <th scope="col" class="media-table-col--source media-table-col--mobile-hide">{{ lbl.colCode }}</th>
         </tr>
       </thead>
       <tbody id="scipub-table-body">
@@ -87,16 +87,22 @@
             data-search="{{ item.searchText | lower | default('') }} {{ item.authorsText | lower | default('') }}">
             <td class="media-table-col--authors">{{ item.authorsText | default('—') }}</td>
             <td class="media-table-col--date">{{ item.year | default('—') }}</td>
-            <td class="media-table-col--title">{{ item.title | default('—') }}</td>
-            <td class="media-table-col--venue">{{ item.venue | default('—') }}</td>
-            <td class="media-table-col--link">
+            <td class="media-table-col--title">
+              {% if item.link %}
+                <a href="{{ item.link }}" class="media-table-title-link" target="_blank" rel="noopener noreferrer">{{ item.title | default('—') }}<span class="sr-only"> {{ lbl.newTab }}</span></a>
+              {% else %}
+                {{ item.title | default('—') }}
+              {% endif %}
+            </td>
+            <td class="media-table-col--venue media-table-col--mobile-hide">{{ item.venue | default('—') }}</td>
+            <td class="media-table-col--link media-table-col--mobile-hide">
               {% if item.link %}
                 <a href="{{ item.link }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ item.linkLabel | default(lbl.open) }}&nbsp;<span aria-hidden="true">↗</span><span class="sr-only">{{ lbl.newTab }}</span></a>
               {% else %}
                 <span class="media-table-na">{{ lbl.na }}</span>
               {% endif %}
             </td>
-            <td class="media-table-col--source">
+            <td class="media-table-col--source media-table-col--mobile-hide">
               <span class="scipub-badge">{{ item.code | default('—') }}</span>
             </td>
           </tr>

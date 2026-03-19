@@ -73,9 +73,9 @@
           <th scope="col" class="media-table-col--date">{{ lbl.colDate }}</th>
           <th scope="col" class="media-table-col--source">{{ lbl.colType }}</th>
           <th scope="col" class="media-table-col--title">{{ lbl.colTitle }}</th>
-          <th scope="col" class="toiminta-table-col--extra">{{ lbl.colExtra }}</th>
-          <th scope="col" class="media-table-col--participants">{{ lbl.colParticipants }}</th>
-          <th scope="col" class="media-table-col--link">{{ lbl.colLink }}</th>
+          <th scope="col" class="toiminta-table-col--extra media-table-col--mobile-hide">{{ lbl.colExtra }}</th>
+          <th scope="col" class="media-table-col--participants media-table-col--mobile-hide">{{ lbl.colParticipants }}</th>
+          <th scope="col" class="media-table-col--link media-table-col--mobile-hide">{{ lbl.colLink }}</th>
         </tr>
       </thead>
       <tbody id="tutkimus-table-body">
@@ -92,16 +92,18 @@
               <td class="media-table-col--source">
                 <span class="media-table-source-badge toiminta-badge--post">{{ lbl.badgePost }}</span>
               </td>
-              <td class="media-table-col--title">{{ post.data.title | default("—") }}</td>
-              <td class="toiminta-table-col--extra">
+              <td class="media-table-col--title">
+                <a href="{{ post.url }}" class="media-table-title-link">{{ post.data.title | default("—") }}</a>
+              </td>
+              <td class="toiminta-table-col--extra media-table-col--mobile-hide">
                 {% if post.data.excerpt and post.data.excerpt != "[object Object]" %}
                   {{ post.data.excerpt | truncate(200) }}
                 {% else %}
                   <span class="media-table-na">{{ lbl.na }}</span>
                 {% endif %}
               </td>
-              <td class="media-table-col--participants"><span class="media-table-na">{{ lbl.na }}</span></td>
-              <td class="media-table-col--link">
+              <td class="media-table-col--participants media-table-col--mobile-hide"><span class="media-table-na">{{ lbl.na }}</span></td>
+              <td class="media-table-col--link media-table-col--mobile-hide">
                 <a href="{{ post.url }}" class="media-table-link">{{ lbl.open }}&nbsp;↗</a>
               </td>
             </tr>
@@ -118,17 +120,17 @@
                 <span class="media-table-source-badge toiminta-badge--stakeholder">{{ lbl.badgeStake }}</span>
               </td>
               <td class="media-table-col--title">{{ (row.title or row.stakeholder) | default("—") }}</td>
-              <td class="toiminta-table-col--extra">
+              <td class="toiminta-table-col--extra media-table-col--mobile-hide">
                 <span class="toiminta-stakeholder-name">{{ row.stakeholder | default("") }}</span>
               </td>
-              <td class="media-table-col--participants">
+              <td class="media-table-col--participants media-table-col--mobile-hide">
                 {% if row.participants and row.participants != "N" and row.participants != "n" %}
                   {{ row.participants }}
                 {% else %}
                   <span class="media-table-na">{{ lbl.na }}</span>
                 {% endif %}
               </td>
-              <td class="media-table-col--link">
+              <td class="media-table-col--link media-table-col--mobile-hide">
                 <span class="media-table-na">—</span>
               </td>
             </tr>

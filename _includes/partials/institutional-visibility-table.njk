@@ -26,7 +26,7 @@
           <th scope="col" class="media-table-col--date">Päivämäärä</th>
           <th scope="col" class="media-table-col--source">Lähde</th>
           <th scope="col" class="media-table-col--title">Otsikko</th>
-          <th scope="col" class="media-table-col--people">Henkilöt</th>
+          <th scope="col" class="media-table-col--people media-table-col--mobile-hide">Henkilöt</th>
         </tr>
       </thead>
       <tbody id="iv-table-body">
@@ -45,7 +45,7 @@
                 <div class="iv-summary">{{ item.summary }}</div>
               {% endif %}
             </td>
-            <td class="media-table-col--people">{{ item.people | join(', ') }}</td>
+            <td class="media-table-col--people media-table-col--mobile-hide">{{ item.people | join(', ') }}</td>
           </tr>
         {% endfor %}
       </tbody>
