@@ -1686,11 +1686,28 @@ body.search-modal-open { overflow: hidden; }
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: stretch;
+    min-width: 0;
   }
-  .kb-nav-link { padding: 0.75rem 0.5rem; border-bottom: 1px solid var(--global-palette7, #eee); white-space: normal; }
+  .kb-nav-item,
+  .kb-nav-link,
+  .kb-nav-sub-menu,
+  .kb-mega-menu,
+  .kb-mega-menu-col,
+  .kb-mega-col-items,
+  .kb-mega-col-items .menu-item {
+    min-width: 0;
+  }
+  .kb-nav-link {
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid var(--global-palette7, #eee);
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
   .kb-nav-item-toggle {
     min-width: 3rem;
     border-bottom: 1px solid var(--global-palette7, #eee);
+    flex-shrink: 0;
   }
 
   /* Dropdowns/megamenus become full-width stacked on mobile */
@@ -1716,8 +1733,25 @@ body.search-modal-open { overflow: hidden; }
   }
   .kb-mega-sidebar { display: none; }
   .kb-mega-menu-cols { display: flex; flex-direction: column; gap: 0; padding: 0.25rem 0 0.25rem 0; }
+  .kb-mega-menu-col {
+    padding: 0;
+  }
   .kb-mega-menu-col + .kb-mega-menu-col { border-top: 1px solid rgba(49, 78, 37, 0.12); }
-  .kb-mega-link { padding: 0.7rem 0.5rem; }
+  .kb-mega-col-heading {
+    padding: 0.7rem 0.5rem 0.35rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    letter-spacing: 0.06em;
+    line-height: 1.35;
+  }
+  .kb-mega-link {
+    padding: 0.7rem 0.5rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.45;
+  }
 }
 
 /* ── BetterDocs listing ───────────────────────────────────────────────────── */
