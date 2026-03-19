@@ -3,9 +3,14 @@ layout: layouts/base.njk
 ---
 {% if pageHero or featuredImage %}
 {% set _heroImg = heroImage if heroImage else (featuredImage if featuredImage else null) %}
+{% if _heroImg and _heroImg[0] == "/" %}
+  {% set _heroImgUrl = (site.repoPrefix if site.repoPrefix else "") + _heroImg %}
+{% else %}
+  {% set _heroImgUrl = _heroImg %}
+{% endif %}
 <div class="entry-hero page-hero-section">
-  <div class="hero-bg-sharp" id="hero-bg-sharp"></div>
-  <div class="hero-bg-blur" id="hero-bg-blur"></div>
+  <div class="hero-bg-sharp" id="hero-bg-sharp"{% if _heroImgUrl %} style="background-image:url('{{ _heroImgUrl }}')"{% endif %}></div>
+  <div class="hero-bg-blur" id="hero-bg-blur"{% if _heroImgUrl %} style="background-image:url('{{ _heroImgUrl }}')"{% endif %}></div>
   <div class="entry-hero-container-inner">
     <div class="hero-section-overlay"></div>
     {% if heroHeadline %}
@@ -25,14 +30,6 @@ layout: layouts/base.njk
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path fill="currentColor" d="M1000,50l-182.69,-45.286l-292.031,61.197l-190.875,-41.075l-143.748,28.794l-190.656,-23.63l0,70l1000,0l0,-50Z" style="opacity:0.4"/><path fill="currentColor" d="M1000,57l-152.781,-22.589l-214.383,19.81l-159.318,-21.471l-177.44,25.875l-192.722,5.627l-103.356,-27.275l0,63.023l1000,0l0,-43Z"/></svg>
   </div>
 </div>
-<script>
-(function () {
-  var src = '{{ site.repoPrefix if site.repoPrefix else "" }}assets/hero/heroloikkija.png';
-  document.querySelectorAll('.hero-bg-blur, .hero-bg-sharp').forEach(function (el) {
-    el.style.backgroundImage = "url('" + src + "')";
-  });
-})();
-</script>
 {% endif %}
 <main class="page" id="main-content">
   {% if title and not kadenceBlocks and not heroHeadline %}

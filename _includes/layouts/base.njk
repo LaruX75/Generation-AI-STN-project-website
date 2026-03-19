@@ -63,6 +63,17 @@
   {% set _ogLocale = "fi_FI" %}
   {% if lang == "en" %}{% set _ogLocale = "en_GB" %}{% elif lang == "sv" %}{% set _ogLocale = "sv_SE" %}{% endif %}
   {% set _ogImage = ogImage if ogImage else (site.url + "/media/wp-content/uploads/2023/04/cropped-GenAI-logoluonnos.jpg") %}
+  {% set _heroPreload = null %}
+  {% if pageHero or featuredImage %}
+    {% set _heroCandidate = heroImage if heroImage else (featuredImage if featuredImage else null) %}
+    {% if _heroCandidate %}
+      {% if _heroCandidate[0] == "/" %}
+        {% set _heroPreload = (site.repoPrefix if site.repoPrefix else "") + _heroCandidate %}
+      {% else %}
+        {% set _heroPreload = _heroCandidate %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
   <meta property="og:type" content="{{ _ogType }}">
   <meta property="og:url" content="{{ _canonical }}">
   <meta property="og:site_name" content="{{ site.name }}">
@@ -87,6 +98,9 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} (SV)" href="{{ site.url }}/sv/feed.xml">
   {% else %}
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
+  {% endif %}
+  {% if _heroPreload %}
+    <link rel="preload" as="image" href="{{ _heroPreload }}" fetchpriority="high">
   {% endif %}
   <link rel="stylesheet" href="/styles/theme.css">
   <link rel="stylesheet" href="/styles/cookieconsent.css">
