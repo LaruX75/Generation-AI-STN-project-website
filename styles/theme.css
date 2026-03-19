@@ -1384,9 +1384,15 @@ body.search-modal-open { overflow: hidden; }
 .hero-bg-sharp {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center center;
   z-index: 0;
+  overflow: hidden;
+}
+.hero-bg-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 .hero-bg-blur {
   position: absolute;
