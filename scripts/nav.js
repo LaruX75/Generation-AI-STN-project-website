@@ -190,6 +190,7 @@
       toggle.getAttribute("aria-expanded") === "true"
         ? closeMobileMenu()
         : openMobileMenu();
+      if (!isDesktop()) toggle.blur();
     });
   }
 
@@ -251,6 +252,7 @@
       item.classList.contains("is-open")
         ? closeSubmenu(item, btn)
         : openSubmenu(item, btn);
+      if (!isDesktop()) btn.blur();
     });
   });
 

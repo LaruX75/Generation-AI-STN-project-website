@@ -1684,24 +1684,44 @@ body.search-modal-open { overflow: hidden; }
     margin-left: 0;
     max-height: calc(100dvh - var(--kb-header-height, 60px));
     box-shadow: 0 18px 30px rgba(0, 0, 0, 0.08);
+    overflow-x: hidden;
   }
   .site-navigation.is-open { display: block; }
 
-  .kb-nav-menu { flex-direction: column; align-items: stretch; gap: 0; }
+  .site-navigation,
+  .kb-nav-menu,
+  .kb-nav-item,
+  .kb-nav-link-row,
+  .kb-nav-sub-menu,
+  .kb-mega-menu,
+  .kb-mega-menu-cols,
+  .kb-mega-menu-col,
+  .kb-mega-col-items,
+  .kb-mega-col-items .menu-item {
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .kb-nav-menu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+  }
+  .kb-nav-item,
+  .kb-nav-sub-menu,
+  .kb-mega-menu,
+  .kb-mega-menu-cols,
+  .kb-mega-menu-col,
+  .kb-mega-col-items,
+  .kb-mega-col-items .menu-item {
+    width: 100%;
+  }
   .kb-nav-link-row {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: stretch;
-    min-width: 0;
-  }
-  .kb-nav-item,
-  .kb-nav-link,
-  .kb-nav-sub-menu,
-  .kb-mega-menu,
-  .kb-mega-menu-col,
-  .kb-mega-col-items,
-  .kb-mega-col-items .menu-item {
-    min-width: 0;
+    width: 100%;
   }
   .kb-nav-link {
     padding: 0.75rem 0.5rem;
@@ -1709,6 +1729,7 @@ body.search-modal-open { overflow: hidden; }
     white-space: normal;
     overflow-wrap: anywhere;
     word-break: break-word;
+    max-width: 100%;
   }
   .kb-nav-item-toggle {
     min-width: 3rem;
@@ -1718,7 +1739,13 @@ body.search-modal-open { overflow: hidden; }
 
   /* Dropdowns/megamenus become full-width stacked on mobile */
   .menu-item-has-children > .sub-menu,
-  .kb-nav-mega-menu-item > .kb-mega-menu { display: none; }
+  .menu-item-has-children:hover > .sub-menu,
+  .menu-item-has-children:focus-within > .sub-menu,
+  .kb-nav-mega-menu-item > .kb-mega-menu,
+  .kb-nav-mega-menu-item:hover > .kb-mega-menu,
+  .kb-nav-mega-menu-item:focus-within > .kb-mega-menu {
+    display: none;
+  }
   .menu-item-has-children.is-open > .sub-menu,
   .kb-nav-mega-menu-item.is-open > .kb-mega-menu {
     display: block;
@@ -1732,15 +1759,50 @@ body.search-modal-open { overflow: hidden; }
     box-shadow: none;
     background: var(--global-palette7, #f0f4ec);
     padding: 0.25rem 0 0.25rem 1rem;
+    overflow-x: hidden;
+  }
+  .menu-item-has-children.is-open > .sub-menu {
+    margin: 0;
+    list-style: none;
+  }
+  .kb-nav-mega-menu-item:hover > .kb-nav-link-row,
+  .kb-nav-mega-menu-item:focus-within > .kb-nav-link-row,
+  .kb-nav-mega-menu-item.is-open > .kb-nav-link-row {
+    background: transparent;
+    border-radius: 0;
+  }
+  .kb-nav-mega-menu-item:hover > .kb-nav-link-row .kb-nav-link,
+  .kb-nav-mega-menu-item:focus-within > .kb-nav-link-row .kb-nav-link,
+  .kb-nav-mega-menu-item.is-open > .kb-nav-link-row .kb-nav-link,
+  .kb-nav-mega-menu-item:hover > .kb-nav-link-row .kb-nav-item-toggle,
+  .kb-nav-mega-menu-item:focus-within > .kb-nav-link-row .kb-nav-item-toggle,
+  .kb-nav-mega-menu-item.is-open > .kb-nav-link-row .kb-nav-item-toggle {
+    color: var(--global-palette4, #314e25);
+  }
+  .kb-nav-mega-menu-item:hover > .kb-nav-link-row .kb-nav-link:hover,
+  .kb-nav-mega-menu-item:focus-within > .kb-nav-link-row .kb-nav-link:hover,
+  .kb-nav-mega-menu-item.is-open > .kb-nav-link-row .kb-nav-link:hover,
+  .kb-nav-mega-menu-item:hover > .kb-nav-link-row .kb-nav-item-toggle:hover,
+  .kb-nav-mega-menu-item:focus-within > .kb-nav-link-row .kb-nav-item-toggle:hover,
+  .kb-nav-mega-menu-item.is-open > .kb-nav-link-row .kb-nav-item-toggle:hover {
+    background: #d9e3cf;
+    color: var(--global-palette1, #314e25);
   }
   .kb-nav-sub-menu .kb-nav-sub-menu,
   .kb-nav-sub-menu .kb-mega-menu {
     padding-left: 0.75rem;
   }
   .kb-mega-sidebar { display: none; }
-  .kb-mega-menu-cols { display: flex; flex-direction: column; gap: 0; padding: 0.25rem 0 0.25rem 0; }
+  .kb-mega-menu-cols {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.25rem 0 0.25rem 0;
+    overflow-x: hidden;
+  }
   .kb-mega-menu-col {
     padding: 0;
+    overflow-x: hidden;
   }
   .kb-mega-menu-col + .kb-mega-menu-col { border-top: 1px solid rgba(49, 78, 37, 0.12); }
   .kb-mega-col-heading {
@@ -1750,13 +1812,16 @@ body.search-modal-open { overflow: hidden; }
     word-break: break-word;
     letter-spacing: 0.06em;
     line-height: 1.35;
+    max-width: 100%;
   }
+  .kb-mega-col-items { overflow-x: hidden; }
   .kb-mega-link {
     padding: 0.7rem 0.5rem;
     white-space: normal;
     overflow-wrap: anywhere;
     word-break: break-word;
     line-height: 1.45;
+    max-width: 100%;
   }
 }
 
