@@ -4,7 +4,7 @@
   "scripts": {
     "predev": "node scripts/normalize-localized-frontmatter.js",
     "dev": "eleventy --serve",
-    "prebuild": "node scripts/normalize-localized-frontmatter.js",
+    "prebuild": "node scripts/normalize-localized-frontmatter.js && node scripts/clean-output.js",
     "build": "eleventy && npm run search:index",
     "search:index": "pagefind --site _site"
   },
