@@ -1,4 +1,6 @@
 const { existsSync } = require("node:fs");
+const path = require("node:path");
+const Image = require("@11ty/eleventy-img");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginPublicationToc = require("./_plugins/publication-toc.js");
 
@@ -56,6 +58,49 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "node_modules/vanilla-cookieconsent/dist/cookieconsent.umd.js": "scripts/cookieconsent.umd.js" });
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(pluginPublicationToc);
+
+  async function renderHeroImage(src) {
+    if (!src) {
+      return "";
+    }
+
+    const originalSrc = String(src);
+    const isRemote = /^https?:\/\//i.test(String(src));
+    const input = isRemote
+      ? originalSrc
+      : path.join(process.cwd(), originalSrc.replace(/^\//, ""));
+
+    const metadata = await Image(input, {
+      widths: [768, 1280, 1920],
+      formats: ["webp", "jpeg"],
+      outputDir: path.join(process.cwd(), "_site", "img", "hero"),
+      urlPath: "/img/hero/",
+      sharpOptions: {
+        jpeg: { quality: 82, mozjpeg: true },
+        webp: { quality: 78 },
+      },
+      filenameFormat: function(id, src, width, format) {
+        const name = path.basename(src, path.extname(src)).toLowerCase().replace(/[^a-z0-9]+/g, "-");
+        return `${name}-${width}w.${format}`;
+      },
+    });
+
+    if (!metadata || typeof metadata !== "object" || !Object.keys(metadata).length) {
+      return `<img class="hero-bg-image" src="${originalSrc}" alt="" decoding="async" fetchpriority="high">`;
+    }
+
+    return Image.generateHTML(metadata, {
+      alt: "",
+      src: originalSrc,
+      sizes: "100vw",
+      loading: "eager",
+      decoding: "async",
+      fetchpriority: "high",
+      class: "hero-bg-image",
+    });
+  }
+
+  eleventyConfig.addNunjucksAsyncShortcode("heroImage", renderHeroImage);
 
   const byDate = (a, b) => b.date - a.date;
 

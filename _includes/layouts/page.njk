@@ -12,7 +12,7 @@ layout: layouts/base.njk
 <div class="entry-hero page-hero-section">
   <div class="hero-bg-sharp" id="hero-bg-sharp">
     {% if _heroImgUrl %}
-      <img class="hero-bg-image" src="{{ _heroImgUrl }}" alt="" decoding="async" fetchpriority="high">
+      {% heroImage _heroImgUrl %}
     {% endif %}
   </div>
   <div class="hero-bg-blur" id="hero-bg-blur"{% if _heroImgUrl %} style="background-image:url('{{ _heroImgUrl }}')"{% endif %}></div>

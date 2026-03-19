@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-navigation": "^1.0.5",
     "@uncenter/eleventy-plugin-toc": "^2.0.0",
     "vanilla-cookieconsent": "^3.1.0"
