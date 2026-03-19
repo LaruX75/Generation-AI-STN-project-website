@@ -4,14 +4,16 @@
   "scripts": {
     "predev": "node scripts/normalize-localized-frontmatter.js",
     "dev": "npm run dev:offline",
-    "dev:offline": "node scripts/run-with-data-mode.js offline eleventy --serve",
-    "dev:live": "node scripts/run-with-data-mode.js live eleventy --serve",
+    "dev:offline": "node scripts/run-with-data-mode.js offline ./node_modules/.bin/eleventy --serve",
+    "dev:live": "node scripts/run-with-data-mode.js live ./node_modules/.bin/eleventy --serve",
     "prebuild": "node scripts/normalize-localized-frontmatter.js && node scripts/clean-output.js",
     "build": "npm run build:offline",
-    "build:offline": "node scripts/run-with-data-mode.js offline eleventy && npm run search:index",
-    "build:live": "node scripts/run-with-data-mode.js live eleventy && npm run search:index",
+    "build:offline": "node scripts/run-with-data-mode.js offline ./node_modules/.bin/eleventy && npm run search:index",
+    "build:live": "node scripts/run-with-data-mode.js live ./node_modules/.bin/eleventy && npm run search:index",
     "data:refresh": "node scripts/refresh-data-cache.js",
-    "search:index": "pagefind --site _site"
+    "search:index": "pagefind --site _site",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
@@ -22,6 +24,7 @@
     "vanilla-cookieconsent": "^3.1.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "pagefind": "^1.4.0",
     "playwright-core": "^1.58.2"
   }

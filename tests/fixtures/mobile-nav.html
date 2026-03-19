@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mobile Nav Fixture</title>
+  <link rel="stylesheet" href="../../styles/theme.css">
+  <style>
+    body { margin: 0; min-height: 200vh; background: #f6f7f3; }
+    main { padding: 2rem 1rem; max-width: 48rem; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <header class="site-shell-header">
+    <div class="site-header-inner">
+      <span class="site-logo">
+        <img src="../../assets/favicon.svg" alt="Generation AI" width="120">
+      </span>
+      <button class="kb-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Avaa navigaatio">
+        <span aria-hidden="true">&#9776;</span>
+      </button>
+      <nav id="site-nav-menu" class="site-navigation" aria-label="Sivun navigaatio">
+        <ul class="kb-nav-menu">
+          <li class="menu-item kb-nav-item kb-nav-mega-menu-item menu-item-has-children">
+            <div class="kb-nav-link-row">
+              <a class="kb-nav-link" href="#">Opettajalle</a>
+              <button class="kb-nav-item-toggle" type="button" aria-expanded="false" aria-controls="site-nav-submenu-1" aria-label="Avaa Opettajalle alavalikko">
+                <span aria-hidden="true">▾</span>
+              </button>
+            </div>
+            <div id="site-nav-submenu-1" class="kb-mega-menu" role="region" aria-label="Opettajalle megamenu">
+              <div class="kb-mega-sidebar">
+                <span class="kb-mega-sidebar-title">Opettajalle</span>
+                <p class="kb-mega-sidebar-desc">Ilmaiset tekoalytyokalut ja oppimateriaalit suoraan luokkahuoneeseen. Ei ohjelmointitaitoja tarvita.</p>
+                <a class="kb-mega-sidebar-cta" href="#">Sivulle →</a>
+              </div>
+              <ul class="kb-mega-menu-cols">
+                <li class="kb-mega-menu-col">
+                  <p class="kb-mega-col-heading">Sovellukset ja pitka otsikkorakenne mobiilirivityksen testaamiseen</p>
+                  <ul class="kb-mega-col-items">
+                    <li class="menu-item"><a class="kb-mega-link" href="#">Opetettava kone ja todella pitka linkkiteksti mobiilirivityksen testaamiseen</a></li>
+                    <li class="menu-item"><a class="kb-mega-link" href="#">Somekone ja toinen tarkoituksella hyvin pitka kuvausmainen linkki</a></li>
+                    <li class="menu-item"><a class="kb-mega-link" href="#">Pieni kielikone</a></li>
+                  </ul>
+                </li>
+                <li class="kb-mega-menu-col">
+                  <p class="kb-mega-col-heading">Materiaalit</p>
+                  <ul class="kb-mega-col-items">
+                    <li class="menu-item"><a class="kb-mega-link" href="#">Opas tietosuoja ja sovellukset perusopetuksessa</a></li>
+                    <li class="menu-item"><a class="kb-mega-link" href="#">50 myyttia tekoalysta ja datasta PDF-julkaisuna</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu-item kb-nav-item kb-nav-mega-menu-item menu-item-has-children">
+            <div class="kb-nav-link-row">
+              <a class="kb-nav-link" href="#">Tutkijalle</a>
+              <button class="kb-nav-item-toggle" type="button" aria-expanded="false" aria-controls="site-nav-submenu-2" aria-label="Avaa Tutkijalle alavalikko">
+                <span aria-hidden="true">▾</span>
+              </button>
+            </div>
+            <div id="site-nav-submenu-2" class="kb-mega-menu" role="region" aria-label="Tutkijalle megamenu">
+              <div class="kb-mega-sidebar">
+                <span class="kb-mega-sidebar-title">Tutkijalle</span>
+                <p class="kb-mega-sidebar-desc">Tieteelliset julkaisut, tutkimusagenda ja hankkeen kansainvalinen verkosto.</p>
+                <a class="kb-mega-sidebar-cta" href="#">Sivulle →</a>
+              </div>
+              <ul class="kb-mega-menu-cols">
+                <li class="kb-mega-menu-col">
+                  <p class="kb-mega-col-heading">Julkaisut ja tutkimus</p>
+                  <ul class="kb-mega-col-items">
+                    <li class="menu-item"><a class="kb-mega-link" href="#">Tieteelliset julkaisut</a></li>
+                    <li class="menu-item"><a class="kb-mega-link" href="#">Ajankohtaista tutkimuksesta</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu-item kb-nav-item menu-item-has-children">
+            <div class="kb-nav-link-row">
+              <a class="kb-nav-link" href="#">Yleisölle</a>
+              <button class="kb-nav-item-toggle" type="button" aria-expanded="false" aria-controls="site-nav-submenu-3" aria-label="Avaa Yleisölle alavalikko">
+                <span aria-hidden="true">▾</span>
+              </button>
+            </div>
+            <ul id="site-nav-submenu-3" class="sub-menu kb-nav-sub-menu">
+              <li class="menu-item"><a class="kb-nav-link" href="#">Ajankohtaista</a></li>
+              <li class="menu-item kb-nav-item menu-item-has-children">
+                <div class="kb-nav-link-row">
+                  <a class="kb-nav-link" href="#">Tapahtumat</a>
+                  <button class="kb-nav-item-toggle" type="button" aria-expanded="false" aria-controls="site-nav-submenu-3-1" aria-label="Avaa Tapahtumat alavalikko">
+                    <span aria-hidden="true">▾</span>
+                  </button>
+                </div>
+                <ul id="site-nav-submenu-3-1" class="sub-menu kb-nav-sub-menu kb-nav-sub-menu--level2">
+                  <li class="menu-item"><a class="kb-nav-link" href="#">Pitkasanainen konferenssialavalikko joka saa rivittya oikein mobiilissa</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="language-switcher">
+        <ul><li><a href="#" class="is-active" aria-current="true">FI</a></li></ul>
+      </div>
+      <a class="site-search-btn" href="#" aria-label="Haku">H</a>
+    </div>
+  </header>
+  <main>
+    <h1>Megamenun mobiilifixture</h1>
+    <p>Tata tiedostoa kaytetaan Playwright-regressiotesteihin.</p>
+  </main>
+  <script src="../../scripts/nav.js"></script>
+</body>
+</html>
