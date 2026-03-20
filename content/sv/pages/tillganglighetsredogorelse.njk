@@ -1,7 +1,7 @@
 ---
 title: 'Tillgänglighetsredogörelse'
 date: "2023-08-28T14:02:52"
-updated: "2026-03-20T16:30:00"
+updated: "2026-03-20T17:50:00"
 slug: tillganglighetsredogorelse
 permalink: /sv/tillganglighetsredogorelse/
 status: publish
@@ -90,9 +90,11 @@ Tillgänglighetsredogörelse
 
 <p>Den senaste automatiska testkörningen gjordes den 20 mars 2026. Då granskades 11 representativa sidor på finska, engelska och svenska, inklusive startsidan, centrala sektioner i huvudnavigeringen, materialsidor samt publikations- och dokumentmallar. Testkörningen hittade inga WCAG 2.1 nivå A- eller AA-fel.</p>
 
+<p>Samma dag upptäcktes dessutom en separat stilregression på sidan <code>/materiaalit/</code>, där knapp-liknande länkar i vissa situationer kunde ärva fel textfärg. Felet korrigerades genom att avgränsa den gemensamma färgregeln för textlänkar, och ett särskilt Playwright-regressionstest lades till för att verifiera knappfärgerna på materialsidan.</p>
+
 <h2 class="wp-block-heading">Bedömningsmetoder</h2>
 
-<p>Tillgängligheten har bedömts genom manuell kodgranskning och automatiserade webbläsartester med Playwright och axe-core.</p>
+<p>Tillgängligheten har bedömts genom manuell kodgranskning och automatiserade webbläsartester med Playwright och axe-core. En separat visuell regressionskontroll används också för knapp-länkar på materialsidan.</p>
 
 
 

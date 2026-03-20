@@ -811,12 +811,12 @@ body.search-modal-open { overflow: hidden; }
 .doc-body ol {
   padding-left: 1.5em;
 }
-.page-content a,
+.page-content :where(p, li, dt, dd, blockquote, figcaption, td, th) a,
 .doc-body a {
   color: var(--global-palette2, #446d33);
   text-decoration: underline;
 }
-.page-content a:hover,
+.page-content :where(p, li, dt, dd, blockquote, figcaption, td, th) a:hover,
 .doc-body a:hover {
   color: var(--global-palette1, #314e25);
 }

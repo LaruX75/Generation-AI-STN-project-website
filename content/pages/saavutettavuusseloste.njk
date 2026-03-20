@@ -2,7 +2,7 @@
 title: Saavutettavuusseloste
 seoTitle: Saavutettavuusseloste — Generation AI
 date: "2023-08-28T14:02:52"
-updated: "2026-03-20T16:30:00"
+updated: "2026-03-20T17:50:00"
 slug: saavutettavuusseloste
 permalink: /saavutettavuusseloste/
 status: publish
@@ -26,9 +26,11 @@ pageHero: true
 
 <p>Korjausten jälkeen sivustolle lisättiin automatisoitu WCAG 2.1 AA -regressiotestaus Playwrightilla ja axe-corella. Viimeisin testiajo tehtiin 20.03.2026, ja siinä tarkastettiin 11 edustavaa sivua suomeksi, englanniksi ja ruotsiksi, mukaan lukien etusivu, päävalikon keskeiset osiot, materiaalisivuja sekä julkaisu- ja dokumenttipohjia. Testiajo ei löytänyt WCAG 2.1 A- tai AA-tason virheitä.</p>
 
+<p>Samana päivänä havaittiin lisäksi erillinen tyyliregressio, jossa <code>/materiaalit/</code>-sivun painikelinkkien tekstiväri ei kaikissa tilanteissa vastannut painiketaustaa. Ongelma korjattiin rajaamalla tekstilinkkien yleinen värisääntö tarkemmin, ja korjaukselle lisättiin oma Playwright-regressiotesti, joka tarkistaa materiaalisivun toimintopainikkeiden värit.</p>
+
 <h2>Ei-saavutettava sisältö ja korjaustoimenpiteet</h2>
 
-<p>Auditointi toteutettiin 16.3.2026 manuaalisella kooditarkastelulla (WCAG 2.1 AA -kriteerien mukaisesti). Lisäksi 20.3.2026 tehtiin automaattinen Playwright- ja axe-core-pohjainen regressiotestaus, jolla varmistettiin keskeisten sivupohjien jatkuva vaatimustenmukaisuus.</p>
+<p>Auditointi toteutettiin 16.3.2026 manuaalisella kooditarkastelulla (WCAG 2.1 AA -kriteerien mukaisesti). Lisäksi 20.3.2026 tehtiin automaattinen Playwright- ja axe-core-pohjainen regressiotestaus, jolla varmistettiin keskeisten sivupohjien jatkuva vaatimustenmukaisuus. Samalla otettiin käyttöön erillinen visuaalinen regressiotesti materiaalisivun painikelinkeille.</p>
 
 <div class="media-table-wrap" role="region" aria-label="Saavutettavuusauditoinnin tulokset">
   <table class="media-table wcag-audit-table">
