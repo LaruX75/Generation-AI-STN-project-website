@@ -1,7 +1,7 @@
 ---
 title: 'Accessibility Statement'
 date: "2023-08-28T14:02:52"
-updated: "2026-03-20T17:50:00"
+updated: "2026-03-20T18:05:00"
 slug: accessibility-statement
 permalink: /en/accessibility-statement/
 status: publish
@@ -92,9 +92,11 @@ Accessibility Statement
 
 <p>On the same day, a separate styling regression was identified on the <code>/materiaalit/</code> page, where button-like links could inherit an incorrect text color. The issue was fixed by narrowing the shared text-link color rule, and a dedicated Playwright regression test was added to verify the intended button colors on the materials page.</p>
 
+<p>In addition, the desktop <code>About the project</code> mega menu was fixed so that it always stays within the visible browser viewport, including near the right edge of the screen. A dedicated Playwright regression test was added for this behavior as well.</p>
+
 <h2 class="wp-block-heading">Assessment methods</h2>
 
-<p>The accessibility of the service has been assessed by manual code review and by automated browser-based testing using Playwright and axe-core. A separate visual regression check is also used for button links on the materials page.</p>
+<p>The accessibility of the service has been assessed by manual code review and by automated browser-based testing using Playwright and axe-core. Separate regression checks are also used for button links on the materials page and for the desktop mega menu position within the viewport.</p>
 
 
 

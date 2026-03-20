@@ -237,7 +237,24 @@
     var sub = getItemPanel(item);
     if (!sub) return;
     sub.classList.remove("sub-menu-right-edge", "sub-menu-left-edge");
+    sub.style.removeProperty("--kb-mega-shift");
     var rect = sub.getBoundingClientRect();
+    if (sub.classList.contains("kb-mega-menu")) {
+      var viewportGap = 12;
+      var shift = 0;
+
+      if (rect.right > window.innerWidth - viewportGap) {
+        shift = (window.innerWidth - viewportGap) - rect.right;
+      }
+
+      if (rect.left + shift < viewportGap) {
+        shift += viewportGap - (rect.left + shift);
+      }
+
+      sub.style.setProperty("--kb-mega-shift", shift + "px");
+      return;
+    }
+
     if (rect.right > window.innerWidth - 10) sub.classList.add("sub-menu-right-edge");
     if (rect.left < 10)                      sub.classList.add("sub-menu-left-edge");
   }

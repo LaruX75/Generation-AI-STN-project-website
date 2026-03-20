@@ -1,7 +1,7 @@
 ---
 title: 'Tillgänglighetsredogörelse'
 date: "2023-08-28T14:02:52"
-updated: "2026-03-20T17:50:00"
+updated: "2026-03-20T18:05:00"
 slug: tillganglighetsredogorelse
 permalink: /sv/tillganglighetsredogorelse/
 status: publish
@@ -92,9 +92,11 @@ Tillgänglighetsredogörelse
 
 <p>Samma dag upptäcktes dessutom en separat stilregression på sidan <code>/materiaalit/</code>, där knapp-liknande länkar i vissa situationer kunde ärva fel textfärg. Felet korrigerades genom att avgränsa den gemensamma färgregeln för textlänkar, och ett särskilt Playwright-regressionstest lades till för att verifiera knappfärgerna på materialsidan.</p>
 
+<p>Dessutom korrigerades desktopversionens megameny för <code>Om projektet</code> så att den alltid håller sig inom webbläsarens synliga viewport, även nära högra skärmkanten. Ett separat Playwright-regressionstest lades också till för detta beteende.</p>
+
 <h2 class="wp-block-heading">Bedömningsmetoder</h2>
 
-<p>Tillgängligheten har bedömts genom manuell kodgranskning och automatiserade webbläsartester med Playwright och axe-core. En separat visuell regressionskontroll används också för knapp-länkar på materialsidan.</p>
+<p>Tillgängligheten har bedömts genom manuell kodgranskning och automatiserade webbläsartester med Playwright och axe-core. Separata regressionstester används också för knapp-länkar på materialsidan och för desktop-megamenyns position inom viewporten.</p>
 
 
 

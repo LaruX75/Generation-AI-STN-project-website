@@ -322,11 +322,13 @@ body.kb-nav-open {
 .kb-mega-menu.sub-menu-right-edge {
   left: auto;
   right: 0;
+  transform: none;
 }
 .kb-nav-sub-menu.sub-menu-left-edge,
 .kb-mega-menu.sub-menu-left-edge {
   left: 0;
   right: auto;
+  transform: none;
 }
 /* Wave decoration at header bottom (hero pages only) */
 .site-header-wave {
@@ -474,8 +476,9 @@ body.kb-nav-open {
   position: absolute;
   top: calc(100% + 6px);
   left: 50%;
-  transform: translateX(-50%);
-  width: 700px;
+  transform: translateX(calc(-50% + var(--kb-mega-shift, 0px)));
+  width: min(700px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
   background: var(--global-palette9, #fff);
   border: 1px solid #d9e3cf;
   border-radius: 16px;

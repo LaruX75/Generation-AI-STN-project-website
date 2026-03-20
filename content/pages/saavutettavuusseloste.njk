@@ -2,7 +2,7 @@
 title: Saavutettavuusseloste
 seoTitle: Saavutettavuusseloste — Generation AI
 date: "2023-08-28T14:02:52"
-updated: "2026-03-20T17:50:00"
+updated: "2026-03-20T18:05:00"
 slug: saavutettavuusseloste
 permalink: /saavutettavuusseloste/
 status: publish
@@ -28,9 +28,11 @@ pageHero: true
 
 <p>Samana päivänä havaittiin lisäksi erillinen tyyliregressio, jossa <code>/materiaalit/</code>-sivun painikelinkkien tekstiväri ei kaikissa tilanteissa vastannut painiketaustaa. Ongelma korjattiin rajaamalla tekstilinkkien yleinen värisääntö tarkemmin, ja korjaukselle lisättiin oma Playwright-regressiotesti, joka tarkistaa materiaalisivun toimintopainikkeiden värit.</p>
 
+<p>Lisäksi desktop-navigaation <code>Hankkeesta</code>-megamenu korjattiin pysymään aina selaimen näkyvän alueen sisällä myös oikean reunan lähellä. Korjaukselle lisättiin oma Playwright-regressiotesti, joka tarkistaa megamenun sijainnin viewportiin nähden.</p>
+
 <h2>Ei-saavutettava sisältö ja korjaustoimenpiteet</h2>
 
-<p>Auditointi toteutettiin 16.3.2026 manuaalisella kooditarkastelulla (WCAG 2.1 AA -kriteerien mukaisesti). Lisäksi 20.3.2026 tehtiin automaattinen Playwright- ja axe-core-pohjainen regressiotestaus, jolla varmistettiin keskeisten sivupohjien jatkuva vaatimustenmukaisuus. Samalla otettiin käyttöön erillinen visuaalinen regressiotesti materiaalisivun painikelinkeille.</p>
+<p>Auditointi toteutettiin 16.3.2026 manuaalisella kooditarkastelulla (WCAG 2.1 AA -kriteerien mukaisesti). Lisäksi 20.3.2026 tehtiin automaattinen Playwright- ja axe-core-pohjainen regressiotestaus, jolla varmistettiin keskeisten sivupohjien jatkuva vaatimustenmukaisuus. Samalla otettiin käyttöön erilliset regressiotestit materiaalisivun painikelinkeille ja desktop-megamenun viewport-sijainnille.</p>
 
 <div class="media-table-wrap" role="region" aria-label="Saavutettavuusauditoinnin tulokset">
   <table class="media-table wcag-audit-table">
