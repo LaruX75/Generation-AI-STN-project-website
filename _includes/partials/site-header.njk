@@ -33,15 +33,16 @@
   }
 } %}
 {% set ui = navUi[localeCode] if navUi[localeCode] else navUi["fi"] %}
+{% set homeUrls = { "fi": "/", "en": "/en/", "sv": "/sv/" } %}
 <header class="site-shell-header" data-pagefind-ignore>
   <div class="site-header-inner">
-    <span class="site-logo">
+    <a class="site-logo" href="{{ homeUrls[localeCode] if homeUrls[localeCode] else '/' }}" aria-label="{{ site.name if site and site.name else 'Generation AI' }}">
       {% if site and site.logo %}
         <img src="{{ site.logo }}" alt="{{ site.name if site.name else 'Generation AI' }}" width="120">
       {% else %}
         <span class="site-name">{{ site.name if site and site.name else 'Generation AI' }}</span>
       {% endif %}
-    </span>
+    </a>
     <button class="kb-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="{{ ui.toggle }}">
       <span aria-hidden="true">&#9776;</span>
     </button>

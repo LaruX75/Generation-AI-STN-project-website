@@ -39,7 +39,7 @@ layout: layouts/base.njk
   document.getElementById('e404-label').textContent   = ui.label;
   var homeEl = document.getElementById('e404-home');
   homeEl.textContent = ui.home;
-  homeEl.href = locale === 'en' ? '/en/home/' : locale === 'sv' ? '/sv/startsida/' : '/';
+  homeEl.href = locale === 'en' ? '/en/' : locale === 'sv' ? '/sv/' : '/';
 
   // ── Suggestion catalogue ────────────────────────────────────────────────────
   var catalogue = [

@@ -52,7 +52,7 @@ const LABEL_OVERRIDES = {
 
 const URL_OVERRIDES = {
   /* ── Internal pages ──────────────────────────────────────────────────── */
-  "/":                              { fi: "/",                        en: "/en/home/",                  sv: "/sv/startsida/" },
+  "/":                              { fi: "/",                        en: "/en/",                       sv: "/sv/" },
   "/ajankohtaista/":               { fi: "/ajankohtaista/",          en: "/en/current-affairs/",       sv: "/sv/aktuellt/" },
   "/materiaalit/":                  { fi: "/materiaalit/",            en: "/en/materials/",             sv: "/sv/material/" },
   "/hankkeen-toiminta/":            { fi: "/hankkeen-toiminta/",      en: "/en/activities/",            sv: "/sv/verksamhet/" },

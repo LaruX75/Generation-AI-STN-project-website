@@ -1,11 +1,13 @@
 {# Language switcher — links to root for default locale, /xx/ for others #}
 {% if site and site.locales and site.locales.length > 1 %}
 {% set localeUrlOverrides = {
-  "/": { "fi": "/", "en": "/en/home/", "sv": "/sv/startsida/" },
-  "/en/home/": { "fi": "/", "en": "/en/home/", "sv": "/sv/startsida/" },
-  "/en/welcome-to-the-generation-ai-project-website/": { "fi": "/", "en": "/en/home/", "sv": "/sv/startsida/" },
-  "/sv/startsida/": { "fi": "/", "en": "/en/home/", "sv": "/sv/startsida/" },
-  "/sv/valkommen-till-generation-ai-projektets-webbplats/": { "fi": "/", "en": "/en/home/", "sv": "/sv/startsida/" },
+  "/": { "fi": "/", "en": "/en/", "sv": "/sv/" },
+  "/en/": { "fi": "/", "en": "/en/", "sv": "/sv/" },
+  "/en/home/": { "fi": "/", "en": "/en/", "sv": "/sv/" },
+  "/en/welcome-to-the-generation-ai-project-website/": { "fi": "/", "en": "/en/", "sv": "/sv/" },
+  "/sv/": { "fi": "/", "en": "/en/", "sv": "/sv/" },
+  "/sv/startsida/": { "fi": "/", "en": "/en/", "sv": "/sv/" },
+  "/sv/valkommen-till-generation-ai-projektets-webbplats/": { "fi": "/", "en": "/en/", "sv": "/sv/" },
   "/ajankohtaista/": { "fi": "/ajankohtaista/", "en": "/en/current-affairs/", "sv": "/sv/aktuellt/" },
   "/materiaalit/": { "fi": "/materiaalit/", "en": "/en/materials/", "sv": "/sv/material/" },
   "/hankkeen-toiminta/": { "fi": "/hankkeen-toiminta/", "en": "/en/activities/", "sv": "/sv/verksamhet/" },
