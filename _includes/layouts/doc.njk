@@ -16,6 +16,5 @@ layout: layouts/base.njk
       <div class="doc-category">{{ page.data["doc-category"] | join(", ") }}</div>
     {% endif %}
     <div class="doc-body">{{ content | safe }}</div>
-    {% include "partials/related-content.njk" %}
   </main>
 </div>

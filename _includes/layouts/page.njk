@@ -41,9 +41,4 @@ layout: layouts/base.njk
     <h1 class="page-title">{{ title }}</h1>
   {% endif %}
   <div class="page-content">{{ content | safe }}</div>
-  {% if page and page.url != "/" %}
-    <div class="page-related-shell">
-      {% include "partials/related-content.njk" %}
-    </div>
-  {% endif %}
 </main>

@@ -5,6 +5,40 @@ layout: layouts/base.njk
 {% set _searchBase = "/en/search/" if _lang == "en" else ("/sv/sok/" if _lang == "sv" else "/haku/") %}
 {% set _postCollection = collections.posts_en if _lang == "en" else (collections.posts_sv if _lang == "sv" else collections.posts_fi) %}
 {% set _relPosts = _postCollection | relatedPosts(page.url, tags) %}
+{% set _relatedCategoryAllowlist = [
+  "Ajankohtaista",
+  "Current affairs",
+  "Nyheter",
+  "Nyheter från",
+  "GenAI hankkeen henkilöstö mediassa",
+  "GenAI hankkeen henkilöstö tapahtumissa",
+  "Hankkeen toiminta",
+  "Tutkimus",
+  "GenAI project staff in the media",
+  "GenAI Project Staff in Media",
+  "GenAI project staff in media",
+  "GenAI Project Staff in the Media",
+  "GenAI project staff at events",
+  "GenAI Project Staff at Events",
+  "GenAI project staff events",
+  "Project activities",
+  "Project Activities",
+  "Research",
+  "GenAI-projektets personal i media",
+  "GenAI-projektets medarbetare i media",
+  "GenAI-projektets personal vid evenemang",
+  "GenAI-projektets personal på evenemang",
+  "GenAI-projektpersonalens evenemang",
+  "Projektaktiviteter",
+  "Projektverksamhet",
+  "Forskning"
+] %}
+{% set _showRelatedContent = false %}
+{% for _category in categories or [] %}
+  {% if _category in _relatedCategoryAllowlist %}
+    {% set _showRelatedContent = true %}
+  {% endif %}
+{% endfor %}
 
 {% set _catUrls = {
   "Ajankohtaista": "/ajankohtaista/",
@@ -59,6 +93,8 @@ layout: layouts/base.njk
     </footer>
     {% endif %}
 
-    {% include "partials/related-content.njk" %}
+    {% if _showRelatedContent %}
+      {% include "partials/related-content.njk" %}
+    {% endif %}
   </div>
 </main>
