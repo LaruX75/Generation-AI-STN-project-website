@@ -65,6 +65,7 @@ pageHero: true
 {% endmacro %}
 
 {% macro renderPersonCard(person, featured = false) %}
+{% set resolvedImageUrl = person.imageUrl | resolveSiteMediaUrl %}
 <article
   class="consortium-card{% if featured %} consortium-card--featured{% endif %}"
   {% if not person.isOrgCard %}data-card{% endif %}
@@ -72,10 +73,12 @@ pageHero: true
   data-organization="{{ person.organization }}"
   data-discipline="{{ person.discipline }}"
 >
-  {% if person.imageUrl %}
-  <img class="consortium-card__image{% if person.isOrgCard %} consortium-card__image--org{% endif %}" src="{{ person.imageUrl }}" alt="{{ person.name }}" loading="lazy" />
+  {% if resolvedImageUrl %}
+  <img class="consortium-card__image{% if person.isOrgCard %} consortium-card__image--org{% endif %}" src="{{ resolvedImageUrl }}" alt="{{ person.name }}" loading="lazy" />
   {% elif person.isOrgCard %}
   <div class="consortium-card__org-placeholder">{{ person.orgInitials if person.orgInitials else person.name[0] }}</div>
+  {% else %}
+  <div class="consortium-card__person-placeholder">{{ person.name | initials }}</div>
   {% endif %}
 
   <div class="consortium-card__body">

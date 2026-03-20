@@ -2762,6 +2762,20 @@ a.publication-hero-author-name:hover {
   object-fit: cover;
   background: #e5e7eb;
 }
+.consortium-card__person-placeholder {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e9f2e4 0%, #d8e8ce 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--global-palette2, #446d33);
+  letter-spacing: -0.03em;
+}
 .consortium-card__body { display: flex; flex: 1; flex-direction: column; }
 .consortium-card__name { margin: 0; font-size: 1.05rem; line-height: 1.25; text-align: center; }
 .consortium-card__role {
@@ -3880,6 +3894,12 @@ a.publication-hero-author-name:hover {
 .researcher-intro-inner {
   max-width: var(--global-content-narrow-width, 842px);
   margin: 0 auto;
+}
+.researcher-intro-title {
+  font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
+  line-height: 1.1;
+  color: var(--global-palette2, #446d33);
+  margin: 0 0 1rem;
 }
 .researcher-intro-text {
   font-size: clamp(1.15rem, 1rem + 0.5vw, 1.35rem);

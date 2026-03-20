@@ -93,6 +93,25 @@ module.exports = function(eleventyConfig) {
       "/media/wp-content/"
     );
   };
+  const resolveSiteMediaUrl = value => {
+    const raw = String(value || "").trim();
+    if (!raw) return "";
+
+    const normalized = normalizeSiteMediaUrl(raw);
+    if (!normalized.startsWith("/media/")) return normalized;
+
+    const relativePath = normalized.replace(/^\//, "");
+    return existsSync(path.join(process.cwd(), relativePath)) ? normalized : "";
+  };
+  const initials = value =>
+    String(value || "")
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map(part => part[0])
+      .join("")
+      .toUpperCase();
   const STOP_WORDS = new Set([
     "the", "and", "for", "with", "this", "that", "from", "into", "your", "their", "have", "will", "about",
     "että", "joka", "johon", "tämä", "nämä", "sitä", "sekä", "myös", "kanssa", "voidaan", "tehdä", "ovat",
@@ -371,6 +390,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("jsonLd", value => JSON.stringify(value, null, 2));
   eleventyConfig.addFilter("urlencode", value => encodeURIComponent(String(value || "")));
   eleventyConfig.addFilter("normalizeSiteMediaUrl", normalizeSiteMediaUrl);
+  eleventyConfig.addFilter("resolveSiteMediaUrl", resolveSiteMediaUrl);
+  eleventyConfig.addFilter("initials", initials);
   eleventyConfig.addFilter("metaDescription", (candidates, content, limit) => {
     const list = Array.isArray(candidates) ? candidates : [candidates];
     for (const candidate of list) {
