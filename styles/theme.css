@@ -368,9 +368,23 @@ body.kb-nav-open {
   white-space: nowrap;
   flex-shrink: 0;
   font-family: var(--global-heading-font-family, Arial, Helvetica, sans-serif);
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: opacity 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 .site-name { font-family: inherit; }
 .site-logo img { width: 90px; height: auto; display: block; }
+.site-logo:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+.site-logo:focus-visible {
+  outline: 3px solid var(--global-palette2, #446d33);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9);
+}
 
 /* ── Hamburger toggle — hidden on desktop ──────────────────────────────────── */
 .kb-nav-toggle {

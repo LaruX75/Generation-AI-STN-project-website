@@ -21,9 +21,7 @@ const PAGE_ALIAS_GROUPS = [
   ["opettajalle", "for-teachers", "for-larare"],
   ["tutkijalle", "research", "forskning"],
   ["yleisölle", "for-everyone", "for-allmanheten"],
-  ["tietosuojalausunto-eu", "privacy-statement-eu", "dataskyddserklaring-eu"],
   ["vastuurajoitus", "liability-limitation", "ansvarsbegransning"],
-  ["evastekaytanto-eu", "cookie-policy-eu", "cookiepolicy-eu"],
   ["posts-search", "search", "sok"],
   ["itk2025-palautelomake", "itk2025-feedback-form", "itk2025-feedbackformular"],
   ["encyclopedia", "ordbok"]
