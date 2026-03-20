@@ -46,12 +46,18 @@
         <link rel="alternate" hreflang="{{ locale }}" href="{{ site.url + url }}">
       {% endif %}
     {% endfor %}
+    {% if _overrideLinks.fi %}
+      <link rel="alternate" hreflang="x-default" href="{{ site.url + _overrideLinks.fi }}">
+    {% endif %}
   {% elif _localeLinks %}
     {% for locale, item in _localeLinks %}
       {% if item and item.url %}
         <link rel="alternate" hreflang="{{ locale }}" href="{{ site.url + item.url }}">
       {% endif %}
     {% endfor %}
+    {% if _localeLinks.fi and _localeLinks.fi.url %}
+      <link rel="alternate" hreflang="x-default" href="{{ site.url + _localeLinks.fi.url }}">
+    {% endif %}
   {% endif %}
   {# ── Favicon ──────────────────────────────────────────────────────────── #}
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
@@ -78,7 +84,7 @@
     {% set _searchPath = "/sv/sok/" %}
   {% endif %}
   {% set _repoPrefix = site.repoPrefix if site.repoPrefix and site.repoPrefix != "/" else "" %}
-  {% set _ogImageSource = ogImage if ogImage else (featuredImage if featuredImage else (heroImage if heroImage else (heroBgImage if heroBgImage else (site.defaultHeroImage if site and site.defaultHeroImage else site.logo)))) %}
+  {% set _ogImageSource = (ogImage if ogImage else (featuredImage if featuredImage else (heroImage if heroImage else (heroBgImage if heroBgImage else (site.defaultHeroImage if site and site.defaultHeroImage else site.logo))))) | normalizeSiteMediaUrl %}
   {% set _ogImage = _ogImageSource %}
   {% if _ogImageSource and (_ogImageSource[0] == "/") %}
     {% set _ogImage = site.url + _repoPrefix + _ogImageSource %}

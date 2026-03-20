@@ -5,6 +5,7 @@ permalink: /en/search/
 layout: layouts/search.njk
 lang: en
 eleventyExcludeFromCollections: true
+noindex: true
 searchUi:
   placeholder: "Search..."
   zeroResults: 'No results for "{0}"'

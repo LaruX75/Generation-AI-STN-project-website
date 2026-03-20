@@ -84,6 +84,15 @@ module.exports = function(eleventyConfig) {
     const fallback = normalizeMetaText(source);
     return fallback ? truncateMetaText(fallback, limit) : "";
   };
+  const normalizeSiteMediaUrl = value => {
+    const raw = String(value || "").trim();
+    if (!raw) return "";
+
+    return raw.replace(
+      /^https?:\/\/(?:www\.)?generation-ai-stn\.fi\/wp-content\//i,
+      "/media/wp-content/"
+    );
+  };
   const STOP_WORDS = new Set([
     "the", "and", "for", "with", "this", "that", "from", "into", "your", "their", "have", "will", "about",
     "että", "joka", "johon", "tämä", "nämä", "sitä", "sekä", "myös", "kanssa", "voidaan", "tehdä", "ovat",
@@ -361,6 +370,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("isHttpUrl", value => /^https?:\/\//i.test(String(value || "").trim()));
   eleventyConfig.addFilter("jsonLd", value => JSON.stringify(value, null, 2));
   eleventyConfig.addFilter("urlencode", value => encodeURIComponent(String(value || "")));
+  eleventyConfig.addFilter("normalizeSiteMediaUrl", normalizeSiteMediaUrl);
   eleventyConfig.addFilter("metaDescription", (candidates, content, limit) => {
     const list = Array.isArray(candidates) ? candidates : [candidates];
     for (const candidate of list) {

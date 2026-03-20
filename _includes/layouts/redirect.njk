@@ -1,13 +1,15 @@
+{% set _redirectCanonical = (site.url if site and site.url else "") + redirectTo %}
 <!doctype html>
-<html lang="fi">
+<html lang="{{ lang or 'fi' }}">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="refresh" content="0; url={{ redirectTo }}">
-  <title>Sivu siirretty</title>
-  <link rel="canonical" href="{{ redirectTo }}">
-  <meta name="robots" content="noindex">
+  <title>{{ redirectTitle or "Sivu siirretty" }}</title>
+  <link rel="canonical" href="{{ _redirectCanonical }}">
+  <meta name="robots" content="noindex,follow">
 </head>
 <body>
-  <p>Sivu on siirretty. <a href="{{ redirectTo }}">Siirry uuteen osoitteeseen →</a></p>
+  <p>{{ redirectMessage or "Sivu on siirretty." }} <a href="{{ redirectTo }}">{{ redirectLinkLabel or "Siirry uuteen osoitteeseen" }} →</a></p>
+  <script>window.location.replace({{ redirectTo | dump | safe }});</script>
 </body>
 </html>

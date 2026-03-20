@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for item in collections.all %}
-    {% if item.url and ('.xml' not in item.url) %}
+    {% if item.url and ('.xml' not in item.url) and not item.data.noindex %}
   <url>
     <loc>{{ site.url }}{{ item.url }}</loc>
     {% if item.data.updated %}<lastmod>{{ item.data.updated | rssDate | replace("GMT", "+0000") }}</lastmod>
