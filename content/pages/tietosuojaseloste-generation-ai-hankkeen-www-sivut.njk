@@ -3,7 +3,7 @@ title: Tietosuojaseloste – Generation AI hankkeen www-sivut
 seoTitle: Tietosuojaseloste — Generation AI hankkeen www-sivut
 seoDescription: Generation AI -hankkeen www-sivuston tietosuojaseloste. Tietosuojalaki (1050/2018), EU:n yleinen tietosuoja-asetus 2016/679.
 date: "2025-01-23T11:46:15"
-updated: "2026-03-16T00:00:00"
+updated: "2026-03-20T00:00:00"
 slug: tietosuojaseloste-generation-ai-hankkeen-www-sivut
 permalink: /tietosuojaseloste-generation-ai-hankkeen-www-sivut/
 status: publish
@@ -14,7 +14,7 @@ layout: layouts/page.njk
 
 <article class="prose-page">
 
-  <p class="prose-page-meta">Tietosuojalaki (1050/2018) · EU:n yleinen tietosuoja-asetus 2016/679<br>Laadittu 23.1.2024. Päivitetty 16.3.2026 (lisätty kohta 5.1.3 localStorage-tallennuksesta).</p>
+  <p class="prose-page-meta">Tietosuojalaki (1050/2018) · EU:n yleinen tietosuoja-asetus 2016/679<br>Laadittu 23.1.2024. Päivitetty 20.3.2026 (yhdistetty erillisen evästekäytäntösivun sisältö tähän asiakirjaan).</p>
 
   <section class="prose-section">
     <h2>1. Rekisterinpitäjä</h2>
@@ -42,7 +42,7 @@ layout: layouts/page.njk
     <h2>4. Rekisterin käyttötarkoitus</h2>
 
     <h3>Sivuston toteuttaminen</h3>
-    <p>Tietojasi käytetään Generation AI -hankkeen www-sivujen käytännön toteuttamiseen. Keräämme vain välttämättömät tiedot ja pyrimme välttämään ulkopuolisten palveluiden käyttämistä mahdollisimman paljon. Emme esimerkiksi käytä sivustolla ulkopuolista käyttäjäanalytiikkaa tai upotettuja fontteja. Sivusto käyttää seuraavia kolmannen osapuolen palveluita: <strong>MailerLite</strong> (uutiskirjeen hallinta — käytetään vain markkinointievästeiden hyväksymisen jälkeen), <strong>Web3Forms</strong> (yhteystietolomakkeen välitys), <strong>YouTube-nocookie</strong> (videoupotukset — käyttää privacy-enhanced-moodia, ei tallenna evästeitä ilman toistoa) sekä <strong>vanilla-cookieconsent</strong> (evästeilmoitus, tallennetaan paikallisesti selaimeesi). Päivitetty 16.3.2026.</p>
+    <p>Tietojasi käytetään Generation AI -hankkeen www-sivujen käytännön toteuttamiseen. Keräämme vain välttämättömät tiedot ja pyrimme välttämään ulkopuolisten palveluiden käyttämistä mahdollisimman paljon. Emme esimerkiksi käytä upotettuja fontteja tai evästepohjaista analytiikkaa, kuten Google Analyticsia. Sivusto käyttää seuraavia kolmannen osapuolen palveluita: <strong>Cloudflare Web Analytics</strong> (yleistasoinen, evästeetön analytiikka), <strong>MailerLite</strong> (uutiskirjeen hallinta — käytetään vain markkinointievästeiden hyväksymisen jälkeen), <strong>Web3Forms</strong> (yhteystietolomakkeen välitys), <strong>YouTube-nocookie</strong> (videoupotukset — käyttää privacy-enhanced-moodia, ei tallenna evästeitä ilman toistoa) sekä <strong>vanilla-cookieconsent</strong> (evästeilmoitus, tallennetaan paikallisesti selaimeesi).</p>
 
     <h3>Sivuston ja Generation AI -materiaalien ja sovellusten kehittäminen</h3>
     <p>Tietojasi käytetään Generation AI -hankkeen materiaalien ja sovellusten sekä tämän sivuston kehittämiseen. Henkilötietojasi voidaan käyttää Generation AI -hankkeen toimintaan liittyviin kyselyihin. Tutkimusaineiston keruuta tämä tietosuojaseloste ei kata, eikä henkilötietojasi käytetä tutkimustarkoituksiin. <em>Tutkimuksellisesta aineistonkeruusta kerrotaan aina erikseen, ja sellaisella henkilötietojen keruulla on oma tietosuojaselosteensa.</em></p>
@@ -72,7 +72,7 @@ layout: layouts/page.njk
 
     <h4>5.1.2 Miten käytämme evästeitä?</h4>
     <p>Verkkosivustomme käyttää ensimmäisen osapuolen evästeitä sivuston toimintaan sekä evästeilmoituksen suostumustiedon tallentamiseen (<code>cc_cookie</code>). Kolmannen osapuolen evästeitä käytetään vain suostumuksellasi: <strong>MailerLite</strong> (uutiskirjeen seuranta, ml_*-evästeet) ladataan vasta markkinointikategorian hyväksymisen jälkeen. YouTube-nocookie-videoita voidaan toistaa ilman evästeitä; evästeet asetetaan vasta kun käyttäjä aloittaa videon toiston.</p>
-    <p><strong>Huom!</strong> Emme käytä evästepohjaista analytiikkaa (esim. Google Analytics) käyttäjien tilastointiin. Sivuston hakutoiminto (Pagefind) toimii täysin paikallisesti eikä lähetä tietoja ulkopuolelle. Evästeilmoitus on toteutettu vanilla-cookieconsent-kirjastolla, joka tallentaa suostumustietosi <code>cc_cookie</code>-evästeeseen paikallisesti selaimeesi (365 päivää).</p>
+    <p><strong>Huom!</strong> Emme käytä evästepohjaista analytiikkaa, kuten Google Analyticsia tai Google Tag Manageria. Käytämme kuitenkin <strong>Cloudflare Web Analytics</strong> -palvelua sivuston käytön yleistasoiseen, evästeettömään analytiikkaan. Sivuston hakutoiminto (Pagefind) toimii täysin paikallisesti eikä lähetä hakukyselyjä ulkopuolelle. Evästeilmoitus on toteutettu vanilla-cookieconsent-kirjastolla, joka tallentaa suostumustietosi <code>cc_cookie</code>-evästeeseen paikallisesti selaimeesi (365 päivää).</p>
 
     <h4>5.1.3 Selaimen paikallinen tallennustila (localStorage)</h4>
     <p>Evästeiden lisäksi sivusto käyttää selaimen <code>localStorage</code>-tallennustilaa kahteen tarkoitukseen:</p>
@@ -86,7 +86,7 @@ layout: layouts/page.njk
   <section class="prose-section">
     <h2>6. Säännönmukaiset tietolähteet</h2>
     <p>Verkkosivuston rekisteriin tallennettavat tiedot saadaan verkkosivuston vierailijalta mm. www-lomakkeilla ja forum-keskusteluun lähetetyistä viesteistä, järjestelmään rekisteröitymisestä ja muista tilanteista, joissa käyttäjä luovuttaa tietojaan. Yhteystietoja voidaan kerätä myös tapahtumissa, joihin hanke ottaa osaa, käyttäen tämän sivun työkaluja tapahtumamarkkinoinnissa.</p>
-    <p>Sivusto on toteutettu staattisena Eleventy-sivustona. Sivuston kävijäseurantaan ei käytetä evästeitä tarvitsevia työkaluja, kuten Google Analyticsiä.</p>
+    <p>Sivusto on toteutettu staattisena Eleventy-sivustona. Sivuston kävijäseurantaan ei käytetä evästeitä tarvitsevia työkaluja, kuten Google Analyticsia, mutta sivustolla käytetään Cloudflare Web Analytics -palvelua yleistasoiseen, evästeettömään analytiikkaan.</p>
   </section>
 
   <section class="prose-section">

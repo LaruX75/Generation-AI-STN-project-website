@@ -2337,7 +2337,10 @@ body.search-modal-open { overflow: hidden; }
   background: var(--global-palette2, #446d33);
   color: #fff;
 }
-.mat-pub-card-btn--primary:hover { background: var(--global-palette1, #314e25); }
+.mat-pub-card-btn--primary:hover {
+  background: var(--global-palette1, #314e25);
+  color: #fff;
+}
 .mat-pub-card-btn--secondary {
   background: transparent;
   color: var(--global-palette2, #446d33);
@@ -2842,7 +2845,10 @@ a.publication-hero-author-name:hover {
   font-size: 0.8rem; font-weight: 600;
   text-decoration: none; transition: background 0.15s;
 }
-.researchfi-card__all-link:hover { background: var(--global-palette2, #446d33); }
+.researchfi-card__all-link:hover {
+  background: var(--global-palette2, #446d33);
+  color: #fff;
+}
 @media (max-width: 767px) {
   .consortium-card__meta-row { flex-direction: column; align-items: flex-start; }
   .consortium-card__meta { max-width: 100%; }
@@ -3088,7 +3094,10 @@ a.publication-hero-author-name:hover {
   background: var(--global-palette2, #446d33);
   color: #fff;
 }
-.home-intro-btn--primary:hover { background: var(--global-palette1, #314e25); }
+.home-intro-btn--primary:hover {
+  background: var(--global-palette1, #314e25);
+  color: #fff;
+}
 .home-intro-btn--secondary {
   background: transparent;
   color: var(--global-palette2, #446d33);
@@ -3280,7 +3289,10 @@ a.publication-hero-author-name:hover {
   text-decoration: none;
   transition: background 0.15s;
 }
-.home-tools-btn:hover { background: var(--global-palette1, #314e25); }
+.home-tools-btn:hover {
+  background: var(--global-palette1, #314e25);
+  color: #fff;
+}
 .home-tools-link {
   color: var(--global-palette2, #446d33);
   font-weight: 600;
@@ -3491,6 +3503,7 @@ a.publication-hero-author-name:hover {
 }
 .genai-brand-strip-cta:hover {
   background: var(--global-palette7, #f0f4ec);
+  color: var(--global-palette2, #446d33);
 }
 @media (max-width: 600px) {
   .genai-brand-strip-inner { flex-direction: column; align-items: flex-start; }
@@ -3805,6 +3818,7 @@ a.publication-hero-author-name:hover {
 }
 .teacher-guide-btn:hover {
   background: var(--global-palette1, #314e25);
+  color: #fff;
 }
 
 /* About section */
