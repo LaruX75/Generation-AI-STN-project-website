@@ -11,3 +11,4 @@ _site_test/
 .codex-temp/
 test-results/
 _site_playwright/
+docs/accessibility-manual-audit-checklist.md

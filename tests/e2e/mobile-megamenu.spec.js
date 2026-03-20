@@ -23,18 +23,26 @@ function topLevelNavItem(page, label) {
     .first();
 }
 
+function directToggleFor(item) {
+  return item.locator("> .kb-nav-link-row > .kb-nav-item-toggle");
+}
+
+function directPanelFor(item) {
+  return item.locator("> .kb-nav-sub-menu, > .kb-mega-menu");
+}
+
 test.describe("Mobile megamenu", () => {
   test("opens the teacher megamenu without horizontal overflow", async ({ page }) => {
     await openMobileMenu(page);
 
     const teachersItem = topLevelNavItem(page, "Opettajalle");
-    const teachersToggle = teachersItem.locator(".kb-nav-link-row > .kb-nav-item-toggle");
+    const teachersToggle = directToggleFor(teachersItem);
 
     await expect(teachersItem).toBeVisible();
     await teachersToggle.click();
 
     await expect(teachersItem).toHaveClass(/is-open/);
-    await expect(teachersItem.locator(".kb-mega-menu")).toBeVisible();
+    await expect(directPanelFor(teachersItem)).toBeVisible();
 
     const overflow = await page.evaluate(() => {
       const nav = document.querySelector("#site-nav-menu");
@@ -85,15 +93,15 @@ test.describe("Mobile megamenu", () => {
     const teachersItem = topLevelNavItem(page, "Opettajalle");
     const researchItem = topLevelNavItem(page, "Tutkijalle");
 
-    await teachersItem.locator(".kb-nav-link-row > .kb-nav-item-toggle").click();
+    await directToggleFor(teachersItem).click();
     await expect(teachersItem).toHaveClass(/is-open/);
 
-    await researchItem.locator(".kb-nav-link-row > .kb-nav-item-toggle").click();
+    await directToggleFor(researchItem).click();
 
     await expect(researchItem).toHaveClass(/is-open/);
-    await expect(researchItem.locator(".kb-mega-menu")).toBeVisible();
+    await expect(directPanelFor(researchItem)).toBeVisible();
     await expect(teachersItem).not.toHaveClass(/is-open/);
-    await expect(teachersItem.locator(".kb-mega-menu")).not.toBeVisible();
+    await expect(directPanelFor(teachersItem)).not.toBeVisible();
   });
 
   test("closing a megamenu restores sibling top-level navigation", async ({ page }) => {
@@ -101,47 +109,47 @@ test.describe("Mobile megamenu", () => {
 
     const teachersItem = topLevelNavItem(page, "Opettajalle");
     const researchItem = topLevelNavItem(page, "Tutkijalle");
-    const teachersToggle = teachersItem.locator(".kb-nav-link-row > .kb-nav-item-toggle");
-    const researchToggle = researchItem.locator(".kb-nav-link-row > .kb-nav-item-toggle");
+    const teachersToggle = directToggleFor(teachersItem);
+    const researchToggle = directToggleFor(researchItem);
 
     await teachersToggle.click();
     await expect(teachersItem).toHaveClass(/is-open/);
 
     await teachersToggle.click();
     await expect(teachersItem).not.toHaveClass(/is-open/);
-    await expect(teachersItem.locator(".kb-mega-menu")).not.toBeVisible();
+    await expect(directPanelFor(teachersItem)).not.toBeVisible();
 
     await researchToggle.click();
     await expect(researchItem).toHaveClass(/is-open/);
-    await expect(researchItem.locator(".kb-mega-menu")).toBeVisible();
+    await expect(directPanelFor(researchItem)).toBeVisible();
   });
 
   test("closing a nested submenu restores access to top-level items", async ({ page }) => {
     await openMobileMenu(page);
 
     const audienceItem = topLevelNavItem(page, "Yleisölle");
-    const audienceToggle = audienceItem.locator(".kb-nav-link-row > .kb-nav-item-toggle");
+    const audienceToggle = directToggleFor(audienceItem);
     const eventsItem = audienceItem
-      .locator(".kb-nav-sub-menu > .kb-nav-item")
-      .filter({ has: page.locator(".kb-nav-link-row > .kb-nav-link", { hasText: "Tapahtumat" }) })
+      .locator("> .kb-nav-sub-menu > .kb-nav-item")
+      .filter({ has: page.locator("> .kb-nav-link-row > .kb-nav-link", { hasText: "Tapahtumat" }) })
       .first();
-    const eventsToggle = eventsItem.locator(".kb-nav-link-row > .kb-nav-item-toggle");
+    const eventsToggle = directToggleFor(eventsItem);
     const researchItem = topLevelNavItem(page, "Tutkijalle");
-    const researchToggle = researchItem.locator(".kb-nav-link-row > .kb-nav-item-toggle");
+    const researchToggle = directToggleFor(researchItem);
 
     await audienceToggle.click();
     await expect(audienceItem).toHaveClass(/is-open/);
 
     await eventsToggle.click();
     await expect(eventsItem).toHaveClass(/is-open/);
-    await expect(eventsItem.locator(".kb-nav-sub-menu")).toBeVisible();
+    await expect(directPanelFor(eventsItem)).toBeVisible();
 
     await audienceToggle.click();
     await expect(audienceItem).not.toHaveClass(/is-open/);
-    await expect(audienceItem.locator(".kb-nav-sub-menu")).not.toBeVisible();
+    await expect(directPanelFor(audienceItem)).not.toBeVisible();
 
     await researchToggle.click();
     await expect(researchItem).toHaveClass(/is-open/);
-    await expect(researchItem.locator(".kb-mega-menu")).toBeVisible();
+    await expect(directPanelFor(researchItem)).toBeVisible();
   });
 });
