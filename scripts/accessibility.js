@@ -82,26 +82,64 @@
     var lang = document.documentElement.lang || 'fi';
     applyState(state);
 
+    var toolbar = document.getElementById('a11y-toolbar');
     var trigger = document.getElementById('a11y-trigger');
     var panel   = document.getElementById('a11y-panel');
     var closeBtn = document.getElementById('a11y-close');
+    var previouslyFocused = null;
+
+    function getFocusable(container) {
+      if (!container) return [];
+      return Array.prototype.slice.call(
+        container.querySelectorAll('button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')
+      ).filter(function (el) {
+        return !el.hidden && el.offsetParent !== null;
+      });
+    }
+
+    function trapPanelFocus(e) {
+      if (!panel || panel.hidden || e.key !== 'Tab') return;
+      var focusable = getFocusable(panel);
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
 
     function openPanel() {
       if (!panel) return;
+      previouslyFocused = document.activeElement || trigger;
       panel.hidden = false;
       trigger && trigger.setAttribute('aria-expanded', 'true');
-      var first = panel.querySelector('button:not([disabled])');
+      panel.addEventListener('keydown', trapPanelFocus);
+      var first = getFocusable(panel)[0];
       if (first) first.focus();
     }
     function closePanel() {
       if (!panel) return;
       panel.hidden = true;
+      panel.removeEventListener('keydown', trapPanelFocus);
       trigger && trigger.setAttribute('aria-expanded', 'false');
-      trigger && trigger.focus();
+      if (previouslyFocused && typeof previouslyFocused.focus === 'function') {
+        previouslyFocused.focus();
+      } else {
+        trigger && trigger.focus();
+      }
     }
 
     trigger  && trigger.addEventListener('click', function () { panel && (panel.hidden ? openPanel() : closePanel()); });
     closeBtn && closeBtn.addEventListener('click', closePanel);
+    document.addEventListener('click', function (e) {
+      if (!panel || panel.hidden || !toolbar) return;
+      if (!toolbar.contains(e.target)) closePanel();
+    });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && panel && !panel.hidden) closePanel();
     });

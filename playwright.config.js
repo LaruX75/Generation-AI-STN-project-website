@@ -1,4 +1,6 @@
 const { defineConfig, devices } = require("@playwright/test");
+const PLAYWRIGHT_PORT = process.env.PLAYWRIGHT_PORT || "41783";
+const BASE_URL = `http://127.0.0.1:${PLAYWRIGHT_PORT}`;
 
 module.exports = defineConfig({
   testDir: "./tests/e2e",
@@ -9,13 +11,13 @@ module.exports = defineConfig({
   },
   reporter: [["list"]],
   webServer: {
-    command: "npm run build:test && python3 -m http.server 41783 -d _site_playwright",
-    url: "http://127.0.0.1:41783",
-    reuseExistingServer: false,
-    timeout: 30_000,
+    command: `npm run build:test && python3 -m http.server ${PLAYWRIGHT_PORT} -d _site_playwright`,
+    url: BASE_URL,
+    reuseExistingServer: !process.env.CI,
+    timeout: 90_000,
   },
   use: {
-    baseURL: "http://127.0.0.1:41783",
+    baseURL: BASE_URL,
     trace: "on-first-retry",
     screenshot: "only-on-failure",
     video: "retain-on-failure",

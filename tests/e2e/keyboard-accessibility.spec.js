@@ -64,3 +64,36 @@ test("Desktop submenu closes with Escape and restores focus to its toggle", asyn
   await expect(teachersItem).not.toHaveClass(/is-open/);
   await expect(teachersToggle).toBeFocused();
 });
+
+test("Accessibility tools dialog traps focus and closes back to the trigger", async ({ page }) => {
+  await page.goto("/opettajalle/");
+  await acceptNecessaryCookies(page);
+
+  const trigger = page.locator("#a11y-trigger");
+  await trigger.click();
+
+  const panel = page.locator("#a11y-panel");
+  await expect(panel).toBeVisible();
+  await expect(panel).toHaveAttribute("aria-modal", "true");
+  await expect(page.locator("#a11y-close")).toBeFocused();
+
+  await page.locator("#a11y-reset").focus();
+  await page.keyboard.press("Tab");
+  await expect(page.locator("#a11y-close")).toBeFocused();
+
+  await page.keyboard.press("Escape");
+  await expect(panel).toBeHidden();
+  await expect(trigger).toBeFocused();
+});
+
+test("English accessibility controls use localized labels", async ({ page }) => {
+  await page.goto("/en/for-teachers/");
+  await acceptNecessaryCookies(page);
+
+  await page.locator("#a11y-trigger").click();
+
+  await expect(page.getByRole("button", { name: "Font size, smaller" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Font size, default" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Font size, larger" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "White" })).toBeVisible();
+});
