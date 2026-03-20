@@ -45,6 +45,82 @@ module.exports = function(eleventyConfig) {
     if (normalizedUrl.startsWith("/sv/")) return "sv";
     return "fi";
   };
+  const stripHtml = value =>
+    String(value || "")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&nbsp;/gi, " ")
+      .replace(/&#[0-9]+;/g, " ")
+      .replace(/&[a-z]+;/gi, " ");
+  const STOP_WORDS = new Set([
+    "the", "and", "for", "with", "this", "that", "from", "into", "your", "their", "have", "will", "about",
+    "että", "joka", "johon", "tämä", "nämä", "sitä", "sekä", "myös", "kanssa", "voidaan", "tehdä", "ovat",
+    "och", "det", "som", "den", "att", "för", "med", "har", "kan", "från", "till", "också", "vara"
+  ]);
+  const tokenize = (value, limit = 60) => {
+    const tokens = stripHtml(value)
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9\u00e4\u00f6\u00e5]+/gi, " ")
+      .split(/\s+/)
+      .filter(token => token.length > 2 && !STOP_WORDS.has(token));
+
+    return Array.from(new Set(tokens)).slice(0, limit);
+  };
+  const getArrayValues = value => Array.isArray(value) ? value.filter(Boolean).map(String) : [];
+  const buildComparableSeed = seed => ({
+    lang: seed?.lang,
+    sourceType: String(seed?.sourceType || ""),
+    title: String(seed?.title || ""),
+    excerpt: String(seed?.excerpt || ""),
+    tags: getArrayValues(seed?.tags),
+    categories: getArrayValues(seed?.categories),
+    knowledgeBase: getArrayValues(seed?.knowledgeBase),
+    docCategory: getArrayValues(seed?.docCategory),
+    tokens: tokenize([
+      seed?.title,
+      seed?.excerpt,
+      getArrayValues(seed?.tags).join(" "),
+      getArrayValues(seed?.categories).join(" "),
+      getArrayValues(seed?.knowledgeBase).join(" "),
+      getArrayValues(seed?.docCategory).join(" "),
+      seed?.content
+    ].join(" "), 90)
+  });
+  const allowedLayouts = new Set([
+    "layouts/post.njk",
+    "layouts/page.njk",
+    "layouts/doc.njk",
+    "layouts/publication.njk"
+  ]);
+  const intersectionSize = (a, b) => {
+    const bSet = new Set(b);
+    return a.reduce((count, item) => count + (bSet.has(item) ? 1 : 0), 0);
+  };
+  const relatedCandidateCache = new Map();
+  const getComparableForItem = item => {
+    const cacheKey = `${item?.url || ""}::${item?.data?.updated || item?.data?.date || ""}`;
+    if (relatedCandidateCache.has(cacheKey)) {
+      return relatedCandidateCache.get(cacheKey);
+    }
+
+    const comparable = buildComparableSeed({
+      lang: item?.data?.lang,
+      sourceType: item?.data?.sourceType,
+      title: item?.data?.title,
+      excerpt: item?.data?.excerpt,
+      tags: item?.data?.tags,
+      categories: item?.data?.categories,
+      knowledgeBase: item?.data?.["knowledge-base"],
+      docCategory: item?.data?.["doc-category"],
+      content: item?.templateContent || ""
+    });
+
+    relatedCandidateCache.set(cacheKey, comparable);
+    return comparable;
+  };
 
   eleventyConfig.setWatchThrottleWaitTime(200);
   // Allow .well-known directory (dot-prefixed dirs are ignored by default)
@@ -265,6 +341,69 @@ module.exports = function(eleventyConfig) {
         return score(b) - score(a);
       })
       .slice(0, limit);
+  });
+  eleventyConfig.addFilter("relatedContent", (collection, currentUrl, seed, limit) => {
+    const maxItems = Number(limit) > 0 ? Number(limit) : 3;
+    const comparableSeed = buildComparableSeed(seed || {});
+    const locale = resolveLocale(comparableSeed.lang, currentUrl);
+
+    const scored = (collection || [])
+      .filter(item => {
+        if (!item || item.url === currentUrl || !item.data) return false;
+        if (!allowedLayouts.has(String(item.data.layout || ""))) return false;
+        if (item.data.eleventyExcludeFromCollections || item.data.noindex) return false;
+        if (resolveLocale(item.data.lang, item.url) !== locale) return false;
+        return true;
+      })
+      .map(item => {
+        const candidateSeed = getComparableForItem(item);
+
+        const sharedTags = intersectionSize(comparableSeed.tags.map(t => t.toLowerCase()), candidateSeed.tags.map(t => t.toLowerCase()));
+        const sharedCategories = intersectionSize(comparableSeed.categories.map(t => t.toLowerCase()), candidateSeed.categories.map(t => t.toLowerCase()));
+        const sharedKnowledgeBase = intersectionSize(comparableSeed.knowledgeBase.map(t => t.toLowerCase()), candidateSeed.knowledgeBase.map(t => t.toLowerCase()));
+        const sharedDocCategory = intersectionSize(comparableSeed.docCategory.map(t => t.toLowerCase()), candidateSeed.docCategory.map(t => t.toLowerCase()));
+        const sharedTokens = intersectionSize(comparableSeed.tokens, candidateSeed.tokens);
+
+        let score = 0;
+        score += sharedTags * 8;
+        score += sharedCategories * 6;
+        score += sharedKnowledgeBase * 10;
+        score += sharedDocCategory * 7;
+        score += Math.min(sharedTokens, 12);
+        if (candidateSeed.sourceType && candidateSeed.sourceType === comparableSeed.sourceType) {
+          score += 2;
+        }
+
+        const rawDate = item?.date instanceof Date ? item.date : new Date(item?.date || item?.data?.date || 0);
+        const timestamp = Number.isNaN(rawDate.getTime()) ? 0 : rawDate.getTime();
+
+        return { item, score, timestamp };
+      })
+      .filter(entry => entry.score > 0)
+      .sort((a, b) => {
+        if (b.score !== a.score) return b.score - a.score;
+        return b.timestamp - a.timestamp;
+      })
+      .slice(0, maxItems)
+      .map(entry => entry.item);
+
+    if (scored.length) {
+      return scored;
+    }
+
+    return (collection || [])
+      .filter(item => {
+        if (!item || item.url === currentUrl || !item.data) return false;
+        if (!allowedLayouts.has(String(item.data.layout || ""))) return false;
+        if (item.data.eleventyExcludeFromCollections || item.data.noindex) return false;
+        return resolveLocale(item.data.lang, item.url) === locale;
+      })
+      .sort((a, b) => {
+        const aDate = a?.date instanceof Date ? a.date.getTime() : new Date(a?.date || a?.data?.date || 0).getTime();
+        const bDate = b?.date instanceof Date ? b.date.getTime() : new Date(b?.date || b?.data?.date || 0).getTime();
+        return (Number.isNaN(bDate) ? 0 : bDate) - (Number.isNaN(aDate) ? 0 : aDate);
+      })
+      .slice(0, maxItems);
   });
   eleventyConfig.addFilter("rssDate", value => {
     const date = value instanceof Date ? value : new Date(value);

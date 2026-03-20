@@ -59,23 +59,6 @@ layout: layouts/base.njk
     </footer>
     {% endif %}
 
-    {% if _relPosts and _relPosts.length %}
-    <section class="post-related">
-      <h2 class="post-related__heading">
-        {% if _lang == "en" %}Read also{% elif _lang == "sv" %}Läs också{% else %}Lue myös{% endif %}
-      </h2>
-      <div class="post-related__grid">
-        {% for p in _relPosts %}
-        <a class="post-related__card" href="{{ p.url }}">
-          {% if p.data.categories and p.data.categories.length %}
-          <span class="post-related__cat">{{ p.data.categories[0] }}</span>
-          {% endif %}
-          <span class="post-related__title">{{ p.data.title }}</span>
-          <span class="post-related__date">{{ p.data.date | date("d.m.Y") }}</span>
-        </a>
-        {% endfor %}
-      </div>
-    </section>
-    {% endif %}
+    {% include "partials/related-content.njk" %}
   </div>
 </main>

@@ -1,0 +1,32 @@
+{% set _relatedLocale = lang if lang else (site.defaultLocale if site and site.defaultLocale else "fi") %}
+{% set _relatedKnowledgeBase = page.data["knowledge-base"] if page and page.data and page.data["knowledge-base"] else [] %}
+{% set _relatedDocCategory = page.data["doc-category"] if page and page.data and page.data["doc-category"] else [] %}
+{% set _relatedItems = collections.all | relatedContent(page.url, {
+  lang: _relatedLocale,
+  sourceType: sourceType,
+  title: title,
+  excerpt: excerpt,
+  tags: tags,
+  categories: categories,
+  knowledgeBase: _relatedKnowledgeBase,
+  docCategory: _relatedDocCategory,
+  content: content
+}, 3) %}
+{% if _relatedItems and _relatedItems.length %}
+<section class="post-related">
+  <h2 class="post-related__heading">
+    {% if _relatedLocale == "en" %}Read also{% elif _relatedLocale == "sv" %}Läs också{% else %}Lue myös{% endif %}
+  </h2>
+  <div class="post-related__grid">
+    {% for item in _relatedItems %}
+      {% set _label = item.data.categories[0] if item.data.categories and item.data.categories.length else ((item.data["doc-category"][0]) if item.data["doc-category"] and item.data["doc-category"].length else (item.data.pubType if item.data.pubType else ("Documentation" if _relatedLocale == "en" and item.data.sourceType == "docs" else ("Dokumentation" if _relatedLocale == "sv" and item.data.sourceType == "docs" else ("Dokumentaatio" if item.data.sourceType == "docs" else ("Page" if _relatedLocale == "en" else ("Sida" if _relatedLocale == "sv" else "Sivu"))))))) %}
+      <a class="post-related__card" href="{{ item.url }}">
+        <span class="post-related__cat">{{ _label }}</span>
+        <span class="post-related__title">{{ item.data.title }}</span>
+        {% if item.data.excerpt %}<span class="post-related__excerpt">{{ item.data.excerpt | safe | striptags | truncate(160) }}</span>{% endif %}
+        {% if item.data.date %}<span class="post-related__date">{{ item.data.date | date("d.m.Y") }}</span>{% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
