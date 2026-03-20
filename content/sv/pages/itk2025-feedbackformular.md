@@ -6,7 +6,7 @@ slug: itk2025-feedbackformular
 permalink: /sv/itk2025-feedbackformular/
 status: publish
 sourceType: pages
-excerpt: ""
+excerpt: 'Responsformulär för Generation AI:s programpunkter, material och presentationer vid ITK2025.'
 categories: []
 tags: []
 author: admin

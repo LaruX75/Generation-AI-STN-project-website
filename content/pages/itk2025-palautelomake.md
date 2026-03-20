@@ -6,7 +6,7 @@ slug: itk2025-palautelomake
 permalink: /itk2025-palautelomake/
 status: publish
 sourceType: pages
-excerpt: "[object Object]"
+excerpt: "Palautelomake ITK2025-tapahtuman Generation AI -ohjelmasisällöistä, materiaaleista ja esityksistä."
 categories: []
 tags: []
 author: admin

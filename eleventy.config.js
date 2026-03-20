@@ -54,6 +54,36 @@ module.exports = function(eleventyConfig) {
       .replace(/&nbsp;/gi, " ")
       .replace(/&#[0-9]+;/g, " ")
       .replace(/&[a-z]+;/gi, " ");
+  const collapseWhitespace = value =>
+    String(value || "").replace(/\s+/g, " ").trim();
+  const normalizeMetaText = value => {
+    if (value === null || value === undefined) return "";
+    if (typeof value === "object") return "";
+    const text = collapseWhitespace(stripHtml(String(value)));
+    if (!text || text === "[object Object]") return "";
+    return text;
+  };
+  const truncateMetaText = (value, limit = 170) => {
+    const text = collapseWhitespace(value);
+    const max = Number(limit);
+    if (!Number.isFinite(max) || max <= 0 || text.length <= max) return text;
+
+    const slice = text.slice(0, max + 1);
+    const breakAt = slice.lastIndexOf(" ");
+    const truncated = breakAt > Math.floor(max * 0.6) ? slice.slice(0, breakAt) : slice.slice(0, max);
+    return `${truncated.trim()}...`;
+  };
+  const deriveMetaDescription = (content, limit = 170) => {
+    const source = String(content || "");
+    const paragraphs = source.match(/<p\b[^>]*>[\s\S]*?<\/p>/gi) || [];
+    for (const paragraph of paragraphs) {
+      const candidate = normalizeMetaText(paragraph);
+      if (candidate) return truncateMetaText(candidate, limit);
+    }
+
+    const fallback = normalizeMetaText(source);
+    return fallback ? truncateMetaText(fallback, limit) : "";
+  };
   const STOP_WORDS = new Set([
     "the", "and", "for", "with", "this", "that", "from", "into", "your", "their", "have", "will", "about",
     "että", "joka", "johon", "tämä", "nämä", "sitä", "sekä", "myös", "kanssa", "voidaan", "tehdä", "ovat",
@@ -329,7 +359,16 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.addFilter("date", formatDate);
   eleventyConfig.addFilter("isHttpUrl", value => /^https?:\/\//i.test(String(value || "").trim()));
+  eleventyConfig.addFilter("jsonLd", value => JSON.stringify(value, null, 2));
   eleventyConfig.addFilter("urlencode", value => encodeURIComponent(String(value || "")));
+  eleventyConfig.addFilter("metaDescription", (candidates, content, limit) => {
+    const list = Array.isArray(candidates) ? candidates : [candidates];
+    for (const candidate of list) {
+      const normalized = normalizeMetaText(candidate);
+      if (normalized) return truncateMetaText(normalized, limit);
+    }
+    return deriveMetaDescription(content, limit);
+  });
   eleventyConfig.addFilter("relatedPosts", (collection, currentUrl, currentTags, limit) => {
     limit = limit || 3;
     if (!currentTags || !currentTags.length) return [];

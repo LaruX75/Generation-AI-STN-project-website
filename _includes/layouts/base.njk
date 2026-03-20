@@ -9,7 +9,7 @@
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()">
   <title>{% if seoTitle %}{{ seoTitle }}{% elif title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
-  {% set _desc = seoDescription if seoDescription else (ogDescription if ogDescription else excerpt) %}
+  {% set _desc = [seoDescription, ogDescription, excerpt] | metaDescription(content, 170) %}
   {% if _desc %}<meta name="description" content="{{ _desc }}">{% endif %}
   {% set _canonical = canonical if canonical else (site.url + page.url) %}
   {% set localeUrlOverrides = {
@@ -64,8 +64,25 @@
   {% set _ogDesc = ogDescription if ogDescription else _desc %}
   {% set _ogLocale = "fi_FI" %}
   {% if lang == "en" %}{% set _ogLocale = "en_GB" %}{% elif lang == "sv" %}{% set _ogLocale = "sv_SE" %}{% endif %}
-  {% set _ogImage = ogImage if ogImage else (site.url + "/media/wp-content/uploads/2023/04/cropped-GenAI-logoluonnos.jpg") %}
+  {% set _pageLang = lang if lang else (site.defaultLocale if site and site.defaultLocale else "fi") %}
+  {% set _homePath = "/" %}
+  {% set _homeLabel = "Etusivu" %}
+  {% set _searchPath = "/haku/" %}
+  {% if _pageLang == "en" %}
+    {% set _homePath = "/en/" %}
+    {% set _homeLabel = "Home" %}
+    {% set _searchPath = "/en/search/" %}
+  {% elif _pageLang == "sv" %}
+    {% set _homePath = "/sv/" %}
+    {% set _homeLabel = "Startsida" %}
+    {% set _searchPath = "/sv/sok/" %}
+  {% endif %}
   {% set _repoPrefix = site.repoPrefix if site.repoPrefix and site.repoPrefix != "/" else "" %}
+  {% set _ogImageSource = ogImage if ogImage else (featuredImage if featuredImage else (heroImage if heroImage else (heroBgImage if heroBgImage else (site.defaultHeroImage if site and site.defaultHeroImage else site.logo)))) %}
+  {% set _ogImage = _ogImageSource %}
+  {% if _ogImageSource and (_ogImageSource[0] == "/") %}
+    {% set _ogImage = site.url + _repoPrefix + _ogImageSource %}
+  {% endif %}
   {% set _heroPreload = null %}
   {% if pageHero or heroImage or heroBgImage or featuredImage %}
     {% set _heroCandidate = site.defaultHeroImage if pageHero and site and site.defaultHeroImage else (heroImage if heroImage else (heroBgImage if heroBgImage else (featuredImage if featuredImage else null))) %}
@@ -105,6 +122,83 @@
   {% if _heroPreload %}
     <link rel="preload" as="image" href="{{ _heroPreload }}" fetchpriority="high">
   {% endif %}
+  {% set _schemaGraph = [
+    {
+      "@type": "Organization",
+      "@id": site.url + "/#organization",
+      "name": site.name,
+      "url": site.url,
+      "logo": {
+        "@type": "ImageObject",
+        "url": site.url + site.logo
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": site.url + "/#website",
+      "url": site.url,
+      "name": site.name,
+      "inLanguage": _pageLang,
+      "publisher": { "@id": site.url + "/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": site.url + _searchPath + "?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ] %}
+  {% set _breadcrumbItems = [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": _homeLabel,
+      "item": site.url + _homePath
+    }
+  ] %}
+  {% if page.url != _homePath %}
+    {% set _breadcrumbItems = _breadcrumbItems.concat([
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": _ogTitle,
+        "item": _canonical
+      }
+    ]) %}
+  {% endif %}
+  {% set _schemaGraph = _schemaGraph.concat([
+    {
+      "@type": "BreadcrumbList",
+      "@id": _canonical + "#breadcrumb",
+      "itemListElement": _breadcrumbItems
+    },
+    {
+      "@type": "WebPage",
+      "@id": _canonical + "#webpage",
+      "url": _canonical,
+      "name": _ogTitle,
+      "description": _desc,
+      "inLanguage": _pageLang,
+      "isPartOf": { "@id": site.url + "/#website" },
+      "breadcrumb": { "@id": _canonical + "#breadcrumb" }
+    }
+  ]) %}
+  {% if sourceType == "posts" %}
+    {% set _articleSchema = {
+      "@type": "Article",
+      "@id": _canonical + "#article",
+      "headline": _ogTitle,
+      "description": _desc,
+      "mainEntityOfPage": { "@id": _canonical + "#webpage" },
+      "url": _canonical,
+      "datePublished": date | rssDate if date else "",
+      "dateModified": updated | rssDate if updated else (date | rssDate if date else ""),
+      "inLanguage": _pageLang,
+      "image": [_ogImage],
+      "publisher": { "@id": site.url + "/#organization" }
+    } %}
+    {% set _schemaGraph = _schemaGraph.concat([_articleSchema]) %}
+  {% endif %}
+  <script type="application/ld+json">{{ { "@context": "https://schema.org", "@graph": _schemaGraph } | jsonLd | safe }}</script>
   <link rel="stylesheet" href="/styles/gridjs-mermaid.css">
   <link rel="stylesheet" href="/styles/theme.css">
   <link rel="stylesheet" href="/styles/cookieconsent.css">

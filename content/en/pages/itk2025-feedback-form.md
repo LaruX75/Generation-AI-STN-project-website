@@ -6,7 +6,7 @@ slug: itk2025-feedback-form
 permalink: /en/itk2025-feedback-form/
 status: publish
 sourceType: pages
-excerpt: ""
+excerpt: 'Feedback form for Generation AI''s ITK2025 programme, materials and presentations.'
 categories: []
 tags: []
 author: admin
