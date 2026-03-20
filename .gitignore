@@ -8,3 +8,6 @@ MIGRATION-NOTES.md
 codex-korjaukset.md
 _tmp_hankkeen/
 _site_test/
+.codex-temp/
+test-results/
+_site_playwright/

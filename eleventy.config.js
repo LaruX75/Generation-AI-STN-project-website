@@ -5,6 +5,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginPublicationToc = require("./_plugins/publication-toc.js");
 
 module.exports = function(eleventyConfig) {
+  const outputDirName = process.env.ELEVENTY_OUTPUT_DIR || "_site";
   const pad = value => String(value).padStart(2, "0");
   const formatDate = (value, format = "d.m.Y") => {
     if (value === null || value === undefined || value === "") return "";
@@ -151,7 +152,7 @@ module.exports = function(eleventyConfig) {
     const metadata = await Image(input, {
       widths: [768, 1280, 1920],
       formats: ["webp", "jpeg"],
-      outputDir: path.join(process.cwd(), "_site", "img", "hero"),
+      outputDir: path.join(process.cwd(), outputDirName, "img", "hero"),
       urlPath: "/img/hero/",
       sharpOptions: {
         jpeg: { quality: 82, mozjpeg: true },
@@ -424,7 +425,7 @@ module.exports = function(eleventyConfig) {
   });
 
   return {
-    dir: { input: "content", includes: "../_includes", data: "../_data", output: "_site" },
+    dir: { input: "content", includes: "../_includes", data: "../_data", output: outputDirName },
     templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",

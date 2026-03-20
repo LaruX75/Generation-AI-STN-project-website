@@ -9,7 +9,7 @@ module.exports = defineConfig({
   },
   reporter: [["list"]],
   webServer: {
-    command: "python3 -m http.server 41783 -d _site",
+    command: "npm run build:test && python3 -m http.server 41783 -d _site_playwright",
     url: "http://127.0.0.1:41783",
     reuseExistingServer: false,
     timeout: 30_000,

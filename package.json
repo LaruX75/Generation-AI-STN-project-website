@@ -10,6 +10,7 @@
     "build": "npm run build:offline",
     "build:offline": "node scripts/run-with-data-mode.js offline ./node_modules/.bin/eleventy && npm run search:index",
     "build:live": "node scripts/run-with-data-mode.js live ./node_modules/.bin/eleventy && npm run search:index",
+    "build:test": "node scripts/normalize-localized-frontmatter.js && node scripts/clean-output.js _site_playwright && ELEVENTY_OUTPUT_DIR=_site_playwright node scripts/run-with-data-mode.js offline ./node_modules/.bin/eleventy",
     "data:refresh": "node scripts/refresh-data-cache.js",
     "search:index": "pagefind --site _site",
     "test:e2e": "playwright test",
