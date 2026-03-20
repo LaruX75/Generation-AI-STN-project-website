@@ -91,6 +91,7 @@ function getAliasKey(stem) {
 }
 
 function buildTranslationKey(item) {
+  if (item.translationKeyValue) return `translationKey:${item.translationKeyValue}`;
   if (item.sourceId) return `sourceId:${item.sourceId}`;
   if (item.sourceUrl) return `sourceUrl:${item.sourceUrl}`;
   if (item.uniqueId) return `uniqueId:${item.uniqueId}`;
@@ -141,6 +142,7 @@ module.exports = function() {
         sourceType,
         title: data.title || "",
         permalink: data.permalink || "",
+        translationKeyValue: data.translationKey || "",
         sourceId: data.sourceId || "",
         sourceUrl: data.sourceUrl || "",
         date: data.date || "",
