@@ -1097,7 +1097,7 @@ body.search-modal-open { overflow: hidden; }
 .shield-project-title a { color: var(--global-palette3, #000); text-decoration: none; }
 .shield-project-title a:hover { color: var(--global-palette2, #446d33); text-decoration: underline; }
 .shield-project-meta { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: .2rem .75rem; font-size: .82rem; }
-.shield-project-meta dt { color: #888; font-weight: 600; white-space: nowrap; }
+.shield-project-meta dt { color: #5f5f5f; font-weight: 600; white-space: nowrap; }
 .shield-project-meta dd { margin: 0; color: #333; }
 /* Shield section heading variant (used outside shield-projects) */
 .shield-section-heading {
@@ -1672,7 +1672,7 @@ body.search-modal-open { overflow: hidden; }
 }
 .post-related__date {
   margin-top: auto; padding-top: 0.5rem;
-  font-size: 0.78rem; color: #94a3b8;
+  font-size: 0.78rem; color: #475569;
 }
 
 /* ── Footer logo strip ─────────────────────────────────────────────────────── */
@@ -1699,7 +1699,7 @@ body.search-modal-open { overflow: hidden; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #94a3b8;
+  color: #475569;
 }
 .footer-logos-list {
   display: flex;
@@ -2449,7 +2449,7 @@ a.publication-hero-author-name:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: #94a3b8;
+  color: #475569;
   cursor: default;
   text-align: left;
 }
@@ -2644,7 +2644,7 @@ a.publication-hero-author-name:hover {
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.06em !important;
-  color: #94a3b8 !important;
+  color: #475569 !important;
   margin: 0 0 0.5rem !important;
 }
 .pub-footnotes p { font-size: 0.875rem !important; line-height: 1.6 !important; margin: 0; }
@@ -3160,7 +3160,7 @@ a.publication-hero-author-name:hover {
 }
 .toiminta-digest-date {
   font-size: 0.75rem;
-  color: #888;
+  color: #5f5f5f;
 }
 .toiminta-digest-empty {
   font-size: 0.875rem;
@@ -3219,8 +3219,7 @@ a.publication-hero-author-name:hover {
 .home-challenge-num {
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--global-palette2, #446d33);
-  opacity: 0.45;
+  color: #365827;
   line-height: 1;
   margin-bottom: 0.75rem;
   font-variant-numeric: tabular-nums;
@@ -3458,7 +3457,7 @@ a.publication-hero-author-name:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.92);
   white-space: nowrap;
 }
 .genai-brand-strip-wordmark {
@@ -3517,7 +3516,7 @@ a.publication-hero-author-name:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.84);
   margin: 0 0 0.85rem;
 }
 .site-footer-links {
@@ -3549,7 +3548,7 @@ a.publication-hero-author-name:hover {
 .site-footer-copy {
   margin: 0;
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.82);
 }
 @media (max-width: 600px) {
   .site-footer-cols { grid-template-columns: 1fr 1fr; }
@@ -3923,7 +3922,7 @@ a.publication-hero-author-name:hover {
 .researcher-theme-num {
   font-size: 2.5rem;
   font-weight: 900;
-  color: var(--global-palette7, #f0f4ec);
+  color: #365827;
   line-height: 1;
   margin-bottom: 0.5rem;
   user-select: none;
@@ -3992,8 +3991,9 @@ a.publication-hero-author-name:hover {
   background: var(--global-palette7, #f0f4ec);
   color: var(--global-palette1, #314e25);
 }
-.researcher-shield-link {
-  color: rgba(255,255,255,0.85);
+.researcher-shield a.researcher-shield-link,
+.researcher-shield a.researcher-shield-link:visited {
+  color: #fff !important;
   font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
@@ -4007,7 +4007,7 @@ a.publication-hero-author-name:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.84);
   margin: 0 0 1rem;
 }
 .researcher-shield-projects-list {
@@ -4034,7 +4034,7 @@ a.publication-hero-author-name:hover {
 .researcher-shield-pi {
   display: block;
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.82);
   margin-top: 0.15rem;
 }
 @media (max-width: 768px) {
@@ -4155,7 +4155,7 @@ a.publication-hero-author-name:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.72);
   margin-bottom: 1.25rem;
 }
 .public-book-layout {
@@ -4192,7 +4192,7 @@ a.publication-hero-author-name:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.82);
   margin: 0 0 0.6rem;
 }
 .public-book-myths-list {
@@ -4233,9 +4233,10 @@ a.publication-hero-author-name:hover {
   background: var(--global-palette7, #f0f4ec);
   color: var(--global-palette1, #314e25);
 }
-.public-book-btn--secondary {
+.public-book a.public-book-btn--secondary,
+.public-book a.public-book-btn--secondary:visited {
   background: transparent;
-  color: rgba(255,255,255,0.85);
+  color: #fff !important;
   border: 1.5px solid rgba(255,255,255,0.35);
 }
 .public-book-btn--secondary:hover {
@@ -4326,7 +4327,7 @@ a.publication-hero-author-name:hover {
 }
 .public-tool-desc {
   font-size: 0.8rem;
-  color: #777;
+  color: #666;
 }
 
 /* Media section */
