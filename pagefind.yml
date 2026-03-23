@@ -1,4 +1,3 @@
 site: _site
-output_path: _site/pagefind
 output_subdir: pagefind
 keep_index_url: true

@@ -3,6 +3,7 @@ const path = require("node:path");
 const Image = require("@11ty/eleventy-img");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginPublicationToc = require("./_plugins/publication-toc.js");
+const { runPagefind } = require("./scripts/run-pagefind");
 
 module.exports = function(eleventyConfig) {
   const outputDirName = process.env.ELEVENTY_OUTPUT_DIR || "_site";
@@ -479,6 +480,13 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("rssDate", value => {
     const date = value instanceof Date ? value : new Date(value);
     return Number.isNaN(date.getTime()) ? new Date().toUTCString() : date.toUTCString();
+  });
+  eleventyConfig.on("eleventy.after", async ({ directories, outputMode }) => {
+    if (outputMode !== "fs") {
+      return;
+    }
+
+    await runPagefind({ site: directories.output });
   });
 
   // Prefix all root-relative paths in output HTML for GitHub Pages project site.
