@@ -1,0 +1,50 @@
+---
+title: 'Materiaalit'
+date: "2024-01-23T19:41:20"
+updated: "2026-01-24T08:55:51"
+slug: materiaalit-joista
+permalink: /materiaalit-joista/
+status: publish
+pageHero: true
+sourceType: pages
+excerpt: ""
+categories: []
+tags: []
+lang: fi
+author: admin
+layout: layouts/page.njk
+---
+{% set kadenceBlock = {
+  "name": "kadence/rowlayout",
+  "shortName": "rowlayout",
+  "attrs": {
+    "uniqueID": "3731_6d7d73-1f",
+    "columns": 1,
+    "colLayout": "equal",
+    "align": "full"
+  }
+} %}
+{% set _kb_save_3 = kadenceBlock %}
+{% set kadenceInnerHtml %}
+{% set kadenceBlock = {
+  "name": "kadence/column",
+  "shortName": "column",
+  "attrs": {
+    "uniqueID": "3731_57fe48-2c",
+    "borderWidth": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  }
+} %}
+{% set _kb_save_2 = kadenceBlock %}
+{% set kadenceInnerHtml %}
+Materiaalit ja sovellukset löytyvät uudesta osoitteesta: <a href="https://www.gen-ai.fi" target="_blank" rel="noopener" title="">https://www.gen-ai.fi</a>
+{% endset %}
+{% set kadenceBlock = _kb_save_2 %}
+{% include "blocks/kadence/column.njk" %}
+{% endset %}
+{% set kadenceBlock = _kb_save_3 %}
+{% include "blocks/kadence/rowlayout.njk" %}
