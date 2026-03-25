@@ -25,7 +25,12 @@ const PAGE_ALIAS_GROUPS = [
   ["posts-search", "search", "sok"],
   ["itk2025-palautelomake", "itk2025-feedback-form", "itk2025-feedbackformular"],
   ["encyclopedia", "ordbok"],
-  ["genai-opetettava-kone"]
+  ["genai-opetettava-kone"],
+  ["uutiskirje", "newsletter", "nyhetsbrev"],
+  ["shield-ohjelma", "shield-programme", "shield-program"],
+  ["saavutettavuusseloste", "accessibility-statement", "tillganglighetsredogorelse"],
+  ["educa-2025-palautelomake", "educa-2025-feedback-form", "educa-2025-feedback-formular"],
+  ["tilannekuva-2022-tiivistelma", "situation-report-2022-summary", "lagesrapport-2022-sammanfattning"]
 ];
 
 function walk(dir) {
