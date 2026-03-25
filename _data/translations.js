@@ -24,7 +24,8 @@ const PAGE_ALIAS_GROUPS = [
   ["vastuurajoitus", "liability-limitation", "ansvarsbegransning"],
   ["posts-search", "search", "sok"],
   ["itk2025-palautelomake", "itk2025-feedback-form", "itk2025-feedbackformular"],
-  ["encyclopedia", "ordbok"]
+  ["encyclopedia", "ordbok"],
+  ["genai-opetettava-kone"]
 ];
 
 function walk(dir) {
