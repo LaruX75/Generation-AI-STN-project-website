@@ -1,20 +1,18 @@
 ---
-title: "Kuinka saan somekoneen käyttööni?"
+title: "Kuinka saan somekoneen käyttööni? - siirretty"
 date: "2024-01-26T09:15:16"
 updated: "2024-01-26T09:15:20"
 slug: kuinka-saan-somekoneen-kayttooni
 permalink: /materiaalit/somekone/somekone-yleista/kuinka-saan-somekoneen-kayttooni/
+eleventyExcludeFromCollections: true
 status: publish
 sourceType: docs
-excerpt: Opettaja tai muu somekoneen pääkäyttäjä (vain tietokone tai tablet) Somekoneeseen liittyvä käyttäjä (mikä tahansa laite) Mitä tehdä kun käyttäjät ovat liittyneet koneeseen ja se on käynnissä
-categories: []
-tags: []
-author: admin
-doc-category:
-  - "Mikä on somekone?"
-knowledge-base:
-  - Somekone
-layout: layouts/doc.njk
+lang: fi
+layout: layouts/redirect.njk
+redirectTo: https://www.gen-ai.fi/fi/materials/somekone-unit
+redirectTitle: Kuinka saan somekoneen käyttööni? - siirretty
+redirectMessage: Sivu on siirretty uuteen osoitteeseen.
+redirectLinkLabel: Siirry uuteen osoitteeseen
 ---
 
 <ul class="wp-block-list">
