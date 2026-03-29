@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'Vår forskare Susanna Lindroos-Hovila berättar den 14.9.2021 i Helsingfors universitets vetenskapshörna om EU:s förslag för reglering av artificiell intelligens. Nedan ett citat från artikeln publicerad i vetenskapshörnan. 1. Reglering riktar sig till AI-produkter Kommissionen ser regleringen framför allt som produktreglering. Lagstiftningen är avsedd att begränsa de system som får användas på EU:s inre marknad och importeras hit. Avsikten är att öka medborgarnas förtroende för produkter, det vill säga AI-system inom EU och att skapa…'
 categories:
-  - GenAI-projektets personal i media
-  - Helsingfors universitet
-  - Youtube
+  - "Helsingfors universitet"
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal i media"
 tags:
   - EU
   - Helsingfors universitet

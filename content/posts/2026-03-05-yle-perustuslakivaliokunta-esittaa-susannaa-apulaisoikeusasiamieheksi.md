@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: "Yle uutisoi 5.3.2026, että perustuslakivaliokunta esittää apulaisoikeusasiamieheksi Susanna Lindroos-Hovinheimoa tai Eeva Nykästä. Alkuperäinen juttu: https://yle.fi/uutiset/lyhyesti/74-20213792"
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö mediassa
-  - YLE
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
+  - "Ajankohtaista / YLE"
 tags:
   - susanna lindroos-hovinheimo
   - yle

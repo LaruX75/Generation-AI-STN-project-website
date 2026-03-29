@@ -8,9 +8,10 @@ status: publish
 sourceType: posts
 excerpt: 'Prof. Matti Tedre höll invigningsanförandet "Vad kan en dator inte göra? En historia om missuppfattningar" på Interaktiv teknik i utbildningen 20.4.2023. VAD ÄR ITK? Finlands största evenemang för digital utbildning och lärande Interaktiv Teknik i Utbildningen arrangeras i Hämeenlinna på Aulango 19.-21.4.2023. Läs mer: https://itk-konferenssi.fi/'
 categories:
-  - Aktuellt
-  - Östfinlands universitet
-  - Konferenser och seminarier
+  - "Forskning"
+  - "Forskning / Konferenshandlingar"
+  - "Helsingfors universitet"
+  - "Nyheter från"
 tags:
   - ITK2023
   - keynote

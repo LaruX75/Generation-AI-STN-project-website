@@ -8,9 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'Projektets forskare prof. Teemu Roos från Helsingfors universitet berättade om AI-relaterade bilder i en intervju med FCAI den 25.2022 "AI-relaterade bilder har länge varit ett stöt i mitt öga. För mer än tio år sedan när jag undervisade introduktionskursen om artificiell intelligens för första gången märkte jag att många studenters föreställningar om AI hade formats från Isaac Asimovs och andra science fiction-författarnas berättelser. Någon kan ha varit besviken när vi i kursen inte diskuterade…"'
 categories:
-  - Aktuellt
-  - FCAI
-  - GenAI-projektets personal i media
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal i media"
 tags:
   - FCAI
   - scifi

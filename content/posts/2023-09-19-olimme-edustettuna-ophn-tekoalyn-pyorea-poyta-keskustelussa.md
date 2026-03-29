@@ -8,7 +8,8 @@ status: publish
 sourceType: posts
 excerpt: "Generation AI hanke oli mukana opetushallituksen järjestämässä pyöreä pöytä keskustelussa 19.9.2023. Tilaisuudessa oli keskustelemassa kattava joukko suomalaisia tutkijoita,kehittäjiä ja opettajia eri koulutusasteilta. Ennen pyöreätä pöytää Generation AI hankkeen edustajana toiminut Jari Laru keskusteli opetushallituksen ja opetusministeriön edustajien kanssa yhteistyöstä ja esitteli Generation AI hankkeen tavoitteita. Lisätietoa tekoälyn pyöreästä pöydästä: Tekoäly on tällä hetkellä aktiivisen keskustelun…"
 categories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
 tags:
   - Opetushallitus
   - Pyöreä pöytä keskustelu

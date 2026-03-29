@@ -8,10 +8,10 @@ status: publish
 sourceType: posts
 excerpt: "Yle haastatteli Teemu Roosia 5.2.2025 Helsingin kaupungin päätöksestä kieltää tekoälytyökalujen käyttö kouluissa toistaiseksi. Alkuperäinen juttu: https://yle.fi/a/74-20141409"
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö mediassa
-  - Haastattelu
-  - YLE
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
+  - "Ajankohtaista / Haastattelu"
+  - "Ajankohtaista / YLE"
 tags:
   - koulut
   - teemu roos

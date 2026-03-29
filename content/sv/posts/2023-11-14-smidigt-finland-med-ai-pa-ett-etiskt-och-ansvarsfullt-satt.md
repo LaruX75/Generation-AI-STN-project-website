@@ -8,8 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'Fyra gånger om året ordnar Finlands byrå för digitalisering och befolkningsinformation evenemanget Sujuva Suomi, där man diskuterar aktuella fenomen inom digitaliseringen. Den här gången handlade det om etik och ansvar i samband med AI. Professor Susanna Lindroos-Hovinheimo från Generation AI deltog som paneldeltagare. Du kan se en inspelning av webinariet här.'
 categories:
-  - GenAI-projektets personal vid evenemang
-  - Nyheter från
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal vid evenemang"
 tags:
   - artificiell intelligens
   - DVV

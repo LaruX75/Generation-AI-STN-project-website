@@ -8,10 +8,10 @@ status: publish
 sourceType: posts
 excerpt: "Yle Oppiminen haastatteli Teemu Roosia 30.6.2025 tekoälyn vinoumista ja siitä, mitä kuvageneraattorit oppivat ihmisten tuottamasta aineistosta. Alkuperäinen juttu: https://yle.fi/a/74-20145829"
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö mediassa
-  - Haastattelu
-  - YLE
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
+  - "Ajankohtaista / Haastattelu"
+  - "Ajankohtaista / YLE"
 tags:
   - algoritmit
   - teemu roos

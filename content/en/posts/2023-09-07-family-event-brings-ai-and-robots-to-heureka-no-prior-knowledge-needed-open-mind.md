@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'The news was originally published in Vantaan Sanomat newspaper on 7.9.2023. Read the original article here: https://www.vantaansanomat.fi/paikalliset/6191468 The Smart Machine! family day will be held at Heureka on Saturday, September 23rd. – The goal is to make artificial intelligence, technology, robotics and programming more familiar and accessible. We want to get people excited about these topics and introduce them in an experiential way. Awareness grows at the event and topics can be approached with a low threshold, says Jutta Kujasalo, Heureka''s program production manager. At the event there are…'
 categories:
-  - GenAI Project Staff in Media
-  - GenAI Project Staff at Events
-  - Interview
+  - "News from"
+  - "News from / GenAI project staff at events"
+  - "News from / GenAI project staff in the media"
 tags:
   - "Smart Machine!"
   - heureka

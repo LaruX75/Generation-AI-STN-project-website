@@ -8,7 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'The Generation AI project participated in a round table discussion organized by the Ministry of Education on 19.9.2023. The event brought together a comprehensive group of Finnish researchers, developers and teachers from different levels of education. Before the round table, Jari Laru, representing the Generation AI project, discussed cooperation with representatives of the Ministry of Education and presented the objectives of the Generation AI project. For more information about the AI round table discussion: Artificial intelligence is currently the subject of active discussion…'
 categories:
-  - GenAI project staff at events
+  - "News from"
+  - "News from / GenAI project staff at events"
 tags:
   - Ministry of Education
   - Round table discussion

@@ -8,7 +8,8 @@ status: publish
 sourceType: posts
 excerpt: "GenAI mukana tyttöjen päivän tapahtumissa! 400 tyttöä (ja poikaa) vieraili Oulun yliopistolla 11.10 osana kansainvälistä tyttöjen päivää. Myös Generation AI hanke osallistui tähän päivään toteuttamalla ”tekoälyn musta laatikko – opeta konetta” työpajan. Tiesitkö, että tyttöjen päivä on Soroptimistit naisjärjestön keskeinen tehtävä kaikkialla maailmassa. Oulussa järjestelyistä vastasi järjestön paikallinen klubi. Pajan aluksi nuoret perehtyivät siihen, kuinka…"
 categories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
 tags:
   - koneoppiminen
   - opetettava kone

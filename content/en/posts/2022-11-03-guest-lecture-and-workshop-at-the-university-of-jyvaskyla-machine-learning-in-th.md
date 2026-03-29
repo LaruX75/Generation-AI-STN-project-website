@@ -8,10 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'Project researchers Prof. Matti Tedre and university researcher Henriikka Vartiainen held a guest lecture and workshop on "Machine Learning in the School World" at the University of Jyväskylä on 4.11.2022. Technologies based on machine learning, and more broadly artificial intelligence, have become part of children''s and young people''s everyday lives through various social media applications. The lecture and workshop present perspectives related to the transformation lines caused by machine learning. Technologies based on machine learning, and more broadly artificial intelligence, have become part of children''s and young people''s everyday lives through various social media applications…'
 categories:
-  - News and updates
-  - Lecture
-  - Workshop
-  - University news
+  - "News from"
+  - "News from / Webinar"
+  - "University of Helsinki"
 tags:
   - Henriikka Vartiainen
   - Jyväskylä University

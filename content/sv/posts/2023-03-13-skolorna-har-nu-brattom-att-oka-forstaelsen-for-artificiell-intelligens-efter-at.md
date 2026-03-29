@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'Texten nedan publicerades 13.3.2023 i YLE-nyheter. Läs originalartikeln här: https://yle.fi/a/74-20021837 OBS! originalartikeln innehåller mediamaterial som inte visas här! Vad är artificiell intelligens? Frågan borde vara lätt för en professor i datavetenskap, men Matti Tedre säger att ordet är dåligt. – Artificiell intelligens är en mycket vag term. Beroende på årtionde är det olika vad som anses vara artificiell intelligens, säger Tedre som arbetar vid Östra Finlands universitet. Genast efter det medger han själv att han talar om…'
 categories:
-  - Aktuellt
-  - GenAI-projektets personal i media
-  - YLE
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal i media"
+  - "Nyheter från / YLE"
 tags:
   - Henriikka Vartiainen
   - koneoppiminen

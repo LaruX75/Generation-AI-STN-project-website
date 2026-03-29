@@ -8,7 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'På tisdagen den 3.10.2023 arrangerade Ouluś stad ett DigiKarneval för personal inom bildnings- och kulturtjänster, där Generation AI-projektet också var starkt representerat. Ouluś stad är projektets samarbetspartner, vilket betyder att vi utvecklar applikationer och material tillsammans med frivilliga utvecklarlärare och elever. På DigiKarnivalen presenterade vi undervisningsmaskinen som utvecklats i projektet i två workshops, och projektrepresentanten Jari Laru deltog i början av evenemanget i en diskussion med Microsofts Vesa Äyräs och…'
 categories:
-  - GenAI-projektets personal på evenemang
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal vid evenemang"
 tags:
   - Digikarnevaler
   - Microsoft

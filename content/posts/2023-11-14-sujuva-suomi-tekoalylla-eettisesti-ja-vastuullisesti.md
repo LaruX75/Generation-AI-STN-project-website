@@ -8,8 +8,8 @@ status: publish
 sourceType: posts
 excerpt: "Digi- ja väestötietovirasto järjestää neljästi vuodessa Sujuva Suomi – tilaisuuden, jossa keskustellaan ajankohtaisista digitalisaation ilmiöistä. Tämän kerran aiheena oli tekoälyn eettisyys ja vastuullisuus. Generation AI:n professori Susanna Lindroos-Hovinheimo osallistui tilaisuuteen keskustelijana. Tallenteen webinaarista voit katsoa täältä."
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
 tags:
   - DVV
   - Sujuva Suomi

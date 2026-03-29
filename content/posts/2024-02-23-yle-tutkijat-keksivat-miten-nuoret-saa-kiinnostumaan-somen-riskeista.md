@@ -8,10 +8,9 @@ status: publish
 sourceType: posts
 excerpt: "Yle kirjoitti artikkelin Generation AI:n kehittelemästä Somekoneesta. Artikkelissa professori Matti Tedre kertoo Somekoneesta, jota parhaillaan testataan kouluissa viides- ja kahdeksasluokkalaisilla. Somekone on sovellus, jonka tarkoituksena on simuloida sosiaalisen median toimintaa. Oppilaat selaavat ensin koneeseen syötettyä kuvavirtaa. Aivan kuten todellisessakin sosiaalisessa mediassa, kuvia voidaan kommentoida, niistä voidaan tykätä ja niitä voidaan jakaa, sekä ryhtyä leikisti seuraamaan…"
 categories:
-  - Ajankohtaista
-  - Media
-  - "Uncategorized @fi"
-  - YLE
+  - "Ajankohtaista"
+  - "Ajankohtaista / YLE"
+  - "Media"
 tags:
   - Matti Tedre
   - Some

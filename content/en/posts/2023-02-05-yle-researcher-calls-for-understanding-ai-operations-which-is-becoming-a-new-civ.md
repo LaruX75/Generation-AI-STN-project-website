@@ -8,8 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'University lecturer Anna-Mari Rusanen from the University of Helsinki, known to our project''s researcher Prof. Teemu Roos, tells in a YLE interview how understanding AI operations will soon be a new civic skill. The interview fits well with our project''s theme, as we develop content, methods, and applications through which these civic skills are taught to primary school students, teachers, and teacher students. Read YLE''s comprehensive article featuring an interview with Anna-Mari Rusanen: https://yle.fi/aihe/a/20-10004202 Artificial intelligence and its…'
 categories:
-  - GenAI Project Staff in the Media
-  - YLE
+  - "News from"
+  - "News from / GenAI project staff in the media"
+  - "News from / YLE"
 tags:
   - haastattelu
   - tekoäly

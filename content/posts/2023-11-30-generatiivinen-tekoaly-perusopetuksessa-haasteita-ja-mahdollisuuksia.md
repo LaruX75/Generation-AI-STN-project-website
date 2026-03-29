@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: "Kaiju Kangas ja Sanna Davies osallistuivat Heurekan opettajailtaan 30.11.2023 teemalla Generatiivinen tekoäly perusopetuksessa: Haasteita ja mahdollisuuksia."
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö tapahtumissa
-  - Konferenssit ja seminaarit
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+  - "Konferenssit ja seminaarit"
 tags:
   - heureka
   - kaiju kangas

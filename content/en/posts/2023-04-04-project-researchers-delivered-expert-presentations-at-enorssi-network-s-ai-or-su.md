@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'The national teacher training college cooperation network eNorssi held an AI webinar on 4.4.2023, where expert presentations from our project were delivered by Henriikka Vartiainen and Jari Laru.'
 categories:
-  - News
-  - GenAI project staff at events
-  - Webinar
+  - "News from"
+  - "News from / GenAI project staff at events"
+  - "News from / Webinar"
 tags:
   - enorssi
   - normaalikoulu

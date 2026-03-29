@@ -8,10 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'Prof. Teemu Roos var gäst i MTV Gomoron 6.9.2023. Han diskuterade artificiell intelligens tillsammans med Reaktors chef för AI-affärsverksamhet Hanna Hagström. Se inspelningen här: https://www.mtv.fi/sarja/huomenta-suomi-1485/tekoalya-kansalle-20358397'
 categories:
-  - Aktuellt
-  - GenAI-projektets personal i media
-  - Intervju
-  - MTV3
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal i media"
 tags: []
 author: admin
 layout: layouts/post.njk

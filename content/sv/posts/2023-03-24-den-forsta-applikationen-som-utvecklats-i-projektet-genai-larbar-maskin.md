@@ -8,10 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'I projektet utvecklas olika verktyg och resurser som är särskilt utformade för barn och ungdomar. Det första verktyget är "GenAI lärbar maskin", som är ett förenklat exempel på övervakad maskininlärning. Applikationen är implementerad så att bilder som laddas upp inte överförs någon annanstans från webbläsaren. Det är ett säkrare sätt att närma sig världen för maskininlärning och artificiell intelligens än kommersiella motsvarigheter just av denna anledning. Maskininlärning i vårt dagliga liv: Detta…'
 categories:
-  - Aktuellt
-  - Projektverksamhet
-  - Klassificerare
-  - Applikationer
+  - "Forskning"
+  - "Nyheter från"
+  - "Projektaktiviteter"
 tags:
   - GenAi kuvien luokittelija
   - koneoppiminen

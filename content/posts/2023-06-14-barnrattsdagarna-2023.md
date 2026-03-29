@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: "Hankkeemme tutkija Susanna Lindroos-Hovinheimo osallistui Barnrättsdagarna 2023 -tapahtumaan 14.6.2023."
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö tapahtumissa
-  - Konferenssit ja seminaarit
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+  - "Konferenssit ja seminaarit"
 tags:
   - oikeustiede
   - susanna lindroos-hovinheimo

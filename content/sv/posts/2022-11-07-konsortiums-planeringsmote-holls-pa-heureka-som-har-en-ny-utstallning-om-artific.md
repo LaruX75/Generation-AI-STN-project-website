@@ -8,8 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'Generation AI höll projektets första planeringsmöte på Heureka, som är medlem i projektets konsortium. Platsen var perfekt för mötet, eftersom Heureka öppnade en ny utställning om artificiell intelligens den 22.6.2022. Efter planeringsmötet bekantade sig medlemmarna av konsortiet med Heurekas AI-utställning samt andra Heureka-aktiviteter relaterade till artificiell intelligens, robotik och programmering. Vad handlar AI-utställningen om? På Heurekas webbplatser beskrivs utställningen enligt följande AI – Me, Myself &…'
 categories:
-  - Aktuellt
-  - Projektverksamhet
+  - "Nyheter från"
+  - "Projektaktiviteter"
 tags:
   - hankekokous
   - heureka

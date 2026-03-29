@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'Kunskapsarbete minskar när maskinerna utvecklas, och undervisningen bör ge beredskap för nya former av designarbete, skriver Matti Tedre och Peter J. Denning. DEN DATATEKNISKA revolutionen framskrider i rasande fart. Smarttelefoner anpassade efter individuella behov når prestationen från världens superdatorer vid årtusendet början och håller oss online nästan överallt. Självkörande bilar kör redan på vägarna. Företag som Uber och Airbnb utmanar gamla affärsmodeller. Datorer övervakar hälsan och diagnostiserar sjukdomar. Många traditionella jobb och yrken har försvunnit.'
 categories:
-  - Aktuellt
-  - GenAI-projektets personal i media
-  - Kolumn
+  - "Nyheter från"
+  - "Nyheter från / Debattartikel"
+  - "Nyheter från / GenAI-projektets personal i media"
 tags:
   - Helsingin Sanomat
   - Kolumn

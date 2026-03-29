@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: "Generation AI oli mukana Joensuun SciFestissä 23.-25.5.2024 ohjelmalla Seikkailu somekoneessa."
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö tapahtumissa
-  - Konferenssit ja seminaarit
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+  - "Konferenssit ja seminaarit"
 tags:
   - scifest
   - joensuu

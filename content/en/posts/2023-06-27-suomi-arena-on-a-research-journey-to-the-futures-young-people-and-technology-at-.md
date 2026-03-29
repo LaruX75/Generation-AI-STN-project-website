@@ -8,8 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'Prof. Teemu Roos participated on June 27, 2023 in the Suomi Arena panel "on a research journey to the futures, young people and technology at the helm". You can watch the panel recording here: https://www.mtv.fi/sarja/suomiareena-1464/tutkimusmatkalla-tulevaisuuksiin-ohjaimisssa-nuoret-ja-teknologia-20594602 Join young people on a research journey into the future to find answers to how schooling, learning, and technology are developing: What and how do we learn? What role does technology play in our daily lives? The School of the Future is participating in SuomiArena – come and follow the discussion! What: Panel discussion On a research journey to the futures…'
 categories:
-  - News
-  - GenAI project staff at events
+  - "News from"
+  - "News from / GenAI project staff at events"
 tags:
   - panel
   - teemu roos

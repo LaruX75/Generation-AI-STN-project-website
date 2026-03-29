@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'Nyheten publicerades ursprungligen i Vantaa Sanomat den 7.9.2023. Läs originalartikeln här: https://www.vantaansanomat.fi/paikalliset/6191468 Smart maskin! -familjedagen anordnas på Heureka på lördag 23 september. – Målet är att göra artificiell intelligens, teknik, robotik och programmering mer bekant och lättillgänglig. Vi vill få människor att bli inspirerade av dessa ämnen och att lära känna dem på upplevelsemässiga sätt. Vid evenemanget växer medvetenheten och ämnena kan närmas på låg tröskel, säger Heurekas programproduktionschef Jutta Kujasalo. Vid evenemanget finns…'
 categories:
-  - Generation AI-projektets personal i media
-  - Generation AI-projektets personal på evenemang
-  - Intervju
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal i media"
+  - "Nyheter från / GenAI-projektets personal vid evenemang"
 tags:
   - "Älyä kone!"
   - heureka

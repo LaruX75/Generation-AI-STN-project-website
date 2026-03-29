@@ -8,9 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'MTV3 intervjuade projektets forskare, AI-professor Teemu Roos den 26.12.2022. "Artificiell intelligens kan möjligtvis utföra en del av till exempel en elevs läxor, men vad kan man egentligen använda den till? AI-professorn ser möjligheter i applikationer som ChatGPT, men problemet är att man inte helt kan lita på de svar den ger. Professorn berättar i videon ovan i artikeln varför." https://www.mtvuutiset.fi/artikkeli/koululaisen-chatgpt-lla-tekema-kirjoitelma-meni-taydesta-tekoalyprofessorin-mukaan-hittibotti-on-mestari-lahinna-bullshitissa-ja-mansplainauksessa/8597214'
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö mediassa
-  - MTV3
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal i media"
 tags:
   - chatgpt
   - haastattelu

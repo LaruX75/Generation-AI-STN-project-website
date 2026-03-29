@@ -8,7 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'Forskarnattens arbetsshop är ett europeiskt vetenskapsevent som genomfördes 2023-09-29. Generation AI-projektet deltog vid Uleå universitet med en AI-workshop kallad "Artificiell intelligens i en svart låda", där barn, ungdomar och föräldrar kunde bekanta sig med applikationen "Gen AI-träningsbar maskin" som utvecklades i projektet. Beskrivning av workshopen: I workshopen lär man sig om artificiell intelligens genom maskinlärning och klassificering. Med Generation AI-projektets forskare får deltagarna prova klassificeringsappen själva. Kom och…'
 categories:
-  - GenAI-projektets personal på evenemang
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal vid evenemang"
 tags:
   - maskinlärning
   - artificiell intelligens

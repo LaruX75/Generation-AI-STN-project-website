@@ -8,8 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'Generation AI-projektet kommer att publicera en AI-applikation och stödjande undervisningsmaterial för grundskoleelever. Den forskningsbaserade tjänsten gör det möjligt för barn och ungdomar att på ett säkert sätt lära sig förstå AI-baserad teknik. På EDUCA 2024 kommer vi att lansera ett materialpaket som erbjuder en forskningsbaserad lösning för undervisning i AI-färdigheter i grundskolan. Den lättanvända tjänsten…'
 categories:
-  - GenAI-projektets personal vid evenemang
-  - Nyheter från
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal vid evenemang"
 tags:
   - artificiell intelligens
   - educa2024

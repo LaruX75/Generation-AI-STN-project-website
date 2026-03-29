@@ -8,7 +8,8 @@ status: publish
 sourceType: posts
 excerpt: "Generation AI opetettava kone: Miten kone oppii? Kolmannella rastilla sukelsimme syvemmälle tekoälyn maailmaan Generation AI hankkeessa kehitetyn opetettavan koneen avulla. Miten koneoppiminen voi auttaa meitä ymmärtämään monimutkaisia konsepteja tai jopa tukea opetuksessa? Aikuisten perusopetuksen opiskelijat tutustuivat rastilla siihen miten konetta opetetaan ja miten sen oppiminen eroaa ihmisten oppimisesta. Tämän rastin tarkoituksena oli laajemminkin konkretisoida monien koneoppimista…"
 categories:
-  - GenAI työkalut ja materiaalit hankkeen ulkopuolella
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI työkalut ja materiaalit hankkeen ulkopuolella"
 tags:
   - GenAI luokittelija
   - GenAI opetettava kone

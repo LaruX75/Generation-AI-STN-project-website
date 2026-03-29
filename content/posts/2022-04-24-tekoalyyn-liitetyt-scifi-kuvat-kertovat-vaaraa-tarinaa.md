@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: "Hankkeen tutkija prof. Teemu Roos Helsingin yliopistosta kertoi tekoälyyn liitetyistä kuvista FCAI:n haastattelussa 25.2022 ”Tekoälyyn liitetyt kuvat ovat pitkään olleet minulle kiviä kengässä. Yli kymmen vuotta sitten kun opetin ensimmäistä kertaa Johdatus tekoälyyn -kurssia, huomasin, että monien opiskelijoiden mielikuvat tekoälystä olivat syntyneet Isaac Asimovin ja muiden scifi-kirjailijoiden tarinoiden perusteella. Joku taisi pettyäkin, kun kurssilla ei pohdittu…"
 categories:
-  - Ajankohtaista
-  - FCAI
-  - GenAI hankkeen henkilöstö mediassa
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
+  - "FCAI"
 tags:
   - FCAI
   - scifi

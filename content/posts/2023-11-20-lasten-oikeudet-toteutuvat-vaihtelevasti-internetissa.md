@@ -8,8 +8,9 @@ status: publish
 sourceType: posts
 excerpt: "EU:n yleinen tietosuoja-asetus (GDPR) asettaa palveluntarjoajille vaatimuksia, joiden mukaan niiden tulee selvittää, ovatko palveluiden käyttäjät lapsia. Tutkimukset ovat kuitenkin osoittaneet, että nykyiset iänvarmistustyökalut ovat epäluotettavia. Eniten käytetty menetelmä on itseilmoitus, jossa käyttäjän on ilmoitettava ikänsä esimerkiksi syöttämällä syntymäaikansa rekisteröinnin yhteydessä. On helppo nähdä, että tällainen menetelmä sisältää epävarmuustekijöitä. Lapset voivat helposti ohittaa iän varmistuksen ilmoittamalla…"
 categories:
-  - Ajankohtaista
-  - Lasten oikeudet
+  - "Ajankohtaista"
+  - "Tutkimus"
+  - "Tutkimus / Lasten oikeudet"
 tags:
   - henkilötietojen käsittely
   - lasten oikeudet

@@ -8,10 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'Yle skrev en artikel om Some Machine som utvecklats av Generation AI. I artikeln berättar professor Matti Tedre om Some-maskinen, som för närvarande testas i skolor med femte- och åttondeklassare. Somekone är en applikation som är utformad för att simulera aktivitet på sociala medier. Studenterna bläddrar först igenom det bildflöde som matas in i maskinen….'
 categories:
-  - Media
-  - Nyheter från
-  - Okategoriserad
-  - YLE
+  - "Media"
+  - "Nyheter från"
+  - "Nyheter från / YLE"
 tags:
   - Matti Tedre
   - Några

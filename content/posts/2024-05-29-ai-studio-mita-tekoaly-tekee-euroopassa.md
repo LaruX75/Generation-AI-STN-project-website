@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: "Generation AI osallistui AI-STUDIO! Mitä tekoäly tekee Euroopassa? -tapahtumaan 29.5.2024."
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö tapahtumissa
-  - Konferenssit ja seminaarit
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+  - "Konferenssit ja seminaarit"
 tags:
   - teemu roos
   - tekoäly

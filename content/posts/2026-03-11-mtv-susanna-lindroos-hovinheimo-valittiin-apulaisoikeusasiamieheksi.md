@@ -8,8 +8,8 @@ status: publish
 sourceType: posts
 excerpt: "MTV Uutiset kertoi 11.3.2026 Susanna Lindroos-Hovinheimon tulleen valituksi eduskunnan apulaisoikeusasiamieheksi. Alkuperäinen juttu: https://www.mtvuutiset.fi/artikkeli/susanna-lindroos-hovinheimo-valittiin-eduskunnan-apulaisoikeusasiamieheksi/9308714"
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö mediassa
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
 tags:
   - mtv3
   - susanna lindroos-hovinheimo

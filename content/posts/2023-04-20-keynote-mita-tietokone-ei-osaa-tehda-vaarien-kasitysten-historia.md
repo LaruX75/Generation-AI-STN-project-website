@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: "Prof. Matti Tedre piti avajaispuheenvuoron ”Mitä tietokone ei osaa tehdä? Väärien käsitysten historia” Interaktiivinen tekniikka koulutuksessa 20.4.2023. MIKÄ ITK? Suomen suurin digitaalisen koulutuksen ja oppimisen tapahtuma Interaktiivinen Tekniikka Koulutuksessa järjestetään Hämeenlinnassa Aulangolla 19.-21.4.2023. Lue lisää: https://itk-konferenssi.fi/"
 categories:
-  - Ajankohtaista
-  - Itä-suomen yliopisto
-  - Konferenssit ja seminaarit
+  - "Ajankohtaista"
+  - "Itä-Suomen yliopisto"
+  - "Konferenssit ja seminaarit"
 tags:
   - ITK2023
   - keynote

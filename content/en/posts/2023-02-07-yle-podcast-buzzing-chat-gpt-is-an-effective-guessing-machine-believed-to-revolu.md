@@ -8,8 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'Chat GPT has been called artificial intelligence that you can ask anything, but whose answers you need to fact-check. Since its release in November, Chat GPT has been said to revolutionize the way we use the internet and work. At the same time, concerns about its misuse, for example in studies, have grown. In the news podcast, university lecturer Anna-Mari Rusanen from the University of Helsinki explains what Chat GPT really is and how it should be used....'
 categories:
-  - Current affairs outside the project
-  - YLE
+  - "News from"
+  - "News from / YLE"
 tags:
   - chatgpt
   - podcast

@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'Journalisten Jari Hanska intervjuade docenten Teemu Roos från Helsingfors universitet om ämnet: "Vad betyder artificiell intelligens, algoritmer och maskininlärning?" Intervjun genomfördes i Helsingfors universitets vetenskapshörna den 25.11.2019 vid början av evenemanget AI beslutar. Se alla videoklipp från evenemanget på vetenskapshörnans Youtube-kanal: https://www.youtube.com/watch?v=b4ZGTa-Vczk'
 categories:
-  - Aktuellt
-  - GenAI-projektets personal i media
-  - Helsingfors universitet
+  - "Helsingfors universitet"
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal i media"
 tags:
   - algoritm
   - Helsingfors universitet

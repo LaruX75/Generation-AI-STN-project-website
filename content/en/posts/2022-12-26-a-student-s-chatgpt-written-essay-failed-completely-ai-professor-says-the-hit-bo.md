@@ -8,9 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'MTV3 interviewed the project''s researcher, AI Professor Teemu Roos, on 26.12.2022. AI can be capable of doing part of, for example, a student''s homework, but what can it actually be used for? The AI professor sees possibilities in applications like ChatGPT, but the problem is that you can''t fully trust the answers it provides. The professor explains the reason in the video above the article. https://www.mtvuutiset.fi/artikkeli/koululaisen-chatgpt-lla-tekema-kirjoitelma-meni-taydesta-tekoalyprofessorin-mukaan-hittibotti-on-mestari-lahinna-bullshitissa-ja-mansplainauksessa/8597214'
 categories:
-  - News
-  - GenAI Project Staff in Media
-  - MTV3
+  - "News from"
+  - "News from / GenAI project staff in the media"
 tags:
   - chatgpt
   - interview

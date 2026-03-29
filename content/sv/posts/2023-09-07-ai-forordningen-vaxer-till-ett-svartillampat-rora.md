@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'Texten nedan, där professor i offentlig rätt Susanna Lindroos-Hovinheimo och biträdande professor Riikka Koulu intervjuas, publicerades den 7.9.2023 som en nyhet från Helsingfors universitet. Läs den ursprungliga nyhetstexten här: https://www.helsinki.fi/fi/uutiset/demokratia/tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi I EU arbetar man med full kraft för att få den planerade AI-förordningen färdig inom den närmaste framtiden. I takt med att AI-baserade system utvecklas i rasande takt hotar regelverket att växa till ett svårtillämpat helt. – Det börjar verka som att förordningen kommer att bli mycket omfattande och innehålla ett fruktansvärt antal artiklar. Jag tycker det är mycket osannolikt att man skulle kunna göra det till en tydlig helhet. – Först när vi får de första avgörandena från unionens domstol kan vi veta vad förordningen exakt säger. Det tar år. Ändå måste förordningen följas hela tiden. Det kommer att bli en riktigt svår situation för alla aktörer, både privata och offentliga.'
 categories:
-  - Aktuellt
-  - GenAI-projektets personal i media
-  - Helsingfors universitet
+  - "Helsingfors universitet"
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal i media"
 tags:
   - lainsäädäntö
   - lasten suojelu

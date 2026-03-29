@@ -8,9 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'The Helsinki GenAI project was launched on 11.5. at the Helsinki City Education and Training Division''s Learning Digital Carnival event. The goal is to learn to recognize, use, and understand artificial intelligence in the context of preschool-age children. At the beginning of the afternoon, Sini Davies presented the project''s implementation in Helsinki, followed by a concrete example of a pilot project to be implemented in preschool education. With preschoolers, we learn to recognize, use, and understand AI through age-appropriate tasks. Could you identify which of the cleaning robot drawings was made by a preschooler and which by AI?...'
 categories:
-  - News
-  - Preschool
-  - Project activities
+  - "News from"
+  - "Project activities"
 tags:
   - esiopetus
   - eskarit

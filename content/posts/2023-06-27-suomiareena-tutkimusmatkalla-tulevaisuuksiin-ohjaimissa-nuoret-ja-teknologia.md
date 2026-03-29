@@ -8,8 +8,8 @@ status: publish
 sourceType: posts
 excerpt: "Prof. Teemu Roos osallistui 27.6.2023 Suomi Areenan paneeliin ”tutkimusmatkalla tulevaisuuksiin, ohjaimissa nuoret ja teknologia” .. Paneelia voi katsoa tallenteena täältä:https://www.mtv.fi/sarja/suomiareena-1464/tutkimusmatkalla-tulevaisuuksiin-ohjaimisssa-nuoret-ja-teknologia-20594602 Lähde nuorten kanssa tutkimusmatkalle tulevaisuuteen etsimään vastauksia koulun, oppimisen ja teknologian kehitykseen: Mitä ja miten opimme? Entä minkälainen rooli teknologialla on arjessamme? Tulevaisuuskoulu on mukana SuomiAreenassa – tule mukaan seuraamaan keskustelua! Mitä: Paneelikeskustelu Tutkimusmatkalla tulevaisuuksiin…"
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
 tags:
   - paneeli
   - teemu roos

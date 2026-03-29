@@ -8,10 +8,10 @@ status: publish
 sourceType: posts
 excerpt: 'Susanna Lindroos-Hovinheimo har skrivit en blogginlägg den 12.9.2023 till European Law Blog. Nedan följer en kort svensk sammanfattning av inlägget: Förhandlingarna om EU:s lag om artificiell intelligens pågår och det förs omfattande diskussioner om ämnet. Barnets rättigheter har dock inte beaktats särskilt väl under beredningen. Även om lagförslaget har utvecklats i en riktning som beaktar grundläggande rättigheter, har lagartiklarna inte skrivits med hänsyn till barnets skydd. Kommissionens, rådets och parlamentets ståndpunkter…'
 categories:
-  - Ajankohtaista
-  - Blogikirjoitus
-  - Lasten oikeudet
-  - Tutkimus
+  - "Forskning"
+  - "Forskning / Barns rättigheter"
+  - "Nyheter från"
+  - "Nyheter från / Blogginlägg"
 tags:
   - lainsäädäntö
   - lapset ja tekoäly

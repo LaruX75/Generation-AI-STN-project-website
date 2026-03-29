@@ -8,8 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'Följande blogginlägg publicerades 22.5.2023 i Grundlagsbloggen, som är Finlands konstitutionella förenings aktualitetsöversikt. Du hittar originaltexten här: https://perustuslakiblogi.wordpress.com/2023/05/22/susanna-lindroos-hovinheimo-tekoalyasetuksen-uusia-vaiheita-parlamentin-nakemykset-laajentavat-saantelya/ AI-förordningen som förberedas i Europeiska unionen tog ett nytt steg den 11 maj när utskottsarbetet i Europaparlamentet avslutades. Parlamentet röstar om sin ståndpunkt till förordningsförslaget i juni. Därefter börjar triologförhandlingarna. Det verkar alltså som att AI-förordningen är på väg, och möjligtvis ganska snart....'
 categories:
-  - Aktuellt
-  - Blogginlägg
+  - "Nyheter från"
+  - "Nyheter från / Blogginlägg"
 tags:
   - Europeiska unionen
   - lainsäädäntö

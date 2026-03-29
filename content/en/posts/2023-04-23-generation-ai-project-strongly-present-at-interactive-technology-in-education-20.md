@@ -8,9 +8,10 @@ status: publish
 sourceType: posts
 excerpt: 'Our project participated with a strong contribution to Finland''s largest educational technology event "Interactive Technology in Education", which is held annually at Aulanko in Hämeenlinna. The seminar program and its pre-event schedule included Generation AI topics featuring two keynote speeches, a poster, TM classifier demonstration, and a panel discussion. This year the event was full of various AI-related presentations, which were very practice-oriented reviews especially on the use of ChatGPT-type applications in education….'
 categories:
-  - News
-  - GenAI project staff at events
-  - Conferences and seminars
+  - "News from"
+  - "News from / GenAI project staff at events"
+  - "Research"
+  - "Research / Conference proceedings"
 tags:
   - Interactive Technology in Education seminar
   - ITK2023

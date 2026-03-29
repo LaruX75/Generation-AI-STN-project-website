@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: "Hankkeemme tutkija Susanna Lindroos-Hovinheimo osallistui Law, Tech and Theory Research Seminar -seminaariin 15.-16.2.2023."
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö tapahtumissa
-  - Konferenssit ja seminaarit
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+  - "Konferenssit ja seminaarit"
 tags:
   - oikeustiede
   - susanna lindroos-hovinheimo

@@ -8,8 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'Codeschool Finland arrangerade ett kostnadsfritt webbinarium för tyska lärare, där de undervisade om hur artificiell intelligens kan användas a) vid planering av undervisning och b) som ett undervisningsämne (dvs. hur elever kan lära sig förstå artificiell intelligens). GenAI-undervisningmaskinen som utvecklades i projektet fungerade som ett verktyg när lärare undervisades om hur artificiell intelligens bör undervisas och vad relationen mellan artificiell intelligens och data är. Läs mer om webbinariet på CodeSchool Finlands webbplats: https://courses.codeschool.fi/course/ai-webinar'
 categories:
-  - GenAI-projektets personal på evenemang
-  - Webbinarium
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal vid evenemang"
+  - "Nyheter från / Webbinarium"
 tags:
   - codeschool
   - opetettava kone

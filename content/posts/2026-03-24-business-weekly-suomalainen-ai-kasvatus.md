@@ -8,8 +8,8 @@ status: publish
 sourceType: posts
 excerpt: "Taiwanilainen Business Weekly (商業周刊) nro 2001 kirjoittaa suomalaisesta AI-kasvatuksesta, Generation AI -hankkeesta ja haastattelee professori Teemu Roosia."
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö mediassa
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
 tags:
   - business weekly
   - teemu roos

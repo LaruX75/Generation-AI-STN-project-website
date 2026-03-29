@@ -8,8 +8,8 @@ status: publish
 sourceType: posts
 excerpt: "Generation AI:n professori Matti Tedre ja tutkija Henriikka Vartiainen ovat mukana Itä-Suomen aluehallintoviraston ja Pohjois-Karjalan Rehtorit ry:n järjestämillä rehtori- ja johtajuuspäivillä Nurmeksessa. He luennoivat aiheesta tekoäly perjantaina 13.9. Lisätietoa tapahtumasta löydät täältä."
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
 tags:
   - AVI
   - Matti Tedre

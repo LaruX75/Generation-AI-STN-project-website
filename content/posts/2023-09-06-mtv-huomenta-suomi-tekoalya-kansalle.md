@@ -8,10 +8,10 @@ status: publish
 sourceType: posts
 excerpt: "Prof. Teemu Roos kävi MTV Huomenta Suomen vieraana 6.9.2023. Hänen kanssaan tekoälystä oli keskustelemassa myös Reaktorin tekoälyliiketoiminnan johtaja Hanna Hagström. Katso tallenne täältä:https://www.mtv.fi/sarja/huomenta-suomi-1485/tekoalya-kansalle-20358397"
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö mediassa
-  - Haastattelu
-  - MTV3
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
+  - "Ajankohtaista / Haastattelu"
+  - "MTV3"
 tags: []
 author: admin
 layout: layouts/post.njk

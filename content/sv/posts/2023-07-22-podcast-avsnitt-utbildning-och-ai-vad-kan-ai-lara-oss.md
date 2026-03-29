@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'Tekniskt optimistisk blogg publicerade den 22.7.2023 ett intressant avsnitt. I det diskuterade studentrepresentanten Shena Revanur, Khan Academys grundare Sal Khan, Code.orgs utbildningschef Pat Yongpradit, prof. Teemu Roos som arbetar i vårt projekt och maskininlärningspioneran Tom Mitchell om AI. Läs avsnittets engelska introduktion Can we use AI as a tool that enriches learning, rather than replacing it? We''re seeing AI rapidly revolutionize…'
 categories:
-  - Aktuellt
-  - GenAI-projektets personal i media
-  - Podcast
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal i media"
+  - "Nyheter från / Podcast"
 tags:
   - AI podcast
   - Technically optimistic

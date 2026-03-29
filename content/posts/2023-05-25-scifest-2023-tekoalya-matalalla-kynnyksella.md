@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: "Generation AI oli mukana Joensuun SciFestissä 25.-27.5.2023 työpajalla Tekoälyä matalalla kynnyksellä."
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö tapahtumissa
-  - Konferenssit ja seminaarit
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+  - "Konferenssit ja seminaarit"
 tags:
   - scifest
   - joensuu

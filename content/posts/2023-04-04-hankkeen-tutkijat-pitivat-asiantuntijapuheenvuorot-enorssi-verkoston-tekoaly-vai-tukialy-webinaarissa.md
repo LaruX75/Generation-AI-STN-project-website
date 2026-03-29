@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: "Valtakunnallinen normaalikoulujen yhteistyöverkosto eNorssi järjesti 4.4.2023 tekoälywebinaarin, jossa hankkeestamme asiantuntijapuheenvuorot pitivät Henriikka Vartiainen ja Jari laru."
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö tapahtumissa
-  - Webinaari
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+  - "Ajankohtaista / Webinaari"
 tags:
   - enorssi
   - normaalikoulu

@@ -8,8 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'Generation AI:s professor Matti Tedre och forskare Henriikka Vartiainen deltar i rektors- och ledarskapsdagarna som ordnas av Östra Finlands regionförvaltningsverk och Norra Karelens rektorsförening i Nurmes. De kommer att hålla en föreläsning om artificiell intelligens på fredag 13.9. Mer information om evenemanget finns här.'
 categories:
-  - GenAI-projektets personal vid evenemang
-  - Nyheter från
+  - "Nyheter från"
+  - "Nyheter från / GenAI-projektets personal vid evenemang"
 tags:
   - artificiell intelligens
   - AVI

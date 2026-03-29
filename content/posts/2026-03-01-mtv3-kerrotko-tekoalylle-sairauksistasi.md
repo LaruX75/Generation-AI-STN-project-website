@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: "MTV Uutiset haastatteli Teemu Roosia 1.3.2026 tekoälylle jaettavista terveystiedoista sekä arkipäiväisen tekoälykäytön riskeistä. Alkuperäinen juttu: https://www.mtvuutiset.fi/artikkeli/kerrotko-tekoalylle-sairauksistasi-professorilta-selkea-ohje-todella-ikavia-tilanteita/9303078"
 categories:
-  - Ajankohtaista
-  - GenAI hankkeen henkilöstö mediassa
-  - Haastattelu
+  - "Ajankohtaista"
+  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
+  - "Ajankohtaista / Haastattelu"
 tags:
   - mtv3
   - teemu roos

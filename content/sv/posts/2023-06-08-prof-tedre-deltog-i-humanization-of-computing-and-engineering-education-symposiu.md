@@ -8,9 +8,9 @@ status: publish
 sourceType: posts
 excerpt: 'Vår projekledare, prof. Matti Tedre deltog den 8.6.2023 i Uppsala (Sverige) i ett Fireside Chat-samtal om "utbildning inom datavetenskap och ingenjörsutbildning, med målet att humanisera denna specifika kontext". Program: STARTTID AKTIVITET 9:00 Opening: Virginia Grande 9:30 Keynote: Matilde Sánchez-Peña: positionality, well-being (of teachers and students), and other emerging trends in…'
 categories:
-  - Aktuellt
-  - Konferenser och seminarier
-  - Forskning
+  - "Forskning"
+  - "Forskning / Konferenshandlingar"
+  - "Nyheter från"
 tags:
   - Matti Tedre
   - Ruotsi

@@ -8,9 +8,8 @@ status: publish
 sourceType: posts
 excerpt: 'Project researcher Prof. Teemu Roos from the University of Helsinki discussed images associated with AI in an FCAI interview in February 2022. "Images associated with AI have long been a thorn in my side. More than a decade ago, when I first taught the Introduction to Artificial Intelligence course, I noticed that many students'' perceptions of AI were based on stories by Isaac Asimov and other science fiction authors. Some may have even been disappointed when the course didn''t discuss what a robot is allowed to do and what it isn''t, but rather that it was largely about mathematics," says computer science professor Teemu Roos from the University of Helsinki...'
 categories:
-  - News
-  - FCAI
-  - GenAI project staff in media
+  - "News from"
+  - "News from / GenAI project staff in the media"
 tags:
   - FCAI
   - scifi
