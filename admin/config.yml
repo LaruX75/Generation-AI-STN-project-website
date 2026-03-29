@@ -20,6 +20,37 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     sortable_fields: ["date", "title"]
+    view_filters:
+      - label: "Ajankohtaista"
+        field: categories
+        pattern: "Ajankohtaista"
+      - label: "Henkilöstö mediassa"
+        field: categories
+        pattern: "GenAI hankkeen henkilöstö mediassa"
+      - label: "Henkilöstö tapahtumissa"
+        field: categories
+        pattern: "GenAI hankkeen henkilöstö tapahtumissa"
+      - label: "Konferenssit ja seminaarit"
+        field: categories
+        pattern: "Konferenssit ja seminaarit"
+      - label: "Hankkeen toiminta"
+        field: categories
+        pattern: "Hankkeen toiminta"
+      - label: "Tutkimus"
+        field: categories
+        pattern: "Tutkimus"
+      - label: "Webinaari"
+        field: categories
+        pattern: "Webinaari"
+      - label: "Haastattelu"
+        field: categories
+        pattern: "Haastattelu"
+    view_groups:
+      - label: "Kategoria"
+        field: categories
+      - label: "Vuosi"
+        field: date
+        pattern: "\\d{4}"
     fields:
       - { label: "Otsikko", name: "title", widget: "string" }
       - { label: "Päivämäärä", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
@@ -44,6 +75,10 @@ collections:
     slug: "{{slug}}"
     extension: "md"
     sortable_fields: ["date", "title"]
+    view_groups:
+      - label: "Vuosi"
+        field: date
+        pattern: "\\d{4}"
     fields:
       - { label: "Otsikko", name: "title", widget: "string" }
       - { label: "Päivämäärä", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
@@ -67,6 +102,34 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     sortable_fields: ["date", "title"]
+    view_filters:
+      - label: "News"
+        field: categories
+        pattern: "News"
+      - label: "Staff in media"
+        field: categories
+        pattern: "media"
+      - label: "Staff at events"
+        field: categories
+        pattern: "events"
+      - label: "Conferences"
+        field: categories
+        pattern: "Conferences"
+      - label: "Research"
+        field: categories
+        pattern: "Research"
+      - label: "Interview"
+        field: categories
+        pattern: "Interview"
+      - label: "Webinar"
+        field: categories
+        pattern: "Webinar"
+    view_groups:
+      - label: "Category"
+        field: categories
+      - label: "Year"
+        field: date
+        pattern: "\\d{4}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
@@ -91,6 +154,10 @@ collections:
     slug: "{{slug}}"
     extension: "md"
     sortable_fields: ["date", "title"]
+    view_groups:
+      - label: "Year"
+        field: date
+        pattern: "\\d{4}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
@@ -114,6 +181,34 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     sortable_fields: ["date", "title"]
+    view_filters:
+      - label: "Aktuellt"
+        field: categories
+        pattern: "Aktuellt"
+      - label: "Personal i media"
+        field: categories
+        pattern: "personal i media"
+      - label: "Personal på evenemang"
+        field: categories
+        pattern: "evenemang"
+      - label: "Konferenser"
+        field: categories
+        pattern: "Konferenser"
+      - label: "Projektverksamhet"
+        field: categories
+        pattern: "Projektverksamhet"
+      - label: "Intervju"
+        field: categories
+        pattern: "Intervju"
+      - label: "Webbinarium"
+        field: categories
+        pattern: "Webbinarium"
+    view_groups:
+      - label: "Kategori"
+        field: categories
+      - label: "År"
+        field: date
+        pattern: "\\d{4}"
     fields:
       - { label: "Titel", name: "title", widget: "string" }
       - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
@@ -138,6 +233,10 @@ collections:
     slug: "{{slug}}"
     extension: "md"
     sortable_fields: ["date", "title"]
+    view_groups:
+      - label: "År"
+        field: date
+        pattern: "\\d{4}"
     fields:
       - { label: "Titel", name: "title", widget: "string" }
       - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
