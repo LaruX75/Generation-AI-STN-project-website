@@ -1,12 +1,12 @@
 ---
-title: "Finsk AI-utbildning i Business Weekly"
+title: 'Finsk AI-utbildning i Business Weekly'
 date: "2026-03-24T00:00:00"
 updated: "2026-03-24T00:00:00"
 slug: business-weekly-finsk-ai-utbildning
 permalink: /sv/aktuellt/business-weekly-finsk-ai-utbildning/
 status: publish
 sourceType: posts
-excerpt: "Taiwanesiska Business Weekly (商業周刊) nr 2001 skriver om finsk AI-utbildning, Generation AI-projektet och intervjuar professor Teemu Roos."
+excerpt: 'Taiwanesiska Business Weekly (商業周刊) nr 2001 skriver om finsk AI-utbildning, Generation AI-projektet och intervjuar professor Teemu Roos.'
 categories:
   - Aktuellt
   - Generation AI-projektets personal i media

@@ -1,0 +1,157 @@
+backend:
+  name: github
+  repo: LaruX75/Generation-AI-STN-project-website
+  branch: main
+  base_url: https://sveltia-cms-auth.fc4ydtm5bs.workers.dev
+
+local_backend: true
+publish_mode: simple
+media_folder: "media/wp-content/uploads"
+public_folder: "/media/wp-content/uploads"
+site_url: https://generation-ai-stn.fi
+display_url: https://generation-ai-stn.fi
+locale: "fi"
+
+collections:
+  # ── SUOMI ──────────────────────────────────────────────────────────────────
+  - name: "posts_fi"
+    label: "Postaukset (suomi)"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ["date", "title"]
+    filter: { field: "lang", value: "fi" }
+    fields:
+      - { label: "Otsikko", name: "title", widget: "string" }
+      - { label: "Päivämäärä", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
+      - { label: "Päivitetty", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Kieli", name: "lang", widget: "hidden", default: "fi" }
+      - { label: "Tyyppi", name: "sourceType", widget: "hidden", default: "posts" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
+      - { label: "Status", name: "status", widget: "hidden", default: "publish" }
+      - { label: "Lyhennelmä", name: "excerpt", widget: "text", required: false }
+      - { label: "Kategoriat", name: "categories", widget: "list", required: false }
+      - { label: "Avainsanat", name: "tags", widget: "list", required: false }
+      - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
+      - { label: "Kirjoittaja", name: "author", widget: "string", required: false, default: "admin" }
+      - { label: "Sisältö", name: "body", widget: "markdown" }
+
+  - name: "pages_fi"
+    label: "Sivut (suomi)"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    sortable_fields: ["date", "title"]
+    filter: { field: "lang", value: "fi" }
+    fields:
+      - { label: "Otsikko", name: "title", widget: "string" }
+      - { label: "Päivämäärä", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
+      - { label: "Päivitetty", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Kieli", name: "lang", widget: "hidden", default: "fi" }
+      - { label: "Tyyppi", name: "sourceType", widget: "hidden", default: "pages" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+      - { label: "Status", name: "status", widget: "hidden", default: "publish" }
+      - { label: "Lyhennelmä", name: "excerpt", widget: "text", required: false }
+      - { label: "Kategoriat", name: "categories", widget: "list", required: false }
+      - { label: "Avainsanat", name: "tags", widget: "list", required: false }
+      - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
+      - { label: "Sisältö", name: "body", widget: "markdown" }
+
+  # ── ENGLISH ────────────────────────────────────────────────────────────────
+  - name: "posts_en"
+    label: "Posts (English)"
+    folder: "content/en/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
+      - { label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Language", name: "lang", widget: "hidden", default: "en" }
+      - { label: "Source type", name: "sourceType", widget: "hidden", default: "posts" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
+      - { label: "Status", name: "status", widget: "hidden", default: "publish" }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
+      - { label: "Categories", name: "categories", widget: "list", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Featured image (URL)", name: "featuredImage", widget: "string", required: false }
+      - { label: "Author", name: "author", widget: "string", required: false, default: "admin" }
+      - { label: "Content", name: "body", widget: "markdown" }
+
+  - name: "pages_en"
+    label: "Pages (English)"
+    folder: "content/en/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
+      - { label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Language", name: "lang", widget: "hidden", default: "en" }
+      - { label: "Source type", name: "sourceType", widget: "hidden", default: "pages" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+      - { label: "Status", name: "status", widget: "hidden", default: "publish" }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
+      - { label: "Categories", name: "categories", widget: "list", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Featured image (URL)", name: "featuredImage", widget: "string", required: false }
+      - { label: "Content", name: "body", widget: "markdown" }
+
+  # ── SVENSKA ────────────────────────────────────────────────────────────────
+  - name: "posts_sv"
+    label: "Inlägg (svenska)"
+    folder: "content/sv/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
+      - { label: "Uppdaterad", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Språk", name: "lang", widget: "hidden", default: "sv" }
+      - { label: "Källtyp", name: "sourceType", widget: "hidden", default: "posts" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
+      - { label: "Status", name: "status", widget: "hidden", default: "publish" }
+      - { label: "Utdrag", name: "excerpt", widget: "text", required: false }
+      - { label: "Kategorier", name: "categories", widget: "list", required: false }
+      - { label: "Taggar", name: "tags", widget: "list", required: false }
+      - { label: "Bild (URL)", name: "featuredImage", widget: "string", required: false }
+      - { label: "Författare", name: "author", widget: "string", required: false, default: "admin" }
+      - { label: "Innehåll", name: "body", widget: "markdown" }
+
+  - name: "pages_sv"
+    label: "Sidor (svenska)"
+    folder: "content/sv/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
+      - { label: "Uppdaterad", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Språk", name: "lang", widget: "hidden", default: "sv" }
+      - { label: "Källtyp", name: "sourceType", widget: "hidden", default: "pages" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/page.njk" }
+      - { label: "Status", name: "status", widget: "hidden", default: "publish" }
+      - { label: "Utdrag", name: "excerpt", widget: "text", required: false }
+      - { label: "Kategorier", name: "categories", widget: "list", required: false }
+      - { label: "Taggar", name: "tags", widget: "list", required: false }
+      - { label: "Bild (URL)", name: "featuredImage", widget: "string", required: false }
+      - { label: "Innehåll", name: "body", widget: "markdown" }

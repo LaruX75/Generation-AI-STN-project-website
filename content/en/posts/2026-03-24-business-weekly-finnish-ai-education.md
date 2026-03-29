@@ -1,12 +1,12 @@
 ---
-title: "Finnish AI education featured in Business Weekly"
+title: 'Finnish AI education featured in Business Weekly'
 date: "2026-03-24T00:00:00"
 updated: "2026-03-24T00:00:00"
 slug: business-weekly-finnish-ai-education
 permalink: /en/current-affairs/business-weekly-finnish-ai-education/
 status: publish
 sourceType: posts
-excerpt: "Taiwanese Business Weekly (商業周刊) issue 2001 covers Finnish AI education, the Generation AI project, and interviews Professor Teemu Roos."
+excerpt: 'Taiwanese Business Weekly (商業周刊) issue 2001 covers Finnish AI education, the Generation AI project, and interviews Professor Teemu Roos.'
 categories:
   - Current affairs
   - Generation AI project staff in the media

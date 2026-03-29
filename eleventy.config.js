@@ -186,6 +186,7 @@ module.exports = function(eleventyConfig) {
   // Allow .well-known directory (dot-prefixed dirs are ignored by default)
   eleventyConfig.watchIgnores.delete("**/.well-known/**");
 
+  if (existsSync("admin")) eleventyConfig.addPassthroughCopy({ "admin": "admin" });
   if (existsSync("media")) eleventyConfig.addPassthroughCopy({ "media": "media" });
   if (existsSync("styles")) eleventyConfig.addPassthroughCopy({ "styles": "styles" });
   if (existsSync("assets")) eleventyConfig.addPassthroughCopy({ "assets": "assets" });

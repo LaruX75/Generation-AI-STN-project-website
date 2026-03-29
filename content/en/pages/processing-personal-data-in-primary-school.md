@@ -1,5 +1,5 @@
 ---
-title: Processing Personal Data in Primary School
+title: 'Processing Personal Data in Primary School'
 date: "2023-09-25"
 updated: "2023-12-04"
 slug: processing-personal-data-in-primary-school
