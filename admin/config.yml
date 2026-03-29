@@ -16,9 +16,14 @@ collections:
   # ── SUOMI ──────────────────────────────────────────────────────────────────
   - name: "posts_fi"
     label: "Postaukset (suomi)"
+    label_singular: "Postaus (suomi)"
+    icon: "edit_note"
     folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: title
+    summary: "{{date}} — {{title}}"
+    preview_path: "{{permalink}}"
     sortable_fields: ["date", "title"]
     view_filters:
       - label: "Ajankohtaista"
@@ -62,7 +67,41 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Status", name: "status", widget: "hidden", default: "publish" }
       - { label: "Lyhennelmä", name: "excerpt", widget: "text", required: false }
-      - { label: "Kategoriat", name: "categories", widget: "list", required: false }
+      - label: "Kategoriat"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - "Ajankohtaista"
+          - "Ajankohtaista hankkeen ulkopuolella"
+          - "Blogikirjoitus"
+          - "Esiopetus"
+          - "FCAI"
+          - "GenAI hankkeen henkilöstö mediassa"
+          - "GenAI hankkeen henkilöstö tapahtumissa"
+          - "GenAI työkalut ja materiaalit hankkeen ulkopuolella"
+          - "Generation AI kuukausittaiset tekoälykuulumiset (uutiskirje)"
+          - "Haastattelu"
+          - "Hankkeen toiminta"
+          - "Helsingin yliopisto"
+          - "Itä-suomen yliopisto"
+          - "Kolumni"
+          - "Konferenssit ja seminaarit"
+          - "Lasten oikeudet"
+          - "Luento"
+          - "Luokittelija"
+          - "Media"
+          - "Mielipidekirjoitus"
+          - "MTV3"
+          - "Podcast"
+          - "Sovellukset"
+          - "Tutkimus"
+          - "Työpaja"
+          - "Webinaari"
+          - "YLE"
+          - "Yliopistojen uutiset"
+          - "Youtube"
       - { label: "Avainsanat", name: "tags", widget: "list", required: false }
       - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Kirjoittaja", name: "author", widget: "string", required: false, default: "admin" }
@@ -70,10 +109,15 @@ collections:
 
   - name: "pages_fi"
     label: "Sivut (suomi)"
+    label_singular: "Sivu (suomi)"
+    icon: "article"
     folder: "content/pages"
     create: true
     slug: "{{slug}}"
     extension: "md"
+    identifier_field: title
+    summary: "{{title}} — {{permalink}}"
+    preview_path: "{{permalink}}"
     sortable_fields: ["date", "title"]
     view_groups:
       - label: "Vuosi"
@@ -98,9 +142,14 @@ collections:
   # ── ENGLISH ────────────────────────────────────────────────────────────────
   - name: "posts_en"
     label: "Posts (English)"
+    label_singular: "Post (English)"
+    icon: "edit_note"
     folder: "content/en/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: title
+    summary: "{{date}} — {{title}}"
+    preview_path: "{{permalink}}"
     sortable_fields: ["date", "title"]
     view_filters:
       - label: "News"
@@ -141,7 +190,42 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Status", name: "status", widget: "hidden", default: "publish" }
       - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
-      - { label: "Categories", name: "categories", widget: "list", required: false }
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - "Current Affairs"
+          - "Current affairs outside the project"
+          - "Blog post"
+          - "Children's rights"
+          - "Classifier"
+          - "Column"
+          - "Conferences and Seminars"
+          - "FCAI"
+          - "GenAI Project Staff at Events"
+          - "GenAI Project Staff in the Media"
+          - "GenAI Tools and Materials Beyond the Project"
+          - "Generation AI Monthly AI News (newsletter)"
+          - "Interview"
+          - "Lecture"
+          - "Media"
+          - "MTV3"
+          - "News"
+          - "News from"
+          - "Opinion piece"
+          - "Podcast"
+          - "Preschool"
+          - "Project Activities"
+          - "Research"
+          - "University news"
+          - "University of Eastern Finland"
+          - "University of Helsinki"
+          - "Webinar"
+          - "Workshop"
+          - "YLE"
+          - "Youtube"
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Featured image (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Author", name: "author", widget: "string", required: false, default: "admin" }
@@ -149,10 +233,15 @@ collections:
 
   - name: "pages_en"
     label: "Pages (English)"
+    label_singular: "Page (English)"
+    icon: "article"
     folder: "content/en/pages"
     create: true
     slug: "{{slug}}"
     extension: "md"
+    identifier_field: title
+    summary: "{{title}} — {{permalink}}"
+    preview_path: "{{permalink}}"
     sortable_fields: ["date", "title"]
     view_groups:
       - label: "Year"
@@ -177,9 +266,14 @@ collections:
   # ── SVENSKA ────────────────────────────────────────────────────────────────
   - name: "posts_sv"
     label: "Inlägg (svenska)"
+    label_singular: "Inlägg (svenska)"
+    icon: "edit_note"
     folder: "content/sv/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: title
+    summary: "{{date}} — {{title}}"
+    preview_path: "{{permalink}}"
     sortable_fields: ["date", "title"]
     view_filters:
       - label: "Aktuellt"
@@ -220,7 +314,42 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Status", name: "status", widget: "hidden", default: "publish" }
       - { label: "Utdrag", name: "excerpt", widget: "text", required: false }
-      - { label: "Kategorier", name: "categories", widget: "list", required: false }
+      - label: "Kategorier"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - "Aktuellt"
+          - "Aktuellt utanför projektet"
+          - "Applikationer"
+          - "Barns rättigheter"
+          - "Blogginlägg"
+          - "Debattartikel"
+          - "FCAI"
+          - "Forskning"
+          - "Föreläsning"
+          - "Förskola"
+          - "GenAI-projektets personal i media"
+          - "GenAI-projektets personal på evenemang"
+          - "GenAI-verktyg och material utanför projektet"
+          - "Generation AI Monthly AI News (nyhetsbrev)"
+          - "Helsingfors universitet"
+          - "Intervju"
+          - "Klassificerare"
+          - "Kolumn"
+          - "Konferenser och seminarier"
+          - "Media"
+          - "MTV3"
+          - "Nyheter från"
+          - "Podcast"
+          - "Projektverksamhet"
+          - "Universitetsnyheter"
+          - "Webbinarium"
+          - "Workshop"
+          - "YLE"
+          - "Youtube"
+          - "Östfinlands universitet"
       - { label: "Taggar", name: "tags", widget: "list", required: false }
       - { label: "Bild (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Författare", name: "author", widget: "string", required: false, default: "admin" }
@@ -228,10 +357,15 @@ collections:
 
   - name: "pages_sv"
     label: "Sidor (svenska)"
+    label_singular: "Sida (svenska)"
+    icon: "article"
     folder: "content/sv/pages"
     create: true
     slug: "{{slug}}"
     extension: "md"
+    identifier_field: title
+    summary: "{{title}} — {{permalink}}"
+    preview_path: "{{permalink}}"
     sortable_fields: ["date", "title"]
     view_groups:
       - label: "År"
