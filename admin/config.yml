@@ -109,7 +109,7 @@ collections:
       - { label: "Avainsanat", name: "tags", widget: "list", required: false }
       - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Kirjoittaja", name: "author", widget: "string", required: false, default: "admin" }
-      - { label: "Sisältö", name: "body", widget: "markdown" }
+      - { label: "Sisältö", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
 
   - name: "pages_fi"
     label: "Sivut (suomi)"
@@ -141,7 +141,7 @@ collections:
       - { label: "Kategoriat", name: "categories", widget: "list", required: false }
       - { label: "Avainsanat", name: "tags", widget: "list", required: false }
       - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
-      - { label: "Sisältö", name: "body", widget: "markdown" }
+      - { label: "Sisältö", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
 
   # ── ENGLISH ────────────────────────────────────────────────────────────────
   - name: "posts_en"
@@ -219,7 +219,7 @@ collections:
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Featured image (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Author", name: "author", widget: "string", required: false, default: "admin" }
-      - { label: "Content", name: "body", widget: "markdown" }
+      - { label: "Content", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
 
   - name: "pages_en"
     label: "Pages (English)"
@@ -251,7 +251,7 @@ collections:
       - { label: "Categories", name: "categories", widget: "list", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Featured image (URL)", name: "featuredImage", widget: "string", required: false }
-      - { label: "Content", name: "body", widget: "markdown" }
+      - { label: "Content", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
 
   # ── SVENSKA ────────────────────────────────────────────────────────────────
   - name: "posts_sv"
@@ -329,7 +329,7 @@ collections:
       - { label: "Taggar", name: "tags", widget: "list", required: false }
       - { label: "Bild (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Författare", name: "author", widget: "string", required: false, default: "admin" }
-      - { label: "Innehåll", name: "body", widget: "markdown" }
+      - { label: "Innehåll", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
 
   - name: "pages_sv"
     label: "Sidor (svenska)"
@@ -361,4 +361,4 @@ collections:
       - { label: "Kategorier", name: "categories", widget: "list", required: false }
       - { label: "Taggar", name: "tags", widget: "list", required: false }
       - { label: "Bild (URL)", name: "featuredImage", widget: "string", required: false }
-      - { label: "Innehåll", name: "body", widget: "markdown" }
+      - { label: "Innehåll", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
