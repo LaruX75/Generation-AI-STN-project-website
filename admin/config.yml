@@ -14,33 +14,19 @@ locale: "fi"
 
 collections:
   # ── SUOMI ──────────────────────────────────────────────────────────────────
-  - name: "posts_fi"
-    label: "Postaukset (suomi)"
-    label_singular: "Postaus (suomi)"
-    icon: "edit_note"
+  - name: "fi_mediassa"
+    label: "Mediassa"
+    label_singular: "Uutinen / mediaesiintyminen"
+    icon: "newspaper"
     folder: "content/posts"
     create: true
+    filter: { field: mainCategory, value: "Mediassa" }
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_field: title
     summary: "{{date}} — {{title}}"
     preview_path: "{{permalink}}"
     sortable_fields: ["date", "title"]
-    view_filters:
-      - label: "Mediassa"
-        field: mainCategory
-        pattern: "Mediassa"
-      - label: "Tapahtumat"
-        field: mainCategory
-        pattern: "Tapahtumat"
-      - label: "Toiminta"
-        field: mainCategory
-        pattern: "Toiminta"
-      - label: "Tutkimus"
-        field: mainCategory
-        pattern: "Tutkimus"
     view_groups:
-      - label: "Välilehti (ajankohtaista)"
-        field: mainCategory
       - label: "Vuosi"
         field: date
         pattern: "\\d{4}"
@@ -54,16 +40,8 @@ collections:
       - { label: "Tyyppi", name: "sourceType", widget: "hidden", default: "posts" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Status", name: "status", widget: "hidden", default: "publish" }
+      - { label: "Kategoria", name: "mainCategory", widget: "hidden", default: "Mediassa" }
       - { label: "Lyhennelmä", name: "excerpt", widget: "text", required: false }
-      - label: "Pääkategoria"
-        name: "mainCategory"
-        widget: "select"
-        required: false
-        options:
-          - "Mediassa"
-          - "Tapahtumat"
-          - "Toiminta"
-          - "Tutkimus"
       - label: "Tarkempi tyyppi"
         name: "subCategories"
         widget: "select"
@@ -71,18 +49,9 @@ collections:
         required: false
         options:
           - "Blogikirjoitus"
-          - "GenAI hankkeen henkilöstö mediassa"
-          - "GenAI hankkeen henkilöstö tapahtumissa"
-          - "GenAI hankkeen kouluttamassa"
           - "Haastattelu"
-          - "Julkaisu"
-          - "Konferenssijulkaisu"
-          - "Konferenssit ja seminaarit"
-          - "Lasten oikeudet"
           - "Mielipidekirjoitus"
           - "Podcast"
-          - "Webinaari"
-          - "Työpaja"
           - "YLE"
       - label: "Muut kategoriat"
         name: "extraCategories"
@@ -95,10 +64,161 @@ collections:
           - "Helsingin yliopisto"
           - "Heureka"
           - "Itä-Suomen yliopisto"
-          - "Luokittelija"
           - "Sovellukset"
           - "Yliopistojen uutiset"
           - "Youtube"
+      - { label: "Avainsanat", name: "tags", widget: "list", required: false }
+      - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
+      - { label: "Kirjoittaja", name: "author", widget: "string", required: false, default: "admin" }
+      - { label: "Sisältö", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
+
+  - name: "fi_tapahtumat"
+    label: "Tapahtumat"
+    label_singular: "Tapahtuma"
+    icon: "event"
+    folder: "content/posts"
+    create: true
+    filter: { field: mainCategory, value: "Tapahtumat" }
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: title
+    summary: "{{date}} — {{title}}"
+    preview_path: "{{permalink}}"
+    sortable_fields: ["date", "title"]
+    view_groups:
+      - label: "Vuosi"
+        field: date
+        pattern: "\\d{4}"
+    fields:
+      - { label: "Otsikko", name: "title", widget: "string" }
+      - { label: "Päivämäärä", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
+      - { label: "Päivitetty", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Kieli", name: "lang", widget: "hidden", default: "fi" }
+      - { label: "Tyyppi", name: "sourceType", widget: "hidden", default: "posts" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
+      - { label: "Status", name: "status", widget: "hidden", default: "publish" }
+      - { label: "Kategoria", name: "mainCategory", widget: "hidden", default: "Tapahtumat" }
+      - { label: "Lyhennelmä", name: "excerpt", widget: "text", required: false }
+      - label: "Tarkempi tyyppi"
+        name: "subCategories"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - "GenAI hankkeen henkilöstö tapahtumissa"
+          - "GenAI hankkeen kouluttamassa"
+          - "Konferenssit ja seminaarit"
+          - "Webinaari"
+          - "Työpaja"
+      - label: "Muut kategoriat"
+        name: "extraCategories"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - "Esiopetus"
+          - "FCAI"
+          - "Helsingin yliopisto"
+          - "Heureka"
+          - "Itä-Suomen yliopisto"
+          - "Sovellukset"
+          - "Yliopistojen uutiset"
+      - { label: "Avainsanat", name: "tags", widget: "list", required: false }
+      - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
+      - { label: "Kirjoittaja", name: "author", widget: "string", required: false, default: "admin" }
+      - { label: "Sisältö", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
+
+  - name: "fi_toiminta"
+    label: "Toiminta"
+    label_singular: "Toimintapostaus"
+    icon: "rocket_launch"
+    folder: "content/posts"
+    create: true
+    filter: { field: mainCategory, value: "Toiminta" }
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: title
+    summary: "{{date}} — {{title}}"
+    preview_path: "{{permalink}}"
+    sortable_fields: ["date", "title"]
+    view_groups:
+      - label: "Vuosi"
+        field: date
+        pattern: "\\d{4}"
+    fields:
+      - { label: "Otsikko", name: "title", widget: "string" }
+      - { label: "Päivämäärä", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
+      - { label: "Päivitetty", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Kieli", name: "lang", widget: "hidden", default: "fi" }
+      - { label: "Tyyppi", name: "sourceType", widget: "hidden", default: "posts" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
+      - { label: "Status", name: "status", widget: "hidden", default: "publish" }
+      - { label: "Kategoria", name: "mainCategory", widget: "hidden", default: "Toiminta" }
+      - { label: "Lyhennelmä", name: "excerpt", widget: "text", required: false }
+      - label: "Muut kategoriat"
+        name: "extraCategories"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - "Esiopetus"
+          - "FCAI"
+          - "Heureka"
+          - "Luokittelija"
+          - "Sovellukset"
+      - { label: "Avainsanat", name: "tags", widget: "list", required: false }
+      - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
+      - { label: "Kirjoittaja", name: "author", widget: "string", required: false, default: "admin" }
+      - { label: "Sisältö", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
+
+  - name: "fi_tutkimus"
+    label: "Tutkimus"
+    label_singular: "Tutkimusjulkaisu"
+    icon: "science"
+    folder: "content/posts"
+    create: true
+    filter: { field: mainCategory, value: "Tutkimus" }
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: title
+    summary: "{{date}} — {{title}}"
+    preview_path: "{{permalink}}"
+    sortable_fields: ["date", "title"]
+    view_groups:
+      - label: "Vuosi"
+        field: date
+        pattern: "\\d{4}"
+    fields:
+      - { label: "Otsikko", name: "title", widget: "string" }
+      - { label: "Päivämäärä", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
+      - { label: "Päivitetty", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Kieli", name: "lang", widget: "hidden", default: "fi" }
+      - { label: "Tyyppi", name: "sourceType", widget: "hidden", default: "posts" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
+      - { label: "Status", name: "status", widget: "hidden", default: "publish" }
+      - { label: "Kategoria", name: "mainCategory", widget: "hidden", default: "Tutkimus" }
+      - { label: "Lyhennelmä", name: "excerpt", widget: "text", required: false }
+      - label: "Tarkempi tyyppi"
+        name: "subCategories"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - "Blogikirjoitus"
+          - "Julkaisu"
+          - "Konferenssijulkaisu"
+          - "Lasten oikeudet"
+      - label: "Muut kategoriat"
+        name: "extraCategories"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - "Helsingin yliopisto"
+          - "Itä-Suomen yliopisto"
       - { label: "Avainsanat", name: "tags", widget: "list", required: false }
       - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Kirjoittaja", name: "author", widget: "string", required: false, default: "admin" }
