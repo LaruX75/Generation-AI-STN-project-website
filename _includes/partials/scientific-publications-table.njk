@@ -1,4 +1,7 @@
 {% set allItems = scientificPublications.items or [] %}
+{% set scipubAuthorParam = "scipub-author" %}
+{% set scipubAuthorBaseUrl = page.url or "/" %}
+{% set scipubAuthorHash = scipubTabHash or "" %}
 
 {% if lang == "en" %}
   {% set lbl = {
@@ -87,7 +90,7 @@
             data-search="{{ item.searchText | lower | default('') }} {{ item.authorsText | lower | default('') }}">
             <td class="media-table-col--authors">
               {% if item.authors and item.authors.length %}
-                {% for author in item.authors %}<button class="scipub-author-btn" type="button" data-author="{{ author }}">{{ author }}</button>{% if not loop.last %}; {% endif %}{% endfor %}
+                {% for author in item.authors %}<a class="scipub-author-link" href="{{ scipubAuthorBaseUrl }}?{{ scipubAuthorParam }}={{ author | urlencode }}{{ scipubAuthorHash }}">{{ author }}</a>{% if not loop.last %}; {% endif %}{% endfor %}
               {% else %}
                 {{ item.authorsText | default('—') }}
               {% endif %}
@@ -128,16 +131,24 @@
 
 <script>
 (function () {
-  document.addEventListener("click", function (e) {
-    var btn = e.target.closest(".scipub-author-btn");
-    if (!btn) return;
+  function applyAuthorFilterFromUrl() {
     var section = document.getElementById("scipub-table-section");
     if (!section) return;
+    var params = new URLSearchParams(window.location.search);
+    var author = params.get("{{ scipubAuthorParam }}");
+    if (!author) return;
     var search = section.querySelector("[data-grid-search]");
     if (!search) return;
-    search.value = btn.dataset.author;
+    if (search.value === author) return;
+    search.value = author;
     search.dispatchEvent(new Event("input", { bubbles: true }));
-    search.focus();
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", applyAuthorFilterFromUrl);
+    return;
+  }
+
+  applyAuthorFilterFromUrl();
 }());
 </script>
