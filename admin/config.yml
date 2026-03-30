@@ -107,7 +107,7 @@ collections:
         required: false
         options:
           - "GenAI hankkeen henkilöstö tapahtumissa"
-          - "GenAI hankkeen kouluttamassa"
+          - "Koulutus"
           - "Konferenssit ja seminaarit"
           - "Webinaari"
           - "Työpaja"

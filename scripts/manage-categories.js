@@ -25,7 +25,7 @@ const CANONICAL = {
     "Ajankohtaista / Blogikirjoitus",
     "Ajankohtaista / GenAI hankkeen henkilöstö mediassa",
     "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa",
-    "Ajankohtaista / GenAI hankkeen kouluttamassa",
+    "Ajankohtaista / Koulutus",
     "Ajankohtaista / GenAI työkalut ja materiaalit hankkeen ulkopuolella",
     "Ajankohtaista / Haastattelu",
     "Ajankohtaista / Mielipidekirjoitus",
