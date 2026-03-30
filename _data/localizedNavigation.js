@@ -60,7 +60,7 @@ const URL_OVERRIDES = {
   "/ollaan-yhteydessa/":            { fi: "/ollaan-yhteydessa/",      en: "/en/get-in-touch/",          sv: "/sv/kontakta-oss/" },
   "/opettajalle/":                  { fi: "/opettajalle/",            en: "/en/for-teachers/",          sv: "/sv/for-larare/" },
   "/tutkijalle/":                   { fi: "/tutkijalle/",             en: "/en/research/",              sv: "/sv/forskning/" },
-  "/yleisölle/":                    { fi: "/yleisölle/",              en: "/en/for-everyone/",                     sv: "/sv/for-allmanheten/" },
+  "/yleisolle/":                    { fi: "/yleisolle/",              en: "/en/for-everyone/",                     sv: "/sv/for-allmanheten/" },
   "/materiaalit/#tab-julkaisut":    { fi: "/materiaalit/#tab-julkaisut", en: "/en/materials/#tab-julkaisut", sv: "/sv/material/#tab-julkaisut" },
   "/en/activities/":                { fi: "/hankkeen-toiminta/",      en: "/en/activities/",            sv: "/sv/verksamhet/" },
   "/en/what-we-do/":                { fi: "/hankkeen-toiminta/",      en: "/en/activities/",            sv: "/sv/verksamhet/" },

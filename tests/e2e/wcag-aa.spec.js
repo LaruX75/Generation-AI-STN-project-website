@@ -5,7 +5,7 @@ const auditedPages = [
   { name: "Finnish home", url: "/" },
   { name: "Teachers", url: "/opettajalle/" },
   { name: "Research", url: "/tutkijalle/" },
-  { name: "For everyone", url: "/yleisölle/" },
+  { name: "For everyone", url: "/yleisolle/" },
   { name: "Current affairs", url: "/ajankohtaista/" },
   { name: "Project activities", url: "/hankkeen-toiminta/" },
   { name: "Teachable machine page", url: "/genai-opetettava-kone/" },

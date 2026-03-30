@@ -20,7 +20,7 @@ const PAGE_ALIAS_GROUPS = [
   ["ollaan-yhteydessa", "get-in-touch", "kontakta-oss"],
   ["opettajalle", "for-teachers", "for-larare"],
   ["tutkijalle", "research", "forskning"],
-  ["yleisölle", "for-everyone", "for-allmanheten"],
+  ["yleisolle", "for-everyone", "for-allmanheten"],
   ["vastuurajoitus", "liability-limitation", "ansvarsbegransning"],
   ["posts-search", "search", "sok"],
   ["itk2025-palautelomake", "itk2025-feedback-form", "itk2025-feedbackformular"],

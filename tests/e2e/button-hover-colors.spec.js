@@ -104,7 +104,7 @@ test("Research page CTA buttons keep readable hover colors", async ({ page }) =>
 });
 
 test("Public page CTA buttons keep readable hover colors", async ({ page }) => {
-  await page.goto("/yleisölle/");
+  await page.goto("/yleisolle/");
   await acceptNecessaryCookies(page);
 
   await expectHoverColors(page, ".public-intro-btn--primary", {
