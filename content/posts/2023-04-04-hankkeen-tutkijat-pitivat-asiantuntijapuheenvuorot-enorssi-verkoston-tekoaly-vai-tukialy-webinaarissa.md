@@ -1,16 +1,23 @@
 ---
-title: Hankkeen tutkijat pitivät asiantuntijapuheenvuorot eNorssi verkoston tekoäly vai tukiäly webinaarissa
-date: "2023-04-04T21:57:17"
-updated: "2025-02-02T22:52:16"
-slug: hankkeen-tutkijat-pitivat-asiantuntijapuheenvuorot-enorssi-verkoston-tekoaly-vai-tukialy-webinaarissa
-permalink: /ajankohtaista/hankkeen-tutkijat-pitivat-asiantuntijapuheenvuorot-enorssi-verkoston-tekoaly-vai-tukialy-webinaarissa/
+title: >-
+  Hankkeen tutkijat pitivät asiantuntijapuheenvuorot eNorssi verkoston tekoäly
+  vai tukiäly webinaarissa
+date: '2023-04-04T21:57:17'
+updated: '2025-02-02T22:52:16'
+slug: >-
+  hankkeen-tutkijat-pitivat-asiantuntijapuheenvuorot-enorssi-verkoston-tekoaly-vai-tukialy-webinaarissa
+permalink: >-
+  /ajankohtaista/hankkeen-tutkijat-pitivat-asiantuntijapuheenvuorot-enorssi-verkoston-tekoaly-vai-tukialy-webinaarissa/
 status: publish
 sourceType: posts
-excerpt: "Valtakunnallinen normaalikoulujen yhteistyöverkosto eNorssi järjesti 4.4.2023 tekoälywebinaarin, jossa hankkeestamme asiantuntijapuheenvuorot pitivät Henriikka Vartiainen ja Jari laru."
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Valtakunnallinen normaalikoulujen yhteistyöverkosto eNorssi järjesti 4.4.2023
+  tekoälywebinaarin, jossa hankkeestamme asiantuntijapuheenvuorot pitivät
+  Henriikka Vartiainen ja Jari laru.
+mainCategory: Tapahtumat
 subCategories:
-  - "GenAI hankkeen henkilöstö tapahtumissa"
-  - "Webinaari"
+  - GenAI hankkeen henkilöstö tapahtumissa
+  - Webinaari
 tags:
   - enorssi
   - normaalikoulu

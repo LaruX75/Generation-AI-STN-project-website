@@ -1,17 +1,20 @@
 ---
-title: "YLE: Tältä näyttää ruma ihminen tekoälyn tuottamana"
-date: "2025-06-30T20:09:00"
-updated: "2025-06-30T20:09:00"
+title: 'YLE: Tältä näyttää ruma ihminen tekoälyn tuottamana'
+date: '2025-06-30T20:09:00'
+updated: '2025-06-30T20:09:00'
 slug: yle-tekoalyn-tuottamat-vinoumat
 permalink: /ajankohtaista/yle-tekoalyn-tuottamat-vinoumat/
 status: publish
 sourceType: posts
-excerpt: "Yle Oppiminen haastatteli Teemu Roosia 30.6.2025 tekoälyn vinoumista ja siitä, mitä kuvageneraattorit oppivat ihmisten tuottamasta aineistosta. Alkuperäinen juttu: https://yle.fi/a/74-20145829"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Yle Oppiminen haastatteli Teemu Roosia 30.6.2025 tekoälyn vinoumista ja siitä,
+  mitä kuvageneraattorit oppivat ihmisten tuottamasta aineistosta. Alkuperäinen
+  juttu: https://yle.fi/a/74-20145829
+mainCategory: Mediassa
 subCategories:
-  - "GenAI hankkeen henkilöstö mediassa"
-  - "Haastattelu"
-  - "YLE"
+  - GenAI hankkeen henkilöstö mediassa
+  - Haastattelu
+  - YLE
 tags:
   - algoritmit
   - teemu roos

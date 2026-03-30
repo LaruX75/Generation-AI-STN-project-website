@@ -1,15 +1,23 @@
 ---
-title: "GenAI mukana tyttöjen päivän tapahtumissa!"
-date: "2023-10-11T13:01:05"
-updated: "2025-01-25T07:56:01"
+title: GenAI mukana tyttöjen päivän tapahtumissa!
+date: '2023-10-11T13:01:05'
+updated: '2025-01-25T07:56:01'
 slug: genai-mukana-tyttojen-paivan-tapahtumissa
-permalink: /ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/genai-mukana-tyttojen-paivan-tapahtumissa/
+permalink: >-
+  /ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/genai-mukana-tyttojen-paivan-tapahtumissa/
 status: publish
 sourceType: posts
-excerpt: "GenAI mukana tyttöjen päivän tapahtumissa! 400 tyttöä (ja poikaa) vieraili Oulun yliopistolla 11.10 osana kansainvälistä tyttöjen päivää. Myös Generation AI hanke osallistui tähän päivään toteuttamalla ”tekoälyn musta laatikko – opeta konetta” työpajan. Tiesitkö, että tyttöjen päivä on Soroptimistit naisjärjestön keskeinen tehtävä kaikkialla maailmassa. Oulussa järjestelyistä vastasi järjestön paikallinen klubi. Pajan aluksi nuoret perehtyivät siihen, kuinka…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  GenAI mukana tyttöjen päivän tapahtumissa! 400 tyttöä (ja poikaa) vieraili
+  Oulun yliopistolla 11.10 osana kansainvälistä tyttöjen päivää. Myös Generation
+  AI hanke osallistui tähän päivään toteuttamalla ”tekoälyn musta laatikko –
+  opeta konetta” työpajan. Tiesitkö, että tyttöjen päivä on Soroptimistit
+  naisjärjestön keskeinen tehtävä kaikkialla maailmassa. Oulussa järjestelyistä
+  vastasi järjestön paikallinen klubi. Pajan aluksi nuoret perehtyivät siihen,
+  kuinka…
+mainCategory: Tapahtumat
 subCategories:
-  - "GenAI hankkeen henkilöstö tapahtumissa"
+  - GenAI hankkeen henkilöstö tapahtumissa
 tags:
   - koneoppiminen
   - opetettava kone

@@ -38,7 +38,7 @@ const LABEL_OVERRIDES = {
   "Tieteelliset julkaisut": { fi: "Tieteelliset julkaisut", en: "Scientific publications", sv: "Vetenskapliga publikationer" },
   "Ajankohtaista — tutkimus": { fi: "Ajankohtaista — tutkimus", en: "Current affairs — research", sv: "Aktuellt — forskning" },
   "Tapahtumat":             { fi: "Tapahtumat",           en: "Events",                  sv: "Evenemang" },
-  "Hankkeen toiminta":      { fi: "Hankkeen toiminta",    en: "Project activities",      sv: "Projektets verksamhet" },
+  "Toiminta":               { fi: "Toiminta",              en: "Project activities",      sv: "Projektaktiviteter" },
   "Tutkimus":               { fi: "Tutkimus",             en: "Research",                sv: "Forskning" },
   "Uutiskirje":             { fi: "Uutiskirje",           en: "Newsletter",              sv: "Nyhetsbrev" },
   "RSS-syöte":              { fi: "RSS-syöte",            en: "RSS feed",                sv: "RSS-flöde" },

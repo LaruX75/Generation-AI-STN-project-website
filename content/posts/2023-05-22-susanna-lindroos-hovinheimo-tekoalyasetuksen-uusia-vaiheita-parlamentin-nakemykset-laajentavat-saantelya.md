@@ -1,15 +1,26 @@
 ---
-title: "Susanna Lindroos-Hovinheimo: Tekoälyasetuksen uusia vaiheita – parlamentin näkemykset laajentavat sääntelyä"
-date: "2023-05-22T09:35:29"
-updated: "2023-09-22T09:39:15"
-slug: susanna-lindroos-hovinheimo-tekoalyasetuksen-uusia-vaiheita-parlamentin-nakemykset-laajentavat-saantelya
-permalink: /ajankohtaista/susanna-lindroos-hovinheimo-tekoalyasetuksen-uusia-vaiheita-parlamentin-nakemykset-laajentavat-saantelya/
+title: "Susanna Lindroos-Hovinheimo: Tekoälyasetuksen uusia vaiheita – parlamentin näkemykset laajentavat\_sääntelyä"
+date: '2023-05-22T09:35:29'
+updated: '2023-09-22T09:39:15'
+slug: >-
+  susanna-lindroos-hovinheimo-tekoalyasetuksen-uusia-vaiheita-parlamentin-nakemykset-laajentavat-saantelya
+permalink: >-
+  /ajankohtaista/susanna-lindroos-hovinheimo-tekoalyasetuksen-uusia-vaiheita-parlamentin-nakemykset-laajentavat-saantelya/
 status: publish
 sourceType: posts
-excerpt: "Alla oleva blogikirjoitus on julkaistu 22.5.2023 Perustuslakiblogissa, joka on Suomen valtiosääntöoikeudellisen seuran ajankohtaispalsta. Alkuperäinen teksti löytyy täältä: https://perustuslakiblogi.wordpress.com/2023/05/22/susanna-lindroos-hovinheimo-tekoalyasetuksen-uusia-vaiheita-parlamentin-nakemykset-laajentavat-saantelya/ Euroopan unionissa valmisteilla oleva tekoälyasetus otti uuden harppauksen 11. toukokuuta, kun valiokuntatyöskentely Euroopan parlamentissa saatiin päätökseen. Parlamentti äänestää oman kantansa asetusehdotukseen kesäkuussa. Sen jälkeen alkavat trilogivaiheen neuvottelut. Näyttää siis siltä, että tekoälyasetus on tulossa, ja mahdollisesti melko pian…."
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Alla oleva blogikirjoitus on julkaistu 22.5.2023 Perustuslakiblogissa, joka on
+  Suomen valtiosääntöoikeudellisen seuran ajankohtaispalsta. Alkuperäinen teksti
+  löytyy täältä:
+  https://perustuslakiblogi.wordpress.com/2023/05/22/susanna-lindroos-hovinheimo-tekoalyasetuksen-uusia-vaiheita-parlamentin-nakemykset-laajentavat-saantelya/
+  Euroopan unionissa valmisteilla oleva tekoälyasetus otti uuden harppauksen 11.
+  toukokuuta, kun valiokuntatyöskentely Euroopan parlamentissa saatiin
+  päätökseen. Parlamentti äänestää oman kantansa asetusehdotukseen kesäkuussa.
+  Sen jälkeen alkavat trilogivaiheen neuvottelut. Näyttää siis siltä, että
+  tekoälyasetus on tulossa, ja mahdollisesti melko pian….
+mainCategory: Mediassa
 subCategories:
-  - "Blogikirjoitus"
+  - Blogikirjoitus
 tags:
   - Euroopan unioni
   - lainsäädäntö

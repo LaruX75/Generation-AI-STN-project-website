@@ -1,17 +1,19 @@
 ---
-title: "Law, Tech and Theory Research Seminar"
-date: "2023-02-15T09:00:00"
-updated: "2026-03-15T00:00:00"
+title: 'Law, Tech and Theory Research Seminar'
+date: '2023-02-15T09:00:00'
+updated: '2026-03-15T00:00:00'
 slug: law-tech-and-theory-research-seminar
 permalink: /ajankohtaista/law-tech-and-theory-research-seminar/
 status: publish
 sourceType: posts
-excerpt: "Hankkeemme tutkija Susanna Lindroos-Hovinheimo osallistui Law, Tech and Theory Research Seminar -seminaariin 15.-16.2.2023."
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Hankkeemme tutkija Susanna Lindroos-Hovinheimo osallistui Law, Tech and Theory
+  Research Seminar -seminaariin 15.-16.2.2023.
+mainCategory: Tapahtumat
 subCategories:
-  - "GenAI hankkeen henkilöstö tapahtumissa"
+  - GenAI hankkeen henkilöstö tapahtumissa
 extraCategories:
-  - "Konferenssit ja seminaarit"
+  - Konferenssit ja seminaarit
 tags:
   - oikeustiede
   - susanna lindroos-hovinheimo

@@ -1,17 +1,19 @@
 ---
-title: "SciFest 2024: Seikkailu somekoneessa"
-date: "2024-05-23T09:00:00"
-updated: "2026-03-15T00:00:00"
+title: 'SciFest 2024: Seikkailu somekoneessa'
+date: '2024-05-23T09:00:00'
+updated: '2026-03-15T00:00:00'
 slug: scifest-2024-seikkailu-somekoneessa
 permalink: /ajankohtaista/scifest-2024-seikkailu-somekoneessa/
 status: publish
 sourceType: posts
-excerpt: "Generation AI oli mukana Joensuun SciFestissä 23.-25.5.2024 ohjelmalla Seikkailu somekoneessa."
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Generation AI oli mukana Joensuun SciFestissä 23.-25.5.2024 ohjelmalla
+  Seikkailu somekoneessa.
+mainCategory: Tapahtumat
 subCategories:
-  - "GenAI hankkeen henkilöstö tapahtumissa"
+  - GenAI hankkeen henkilöstö tapahtumissa
 extraCategories:
-  - "Konferenssit ja seminaarit"
+  - Konferenssit ja seminaarit
 tags:
   - scifest
   - joensuu

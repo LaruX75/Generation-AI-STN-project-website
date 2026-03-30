@@ -1,16 +1,24 @@
 ---
 title: Hankkeen kouluyhteistyö käynnistyi
-date: "2023-02-05T20:07:29"
-updated: "2025-02-13T11:05:49"
+date: '2023-02-05T20:07:29'
+updated: '2025-02-13T11:05:49'
 slug: hankkeen-kouluyhteistyo-kaynnistyi
 permalink: /ajankohtaista/hankkeen-kouluyhteistyo-kaynnistyi/
 status: publish
 sourceType: posts
-excerpt: "GenAI-hankkeen kouluyhteistyö käynnistyi perjantaina 3.2.2023 klo 9-14 Joensuussa yhteissuunnittelukokouksella. Mukana tilaisuudessa oli 7 alakoulua, 3 yläkoulua ja 2 yhtenäiskoulua Joensuun alueelta. Työpajassa GenAI-hankkeen johtaja professori Matti Tedre avasi tekoälyn ja koneoppimisen peruskäsitteitä sekä datalähtöisen ajattelun murrosta. Luento-osuuden jälkeen osallistujat pääsivät käytännössä kokeilemaan erilaisia huipputeknologioita tietojenkäsittelytieteilijöiden tuella. Koska kouluinterventiot suunnitellaan opettajien ja tutkijoiden yhteistyönä, kuului päivään…"
-mainCategory: "Hankkeen toiminta"
+excerpt: >-
+  GenAI-hankkeen kouluyhteistyö käynnistyi perjantaina 3.2.2023 klo 9-14
+  Joensuussa yhteissuunnittelukokouksella. Mukana tilaisuudessa oli 7 alakoulua,
+  3 yläkoulua ja 2 yhtenäiskoulua Joensuun alueelta. Työpajassa GenAI-hankkeen
+  johtaja professori Matti Tedre avasi tekoälyn ja koneoppimisen peruskäsitteitä
+  sekä datalähtöisen ajattelun murrosta. Luento-osuuden jälkeen osallistujat
+  pääsivät käytännössä kokeilemaan erilaisia huipputeknologioita
+  tietojenkäsittelytieteilijöiden tuella. Koska kouluinterventiot suunnitellaan
+  opettajien ja tutkijoiden yhteistyönä, kuului päivään…
+mainCategory: Toiminta
 extraCategories:
-  - "Hankkeen toiminta"
-  - "Työpaja"
+  - Hankkeen toiminta
+  - Työpaja
 tags:
   - Itä-suomen yliopisto
   - joensuu

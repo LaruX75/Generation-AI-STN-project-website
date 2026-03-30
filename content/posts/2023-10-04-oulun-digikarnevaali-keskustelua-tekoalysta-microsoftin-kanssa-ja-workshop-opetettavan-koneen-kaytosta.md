@@ -1,15 +1,26 @@
 ---
-title: "Oulun Digikarnevaali: Keskustelua tekoälystä Microsoftin kanssa ja workshop opetettavan koneen käytöstä."
-date: "2023-10-04T08:10:20"
-updated: "2025-01-25T07:54:11"
-slug: oulun-digikarnevaali-keskustelua-tekoalysta-microsoftin-kanssa-ja-workshop-opetettavan-koneen-kaytosta
-permalink: /ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/oulun-digikarnevaali-keskustelua-tekoalysta-microsoftin-kanssa-ja-workshop-opetettavan-koneen-kaytosta/
+title: >-
+  Oulun Digikarnevaali: Keskustelua tekoälystä Microsoftin kanssa ja workshop
+  opetettavan koneen käytöstä.
+date: '2023-10-04T08:10:20'
+updated: '2025-01-25T07:54:11'
+slug: >-
+  oulun-digikarnevaali-keskustelua-tekoalysta-microsoftin-kanssa-ja-workshop-opetettavan-koneen-kaytosta
+permalink: >-
+  /ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/oulun-digikarnevaali-keskustelua-tekoalysta-microsoftin-kanssa-ja-workshop-opetettavan-koneen-kaytosta/
 status: publish
 sourceType: posts
-excerpt: "Tiistaina 3.10.2023 Oulun kaupunki järjesti sivistys- ja kulttuuripalveluiden henkilökunnalle digikarnevaalin, jossa myös Generation AI hanke oli vahvasti mukana. Oulun kaupunki on hankkeen yhteistyökumppani, eli kehitämme sovelluksia ja materiaaleja yhdessä vapaaehtoisten kehittäjäopettajien ja oppilaiden kanssa. Digikarnevaalissa esittelimme hankkeessa kehitettyä opetettavaa konetta kahdessa työpajassa ja hankkeen edustaja, Jari Laru, osallistui tilaisuuden aluksi keskusteluun Microsoftin Vesa Äyräksen ja…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Tiistaina 3.10.2023 Oulun kaupunki järjesti sivistys- ja kulttuuripalveluiden
+  henkilökunnalle digikarnevaalin, jossa myös Generation AI hanke oli vahvasti
+  mukana. Oulun kaupunki on hankkeen yhteistyökumppani, eli kehitämme
+  sovelluksia ja materiaaleja yhdessä vapaaehtoisten kehittäjäopettajien ja
+  oppilaiden kanssa. Digikarnevaalissa esittelimme hankkeessa kehitettyä
+  opetettavaa konetta kahdessa työpajassa ja hankkeen edustaja, Jari Laru,
+  osallistui tilaisuuden aluksi keskusteluun Microsoftin Vesa Äyräksen ja…
+mainCategory: Tapahtumat
 subCategories:
-  - "GenAI hankkeen henkilöstö tapahtumissa"
+  - GenAI hankkeen henkilöstö tapahtumissa
 tags:
   - Digikarnevaalit
   - Microsoft

@@ -26,29 +26,20 @@ collections:
     preview_path: "{{permalink}}"
     sortable_fields: ["date", "title"]
     view_filters:
-      - label: "Ajankohtaista"
+      - label: "Mediassa"
         field: mainCategory
-        pattern: "Ajankohtaista"
-      - label: "Hankkeen toiminta"
+        pattern: "Mediassa"
+      - label: "Tapahtumat"
         field: mainCategory
-        pattern: "Hankkeen toiminta"
+        pattern: "Tapahtumat"
+      - label: "Toiminta"
+        field: mainCategory
+        pattern: "Toiminta"
       - label: "Tutkimus"
         field: mainCategory
         pattern: "Tutkimus"
-      - label: "Henkilöstö mediassa"
-        field: subCategories
-        pattern: "GenAI hankkeen henkilöstö mediassa"
-      - label: "Henkilöstö tapahtumissa"
-        field: subCategories
-        pattern: "GenAI hankkeen henkilöstö tapahtumissa"
-      - label: "Webinaari"
-        field: subCategories
-        pattern: "Webinaari"
-      - label: "Haastattelu"
-        field: subCategories
-        pattern: "Haastattelu"
     view_groups:
-      - label: "Pääkategoria"
+      - label: "Välilehti (ajankohtaista)"
         field: mainCategory
       - label: "Vuosi"
         field: date
@@ -69,44 +60,29 @@ collections:
         widget: "select"
         required: false
         options:
-          - "Ajankohtaista"
-          - "Esiopetus"
-          - "FCAI"
-          - "Generation AI kuukausittaiset tekoälykuulumiset (uutiskirje)"
-          - "Hankkeen toiminta"
-          - "Helsingin yliopisto"
-          - "Heureka"
-          - "Itä-Suomen yliopisto"
-          - "Kolumni"
-          - "Konferenssit ja seminaarit"
-          - "Luento"
-          - "Media"
-          - "MTV3"
-          - "Sovellukset"
+          - "Mediassa"
+          - "Tapahtumat"
+          - "Toiminta"
           - "Tutkimus"
-          - "Työpaja"
-          - "Yliopistojen uutiset"
-          - "Youtube"
-      - label: "Alakategoriat"
+      - label: "Tarkempi tyyppi"
         name: "subCategories"
         widget: "select"
         multiple: true
         required: false
         options:
-          - "Ajankohtaista hankkeen ulkopuolella"
           - "Blogikirjoitus"
           - "GenAI hankkeen henkilöstö mediassa"
           - "GenAI hankkeen henkilöstö tapahtumissa"
           - "GenAI hankkeen kouluttamassa"
-          - "GenAI työkalut ja materiaalit hankkeen ulkopuolella"
           - "Haastattelu"
           - "Julkaisu"
           - "Konferenssijulkaisu"
+          - "Konferenssit ja seminaarit"
           - "Lasten oikeudet"
-          - "Luokittelija"
           - "Mielipidekirjoitus"
           - "Podcast"
           - "Webinaari"
+          - "Työpaja"
           - "YLE"
       - label: "Muut kategoriat"
         name: "extraCategories"
@@ -114,22 +90,13 @@ collections:
         multiple: true
         required: false
         options:
-          - "Ajankohtaista"
           - "Esiopetus"
           - "FCAI"
-          - "Generation AI kuukausittaiset tekoälykuulumiset (uutiskirje)"
-          - "Hankkeen toiminta"
           - "Helsingin yliopisto"
           - "Heureka"
           - "Itä-Suomen yliopisto"
-          - "Kolumni"
-          - "Konferenssit ja seminaarit"
-          - "Luento"
-          - "Media"
-          - "MTV3"
+          - "Luokittelija"
           - "Sovellukset"
-          - "Tutkimus"
-          - "Työpaja"
           - "Yliopistojen uutiset"
           - "Youtube"
       - { label: "Avainsanat", name: "tags", widget: "list", required: false }
@@ -378,6 +345,27 @@ collections:
       - { label: "Bild (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Författare", name: "author", widget: "string", required: false, default: "admin" }
       - { label: "Innehåll", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
+
+  # ── SIDOSRYHMÄTAPAHTUMAT ───────────────────────────────────────────────────
+  - name: "stakeholder_activities"
+    label: "Sidosryhmätapahtumat"
+    label_singular: "Tapahtuma"
+    icon: "groups"
+    files:
+      - name: "activities"
+        label: "Tapahtumat ja esitykset"
+        file: "src/_data/stakeholderActivities.data.json"
+        fields:
+          - label: "Tapahtumat"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.date}} — {{fields.stakeholder}}"
+            fields:
+              - { label: "Organisaatio / Tapahtuma", name: "stakeholder", widget: "string" }
+              - { label: "Aihe / Otsikko", name: "title", widget: "string" }
+              - { label: "Osallistujia", name: "participants", widget: "string", required: false, hint: "Luku tai N jos ei tiedossa" }
+              - { label: "Päivämäärä", name: "date", widget: "string", required: false, hint: "Muodossa pp.kk.vvvv" }
+              - { label: "Esittäjä(t)", name: "consortium", widget: "string", required: false, hint: "Hankkeen jäsenten lyhenteet, esim. MT, JL" }
 
   - name: "pages_sv"
     label: "Sidor (svenska)"

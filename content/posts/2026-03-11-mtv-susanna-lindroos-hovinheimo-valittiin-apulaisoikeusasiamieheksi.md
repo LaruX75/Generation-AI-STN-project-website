@@ -1,15 +1,21 @@
 ---
-title: "MTV Uutiset: Susanna Lindroos-Hovinheimo valittiin eduskunnan apulaisoikeusasiamieheksi"
-date: "2026-03-11T15:23:00"
-updated: "2026-03-11T15:23:00"
+title: >-
+  MTV Uutiset: Susanna Lindroos-Hovinheimo valittiin eduskunnan
+  apulaisoikeusasiamieheksi
+date: '2026-03-11T15:23:00'
+updated: '2026-03-11T15:23:00'
 slug: mtv-susanna-lindroos-hovinheimo-valittiin-apulaisoikeusasiamieheksi
-permalink: /ajankohtaista/mtv-susanna-lindroos-hovinheimo-valittiin-apulaisoikeusasiamieheksi/
+permalink: >-
+  /ajankohtaista/mtv-susanna-lindroos-hovinheimo-valittiin-apulaisoikeusasiamieheksi/
 status: publish
 sourceType: posts
-excerpt: "MTV Uutiset kertoi 11.3.2026 Susanna Lindroos-Hovinheimon tulleen valituksi eduskunnan apulaisoikeusasiamieheksi. Alkuperäinen juttu: https://www.mtvuutiset.fi/artikkeli/susanna-lindroos-hovinheimo-valittiin-eduskunnan-apulaisoikeusasiamieheksi/9308714"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  MTV Uutiset kertoi 11.3.2026 Susanna Lindroos-Hovinheimon tulleen valituksi
+  eduskunnan apulaisoikeusasiamieheksi. Alkuperäinen juttu:
+  https://www.mtvuutiset.fi/artikkeli/susanna-lindroos-hovinheimo-valittiin-eduskunnan-apulaisoikeusasiamieheksi/9308714
+mainCategory: Mediassa
 subCategories:
-  - "GenAI hankkeen henkilöstö mediassa"
+  - GenAI hankkeen henkilöstö mediassa
 tags:
   - mtv3
   - susanna lindroos-hovinheimo

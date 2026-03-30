@@ -1,17 +1,25 @@
 ---
-title: "Yle: Tutkijat keksivät, miten nuoret saa kiinnostumaan somen riskeistä"
-date: "2024-02-23T12:34:00"
-updated: "2025-01-24T07:28:13"
+title: 'Yle: Tutkijat keksivät, miten nuoret saa kiinnostumaan somen riskeistä'
+date: '2024-02-23T12:34:00'
+updated: '2025-01-24T07:28:13'
 slug: yle-tutkijat-keksivat-miten-nuoret-saa-kiinnostumaan-somen-riskeista
-permalink: /uncategorized-fi/yle-tutkijat-keksivat-miten-nuoret-saa-kiinnostumaan-somen-riskeista/
+permalink: >-
+  /uncategorized-fi/yle-tutkijat-keksivat-miten-nuoret-saa-kiinnostumaan-somen-riskeista/
 status: publish
 sourceType: posts
-excerpt: "Yle kirjoitti artikkelin Generation AI:n kehittelemästä Somekoneesta. Artikkelissa professori Matti Tedre kertoo Somekoneesta, jota parhaillaan testataan kouluissa viides- ja kahdeksasluokkalaisilla. Somekone on sovellus, jonka tarkoituksena on simuloida sosiaalisen median toimintaa. Oppilaat selaavat ensin koneeseen syötettyä kuvavirtaa. Aivan kuten todellisessakin sosiaalisessa mediassa, kuvia voidaan kommentoida, niistä voidaan tykätä ja niitä voidaan jakaa, sekä ryhtyä leikisti seuraamaan…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Yle kirjoitti artikkelin Generation AI:n kehittelemästä Somekoneesta.
+  Artikkelissa professori Matti Tedre kertoo Somekoneesta, jota parhaillaan
+  testataan kouluissa viides- ja kahdeksasluokkalaisilla. Somekone on sovellus,
+  jonka tarkoituksena on simuloida sosiaalisen median toimintaa. Oppilaat
+  selaavat ensin koneeseen syötettyä kuvavirtaa. Aivan kuten todellisessakin
+  sosiaalisessa mediassa, kuvia voidaan kommentoida, niistä voidaan tykätä ja
+  niitä voidaan jakaa, sekä ryhtyä leikisti seuraamaan…
+mainCategory: Mediassa
 subCategories:
-  - "YLE"
+  - YLE
 extraCategories:
-  - "Media"
+  - Media
 tags:
   - Matti Tedre
   - Some

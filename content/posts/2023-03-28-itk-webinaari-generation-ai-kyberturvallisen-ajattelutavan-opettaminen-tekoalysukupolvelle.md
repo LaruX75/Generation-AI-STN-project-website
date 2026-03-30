@@ -1,16 +1,27 @@
 ---
-title: "ITK-webinaari: Generation AI – kyberturvallisen ajattelutavan opettaminen tekoälysukupolvelle"
-date: "2023-03-28T21:51:16"
-updated: "2025-02-02T22:52:28"
-slug: itk-webinaari-generation-ai-kyberturvallisen-ajattelutavan-opettaminen-tekoalysukupolvelle
-permalink: /ajankohtaista/itk-webinaari-generation-ai-kyberturvallisen-ajattelutavan-opettaminen-tekoalysukupolvelle/
+title: >-
+  ITK-webinaari: Generation AI – kyberturvallisen ajattelutavan opettaminen
+  tekoälysukupolvelle
+date: '2023-03-28T21:51:16'
+updated: '2025-02-02T22:52:28'
+slug: >-
+  itk-webinaari-generation-ai-kyberturvallisen-ajattelutavan-opettaminen-tekoalysukupolvelle
+permalink: >-
+  /ajankohtaista/itk-webinaari-generation-ai-kyberturvallisen-ajattelutavan-opettaminen-tekoalysukupolvelle/
 status: publish
 sourceType: posts
-excerpt: "ITK-webinaari 28.3.2023 Jari Laru, Oulun yliopisto Matti Tedre, Itä-Suomen yliopisto Henriikka Vartiainen, Itä-Suomen yliopisto Hahmotatko millaisia haasteita dataistuneeseen, algoritmien hallitsemassa yhteiskunnassa on? ChatGPT ja vastaavat tekoälysovellukset ovat herättäneet ihmisissä paljon innostusta ja uteliaisuutta, mutta myös paljon kysymyksiä ja huolta. Strategisen tutkimuksen neuvoston (STN) rahoittamassa Generation AI hankkeessa raotetaan tekoälyn mustaa laatikkoa, eli kehitetään sisältöjä, menetelmiä…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  ITK-webinaari 28.3.2023 Jari Laru, Oulun yliopisto Matti Tedre, Itä-Suomen
+  yliopisto Henriikka Vartiainen, Itä-Suomen yliopisto Hahmotatko millaisia
+  haasteita dataistuneeseen, algoritmien hallitsemassa yhteiskunnassa on?
+  ChatGPT ja vastaavat tekoälysovellukset ovat herättäneet ihmisissä paljon
+  innostusta ja uteliaisuutta, mutta myös paljon kysymyksiä ja huolta.
+  Strategisen tutkimuksen neuvoston (STN) rahoittamassa Generation AI hankkeessa
+  raotetaan tekoälyn mustaa laatikkoa, eli kehitetään sisältöjä, menetelmiä…
+mainCategory: Tapahtumat
 subCategories:
-  - "GenAI hankkeen henkilöstö tapahtumissa"
-  - "Webinaari"
+  - GenAI hankkeen henkilöstö tapahtumissa
+  - Webinaari
 tags:
   - ITK2023
   - tekoäly

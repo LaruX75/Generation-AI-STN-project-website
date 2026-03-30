@@ -6,32 +6,9 @@ layout: layouts/base.njk
 {% set _postCollection = collections.posts_en if _lang == "en" else (collections.posts_sv if _lang == "sv" else collections.posts_fi) %}
 {% set _relPosts = _postCollection | relatedPosts(page.url, tags) %}
 {% set _relatedCategoryAllowlist = [
-  "Ajankohtaista",
-  "Current affairs",
-  "Nyheter",
-  "Nyheter från",
-  "GenAI hankkeen henkilöstö mediassa",
-  "GenAI hankkeen henkilöstö tapahtumissa",
-  "Hankkeen toiminta",
-  "Tutkimus",
-  "GenAI project staff in the media",
-  "GenAI Project Staff in Media",
-  "GenAI project staff in media",
-  "GenAI Project Staff in the Media",
-  "GenAI project staff at events",
-  "GenAI Project Staff at Events",
-  "GenAI project staff events",
-  "Project activities",
-  "Project Activities",
-  "Research",
-  "GenAI-projektets personal i media",
-  "GenAI-projektets medarbetare i media",
-  "GenAI-projektets personal vid evenemang",
-  "GenAI-projektets personal på evenemang",
-  "GenAI-projektpersonalens evenemang",
-  "Projektaktiviteter",
-  "Projektverksamhet",
-  "Forskning"
+  "Mediassa", "Tapahtumat", "Toiminta", "Tutkimus",
+  "In the media", "Events", "Project activities", "Research",
+  "I media", "Evenemang", "Projektaktiviteter", "Forskning"
 ] %}
 {% set _showRelatedContent = false %}
 {% for _category in categories or [] %}
@@ -41,27 +18,17 @@ layout: layouts/base.njk
 {% endfor %}
 
 {% set _catUrls = {
-  "Ajankohtaista": "/ajankohtaista/",
-  "Hankkeen toiminta": "/hankkeen-toiminta/",
+  "Mediassa": "/ajankohtaista/#tab-media",
+  "Tapahtumat": "/ajankohtaista/#tab-tapahtumat",
+  "Toiminta": "/ajankohtaista/#tab-toiminta",
   "Tutkimus": "/tutkijalle/",
-  "GenAI hankkeen henkilöstö mediassa": "/medialle/",
-  "GenAI hankkeen henkilöstö tapahtumissa": "/ajankohtaista/#tab-tapahtumat",
-  "Konferenssit ja seminaarit": "/ajankohtaista/#tab-tapahtumat",
-  "Webinaari": "/ajankohtaista/#tab-tapahtumat",
-  "Työpaja": "/ajankohtaista/#tab-tapahtumat",
-  "Haastattelu": "/medialle/",
-  "News": "/en/current-affairs/",
-  "News from": "/en/current-affairs/",
+  "In the media": "/en/current-affairs/#tab-media",
+  "Events": "/en/current-affairs/#tab-tapahtumat",
   "Project activities": "/en/activities/",
   "Research": "/en/research/",
-  "GenAI project staff at events": "/en/activities/",
-  "GenAI project staff in the media": "/en/for-everyone/",
-  "GenAI Project Staff in Media": "/en/for-everyone/",
-  "GenAI Project Staff at Events": "/en/activities/",
-  "Webinar": "/en/activities/",
-  "Interview": "/en/for-everyone/",
-  "Nyheter": "/sv/aktuellt/",
-  "Projektets verksamhet": "/sv/verksamhet/",
+  "I media": "/sv/aktuellt/#tab-media",
+  "Evenemang": "/sv/aktuellt/#tab-tapahtumat",
+  "Projektaktiviteter": "/sv/verksamhet/",
   "Forskning": "/sv/forskning/"
 } %}
 

@@ -1,17 +1,27 @@
 ---
-title: "Vierailuluento ja työpaja Jyväskylän yliopistossa: ”Koneoppimista koulumaailmaan”"
-date: "2022-11-04T00:06:54"
-updated: "2023-01-30T00:12:45"
+title: >-
+  Vierailuluento ja työpaja Jyväskylän yliopistossa: ”Koneoppimista
+  koulumaailmaan”
+date: '2022-11-04T00:06:54'
+updated: '2023-01-30T00:12:45'
 slug: vierailuluento-ja-tyopaja-jyvaskylan-yliopistossa-koneoppimista-koulumaailmaan
-permalink: /ajankohtaista/vierailuluento-ja-tyopaja-jyvaskylan-yliopistossa-koneoppimista-koulumaailmaan/
+permalink: >-
+  /ajankohtaista/vierailuluento-ja-tyopaja-jyvaskylan-yliopistossa-koneoppimista-koulumaailmaan/
 status: publish
 sourceType: posts
-excerpt: "Hankkeen tutkijat Prof. Matti Tedre ja yliopistotutkija Henriikka Vartiainen pitivät vierailuluennon ja työpajan ”Koneoppimista koulumaailmaan” Jyväskylän yliopistossa 4.11.2022 Koneoppimiseen, ja yleisemmällä tasolla tekoälyyn, perustuvat teknologiat ovat tulleet osaksi lasten ja nuorten jokapäiväistä elämää esimerkiksi erilaisten sosiaalisen median sovellusten kautta. Luento ja työpaja tuovat esiin koneoppimisen aiheuttamiin murroslinjoihin liittyviä näkökulmia. Koneoppimiseen, ja yleisemmällä tasolla tekoälyyn, perustuvat…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Hankkeen tutkijat Prof. Matti Tedre ja yliopistotutkija Henriikka Vartiainen
+  pitivät vierailuluennon ja työpajan ”Koneoppimista koulumaailmaan” Jyväskylän
+  yliopistossa 4.11.2022 Koneoppimiseen, ja yleisemmällä tasolla tekoälyyn,
+  perustuvat teknologiat ovat tulleet osaksi lasten ja nuorten jokapäiväistä
+  elämää esimerkiksi erilaisten sosiaalisen median sovellusten kautta. Luento ja
+  työpaja tuovat esiin koneoppimisen aiheuttamiin murroslinjoihin liittyviä
+  näkökulmia. Koneoppimiseen, ja yleisemmällä tasolla tekoälyyn, perustuvat…
+mainCategory: Tapahtumat
 extraCategories:
-  - "Luento"
-  - "Työpaja"
-  - "Yliopistojen uutiset"
+  - Luento
+  - Työpaja
+  - Yliopistojen uutiset
 tags:
   - Henriikka Vartiainen
   - Jyväskylän yliopisto
@@ -19,7 +29,8 @@ tags:
   - työpaja
   - vierailuluento
 author: admin
-featuredImage: "https://www.generation-ai-stn.fi/wp-content/uploads/2023/01/Robot_dog_walking_in_forest_hyper_realistic__14d49c57-a6a7-448d-bc99-40cc5932137c.png"
+featuredImage: >-
+  https://www.generation-ai-stn.fi/wp-content/uploads/2023/01/Robot_dog_walking_in_forest_hyper_realistic__14d49c57-a6a7-448d-bc99-40cc5932137c.png
 layout: layouts/post.njk
 ---
 

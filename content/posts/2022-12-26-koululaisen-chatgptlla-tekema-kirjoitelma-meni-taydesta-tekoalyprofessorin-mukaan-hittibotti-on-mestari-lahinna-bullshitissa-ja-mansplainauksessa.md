@@ -1,17 +1,28 @@
 ---
-title: "Koululaisen ChatGPT:llä tekemä kirjoitelma meni täydestä – tekoälyprofessorin mukaan hittibotti on mestari lähinnä ”bullshitissä” ja ”mansplainauksessa”"
-date: "2022-12-26T13:36:51"
-updated: "2023-09-19T18:09:30"
-slug: koululaisen-chatgptlla-tekema-kirjoitelma-meni-taydesta-tekoalyprofessorin-mukaan-hittibotti-on-mestari-lahinna-bullshitissa-ja-mansplainauksessa
-permalink: /ajankohtaista/genai-hankkeen-henkilosto-mediassa/koululaisen-chatgptlla-tekema-kirjoitelma-meni-taydesta-tekoalyprofessorin-mukaan-hittibotti-on-mestari-lahinna-bullshitissa-ja-mansplainauksessa/
+title: >-
+  Koululaisen ChatGPT:llä tekemä kirjoitelma meni täydestä – tekoälyprofessorin
+  mukaan hittibotti on mestari lähinnä ”bullshitissä” ja ”mansplainauksessa”
+date: '2022-12-26T13:36:51'
+updated: '2023-09-19T18:09:30'
+slug: >-
+  koululaisen-chatgptlla-tekema-kirjoitelma-meni-taydesta-tekoalyprofessorin-mukaan-hittibotti-on-mestari-lahinna-bullshitissa-ja-mansplainauksessa
+permalink: >-
+  /ajankohtaista/genai-hankkeen-henkilosto-mediassa/koululaisen-chatgptlla-tekema-kirjoitelma-meni-taydesta-tekoalyprofessorin-mukaan-hittibotti-on-mestari-lahinna-bullshitissa-ja-mansplainauksessa/
 status: publish
 sourceType: posts
-excerpt: "MTV3 haastatteli hankkeen tutkijaa, tekoälyprofessori Teemu Roosia 26.12.2022 ”Tekoäly voi kyetä tekemään osan vaikkapa koululaisen kotitehtävistä, mutta mihin sitä oikeasti voi käyttää? Tekoälyprofessori näkee ChatGPT:n kaltaisissa sovelluksissa mahdollisuuksia, mutta ongelmana on se, ettei sen antamiin vastauksiin voi täysin luottaa. Professori kertoo artikkelin yläpuolella olevalla videolla syyn.” https://www.mtvuutiset.fi/artikkeli/koululaisen-chatgpt-lla-tekema-kirjoitelma-meni-taydesta-tekoalyprofessorin-mukaan-hittibotti-on-mestari-lahinna-bullshitissa-ja-mansplainauksessa/8597214"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  MTV3 haastatteli hankkeen tutkijaa, tekoälyprofessori Teemu Roosia 26.12.2022
+  ”Tekoäly voi kyetä tekemään osan vaikkapa koululaisen kotitehtävistä, mutta
+  mihin sitä oikeasti voi käyttää? Tekoälyprofessori näkee ChatGPT:n kaltaisissa
+  sovelluksissa mahdollisuuksia, mutta ongelmana on se, ettei sen antamiin
+  vastauksiin voi täysin luottaa. Professori kertoo artikkelin yläpuolella
+  olevalla videolla syyn.”
+  https://www.mtvuutiset.fi/artikkeli/koululaisen-chatgpt-lla-tekema-kirjoitelma-meni-taydesta-tekoalyprofessorin-mukaan-hittibotti-on-mestari-lahinna-bullshitissa-ja-mansplainauksessa/8597214
+mainCategory: Mediassa
 subCategories:
-  - "GenAI hankkeen henkilöstö mediassa"
+  - GenAI hankkeen henkilöstö mediassa
 extraCategories:
-  - "MTV3"
+  - MTV3
 tags:
   - chatgpt
   - haastattelu

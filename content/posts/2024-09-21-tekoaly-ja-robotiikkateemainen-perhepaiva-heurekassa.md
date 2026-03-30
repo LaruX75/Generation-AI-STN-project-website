@@ -1,17 +1,19 @@
 ---
-title: "Tekoäly- ja robotiikkateemainen perhepäivä Heurekassa"
-date: "2024-09-21T09:00:00"
-updated: "2026-03-15T00:00:00"
+title: Tekoäly- ja robotiikkateemainen perhepäivä Heurekassa
+date: '2024-09-21T09:00:00'
+updated: '2026-03-15T00:00:00'
 slug: tekoaly-ja-robotiikkateemainen-perhepaiva-heurekassa
 permalink: /ajankohtaista/tekoaly-ja-robotiikkateemainen-perhepaiva-heurekassa/
 status: publish
 sourceType: posts
-excerpt: "Generation AI oli mukana järjestämässä Heurekan tekoäly- ja robotiikkateemaista perhepäivää 21.9.2024."
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Generation AI oli mukana järjestämässä Heurekan tekoäly- ja
+  robotiikkateemaista perhepäivää 21.9.2024.
+mainCategory: Tapahtumat
 subCategories:
-  - "GenAI hankkeen henkilöstö tapahtumissa"
+  - GenAI hankkeen henkilöstö tapahtumissa
 extraCategories:
-  - "Konferenssit ja seminaarit"
+  - Konferenssit ja seminaarit
 tags:
   - heureka
   - perhepäivä

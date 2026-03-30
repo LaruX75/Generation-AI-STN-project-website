@@ -252,34 +252,31 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("media", col =>
     col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).some(c => [
       // fi
-      "GenAI hankkeen henkilöstö mediassa", "Media", "Haastattelu",
+      "Mediassa",
       // en
-      "GenAI project staff in the media", "GenAI Project Staff in Media", "GenAI project staff in media",
-      "GenAI Project Staff in the Media", "Interview", "interview",
+      "In the media",
       // sv
-      "GenAI-projektets personal i media", "GenAI-projektets medarbetare i media", "Intervju"
+      "I media"
     ].includes(c))).sort(byDate)
   );
   eleventyConfig.addCollection("tapahtumat", col =>
     col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).some(c => [
       // fi
-      "GenAI hankkeen henkilöstö tapahtumissa", "Konferenssit ja seminaarit", "Webinaari", "Työpaja",
+      "Tapahtumat",
       // en
-      "GenAI project staff at events", "GenAI Project Staff at Events", "GenAI project staff events",
-      "Conferences and seminars", "Conferences and Seminars", "Webinar", "Workshop",
+      "Events",
       // sv
-      "GenAI-projektets personal vid evenemang", "GenAI-projektets personal på evenemang",
-      "GenAI-projektpersonalens evenemang", "Konferenser och seminarier", "Webbinarium"
+      "Evenemang"
     ].includes(c))).sort(byDate)
   );
   eleventyConfig.addCollection("hankkeen-toiminta", col =>
     col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).some(c => [
       // fi
-      "Hankkeen toiminta",
+      "Toiminta",
       // en
-      "Project activities", "Project Activities",
+      "Project activities",
       // sv
-      "Projektaktiviteter", "Projektverksamhet"
+      "Projektaktiviteter"
     ].includes(c))).sort(byDate)
   );
   eleventyConfig.addCollection("tutkimus", col =>

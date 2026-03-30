@@ -1,18 +1,26 @@
 ---
-title: "Lasten oikeuksia ei ole otettu riittävästi huomioon EU:n tekoälyasetuksessa"
-date: "2023-09-12T09:12:48"
-updated: "2023-09-22T09:23:57"
+title: 'Lasten oikeuksia ei ole otettu riittävästi huomioon EU:n tekoälyasetuksessa'
+date: '2023-09-12T09:12:48'
+updated: '2023-09-22T09:23:57'
 slug: lasten-oikeuksia-ei-ole-otettu-riittavasti-huomioon-eun-tekoalyasetuksessa
-permalink: /ajankohtaista/lasten-oikeuksia-ei-ole-otettu-riittavasti-huomioon-eun-tekoalyasetuksessa/
+permalink: >-
+  /ajankohtaista/lasten-oikeuksia-ei-ole-otettu-riittavasti-huomioon-eun-tekoalyasetuksessa/
 status: publish
 sourceType: posts
-excerpt: "Susanna Lindroos-Hovinheimo on kirjoittanut 12.9.2023 blogitekstin European Law Blogiin. Alla on lyhyt suomenkielinen tiivistelmä kirjoituksesta: Neuvottelut EU:n tekoälyasetuksesta ovat meneillään ja aiheesta käydään runsaasti keskustelua. Lasten oikeuksia ei kuitenkaan ole otettu valmistelussa erityisemmin huomioon. Vaikka asetusehdotus on kehittynyt perusoikeudet huomioon ottavaan suuntaan, ei asetuksen artikloja ole kirjoitettu lasten suojelua silmällä pitäen. Komission, neuvoston ja parlamentin kantojen…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Susanna Lindroos-Hovinheimo on kirjoittanut 12.9.2023 blogitekstin European
+  Law Blogiin. Alla on lyhyt suomenkielinen tiivistelmä kirjoituksesta:
+  Neuvottelut EU:n tekoälyasetuksesta ovat meneillään ja aiheesta käydään
+  runsaasti keskustelua. Lasten oikeuksia ei kuitenkaan ole otettu valmistelussa
+  erityisemmin huomioon. Vaikka asetusehdotus on kehittynyt perusoikeudet
+  huomioon ottavaan suuntaan, ei asetuksen artikloja ole kirjoitettu lasten
+  suojelua silmällä pitäen. Komission, neuvoston ja parlamentin kantojen…
+mainCategory: Tutkimus
 subCategories:
-  - "Blogikirjoitus"
-  - "Lasten oikeudet"
+  - Blogikirjoitus
+  - Lasten oikeudet
 extraCategories:
-  - "Tutkimus"
+  - Tutkimus
 tags:
   - lainsäädäntö
   - lapset ja tekoäly

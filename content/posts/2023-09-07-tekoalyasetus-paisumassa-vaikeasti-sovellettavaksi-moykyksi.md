@@ -1,17 +1,26 @@
 ---
 title: Tekoälyasetus paisumassa vaikeasti sovellettavaksi möykyksi
-date: "2023-09-07T09:25:42"
-updated: "2023-09-22T09:31:22"
+date: '2023-09-07T09:25:42'
+updated: '2023-09-22T09:31:22'
 slug: tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi
-permalink: /helsingin-yliopisto/tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi/
+permalink: >-
+  /helsingin-yliopisto/tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi/
 status: publish
 sourceType: posts
-excerpt: "Alla oleva teksti, jossa haastatellaan julkisoikeuden professori Susanna Lindroos-Hovinheimoa ja apulaisprofessori Riikka Kolua on julkaistu 7.9.2023 Helsingin yliopiston uutisena. Lue alkuperäinen uutisteksti täältä: https://www.helsinki.fi/fi/uutiset/demokratia/tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi EU:ssa tehdään hartiavoimin töitä, jotta kaavailtu tekoälyasetus saataisiin valmiiksi lähitulevaisuudessa. Tekoälyä hyödyntävien järjestelmien kehittyessä huimaa vauhtia lakipaketti uhkaa kuitenkin kasvaa vaikeasti sovellettavaksi kokonaisuudeksi. – Alkaa näyttää siltä, että asetuksesta tulee hyvin…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Alla oleva teksti, jossa haastatellaan julkisoikeuden professori Susanna
+  Lindroos-Hovinheimoa ja apulaisprofessori Riikka Kolua on julkaistu 7.9.2023
+  Helsingin yliopiston uutisena. Lue alkuperäinen uutisteksti täältä:
+  https://www.helsinki.fi/fi/uutiset/demokratia/tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi
+  EU:ssa tehdään hartiavoimin töitä, jotta kaavailtu tekoälyasetus saataisiin
+  valmiiksi lähitulevaisuudessa. Tekoälyä hyödyntävien järjestelmien kehittyessä
+  huimaa vauhtia lakipaketti uhkaa kuitenkin kasvaa vaikeasti sovellettavaksi
+  kokonaisuudeksi. – Alkaa näyttää siltä, että asetuksesta tulee hyvin…
+mainCategory: Mediassa
 subCategories:
-  - "GenAI hankkeen henkilöstö mediassa"
+  - GenAI hankkeen henkilöstö mediassa
 extraCategories:
-  - "Helsingin yliopisto"
+  - Helsingin yliopisto
 tags:
   - lainsäädäntö
   - lasten suojelu

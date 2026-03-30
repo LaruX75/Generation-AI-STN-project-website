@@ -1,16 +1,23 @@
 ---
-title: "Podcast jakso: Koulutus ja tekoäly: Mitä opetettavaa tekoälyllä on meille?"
-date: "2023-07-22T12:11:20"
-updated: "2023-09-22T12:29:01"
+title: 'Podcast jakso: Koulutus ja tekoäly: Mitä opetettavaa tekoälyllä on meille?'
+date: '2023-07-22T12:11:20'
+updated: '2023-09-22T12:29:01'
 slug: podcast-jakso-koulutus-ja-tekoaly-mita-opetettavaa-tekoalylla-on-meille
-permalink: /ajankohtaista/podcast-jakso-koulutus-ja-tekoaly-mita-opetettavaa-tekoalylla-on-meille/
+permalink: >-
+  /ajankohtaista/podcast-jakso-koulutus-ja-tekoaly-mita-opetettavaa-tekoalylla-on-meille/
 status: publish
 sourceType: posts
-excerpt: "Tehnically Optimistic blogissa julkaistiin 22.7.2023 mielenkiintoinen jakso. Siinä tekoälystä keskustelivat opiskelijaedustaja Shena Revanur, Khan Akacemyn perustaja Sal Khan, Code.orgin koulutusjohtaja Pat Yongpradit, hankkeessamme työskentelevä prof. Teemu Roos ja koneoppimisen pioneeri Tom Mitchell. Lue jakson englanninkielinen esittely Can we use AI as a tool that enriches learning, rather than replacing it? We’re seeing AI rapidly revolutionize…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Tehnically Optimistic blogissa julkaistiin 22.7.2023 mielenkiintoinen jakso.
+  Siinä tekoälystä keskustelivat opiskelijaedustaja Shena Revanur, Khan Akacemyn
+  perustaja Sal Khan, Code.orgin koulutusjohtaja Pat Yongpradit, hankkeessamme
+  työskentelevä prof. Teemu Roos ja koneoppimisen pioneeri Tom Mitchell. Lue
+  jakson englanninkielinen esittely Can we use AI as a tool that enriches
+  learning, rather than replacing it? We’re seeing AI rapidly revolutionize…
+mainCategory: Mediassa
 subCategories:
-  - "GenAI hankkeen henkilöstö mediassa"
-  - "Podcast"
+  - GenAI hankkeen henkilöstö mediassa
+  - Podcast
 tags:
   - AI podcast
   - Technically optimistic

@@ -1,17 +1,22 @@
 ---
-title: "Mitä tekoäly, algoritmit ja koneoppiminen tarkoittavat?"
-date: "2019-11-25T13:51:04"
-updated: "2023-09-19T18:10:31"
+title: 'Mitä tekoäly, algoritmit ja koneoppiminen tarkoittavat?'
+date: '2019-11-25T13:51:04'
+updated: '2023-09-19T18:10:31'
 slug: mita-tekoaly-algoritmit-ja-koneoppiminen-tarkoittavat
 permalink: /helsingin-yliopisto/mita-tekoaly-algoritmit-ja-koneoppiminen-tarkoittavat/
 status: publish
 sourceType: posts
-excerpt: "Toimittaja Jari Hanska haastatteli Helsingin yliopiston apulaisprofessori Teemu Roosia aiheesta: ”Mitä tekoäly, algoritmit ja koneoppiminen tarkoittavat?” Haastattelu tehtiin Helsingin yliopiston tiedekulmassa 25.11.2019 Tekoäly päättää -tapahtuman alussa. Katso kaikki tapahtuman videot tiedekulman Youtube-kanavalta: https://www.youtube.com/watch?v=b4ZGTa-Vczk"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Toimittaja Jari Hanska haastatteli Helsingin yliopiston apulaisprofessori
+  Teemu Roosia aiheesta: ”Mitä tekoäly, algoritmit ja koneoppiminen
+  tarkoittavat?” Haastattelu tehtiin Helsingin yliopiston tiedekulmassa
+  25.11.2019 Tekoäly päättää -tapahtuman alussa. Katso kaikki tapahtuman videot
+  tiedekulman Youtube-kanavalta: https://www.youtube.com/watch?v=b4ZGTa-Vczk
+mainCategory: Mediassa
 subCategories:
-  - "GenAI hankkeen henkilöstö mediassa"
+  - GenAI hankkeen henkilöstö mediassa
 extraCategories:
-  - "Helsingin yliopisto"
+  - Helsingin yliopisto
 tags:
   - algoritmi
   - Helsingin yliopisto
@@ -20,7 +25,8 @@ tags:
   - tekoäly
   - tiedekulma
 author: admin
-featuredImage: "https://www.generation-ai-stn.fi/wp-content/uploads/2019/11/Bits_and_numbers_algorithms_formulas_70581e7b-4fac-4b58-a448-5bc2b5793475.png"
+featuredImage: >-
+  https://www.generation-ai-stn.fi/wp-content/uploads/2019/11/Bits_and_numbers_algorithms_formulas_70581e7b-4fac-4b58-a448-5bc2b5793475.png
 layout: layouts/post.njk
 ---
 

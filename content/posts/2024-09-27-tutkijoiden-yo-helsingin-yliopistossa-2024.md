@@ -1,17 +1,19 @@
 ---
-title: "Tutkijoiden yö 2024: Miten somejätit profiloivat meitä?"
-date: "2024-09-27T09:00:00"
-updated: "2026-03-15T00:00:00"
+title: 'Tutkijoiden yö 2024: Miten somejätit profiloivat meitä?'
+date: '2024-09-27T09:00:00'
+updated: '2026-03-15T00:00:00'
 slug: tutkijoiden-yo-helsingin-yliopistossa-2024
 permalink: /ajankohtaista/tutkijoiden-yo-helsingin-yliopistossa-2024/
 status: publish
 sourceType: posts
-excerpt: "Generation AI oli mukana Tutkijoiden yössä Helsingin yliopistossa 27.9.2024 Somekone-esittelypisteellä."
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Generation AI oli mukana Tutkijoiden yössä Helsingin yliopistossa 27.9.2024
+  Somekone-esittelypisteellä.
+mainCategory: Tapahtumat
 subCategories:
-  - "GenAI hankkeen henkilöstö tapahtumissa"
+  - GenAI hankkeen henkilöstö tapahtumissa
 extraCategories:
-  - "Konferenssit ja seminaarit"
+  - Konferenssit ja seminaarit
 tags:
   - tutkijoiden yö
   - helsingin yliopisto

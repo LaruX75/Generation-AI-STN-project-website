@@ -1,16 +1,20 @@
 ---
-title: "MTV3: Kerrotko tekoälylle sairauksistasi? Professorilta selkeä mielipide"
-date: "2026-03-01T11:45:00"
-updated: "2026-03-01T11:45:00"
+title: 'MTV3: Kerrotko tekoälylle sairauksistasi? Professorilta selkeä mielipide'
+date: '2026-03-01T11:45:00'
+updated: '2026-03-01T11:45:00'
 slug: mtv3-kerrotko-tekoalylle-sairauksistasi
 permalink: /ajankohtaista/mtv3-kerrotko-tekoalylle-sairauksistasi/
 status: publish
 sourceType: posts
-excerpt: "MTV Uutiset haastatteli Teemu Roosia 1.3.2026 tekoälylle jaettavista terveystiedoista sekä arkipäiväisen tekoälykäytön riskeistä. Alkuperäinen juttu: https://www.mtvuutiset.fi/artikkeli/kerrotko-tekoalylle-sairauksistasi-professorilta-selkea-ohje-todella-ikavia-tilanteita/9303078"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  MTV Uutiset haastatteli Teemu Roosia 1.3.2026 tekoälylle jaettavista
+  terveystiedoista sekä arkipäiväisen tekoälykäytön riskeistä. Alkuperäinen
+  juttu:
+  https://www.mtvuutiset.fi/artikkeli/kerrotko-tekoalylle-sairauksistasi-professorilta-selkea-ohje-todella-ikavia-tilanteita/9303078
+mainCategory: Mediassa
 subCategories:
-  - "GenAI hankkeen henkilöstö mediassa"
-  - "Haastattelu"
+  - GenAI hankkeen henkilöstö mediassa
+  - Haastattelu
 tags:
   - mtv3
   - teemu roos

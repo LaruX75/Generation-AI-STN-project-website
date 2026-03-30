@@ -1,15 +1,23 @@
 ---
 title: Generation AI mukana tutkijoiden yössä
-date: "2023-09-29T15:36:52"
-updated: "2025-01-26T07:32:07"
+date: '2023-09-29T15:36:52'
+updated: '2025-01-26T07:32:07'
 slug: generation-ai-mukana-tutkijoiden-yossa
-permalink: /ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/generation-ai-mukana-tutkijoiden-yossa/
+permalink: >-
+  /ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/generation-ai-mukana-tutkijoiden-yossa/
 status: publish
 sourceType: posts
-excerpt: "Tutkijoiden yö on euroopanlaajuinen tiedetapahtuma, joka järjestetään tänä vuonna 29.9.2023. Generation AI hanke on mukana tapahtumassa järjestelmällä Oulun yliopistossa tekoälyworkshopin ”Tekoäly mustassa laatikossa”, jossa lapset, nuoret ja vanhemmat pääsevät tutustumaan hankkeessa kehitettyyn ”Gen AI opetettava kone” sovellukseen. Työpajan kuvaus: Työpajassa tutustutaan tekoälyyn koneoppimisen ja luokittelijan avulla. GenAI-hankkeen tutkijoiden kanssa osallistujat pääsevät itse kokeilemaan luokittelija-appia. Tule…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Tutkijoiden yö on euroopanlaajuinen tiedetapahtuma, joka järjestetään tänä
+  vuonna 29.9.2023. Generation AI hanke on mukana tapahtumassa järjestelmällä
+  Oulun yliopistossa tekoälyworkshopin ”Tekoäly mustassa laatikossa”, jossa
+  lapset, nuoret ja vanhemmat pääsevät tutustumaan hankkeessa kehitettyyn ”Gen
+  AI opetettava kone” sovellukseen. Työpajan kuvaus: Työpajassa tutustutaan
+  tekoälyyn koneoppimisen ja luokittelijan avulla. GenAI-hankkeen tutkijoiden
+  kanssa osallistujat pääsevät itse kokeilemaan luokittelija-appia. Tule…
+mainCategory: Tapahtumat
 subCategories:
-  - "GenAI hankkeen henkilöstö tapahtumissa"
+  - GenAI hankkeen henkilöstö tapahtumissa
 tags:
   - koneoppiminen
   - tekoäly

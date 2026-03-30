@@ -1,16 +1,28 @@
 ---
-title: "Tekoäly on jo täällä, eikä siihen pidä suhtautua kuin luonnonvoimaan, sanoo tietojenkäsittelytieteen professori Teemu Roos"
-date: "2023-08-27T10:02:48"
-updated: "2023-09-22T10:10:26"
-slug: tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos
-permalink: /ajankohtaista/tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos/
+title: >-
+  Tekoäly on jo täällä, eikä siihen pidä suhtautua kuin luonnonvoimaan, sanoo
+  tietojenkäsittelytieteen professori Teemu Roos
+date: '2023-08-27T10:02:48'
+updated: '2023-09-22T10:10:26'
+slug: >-
+  tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos
+permalink: >-
+  /ajankohtaista/tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos/
 status: publish
 sourceType: posts
-excerpt: "Kansanuutiset (KU) julkaisi 27.8.2023 Toivo Haimin kirjoittaman artikkelin. Alkuperäinen teksti löytyy ilman maksumuuria tästä osoitteesta: https://www.ku.fi/artikkeli/4906774-tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos Tekoäly ei ole mitään science fictionia, vaan se on jo läsnä arjessamme, sanoo Helsingin yliopiston tietojenkäsittelytieteen professoriHän johtaa tekoälyn opetusta Suomen tekoälykeskus FCAI:ssa ja toimii suositun Elements of AI -verkkokurssin vastuuopettajana. Tietojenkäsittelytieteen professori Teemu Roos, ennen kuin aloitamme, on…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Kansanuutiset (KU) julkaisi 27.8.2023 Toivo Haimin kirjoittaman artikkelin.
+  Alkuperäinen teksti löytyy ilman maksumuuria tästä osoitteesta:
+  https://www.ku.fi/artikkeli/4906774-tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos
+  Tekoäly ei ole mitään science fictionia, vaan se on jo läsnä arjessamme, sanoo
+  Helsingin yliopiston tietojenkäsittelytieteen professoriHän johtaa tekoälyn
+  opetusta Suomen tekoälykeskus FCAI:ssa ja toimii suositun Elements of AI
+  -verkkokurssin vastuuopettajana. Tietojenkäsittelytieteen professori Teemu
+  Roos, ennen kuin aloitamme, on…
+mainCategory: Mediassa
 subCategories:
-  - "GenAI hankkeen henkilöstö mediassa"
-  - "Haastattelu"
+  - GenAI hankkeen henkilöstö mediassa
+  - Haastattelu
 tags:
   - alarmismi
   - kansan uutiset

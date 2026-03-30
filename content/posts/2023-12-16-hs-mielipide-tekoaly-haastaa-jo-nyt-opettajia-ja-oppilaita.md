@@ -1,15 +1,24 @@
 ---
-title: "HS Mielipide: Tekoäly haastaa jo nyt opettajia ja oppilaita"
-date: "2023-12-16T07:23:06"
-updated: "2023-12-16T07:41:01"
+title: 'HS Mielipide: Tekoäly haastaa jo nyt opettajia ja oppilaita'
+date: '2023-12-16T07:23:06'
+updated: '2023-12-16T07:41:01'
 slug: hs-mielipide-tekoaly-haastaa-jo-nyt-opettajia-ja-oppilaita
-permalink: /ajankohtaista/mielipidekirjoitus/hs-mielipide-tekoaly-haastaa-jo-nyt-opettajia-ja-oppilaita/
+permalink: >-
+  /ajankohtaista/mielipidekirjoitus/hs-mielipide-tekoaly-haastaa-jo-nyt-opettajia-ja-oppilaita/
 status: publish
 sourceType: posts
-excerpt: "Mielipidekirjoitus, joka julkaistiin Helsingin Sanomissa 16.12.2024. Lue teksti Helsingin Sanomien sivuilta: https://www.hs.fi/mielipide/art-2000010050103.html Tekoälyyn pohjautuvat sosiaalisen median palvelut ja mobiilipelit puhumattakaan muista sovelluksista kykenevät ohjailemaan ja jopa ennustamaan käyttäytymistämme. Ne kykenevät profiloimaan ja luokittelemaan meitä sovellusten jatkuvasti keräämän datan pohjalta. Ongelmana on se, että tekoäly on meille musta laatikko. Oppilaat, opettajat ja vanhemmat eivät tiedä tekoälyn toimintaperiaatteita…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Mielipidekirjoitus, joka julkaistiin Helsingin Sanomissa 16.12.2024. Lue
+  teksti Helsingin Sanomien sivuilta:
+  https://www.hs.fi/mielipide/art-2000010050103.html Tekoälyyn pohjautuvat
+  sosiaalisen median palvelut ja mobiilipelit puhumattakaan muista sovelluksista
+  kykenevät ohjailemaan ja jopa ennustamaan käyttäytymistämme. Ne kykenevät
+  profiloimaan ja luokittelemaan meitä sovellusten jatkuvasti keräämän datan
+  pohjalta. Ongelmana on se, että tekoäly on meille musta laatikko. Oppilaat,
+  opettajat ja vanhemmat eivät tiedä tekoälyn toimintaperiaatteita…
+mainCategory: Mediassa
 subCategories:
-  - "Mielipidekirjoitus"
+  - Mielipidekirjoitus
 tags:
   - digitalisaatio
   - koneoppiminen

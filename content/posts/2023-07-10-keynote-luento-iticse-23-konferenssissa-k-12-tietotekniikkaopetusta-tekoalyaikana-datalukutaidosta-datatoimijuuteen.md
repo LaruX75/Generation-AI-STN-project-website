@@ -1,16 +1,28 @@
 ---
-title: "Keynote luento ITICSE 23 konferenssissa: ”K-12 Tietotekniikkaopetusta tekoälyaikana: Datalukutaidosta Datatoimijuuteen”"
-date: "2023-07-10T20:54:08"
-updated: "2023-09-19T21:01:01"
-slug: keynote-luento-iticse-23-konferenssissa-k-12-tietotekniikkaopetusta-tekoalyaikana-datalukutaidosta-datatoimijuuteen
-permalink: /ajankohtaista/keynote-luento-iticse-23-konferenssissa-k-12-tietotekniikkaopetusta-tekoalyaikana-datalukutaidosta-datatoimijuuteen/
+title: >-
+  Keynote luento ITICSE 23 konferenssissa: ”K-12 Tietotekniikkaopetusta
+  tekoälyaikana: Datalukutaidosta Datatoimijuuteen”
+date: '2023-07-10T20:54:08'
+updated: '2023-09-19T21:01:01'
+slug: >-
+  keynote-luento-iticse-23-konferenssissa-k-12-tietotekniikkaopetusta-tekoalyaikana-datalukutaidosta-datatoimijuuteen
+permalink: >-
+  /ajankohtaista/keynote-luento-iticse-23-konferenssissa-k-12-tietotekniikkaopetusta-tekoalyaikana-datalukutaidosta-datatoimijuuteen/
 status: publish
 sourceType: posts
-excerpt: "Taustaa:Prof. Matti Tedre ja Yliopistotutkija Henriikka Vartiainen pitivät ITICSE konferenssin keynote puheenvuoron heinäkuussa 2023. Esityksen englanninkielinen otsikko on: ”K-12 Computing Education for the AI Era: From Data Literacy to Data Agency”. Lue lisää täältä: https://iticse.acm.org/2023/keynote-speakers-2/ Konekäännetty (chatGPT) tiivistelmä esityksestä:Kysymys siitä, miten opettaa perinteistä sääntöpohjaista ohjelmointia, on ohjannut suurta osaa tietotekniikan opetustutkimuksesta 1950-luvulta lähtien. K-12 (koulu)…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Taustaa:Prof. Matti Tedre ja Yliopistotutkija Henriikka Vartiainen pitivät
+  ITICSE konferenssin keynote puheenvuoron heinäkuussa 2023. Esityksen
+  englanninkielinen otsikko on: ”K-12 Computing Education for the AI Era: From
+  Data Literacy to Data Agency”. Lue lisää täältä:
+  https://iticse.acm.org/2023/keynote-speakers-2/ Konekäännetty (chatGPT)
+  tiivistelmä esityksestä:Kysymys siitä, miten opettaa perinteistä
+  sääntöpohjaista ohjelmointia, on ohjannut suurta osaa tietotekniikan
+  opetustutkimuksesta 1950-luvulta lähtien. K-12 (koulu)…
+mainCategory: Tapahtumat
 extraCategories:
-  - "Konferenssit ja seminaarit"
-  - "Tutkimus"
+  - Konferenssit ja seminaarit
+  - Tutkimus
 tags:
   - Henriikka Vartiainen
   - iticse

@@ -1,18 +1,30 @@
 ---
-title: "Tekoälykuulumiset 11a/2023: GenAI opetettava kone on viimeistelyä vaille valmis ja oppimateriaalit ovat työn alla."
-date: "2023-11-05T21:35:59"
-updated: "2025-02-02T22:51:16"
-slug: tekoalykuulumiset-11a-2023-genai-opetettava-kone-on-viimeistelya-vaille-valmis-ja-oppimateriaalit-ovat-tyon-alla
-permalink: /gen-ai-tekoalykuulumiset-uutiskirje/tekoalykuulumiset-11a-2023-genai-opetettava-kone-on-viimeistelya-vaille-valmis-ja-oppimateriaalit-ovat-tyon-alla/
+title: >-
+  Tekoälykuulumiset 11a/2023: GenAI opetettava kone on viimeistelyä vaille
+  valmis ja oppimateriaalit ovat työn alla.
+date: '2023-11-05T21:35:59'
+updated: '2025-02-02T22:51:16'
+slug: >-
+  tekoalykuulumiset-11a-2023-genai-opetettava-kone-on-viimeistelya-vaille-valmis-ja-oppimateriaalit-ovat-tyon-alla
+permalink: >-
+  /gen-ai-tekoalykuulumiset-uutiskirje/tekoalykuulumiset-11a-2023-genai-opetettava-kone-on-viimeistelya-vaille-valmis-ja-oppimateriaalit-ovat-tyon-alla/
 status: publish
 sourceType: posts
-excerpt: "Tervetuloa lukemaan Generation AI hankkeen kuukausittaista uutiskirjettä. Kirjeitä tulee vähintään yksi kirje kuukautta kohti. Voit tilata tämän uutiskirjeen joko täällä LinkedIN palvelussa tai hankkeemme www-sivuilta: https://www.generation-ai-stn.fi/uutiskirje/ 1. GenAI opetettava kone on ensimmäisen sovelluksemme ja se alkaa olla valmis Hankkeemme ensimmäisen täyden toimintavuoden aikana olemme kehittäneet opetettavan koneen, jonka avulla lapset ja nuoret pystyvät kehittämään tekoälyä hyödyntäviä sovelluksia…"
-mainCategory: "Generation AI kuukausittaiset tekoälykuulumiset (uutiskirje)"
+excerpt: >-
+  Tervetuloa lukemaan Generation AI hankkeen kuukausittaista uutiskirjettä.
+  Kirjeitä tulee vähintään yksi kirje kuukautta kohti. Voit tilata tämän
+  uutiskirjeen joko täällä LinkedIN palvelussa tai hankkeemme www-sivuilta:
+  https://www.generation-ai-stn.fi/uutiskirje/ 1. GenAI opetettava kone on
+  ensimmäisen sovelluksemme ja se alkaa olla valmis Hankkeemme ensimmäisen
+  täyden toimintavuoden aikana olemme kehittäneet opetettavan koneen, jonka
+  avulla lapset ja nuoret pystyvät kehittämään tekoälyä hyödyntäviä sovelluksia…
+mainCategory: Toiminta
 tags:
   - tekoäly
   - tekoälykuulumiset uutiskirje
 author: admin
-featuredImage: "https://www.generation-ai-stn.fi/wp-content/uploads/2023/11/Generation-AI-15.png"
+featuredImage: >-
+  https://www.generation-ai-stn.fi/wp-content/uploads/2023/11/Generation-AI-15.png
 layout: layouts/post.njk
 ---
 

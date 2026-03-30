@@ -1,16 +1,22 @@
 ---
-title: "Keynote: Mitä tietokone ei osaa tehdä? Väärien käsitysten historia"
-date: "2023-04-20T14:23:27"
-updated: "2023-09-21T14:25:13"
+title: 'Keynote: Mitä tietokone ei osaa tehdä? Väärien käsitysten historia'
+date: '2023-04-20T14:23:27'
+updated: '2023-09-21T14:25:13'
 slug: keynote-mita-tietokone-ei-osaa-tehda-vaarien-kasitysten-historia
-permalink: /ajankohtaista/keynote-mita-tietokone-ei-osaa-tehda-vaarien-kasitysten-historia/
+permalink: >-
+  /ajankohtaista/keynote-mita-tietokone-ei-osaa-tehda-vaarien-kasitysten-historia/
 status: publish
 sourceType: posts
-excerpt: "Prof. Matti Tedre piti avajaispuheenvuoron ”Mitä tietokone ei osaa tehdä? Väärien käsitysten historia” Interaktiivinen tekniikka koulutuksessa 20.4.2023. MIKÄ ITK? Suomen suurin digitaalisen koulutuksen ja oppimisen tapahtuma Interaktiivinen Tekniikka Koulutuksessa järjestetään Hämeenlinnassa Aulangolla 19.-21.4.2023. Lue lisää: https://itk-konferenssi.fi/"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Prof. Matti Tedre piti avajaispuheenvuoron ”Mitä tietokone ei osaa tehdä?
+  Väärien käsitysten historia” Interaktiivinen tekniikka koulutuksessa
+  20.4.2023. MIKÄ ITK? Suomen suurin digitaalisen koulutuksen ja oppimisen
+  tapahtuma Interaktiivinen Tekniikka Koulutuksessa järjestetään Hämeenlinnassa
+  Aulangolla 19.-21.4.2023. Lue lisää: https://itk-konferenssi.fi/
+mainCategory: Tapahtumat
 extraCategories:
-  - "Itä-Suomen yliopisto"
-  - "Konferenssit ja seminaarit"
+  - Itä-Suomen yliopisto
+  - Konferenssit ja seminaarit
 tags:
   - ITK2023
   - keynote

@@ -1,15 +1,27 @@
 ---
-title: "Suomiareena: Tutkimusmatkalla tulevaisuuksiin – ohjaimissa nuoret ja teknologia"
-date: "2023-06-27T11:14:05"
-updated: "2023-09-22T11:22:30"
+title: >-
+  Suomiareena: Tutkimusmatkalla tulevaisuuksiin – ohjaimissa nuoret ja
+  teknologia
+date: '2023-06-27T11:14:05'
+updated: '2023-09-22T11:22:30'
 slug: suomiareena-tutkimusmatkalla-tulevaisuuksiin-ohjaimissa-nuoret-ja-teknologia
-permalink: /ajankohtaista/suomiareena-tutkimusmatkalla-tulevaisuuksiin-ohjaimissa-nuoret-ja-teknologia/
+permalink: >-
+  /ajankohtaista/suomiareena-tutkimusmatkalla-tulevaisuuksiin-ohjaimissa-nuoret-ja-teknologia/
 status: publish
 sourceType: posts
-excerpt: "Prof. Teemu Roos osallistui 27.6.2023 Suomi Areenan paneeliin ”tutkimusmatkalla tulevaisuuksiin, ohjaimissa nuoret ja teknologia” .. Paneelia voi katsoa tallenteena täältä:https://www.mtv.fi/sarja/suomiareena-1464/tutkimusmatkalla-tulevaisuuksiin-ohjaimisssa-nuoret-ja-teknologia-20594602 Lähde nuorten kanssa tutkimusmatkalle tulevaisuuteen etsimään vastauksia koulun, oppimisen ja teknologian kehitykseen: Mitä ja miten opimme? Entä minkälainen rooli teknologialla on arjessamme? Tulevaisuuskoulu on mukana SuomiAreenassa – tule mukaan seuraamaan keskustelua! Mitä: Paneelikeskustelu Tutkimusmatkalla tulevaisuuksiin…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Prof. Teemu Roos osallistui 27.6.2023 Suomi Areenan paneeliin
+  ”tutkimusmatkalla tulevaisuuksiin, ohjaimissa nuoret ja teknologia” ..
+  Paneelia voi katsoa tallenteena
+  täältä:https://www.mtv.fi/sarja/suomiareena-1464/tutkimusmatkalla-tulevaisuuksiin-ohjaimisssa-nuoret-ja-teknologia-20594602
+  Lähde nuorten kanssa tutkimusmatkalle tulevaisuuteen etsimään vastauksia
+  koulun, oppimisen ja teknologian kehitykseen: Mitä ja miten opimme? Entä
+  minkälainen rooli teknologialla on arjessamme? Tulevaisuuskoulu on mukana
+  SuomiAreenassa – tule mukaan seuraamaan keskustelua! Mitä: Paneelikeskustelu
+  Tutkimusmatkalla tulevaisuuksiin…
+mainCategory: Tapahtumat
 subCategories:
-  - "GenAI hankkeen henkilöstö tapahtumissa"
+  - GenAI hankkeen henkilöstö tapahtumissa
 tags:
   - paneeli
   - teemu roos

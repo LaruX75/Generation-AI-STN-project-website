@@ -1,16 +1,27 @@
 ---
-title: "Kouluissa on nyt kiire lisätä ymmärrystä tekoälystä – tämän jutun luettuasi ymmärrät, miksi ja miten"
-date: "2023-03-13T18:16:58"
-updated: "2023-09-19T18:21:33"
-slug: kouluissa-on-nyt-kiire-lisata-ymmarrysta-tekoalysta-taman-jutun-luettuasi-ymmarrat-miksi-ja-miten
-permalink: /ajankohtaista/kouluissa-on-nyt-kiire-lisata-ymmarrysta-tekoalysta-taman-jutun-luettuasi-ymmarrat-miksi-ja-miten/
+title: >-
+  Kouluissa on nyt kiire lisätä ymmärrystä tekoälystä – tämän jutun luettuasi
+  ymmärrät, miksi ja miten
+date: '2023-03-13T18:16:58'
+updated: '2023-09-19T18:21:33'
+slug: >-
+  kouluissa-on-nyt-kiire-lisata-ymmarrysta-tekoalysta-taman-jutun-luettuasi-ymmarrat-miksi-ja-miten
+permalink: >-
+  /ajankohtaista/kouluissa-on-nyt-kiire-lisata-ymmarrysta-tekoalysta-taman-jutun-luettuasi-ymmarrat-miksi-ja-miten/
 status: publish
 sourceType: posts
-excerpt: "Alla oleva teksti on julkaistu 13.3.2023 YLE uutisissa. Lue alkuperäinen juttu tästä: https://yle.fi/a/74-20021837 HUOM! alkuperäisessä jutussa on mediasisältöjä, jotka eivät näy tässä! Mitä on tekoäly? Kysymyksen luulisi olevan helppo tietojenkäsittelytieteen professorille, mutta Matti Tedre sanoo, että koko sana on huono. – Tekoäly on hyvin epämääräinen termi. Vuosikymmenestä riippuu, mitä pidetään tekoälynä, Itä-Suomen yliopistossa työskentelevä Tedre toteaa. Heti…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Alla oleva teksti on julkaistu 13.3.2023 YLE uutisissa. Lue alkuperäinen juttu
+  tästä: https://yle.fi/a/74-20021837 HUOM! alkuperäisessä jutussa on
+  mediasisältöjä, jotka eivät näy tässä! Mitä on tekoäly? Kysymyksen luulisi
+  olevan helppo tietojenkäsittelytieteen professorille, mutta Matti Tedre sanoo,
+  että koko sana on huono. – Tekoäly on hyvin epämääräinen termi.
+  Vuosikymmenestä riippuu, mitä pidetään tekoälynä, Itä-Suomen yliopistossa
+  työskentelevä Tedre toteaa. Heti…
+mainCategory: Mediassa
 subCategories:
-  - "GenAI hankkeen henkilöstö mediassa"
-  - "YLE"
+  - GenAI hankkeen henkilöstö mediassa
+  - YLE
 tags:
   - Henriikka Vartiainen
   - koneoppiminen

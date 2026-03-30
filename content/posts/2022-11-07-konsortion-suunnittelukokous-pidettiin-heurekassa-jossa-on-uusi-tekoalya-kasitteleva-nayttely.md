@@ -1,15 +1,26 @@
 ---
-title: "Konsortion suunnittelukokous pidettiin Heurekassa, jossa on uusi tekoälyä käsittelevä näyttely"
-date: "2022-11-07T20:03:12"
-updated: "2025-02-13T10:17:33"
-slug: konsortion-suunnittelukokous-pidettiin-heurekassa-jossa-on-uusi-tekoalya-kasitteleva-nayttely
-permalink: /ajankohtaista/konsortion-suunnittelukokous-pidettiin-heurekassa-jossa-on-uusi-tekoalya-kasitteleva-nayttely/
+title: >-
+  Konsortion suunnittelukokous pidettiin Heurekassa, jossa on uusi tekoälyä
+  käsittelevä näyttely
+date: '2022-11-07T20:03:12'
+updated: '2025-02-13T10:17:33'
+slug: >-
+  konsortion-suunnittelukokous-pidettiin-heurekassa-jossa-on-uusi-tekoalya-kasitteleva-nayttely
+permalink: >-
+  /ajankohtaista/konsortion-suunnittelukokous-pidettiin-heurekassa-jossa-on-uusi-tekoalya-kasitteleva-nayttely/
 status: publish
 sourceType: posts
-excerpt: "Generation AI piti hankkeen ensimmäisen suunnittelukokouksen Heurekassa, joka on hankkeen konsortion jäsen. Paikka olikin mitä sopivin kokoukselle, sillä Heureka avasi uuden tekoälyaiheisen näyttelyn 22.6.2022. Suunnittelukokouksen jälkeen konsortion jäsenet tutustuivat Heurekan Tekoäly-näyttelyyn sekä muihin Heurekan tekoälyyn, robotiikkaan ja ohjelmointiin liittyviin aktiviteetteihin. Mistä Tekoäly näyttelyssä on kyse? Heurekan sivuilla näyttelystä kerrotan seuraavaa Tekoäly – Me, Myself &…"
-mainCategory: "Hankkeen toiminta"
+excerpt: >-
+  Generation AI piti hankkeen ensimmäisen suunnittelukokouksen Heurekassa, joka
+  on hankkeen konsortion jäsen. Paikka olikin mitä sopivin kokoukselle, sillä
+  Heureka avasi uuden tekoälyaiheisen näyttelyn 22.6.2022. Suunnittelukokouksen
+  jälkeen konsortion jäsenet tutustuivat Heurekan Tekoäly-näyttelyyn sekä muihin
+  Heurekan tekoälyyn, robotiikkaan ja ohjelmointiin liittyviin aktiviteetteihin.
+  Mistä Tekoäly näyttelyssä on kyse? Heurekan sivuilla näyttelystä kerrotan
+  seuraavaa Tekoäly – Me, Myself &…
+mainCategory: Toiminta
 extraCategories:
-  - "Hankkeen toiminta"
+  - Hankkeen toiminta
 tags:
   - hankekokous
   - heureka

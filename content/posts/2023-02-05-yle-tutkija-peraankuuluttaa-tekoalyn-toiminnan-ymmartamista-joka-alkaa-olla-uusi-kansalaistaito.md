@@ -1,16 +1,27 @@
 ---
-title: "YLE: Tutkija peräänkuuluttaa tekoälyn toiminnan ymmärtämistä, joka alkaa olla uusi kansalaistaito"
-date: "2023-02-05T10:35:14"
-updated: "2023-09-19T18:12:00"
-slug: yle-tutkija-peraankuuluttaa-tekoalyn-toiminnan-ymmartamista-joka-alkaa-olla-uusi-kansalaistaito
-permalink: /ajankohtaista/yle/yle-tutkija-peraankuuluttaa-tekoalyn-toiminnan-ymmartamista-joka-alkaa-olla-uusi-kansalaistaito/
+title: >-
+  YLE: Tutkija peräänkuuluttaa tekoälyn toiminnan ymmärtämistä, joka alkaa olla
+  uusi kansalaistaito
+date: '2023-02-05T10:35:14'
+updated: '2023-09-19T18:12:00'
+slug: >-
+  yle-tutkija-peraankuuluttaa-tekoalyn-toiminnan-ymmartamista-joka-alkaa-olla-uusi-kansalaistaito
+permalink: >-
+  /ajankohtaista/yle/yle-tutkija-peraankuuluttaa-tekoalyn-toiminnan-ymmartamista-joka-alkaa-olla-uusi-kansalaistaito/
 status: publish
 sourceType: posts
-excerpt: "Hankkeemme tutkijan prof. Teemu Roosin tuntema yliopistonlehtori Anna-Mari Rusanen Helsingin yliopistosta kertoo YLEn haastattelussa, kuinka tekoälyn toiminnan ymmärtäminen on pian uusi kansalaistaito. Haastattelu sopii hyvin hankkeemme teemaan, sillä me kehitämme sisältöjä, menetelmiä ja sovelluksia joiden avulla näitä kansalaistaitoja opetetaan peruskoululaisille, opettajille ja opettajaopiskelijoille. Lue YLEN laaja juttu, jossa haastatellaan Anna-Mari Rusasta: https://yle.fi/aihe/a/20-10004202 Tekoälyyn ja sen…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Hankkeemme tutkijan prof. Teemu Roosin tuntema yliopistonlehtori Anna-Mari
+  Rusanen Helsingin yliopistosta kertoo YLEn haastattelussa, kuinka tekoälyn
+  toiminnan ymmärtäminen on pian uusi kansalaistaito. Haastattelu sopii hyvin
+  hankkeemme teemaan, sillä me kehitämme sisältöjä, menetelmiä ja sovelluksia
+  joiden avulla näitä kansalaistaitoja opetetaan peruskoululaisille, opettajille
+  ja opettajaopiskelijoille. Lue YLEN laaja juttu, jossa haastatellaan Anna-Mari
+  Rusasta: https://yle.fi/aihe/a/20-10004202 Tekoälyyn ja sen…
+mainCategory: Mediassa
 subCategories:
-  - "GenAI hankkeen henkilöstö mediassa"
-  - "YLE"
+  - GenAI hankkeen henkilöstö mediassa
+  - YLE
 tags:
   - haastattelu
   - tekoäly

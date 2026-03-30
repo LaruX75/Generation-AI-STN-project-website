@@ -1,17 +1,24 @@
 ---
 title: Tekoälyyn liitetyt scifi-kuvat kertovat väärää tarinaa
-date: "2022-04-25T01:08:00"
-updated: "2023-09-19T18:11:21"
+date: '2022-04-25T01:08:00'
+updated: '2023-09-19T18:11:21'
 slug: tekoalyyn-liitetyt-scifi-kuvat-kertovat-vaaraa-tarinaa
 permalink: /ajankohtaista/tekoalyyn-liitetyt-scifi-kuvat-kertovat-vaaraa-tarinaa/
 status: publish
 sourceType: posts
-excerpt: "Hankkeen tutkija prof. Teemu Roos Helsingin yliopistosta kertoi tekoälyyn liitetyistä kuvista FCAI:n haastattelussa 25.2022 ”Tekoälyyn liitetyt kuvat ovat pitkään olleet minulle kiviä kengässä. Yli kymmen vuotta sitten kun opetin ensimmäistä kertaa Johdatus tekoälyyn -kurssia, huomasin, että monien opiskelijoiden mielikuvat tekoälystä olivat syntyneet Isaac Asimovin ja muiden scifi-kirjailijoiden tarinoiden perusteella. Joku taisi pettyäkin, kun kurssilla ei pohdittu…"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Hankkeen tutkija prof. Teemu Roos Helsingin yliopistosta kertoi tekoälyyn
+  liitetyistä kuvista FCAI:n haastattelussa 25.2022 ”Tekoälyyn liitetyt kuvat
+  ovat pitkään olleet minulle kiviä kengässä. Yli kymmen vuotta sitten kun
+  opetin ensimmäistä kertaa Johdatus tekoälyyn -kurssia, huomasin, että monien
+  opiskelijoiden mielikuvat tekoälystä olivat syntyneet Isaac Asimovin ja muiden
+  scifi-kirjailijoiden tarinoiden perusteella. Joku taisi pettyäkin, kun
+  kurssilla ei pohdittu…
+mainCategory: Mediassa
 subCategories:
-  - "GenAI hankkeen henkilöstö mediassa"
+  - GenAI hankkeen henkilöstö mediassa
 extraCategories:
-  - "FCAI"
+  - FCAI
 tags:
   - FCAI
   - scifi

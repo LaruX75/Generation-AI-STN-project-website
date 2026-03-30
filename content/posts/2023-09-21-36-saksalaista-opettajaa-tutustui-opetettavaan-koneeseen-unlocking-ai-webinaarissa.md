@@ -1,16 +1,27 @@
 ---
-title: 36 saksalaista opettajaa tutustui opetettavaan koneeseen Unlocking AI webinaarissa
-date: "2023-09-21T15:47:03"
-updated: "2025-02-02T22:54:18"
-slug: 36-saksalaista-opettajaa-tutustui-opetettavaan-koneeseen-unlocking-ai-webinaarissa
-permalink: /ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/36-saksalaista-opettajaa-tutustui-opetettavaan-koneeseen-unlocking-ai-webinaarissa/
+title: >-
+  36 saksalaista opettajaa tutustui opetettavaan koneeseen Unlocking AI
+  webinaarissa
+date: '2023-09-21T15:47:03'
+updated: '2025-02-02T22:54:18'
+slug: >-
+  36-saksalaista-opettajaa-tutustui-opetettavaan-koneeseen-unlocking-ai-webinaarissa
+permalink: >-
+  /ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/36-saksalaista-opettajaa-tutustui-opetettavaan-koneeseen-unlocking-ai-webinaarissa/
 status: publish
 sourceType: posts
-excerpt: "Codeschool Finland järjesti saksalaisille opettajille ilmaisen webinaarin, jossa he opettivat kuinka tekoälyä voi hyödyntää a) opetuksen suunnittelussa ja b) opetuksen kohteena (eli kuinka oppilaita voi opettaa ymmärtämään tekoälyä). Hankkeessa kehitetty GenAI opetettava kone toimi työkaluna opetettaessa opetttajille kuinka tekoälyä pitää opettaa ja mikä on tekoälyn suhde dataan. Lue lisää Webinaarista CodeSchool Finlandin sivuilta: https://courses.codeschool.fi/course/ai-webinar"
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Codeschool Finland järjesti saksalaisille opettajille ilmaisen webinaarin,
+  jossa he opettivat kuinka tekoälyä voi hyödyntää a) opetuksen suunnittelussa
+  ja b) opetuksen kohteena (eli kuinka oppilaita voi opettaa ymmärtämään
+  tekoälyä). Hankkeessa kehitetty GenAI opetettava kone toimi työkaluna
+  opetettaessa opetttajille kuinka tekoälyä pitää opettaa ja mikä on tekoälyn
+  suhde dataan. Lue lisää Webinaarista CodeSchool Finlandin sivuilta:
+  https://courses.codeschool.fi/course/ai-webinar
+mainCategory: Tapahtumat
 subCategories:
-  - "GenAI hankkeen henkilöstö tapahtumissa"
-  - "Webinaari"
+  - GenAI hankkeen henkilöstö tapahtumissa
+  - Webinaari
 tags:
   - codeschool
   - opetettava kone

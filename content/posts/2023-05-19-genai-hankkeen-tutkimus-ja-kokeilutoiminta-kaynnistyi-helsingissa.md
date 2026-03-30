@@ -1,16 +1,25 @@
 ---
 title: GenAI hankkeen tutkimus- ja kokeilutoiminta käynnistyi Helsingissä.
-date: "2023-05-19T08:24:14"
-updated: "2023-09-21T10:19:00"
+date: '2023-05-19T08:24:14'
+updated: '2023-09-21T10:19:00'
 slug: genai-hankkeen-tutkimus-ja-kokeilutoiminta-kaynnistyi-helsingissa
-permalink: /ajankohtaista/genai-hankkeen-tutkimus-ja-kokeilutoiminta-kaynnistyi-helsingissa/
+permalink: >-
+  /ajankohtaista/genai-hankkeen-tutkimus-ja-kokeilutoiminta-kaynnistyi-helsingissa/
 status: publish
 sourceType: posts
-excerpt: "Helsingin GenAI-hanke käynnistettiin 11.5. Helsingin kaupungin kasvatuksen ja koulutuksen toimialan Oppimisen digikarnevaalit -tapahtumassa. Tavoitteena on opetella tunnistamaan, käyttämään ja ymmärtäämään tekoälyä esiopetusikäisten kontekstissa Iltapäivän aluksi Sini Davies esitteli hankkeen toteutumista Helsingin kaupungissa, jonka jälkeen kertoi konkreettisen esimerkin esiopetuksessa toteutettavasta pilotista. Eskareiden kanssa opetellaan tunnistamaan, käyttämään ja ymmärtämään tekoälyä ikätasolle sopivilla tehtävillä. Tunnistaisitko sinä kumpi siivousrobotti-piirroksista…"
-mainCategory: "Hankkeen toiminta"
+excerpt: >-
+  Helsingin GenAI-hanke käynnistettiin 11.5. Helsingin kaupungin kasvatuksen ja
+  koulutuksen toimialan Oppimisen digikarnevaalit -tapahtumassa. Tavoitteena on
+  opetella tunnistamaan, käyttämään ja ymmärtäämään tekoälyä esiopetusikäisten
+  kontekstissa Iltapäivän aluksi Sini Davies esitteli hankkeen toteutumista
+  Helsingin kaupungissa, jonka jälkeen kertoi konkreettisen esimerkin
+  esiopetuksessa toteutettavasta pilotista. Eskareiden kanssa opetellaan
+  tunnistamaan, käyttämään ja ymmärtämään tekoälyä ikätasolle sopivilla
+  tehtävillä. Tunnistaisitko sinä kumpi siivousrobotti-piirroksista…
+mainCategory: Toiminta
 extraCategories:
-  - "Esiopetus"
-  - "Hankkeen toiminta"
+  - Esiopetus
+  - Hankkeen toiminta
 tags:
   - esiopetus
   - eskarit

@@ -1,17 +1,29 @@
 ---
-title: Generation AI hanke vahvasti mukana Interaktiivinen tekniikka koulutuksessa 2023 seminaarissa
-date: "2023-04-23T22:16:35"
-updated: "2025-01-26T07:38:53"
-slug: generation-ai-hanke-vahvasti-mukana-interaktiivinen-tekniikka-koulutuksessa-2023-seminaarissa
-permalink: /ajankohtaista/generation-ai-hanke-vahvasti-mukana-interaktiivinen-tekniikka-koulutuksessa-2023-seminaarissa/
+title: >-
+  Generation AI hanke vahvasti mukana Interaktiivinen tekniikka koulutuksessa
+  2023 seminaarissa
+date: '2023-04-23T22:16:35'
+updated: '2025-01-26T07:38:53'
+slug: >-
+  generation-ai-hanke-vahvasti-mukana-interaktiivinen-tekniikka-koulutuksessa-2023-seminaarissa
+permalink: >-
+  /ajankohtaista/generation-ai-hanke-vahvasti-mukana-interaktiivinen-tekniikka-koulutuksessa-2023-seminaarissa/
 status: publish
 sourceType: posts
-excerpt: "Hankkeemme oli mukana vahvalla panoksella maamme suurimmassa opetusteknologia-alan tapahtumassa ”Interaktiivinen tekniikka koulutuksessa”, joka järjestetään vuosittain Hämeenlinnan Aulangolla. Varsinaisesta seminaariohjelmasta tai sen esipäivän ohjelmasta löytyi Generation AI aiheella mm. kaksi keynote puheenvuoroa, posteri, tm-luokittelijan esittelyä sekä paneeli Tänä vuonna tapahtuma suorastaan pursusi erilaisia tekoälyaiheisia esityksiä, jotka olivat varsin käytännönläheisiä katsauksia erityisesti chatgpt -tyyppisten sovellusten hyödyntämisestä opetuksessa…."
-mainCategory: "Ajankohtaista"
+excerpt: >-
+  Hankkeemme oli mukana vahvalla panoksella maamme suurimmassa
+  opetusteknologia-alan tapahtumassa ”Interaktiivinen tekniikka koulutuksessa”,
+  joka järjestetään vuosittain Hämeenlinnan Aulangolla. Varsinaisesta
+  seminaariohjelmasta tai sen esipäivän ohjelmasta löytyi Generation AI aiheella
+  mm. kaksi keynote puheenvuoroa, posteri, tm-luokittelijan esittelyä sekä
+  paneeli Tänä vuonna tapahtuma suorastaan pursusi erilaisia tekoälyaiheisia
+  esityksiä, jotka olivat varsin käytännönläheisiä katsauksia erityisesti
+  chatgpt -tyyppisten sovellusten hyödyntämisestä opetuksessa….
+mainCategory: Tapahtumat
 subCategories:
-  - "GenAI hankkeen henkilöstö tapahtumissa"
+  - GenAI hankkeen henkilöstö tapahtumissa
 extraCategories:
-  - "Konferenssit ja seminaarit"
+  - Konferenssit ja seminaarit
 tags:
   - Interaktiivinen teknologia koulutuksessa seminaari
   - ITK2023
