@@ -14,7 +14,7 @@ excerpt: >-
   tiedekulman Youtube-kanavalta: https://www.youtube.com/watch?v=b4ZGTa-Vczk
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
 extraCategories:
   - Helsingin yliopisto
 tags:

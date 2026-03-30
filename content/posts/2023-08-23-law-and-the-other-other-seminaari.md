@@ -11,7 +11,7 @@ excerpt: >-
   Other -seminaariin 23.8.2023.
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 extraCategories:
   - Konferenssit ja seminaarit
 tags:

@@ -20,7 +20,7 @@ excerpt: >-
   raotetaan tekoälyn mustaa laatikkoa, eli kehitetään sisältöjä, menetelmiä…
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
   - Webinaari
 tags:
   - ITK2023

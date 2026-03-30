@@ -20,7 +20,7 @@ excerpt: >-
   työskentelevä Tedre toteaa. Heti…
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
   - YLE
 tags:
   - Henriikka Vartiainen

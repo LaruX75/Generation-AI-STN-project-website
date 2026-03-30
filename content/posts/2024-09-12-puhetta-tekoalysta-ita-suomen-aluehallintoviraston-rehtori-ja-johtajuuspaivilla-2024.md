@@ -17,7 +17,7 @@ excerpt: >-
   aiheesta tekoäly perjantaina 13.9. Lisätietoa tapahtumasta löydät täältä.
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 tags:
   - AVI
   - Matti Tedre

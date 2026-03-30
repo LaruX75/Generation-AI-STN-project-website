@@ -21,7 +21,7 @@ excerpt: >-
   tehtävät, joita ovat aiemmin päässeet…
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 tags:
   - educa2024
   - messut

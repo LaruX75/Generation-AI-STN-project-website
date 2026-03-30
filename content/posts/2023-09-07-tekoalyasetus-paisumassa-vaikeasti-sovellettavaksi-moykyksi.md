@@ -18,7 +18,7 @@ excerpt: >-
   kokonaisuudeksi. – Alkaa näyttää siltä, että asetuksesta tulee hyvin…
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
 extraCategories:
   - Helsingin yliopisto
 tags:

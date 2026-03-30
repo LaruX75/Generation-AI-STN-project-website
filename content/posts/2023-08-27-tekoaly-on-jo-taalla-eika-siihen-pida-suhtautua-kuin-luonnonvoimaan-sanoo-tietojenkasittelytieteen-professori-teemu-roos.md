@@ -21,7 +21,7 @@ excerpt: >-
   Roos, ennen kuin aloitamme, on…
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
   - Haastattelu
 tags:
   - alarmismi

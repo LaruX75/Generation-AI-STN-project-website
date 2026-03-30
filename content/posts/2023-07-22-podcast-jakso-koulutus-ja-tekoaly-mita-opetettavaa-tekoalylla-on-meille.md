@@ -16,7 +16,7 @@ excerpt: >-
   learning, rather than replacing it? We’re seeing AI rapidly revolutionize…
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
   - Podcast
 tags:
   - AI podcast

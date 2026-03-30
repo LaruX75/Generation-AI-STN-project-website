@@ -16,7 +16,7 @@ excerpt: >-
   kurssilla ei pohdittu…
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
 extraCategories:
   - FCAI
 tags:

@@ -20,7 +20,7 @@ excerpt: >-
   osallistui tilaisuuden aluksi keskusteluun Microsoftin Vesa Äyräksen ja…
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 tags:
   - Digikarnevaalit
   - Microsoft

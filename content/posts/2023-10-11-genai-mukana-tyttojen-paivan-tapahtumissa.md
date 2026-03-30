@@ -17,7 +17,7 @@ excerpt: >-
   kuinka…
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 tags:
   - koneoppiminen
   - opetettava kone

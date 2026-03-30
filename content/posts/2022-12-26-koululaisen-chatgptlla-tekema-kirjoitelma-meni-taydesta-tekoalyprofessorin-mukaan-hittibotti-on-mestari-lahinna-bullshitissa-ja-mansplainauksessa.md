@@ -20,7 +20,7 @@ excerpt: >-
   https://www.mtvuutiset.fi/artikkeli/koululaisen-chatgpt-lla-tekema-kirjoitelma-meni-taydesta-tekoalyprofessorin-mukaan-hittibotti-on-mestari-lahinna-bullshitissa-ja-mansplainauksessa/8597214
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
 extraCategories:
   - MTV3
 tags:

@@ -20,7 +20,7 @@ excerpt: >-
   laajemminkin konkretisoida monien koneoppimista…
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI työkalut ja materiaalit hankkeen ulkopuolella
+  - Työkalut ja materiaalit
 tags:
   - GenAI luokittelija
   - GenAI opetettava kone

@@ -11,7 +11,7 @@ excerpt: >-
   -tapahtumaan 29.5.2024.
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 extraCategories:
   - Konferenssit ja seminaarit
 tags:

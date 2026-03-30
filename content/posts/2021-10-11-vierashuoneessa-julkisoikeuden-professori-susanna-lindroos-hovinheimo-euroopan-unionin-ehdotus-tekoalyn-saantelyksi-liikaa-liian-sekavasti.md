@@ -22,7 +22,7 @@ excerpt: >-
   tavoitteena…
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
 extraCategories:
   - Helsingin yliopisto
 tags:

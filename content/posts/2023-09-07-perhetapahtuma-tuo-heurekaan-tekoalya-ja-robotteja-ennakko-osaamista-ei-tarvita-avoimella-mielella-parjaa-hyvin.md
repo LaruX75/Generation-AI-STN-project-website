@@ -21,8 +21,8 @@ excerpt: >-
   ohjelmatuotantopäällikkö Jutta Kujasalo sanoo. Tapahtumassa on…
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Hanke mediassa
+  - Tapahtuma
   - Haastattelu
 tags:
   - Älyä kone!

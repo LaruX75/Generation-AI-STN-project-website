@@ -14,7 +14,7 @@ excerpt: >-
   Tallenteen webinaarista voit katsoa täältä.
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 tags:
   - DVV
   - Sujuva Suomi

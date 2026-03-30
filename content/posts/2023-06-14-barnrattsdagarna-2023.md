@@ -11,7 +11,7 @@ excerpt: >-
   2023 -tapahtumaan 14.6.2023.
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 extraCategories:
   - Konferenssit ja seminaarit
 tags:

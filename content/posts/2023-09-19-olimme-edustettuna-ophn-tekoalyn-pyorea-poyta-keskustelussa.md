@@ -17,7 +17,7 @@ excerpt: >-
   tekoälyn pyöreästä pöydästä: Tekoäly on tällä hetkellä aktiivisen keskustelun…
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 tags:
   - Opetushallitus
   - Pyöreä pöytä keskustelu

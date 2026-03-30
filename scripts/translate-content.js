@@ -29,7 +29,7 @@ const LOCALE_CONFIG = {
     categoryMap: {
       "Ajankohtaista": "Current affairs",
       "Hankkeen toiminta": "Project activities",
-      "GenAI hankkeen henkilöstö mediassa": "Generation AI project staff in the media",
+      "Hanke mediassa": "Generation AI project staff in the media",
       "Blogikirjoitus": "Blog post",
       "Tutkimus": "Research",
       "Tapahtumat": "Events",
@@ -44,7 +44,7 @@ const LOCALE_CONFIG = {
     categoryMap: {
       "Ajankohtaista": "Aktuellt",
       "Hankkeen toiminta": "Projektverksamhet",
-      "GenAI hankkeen henkilöstö mediassa": "Generation AI-projektets personal i media",
+      "Hanke mediassa": "Generation AI-projektets personal i media",
       "Blogikirjoitus": "Blogginlägg",
       "Tutkimus": "Forskning",
       "Tapahtumat": "Evenemang",

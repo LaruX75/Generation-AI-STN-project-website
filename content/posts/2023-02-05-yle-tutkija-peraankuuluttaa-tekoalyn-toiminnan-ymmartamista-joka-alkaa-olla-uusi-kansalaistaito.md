@@ -20,7 +20,7 @@ excerpt: >-
   Rusasta: https://yle.fi/aihe/a/20-10004202 Tekoälyyn ja sen…
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
   - YLE
 tags:
   - haastattelu

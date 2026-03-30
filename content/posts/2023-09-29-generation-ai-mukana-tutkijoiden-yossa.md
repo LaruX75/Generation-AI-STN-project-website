@@ -17,7 +17,7 @@ excerpt: >-
   kanssa osallistujat pääsevät itse kokeilemaan luokittelija-appia. Tule…
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 tags:
   - koneoppiminen
   - tekoäly

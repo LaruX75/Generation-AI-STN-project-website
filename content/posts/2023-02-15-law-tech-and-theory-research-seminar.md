@@ -11,7 +11,7 @@ excerpt: >-
   Research Seminar -seminaariin 15.-16.2.2023.
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 extraCategories:
   - Konferenssit ja seminaarit
 tags:

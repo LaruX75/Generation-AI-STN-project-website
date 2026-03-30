@@ -20,7 +20,7 @@ excerpt: >-
   https://courses.codeschool.fi/course/ai-webinar
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
   - Webinaari
 tags:
   - codeschool

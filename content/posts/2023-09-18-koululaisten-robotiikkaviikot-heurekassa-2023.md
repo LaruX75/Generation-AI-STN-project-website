@@ -11,7 +11,7 @@ excerpt: >-
   18.-29.9.2023.
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 extraCategories:
   - Konferenssit ja seminaarit
 tags:

@@ -21,7 +21,7 @@ excerpt: >-
   chatgpt -tyyppisten sovellusten hyödyntämisestä opetuksessa….
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 extraCategories:
   - Konferenssit ja seminaarit
 tags:

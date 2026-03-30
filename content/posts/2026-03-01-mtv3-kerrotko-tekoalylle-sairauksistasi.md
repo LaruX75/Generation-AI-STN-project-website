@@ -13,7 +13,7 @@ excerpt: >-
   https://www.mtvuutiset.fi/artikkeli/kerrotko-tekoalylle-sairauksistasi-professorilta-selkea-ohje-todella-ikavia-tilanteita/9303078
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
   - Haastattelu
 tags:
   - mtv3

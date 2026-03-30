@@ -21,7 +21,7 @@ excerpt: >-
   Tutkimusmatkalla tulevaisuuksiin…
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 tags:
   - paneeli
   - teemu roos

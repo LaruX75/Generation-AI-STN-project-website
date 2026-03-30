@@ -12,7 +12,7 @@ excerpt: >-
   Roosia.
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
 tags:
   - business weekly
   - teemu roos

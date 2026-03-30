@@ -11,7 +11,7 @@ excerpt: >-
   15.9.2023 tapahtumassa Me, myself, and AI.
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 extraCategories:
   - Konferenssit ja seminaarit
 tags:

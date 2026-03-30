@@ -15,7 +15,7 @@ excerpt: >-
   Alkuperäinen juttu: https://yle.fi/uutiset/lyhyesti/74-20213792
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
   - YLE
 tags:
   - susanna lindroos-hovinheimo

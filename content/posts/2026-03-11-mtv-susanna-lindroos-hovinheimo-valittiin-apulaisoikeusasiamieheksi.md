@@ -15,7 +15,7 @@ excerpt: >-
   https://www.mtvuutiset.fi/artikkeli/susanna-lindroos-hovinheimo-valittiin-eduskunnan-apulaisoikeusasiamieheksi/9308714
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
 tags:
   - mtv3
   - susanna lindroos-hovinheimo

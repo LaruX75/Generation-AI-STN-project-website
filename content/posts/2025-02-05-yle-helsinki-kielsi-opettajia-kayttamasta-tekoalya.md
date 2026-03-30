@@ -12,7 +12,7 @@ excerpt: >-
   https://yle.fi/a/74-20141409
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
   - Haastattelu
   - YLE
 tags:

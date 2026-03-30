@@ -5,8 +5,8 @@ const matter = require('gray-matter');
 const dir = './content/posts';
 const files = fs.readdirSync(dir).filter(f => f.endsWith('.md') || f.endsWith('.njk'));
 
-const mediaKw = ['GenAI hankkeen henkilöstö mediassa', 'Media', 'Haastattelu'];
-const tapKw = ['GenAI hankkeen henkilöstö tapahtumissa', 'Konferenssit ja seminaarit', 'Webinaari', 'Työpaja'];
+const mediaKw = ['Hanke mediassa', 'Media', 'Haastattelu'];
+const tapKw = ['Tapahtuma', 'Konferenssit ja seminaarit', 'Webinaari', 'Työpaja'];
 
 const overlap = [];
 const unmatched = [];

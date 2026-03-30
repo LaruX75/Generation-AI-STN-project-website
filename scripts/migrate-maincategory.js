@@ -10,10 +10,10 @@ const matter = require('gray-matter');
 const dir = path.resolve('./content/posts');
 
 const mediaKw = [
-  'GenAI hankkeen henkilöstö mediassa', 'Media', 'Haastattelu'
+  'Hanke mediassa', 'Media', 'Haastattelu'
 ];
 const tapKw = [
-  'GenAI hankkeen henkilöstö tapahtumissa',
+  'Tapahtuma',
   'Konferenssit ja seminaarit', 'Webinaari', 'Työpaja'
 ];
 

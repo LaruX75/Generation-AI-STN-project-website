@@ -16,7 +16,7 @@ excerpt: >-
   Henriikka Vartiainen ja Jari laru.
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
   - Webinaari
 tags:
   - enorssi

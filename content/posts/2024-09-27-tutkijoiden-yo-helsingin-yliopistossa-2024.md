@@ -11,7 +11,7 @@ excerpt: >-
   Somekone-esittelypisteellä.
 mainCategory: Tapahtumat
 subCategories:
-  - GenAI hankkeen henkilöstö tapahtumissa
+  - Tapahtuma
 extraCategories:
   - Konferenssit ja seminaarit
 tags:

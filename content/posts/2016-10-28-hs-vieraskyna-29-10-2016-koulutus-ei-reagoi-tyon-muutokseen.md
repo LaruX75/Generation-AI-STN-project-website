@@ -16,7 +16,7 @@ excerpt: >-
   liiketoimintamallit. Tietokoneet tarkkailevat terveyttä ja…
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
 extraCategories:
   - Kolumni
 tags:

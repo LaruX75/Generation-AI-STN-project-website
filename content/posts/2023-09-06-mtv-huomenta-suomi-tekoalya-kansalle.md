@@ -13,7 +13,7 @@ excerpt: >-
   täältä:https://www.mtv.fi/sarja/huomenta-suomi-1485/tekoalya-kansalle-20358397
 mainCategory: Mediassa
 subCategories:
-  - GenAI hankkeen henkilöstö mediassa
+  - Hanke mediassa
   - Haastattelu
 extraCategories:
   - MTV3
