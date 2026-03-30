@@ -104,11 +104,17 @@ module.exports = function scientificPublicationsData() {
   const items = records.map((record, index) => {
     const link = buildLink(record);
 
+    const authorsText = normalizeWhitespace(record.authorsText);
+    const authors = authorsText
+      ? authorsText.split(/;\s*|\s*&\s*/).map(a => a.trim()).filter(Boolean)
+      : [];
+
     return {
       ...record,
       id: normalizeWhitespace(record.id) || `publication-${index + 1}`,
       code: normalizeWhitespace(record.code),
-      authorsText: normalizeWhitespace(record.authorsText),
+      authorsText,
+      authors,
       title: normalizeWhitespace(record.title),
       venue: normalizeWhitespace(record.venue),
       notes: normalizeWhitespace(record.notes),

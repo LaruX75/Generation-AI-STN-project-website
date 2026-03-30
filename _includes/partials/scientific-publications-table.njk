@@ -85,7 +85,13 @@
             data-year="{{ item.year | default('') }}"
             data-category="{% if item.code and item.code | truncate(1, true, '') == 'A' %}a{% elif item.code and (item.code | truncate(1, true, '') == 'B' or item.code | truncate(1, true, '') == 'E') %}be{% else %}other{% endif %}"
             data-search="{{ item.searchText | lower | default('') }} {{ item.authorsText | lower | default('') }}">
-            <td class="media-table-col--authors">{{ item.authorsText | default('—') }}</td>
+            <td class="media-table-col--authors">
+              {% if item.authors and item.authors.length %}
+                {% for author in item.authors %}<button class="scipub-author-btn" type="button" data-author="{{ author }}">{{ author }}</button>{% if not loop.last %}; {% endif %}{% endfor %}
+              {% else %}
+                {{ item.authorsText | default('—') }}
+              {% endif %}
+            </td>
             <td class="media-table-col--date">{{ item.year | default('—') }}</td>
             <td class="media-table-col--title">
               {% if item.link %}
@@ -119,3 +125,19 @@
   </nav>
 
 </section>
+
+<script>
+(function () {
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".scipub-author-btn");
+    if (!btn) return;
+    var section = document.getElementById("scipub-table-section");
+    if (!section) return;
+    var search = section.querySelector("[data-grid-search]");
+    if (!search) return;
+    search.value = btn.dataset.author;
+    search.dispatchEvent(new Event("input", { bubbles: true }));
+    search.focus();
+  });
+}());
+</script>
