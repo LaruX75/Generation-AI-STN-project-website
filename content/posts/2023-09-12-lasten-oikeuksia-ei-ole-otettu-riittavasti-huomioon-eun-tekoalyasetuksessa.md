@@ -7,11 +7,12 @@ permalink: /ajankohtaista/lasten-oikeuksia-ei-ole-otettu-riittavasti-huomioon-eu
 status: publish
 sourceType: posts
 excerpt: "Susanna Lindroos-Hovinheimo on kirjoittanut 12.9.2023 blogitekstin European Law Blogiin. Alla on lyhyt suomenkielinen tiivistelmä kirjoituksesta: Neuvottelut EU:n tekoälyasetuksesta ovat meneillään ja aiheesta käydään runsaasti keskustelua. Lasten oikeuksia ei kuitenkaan ole otettu valmistelussa erityisemmin huomioon. Vaikka asetusehdotus on kehittynyt perusoikeudet huomioon ottavaan suuntaan, ei asetuksen artikloja ole kirjoitettu lasten suojelua silmällä pitäen. Komission, neuvoston ja parlamentin kantojen…"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / Blogikirjoitus"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "Blogikirjoitus"
+  - "Lasten oikeudet"
+extraCategories:
   - "Tutkimus"
-  - "Tutkimus / Lasten oikeudet"
 tags:
   - lainsäädäntö
   - lapset ja tekoäly

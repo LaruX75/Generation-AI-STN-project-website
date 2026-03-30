@@ -7,9 +7,9 @@ permalink: /ajankohtaista/lehdistotiedote-suomalaiset-peruskoululaiset-saavat-te
 status: publish
 sourceType: posts
 excerpt: "Generation AI -hanke julkaisee perusopetusikäisille suunnatun tekoälysovelluksen ja sitä tukevan oppimateriaalin. Tutkimukseen perustuvan palvelun avulla lapset ja nuoret voivat turvallisesti opetella ymmärtämään tekoälyyn perustuvia teknologioita. Vuoden 2024 EDUCA-messuilla julkaisemme materiaalipaketin, joka tarjoaa tutkimusperustaisen ratkaisun tekoälytaitojen opettamiseen peruskouluissa.  Helppokäyttöinen palvelu sisältää lapsille- ja nuorille suunnitellun Opetettava kone- tekoälysovelluksen ja siihen liittyvät tehtävät, joita ovat aiemmin päässeet…"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö tapahtumissa"
 tags:
   - educa2024
   - messut

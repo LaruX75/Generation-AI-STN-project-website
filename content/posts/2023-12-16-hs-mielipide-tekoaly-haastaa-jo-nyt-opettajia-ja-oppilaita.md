@@ -7,9 +7,9 @@ permalink: /ajankohtaista/mielipidekirjoitus/hs-mielipide-tekoaly-haastaa-jo-nyt
 status: publish
 sourceType: posts
 excerpt: "Mielipidekirjoitus, joka julkaistiin Helsingin Sanomissa 16.12.2024. Lue teksti Helsingin Sanomien sivuilta: https://www.hs.fi/mielipide/art-2000010050103.html Tekoälyyn pohjautuvat sosiaalisen median palvelut ja mobiilipelit puhumattakaan muista sovelluksista kykenevät ohjailemaan ja jopa ennustamaan käyttäytymistämme. Ne kykenevät profiloimaan ja luokittelemaan meitä sovellusten jatkuvasti keräämän datan pohjalta. Ongelmana on se, että tekoäly on meille musta laatikko. Oppilaat, opettajat ja vanhemmat eivät tiedä tekoälyn toimintaperiaatteita…"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / Mielipidekirjoitus"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "Mielipidekirjoitus"
 tags:
   - digitalisaatio
   - koneoppiminen

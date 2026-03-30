@@ -7,9 +7,10 @@ permalink: /helsingin-yliopisto/mita-tekoaly-algoritmit-ja-koneoppiminen-tarkoit
 status: publish
 sourceType: posts
 excerpt: "Toimittaja Jari Hanska haastatteli Helsingin yliopiston apulaisprofessori Teemu Roosia aiheesta: ”Mitä tekoäly, algoritmit ja koneoppiminen tarkoittavat?” Haastattelu tehtiin Helsingin yliopiston tiedekulmassa 25.11.2019 Tekoäly päättää -tapahtuman alussa. Katso kaikki tapahtuman videot tiedekulman Youtube-kanavalta: https://www.youtube.com/watch?v=b4ZGTa-Vczk"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö mediassa"
+extraCategories:
   - "Helsingin yliopisto"
 tags:
   - algoritmi

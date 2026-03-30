@@ -7,9 +7,10 @@ permalink: /ajankohtaista/genai-hankkeen-henkilosto-mediassa/koululaisen-chatgpt
 status: publish
 sourceType: posts
 excerpt: "MTV3 haastatteli hankkeen tutkijaa, tekoälyprofessori Teemu Roosia 26.12.2022 ”Tekoäly voi kyetä tekemään osan vaikkapa koululaisen kotitehtävistä, mutta mihin sitä oikeasti voi käyttää? Tekoälyprofessori näkee ChatGPT:n kaltaisissa sovelluksissa mahdollisuuksia, mutta ongelmana on se, ettei sen antamiin vastauksiin voi täysin luottaa. Professori kertoo artikkelin yläpuolella olevalla videolla syyn.” https://www.mtvuutiset.fi/artikkeli/koululaisen-chatgpt-lla-tekema-kirjoitelma-meni-taydesta-tekoalyprofessorin-mukaan-hittibotti-on-mestari-lahinna-bullshitissa-ja-mansplainauksessa/8597214"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö mediassa"
+extraCategories:
   - "MTV3"
 tags:
   - chatgpt

@@ -7,11 +7,11 @@ permalink: /ajankohtaista/vierailuluento-ja-tyopaja-jyvaskylan-yliopistossa-kone
 status: publish
 sourceType: posts
 excerpt: "Hankkeen tutkijat Prof. Matti Tedre ja yliopistotutkija Henriikka Vartiainen pitivät vierailuluennon ja työpajan ”Koneoppimista koulumaailmaan” Jyväskylän yliopistossa 4.11.2022 Koneoppimiseen, ja yleisemmällä tasolla tekoälyyn, perustuvat teknologiat ovat tulleet osaksi lasten ja nuorten jokapäiväistä elämää esimerkiksi erilaisten sosiaalisen median sovellusten kautta. Luento ja työpaja tuovat esiin koneoppimisen aiheuttamiin murroslinjoihin liittyviä näkökulmia. Koneoppimiseen, ja yleisemmällä tasolla tekoälyyn, perustuvat…"
-categories:
-  - Ajankohtaista
-  - Luento
-  - Työpaja
-  - Yliopistojen uutiset
+mainCategory: "Ajankohtaista"
+extraCategories:
+  - "Luento"
+  - "Työpaja"
+  - "Yliopistojen uutiset"
 tags:
   - Henriikka Vartiainen
   - Jyväskylän yliopisto

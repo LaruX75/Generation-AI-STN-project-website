@@ -7,9 +7,10 @@ permalink: /en/current-affairs/guest-post-public-law-professor-susanna-lindroos-
 status: publish
 sourceType: posts
 excerpt: 'Our project researcher Professor Susanna Lindroos-Hovinheimo addressed the European Union''s proposal for AI regulation in 2021 in Edilex''s Guest Post with the title "Too Much, Too Confusingly" SOURCE: Lindroos-Hovinheimo, S. (2021). Guest Post: Public Law Professor Susanna Lindroos-Hovinheimo on the European Union''s Proposal for AI Regulation – Too Much, Too Confusingly? Edilex. https://www.edilex.fi/uutiset/71684 The Commission released its proposal for a regulation on AI in April 2021. The regulation proposal leaves open how much national discretion it would allow. The aim of the proposal is to regulate a limited set of AI system use cases, and the majority of AI system use would be permitted. Nevertheless, the scope is quite broad. One can ask whether such comprehensive and complex regulation is necessary and in line with the EU law principle of proportionality. Public law professor Susanna Lindroos-Hovinheimo writes about this in Edilex''s Guest Post.'
-categories:
-  - "News from"
-  - "News from / GenAI project staff in the media"
+mainCategory: "News from"
+subCategories:
+  - "GenAI project staff in the media"
+extraCategories:
   - "University of Helsinki"
 tags:
   - edilex

@@ -7,9 +7,10 @@ permalink: /ajankohtaista/scifest-2023-tekoalya-matalalla-kynnyksella/
 status: publish
 sourceType: posts
 excerpt: "Generation AI oli mukana Joensuun SciFestissä 25.-27.5.2023 työpajalla Tekoälyä matalalla kynnyksellä."
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö tapahtumissa"
+extraCategories:
   - "Konferenssit ja seminaarit"
 tags:
   - scifest

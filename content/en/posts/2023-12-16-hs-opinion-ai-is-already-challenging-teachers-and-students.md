@@ -7,9 +7,9 @@ permalink: /en/ajankohtaista/mielipidekirjoitus/hs-opinion-ai-is-already-challen
 status: publish
 sourceType: posts
 excerpt: 'Opinion piece published in Helsingin Sanomat 16.12.2024. Read the text on the Helsingin Sanomat website: https://www.hs.fi/mielipide/art-2000010050103.html AI-based social media services and mobile games, not to mention other applications, are able to guide and even predict our behaviour. They are able to profile and classify us based on the data they constantly collect. The problem is…'
-categories:
-  - "News from"
-  - "News from / Opinion piece"
+mainCategory: "News from"
+subCategories:
+  - "Opinion piece"
 tags:
   - artificial intelligence
   - Dependence

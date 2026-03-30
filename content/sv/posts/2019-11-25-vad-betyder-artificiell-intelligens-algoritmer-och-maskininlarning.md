@@ -7,10 +7,11 @@ permalink: /sv/nyheter-fran/vad-betyder-artificiell-intelligens-algoritmer-och-m
 status: publish
 sourceType: posts
 excerpt: 'Journalisten Jari Hanska intervjuade docenten Teemu Roos från Helsingfors universitet om ämnet: "Vad betyder artificiell intelligens, algoritmer och maskininlärning?" Intervjun genomfördes i Helsingfors universitets vetenskapshörna den 25.11.2019 vid början av evenemanget AI beslutar. Se alla videoklipp från evenemanget på vetenskapshörnans Youtube-kanal: https://www.youtube.com/watch?v=b4ZGTa-Vczk'
-categories:
-  - "Helsingfors universitet"
+mainCategory: "Helsingfors universitet"
+subCategories:
+  - "GenAI-projektets personal i media"
+extraCategories:
   - "Nyheter från"
-  - "Nyheter från / GenAI-projektets personal i media"
 tags:
   - algoritm
   - Helsingfors universitet

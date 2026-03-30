@@ -7,10 +7,10 @@ permalink: /en/current-affairs/36-german-teachers-learned-about-the-teachable-ma
 status: publish
 sourceType: posts
 excerpt: 'Codeschool Finland organized a free webinar for German teachers in which they taught how artificial intelligence can be used a) in lesson planning and b) as a teaching subject (i.e., how students can be taught to understand artificial intelligence). The GenAI teachable machine developed in the project served as a tool in teaching teachers how artificial intelligence should be taught and what the relationship between artificial intelligence and data is. Read more about the webinar on CodeSchool Finland''s website: https://courses.codeschool.fi/course/ai-webinar'
-categories:
-  - "News from"
-  - "News from / GenAI project staff at events"
-  - "News from / Webinar"
+mainCategory: "News from"
+subCategories:
+  - "GenAI project staff at events"
+  - "Webinar"
 tags:
   - codeschool
   - opetettava kone

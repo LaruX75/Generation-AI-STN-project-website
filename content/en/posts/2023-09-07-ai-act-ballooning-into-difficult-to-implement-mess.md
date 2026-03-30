@@ -7,9 +7,10 @@ permalink: /en/current-affairs/ai-act-ballooning-into-difficult-to-implement-mes
 status: publish
 sourceType: posts
 excerpt: 'The text below, in which public law professor Susanna Lindroos-Hovinheimo and assistant professor Riikka Koulu are interviewed, was published on 7.9.2023 as a news item by the University of Helsinki. Read the original news text here: https://www.helsinki.fi/fi/uutiset/demokratia/tekoalyasetus-paisumassa-vaikeasti-sovellettavaksi-moykyksi In the EU, arduous work is being done to get the planned AI Act completed in the near future. However, as systems utilizing AI develop at a rapid pace, the legislative package threatens to become a difficult-to-implement whole. – It''s starting to look like the regulation will be very broad and will contain a huge number of articles. I find it highly unlikely that it would result in a clear entity. – Alkaa näyttää siltä, että asetuksesta tulee hyvin…'
-categories:
-  - "News from"
-  - "News from / GenAI project staff in the media"
+mainCategory: "News from"
+subCategories:
+  - "GenAI project staff in the media"
+extraCategories:
   - "University of Helsinki"
 tags:
   - lainsäädäntö

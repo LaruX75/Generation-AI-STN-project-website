@@ -7,9 +7,10 @@ permalink: /ajankohtaista/generation-ai-hanke-vahvasti-mukana-interaktiivinen-te
 status: publish
 sourceType: posts
 excerpt: "Hankkeemme oli mukana vahvalla panoksella maamme suurimmassa opetusteknologia-alan tapahtumassa ”Interaktiivinen tekniikka koulutuksessa”, joka järjestetään vuosittain Hämeenlinnan Aulangolla. Varsinaisesta seminaariohjelmasta tai sen esipäivän ohjelmasta löytyi Generation AI aiheella mm. kaksi keynote puheenvuoroa, posteri, tm-luokittelijan esittelyä sekä paneeli Tänä vuonna tapahtuma suorastaan pursusi erilaisia tekoälyaiheisia esityksiä, jotka olivat varsin käytännönläheisiä katsauksia erityisesti chatgpt -tyyppisten sovellusten hyödyntämisestä opetuksessa…."
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö tapahtumissa"
+extraCategories:
   - "Konferenssit ja seminaarit"
 tags:
   - Interaktiivinen teknologia koulutuksessa seminaari

@@ -7,9 +7,10 @@ permalink: /sv/nyheter-fran/keynote-forelasning-pa-iticse-23-konferensen-k-12-da
 status: publish
 sourceType: posts
 excerpt: 'Bakgrund: Prof. Matti Tedre och universitetsforskare Henriikka Vartiainen höll keynote-föreläsningen på ITICSE-konferensen i juli 2023. Presentationens engelska titel är: "K-12 Computing Education for the AI Era: From Data Literacy to Data Agency". Läs mer här: https://iticse.acm.org/2023/keynote-speakers-2/ Maskinöversatt (chatGPT) sammanfattning av presentationen: Frågan om hur man undervisar i traditionell regelbaserad programmering har vägledd stora delar av forskningen inom datavetenskap-undervisning sedan 1950-talet. I K-12 (skol)sammanhang har en gemensam förståelse utvecklats över tid om paradigmatiska element för datavetenskap-undervisning som förutsätter att datorn utför serier av instruktioner som styrs av en sekvens av…'
-categories:
-  - "Forskning"
-  - "Forskning / Konferenshandlingar"
+mainCategory: "Forskning"
+subCategories:
+  - "Konferenshandlingar"
+extraCategories:
   - "Nyheter från"
 tags:
   - Henriikka Vartiainen

@@ -7,9 +7,9 @@ permalink: /en/news-from/speech-on-ai-at-the-eastern-finland-regional-state-admi
 status: publish
 sourceType: posts
 excerpt: 'Generation AI’s Professor Matti Tedre and researcher Henriikka Vartiainen will participate in the Principal and Leadership Days organised by the Regional Administrative Office of Eastern Finland and the North Karelia Rectors’ Association in Nurmes. They will give a lecture on artificial intelligence on Friday 13 September. More information about the event can be found here.'
-categories:
-  - "News from"
-  - "News from / GenAI project staff at events"
+mainCategory: "News from"
+subCategories:
+  - "GenAI project staff at events"
 tags:
   - artificial intelligence
   - AVI

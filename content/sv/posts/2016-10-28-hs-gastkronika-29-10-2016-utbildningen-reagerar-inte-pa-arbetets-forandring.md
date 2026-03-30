@@ -7,10 +7,10 @@ permalink: /sv/nyheter-fran/hs-gastkronika-29-10-2016-utbildningen-reagerar-inte
 status: publish
 sourceType: posts
 excerpt: 'Kunskapsarbete minskar när maskinerna utvecklas, och undervisningen bör ge beredskap för nya former av designarbete, skriver Matti Tedre och Peter J. Denning. DEN DATATEKNISKA revolutionen framskrider i rasande fart. Smarttelefoner anpassade efter individuella behov når prestationen från världens superdatorer vid årtusendet början och håller oss online nästan överallt. Självkörande bilar kör redan på vägarna. Företag som Uber och Airbnb utmanar gamla affärsmodeller. Datorer övervakar hälsan och diagnostiserar sjukdomar. Många traditionella jobb och yrken har försvunnit.'
-categories:
-  - "Nyheter från"
-  - "Nyheter från / Debattartikel"
-  - "Nyheter från / GenAI-projektets personal i media"
+mainCategory: "Nyheter från"
+subCategories:
+  - "Debattartikel"
+  - "GenAI-projektets personal i media"
 tags:
   - Helsingin Sanomat
   - Kolumn

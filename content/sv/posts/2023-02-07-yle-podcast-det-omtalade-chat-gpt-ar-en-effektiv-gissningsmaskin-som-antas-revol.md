@@ -7,9 +7,9 @@ permalink: /sv/nyheter-fran/yle-podcast-det-omtalade-chat-gpt-ar-en-effektiv-gis
 status: publish
 sourceType: posts
 excerpt: 'Chat GPT har kallats artificiell intelligens som man kan fråga vad som helst, men vars svar man måste verifiera. Det sägs att Chat GPT, som släpptes i november, kan revolutionera hela vårt sätt att använda internet och arbeta. Samtidigt har oron över dess missbruk, till exempel inom utbildning, ökat. I nyhetspodcasten berättar universitetslektor Anna-Mari Rusanen från Helsingfors universitet vad Chat GPT egentligen är och hur det bör användas….'
-categories:
-  - "Nyheter från"
-  - "Nyheter från / YLE"
+mainCategory: "Nyheter från"
+subCategories:
+  - "YLE"
 tags:
   - chatgpt
   - podcast

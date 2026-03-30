@@ -7,10 +7,10 @@ permalink: /ajankohtaista/podcast-jakso-koulutus-ja-tekoaly-mita-opetettavaa-tek
 status: publish
 sourceType: posts
 excerpt: "Tehnically Optimistic blogissa julkaistiin 22.7.2023 mielenkiintoinen jakso. Siinä tekoälystä keskustelivat opiskelijaedustaja Shena Revanur, Khan Akacemyn perustaja Sal Khan, Code.orgin koulutusjohtaja Pat Yongpradit, hankkeessamme työskentelevä prof. Teemu Roos ja koneoppimisen pioneeri Tom Mitchell. Lue jakson englanninkielinen esittely Can we use AI as a tool that enriches learning, rather than replacing it? We’re seeing AI rapidly revolutionize…"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
-  - "Ajankohtaista / Podcast"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö mediassa"
+  - "Podcast"
 tags:
   - AI podcast
   - Technically optimistic

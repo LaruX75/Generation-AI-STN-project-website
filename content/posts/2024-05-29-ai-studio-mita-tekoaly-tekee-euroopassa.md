@@ -7,9 +7,10 @@ permalink: /ajankohtaista/ai-studio-mita-tekoaly-tekee-euroopassa/
 status: publish
 sourceType: posts
 excerpt: "Generation AI osallistui AI-STUDIO! Mitä tekoäly tekee Euroopassa? -tapahtumaan 29.5.2024."
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö tapahtumissa"
+extraCategories:
   - "Konferenssit ja seminaarit"
 tags:
   - teemu roos

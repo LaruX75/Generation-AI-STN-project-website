@@ -7,9 +7,9 @@ permalink: /en/current-affairs/oulu-digital-carnival-discussion-on-artificial-in
 status: publish
 sourceType: posts
 excerpt: 'On Tuesday, October 3, 2023, the City of Oulu organized a digital carnival for the staff of education and culture services, where the Generation AI project was also actively involved. The City of Oulu is a project partner, meaning we develop applications and materials together with volunteer developer teachers and students. At the digital carnival, we presented the teachable machine developed in the project in two workshops, and the project representative, Jari Laru, participated in a discussion at the beginning of the event with Microsoft''s Vesa Äyräs and Bing artificial intelligence…'
-categories:
-  - "News from"
-  - "News from / GenAI project staff at events"
+mainCategory: "News from"
+subCategories:
+  - "GenAI project staff at events"
 tags:
   - Digikarnevaalit
   - Microsoft

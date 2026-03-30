@@ -7,10 +7,11 @@ permalink: /sv/ajankohtaista/susanna-lindroos-hovinheimo-hur-sag-ai-forordningen
 status: publish
 sourceType: posts
 excerpt: 'EU:s AI-förordning var en lång och grundlig process. Nu är texten klar och vi kan reflektera över hur den blev. Det första jag kan säga är att det visade sig vara en lång tid. Förordningen innehåller 113 artiklar och en artikel är normalt längre än en A4-remsa. För att ange tillämpningsområdet enbart i artikel 2…'
-categories:
-  - "Helsingfors universitet"
+mainCategory: "Helsingfors universitet"
+subCategories:
+  - "Blogginlägg"
+extraCategories:
   - "Nyheter från"
-  - "Nyheter från / Blogginlägg"
 tags:
   - AI ACT
   - "EU:s AI-förordning"

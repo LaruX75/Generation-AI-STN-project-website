@@ -7,9 +7,10 @@ permalink: /sv/nyheter-fran/prof-tedre-deltog-i-humanization-of-computing-and-en
 status: publish
 sourceType: posts
 excerpt: 'Vår projekledare, prof. Matti Tedre deltog den 8.6.2023 i Uppsala (Sverige) i ett Fireside Chat-samtal om "utbildning inom datavetenskap och ingenjörsutbildning, med målet att humanisera denna specifika kontext". Program: STARTTID AKTIVITET 9:00 Opening: Virginia Grande 9:30 Keynote: Matilde Sánchez-Peña: positionality, well-being (of teachers and students), and other emerging trends in…'
-categories:
-  - "Forskning"
-  - "Forskning / Konferenshandlingar"
+mainCategory: "Forskning"
+subCategories:
+  - "Konferenshandlingar"
+extraCategories:
   - "Nyheter från"
 tags:
   - Matti Tedre

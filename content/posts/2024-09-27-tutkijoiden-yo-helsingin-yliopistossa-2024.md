@@ -7,9 +7,10 @@ permalink: /ajankohtaista/tutkijoiden-yo-helsingin-yliopistossa-2024/
 status: publish
 sourceType: posts
 excerpt: "Generation AI oli mukana Tutkijoiden yössä Helsingin yliopistossa 27.9.2024 Somekone-esittelypisteellä."
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö tapahtumissa"
+extraCategories:
   - "Konferenssit ja seminaarit"
 tags:
   - tutkijoiden yö

@@ -7,10 +7,10 @@ permalink: /sv/nyheter-fran/projektets-forskare-holl-expertforedrag-vid-enorssi-
 status: publish
 sourceType: posts
 excerpt: 'Det nationella samarbetsnätverket för normalskolor eNorssi ordnade en webbinarium om artificiell intelligens den 4.4.2023, där Henriikka Vartiainen och Jari Laru från vårt projekt höll expertföredrag.'
-categories:
-  - "Nyheter från"
-  - "Nyheter från / GenAI-projektets personal vid evenemang"
-  - "Nyheter från / Webbinarium"
+mainCategory: "Nyheter från"
+subCategories:
+  - "GenAI-projektets personal vid evenemang"
+  - "Webbinarium"
 tags:
   - enorssi
   - normaalikoulu

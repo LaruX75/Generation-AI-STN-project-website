@@ -7,9 +7,10 @@ permalink: /sv/nyheter-fran/projektet-presenterades-vid-utbildningsvetenskapens-
 status: publish
 sourceType: posts
 excerpt: 'Generation AI-projektet deltog i Utbildningsvetenskapens dagar 2022 den 24-25.11.2022. Utbildningsvetenskapliga sällskapet arrangerar årligen Utbildningsvetenskapens dagar tillsammans med något finländskt universitet. Utbildningsvetenskapens dagar är den viktigaste inhemska vetenskapsevenemang inom utbildningsområdet. Vid dagarna i Uleåborg besökte över 600 utbildningsvetare. Generation AI-projektet har utbildningsvetare från universiteten i Helsingfors, Östra Finland och Uleåborg. Professor Kati Mäkitalo, som ansvarar för projektets samverkan, var ledare för planeringsgruppen för Utbildningsvetenskapens dagar i Uleåborg. Projektet i startfasen presenterade projektets verksamhet med en posterutställning…'
-categories:
-  - "Forskning"
-  - "Forskning / Konferenshandlingar"
+mainCategory: "Forskning"
+subCategories:
+  - "Konferenshandlingar"
+extraCategories:
   - "Nyheter från"
 tags:
   - fera

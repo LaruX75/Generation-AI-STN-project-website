@@ -7,10 +7,10 @@ permalink: /ajankohtaista/prof-tedre-osallistui-humanization-of-computing-and-en
 status: publish
 sourceType: posts
 excerpt: "Hankkeemme johtaja, prof. Matti Tedre osallistui 8.6.2023 Uppsalassa (Ruotsi) Fireside Chat keskusteluun aiheesta ”education in the disciplines of computing and engineering, with the goal of humanization in this particular context” Ohjelma: STARTING TIME ACTIVITY 9:00 AM Opening: Virginia Grande 9:30 AM Keynote: Matilde Sánchez-Peña: positionality, well-being (of teachers and students), and other emerging trends in…"
-categories:
-  - Ajankohtaista
-  - Konferenssit ja seminaarit
-  - Tutkimus
+mainCategory: "Ajankohtaista"
+extraCategories:
+  - "Konferenssit ja seminaarit"
+  - "Tutkimus"
 tags:
   - Matti Tedre
   - Ruotsi

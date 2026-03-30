@@ -7,9 +7,10 @@ permalink: /ajankohtaista/heurekan-opettajailta-somekone/
 status: publish
 sourceType: posts
 excerpt: "Generation AI oli mukana Heurekan opettajaillassa 3.10.2024 puheenvuorolla ja Somekone-esittelypisteellä."
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö tapahtumissa"
+extraCategories:
   - "Konferenssit ja seminaarit"
 tags:
   - heureka

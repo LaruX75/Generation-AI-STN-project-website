@@ -7,11 +7,11 @@ permalink: /ajankohtaista/yle-deepseek-on-yksi-harppaus-eteenpain/
 status: publish
 sourceType: posts
 excerpt: "Yle haastatteli tietojenkäsittelytieteen professori Teemu Roosia 28.1.2025 Deepseekistä ja sen merkityksestä tekoälykilpailulle. Alkuperäinen juttu: https://yle.fi/a/74-20139814"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
-  - "Ajankohtaista / Haastattelu"
-  - "Ajankohtaista / YLE"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö mediassa"
+  - "Haastattelu"
+  - "YLE"
 tags:
   - deepseek
   - teemu roos

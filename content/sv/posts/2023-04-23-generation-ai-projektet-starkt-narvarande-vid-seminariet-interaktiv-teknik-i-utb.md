@@ -7,11 +7,12 @@ permalink: /sv/nyheter-fran/generation-ai-projektet-starkt-narvarande-vid-semina
 status: publish
 sourceType: posts
 excerpt: 'Vårt projekt var starkt representerat i landets största utbildningsteknikkonferens "Interaktiv teknik i utbildningen", som arrangeras årligen på Aulanko i Tavastehus. I huvudprogrammet och förprogrammet fanns Generation AI representerat med bland annat två keynote-föreläsningar, en poster, presentation av TM-klassificeraren samt en panel. I år var konferensen full av olika presentationer om artificiell intelligens, som var ganska praktisk orienterade överblickar över användningen av ChatGPT-liknande applikationer i undervisningen….'
-categories:
-  - "Forskning"
-  - "Forskning / Konferenshandlingar"
+mainCategory: "Forskning"
+subCategories:
+  - "Konferenshandlingar"
+  - "GenAI-projektets personal vid evenemang"
+extraCategories:
   - "Nyheter från"
-  - "Nyheter från / GenAI-projektets personal vid evenemang"
 tags:
   - Interaktiv teknik i utbildningen seminarium
   - ITK2023

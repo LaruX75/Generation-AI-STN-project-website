@@ -7,9 +7,10 @@ permalink: /ajankohtaista/koululaisten-robotiikkaviikot-heurekassa-2023/
 status: publish
 sourceType: posts
 excerpt: "Generation AI oli mukana Heurekan Koululaisten Robotiikkaviikoilla 18.-29.9.2023."
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö tapahtumissa"
+extraCategories:
   - "Konferenssit ja seminaarit"
 tags:
   - heureka

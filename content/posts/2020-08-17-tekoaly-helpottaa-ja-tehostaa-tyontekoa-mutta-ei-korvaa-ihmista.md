@@ -7,9 +7,10 @@ permalink: /ajankohtaista/tekoaly-uutisointi-hankkeen-ulkopuolella/tekoaly-helpo
 status: publish
 sourceType: posts
 excerpt: "Helsingin yliopiston matemaattis-luonnontieteellisen tiedekunnan Prof. Teemu Roosin professorinimitykseen liittyvä tiedekunnan lyhyt haastattelu sekä videoluento. Julkaistu Helsingin yliopiston sivuilla uutisena 17.8.2020 Tekoälystä on tullut reilussa kymmenessä vuodessa olennainen osa maailmaamme. Sitä täytyy tutkia, jotta todellisen elämän epävarmuudet ja tarpeet osataan ottaa huomioon järjestelmien kehitykseen. https://www.helsinki.fi/fi/matemaattis-luonnontieteellinen-tiedekunta/ajankohtaista/teemu-roos-tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / Ajankohtaista hankkeen ulkopuolella"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "Ajankohtaista hankkeen ulkopuolella"
+extraCategories:
   - "Helsingin yliopisto"
   - "Yliopistojen uutiset"
   - "Youtube"

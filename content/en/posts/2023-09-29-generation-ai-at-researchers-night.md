@@ -7,9 +7,9 @@ permalink: /en/current-affairs/generation-ai-at-researchers-night/
 status: publish
 sourceType: posts
 excerpt: 'Researchers'' Night is a Europe-wide science event held this year on 29.9.2023. The Generation AI project participates in the event with an AI workshop "Artificial Intelligence in a Black Box" at the University of Oulu, where children, young people and parents can get to know the "Gen AI Teachable Machine" application developed in the project. Workshop description: The workshop introduces artificial intelligence through machine learning and a classifier. With researchers from the GenAI project, participants get to try the classifier app themselves. Come…'
-categories:
-  - "News from"
-  - "News from / GenAI project staff at events"
+mainCategory: "News from"
+subCategories:
+  - "GenAI project staff at events"
 tags:
   - machine learning
   - artificial intelligence

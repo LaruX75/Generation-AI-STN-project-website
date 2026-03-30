@@ -7,8 +7,7 @@ permalink: /gen-ai-tekoalykuulumiset-uutiskirje/tekoalykuulumiset-11a-2023-genai
 status: publish
 sourceType: posts
 excerpt: "Tervetuloa lukemaan Generation AI hankkeen kuukausittaista uutiskirjettä. Kirjeitä tulee vähintään yksi kirje kuukautta kohti. Voit tilata tämän uutiskirjeen joko täällä LinkedIN palvelussa tai hankkeemme www-sivuilta: https://www.generation-ai-stn.fi/uutiskirje/ 1. GenAI opetettava kone on ensimmäisen sovelluksemme ja se alkaa olla valmis Hankkeemme ensimmäisen täyden toimintavuoden aikana olemme kehittäneet opetettavan koneen, jonka avulla lapset ja nuoret pystyvät kehittämään tekoälyä hyödyntäviä sovelluksia…"
-categories:
-  - Generation AI kuukausittaiset tekoälykuulumiset (uutiskirje)
+mainCategory: "Generation AI kuukausittaiset tekoälykuulumiset (uutiskirje)"
 tags:
   - tekoäly
   - tekoälykuulumiset uutiskirje

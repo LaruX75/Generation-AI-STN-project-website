@@ -7,10 +7,11 @@ permalink: /en/current-affairs/prof-tedre-participated-in-the-humanization-of-co
 status: publish
 sourceType: posts
 excerpt: 'Our project leader, Prof. Matti Tedre participated on 8.6.2023 in Uppsala (Sweden) in a Fireside Chat discussion on the topic "education in the disciplines of computing and engineering, with the goal of humanization in this particular context" Schedule: STARTING TIME ACTIVITY 9:00 AM Opening: Virginia Grande 9:30 AM Keynote: Matilde Sánchez-Peña: positionality, well-being (of teachers and students), and other emerging trends in…'
-categories:
-  - "News from"
+mainCategory: "News from"
+subCategories:
+  - "Conference proceedings"
+extraCategories:
   - "Research"
-  - "Research / Conference proceedings"
 tags:
   - Matti Tedre
   - Ruotsi

@@ -7,9 +7,10 @@ permalink: /ajankohtaista/law-and-the-other-other-seminaari/
 status: publish
 sourceType: posts
 excerpt: "Hankkeemme tutkija Susanna Lindroos-Hovinheimo osallistui Law and the Other Other -seminaariin 23.8.2023."
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö tapahtumissa"
+extraCategories:
   - "Konferenssit ja seminaarit"
 tags:
   - oikeustiede

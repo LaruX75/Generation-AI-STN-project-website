@@ -7,8 +7,7 @@ permalink: /sv/nyheter-fran/otava-opisto-hur-lar-sig-maskinen-genai-verktyg-delt
 status: publish
 sourceType: posts
 excerpt: 'Generation AI lärande maskin: Hur lär sig maskinen? På tredje stationen dök vi djupare in i världen av artificiell intelligens med hjälp av en lärande maskin som utvecklats i Generation AI-projektet. Hur kan maskininlärning hjälpa oss att förstå komplexa koncept eller till och med stödja undervisningen? Elever inom vuxenutbildning bekantade sig på stationen med hur maskinen undervisas och hur dess lärande skiljer sig från människors lärande. Syftet med denna station var mer allmänt att konkretisera grundlogiken i många program som använder maskininlärning…'
-categories:
-  - "Nyheter från"
+mainCategory: "Nyheter från"
 tags:
   - GenAI luokittelija
   - GenAI opetettava kone

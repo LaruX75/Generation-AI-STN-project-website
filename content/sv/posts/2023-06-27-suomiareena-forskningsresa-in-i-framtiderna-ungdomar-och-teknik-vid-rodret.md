@@ -7,9 +7,9 @@ permalink: /sv/nyheter-fran/suomiareena-forskningsresa-in-i-framtiderna-ungdomar
 status: publish
 sourceType: posts
 excerpt: 'Prof. Teemu Roos deltog den 27.6.2023 i Suomi Areenapanelen "Forskningsresa in i framtiderna – ungdomar och teknik vid rodret". Panelen kan ses som inspelning här: https://www.mtv.fi/sarja/suomiareena-1464/tutkimusmatkalla-tulevaisuuksiin-ohjaimisssa-nuoret-ja-teknologia-20594602 Ge dig ut på en forskningsresa in i framtiden tillsammans med ungdomar för att söka svar på skolans, lärandets och teknikens utveckling: Vad och hur lär vi oss? Och vilken roll spelar teknologi i vår vardag? Framtidsskolan deltar i SuomiAreena – kom med och följ diskussionen! Vad: Paneldiskussion Forskningsresa in i framtiderna…'
-categories:
-  - "Nyheter från"
-  - "Nyheter från / GenAI-projektets personal vid evenemang"
+mainCategory: "Nyheter från"
+subCategories:
+  - "GenAI-projektets personal vid evenemang"
 tags:
   - paneeli
   - teemu roos

@@ -7,10 +7,11 @@ permalink: /sv/nyheter-fran/gastspalt-med-offentligrattslig-professor-susanna-li
 status: publish
 sourceType: posts
 excerpt: 'Vår projektforskare Professor Susanna Lindroos-Hovinheimo behandlade år 2021 i Edilex gäststalt EU:s förslag för reglering av artificiell intelligens under titeln "för mycket på ett alltför förvirrande sätt" KÄLLA: Lindroos-Hovinheimo, S. (2021). Gästspalt med offentligrättslig professor Susanna Lindroos-Hovinheimo: EU:s förslag för reglering av artificiell intelligens – för mycket på ett alltför förvirrande sätt? Edilex. https://www.edilex.fi/uutiset/71684 Kommissionen presenterade sitt förslag på en förordning för reglering av artificiell intelligens i april 2021. I förordningsförslaget är det oklart i vilken utsträckning det skulle lämna utrymme för nationell manövrering. Förslagets syfte är att…'
-categories:
-  - "Helsingfors universitet"
+mainCategory: "Helsingfors universitet"
+subCategories:
+  - "GenAI-projektets personal i media"
+extraCategories:
   - "Nyheter från"
-  - "Nyheter från / GenAI-projektets personal i media"
 tags:
   - edilex
   - review artikkeli

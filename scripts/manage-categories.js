@@ -210,12 +210,15 @@ const FOLDERS = {
   sv: "content/sv/posts",
 };
 
-function getMdFiles(folder) {
+function getAllFiles(folder) {
   if (!fs.existsSync(folder)) return [];
   return fs.readdirSync(folder)
-    .filter(f => f.endsWith(".md"))
+    .filter(f => f.endsWith(".md") || f.endsWith(".njk"))
     .map(f => path.join(folder, f));
 }
+
+// Keep old name as alias for backwards compat within this file
+const getMdFiles = getAllFiles;
 
 // ── Frontmatter parsing ────────────────────────────────────────────────────────
 
@@ -262,6 +265,35 @@ function serializeFrontmatter(fm, originalRaw) {
       // skip old list items
       i++;
       while (i < lines.length && lines[i].match(/^  - /)) i++;
+    } else {
+      result.push(lines[i]);
+      i++;
+    }
+  }
+  return result.join("\n");
+}
+
+function serializeSplitFrontmatter(fm, originalRaw) {
+  const lines = originalRaw.split("\n");
+  const result = [];
+  let i = 0;
+  while (i < lines.length) {
+    if (lines[i].match(/^categories:\s*$/) || lines[i].match(/^categories: \[\]/)) {
+      // Skip old categories block
+      i++;
+      while (i < lines.length && lines[i].match(/^  - /)) i++;
+      // Insert new fields
+      if (fm.mainCategory) {
+        result.push(`mainCategory: ${JSON.stringify(fm.mainCategory)}`);
+      }
+      if (fm.subCategories && fm.subCategories.length) {
+        result.push("subCategories:");
+        for (const c of fm.subCategories) result.push(`  - ${JSON.stringify(c)}`);
+      }
+      if (fm.extraCategories && fm.extraCategories.length) {
+        result.push("extraCategories:");
+        for (const c of fm.extraCategories) result.push(`  - ${JSON.stringify(c)}`);
+      }
     } else {
       result.push(lines[i]);
       i++;
@@ -374,6 +406,44 @@ function cmdMigrate(dryRun) {
   console.log(`\n${mode}${totalFiles} files would be updated, net category change: ${totalChanges > 0 ? "+" : ""}${totalChanges}`);
 }
 
+function cmdSplit(dryRun) {
+  let totalFiles = 0;
+  for (const [lang, folder] of Object.entries(FOLDERS)) {
+    const files = getAllFiles(folder);
+    for (const file of files) {
+      const original = fs.readFileSync(file, "utf8");
+      const { fm, raw, rest } = parseFrontmatter(original);
+      const cats = fm.categories || [];
+      if (!cats.length) continue;
+
+      const tops = cats.filter(c => !c.includes(" / "));
+      const subs = cats.filter(c => c.includes(" / "));
+
+      const mainCategory = tops[0] || null;
+      const extraCategories = tops.slice(1);
+      const subCategories = [...new Set(subs.map(c => c.split(" / ").slice(1).join(" / ")))];
+
+      const shortFile = path.relative(process.cwd(), file);
+      if (dryRun) {
+        console.log(`\n  ${shortFile}`);
+        console.log(`    mainCategory:    ${mainCategory || "(none)"}`);
+        if (subCategories.length) console.log(`    subCategories:   ${subCategories.join(", ")}`);
+        if (extraCategories.length) console.log(`    extraCategories: ${extraCategories.join(", ")}`);
+      } else {
+        fm.mainCategory = mainCategory;
+        fm.subCategories = subCategories;
+        fm.extraCategories = extraCategories;
+        const newRaw = serializeSplitFrontmatter(fm, raw);
+        fs.writeFileSync(file, `---\n${newRaw}\n---${rest}`, "utf8");
+        console.log(`  ✓ ${shortFile}`);
+      }
+      totalFiles++;
+    }
+  }
+  const mode = dryRun ? "[DRY RUN] " : "";
+  console.log(`\n${mode}${totalFiles} files split`);
+}
+
 // ── Main ───────────────────────────────────────────────────────────────────────
 
 const [,, cmd, flag] = process.argv;
@@ -390,11 +460,21 @@ switch (cmd) {
       cmdMigrate(false);
     }
     break;
+  case "split":
+    if (flag === "--dry") {
+      console.log("DRY RUN — no files will be changed\n");
+      cmdSplit(true);
+    } else {
+      cmdSplit(false);
+    }
+    break;
   default:
     console.log(`Usage:
   node scripts/manage-categories.js stats          # Category usage statistics
   node scripts/manage-categories.js list           # Canonical category list
   node scripts/manage-categories.js unknown        # Categories not in canonical list
   node scripts/manage-categories.js migrate --dry  # Preview migrations
-  node scripts/manage-categories.js migrate        # Apply migrations to files`);
+  node scripts/manage-categories.js migrate        # Apply migrations to files
+  node scripts/manage-categories.js split --dry    # Preview split to mainCategory/subCategories
+  node scripts/manage-categories.js split          # Apply split to all files`);
 }

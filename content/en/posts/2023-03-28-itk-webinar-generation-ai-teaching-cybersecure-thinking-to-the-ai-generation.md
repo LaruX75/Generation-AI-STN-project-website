@@ -7,10 +7,10 @@ permalink: /en/current-affairs/itk-webinar-generation-ai-teaching-cybersecure-th
 status: publish
 sourceType: posts
 excerpt: 'ITK Webinar 28.3.2023 Jari Laru, University of Oulu Matti Tedre, University of Eastern Finland Henriikka Vartiainen, University of Eastern Finland Do you understand what challenges exist in a data-driven, algorithm-governed society? ChatGPT and similar AI applications have sparked a lot of enthusiasm and curiosity in people, but also many questions and concerns. In the Generation AI project funded by the Strategic Research Council (SRC), we are opening the black box of artificial intelligence by developing content, methods…'
-categories:
-  - "News from"
-  - "News from / GenAI project staff at events"
-  - "News from / Webinar"
+mainCategory: "News from"
+subCategories:
+  - "GenAI project staff at events"
+  - "Webinar"
 tags:
   - ITK2023
   - tekoäly

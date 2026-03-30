@@ -27,32 +27,29 @@ collections:
     sortable_fields: ["date", "title"]
     view_filters:
       - label: "Ajankohtaista"
-        field: categories
+        field: mainCategory
         pattern: "Ajankohtaista"
-      - label: "Henkilöstö mediassa"
-        field: categories
-        pattern: "GenAI hankkeen henkilöstö mediassa"
-      - label: "Henkilöstö tapahtumissa"
-        field: categories
-        pattern: "GenAI hankkeen henkilöstö tapahtumissa"
-      - label: "Konferenssit ja seminaarit"
-        field: categories
-        pattern: "Konferenssit ja seminaarit"
       - label: "Hankkeen toiminta"
-        field: categories
+        field: mainCategory
         pattern: "Hankkeen toiminta"
       - label: "Tutkimus"
-        field: categories
+        field: mainCategory
         pattern: "Tutkimus"
+      - label: "Henkilöstö mediassa"
+        field: subCategories
+        pattern: "GenAI hankkeen henkilöstö mediassa"
+      - label: "Henkilöstö tapahtumissa"
+        field: subCategories
+        pattern: "GenAI hankkeen henkilöstö tapahtumissa"
       - label: "Webinaari"
-        field: categories
+        field: subCategories
         pattern: "Webinaari"
       - label: "Haastattelu"
-        field: categories
+        field: subCategories
         pattern: "Haastattelu"
     view_groups:
-      - label: "Kategoria"
-        field: categories
+      - label: "Pääkategoria"
+        field: mainCategory
       - label: "Vuosi"
         field: date
         pattern: "\\d{4}"
@@ -67,24 +64,12 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Status", name: "status", widget: "hidden", default: "publish" }
       - { label: "Lyhennelmä", name: "excerpt", widget: "text", required: false }
-      - label: "Kategoriat"
-        name: "categories"
+      - label: "Pääkategoria"
+        name: "mainCategory"
         widget: "select"
-        multiple: true
         required: false
         options:
           - "Ajankohtaista"
-          - "Ajankohtaista / Ajankohtaista hankkeen ulkopuolella"
-          - "Ajankohtaista / Blogikirjoitus"
-          - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
-          - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
-          - "Ajankohtaista / GenAI hankkeen kouluttamassa"
-          - "Ajankohtaista / GenAI työkalut ja materiaalit hankkeen ulkopuolella"
-          - "Ajankohtaista / Haastattelu"
-          - "Ajankohtaista / Mielipidekirjoitus"
-          - "Ajankohtaista / Podcast"
-          - "Ajankohtaista / Webinaari"
-          - "Ajankohtaista / YLE"
           - "Esiopetus"
           - "FCAI"
           - "Generation AI kuukausittaiset tekoälykuulumiset (uutiskirje)"
@@ -98,11 +83,52 @@ collections:
           - "Media"
           - "MTV3"
           - "Sovellukset"
-          - "Sovellukset / Luokittelija"
           - "Tutkimus"
-          - "Tutkimus / Julkaisu"
-          - "Tutkimus / Konferenssijulkaisu"
-          - "Tutkimus / Lasten oikeudet"
+          - "Työpaja"
+          - "Yliopistojen uutiset"
+          - "Youtube"
+      - label: "Alakategoriat"
+        name: "subCategories"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - "Ajankohtaista hankkeen ulkopuolella"
+          - "Blogikirjoitus"
+          - "GenAI hankkeen henkilöstö mediassa"
+          - "GenAI hankkeen henkilöstö tapahtumissa"
+          - "GenAI hankkeen kouluttamassa"
+          - "GenAI työkalut ja materiaalit hankkeen ulkopuolella"
+          - "Haastattelu"
+          - "Julkaisu"
+          - "Konferenssijulkaisu"
+          - "Lasten oikeudet"
+          - "Luokittelija"
+          - "Mielipidekirjoitus"
+          - "Podcast"
+          - "Webinaari"
+          - "YLE"
+      - label: "Muut kategoriat"
+        name: "extraCategories"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - "Ajankohtaista"
+          - "Esiopetus"
+          - "FCAI"
+          - "Generation AI kuukausittaiset tekoälykuulumiset (uutiskirje)"
+          - "Hankkeen toiminta"
+          - "Helsingin yliopisto"
+          - "Heureka"
+          - "Itä-Suomen yliopisto"
+          - "Kolumni"
+          - "Konferenssit ja seminaarit"
+          - "Luento"
+          - "Media"
+          - "MTV3"
+          - "Sovellukset"
+          - "Tutkimus"
           - "Työpaja"
           - "Yliopistojen uutiset"
           - "Youtube"
@@ -156,30 +182,24 @@ collections:
     preview_path: "{{permalink}}"
     sortable_fields: ["date", "title"]
     view_filters:
-      - label: "News"
-        field: categories
-        pattern: "News"
+      - label: "News from"
+        field: mainCategory
+        pattern: "News from"
+      - label: "Research"
+        field: mainCategory
+        pattern: "Research"
       - label: "Staff in media"
-        field: categories
+        field: subCategories
         pattern: "media"
       - label: "Staff at events"
-        field: categories
+        field: subCategories
         pattern: "events"
-      - label: "Conferences"
-        field: categories
-        pattern: "Conferences"
-      - label: "Research"
-        field: categories
-        pattern: "Research"
-      - label: "Interview"
-        field: categories
-        pattern: "Interview"
       - label: "Webinar"
-        field: categories
+        field: subCategories
         pattern: "Webinar"
     view_groups:
-      - label: "Category"
-        field: categories
+      - label: "Main category"
+        field: mainCategory
       - label: "Year"
         field: date
         pattern: "\\d{4}"
@@ -194,27 +214,44 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Status", name: "status", widget: "hidden", default: "publish" }
       - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
-      - label: "Categories"
-        name: "categories"
+      - label: "Main category"
+        name: "mainCategory"
+        widget: "select"
+        required: false
+        options:
+          - "News from"
+          - "Generation AI Monthly AI News (newsletter)"
+          - "Media"
+          - "Project activities"
+          - "Research"
+          - "University of Helsinki"
+      - label: "Subcategories"
+        name: "subCategories"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - "Blog post"
+          - "GenAI project staff at events"
+          - "GenAI project staff in the media"
+          - "Opinion piece"
+          - "Podcast"
+          - "Webinar"
+          - "YLE"
+          - "Children's rights"
+          - "Conference proceedings"
+          - "Published on"
+      - label: "Extra categories"
+        name: "extraCategories"
         widget: "select"
         multiple: true
         required: false
         options:
           - "News from"
-          - "News from / Blog post"
-          - "News from / GenAI project staff at events"
-          - "News from / GenAI project staff in the media"
-          - "News from / Opinion piece"
-          - "News from / Podcast"
-          - "News from / Webinar"
-          - "News from / YLE"
           - "Generation AI Monthly AI News (newsletter)"
           - "Media"
           - "Project activities"
           - "Research"
-          - "Research / Children's rights"
-          - "Research / Conference proceedings"
-          - "Research / Published on"
           - "University of Helsinki"
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Featured image (URL)", name: "featuredImage", widget: "string", required: false }
@@ -266,30 +303,24 @@ collections:
     preview_path: "{{permalink}}"
     sortable_fields: ["date", "title"]
     view_filters:
-      - label: "Aktuellt"
-        field: categories
-        pattern: "Aktuellt"
+      - label: "Nyheter från"
+        field: mainCategory
+        pattern: "Nyheter från"
+      - label: "Forskning"
+        field: mainCategory
+        pattern: "Forskning"
       - label: "Personal i media"
-        field: categories
+        field: subCategories
         pattern: "personal i media"
-      - label: "Personal på evenemang"
-        field: categories
+      - label: "Personal vid evenemang"
+        field: subCategories
         pattern: "evenemang"
-      - label: "Konferenser"
-        field: categories
-        pattern: "Konferenser"
-      - label: "Projektverksamhet"
-        field: categories
-        pattern: "Projektverksamhet"
-      - label: "Intervju"
-        field: categories
-        pattern: "Intervju"
       - label: "Webbinarium"
-        field: categories
+        field: subCategories
         pattern: "Webbinarium"
     view_groups:
-      - label: "Kategori"
-        field: categories
+      - label: "Huvudkategori"
+        field: mainCategory
       - label: "År"
         field: date
         pattern: "\\d{4}"
@@ -304,24 +335,41 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Status", name: "status", widget: "hidden", default: "publish" }
       - { label: "Utdrag", name: "excerpt", widget: "text", required: false }
-      - label: "Kategorier"
-        name: "categories"
+      - label: "Huvudkategori"
+        name: "mainCategory"
+        widget: "select"
+        required: false
+        options:
+          - "Nyheter från"
+          - "Forskning"
+          - "Generation AI Monthly AI News (nyhetsbrev)"
+          - "Helsingfors universitet"
+          - "Media"
+          - "Projektaktiviteter"
+      - label: "Underkategorier"
+        name: "subCategories"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - "Blogginlägg"
+          - "Debattartikel"
+          - "GenAI-projektets personal i media"
+          - "GenAI-projektets personal vid evenemang"
+          - "Podcast"
+          - "Webbinarium"
+          - "YLE"
+          - "Barns rättigheter"
+          - "Konferenshandlingar"
+          - "Publicerad på"
+      - label: "Extra kategorier"
+        name: "extraCategories"
         widget: "select"
         multiple: true
         required: false
         options:
           - "Nyheter från"
-          - "Nyheter från / Blogginlägg"
-          - "Nyheter från / Debattartikel"
-          - "Nyheter från / GenAI-projektets personal i media"
-          - "Nyheter från / GenAI-projektets personal vid evenemang"
-          - "Nyheter från / Podcast"
-          - "Nyheter från / Webbinarium"
-          - "Nyheter från / YLE"
           - "Forskning"
-          - "Forskning / Barns rättigheter"
-          - "Forskning / Konferenshandlingar"
-          - "Forskning / Publicerad på"
           - "Generation AI Monthly AI News (nyhetsbrev)"
           - "Helsingfors universitet"
           - "Media"

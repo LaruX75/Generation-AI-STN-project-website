@@ -7,10 +7,10 @@ permalink: /sv/nyheter-fran/itk-webbinarium-generation-ai-att-lara-den-ai-genera
 status: publish
 sourceType: posts
 excerpt: 'ITK-webbinarium 28.3.2023 Jari Laru, Uleåborgs universitet Matti Tedre, Östra Finlands universitet Henriikka Vartiainen, Östra Finlands universitet Förstår du vilka utmaningar det datadrivna, algoritmstyrda samhället medför? ChatGPT och motsvarande AI-tillämpningar har väckt mycket entusiasm och nyfikenhet hos människor, men också många frågor och bekymmer. I Generation AI-projektet, som finansieras av Rådet för strategisk forskning (STN), öppnar vi upp AI:s svarta låda, det vill säga vi utvecklar innehåll, metoder…'
-categories:
-  - "Nyheter från"
-  - "Nyheter från / GenAI-projektets personal vid evenemang"
-  - "Nyheter från / Webbinarium"
+mainCategory: "Nyheter från"
+subCategories:
+  - "GenAI-projektets personal vid evenemang"
+  - "Webbinarium"
 tags:
   - ITK2023
   - artificiell intelligens

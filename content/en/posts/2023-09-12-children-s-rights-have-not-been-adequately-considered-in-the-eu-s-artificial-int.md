@@ -7,11 +7,12 @@ permalink: /en/current-affairs/children-s-rights-have-not-been-adequately-consid
 status: publish
 sourceType: posts
 excerpt: 'Susanna Lindroos-Hovinheimo wrote a blog post to the European Law Blog on 12.9.2023. Below is a brief summary of the text: Negotiations on the EU''s artificial intelligence regulation are ongoing and the topic is widely discussed. However, children''s rights have not been given special consideration in the preparation process. Although the regulation proposal has developed in the direction of taking fundamental rights into account, the articles of the regulation have not been written with child protection in mind. The positions of the Commission, Council and Parliament…'
-categories:
-  - "News from"
-  - "News from / Blog post"
+mainCategory: "News from"
+subCategories:
+  - "Blog post"
+  - "Children's rights"
+extraCategories:
   - "Research"
-  - "Research / Children's rights"
 tags:
   - lainsäädäntö
   - lapset ja tekoäly

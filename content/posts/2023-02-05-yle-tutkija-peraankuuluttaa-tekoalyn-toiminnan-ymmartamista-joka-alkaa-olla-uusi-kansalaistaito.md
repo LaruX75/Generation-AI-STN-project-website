@@ -7,10 +7,10 @@ permalink: /ajankohtaista/yle/yle-tutkija-peraankuuluttaa-tekoalyn-toiminnan-ymm
 status: publish
 sourceType: posts
 excerpt: "Hankkeemme tutkijan prof. Teemu Roosin tuntema yliopistonlehtori Anna-Mari Rusanen Helsingin yliopistosta kertoo YLEn haastattelussa, kuinka tekoälyn toiminnan ymmärtäminen on pian uusi kansalaistaito. Haastattelu sopii hyvin hankkeemme teemaan, sillä me kehitämme sisältöjä, menetelmiä ja sovelluksia joiden avulla näitä kansalaistaitoja opetetaan peruskoululaisille, opettajille ja opettajaopiskelijoille. Lue YLEN laaja juttu, jossa haastatellaan Anna-Mari Rusasta: https://yle.fi/aihe/a/20-10004202 Tekoälyyn ja sen…"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
-  - "Ajankohtaista / YLE"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö mediassa"
+  - "YLE"
 tags:
   - haastattelu
   - tekoäly

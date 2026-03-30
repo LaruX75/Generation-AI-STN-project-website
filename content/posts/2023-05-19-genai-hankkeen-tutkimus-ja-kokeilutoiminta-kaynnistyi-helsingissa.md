@@ -7,10 +7,10 @@ permalink: /ajankohtaista/genai-hankkeen-tutkimus-ja-kokeilutoiminta-kaynnistyi-
 status: publish
 sourceType: posts
 excerpt: "Helsingin GenAI-hanke käynnistettiin 11.5. Helsingin kaupungin kasvatuksen ja koulutuksen toimialan Oppimisen digikarnevaalit -tapahtumassa. Tavoitteena on opetella tunnistamaan, käyttämään ja ymmärtäämään tekoälyä esiopetusikäisten kontekstissa Iltapäivän aluksi Sini Davies esitteli hankkeen toteutumista Helsingin kaupungissa, jonka jälkeen kertoi konkreettisen esimerkin esiopetuksessa toteutettavasta pilotista. Eskareiden kanssa opetellaan tunnistamaan, käyttämään ja ymmärtämään tekoälyä ikätasolle sopivilla tehtävillä. Tunnistaisitko sinä kumpi siivousrobotti-piirroksista…"
-categories:
-  - Ajankohtaista
-  - Esiopetus
-  - Hankkeen toiminta
+mainCategory: "Ajankohtaista"
+extraCategories:
+  - "Esiopetus"
+  - "Hankkeen toiminta"
 tags:
   - esiopetus
   - eskarit

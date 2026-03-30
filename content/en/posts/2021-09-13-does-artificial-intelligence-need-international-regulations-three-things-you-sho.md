@@ -7,9 +7,10 @@ permalink: /en/current-affairs/does-artificial-intelligence-need-international-r
 status: publish
 sourceType: posts
 excerpt: 'Our researcher Susanna Lindroos-Hovila tells about the EU''s proposal for regulating artificial intelligence in an article by the University of Helsinki''s science corner on 14.9.2021. Below is a quote from the article published in the science corner. 1. Regulation targets artificial intelligence products The Commission sees regulation primarily as product regulation. The legislation is intended to restrict those systems that can be used on the EU''s internal market and brought here. The aim is to increase citizens'' confidence in products, i.e. artificial intelligence systems within the EU and to create as functional and free internal markets as possible...'
-categories:
-  - "News from"
-  - "News from / GenAI project staff in the media"
+mainCategory: "News from"
+subCategories:
+  - "GenAI project staff in the media"
+extraCategories:
   - "University of Helsinki"
 tags:
   - EU

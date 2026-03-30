@@ -7,9 +7,10 @@ permalink: /helsingin-yliopisto/tarvitseeko-tekoaly-kansainvalisia-saantoja-nama
 status: publish
 sourceType: posts
 excerpt: "Hankkeemme tutkija Susanna Lindroos-Hovila kertoo 14.9.2021 Helsingin yliopiston tiedekulman jutussa EU:n ehdotuksesta tekoälyn sääntelemiseksi. Alla lainaus tiedekulmassa julkaistusta jutusta. 1. Sääntely kohdistuu tekoälytuotteisiin Komissio näkee sääntelyn ennen kaikkea tuotesääntelynä. Lainsäädännöllä on tarkoitus rajoittaa niitä järjestelmiä, joita saadaan käyttää EU:n sisämarkkinoilla ja tuoda tänne. Tarkoituksena on lisätä kansalaisten luottamusta tuotteisiin eli tekoälyjärjestelmiin EU:n sisällä sekä luoda…"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö mediassa"
+extraCategories:
   - "Helsingin yliopisto"
   - "Youtube"
 tags:

@@ -7,8 +7,8 @@ permalink: /sv/nyheter-fran/artificiell-intelligens-underlattar-och-effektiviser
 status: publish
 sourceType: posts
 excerpt: 'En kort intervju från Helsingfors universitet matematisk-naturvetenskapliga fakultet i samband med Prof. Teemu Roosting professorstilldelning samt en videolektion. Publicerad på Helsingfors universitets webbsida som nyhet den 17.8.2020 Artificiell intelligens har på lite mer än ett decennium blivit en väsentlig del av vår värld. Den måste studeras så att verkliga livets osäkerhet och behov kan beaktas i systemutvecklingen. https://www.helsinki.fi/fi/matemaattis-luonnontieteellinen-tiedekunta/ajankohtaista/teemu-roos-tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista'
-categories:
-  - "Helsingfors universitet"
+mainCategory: "Helsingfors universitet"
+extraCategories:
   - "Nyheter från"
 tags:
   - haastattelu

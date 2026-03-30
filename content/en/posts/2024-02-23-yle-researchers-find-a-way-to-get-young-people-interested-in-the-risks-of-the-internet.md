@@ -7,10 +7,11 @@ permalink: /en/uncategorized/yle-researchers-find-a-way-to-get-young-people-inte
 status: publish
 sourceType: posts
 excerpt: 'Yle wrote an article about the Some Machine developed by Generation AI. In the article, Professor Matti Tedre talks about the Some machine, which is currently being tested in schools with fifth and eighth graders. Somekone is an application designed to simulate social media activity. Students first browse through the image stream fed into the…'
-categories:
-  - "Media"
+mainCategory: "Media"
+subCategories:
+  - "YLE"
+extraCategories:
   - "News from"
-  - "News from / YLE"
 tags:
   - Matti Tedre
   - Some

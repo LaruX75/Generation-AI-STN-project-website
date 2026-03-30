@@ -7,9 +7,10 @@ permalink: /ajankohtaista/tekoaly-ja-taide-uhka-vai-rikkaus/
 status: publish
 sourceType: posts
 excerpt: "Generation AI oli mukana järjestämässä Heurekan tapahtumaa Tekoäly ja taide: uhka vai rikkaus 30.5.2024."
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö tapahtumissa"
+extraCategories:
   - "Konferenssit ja seminaarit"
 tags:
   - heureka

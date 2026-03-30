@@ -7,9 +7,9 @@ permalink: /ajankohtaista/business-weekly-suomalainen-ai-kasvatus/
 status: publish
 sourceType: posts
 excerpt: "Taiwanilainen Business Weekly (商業周刊) nro 2001 kirjoittaa suomalaisesta AI-kasvatuksesta, Generation AI -hankkeesta ja haastattelee professori Teemu Roosia."
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö mediassa"
 tags:
   - business weekly
   - teemu roos

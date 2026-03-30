@@ -7,10 +7,10 @@ permalink: /en/current-affairs/hs-guest-column-29-10-2016-education-does-not-res
 status: publish
 sourceType: posts
 excerpt: 'As machines develop, information work decreases, and education should provide skills for new kinds of design work, write Matti Tedre and Peter J. Denning. THE information technology revolution is advancing at a rapid pace. Customized smartphones for individual needs have the power of supercomputers from the turn of the millennium and keep us online almost everywhere. Self-driving cars are already on the roads. Companies like Uber and Airbnb challenge old business models. Computers monitor health and…'
-categories:
-  - "News from"
-  - "News from / GenAI project staff in the media"
-  - "News from / Opinion piece"
+mainCategory: "News from"
+subCategories:
+  - "GenAI project staff in the media"
+  - "Opinion piece"
 tags:
   - Helsingin Sanomat
   - Kolumni

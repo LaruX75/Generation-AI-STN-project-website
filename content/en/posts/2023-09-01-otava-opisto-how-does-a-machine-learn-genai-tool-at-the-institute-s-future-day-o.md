@@ -7,8 +7,7 @@ permalink: /en/current-affairs/otava-opisto-how-does-a-machine-learn-genai-tool-
 status: publish
 sourceType: posts
 excerpt: 'Generation AI trainable machine: How does a machine learn? At the third station, we delved deeper into the world of artificial intelligence using a trainable machine developed in the Generation AI project. How can machine learning help us understand complex concepts or even support teaching? Adult basic education students explored how machines are trained and how their learning differs from human learning at this station. The purpose of this station was more broadly to make concrete the basic logic of many programs that utilize machine learning. Understanding machine learning and "AI literacy" are future citizen skills that our students will need in their daily lives. The classifier can be found at https://www.generation-ai-stn.fi/ajankohtaista/ensimmainen-hankkeessa-kehitetty-sovellus-genai-kuvien-luokittelija/#'
-categories:
-  - "News from"
+mainCategory: "News from"
 tags:
   - GenAI luokittelija
   - GenAI opetettava kone

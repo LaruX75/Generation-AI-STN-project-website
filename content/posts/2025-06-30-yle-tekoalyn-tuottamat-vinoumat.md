@@ -7,11 +7,11 @@ permalink: /ajankohtaista/yle-tekoalyn-tuottamat-vinoumat/
 status: publish
 sourceType: posts
 excerpt: "Yle Oppiminen haastatteli Teemu Roosia 30.6.2025 tekoälyn vinoumista ja siitä, mitä kuvageneraattorit oppivat ihmisten tuottamasta aineistosta. Alkuperäinen juttu: https://yle.fi/a/74-20145829"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
-  - "Ajankohtaista / Haastattelu"
-  - "Ajankohtaista / YLE"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö mediassa"
+  - "Haastattelu"
+  - "YLE"
 tags:
   - algoritmit
   - teemu roos

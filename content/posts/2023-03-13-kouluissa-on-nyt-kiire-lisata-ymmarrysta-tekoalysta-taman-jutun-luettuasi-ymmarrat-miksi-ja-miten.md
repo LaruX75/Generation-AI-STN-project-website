@@ -7,10 +7,10 @@ permalink: /ajankohtaista/kouluissa-on-nyt-kiire-lisata-ymmarrysta-tekoalysta-ta
 status: publish
 sourceType: posts
 excerpt: "Alla oleva teksti on julkaistu 13.3.2023 YLE uutisissa. Lue alkuperäinen juttu tästä: https://yle.fi/a/74-20021837 HUOM! alkuperäisessä jutussa on mediasisältöjä, jotka eivät näy tässä! Mitä on tekoäly? Kysymyksen luulisi olevan helppo tietojenkäsittelytieteen professorille, mutta Matti Tedre sanoo, että koko sana on huono. – Tekoäly on hyvin epämääräinen termi. Vuosikymmenestä riippuu, mitä pidetään tekoälynä, Itä-Suomen yliopistossa työskentelevä Tedre toteaa. Heti…"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
-  - "Ajankohtaista / YLE"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö mediassa"
+  - "YLE"
 tags:
   - Henriikka Vartiainen
   - koneoppiminen

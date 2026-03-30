@@ -7,10 +7,10 @@ permalink: /ajankohtaista/keynote-luento-iticse-23-konferenssissa-k-12-tietotekn
 status: publish
 sourceType: posts
 excerpt: "Taustaa:Prof. Matti Tedre ja Yliopistotutkija Henriikka Vartiainen pitivät ITICSE konferenssin keynote puheenvuoron heinäkuussa 2023. Esityksen englanninkielinen otsikko on: ”K-12 Computing Education for the AI Era: From Data Literacy to Data Agency”. Lue lisää täältä: https://iticse.acm.org/2023/keynote-speakers-2/ Konekäännetty (chatGPT) tiivistelmä esityksestä:Kysymys siitä, miten opettaa perinteistä sääntöpohjaista ohjelmointia, on ohjannut suurta osaa tietotekniikan opetustutkimuksesta 1950-luvulta lähtien. K-12 (koulu)…"
-categories:
-  - Ajankohtaista
-  - Konferenssit ja seminaarit
-  - Tutkimus
+mainCategory: "Ajankohtaista"
+extraCategories:
+  - "Konferenssit ja seminaarit"
+  - "Tutkimus"
 tags:
   - Henriikka Vartiainen
   - iticse

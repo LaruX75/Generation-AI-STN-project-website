@@ -7,9 +7,9 @@ permalink: /sv/aktuellt/business-weekly-finsk-ai-utbildning/
 status: publish
 sourceType: posts
 excerpt: 'Taiwanesiska Business Weekly (商業周刊) nr 2001 skriver om finsk AI-utbildning, Generation AI-projektet och intervjuar professor Teemu Roos.'
-categories:
-  - "Nyheter från"
-  - "Nyheter från / GenAI-projektets personal i media"
+mainCategory: "Nyheter från"
+subCategories:
+  - "GenAI-projektets personal i media"
 tags:
   - business weekly
   - teemu roos

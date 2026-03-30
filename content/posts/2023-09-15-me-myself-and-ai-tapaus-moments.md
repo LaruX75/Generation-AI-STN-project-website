@@ -7,9 +7,10 @@ permalink: /ajankohtaista/me-myself-and-ai/
 status: publish
 sourceType: posts
 excerpt: "Generation AI oli mukana Helsinki Design Weekin Tapaus Moments -ohjelmassa 15.9.2023 tapahtumassa Me, myself, and AI."
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö tapahtumissa"
+extraCategories:
   - "Konferenssit ja seminaarit"
 tags:
   - heureka

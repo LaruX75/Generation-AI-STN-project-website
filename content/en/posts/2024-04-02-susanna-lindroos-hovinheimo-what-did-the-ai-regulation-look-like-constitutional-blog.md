@@ -7,9 +7,10 @@ permalink: /en/ajankohtaista/susanna-lindroos-hovinheimo-what-did-the-ai-regulat
 status: publish
 sourceType: posts
 excerpt: 'The EU AI Regulation was a long and thorough process. Now the text is ready and we can reflect on how it turned out. The first thing to say is that it turned out to be a long one. The Regulation contains 113 articles and one article is typically longer than one A4 strip. To…'
-categories:
-  - "News from"
-  - "News from / Blog post"
+mainCategory: "News from"
+subCategories:
+  - "Blog post"
+extraCategories:
   - "University of Helsinki"
 tags:
   - AI ACT

@@ -7,10 +7,10 @@ permalink: /en/current-affairs/schools-are-now-in-a-hurry-to-increase-understand
 status: publish
 sourceType: posts
 excerpt: 'The text below was published on 13.3.2023 in YLE news. Read the original article here: https://yle.fi/a/74-20021837 NOTE! the original article contains media content that is not visible here! What is artificial intelligence? The question might be expected to be easy for a computer science professor, but Matti Tedre says the whole word is problematic. – Artificial intelligence is a very vague term. It depends on the decade what is considered artificial intelligence, says Tedre, who works at the University of Eastern Finland. Immediately after that, he admits that he too speaks of artificial intelligence. The reason is that if he starts explaining deep neural networks, language and diffusion models, only a few fourth or seventh graders would understand. And among others, for them Tedre talks about artificial intelligence.'
-categories:
-  - "News from"
-  - "News from / GenAI project staff in the media"
-  - "News from / YLE"
+mainCategory: "News from"
+subCategories:
+  - "GenAI project staff in the media"
+  - "YLE"
 tags:
   - Henriikka Vartiainen
   - machine learning

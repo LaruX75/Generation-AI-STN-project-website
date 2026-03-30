@@ -7,10 +7,11 @@ permalink: /sv/nyheter-fran/gastforelasning-och-workshop-vid-jyvaskyla-universit
 status: publish
 sourceType: posts
 excerpt: 'Projektets forskare Prof. Matti Tedre och universitetsforskare Henriikka Vartiainen höll en gästföreläsning och workshop om "Machine learning i skolvärlden" vid Jyväskylä universitet den 4.11.2022. Teknologier baserade på machine learning och i ett bredare perspektiv artificiell intelligens har blivit en del av barns och ungdomars dagliga liv genom olika sociala medieplattformar. Föreläsningen och workshopen lyfter fram perspektiv relaterade till de förändringslinjer som machine learning orsakar. Teknologier baserade på machine learning och i ett bredare perspektiv artificiell intelligens har…'
-categories:
-  - "Helsingfors universitet"
+mainCategory: "Helsingfors universitet"
+subCategories:
+  - "Webbinarium"
+extraCategories:
   - "Nyheter från"
-  - "Nyheter från / Webbinarium"
 tags:
   - Henriikka Vartiainen
   - Jyväskylä universitet

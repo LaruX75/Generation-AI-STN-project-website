@@ -7,9 +7,9 @@ permalink: /en/current-affairs/mtv-huomenta-suomi-ai-for-everyone/
 status: publish
 sourceType: posts
 excerpt: 'Prof. Teemu Roos was a guest on MTV Huomenta Suomi on September 6, 2023. Discussing AI with him was also Hanna Hagström, head of Reaktor''s AI business. Watch the recording here: https://www.mtv.fi/sarja/huomenta-suomi-1485/tekoalya-kansalle-20358397'
-categories:
-  - "News from"
-  - "News from / GenAI project staff in the media"
+mainCategory: "News from"
+subCategories:
+  - "GenAI project staff in the media"
 tags: []
 author: admin
 layout: layouts/post.njk

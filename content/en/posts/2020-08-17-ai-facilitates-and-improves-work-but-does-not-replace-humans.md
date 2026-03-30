@@ -7,8 +7,8 @@ permalink: /en/current-affairs/ai-facilitates-and-improves-work-but-does-not-rep
 status: publish
 sourceType: posts
 excerpt: 'A short interview from the Faculty of Science at the University of Helsinki related to Prof. Teemu Roos''s professorial appointment, as well as a video lecture. Published on the University of Helsinki website as news on 17.8.2020. In just over a decade, artificial intelligence has become an essential part of our world. It must be studied so that real-life uncertainties and needs can be taken into account in the development of systems. https://www.helsinki.fi/fi/matemaattis-luonnontieteellinen-tiedekunta/ajankohtaista/teemu-roos-tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista'
-categories:
-  - "News from"
+mainCategory: "News from"
+extraCategories:
   - "University of Helsinki"
 tags:
   - haastattelu

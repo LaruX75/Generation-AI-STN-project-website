@@ -7,9 +7,9 @@ permalink: /sv/nyheter-fran/smidigt-finland-med-ai-pa-ett-etiskt-och-ansvarsfull
 status: publish
 sourceType: posts
 excerpt: 'Fyra gånger om året ordnar Finlands byrå för digitalisering och befolkningsinformation evenemanget Sujuva Suomi, där man diskuterar aktuella fenomen inom digitaliseringen. Den här gången handlade det om etik och ansvar i samband med AI. Professor Susanna Lindroos-Hovinheimo från Generation AI deltog som paneldeltagare. Du kan se en inspelning av webinariet här.'
-categories:
-  - "Nyheter från"
-  - "Nyheter från / GenAI-projektets personal vid evenemang"
+mainCategory: "Nyheter från"
+subCategories:
+  - "GenAI-projektets personal vid evenemang"
 tags:
   - artificiell intelligens
   - DVV

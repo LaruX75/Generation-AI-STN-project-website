@@ -7,9 +7,9 @@ permalink: /ajankohtaista/genai-hankkeen-henkilosto-tapahtumissa/oulun-digikarne
 status: publish
 sourceType: posts
 excerpt: "Tiistaina 3.10.2023 Oulun kaupunki järjesti sivistys- ja kulttuuripalveluiden henkilökunnalle digikarnevaalin, jossa myös Generation AI hanke oli vahvasti mukana. Oulun kaupunki on hankkeen yhteistyökumppani, eli kehitämme sovelluksia ja materiaaleja yhdessä vapaaehtoisten kehittäjäopettajien ja oppilaiden kanssa. Digikarnevaalissa esittelimme hankkeessa kehitettyä opetettavaa konetta kahdessa työpajassa ja hankkeen edustaja, Jari Laru, osallistui tilaisuuden aluksi keskusteluun Microsoftin Vesa Äyräksen ja…"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö tapahtumissa"
 tags:
   - Digikarnevaalit
   - Microsoft

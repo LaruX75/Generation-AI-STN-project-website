@@ -7,9 +7,10 @@ permalink: /sv/nyheter-fran/projektets-skolusamarbete-igangsat/
 status: publish
 sourceType: posts
 excerpt: 'GenAI-projektets skolusamarbete igångsat på fredagen 3.2.2023 kl. 9-14 i Joensuu med ett gemensamt planeringsmöte. Mötet omfattade 7 lägre grundskolor, 3 högre grundskolor och 2 samskolor från Joensuu-området. I workshopen öppnade GenAI-projektets ledare, professor Matti Tedre, grundbegreppen för artificiell intelligens och maskininlärning samt transformationen av datadrivet tänkande. Efter föreläsningen fick deltagarna praktisera olika toppteknologier med stöd från datavetenskapare. Eftersom skolinterventionerna planeras i samarbete mellan lärare och forskare omfattade dagen också…'
-categories:
-  - "Nyheter från"
-  - "Nyheter från / Webbinarium"
+mainCategory: "Nyheter från"
+subCategories:
+  - "Webbinarium"
+extraCategories:
   - "Projektaktiviteter"
 tags:
   - Itä-suomen yliopisto

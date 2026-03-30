@@ -7,8 +7,8 @@ permalink: /sv/nyheter-fran/genai-projektets-forskning-och-forsoksverksamhet-sta
 status: publish
 sourceType: posts
 excerpt: 'Helsingfors GenAI-projekt lanserades den 11.5. under Helsingfors stads utbildnings- och utbildningsverksenhets Lärandets digitalkarnevaler -evenemang. Målet är att lära sig att identifiera, använda och förstå artificiell intelligens i förskoleålders sammanhang Under första delen av eftermiddagen presenterade Sini Davies genomförandet av projektet i Helsingfors stad, varefter hon gav ett konkret exempel på ett pilotprojekt som genomfördes i förskoleundervisningen. Med förskolebarn lär man sig att identifiera, använda och förstå artificiell intelligens med uppdrag som passar deras ålder. Skulle du kunna känna igen vilken av de två rengöringsrobotritningarna som är gjord av ett förskolebarn och vilken som är gjord av artificiell intelligens?...'
-categories:
-  - "Nyheter från"
+mainCategory: "Nyheter från"
+extraCategories:
   - "Projektaktiviteter"
 tags:
   - esiopetus

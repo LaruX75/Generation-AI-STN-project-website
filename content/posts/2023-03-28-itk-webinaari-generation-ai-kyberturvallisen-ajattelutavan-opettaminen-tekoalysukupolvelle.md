@@ -7,10 +7,10 @@ permalink: /ajankohtaista/itk-webinaari-generation-ai-kyberturvallisen-ajattelut
 status: publish
 sourceType: posts
 excerpt: "ITK-webinaari 28.3.2023 Jari Laru, Oulun yliopisto Matti Tedre, Itä-Suomen yliopisto Henriikka Vartiainen, Itä-Suomen yliopisto Hahmotatko millaisia haasteita dataistuneeseen, algoritmien hallitsemassa yhteiskunnassa on? ChatGPT ja vastaavat tekoälysovellukset ovat herättäneet ihmisissä paljon innostusta ja uteliaisuutta, mutta myös paljon kysymyksiä ja huolta. Strategisen tutkimuksen neuvoston (STN) rahoittamassa Generation AI hankkeessa raotetaan tekoälyn mustaa laatikkoa, eli kehitetään sisältöjä, menetelmiä…"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö tapahtumissa"
-  - "Ajankohtaista / Webinaari"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö tapahtumissa"
+  - "Webinaari"
 tags:
   - ITK2023
   - tekoäly

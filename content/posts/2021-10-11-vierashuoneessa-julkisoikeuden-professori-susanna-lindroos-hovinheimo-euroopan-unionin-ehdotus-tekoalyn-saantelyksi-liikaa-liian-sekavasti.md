@@ -7,9 +7,10 @@ permalink: /helsingin-yliopisto/vierashuoneessa-julkisoikeuden-professori-susann
 status: publish
 sourceType: posts
 excerpt: "Hankkeemme tutkija Professori Susanna Lindroos-Hovinheimo käsitteli vuonna 2021 Edilexin vierashuoneessa Euroopan Union ehdotusta tekoälyn säätelyksi otsikolla ”liikaa liian sekavasti” LÄHDE: Lindroos-Hovinheimo, S. (2021). Vierashuoneessa julkisoikeuden professori Susanna Lindroos-Hovinheimo: Euroopan unionin ehdotus tekoälyn sääntelyksi – liikaa liian sekavasti? Edilex. https://www.edilex.fi/uutiset/71684 Komissio julkisti huhtikuussa 2021 ehdotuksensa asetukseksi, jolla säädeltäisiin tekoälyä. Asetusehdotuksessa jää auki, minkä verran se jättäisi kansallista liikkumavaraa. Ehdotuksen tavoitteena…"
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / GenAI hankkeen henkilöstö mediassa"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "GenAI hankkeen henkilöstö mediassa"
+extraCategories:
   - "Helsingin yliopisto"
 tags:
   - edilex

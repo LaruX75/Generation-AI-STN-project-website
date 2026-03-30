@@ -7,9 +7,9 @@ permalink: /ajankohtaista/susanna-lindroos-hovinheimo-tekoalyasetuksen-uusia-vai
 status: publish
 sourceType: posts
 excerpt: "Alla oleva blogikirjoitus on julkaistu 22.5.2023 Perustuslakiblogissa, joka on Suomen valtiosääntöoikeudellisen seuran ajankohtaispalsta. Alkuperäinen teksti löytyy täältä: https://perustuslakiblogi.wordpress.com/2023/05/22/susanna-lindroos-hovinheimo-tekoalyasetuksen-uusia-vaiheita-parlamentin-nakemykset-laajentavat-saantelya/ Euroopan unionissa valmisteilla oleva tekoälyasetus otti uuden harppauksen 11. toukokuuta, kun valiokuntatyöskentely Euroopan parlamentissa saatiin päätökseen. Parlamentti äänestää oman kantansa asetusehdotukseen kesäkuussa. Sen jälkeen alkavat trilogivaiheen neuvottelut. Näyttää siis siltä, että tekoälyasetus on tulossa, ja mahdollisesti melko pian…."
-categories:
-  - "Ajankohtaista"
-  - "Ajankohtaista / Blogikirjoitus"
+mainCategory: "Ajankohtaista"
+subCategories:
+  - "Blogikirjoitus"
 tags:
   - Euroopan unioni
   - lainsäädäntö

@@ -7,9 +7,9 @@ permalink: /sv/nyheter-fran/artificiell-intelligens-ar-redan-har-och-man-bor-int
 status: publish
 sourceType: posts
 excerpt: 'Folknyheter (KU) publicerade 27.8.2023 en artikel skriven av Toivo Haimi. Den ursprungliga texten finns utan betalvägg på denna adress: https://www.ku.fi/artikkeli/4906774-tekoaly-on-jo-taalla-eika-siihen-pida-suhtautua-kuin-luonnonvoimaan-sanoo-tietojenkasittelytieteen-professori-teemu-roos Artificiell intelligens är inte science fiction, utan den är redan närvarande i vår vardag, säger professorn i datavetenskap vid Helsingfors universitet. Han leder undervisningen i artificiell intelligens vid Finlands AI-centrum FCAI och är ansvarig lärare för den populära onlinekursen Elements of AI. Professorn i datavetenskap Teemu Roos, innan vi börjar, är det väl värt att förtydliga några begrepp...'
-categories:
-  - "Nyheter från"
-  - "Nyheter från / GenAI-projektets personal i media"
+mainCategory: "Nyheter från"
+subCategories:
+  - "GenAI-projektets personal i media"
 tags:
   - alarmism
   - folknyheter

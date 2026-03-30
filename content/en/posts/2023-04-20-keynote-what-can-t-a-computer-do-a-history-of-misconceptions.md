@@ -7,10 +7,11 @@ permalink: /en/current-affairs/keynote-what-can-t-a-computer-do-a-history-of-mis
 status: publish
 sourceType: posts
 excerpt: 'Prof. Matti Tedre gave the opening keynote "What Can''t a Computer Do? A History of Misconceptions" at Interactive Technology in Education on 20.4.2023. WHAT IS ITK? Interactive Technology in Education is Finland''s largest digital education and learning event, held in Hämeenlinna at Aulango on 19.-21.4.2023. Read more: https://itk-konferenssi.fi/'
-categories:
-  - "News from"
+mainCategory: "News from"
+subCategories:
+  - "Conference proceedings"
+extraCategories:
   - "Research"
-  - "Research / Conference proceedings"
   - "University of Helsinki"
 tags:
   - ITK2023

@@ -7,9 +7,9 @@ permalink: /en/current-affairs/susanna-lindroos-hovinheimo-new-stages-of-the-ai-
 status: publish
 sourceType: posts
 excerpt: 'The blog post below was published on 22.5.2023 in the Constitutional Law Blog, which is the current affairs section of the Finnish Constitutional Law Association. The original text can be found at: https://perustuslakiblogi.wordpress.com/2023/05/22/susanna-lindroos-hovinheimo-tekoalyasetuksen-uusia-vaiheita-parlamentin-nakemykset-laajentavat-saantelya/ The AI Act being prepared in the European Union took a new step on May 11 when the committee work in the European Parliament was completed. Parliament will vote on its position on the regulation proposal in June. After that, trilogue negotiations will begin. It thus appears that the AI Act is coming, and possibly quite soon...'
-categories:
-  - "News from"
-  - "News from / Blog post"
+mainCategory: "News from"
+subCategories:
+  - "Blog post"
 tags:
   - Euroopan unioni
   - lainsäädäntö
