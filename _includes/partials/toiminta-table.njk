@@ -1,14 +1,17 @@
-{% set allCards = toimintaCards or [] %}
+{% set allToimintaCards = toimintaCards or [] %}
+{% set allTutkimusCards = tutkimusCards or [] %}
 
 {% if lang == "en" %}
   {% set lbl = {
     "heading": "Project activities", "search": "Search activities", "placeholder": "Search by title…",
     "typeLabel": "Filter by type", "typeAll": "All types",
-    "typePost": "Publications", "typeStake": "Stakeholder collaboration",
+    "typePost": "Publications and reports", "typeStake": "Stakeholder collaboration",
+    "typeConf": "Conferences", "typeTutkPost": "Scientific publications and presentations",
     "badgePost": "Publication", "badgeStake": "Stakeholder",
+    "badgeConf": "Conference", "badgeTutkPost": "Scientific publication",
     "yrLabel": "Filter by year", "yrAll": "All years",
     "aria": "Project activities", "ariaPag": "Result page",
-    "colDate": "Date", "colType": "Type", "colTitle": "Title / Topic", "colExtra": "Stakeholder / Details", "colLink": "Link",
+    "colDate": "Date", "colType": "Type", "colTitle": "Title / Topic", "colExtra": "Details", "colLink": "Link",
     "open": "Open", "na": "—", "empty": "No results.",
     "prev": "← Previous", "next": "Next →",
     "jsPage": "Page", "jsSep": "/", "jsResults": "results"
@@ -17,24 +20,28 @@
   {% set lbl = {
     "heading": "Projektverksamhet", "search": "Sök verksamhet", "placeholder": "Sök på rubrik…",
     "typeLabel": "Filtrera efter typ", "typeAll": "Alla typer",
-    "typePost": "Publikationer", "typeStake": "Intressentsamarbete",
+    "typePost": "Publikationer och rapporter", "typeStake": "Intressentsamarbete",
+    "typeConf": "Konferenser", "typeTutkPost": "Vetenskapliga publikationer och presentationer",
     "badgePost": "Publikation", "badgeStake": "Intressent",
+    "badgeConf": "Konferens", "badgeTutkPost": "Vetenskaplig publikation",
     "yrLabel": "Filtrera efter år", "yrAll": "Alla år",
     "aria": "Projektverksamhet", "ariaPag": "Resultatsida",
-    "colDate": "Datum", "colType": "Typ", "colTitle": "Rubrik / Ämne", "colExtra": "Intressent / Detaljer", "colLink": "Länk",
+    "colDate": "Datum", "colType": "Typ", "colTitle": "Rubrik / Ämne", "colExtra": "Detaljer", "colLink": "Länk",
     "open": "Öppna", "na": "—", "empty": "Inga resultat.",
     "prev": "← Föregående", "next": "Nästa →",
     "jsPage": "Sida", "jsSep": "/", "jsResults": "resultat"
   } %}
 {% else %}
   {% set lbl = {
-    "heading": "Hankkeen toiminta", "search": "Hae toiminnasta", "placeholder": "Hae otsikolla…",
+    "heading": "Toiminta", "search": "Hae toiminnasta", "placeholder": "Hae otsikolla…",
     "typeLabel": "Suodata tyypeittäin", "typeAll": "Kaikki tyypit",
     "typePost": "Julkaisut ja raportit", "typeStake": "Sidosryhmäyhteistyö",
+    "typeConf": "Konferenssit", "typeTutkPost": "Tieteelliset julkaisut ja esitykset",
     "badgePost": "Julkaisu", "badgeStake": "Sidosryhmä",
+    "badgeConf": "Konferenssi", "badgeTutkPost": "Tieteellinen julkaisu",
     "yrLabel": "Suodata vuoden mukaan", "yrAll": "Kaikki vuodet",
-    "aria": "Hankkeen toiminta", "ariaPag": "Tulossivu",
-    "colDate": "Päivämäärä", "colType": "Tyyppi", "colTitle": "Otsikko / Aihe", "colExtra": "Sidosryhmä / Lisätiedot", "colLink": "Linkki",
+    "aria": "Toiminta", "ariaPag": "Tulossivu",
+    "colDate": "Päivämäärä", "colType": "Tyyppi", "colTitle": "Otsikko / Aihe", "colExtra": "Lisätiedot", "colLink": "Linkki",
     "open": "Avaa", "na": "—", "empty": "Ei tuloksia.",
     "prev": "← Edellinen", "next": "Seuraava →",
     "jsPage": "Sivu", "jsSep": "/", "jsResults": "tulosta"
@@ -54,8 +61,10 @@
         <label for="toiminta-filter-type" class="sr-only">{{ lbl.typeLabel }}</label>
         <select id="toiminta-filter-type" class="media-table-filter" data-grid-filter="type">
           <option value="">{{ lbl.typeAll }}</option>
-          <option value="post">{{ lbl.typePost }}</option>
-          <option value="stakeholder">{{ lbl.typeStake }}</option>
+          <option value="toiminta-post">{{ lbl.typePost }}</option>
+          <option value="toiminta-stakeholder">{{ lbl.typeStake }}</option>
+          <option value="conference">{{ lbl.typeConf }}</option>
+          <option value="tutkimus-post">{{ lbl.typeTutkPost }}</option>
         </select>
         <label for="toiminta-filter-year" class="sr-only">{{ lbl.yrLabel }}</label>
         <select id="toiminta-filter-year" class="media-table-filter" data-grid-filter="year" data-grid-populate-options="year">
@@ -78,11 +87,13 @@
         </tr>
       </thead>
       <tbody id="toiminta-table-body">
-        {% for card in allCards %}
+
+        {# --- Hankkeen toiminta -rivit --- #}
+        {% for card in allToimintaCards %}
           {% if card.cardType == "post" %}
             {% set post = card.post %}
             <tr class="media-table-row"
-              data-type="post"
+              data-type="toiminta-post"
               data-year="{{ post.date | date('Y') }}"
               data-search="{{ post.data.title | lower | default('') }}">
               <td class="media-table-col--date">
@@ -108,7 +119,7 @@
           {% else %}
             {% set row = card.row %}
             <tr class="media-table-row"
-              data-type="stakeholder"
+              data-type="toiminta-stakeholder"
               data-year="{{ row.sortDate | truncate(4, true, '') if row.sortDate else '' }}"
               data-search="{{ (row.title or row.stakeholder) | lower | default('') }}">
               <td class="media-table-col--date">
@@ -130,6 +141,61 @@
             </tr>
           {% endif %}
         {% endfor %}
+
+        {# --- Konferenssit ja tieteelliset tapahtumat -rivit --- #}
+        {% for card in allTutkimusCards %}
+          {% if card.cardType == "post" %}
+            {% set post = card.post %}
+            <tr class="media-table-row"
+              data-type="tutkimus-post"
+              data-year="{{ post.date | date('Y') }}"
+              data-search="{{ post.data.title | lower | default('') }}">
+              <td class="media-table-col--date">
+                <time datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date("d.m.Y") }}</time>
+              </td>
+              <td class="media-table-col--source">
+                <span class="media-table-source-badge toiminta-badge--tutkimus-post">{{ lbl.badgeTutkPost }}</span>
+              </td>
+              <td class="media-table-col--title">
+                <a href="{{ post.url }}" class="media-table-title-link">{{ post.data.title | default("—") }}</a>
+              </td>
+              <td class="toiminta-table-col--extra media-table-col--mobile-hide">
+                {% if post.data.excerpt and post.data.excerpt != "[object Object]" %}
+                  {{ post.data.excerpt | truncate(200) }}
+                {% else %}
+                  <span class="media-table-na">{{ lbl.na }}</span>
+                {% endif %}
+              </td>
+              <td class="media-table-col--link media-table-col--mobile-hide">
+                <a href="{{ post.url }}" class="media-table-link">{{ lbl.open }}&nbsp;↗</a>
+              </td>
+            </tr>
+          {% else %}
+            {% set row = card.row %}
+            <tr class="media-table-row"
+              data-type="conference"
+              data-year="{{ row.sortDate | truncate(4, true, '') if row.sortDate else '' }}"
+              data-search="{{ (row.title or row.stakeholder) | lower | default('') }}">
+              <td class="media-table-col--date">
+                <time datetime="{{ row.sortDate | default('') }}">{{ row.displayDate or row.date | default("—") }}</time>
+              </td>
+              <td class="media-table-col--source">
+                <span class="media-table-source-badge toiminta-badge--conference">{{ lbl.badgeConf }}</span>
+              </td>
+              <td class="media-table-col--title">{{ (row.title or row.stakeholder) | default("—") }}</td>
+              <td class="toiminta-table-col--extra media-table-col--mobile-hide">
+                <span class="toiminta-stakeholder-name">{{ row.stakeholder | default("") }}</span>
+                {% if row.participants and row.participants != "N" and row.participants != "n" %}
+                  <span class="toiminta-participants">{{ row.participants }}&nbsp;{{ lbl.participantsSuffix if lbl.participantsSuffix else "osallistujaa" }}</span>
+                {% endif %}
+              </td>
+              <td class="media-table-col--link media-table-col--mobile-hide">
+                <span class="media-table-na">—</span>
+              </td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+
       </tbody>
     </table>
     <p class="media-table-empty" id="toiminta-empty" hidden>{{ lbl.empty }}</p>
