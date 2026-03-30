@@ -7,7 +7,7 @@ permalink: /ajankohtaista/konsortion-suunnittelukokous-pidettiin-heurekassa-joss
 status: publish
 sourceType: posts
 excerpt: "Generation AI piti hankkeen ensimmäisen suunnittelukokouksen Heurekassa, joka on hankkeen konsortion jäsen. Paikka olikin mitä sopivin kokoukselle, sillä Heureka avasi uuden tekoälyaiheisen näyttelyn 22.6.2022. Suunnittelukokouksen jälkeen konsortion jäsenet tutustuivat Heurekan Tekoäly-näyttelyyn sekä muihin Heurekan tekoälyyn, robotiikkaan ja ohjelmointiin liittyviin aktiviteetteihin. Mistä Tekoäly näyttelyssä on kyse? Heurekan sivuilla näyttelystä kerrotan seuraavaa Tekoäly – Me, Myself &…"
-mainCategory: "Ajankohtaista"
+mainCategory: "Hankkeen toiminta"
 extraCategories:
   - "Hankkeen toiminta"
 tags:
