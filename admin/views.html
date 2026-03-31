@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Näkymien hallinta — Generation AI</title>
+  <title>Ajankohtaista näkymän hallinta — Generation AI</title>
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: system-ui, sans-serif; font-size: 14px; background: #f5f5f5; color: #222; }
 
+    /* ── Navbar ── */
     #admin-navbar {
       background: #1a1a2e; height: 40px;
       display: flex; align-items: center; padding: 0 16px; gap: 0;
@@ -17,75 +18,113 @@
     #admin-navbar .nav-brand { color: #e2e8f0; font-weight: 600; margin-right: 20px; white-space: nowrap; }
     #admin-navbar a {
       color: #94a3b8; text-decoration: none;
-      padding: 0 14px; height: 40px; display: flex; align-items: center;
+      padding: 0 14px; height: 40px; display: flex; align-items: center; white-space: nowrap;
     }
     #admin-navbar a:hover { color: #e2e8f0; background: rgba(255,255,255,0.07); }
     #admin-navbar a.active { color: #fff; border-bottom: 2px solid #60a5fa; }
     #admin-navbar .nav-spacer { flex: 1; }
     #admin-navbar .nav-logout {
       background: none; border: 1px solid #475569; color: #94a3b8;
-      padding: 4px 12px; border-radius: 5px; cursor: pointer;
-      font-size: 12px; font-family: inherit;
+      padding: 4px 12px; border-radius: 5px; cursor: pointer; font-size: 12px; font-family: inherit;
     }
     #admin-navbar .nav-logout:hover { border-color: #94a3b8; color: #e2e8f0; }
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    /* ── Layout ── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
-    .auth-card {
-      background: #fff; border: 1px solid #ddd; border-radius: 8px;
-      padding: 24px; margin-bottom: 20px;
-    }
+    /* ── Auth ── */
+    .auth-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 24px; margin-bottom: 20px; }
     .auth-card h2 { font-size: 14px; font-weight: 600; margin-bottom: 12px; }
-    .auth-card p { color: #666; font-size: 13px; margin-bottom: 12px; }
+    .auth-card p { color: #666; font-size: 13px; margin-bottom: 8px; }
     .auth-card a { color: #2563eb; }
-    .input-row { display: flex; gap: 8px; }
-    input[type="password"], input[type="text"] {
-      flex: 1; padding: 8px 10px; border: 1px solid #ccc; border-radius: 6px;
-      font-size: 13px; font-family: monospace;
-    }
+    .input-row { display: flex; gap: 8px; margin-top: 10px; }
+    input[type="password"] { flex: 1; padding: 8px 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; font-family: monospace; }
+
+    /* ── Buttons ── */
     button { padding: 8px 16px; border: none; border-radius: 6px; font-size: 13px; cursor: pointer; font-family: inherit; }
     .btn-primary { background: #2563eb; color: #fff; }
     .btn-primary:hover { background: #1d4ed8; }
     .btn-primary:disabled { background: #93c5fd; cursor: not-allowed; }
+    .btn-cancel { background: #f3f4f6; color: #374151; }
+    .btn-cancel:hover { background: #e5e7eb; }
+    .btn-save { background: #059669; color: #fff; }
+    .btn-save:hover { background: #047857; }
 
+    /* ── Tabs ── */
     .tabs { display: flex; border-bottom: 2px solid #e5e7eb; margin-bottom: 16px; }
-    .tab {
-      padding: 8px 20px; cursor: pointer; font-size: 13px; font-weight: 500;
-      border-bottom: 2px solid transparent; margin-bottom: -2px; color: #6b7280;
-    }
+    .tab { padding: 8px 20px; cursor: pointer; font-size: 13px; font-weight: 500; border-bottom: 2px solid transparent; margin-bottom: -2px; color: #6b7280; }
     .tab.active { border-bottom-color: #2563eb; color: #2563eb; }
     .tab:hover:not(.active) { color: #374151; }
 
-    .toolbar { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; }
-    .toolbar input[type="text"] { flex: 1; max-width: 320px; font-family: inherit; font-size: 13px; }
+    /* ── Toolbar ── */
+    .toolbar { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; flex-wrap: wrap; }
+    .toolbar input[type="text"] { flex: 1; min-width: 160px; max-width: 300px; padding: 7px 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; font-family: inherit; }
     .count-label { font-size: 12px; color: #6b7280; }
 
-    table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb; }
-    th { background: #f9fafb; font-size: 12px; font-weight: 600; text-align: left; padding: 8px 12px; color: #374151; border-bottom: 1px solid #e5e7eb; cursor: pointer; user-select: none; }
+    /* ── Table ── */
+    table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb; table-layout: fixed; }
+    th { background: #f9fafb; font-size: 12px; font-weight: 600; text-align: left; padding: 8px 12px; color: #374151; border-bottom: 1px solid #e5e7eb; cursor: pointer; user-select: none; white-space: nowrap; }
     th:hover { background: #f3f4f6; }
     th .sort-icon { margin-left: 4px; opacity: 0.4; }
     th.sorted .sort-icon { opacity: 1; }
-    td { padding: 8px 12px; border-bottom: 1px solid #f3f4f6; vertical-align: middle; }
+    td { padding: 8px 12px; border-bottom: 1px solid #f3f4f6; vertical-align: top; }
     tr:last-child td { border-bottom: none; }
     tr:hover td { background: #fafafa; }
 
-    .title-link { color: #1d4ed8; text-decoration: none; font-size: 13px; }
-    .title-link:hover { text-decoration: underline; }
-    .date-cell { color: #6b7280; font-size: 12px; white-space: nowrap; }
+    .col-date { width: 90px; }
+    .col-title { width: 18%; }
+    .col-excerpt { width: 22%; }
+    .col-field { width: 160px; }
+    .col-cats { width: 20%; }
+    .col-tags { width: 20%; }
 
-    /* Inline field editor */
-    .field-cell { min-width: 180px; }
+    .title-link { color: #1d4ed8; text-decoration: none; font-size: 13px; font-weight: 500; line-height: 1.4; display: block; }
+    .title-link:hover { text-decoration: underline; }
+    .post-date { font-size: 11px; color: #9ca3af; margin-top: 2px; }
+    .post-excerpt { font-size: 12px; color: #555; line-height: 1.5; }
+
+    /* ── Source/type select ── */
     .field-select {
       width: 100%; padding: 5px 8px; border: 1px solid #d1d5db; border-radius: 6px;
       font-size: 12px; background: #fff; cursor: pointer; font-family: inherit;
     }
     .field-select:focus { border-color: #60a5fa; outline: none; box-shadow: 0 0 0 2px #bfdbfe; }
-    .field-select.dirty { border-color: #f59e0b; background: #fffbeb; }
-    .row-status { font-size: 11px; min-width: 90px; }
+    .field-select.saving { opacity: 0.6; }
+    .save-status { font-size: 11px; margin-top: 4px; min-height: 14px; }
     .status-saving { color: #6b7280; }
     .status-ok { color: #059669; }
     .status-error { color: #dc2626; }
 
+    /* ── Pills ── */
+    .pill-list { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 2px;
+      background: #e8f0fe; color: #1a56db;
+      padding: 2px 4px 2px 7px; border-radius: 9px; font-size: 11px; font-weight: 500; white-space: nowrap;
+    }
+    .pill.pill-tag { background: #fef3c7; color: #92400e; }
+    .pill-btn { background: none; border: none; cursor: pointer; padding: 0 2px; font-size: 12px; line-height: 1; opacity: 0.6; font-family: inherit; }
+    .pill-btn:hover { opacity: 1; }
+    .pill-btn.edit { color: #374151; }
+    .pill-btn.remove { color: #c81e1e; }
+    .pill-add-btn { background: none; border: 1px dashed #9ca3af; border-radius: 9px; color: #6b7280; font-size: 11px; padding: 2px 7px; cursor: pointer; white-space: nowrap; }
+    .pill-add-btn:hover { border-color: #6b7280; color: #374151; }
+    .pill-editing { display: inline-flex; align-items: center; gap: 2px; }
+    .pill-editing input { font-size: 11px; padding: 2px 6px; border: 1px solid #93c5fd; border-radius: 6px; width: 90px; font-family: inherit; }
+    .pill-editing button { background: none; border: none; cursor: pointer; font-size: 12px; padding: 0 2px; }
+    .saving-spinner { font-size: 11px; color: #6b7280; }
+
+    /* ── Modal ── */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 100; }
+    .modal { background: #fff; border-radius: 10px; padding: 24px; width: 420px; max-width: 95vw; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+    .modal h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+    .modal p { font-size: 13px; color: #555; margin-bottom: 14px; }
+    .modal label { font-size: 12px; font-weight: 600; color: #374151; display: block; margin-bottom: 4px; }
+    .modal input { width: 100%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; margin-bottom: 16px; }
+    .modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+    .warning { background: #fef3c7; border: 1px solid #fcd34d; border-radius: 6px; padding: 10px 12px; font-size: 12px; color: #92400e; margin-bottom: 14px; }
+
+    /* ── Notices ── */
     .notice { padding: 10px 14px; border-radius: 6px; font-size: 13px; margin-bottom: 12px; }
     .notice-error { background: #fde8e8; color: #c81e1e; border: 1px solid #fbd5d5; }
     .notice-success { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
@@ -99,7 +138,7 @@
   <span class="nav-brand">Generation AI</span>
   <a href="/admin/">Sveltia CMS</a>
   <a href="/admin/categories.html">Kategoriatyökalu</a>
-  <a href="/admin/views.html" class="active">Näkymien hallinta</a>
+  <a href="/admin/views.html" class="active">Ajankohtaista näkymän hallinta</a>
   <span class="nav-spacer"></span>
   <button class="nav-logout" onclick="adminLogout()">Kirjaudu ulos</button>
 </nav>
@@ -110,8 +149,8 @@
   <div class="auth-card" id="auth-card">
     <h2>Kirjaudu ensin Sveltiaan</h2>
     <p>Työkalu käyttää automaattisesti Sveltian GitHub-kirjautumista. Kirjaudu ensin <a href="/admin/">Sveltiaan</a> ja palaa sitten tänne.</p>
-    <p style="margin-top:8px">Tai syötä <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">GitHub Personal Access Token</a> (scope: <code>repo</code>):</p>
-    <div class="input-row" style="margin-top:10px">
+    <p>Tai syötä <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">GitHub Personal Access Token</a> (scope: <code>repo</code>):</p>
+    <div class="input-row">
       <input type="password" id="token-input" placeholder="ghp_..." autocomplete="off">
       <button class="btn-primary" onclick="loadData(false)">Lataa</button>
     </div>
@@ -124,58 +163,78 @@
       <div class="tab" onclick="switchTab('toiminta')">Toiminta</div>
     </div>
 
+    <!-- Uutiset -->
     <div id="tab-uutiset">
       <div class="toolbar">
         <input type="text" id="uutiset-search" placeholder="Hae otsikolla…" oninput="renderTab('uutiset')">
         <span class="count-label" id="uutiset-count"></span>
       </div>
       <table>
-        <thead>
-          <tr>
-            <th onclick="setSort('uutiset','date')" id="uutiset-th-date">Päivämäärä <span class="sort-icon">↕</span></th>
-            <th onclick="setSort('uutiset','title')" id="uutiset-th-title">Otsikko <span class="sort-icon">↕</span></th>
-            <th style="width:200px">Lähde</th>
-            <th style="width:110px"></th>
-          </tr>
-        </thead>
+        <thead><tr>
+          <th class="col-date" onclick="setSort('uutiset','date')">Pvm <span class="sort-icon">↓</span></th>
+          <th class="col-title" onclick="setSort('uutiset','title')">Otsikko <span class="sort-icon">↕</span></th>
+          <th class="col-excerpt">Tiivistelmä</th>
+          <th class="col-field">Lähde</th>
+          <th class="col-cats">Kategoriat</th>
+          <th class="col-tags">Avainsanat</th>
+        </tr></thead>
         <tbody id="uutiset-tbody"></tbody>
       </table>
     </div>
 
+    <!-- Tapahtumat -->
     <div id="tab-tapahtumat" style="display:none">
       <div class="toolbar">
         <input type="text" id="tapahtumat-search" placeholder="Hae otsikolla…" oninput="renderTab('tapahtumat')">
         <span class="count-label" id="tapahtumat-count"></span>
       </div>
       <table>
-        <thead>
-          <tr>
-            <th onclick="setSort('tapahtumat','date')" id="tapahtumat-th-date">Päivämäärä <span class="sort-icon">↕</span></th>
-            <th onclick="setSort('tapahtumat','title')" id="tapahtumat-th-title">Otsikko <span class="sort-icon">↕</span></th>
-            <th style="width:220px">Tyyppi</th>
-            <th style="width:110px"></th>
-          </tr>
-        </thead>
+        <thead><tr>
+          <th class="col-date" onclick="setSort('tapahtumat','date')">Pvm <span class="sort-icon">↓</span></th>
+          <th class="col-title" onclick="setSort('tapahtumat','title')">Otsikko <span class="sort-icon">↕</span></th>
+          <th class="col-excerpt">Tiivistelmä</th>
+          <th class="col-field">Tyyppi</th>
+          <th class="col-cats">Kategoriat</th>
+          <th class="col-tags">Avainsanat</th>
+        </tr></thead>
         <tbody id="tapahtumat-tbody"></tbody>
       </table>
     </div>
 
+    <!-- Toiminta -->
     <div id="tab-toiminta" style="display:none">
       <div class="toolbar">
         <input type="text" id="toiminta-search" placeholder="Hae otsikolla…" oninput="renderTab('toiminta')">
         <span class="count-label" id="toiminta-count"></span>
       </div>
       <table>
-        <thead>
-          <tr>
-            <th onclick="setSort('toiminta','date')" id="toiminta-th-date">Päivämäärä <span class="sort-icon">↕</span></th>
-            <th onclick="setSort('toiminta','title')" id="toiminta-th-title">Otsikko <span class="sort-icon">↕</span></th>
-            <th style="width:220px">Tyyppi</th>
-            <th style="width:110px"></th>
-          </tr>
-        </thead>
+        <thead><tr>
+          <th class="col-date" onclick="setSort('toiminta','date')">Pvm <span class="sort-icon">↓</span></th>
+          <th class="col-title" onclick="setSort('toiminta','title')">Otsikko <span class="sort-icon">↕</span></th>
+          <th class="col-excerpt">Tiivistelmä</th>
+          <th class="col-field">Tyyppi</th>
+          <th class="col-cats">Kategoriat</th>
+          <th class="col-tags">Avainsanat</th>
+        </tr></thead>
         <tbody id="toiminta-tbody"></tbody>
       </table>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal" style="display:none" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <div id="modal-warning" class="warning" style="display:none"></div>
+    <div id="modal-rename-fields" style="display:none">
+      <label>Uusi nimi</label>
+      <input type="text" id="modal-new-name" onkeydown="if(event.key==='Enter')modalSave()">
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal()">Peruuta</button>
+      <button class="btn-primary" id="modal-save-btn" onclick="modalSave()">Tallenna</button>
     </div>
   </div>
 </div>
@@ -184,66 +243,58 @@
 const REPO = "LaruX75/Generation-AI-STN-project-website";
 const BRANCH = "main";
 
-// ── Field definitions ─────────────────────────────────────────────────────────
+// ── Field option sets ─────────────────────────────────────────────────────────
 
-// Source categories for Uutiset (in subCategories or extraCategories)
 const SOURCE_OPTIONS = [
-  { value: "hanke",  label: "Hanke",             cats: [] },
-  { value: "yle",    label: "Yle",               cats: ["YLE", "Yle"] },
-  { value: "mtv",    label: "MTV",               cats: ["MTV3", "MTV Uutiset", "MTV"] },
-  { value: "hs",     label: "Helsingin Sanomat", cats: ["Helsingin Sanomat", "HS"] },
-  { value: "podcast",label: "Podcast",           cats: ["Podcast"] },
-  { value: "blogi",  label: "Blogi",             cats: ["Blogikirjoitus"] },
+  { value: "hanke",   label: "Hanke",             cats: [] },
+  { value: "yle",     label: "Yle",               cats: ["YLE", "Yle"] },
+  { value: "mtv",     label: "MTV",               cats: ["MTV3", "MTV Uutiset", "MTV"] },
+  { value: "hs",      label: "Helsingin Sanomat", cats: ["Helsingin Sanomat", "HS"] },
+  { value: "podcast", label: "Podcast",           cats: ["Podcast"] },
+  { value: "blogi",   label: "Blogi",             cats: ["Blogikirjoitus"] },
 ];
-
-// Type categories for Tapahtumat (in subCategories/extraCategories)
 const TAPAHTUMAT_TYPE_OPTIONS = [
-  { value: "tapahtuma",    label: "Tapahtuma",                  cats: ["Tapahtuma"] },
-  { value: "konferenssi",  label: "Konferenssit ja seminaarit", cats: ["Konferenssit ja seminaarit"] },
-  { value: "webinaari",    label: "Webinaari",                  cats: ["Webinaari"] },
-  { value: "tyopaja",      label: "Työpaja",                    cats: ["Työpaja"] },
+  { value: "tapahtuma",   label: "Tapahtuma",                  cats: ["Tapahtuma"] },
+  { value: "konferenssi", label: "Konferenssit ja seminaarit", cats: ["Konferenssit ja seminaarit"] },
+  { value: "webinaari",   label: "Webinaari",                  cats: ["Webinaari"] },
+  { value: "tyopaja",     label: "Työpaja",                    cats: ["Työpaja"] },
 ];
-
-// Type categories for Toiminta (in subCategories)
 const TOIMINTA_TYPE_OPTIONS = [
-  { value: "",               label: "— ei tyyppiä —",    cats: [] },
-  { value: "julkaisu",       label: "Julkaisu",           cats: ["Julkaisu"] },
-  { value: "blogi",          label: "Blogikirjoitus",     cats: ["Blogikirjoitus"] },
-  { value: "konferenssijulk",label: "Konferenssijulkaisu",cats: ["Konferenssijulkaisu"] },
-  { value: "tyopaja",        label: "Työpaja",            cats: ["Työpaja"] },
-  { value: "koulutus",       label: "Koulutus",           cats: ["Koulutus"] },
+  { value: "",                label: "— ei tyyppiä —",     cats: [] },
+  { value: "julkaisu",        label: "Julkaisu",            cats: ["Julkaisu"] },
+  { value: "blogi",           label: "Blogikirjoitus",      cats: ["Blogikirjoitus"] },
+  { value: "konferenssijulk", label: "Konferenssijulkaisu", cats: ["Konferenssijulkaisu"] },
+  { value: "tyopaja",         label: "Työpaja",             cats: ["Työpaja"] },
+  { value: "koulutus",        label: "Koulutus",            cats: ["Koulutus"] },
 ];
+const ALL_SOURCE_CATS    = SOURCE_OPTIONS.flatMap(o => o.cats);
+const ALL_TAP_TYPE_CATS  = TAPAHTUMAT_TYPE_OPTIONS.flatMap(o => o.cats);
+const ALL_TOI_TYPE_CATS  = TOIMINTA_TYPE_OPTIONS.flatMap(o => o.cats);
 
 // ── Auth ──────────────────────────────────────────────────────────────────────
 
 let allPosts = [];
 let token = "";
+let modalMode = null;
 
 function getSveltiaToken() {
   try { return JSON.parse(localStorage.getItem("sveltia-cms.user") || "{}").token || ""; } catch { return ""; }
 }
-
 function adminLogout() {
   Object.keys(localStorage).filter(k => k.startsWith("sveltia-cms")).forEach(k => localStorage.removeItem(k));
   localStorage.removeItem("genai-cat-token");
   location.href = "/admin/";
 }
-
 (function init() {
   const t = getSveltiaToken() || localStorage.getItem("genai-cat-token") || "";
-  if (t) {
-    token = t;
-    document.getElementById("auth-card").style.display = "none";
-    loadData(true);
-  }
+  if (t) { token = t; document.getElementById("auth-card").style.display = "none"; loadData(true); }
 }());
 
-async function loadData(autoAuth) {
-  if (!autoAuth) {
+async function loadData(auto) {
+  if (!auto) {
     const t = document.getElementById("token-input").value.trim();
     if (!t) { showNotice("Anna GitHub token.", "error"); return; }
-    token = t;
-    localStorage.setItem("genai-cat-token", token);
+    token = t; localStorage.setItem("genai-cat-token", token);
   }
   const btn = document.querySelector("#auth-card button");
   if (btn) { btn.disabled = true; btn.textContent = "Ladataan…"; }
@@ -254,7 +305,7 @@ async function loadData(autoAuth) {
     document.getElementById("auth-card").style.display = "none";
     document.getElementById("main").style.display = "block";
     renderTab("uutiset"); renderTab("tapahtumat"); renderTab("toiminta");
-  } catch (e) {
+  } catch(e) {
     showNotice(e.message, "error");
     document.getElementById("auth-card").style.display = "";
   } finally {
@@ -264,28 +315,31 @@ async function loadData(autoAuth) {
 
 // ── Tabs & sorting ────────────────────────────────────────────────────────────
 
-let currentTab = "uutiset";
-const sortState = { uutiset: { col: "date", asc: false }, tapahtumat: { col: "date", asc: false }, toiminta: { col: "date", asc: false } };
+const sortState = {
+  uutiset:    { col: "date", asc: false },
+  tapahtumat: { col: "date", asc: false },
+  toiminta:   { col: "date", asc: false }
+};
 
 function switchTab(name) {
-  currentTab = name;
-  ["uutiset","tapahtumat","toiminta"].forEach(t => {
-    document.getElementById(`tab-${t}`).style.display = t === name ? "" : "none";
-    document.querySelectorAll(".tab")[["uutiset","tapahtumat","toiminta"].indexOf(t)]
-      .classList.toggle("active", t === name);
+  ["uutiset","tapahtumat","toiminta"].forEach((t, i) => {
+    document.getElementById("tab-"+t).style.display = t === name ? "" : "none";
+    document.querySelectorAll(".tab")[i].classList.toggle("active", t === name);
   });
 }
 
 function setSort(tab, col) {
   if (sortState[tab].col === col) sortState[tab].asc = !sortState[tab].asc;
   else { sortState[tab].col = col; sortState[tab].asc = col === "title"; }
-  ["date","title"].forEach(c => {
-    const th = document.getElementById(`${tab}-th-${c}`);
-    if (!th) return;
-    th.classList.toggle("sorted", sortState[tab].col === c);
-    th.querySelector(".sort-icon").textContent = sortState[tab].col === c ? (sortState[tab].asc ? "↑" : "↓") : "↕";
-  });
   renderTab(tab);
+  // Update header icons
+  document.querySelectorAll(`#tab-${tab} th`).forEach(th => {
+    const icon = th.querySelector(".sort-icon");
+    if (!icon) return;
+    const thCol = th.onclick?.toString().includes(`'${col}'`) ? col : null;
+    th.classList.toggle("sorted", th.onclick?.toString().includes(`'${sortState[tab].col}'`));
+    icon.textContent = th.classList.contains("sorted") ? (sortState[tab].asc ? "↑" : "↓") : "↕";
+  });
 }
 
 // ── Field detection ───────────────────────────────────────────────────────────
@@ -293,28 +347,19 @@ function setSort(tab, col) {
 function allCats(post) {
   return [post.mainCategory, ...(post.subCategories||[]), ...(post.extraCategories||[])].filter(Boolean);
 }
-
 function detectSource(post) {
   const cats = allCats(post);
-  for (const opt of SOURCE_OPTIONS) {
-    if (opt.cats.length && opt.cats.some(c => cats.includes(c))) return opt.value;
-  }
+  for (const o of SOURCE_OPTIONS) { if (o.cats.length && o.cats.some(c => cats.includes(c))) return o.value; }
   return "hanke";
 }
-
 function detectTapahtumatType(post) {
   const cats = allCats(post);
-  for (const opt of TAPAHTUMAT_TYPE_OPTIONS) {
-    if (opt.cats.some(c => cats.includes(c))) return opt.value;
-  }
+  for (const o of TAPAHTUMAT_TYPE_OPTIONS) { if (o.cats.some(c => cats.includes(c))) return o.value; }
   return "tapahtuma";
 }
-
 function detectToimintaType(post) {
   const subs = post.subCategories || [];
-  for (const opt of TOIMINTA_TYPE_OPTIONS) {
-    if (opt.cats.length && opt.cats.some(c => subs.includes(c))) return opt.value;
-  }
+  for (const o of TOIMINTA_TYPE_OPTIONS) { if (o.cats.length && o.cats.some(c => subs.includes(c))) return o.value; }
   return "";
 }
 
@@ -322,18 +367,14 @@ function detectToimintaType(post) {
 
 function renderTab(tab) {
   const q = (document.getElementById(`${tab}-search`)?.value || "").toLowerCase();
-
-  let posts;
-  if (tab === "uutiset")    posts = allPosts.filter(p => p.mainCategory === "Mediassa");
-  if (tab === "tapahtumat") posts = allPosts.filter(p => p.mainCategory === "Tapahtumat");
-  if (tab === "toiminta")   posts = allPosts.filter(p => p.mainCategory === "Toiminta");
-
+  const mainCat = tab === "uutiset" ? "Mediassa" : tab === "tapahtumat" ? "Tapahtumat" : "Toiminta";
+  let posts = allPosts.filter(p => p.mainCategory === mainCat);
   if (q) posts = posts.filter(p => p.title.toLowerCase().includes(q));
 
   const { col, asc } = sortState[tab];
   posts = posts.slice().sort((a, b) => {
-    const va = col === "date" ? (a.date || "") : a.title.toLowerCase();
-    const vb = col === "date" ? (b.date || "") : b.title.toLowerCase();
+    const va = col === "date" ? (a.date||"") : a.title.toLowerCase();
+    const vb = col === "date" ? (b.date||"") : b.title.toLowerCase();
     return asc ? va.localeCompare(vb) : vb.localeCompare(va);
   });
 
@@ -341,143 +382,258 @@ function renderTab(tab) {
 
   const rows = posts.map(post => {
     const ep = esc(post.path);
-    let fieldHtml;
 
+    // Source/type dropdown cell
+    let fieldCell;
     if (tab === "uutiset") {
-      const cur = detectSource(post);
-      fieldHtml = selectHtml(ep, "source", SOURCE_OPTIONS, cur);
+      fieldCell = fieldDropdownHtml(ep, "source", SOURCE_OPTIONS, detectSource(post));
     } else if (tab === "tapahtumat") {
-      const cur = detectTapahtumatType(post);
-      fieldHtml = selectHtml(ep, "tapahtumat-type", TAPAHTUMAT_TYPE_OPTIONS, cur);
+      fieldCell = fieldDropdownHtml(ep, "tap-type", TAPAHTUMAT_TYPE_OPTIONS, detectTapahtumatType(post));
     } else {
-      const cur = detectToimintaType(post);
-      fieldHtml = selectHtml(ep, "toiminta-type", TOIMINTA_TYPE_OPTIONS, cur);
+      fieldCell = fieldDropdownHtml(ep, "toi-type", TOIMINTA_TYPE_OPTIONS, detectToimintaType(post));
     }
 
-    return `<tr>
-      <td class="date-cell">${esc(post.date || "")}</td>
-      <td><a class="title-link" href="${esc(post.url)}" target="_blank">${esc(post.title)}</a></td>
-      <td class="field-cell">${fieldHtml}</td>
-      <td class="row-status" id="status-${ep}"></td>
+    // Category pills
+    const catPills = buildPillCell(post, "category");
+    // Tag pills
+    const tagPills = buildPillCell(post, "tag");
+
+    return `<tr data-path="${ep}">
+      <td class="col-date">
+        <div class="post-date">${esc(post.date||"")}</div>
+        <a class="title-link" href="${esc(post.url)}" target="_blank" style="font-size:11px;font-weight:normal">↗</a>
+      </td>
+      <td class="col-title"><a class="title-link" href="${esc(post.url)}" target="_blank">${esc(post.title)}</a></td>
+      <td class="col-excerpt"><div class="post-excerpt">${esc(post.excerpt||"")}</div></td>
+      <td class="col-field">
+        ${fieldCell}
+        <div class="save-status" id="fstatus-${ep}"></div>
+      </td>
+      <td class="col-cats">${catPills}</td>
+      <td class="col-tags">${tagPills}</td>
     </tr>`;
   }).join("");
 
   document.getElementById(`${tab}-tbody`).innerHTML = rows;
 }
 
-function selectHtml(path, fieldType, options, currentValue) {
+function fieldDropdownHtml(path, fieldType, options, currentValue) {
   const opts = options.map(o =>
-    `<option value="${esc(o.value)}" ${o.value === currentValue ? "selected" : ""}>${esc(o.label)}</option>`
+    `<option value="${esc(o.value)}"${o.value===currentValue?" selected":""}>${esc(o.label)}</option>`
   ).join("");
   return `<select class="field-select" onchange="onFieldChange('${path}','${fieldType}',this)">${opts}</select>`;
 }
 
-// ── Save on change ────────────────────────────────────────────────────────────
+// ── Pill helpers ──────────────────────────────────────────────────────────────
+
+function buildPillCell(post, type) {
+  const ep = esc(post.path);
+  let pills = "";
+  if (type === "tag") {
+    for (const t of (post.tags||[])) pills += pillHtml(t, post.path, "tags", "pill-tag");
+    pills += `<button class="pill-add-btn" onclick="startAdd('${ep}','tag',this)">+</button>`;
+  } else {
+    if (post.mainCategory) pills += pillHtml(post.mainCategory, post.path, "mainCategory", "");
+    for (const c of (post.subCategories||[])) pills += pillHtml(c, post.path, "subCategories", "");
+    for (const c of (post.extraCategories||[])) pills += pillHtml(c, post.path, "extraCategories", "");
+    pills += `<button class="pill-add-btn" onclick="startAdd('${ep}','category',this)">+</button>`;
+  }
+  return `<div class="pill-list">${pills}</div>`;
+}
+
+function pillHtml(name, path, field, extraClass) {
+  const en = esc(name), ep = esc(path), ef = esc(field);
+  return `<span class="pill ${extraClass}">
+    <span>${en}</span>
+    <button class="pill-btn edit" title="Muokkaa" onclick="startEdit('${ep}','${ef}','${en}',this)">✎</button>
+    <button class="pill-btn remove" title="Poista" onclick="confirmPillRemove('${ep}','${ef}','${en}')">×</button>
+  </span>`;
+}
+
+// ── Inline add ────────────────────────────────────────────────────────────────
+
+function startAdd(path, type, btn) {
+  const wrap = document.createElement("span");
+  wrap.className = "pill-editing";
+  wrap.innerHTML = `<input type="text" placeholder="${type==="tag"?"avainsana":"kategoria"}">
+    <button onclick="commitAdd('${esc(path)}','${esc(type)}',this)">✓</button>
+    <button onclick="cancelInlineEdit(this)">✕</button>`;
+  btn.replaceWith(wrap);
+  const inp = wrap.querySelector("input");
+  inp.focus();
+  inp.addEventListener("keydown", e => {
+    if (e.key === "Enter")  commitAdd(path, type, wrap.querySelector("button"));
+    if (e.key === "Escape") cancelInlineEdit(wrap.querySelector("button"));
+  });
+}
+
+async function commitAdd(path, type, btn) {
+  const wrap = btn.closest(".pill-editing");
+  const name = wrap.querySelector("input").value.trim();
+  if (!name) { cancelInlineEdit(btn); return; }
+  wrap.innerHTML = `<span class="saving-spinner">…</span>`;
+  const field = type === "tag" ? "tags" : "subCategories";
+  try {
+    await updateSinglePost(path, field, null, name);
+    await refreshData();
+    rerenderCurrentTab();
+  } catch(e) { showNotice(e.message, "error"); rerenderCurrentTab(); }
+}
+
+// ── Inline edit ───────────────────────────────────────────────────────────────
+
+function startEdit(path, field, oldName, btn) {
+  const pill = btn.closest(".pill");
+  const wrap = document.createElement("span");
+  wrap.className = "pill-editing";
+  wrap.innerHTML = `<input type="text" value="${esc(oldName)}">
+    <button onclick="commitEdit('${esc(path)}','${esc(field)}','${esc(oldName)}',this)">✓</button>
+    <button onclick="cancelInlineEdit(this)">✕</button>`;
+  pill.replaceWith(wrap);
+  const inp = wrap.querySelector("input");
+  inp.focus(); inp.select();
+  inp.addEventListener("keydown", e => {
+    if (e.key === "Enter")  commitEdit(path, field, oldName, wrap.querySelector("button"));
+    if (e.key === "Escape") cancelInlineEdit(wrap.querySelector("button"));
+  });
+}
+
+async function commitEdit(path, field, oldName, btn) {
+  const wrap = btn.closest(".pill-editing");
+  const newName = wrap.querySelector("input").value.trim();
+  if (!newName || newName === oldName) { cancelInlineEdit(btn); return; }
+  wrap.innerHTML = `<span class="saving-spinner">…</span>`;
+  try {
+    await updateSinglePost(path, field, oldName, newName);
+    await refreshData();
+    rerenderCurrentTab();
+  } catch(e) { showNotice(e.message, "error"); rerenderCurrentTab(); }
+}
+
+function cancelInlineEdit() { rerenderCurrentTab(); }
+
+// ── Pill remove ───────────────────────────────────────────────────────────────
+
+function confirmPillRemove(path, field, name) {
+  modalMode = { type: "pill-remove", path, field, name };
+  document.getElementById("modal-title").textContent = `Poista: "${name}"`;
+  document.getElementById("modal-desc").textContent = `Poistetaan kentästä "${field}" tässä yhdessä julkaisussa.`;
+  document.getElementById("modal-warning").style.display = "none";
+  document.getElementById("modal-rename-fields").style.display = "none";
+  const btn = document.getElementById("modal-save-btn");
+  btn.textContent = "Poista"; btn.style.background = "#dc2626";
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("modal-save-btn").style.background = "";
+  modalMode = null;
+}
+
+async function modalSave() {
+  if (!modalMode) return;
+  if (modalMode.type === "pill-remove") {
+    const { path, field, name } = modalMode;
+    closeModal();
+    try {
+      await updateSinglePost(path, field, name, null);
+      await refreshData();
+      rerenderCurrentTab();
+    } catch(e) { showNotice(e.message, "error"); }
+    return;
+  }
+  closeModal();
+}
+
+// ── Source/type dropdown save ─────────────────────────────────────────────────
 
 async function onFieldChange(path, fieldType, select) {
   const newValue = select.value;
-  select.classList.add("dirty");
-  const statusEl = document.getElementById(`status-${path}`);
-  statusEl.className = "row-status status-saving";
-  statusEl.textContent = "Tallennetaan…";
+  select.classList.add("saving");
+  select.disabled = true;
+  const statusEl = document.getElementById(`fstatus-${path}`);
+  if (statusEl) { statusEl.className = "save-status status-saving"; statusEl.textContent = "Tallennetaan…"; }
 
   try {
     if (fieldType === "source") {
-      await saveSource(path, newValue);
-    } else if (fieldType === "tapahtumat-type") {
-      await saveTapahtumatType(path, newValue);
-    } else if (fieldType === "toiminta-type") {
-      await saveToimintaType(path, newValue);
+      const opt = SOURCE_OPTIONS.find(o => o.value === newValue);
+      await modifyFrontmatter(path, data => {
+        data.subCategories = (data.subCategories||[]).filter(c => !ALL_SOURCE_CATS.includes(c));
+        data.extraCategories = (data.extraCategories||[]).filter(c => !ALL_SOURCE_CATS.includes(c));
+        if (opt?.cats.length) { if (!data.subCategories) data.subCategories=[]; if (!data.subCategories.includes(opt.cats[0])) data.subCategories.push(opt.cats[0]); }
+        if (!data.subCategories?.length) delete data.subCategories;
+        if (!data.extraCategories?.length) delete data.extraCategories;
+      });
+    } else if (fieldType === "tap-type") {
+      const opt = TAPAHTUMAT_TYPE_OPTIONS.find(o => o.value === newValue);
+      await modifyFrontmatter(path, data => {
+        data.subCategories = (data.subCategories||[]).filter(c => !ALL_TAP_TYPE_CATS.includes(c));
+        data.extraCategories = (data.extraCategories||[]).filter(c => !ALL_TAP_TYPE_CATS.includes(c));
+        if (opt?.cats.length) { if (!data.subCategories) data.subCategories=[]; if (!data.subCategories.includes(opt.cats[0])) data.subCategories.push(opt.cats[0]); }
+        if (!data.subCategories?.length) delete data.subCategories;
+        if (!data.extraCategories?.length) delete data.extraCategories;
+      });
+    } else if (fieldType === "toi-type") {
+      const opt = TOIMINTA_TYPE_OPTIONS.find(o => o.value === newValue);
+      await modifyFrontmatter(path, data => {
+        data.subCategories = (data.subCategories||[]).filter(c => !ALL_TOI_TYPE_CATS.includes(c));
+        if (opt?.cats.length) { if (!data.subCategories) data.subCategories=[]; if (!data.subCategories.includes(opt.cats[0])) data.subCategories.push(opt.cats[0]); }
+        if (!data.subCategories?.length) delete data.subCategories;
+      });
     }
-    select.classList.remove("dirty");
-    statusEl.className = "row-status status-ok";
-    statusEl.textContent = "✓ Tallennettu";
-    // Update local data
+    if (statusEl) { statusEl.className = "save-status status-ok"; statusEl.textContent = "✓ Tallennettu"; }
     await refreshData();
     setTimeout(() => { if (statusEl) statusEl.textContent = ""; }, 3000);
-  } catch (e) {
-    statusEl.className = "row-status status-error";
-    statusEl.textContent = "Virhe: " + e.message;
+  } catch(e) {
+    if (statusEl) { statusEl.className = "save-status status-error"; statusEl.textContent = "Virhe: "+e.message; }
+  } finally {
+    select.classList.remove("saving"); select.disabled = false;
   }
 }
 
-// ── Field-specific save logic ─────────────────────────────────────────────────
+// ── GitHub API helpers ────────────────────────────────────────────────────────
 
-const ALL_SOURCE_CATS = SOURCE_OPTIONS.flatMap(o => o.cats);
-const ALL_TAP_TYPE_CATS = TAPAHTUMAT_TYPE_OPTIONS.flatMap(o => o.cats);
-const ALL_TOI_TYPE_CATS = TOIMINTA_TYPE_OPTIONS.flatMap(o => o.cats);
-
-async function saveSource(path, newValue) {
-  const opt = SOURCE_OPTIONS.find(o => o.value === newValue);
-  if (!opt) return;
-  await modifyPost(path, data => {
-    // Remove all source identifiers from sub + extra
-    if (data.subCategories) data.subCategories = data.subCategories.filter(c => !ALL_SOURCE_CATS.includes(c));
-    if (data.extraCategories) data.extraCategories = data.extraCategories.filter(c => !ALL_SOURCE_CATS.includes(c));
-    // Add new source to subCategories (unless "hanke" = no tag)
-    if (opt.cats.length) {
-      if (!data.subCategories) data.subCategories = [];
-      if (!data.subCategories.includes(opt.cats[0])) data.subCategories.push(opt.cats[0]);
+// Modify post: field = "mainCategory"|"subCategories"|"extraCategories"|"tags"
+// oldName null = add, newName null = remove
+async function updateSinglePost(path, field, oldName, newName) {
+  await modifyFrontmatter(path, data => {
+    if (field === "mainCategory") {
+      if (oldName === null) data.mainCategory = newName;
+      else if (newName === null) delete data.mainCategory;
+      else if (data.mainCategory === oldName) data.mainCategory = newName;
+    } else {
+      if (!Array.isArray(data[field])) data[field] = [];
+      if (oldName === null) {
+        if (!data[field].includes(newName)) data[field].push(newName);
+      } else if (newName === null) {
+        data[field] = data[field].filter(v => v !== oldName);
+        if (!data[field].length) delete data[field];
+      } else {
+        data[field] = data[field].map(v => v === oldName ? newName : v);
+      }
     }
-    // Cleanup empty arrays
-    if (data.subCategories && data.subCategories.length === 0) delete data.subCategories;
-    if (data.extraCategories && data.extraCategories.length === 0) delete data.extraCategories;
   });
 }
 
-async function saveTapahtumatType(path, newValue) {
-  const opt = TAPAHTUMAT_TYPE_OPTIONS.find(o => o.value === newValue);
-  if (!opt) return;
-  await modifyPost(path, data => {
-    if (data.subCategories) data.subCategories = data.subCategories.filter(c => !ALL_TAP_TYPE_CATS.includes(c));
-    if (data.extraCategories) data.extraCategories = data.extraCategories.filter(c => !ALL_TAP_TYPE_CATS.includes(c));
-    if (opt.cats.length) {
-      if (!data.subCategories) data.subCategories = [];
-      if (!data.subCategories.includes(opt.cats[0])) data.subCategories.push(opt.cats[0]);
-    }
-    if (data.subCategories && data.subCategories.length === 0) delete data.subCategories;
-    if (data.extraCategories && data.extraCategories.length === 0) delete data.extraCategories;
-  });
-}
-
-async function saveToimintaType(path, newValue) {
-  const opt = TOIMINTA_TYPE_OPTIONS.find(o => o.value === newValue);
-  if (!opt) return;
-  await modifyPost(path, data => {
-    if (data.subCategories) data.subCategories = data.subCategories.filter(c => !ALL_TOI_TYPE_CATS.includes(c));
-    if (opt.cats.length) {
-      if (!data.subCategories) data.subCategories = [];
-      if (!data.subCategories.includes(opt.cats[0])) data.subCategories.push(opt.cats[0]);
-    }
-    if (data.subCategories && data.subCategories.length === 0) delete data.subCategories;
-  });
-}
-
-// ── GitHub file update ────────────────────────────────────────────────────────
-
-async function modifyPost(filePath, mutate) {
+async function modifyFrontmatter(filePath, mutate) {
   const url = `https://api.github.com/repos/${REPO}/contents/${filePath}`;
   const headers = { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" };
-
   const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const fileData = await res.json();
   const original = b64decode(fileData.content);
-
   const fm = parseFrontmatter(original);
   if (!fm) throw new Error("Frontmatter ei löydy");
   let data;
   try { data = jsyaml.load(fm.yaml); } catch { throw new Error("YAML-virhe"); }
-
   mutate(data);
-
   const newYaml = jsyaml.dump(data, { lineWidth: -1, noCompatMode: true, quotingType: '"' });
   const updated = `${fm.open}${newYaml}${fm.close}${fm.body}`;
   if (updated === original) return;
-
   await fetch(url, {
     method: "PUT", headers,
-    body: JSON.stringify({ message: `Päivitä kenttä: ${filePath.split("/").pop()}`, content: b64encode(updated), sha: fileData.sha, branch: BRANCH })
+    body: JSON.stringify({ message: `Päivitä: ${filePath.split("/").pop()}`, content: b64encode(updated), sha: fileData.sha, branch: BRANCH })
   });
 }
 
@@ -486,24 +642,27 @@ async function refreshData() {
   if (res.ok) allPosts = await res.json();
 }
 
-// ── Utils ─────────────────────────────────────────────────────────────────────
+function rerenderCurrentTab() {
+  const active = document.querySelector(".tab.active");
+  if (!active) return;
+  const tabs = ["uutiset","tapahtumat","toiminta"];
+  const idx = [...document.querySelectorAll(".tab")].indexOf(active);
+  if (idx >= 0) renderTab(tabs[idx]);
+}
+
+// ── Frontmatter & encoding utils ──────────────────────────────────────────────
 
 function parseFrontmatter(content) {
   const m = content.match(/^(---\r?\n)([\s\S]*?)\r?\n(---\r?\n?)([\s\S]*)$/);
-  if (!m) return null;
-  return { open: m[1], yaml: m[2], close: m[3], body: m[4] };
+  return m ? { open: m[1], yaml: m[2], close: m[3], body: m[4] } : null;
 }
-
 function b64decode(str) {
-  return decodeURIComponent(atob(str.replace(/\s/g, "")).split("").map(c => "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2)).join(""));
+  return decodeURIComponent(atob(str.replace(/\s/g,"")).split("").map(c => "%"+("00"+c.charCodeAt(0).toString(16)).slice(-2)).join(""));
 }
-
 function b64encode(str) { return btoa(unescape(encodeURIComponent(str))); }
-
 function esc(s) {
   return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 }
-
 function showNotice(msg, type) {
   const el = document.getElementById("notice");
   el.innerHTML = `<div class="notice notice-${type}">${esc(msg)}</div>`;
