@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kategorioiden hallinta — Generation AI</title>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; font-size: 14px; background: #f5f5f5; color: #222; }
+
+    header {
+      background: #1a1a2e; color: #fff; padding: 14px 20px;
+      display: flex; align-items: center; gap: 16px;
+    }
+    header h1 { font-size: 16px; font-weight: 600; }
+    header a { color: #aac4ff; text-decoration: none; font-size: 13px; }
+    header a:hover { text-decoration: underline; }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+    .auth-card {
+      background: #fff; border: 1px solid #ddd; border-radius: 8px;
+      padding: 24px; margin-bottom: 20px;
+    }
+    .auth-card h2 { font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+    .auth-card p { color: #666; font-size: 13px; margin-bottom: 12px; }
+    .auth-card a { color: #2563eb; }
+    .input-row { display: flex; gap: 8px; }
+    input[type="password"], input[type="text"] {
+      flex: 1; padding: 8px 10px; border: 1px solid #ccc; border-radius: 6px;
+      font-size: 13px; font-family: monospace;
+    }
+
+    button {
+      padding: 8px 16px; border: none; border-radius: 6px;
+      font-size: 13px; cursor: pointer; font-family: inherit;
+    }
+    .btn-primary { background: #2563eb; color: #fff; }
+    .btn-primary:hover { background: #1d4ed8; }
+    .btn-primary:disabled { background: #93c5fd; cursor: not-allowed; }
+    .btn-sm { padding: 4px 10px; font-size: 12px; }
+    .btn-rename { background: #e8f0fe; color: #1a56db; }
+    .btn-rename:hover { background: #c7d7fc; }
+    .btn-delete { background: #fde8e8; color: #c81e1e; }
+    .btn-delete:hover { background: #fbd5d5; }
+    .btn-cancel { background: #f3f4f6; color: #374151; }
+    .btn-cancel:hover { background: #e5e7eb; }
+    .btn-save { background: #059669; color: #fff; }
+    .btn-save:hover { background: #047857; }
+
+    .tabs { display: flex; gap: 0; border-bottom: 2px solid #e5e7eb; margin-bottom: 16px; }
+    .tab {
+      padding: 8px 20px; cursor: pointer; font-size: 13px; font-weight: 500;
+      border-bottom: 2px solid transparent; margin-bottom: -2px; color: #6b7280;
+    }
+    .tab.active { border-bottom-color: #2563eb; color: #2563eb; }
+    .tab:hover:not(.active) { color: #374151; }
+
+    .toolbar { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; }
+    .toolbar input { flex: 1; padding: 7px 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; }
+    .count-label { font-size: 12px; color: #6b7280; white-space: nowrap; }
+
+    table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb; }
+    th { background: #f9fafb; font-size: 12px; font-weight: 600; text-align: left; padding: 8px 12px; color: #374151; border-bottom: 1px solid #e5e7eb; }
+    td { padding: 8px 12px; border-bottom: 1px solid #f3f4f6; vertical-align: middle; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #f9fafb; }
+
+    .badge {
+      display: inline-block; padding: 2px 7px; border-radius: 9px; font-size: 11px; font-weight: 500;
+    }
+    .badge-main { background: #dbeafe; color: #1e40af; }
+    .badge-sub { background: #d1fae5; color: #065f46; }
+    .badge-extra { background: #ede9fe; color: #5b21b6; }
+
+    .actions { display: flex; gap: 6px; }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.4);
+      display: flex; align-items: center; justify-content: center; z-index: 100;
+    }
+    .modal {
+      background: #fff; border-radius: 10px; padding: 24px;
+      width: 420px; max-width: 95vw; box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    .modal h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+    .modal p { font-size: 13px; color: #555; margin-bottom: 14px; }
+    .modal label { font-size: 12px; font-weight: 600; color: #374151; display: block; margin-bottom: 4px; }
+    .modal input { width: 100%; padding: 8px 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; margin-bottom: 16px; }
+    .modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+    .warning { background: #fef3c7; border: 1px solid #fcd34d; border-radius: 6px; padding: 10px 12px; font-size: 12px; color: #92400e; margin-bottom: 14px; }
+
+    /* Progress */
+    .progress-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+      display: flex; align-items: center; justify-content: center; z-index: 200;
+    }
+    .progress-box {
+      background: #fff; border-radius: 10px; padding: 28px 32px;
+      text-align: center; min-width: 300px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    .progress-box h3 { font-size: 15px; margin-bottom: 12px; }
+    .progress-bar-wrap { background: #e5e7eb; border-radius: 9px; height: 8px; margin-bottom: 10px; }
+    .progress-bar { background: #2563eb; border-radius: 9px; height: 8px; transition: width 0.2s; }
+    .progress-label { font-size: 12px; color: #6b7280; }
+
+    .notice { padding: 10px 14px; border-radius: 6px; font-size: 13px; margin-bottom: 12px; }
+    .notice-error { background: #fde8e8; color: #c81e1e; border: 1px solid #fbd5d5; }
+    .notice-success { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+
+    #main { display: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="/admin/">← Sveltia</a>
+  <h1>Kategorioiden ja tagien hallinta</h1>
+</header>
+
+<div class="container">
+
+  <div id="notice"></div>
+
+  <!-- Auth -->
+  <div class="auth-card" id="auth-card">
+    <h2>GitHub-tunnistautuminen</h2>
+    <p>
+      Tarvitset <a href="https://github.com/settings/tokens/new?scopes=repo&description=GenAI+categories" target="_blank">GitHub Personal Access Token</a>:in
+      (scope: <code>repo</code>). Token tallennetaan selaimen muistiin.
+    </p>
+    <div class="input-row">
+      <input type="password" id="token-input" placeholder="ghp_..." autocomplete="off">
+      <button class="btn-primary" onclick="loadData()">Lataa</button>
+    </div>
+  </div>
+
+  <!-- Main UI -->
+  <div id="main">
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('categories')">Kategoriat</div>
+      <div class="tab" onclick="switchTab('tags')">Tagit</div>
+    </div>
+
+    <div id="tab-categories">
+      <div class="toolbar">
+        <input type="text" id="cat-search" placeholder="Hae kategoriaa..." oninput="renderCategories()">
+        <span class="count-label" id="cat-count"></span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Nimi</th>
+            <th>Tyyppi</th>
+            <th style="width:60px;text-align:right">Postit</th>
+            <th style="width:140px"></th>
+          </tr>
+        </thead>
+        <tbody id="cat-tbody"></tbody>
+      </table>
+    </div>
+
+    <div id="tab-tags" style="display:none">
+      <div class="toolbar">
+        <input type="text" id="tag-search" placeholder="Hae tagia..." oninput="renderTags()">
+        <span class="count-label" id="tag-count"></span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Nimi</th>
+            <th style="width:60px;text-align:right">Postit</th>
+            <th style="width:140px"></th>
+          </tr>
+        </thead>
+        <tbody id="tag-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- Rename/delete modal -->
+<div class="modal-overlay" id="modal" style="display:none" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <div id="modal-warning" class="warning" style="display:none"></div>
+    <div id="modal-rename-fields" style="display:none">
+      <label>Uusi nimi</label>
+      <input type="text" id="modal-new-name" onkeydown="if(event.key==='Enter')modalSave()">
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal()">Peruuta</button>
+      <button class="btn-save btn-primary" id="modal-save-btn" onclick="modalSave()">Tallenna</button>
+    </div>
+  </div>
+</div>
+
+<!-- Progress overlay -->
+<div class="progress-overlay" id="progress" style="display:none">
+  <div class="progress-box">
+    <h3 id="progress-title">Päivitetään tiedostoja…</h3>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar" id="progress-bar" style="width:0%"></div>
+    </div>
+    <div class="progress-label" id="progress-label">0 / 0</div>
+  </div>
+</div>
+
+<script>
+const REPO = "LaruX75/Generation-AI-STN-project-website";
+const BRANCH = "main";
+
+let allPosts = [];
+let token = localStorage.getItem("genai-cat-token") || "";
+let modalMode = null; // { type: "rename"|"delete", field: "category"|"tag", name: "...", affectedPaths: [...] }
+
+// ── Auth & load ───────────────────────────────────────────────────────────────
+
+if (token) {
+  document.getElementById("token-input").value = token;
+  loadData();
+}
+
+async function loadData() {
+  const t = document.getElementById("token-input").value.trim();
+  if (!t) { showNotice("Anna GitHub token.", "error"); return; }
+  token = t;
+  localStorage.setItem("genai-cat-token", token);
+
+  const btn = document.querySelector("#auth-card button");
+  btn.disabled = true;
+  btn.textContent = "Ladataan…";
+
+  try {
+    const res = await fetch("/admin/categories-data.json");
+    if (!res.ok) throw new Error("categories-data.json ei löydy. Buildaa sivusto ensin.");
+    allPosts = await res.json();
+    document.getElementById("auth-card").style.display = "none";
+    document.getElementById("main").style.display = "block";
+    renderCategories();
+    renderTags();
+  } catch (e) {
+    showNotice(e.message, "error");
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Lataa";
+  }
+}
+
+// ── Tab switching ─────────────────────────────────────────────────────────────
+
+function switchTab(name) {
+  document.querySelectorAll(".tab").forEach((t, i) => {
+    t.classList.toggle("active", (i === 0) === (name === "categories"));
+  });
+  document.getElementById("tab-categories").style.display = name === "categories" ? "" : "none";
+  document.getElementById("tab-tags").style.display = name === "tags" ? "" : "none";
+}
+
+// ── Build maps ────────────────────────────────────────────────────────────────
+
+function buildCategoryMap() {
+  const map = new Map(); // name → { count, types: Set }
+  for (const post of allPosts) {
+    const add = (name, type) => {
+      if (!name) return;
+      if (!map.has(name)) map.set(name, { count: 0, types: new Set() });
+      const entry = map.get(name);
+      entry.count++;
+      entry.types.add(type);
+    };
+    add(post.mainCategory, "main");
+    (post.subCategories || []).forEach(c => add(c, "sub"));
+    (post.extraCategories || []).forEach(c => add(c, "extra"));
+  }
+  return map;
+}
+
+function buildTagMap() {
+  const map = new Map();
+  for (const post of allPosts) {
+    for (const tag of (post.tags || [])) {
+      map.set(tag, (map.get(tag) || 0) + 1);
+    }
+  }
+  return map;
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+
+function renderCategories() {
+  const q = document.getElementById("cat-search").value.toLowerCase();
+  const map = buildCategoryMap();
+  let entries = [...map.entries()]
+    .filter(([name]) => !q || name.toLowerCase().includes(q))
+    .sort((a, b) => b[1].count - a[1].count || a[0].localeCompare(b[0], "fi"));
+
+  document.getElementById("cat-count").textContent = `${entries.length} kategoriaa`;
+
+  const typeLabel = types => {
+    const badges = [];
+    if (types.has("main"))  badges.push('<span class="badge badge-main">pää</span>');
+    if (types.has("sub"))   badges.push('<span class="badge badge-sub">ala</span>');
+    if (types.has("extra")) badges.push('<span class="badge badge-extra">lisä</span>');
+    return badges.join(" ");
+  };
+
+  document.getElementById("cat-tbody").innerHTML = entries.map(([name, {count, types}]) => `
+    <tr>
+      <td><strong>${esc(name)}</strong></td>
+      <td>${typeLabel(types)}</td>
+      <td style="text-align:right;color:#6b7280">${count}</td>
+      <td>
+        <div class="actions">
+          <button class="btn-sm btn-rename" onclick="openRename('category','${esc(name)}')">Nimeä</button>
+          <button class="btn-sm btn-delete" onclick="openDelete('category','${esc(name)}')">Poista</button>
+        </div>
+      </td>
+    </tr>
+  `).join("");
+}
+
+function renderTags() {
+  const q = document.getElementById("tag-search").value.toLowerCase();
+  const map = buildTagMap();
+  let entries = [...map.entries()]
+    .filter(([name]) => !q || name.toLowerCase().includes(q))
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "fi"));
+
+  document.getElementById("tag-count").textContent = `${entries.length} tagia`;
+
+  document.getElementById("tag-tbody").innerHTML = entries.map(([name, count]) => `
+    <tr>
+      <td><strong>${esc(name)}</strong></td>
+      <td style="text-align:right;color:#6b7280">${count}</td>
+      <td>
+        <div class="actions">
+          <button class="btn-sm btn-rename" onclick="openRename('tag','${esc(name)}')">Nimeä</button>
+          <button class="btn-sm btn-delete" onclick="openDelete('tag','${esc(name)}')">Poista</button>
+        </div>
+      </td>
+    </tr>
+  `).join("");
+}
+
+// ── Modal ─────────────────────────────────────────────────────────────────────
+
+function openRename(field, name) {
+  const affected = affectedPaths(field, name);
+  modalMode = { type: "rename", field, name, affected };
+
+  document.getElementById("modal-title").textContent = `Nimeä uudelleen: "${name}"`;
+  document.getElementById("modal-desc").textContent =
+    `Muutos päivitetään ${affected.length} tiedostoon.`;
+  document.getElementById("modal-warning").style.display = "none";
+  document.getElementById("modal-rename-fields").style.display = "";
+  document.getElementById("modal-new-name").value = name;
+  document.getElementById("modal-save-btn").textContent = "Nimeä";
+  document.getElementById("modal").style.display = "flex";
+  setTimeout(() => {
+    const inp = document.getElementById("modal-new-name");
+    inp.focus(); inp.select();
+  }, 50);
+}
+
+function openDelete(field, name) {
+  const affected = affectedPaths(field, name);
+  modalMode = { type: "delete", field, name, affected };
+
+  document.getElementById("modal-title").textContent = `Poista: "${name}"`;
+  document.getElementById("modal-desc").textContent =
+    `Poistetaan ${affected.length} tiedostosta.`;
+
+  const isMain = field === "category" && allPosts.some(p => p.mainCategory === name);
+  const warn = document.getElementById("modal-warning");
+  if (isMain) {
+    warn.textContent = "Tämä on pääkategoria (mainCategory). Poistaminen voi siirtää postit pois välilehdiltä.";
+    warn.style.display = "";
+  } else {
+    warn.style.display = "none";
+  }
+
+  document.getElementById("modal-rename-fields").style.display = "none";
+  document.getElementById("modal-save-btn").textContent = "Poista";
+  document.getElementById("modal-save-btn").style.background = "#dc2626";
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("modal-save-btn").style.background = "";
+  modalMode = null;
+}
+
+async function modalSave() {
+  if (!modalMode) return;
+  const { type, field, name, affected } = modalMode;
+  const newName = type === "rename" ? document.getElementById("modal-new-name").value.trim() : null;
+
+  if (type === "rename" && (!newName || newName === name)) {
+    document.getElementById("modal-new-name").focus();
+    return;
+  }
+
+  closeModal();
+  await applyChange(field, name, newName, affected);
+}
+
+// ── Change application ────────────────────────────────────────────────────────
+
+function affectedPaths(field, name) {
+  if (field === "tag") {
+    return allPosts.filter(p => (p.tags || []).includes(name)).map(p => p.path);
+  }
+  return allPosts.filter(p =>
+    p.mainCategory === name ||
+    (p.subCategories || []).includes(name) ||
+    (p.extraCategories || []).includes(name)
+  ).map(p => p.path);
+}
+
+async function applyChange(field, oldName, newName, paths) {
+  if (!paths.length) { showNotice("Ei muutettavia tiedostoja.", "success"); return; }
+
+  showProgress("Päivitetään tiedostoja…", 0, paths.length);
+
+  let done = 0;
+  const errors = [];
+
+  for (const path of paths) {
+    try {
+      await updateFile(path, field, oldName, newName);
+      done++;
+      setProgress(done, paths.length);
+    } catch (e) {
+      errors.push(`${path}: ${e.message}`);
+    }
+  }
+
+  hideProgress();
+
+  if (errors.length) {
+    showNotice(`${done} tiedostoa päivitetty. Virheitä: ${errors.length}. ${errors[0]}`, "error");
+  } else {
+    const action = newName ? `"${oldName}" → "${newName}"` : `"${oldName}" poistettu`;
+    showNotice(`${action} — ${done} tiedostoa päivitetty.`, "success");
+  }
+
+  // Refresh local data
+  const res = await fetch("/admin/categories-data.json?t=" + Date.now());
+  if (res.ok) {
+    allPosts = await res.json();
+    renderCategories();
+    renderTags();
+  }
+}
+
+async function updateFile(filePath, field, oldName, newName) {
+  const url = `https://api.github.com/repos/${REPO}/contents/${filePath}`;
+  const headers = {
+    Authorization: `token ${token}`,
+    Accept: "application/vnd.github.v3+json",
+    "Content-Type": "application/json"
+  };
+
+  const fileRes = await fetch(url, { headers });
+  if (!fileRes.ok) throw new Error(`HTTP ${fileRes.status}`);
+  const fileData = await fileRes.json();
+
+  const original = b64decode(fileData.content);
+  const updated = field === "tag"
+    ? renameTag(original, oldName, newName)
+    : renameCategory(original, oldName, newName);
+
+  if (updated === original) return; // no change
+
+  const action = newName ? `Nimeä "${oldName}" → "${newName}"` : `Poista kategoria/tagi "${oldName}"`;
+
+  await fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify({
+      message: action,
+      content: b64encode(updated),
+      sha: fileData.sha,
+      branch: BRANCH
+    })
+  });
+}
+
+// ── Frontmatter manipulation ──────────────────────────────────────────────────
+
+function parseFrontmatter(content) {
+  const m = content.match(/^(---\r?\n)([\s\S]*?)\r?\n(---\r?\n?)([\s\S]*)$/);
+  if (!m) return null;
+  return { open: m[1], yaml: m[2], close: m[3], body: m[4] };
+}
+
+function renameCategory(content, oldName, newName) {
+  const fm = parseFrontmatter(content);
+  if (!fm) return content;
+
+  let data;
+  try { data = jsyaml.load(fm.yaml); } catch { return content; }
+  if (!data || typeof data !== "object") return content;
+
+  if (data.mainCategory === oldName) {
+    data.mainCategory = newName || undefined;
+  }
+  const updateList = key => {
+    if (!Array.isArray(data[key])) return;
+    if (newName) {
+      data[key] = data[key].map(c => c === oldName ? newName : c);
+    } else {
+      data[key] = data[key].filter(c => c !== oldName);
+      if (data[key].length === 0) delete data[key];
+    }
+  };
+  updateList("subCategories");
+  updateList("extraCategories");
+
+  const newYaml = jsyaml.dump(data, { lineWidth: -1, noCompatMode: true, quotingType: '"' });
+  return `${fm.open}${newYaml}${fm.close}${fm.body}`;
+}
+
+function renameTag(content, oldName, newName) {
+  const fm = parseFrontmatter(content);
+  if (!fm) return content;
+
+  let data;
+  try { data = jsyaml.load(fm.yaml); } catch { return content; }
+  if (!data || !Array.isArray(data.tags)) return content;
+
+  if (newName) {
+    data.tags = data.tags.map(t => t === oldName ? newName : t);
+  } else {
+    data.tags = data.tags.filter(t => t !== oldName);
+    if (data.tags.length === 0) delete data.tags;
+  }
+
+  const newYaml = jsyaml.dump(data, { lineWidth: -1, noCompatMode: true, quotingType: '"' });
+  return `${fm.open}${newYaml}${fm.close}${fm.body}`;
+}
+
+// ── Progress UI ───────────────────────────────────────────────────────────────
+
+function showProgress(title, done, total) {
+  document.getElementById("progress-title").textContent = title;
+  setProgress(done, total);
+  document.getElementById("progress").style.display = "flex";
+}
+function setProgress(done, total) {
+  const pct = total ? Math.round(done / total * 100) : 0;
+  document.getElementById("progress-bar").style.width = pct + "%";
+  document.getElementById("progress-label").textContent = `${done} / ${total}`;
+}
+function hideProgress() {
+  document.getElementById("progress").style.display = "none";
+}
+
+// ── Notice ────────────────────────────────────────────────────────────────────
+
+function showNotice(msg, type) {
+  const el = document.getElementById("notice");
+  el.innerHTML = `<div class="notice notice-${type}">${esc(msg)}</div>`;
+  setTimeout(() => { el.innerHTML = ""; }, 6000);
+}
+
+// ── Utils ─────────────────────────────────────────────────────────────────────
+
+function esc(s) {
+  return String(s)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;").replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function b64decode(str) {
+  return decodeURIComponent(
+    atob(str.replace(/\s/g, ""))
+      .split("").map(c => "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2)).join("")
+  );
+}
+
+function b64encode(str) {
+  return btoa(unescape(encodeURIComponent(str)));
+}
+</script>
+</body>
+</html>
