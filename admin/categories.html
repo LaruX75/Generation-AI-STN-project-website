@@ -126,14 +126,20 @@
 
   <!-- Auth -->
   <div class="auth-card" id="auth-card">
-    <h2>GitHub-tunnistautuminen</h2>
+    <h2>Kirjaudu ensin Sveltiaan</h2>
     <p>
-      Tarvitset <a href="https://github.com/settings/tokens/new?scopes=repo&description=GenAI+categories" target="_blank">GitHub Personal Access Token</a>:in
-      (scope: <code>repo</code>). Token tallennetaan selaimen muistiin.
+      Työkalu käyttää automaattisesti Sveltian GitHub-kirjautumista. Kirjaudu ensin
+      <a href="/admin/">Sveltiaan</a> ja palaa sitten tänne — tunnistautuminen tapahtuu
+      automaattisesti.
     </p>
-    <div class="input-row">
+    <p style="margin-top:8px">
+      Vaihtoehtoisesti voit käyttää
+      <a href="https://github.com/settings/tokens/new?scopes=repo&description=GenAI+categories" target="_blank">GitHub Personal Access Token</a>:ia
+      (scope: <code>repo</code>):
+    </p>
+    <div class="input-row" style="margin-top:10px">
       <input type="password" id="token-input" placeholder="ghp_..." autocomplete="off">
-      <button class="btn-primary" onclick="loadData()">Lataa</button>
+      <button class="btn-primary" onclick="loadData(false)">Lataa</button>
     </div>
   </div>
 
@@ -215,25 +221,44 @@ const REPO = "LaruX75/Generation-AI-STN-project-website";
 const BRANCH = "main";
 
 let allPosts = [];
-let token = localStorage.getItem("genai-cat-token") || "";
+let token = "";
 let modalMode = null; // { type: "rename"|"delete", field: "category"|"tag", name: "...", affectedPaths: [...] }
 
 // ── Auth & load ───────────────────────────────────────────────────────────────
 
-if (token) {
-  document.getElementById("token-input").value = token;
-  loadData();
+function getSveltiaToken() {
+  try {
+    const user = JSON.parse(localStorage.getItem("sveltia-cms.user") || "{}");
+    return user.token || "";
+  } catch { return ""; }
 }
 
-async function loadData() {
-  const t = document.getElementById("token-input").value.trim();
-  if (!t) { showNotice("Anna GitHub token.", "error"); return; }
-  token = t;
-  localStorage.setItem("genai-cat-token", token);
+(function init() {
+  const sveltiaToken = getSveltiaToken();
+  if (sveltiaToken) {
+    token = sveltiaToken;
+    document.getElementById("auth-card").style.display = "none";
+    loadData(true);
+  } else {
+    const saved = localStorage.getItem("genai-cat-token") || "";
+    if (saved) {
+      document.getElementById("token-input").value = saved;
+      token = saved;
+      loadData(false);
+    }
+  }
+}());
+
+async function loadData(autoAuth) {
+  if (!autoAuth) {
+    const t = document.getElementById("token-input").value.trim();
+    if (!t) { showNotice("Anna GitHub token.", "error"); return; }
+    token = t;
+    localStorage.setItem("genai-cat-token", token);
+  }
 
   const btn = document.querySelector("#auth-card button");
-  btn.disabled = true;
-  btn.textContent = "Ladataan…";
+  if (btn) { btn.disabled = true; btn.textContent = "Ladataan…"; }
 
   try {
     const res = await fetch("/admin/categories-data.json");
@@ -245,9 +270,9 @@ async function loadData() {
     renderTags();
   } catch (e) {
     showNotice(e.message, "error");
+    document.getElementById("auth-card").style.display = "";
   } finally {
-    btn.disabled = false;
-    btn.textContent = "Lataa";
+    if (btn) { btn.disabled = false; btn.textContent = "Lataa"; }
   }
 }
 
