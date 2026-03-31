@@ -75,6 +75,8 @@
     .badge-extra { background: #ede9fe; color: #5b21b6; }
 
     .actions { display: flex; gap: 6px; }
+    .cat-link { color: #1d4ed8; text-decoration: none; }
+    .cat-link:hover { text-decoration: underline; }
 
     /* Tree */
     tr.cat-parent td { background: #f0f4ff; font-weight: 600; }
@@ -126,6 +128,57 @@
     .notice-success { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
 
     #main { display: none; }
+
+    /* ── Posts panel ── */
+    #posts-panel { display: none; }
+    .panel-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .panel-header h2 { font-size: 16px; font-weight: 600; }
+    .panel-header .back-btn { background: #f3f4f6; color: #374151; padding: 6px 12px; border-radius: 6px; border: none; cursor: pointer; font-size: 13px; }
+    .panel-header .back-btn:hover { background: #e5e7eb; }
+
+    /* Posts table */
+    .posts-table { table-layout: fixed; }
+    .posts-table th:nth-child(1) { width: 22%; }
+    .posts-table th:nth-child(2) { width: 32%; }
+    .posts-table th:nth-child(3) { width: 23%; }
+    .posts-table th:nth-child(4) { width: 23%; }
+    .posts-table td { vertical-align: top; padding: 10px 12px; }
+    .post-title-link { color: #1d4ed8; text-decoration: none; font-weight: 500; font-size: 13px; line-height: 1.4; }
+    .post-title-link:hover { text-decoration: underline; }
+    .post-date { font-size: 11px; color: #9ca3af; margin-top: 3px; }
+    .post-excerpt { font-size: 12px; color: #555; line-height: 1.5; }
+
+    /* Pills */
+    .pill-list { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 2px;
+      background: #e8f0fe; color: #1a56db;
+      padding: 2px 4px 2px 7px; border-radius: 9px; font-size: 11px; font-weight: 500;
+      text-decoration: none; white-space: nowrap;
+    }
+    .pill.pill-tag { background: #fef3c7; color: #92400e; }
+    .pill-btn {
+      background: none; border: none; cursor: pointer; padding: 0 2px;
+      font-size: 12px; line-height: 1; opacity: 0.6; font-family: inherit;
+    }
+    .pill-btn:hover { opacity: 1; }
+    .pill-btn.edit { color: #374151; }
+    .pill-btn.remove { color: #c81e1e; }
+    .pill-add-btn {
+      background: none; border: 1px dashed #9ca3af; border-radius: 9px;
+      color: #6b7280; font-size: 11px; padding: 2px 7px; cursor: pointer;
+    }
+    .pill-add-btn:hover { border-color: #6b7280; color: #374151; }
+    .pill-input {
+      font-size: 11px; padding: 2px 6px; border: 1px solid #93c5fd; border-radius: 9px;
+      width: 100px; outline: none; font-family: inherit;
+    }
+    .pill-editing {
+      display: inline-flex; align-items: center; gap: 2px;
+    }
+    .pill-editing input { font-size: 11px; padding: 2px 6px; border: 1px solid #93c5fd; border-radius: 6px; width: 90px; font-family: inherit; }
+    .pill-editing button { background: none; border: none; cursor: pointer; font-size: 12px; padding: 0 2px; }
+    .saving-spinner { font-size: 11px; color: #6b7280; }
   </style>
 </head>
 <body>
@@ -200,6 +253,27 @@
     </div>
   </div>
 
+</div>
+
+<!-- Posts panel -->
+<div class="container" id="posts-panel">
+  <div class="panel-header">
+    <button class="back-btn" onclick="showCategoryView()">← Kategoriat</button>
+    <h2 id="posts-panel-title"></h2>
+    <span class="count-label" id="posts-panel-count"></span>
+  </div>
+  <div id="posts-panel-notice"></div>
+  <table class="posts-table">
+    <thead>
+      <tr>
+        <th>Otsikko</th>
+        <th>Tiivistelmä</th>
+        <th>Kategoriat</th>
+        <th>Avainsanat</th>
+      </tr>
+    </thead>
+    <tbody id="posts-tbody"></tbody>
+  </table>
 </div>
 
 <!-- Rename/delete modal -->
@@ -364,6 +438,8 @@ function renderCategories() {
   const q = document.getElementById("cat-search").value.trim().toLowerCase();
   const { tree, orphans } = buildCategoryTree();
 
+  const nameHtml = name => `<a href="#" class="cat-link" onclick="showPostsForCategory(event,'${esc(name)}')">${esc(name)}</a>`;
+
   const actionsHtml = name => `
     <div class="actions">
       <button class="btn-sm btn-rename" onclick="openRename('category','${esc(name)}')">Nimeä</button>
@@ -382,7 +458,7 @@ function renderCategories() {
     totalUnique = matches.length;
     rows = matches.map(([name, {count}]) => `
       <tr>
-        <td>${esc(name)}</td>
+        <td>${nameHtml(name)}</td>
         <td style="text-align:right;color:#6b7280">${count}</td>
         <td>${actionsHtml(name)}</td>
       </tr>`).join("");
@@ -400,7 +476,7 @@ function renderCategories() {
         : `<span style="display:inline-block;width:22px"></span>`;
 
       rows += `<tr class="cat-parent${collapsedClass}">
-        <td>${toggle}${esc(main)}</td>
+        <td>${toggle}${nameHtml(main)}</td>
         <td style="text-align:right;color:#374151">${count}</td>
         <td>${actionsHtml(main)}</td>
       </tr>`;
@@ -410,7 +486,7 @@ function renderCategories() {
           .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "fi"));
         for (const [child, childCount] of childRows) {
           rows += `<tr class="cat-child${expanded ? "" : " hidden"}">
-            <td>${esc(child)}</td>
+            <td>${nameHtml(child)}</td>
             <td style="text-align:right;color:#6b7280">${childCount}</td>
             <td>${actionsHtml(child)}</td>
           </tr>`;
@@ -426,7 +502,7 @@ function renderCategories() {
       </tr>`;
       for (const [name, count] of [...orphans.entries()].sort((a,b) => a[0].localeCompare(b[0],"fi"))) {
         rows += `<tr>
-          <td style="padding-left:40px;color:#6b7280">${esc(name)}</td>
+          <td style="padding-left:40px">${nameHtml(name)}</td>
           <td style="text-align:right;color:#6b7280">${count}</td>
           <td>${actionsHtml(name)}</td>
         </tr>`;
@@ -449,7 +525,7 @@ function renderTags() {
 
   document.getElementById("tag-tbody").innerHTML = entries.map(([name, count]) => `
     <tr>
-      <td><strong>${esc(name)}</strong></td>
+      <td><a href="#" class="cat-link" onclick="showPostsForTag(event,'${esc(name)}')">${esc(name)}</a></td>
       <td style="text-align:right;color:#6b7280">${count}</td>
       <td>
         <div class="actions">
@@ -703,6 +779,298 @@ function b64decode(str) {
 function b64encode(str) {
   return btoa(unescape(encodeURIComponent(str)));
 }
+
+// ── Posts panel ───────────────────────────────────────────────────────────────
+
+let currentPanelFilter = null; // { type: "category"|"tag", name: string }
+
+function showPostsForCategory(evt, name) {
+  if (evt) evt.preventDefault();
+  currentPanelFilter = { type: "category", name };
+  _showPostsPanel(`Kategoria: ${name}`);
+}
+
+function showPostsForTag(evt, name) {
+  if (evt) evt.preventDefault();
+  currentPanelFilter = { type: "tag", name };
+  _showPostsPanel(`Avainsana: ${name}`);
+}
+
+function _showPostsPanel(title) {
+  document.getElementById("main").style.display = "none";
+  document.getElementById("posts-panel").style.display = "block";
+  document.getElementById("posts-panel-title").textContent = title;
+  renderPostsTable();
+}
+
+function showCategoryView() {
+  document.getElementById("posts-panel").style.display = "none";
+  document.getElementById("main").style.display = "block";
+  currentPanelFilter = null;
+}
+
+function getFilteredPosts() {
+  if (!currentPanelFilter) return [];
+  const { type, name } = currentPanelFilter;
+  if (type === "tag") return allPosts.filter(p => (p.tags || []).includes(name));
+  return allPosts.filter(p =>
+    p.mainCategory === name ||
+    (p.subCategories || []).includes(name) ||
+    (p.extraCategories || []).includes(name)
+  );
+}
+
+function renderPostsTable() {
+  const posts = getFilteredPosts()
+    .slice().sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  document.getElementById("posts-panel-count").textContent = `${posts.length} julkaisua`;
+
+  const rows = posts.map(post => {
+    const path = post.path;
+    const titleCell = `
+      <a class="post-title-link" href="${esc(post.url)}" target="_blank">${esc(post.title || path)}</a>
+      <div class="post-date">${esc(post.date || "")}</div>`;
+
+    const excerptCell = `<div class="post-excerpt">${esc(post.excerpt || "")}</div>`;
+
+    const catCell = buildPillCell(path, "category",
+      [post.mainCategory].filter(Boolean),
+      post.subCategories || [],
+      post.extraCategories || []
+    );
+
+    const tagCell = buildPillCell(path, "tag", [], [], [], post.tags || []);
+
+    return `<tr data-path="${esc(path)}">
+      <td>${titleCell}</td>
+      <td>${excerptCell}</td>
+      <td>${catCell}</td>
+      <td>${tagCell}</td>
+    </tr>`;
+  }).join("");
+
+  document.getElementById("posts-tbody").innerHTML = rows;
+}
+
+function buildPillCell(path, type, mainCats, subCats, extraCats, tags) {
+  const ep = esc(path);
+  let pills = "";
+
+  if (type === "tag") {
+    for (const t of tags) {
+      pills += pillHtml(t, path, "tag", "pill-tag");
+    }
+    pills += `<button class="pill-add-btn" onclick="startAdd('${ep}','tag',this)">+ avainsana</button>`;
+  } else {
+    for (const c of mainCats) {
+      pills += pillHtml(c, path, "mainCategory", "");
+    }
+    for (const c of subCats) {
+      pills += pillHtml(c, path, "subCategories", "");
+    }
+    for (const c of extraCats) {
+      pills += pillHtml(c, path, "extraCategories", "");
+    }
+    pills += `<button class="pill-add-btn" onclick="startAdd('${ep}','category',this)">+ kategoria</button>`;
+  }
+
+  return `<div class="pill-list">${pills}</div>`;
+}
+
+function pillHtml(name, path, field, extraClass) {
+  const en = esc(name), ep = esc(path), ef = esc(field);
+  const catLink = field === "tag"
+    ? `onclick="showPostsForTag(event,'${en}')"`
+    : `onclick="showPostsForCategory(event,'${en}')"`;
+  return `<span class="pill ${extraClass}">
+    <a href="#" ${catLink}>${en}</a>
+    <button class="pill-btn edit" title="Muokkaa" onclick="startEdit('${ep}','${ef}','${en}',this)">✎</button>
+    <button class="pill-btn remove" title="Poista" onclick="confirmPillRemove('${ep}','${ef}','${en}')">×</button>
+  </span>`;
+}
+
+// ── Inline add ────────────────────────────────────────────────────────────────
+
+function startAdd(path, type, btn) {
+  // Replace + button with input
+  const wrap = document.createElement("span");
+  wrap.className = "pill-editing";
+  wrap.innerHTML = `
+    <input class="pill-input" type="text" placeholder="${type === "tag" ? "avainsana" : "kategoria"}" autofocus>
+    <button title="Tallenna" onclick="commitAdd('${esc(path)}','${esc(type)}',this)">✓</button>
+    <button title="Peruuta" onclick="cancelEdit(this)">✕</button>`;
+  btn.replaceWith(wrap);
+  wrap.querySelector("input").focus();
+  wrap.querySelector("input").addEventListener("keydown", e => {
+    if (e.key === "Enter") commitAdd(path, type, wrap.querySelector("button"));
+    if (e.key === "Escape") cancelEdit(wrap.querySelector("button"));
+  });
+}
+
+async function commitAdd(path, type, btn) {
+  const wrap = btn.closest(".pill-editing");
+  const name = wrap.querySelector("input").value.trim();
+  if (!name) { cancelEdit(btn); return; }
+  wrap.innerHTML = `<span class="saving-spinner">Tallennetaan…</span>`;
+
+  const field = type === "tag" ? "tags" : "subCategories";
+  try {
+    await updateSinglePost(path, field, null, name); // null oldName = add
+    await refreshPost(path);
+    renderPostsTable();
+    showPanelNotice(`Lisätty: "${name}"`, "success");
+  } catch (e) {
+    showPanelNotice(e.message, "error");
+    renderPostsTable();
+  }
+}
+
+// ── Inline edit ───────────────────────────────────────────────────────────────
+
+function startEdit(path, field, oldName, btn) {
+  const pill = btn.closest(".pill");
+  const wrap = document.createElement("span");
+  wrap.className = "pill-editing";
+  wrap.innerHTML = `
+    <input type="text" value="${esc(oldName)}">
+    <button title="Tallenna" onclick="commitEdit('${esc(path)}','${esc(field)}','${esc(oldName)}',this)">✓</button>
+    <button title="Peruuta" onclick="cancelEdit(this)">✕</button>`;
+  pill.replaceWith(wrap);
+  const inp = wrap.querySelector("input");
+  inp.focus(); inp.select();
+  inp.addEventListener("keydown", e => {
+    if (e.key === "Enter") commitEdit(path, field, oldName, wrap.querySelector("button"));
+    if (e.key === "Escape") cancelEdit(wrap.querySelector("button"));
+  });
+}
+
+async function commitEdit(path, field, oldName, btn) {
+  const wrap = btn.closest(".pill-editing");
+  const newName = wrap.querySelector("input").value.trim();
+  if (!newName || newName === oldName) { cancelEdit(btn); return; }
+  wrap.innerHTML = `<span class="saving-spinner">Tallennetaan…</span>`;
+
+  try {
+    await updateSinglePost(path, field, oldName, newName);
+    await refreshPost(path);
+    renderPostsTable();
+    showPanelNotice(`"${oldName}" → "${newName}"`, "success");
+  } catch (e) {
+    showPanelNotice(e.message, "error");
+    renderPostsTable();
+  }
+}
+
+function cancelEdit(btn) {
+  renderPostsTable(); // simplest: just re-render
+}
+
+// ── Pill remove ───────────────────────────────────────────────────────────────
+
+function confirmPillRemove(path, field, name) {
+  modalMode = {
+    type: "pill-remove", path, field, name,
+    affected: [path]
+  };
+  document.getElementById("modal-title").textContent = `Poista: "${name}"`;
+  document.getElementById("modal-desc").textContent =
+    `Poistetaan kentästä "${field}" tässä yhdessä julkaisussa.`;
+  document.getElementById("modal-warning").style.display = "none";
+  document.getElementById("modal-rename-fields").style.display = "none";
+  document.getElementById("modal-save-btn").textContent = "Poista";
+  document.getElementById("modal-save-btn").style.background = "#dc2626";
+  document.getElementById("modal").style.display = "flex";
+}
+
+// ── Single-post update ────────────────────────────────────────────────────────
+
+// field: "mainCategory"|"subCategories"|"extraCategories"|"tags"
+// oldName null = add, newName null = remove
+async function updateSinglePost(path, field, oldName, newName) {
+  const url = `https://api.github.com/repos/${REPO}/contents/${path}`;
+  const headers = {
+    Authorization: `token ${token}`,
+    Accept: "application/vnd.github.v3+json",
+    "Content-Type": "application/json"
+  };
+  const fileRes = await fetch(url, { headers });
+  if (!fileRes.ok) throw new Error(`HTTP ${fileRes.status}`);
+  const fileData = await fileRes.json();
+  const original = b64decode(fileData.content);
+
+  const fm = parseFrontmatter(original);
+  if (!fm) throw new Error("Frontmatter ei löydy");
+  let data;
+  try { data = jsyaml.load(fm.yaml); } catch { throw new Error("YAML parse error"); }
+
+  if (field === "mainCategory") {
+    if (oldName === null) {
+      data.mainCategory = newName;
+    } else if (newName === null) {
+      delete data.mainCategory;
+    } else {
+      if (data.mainCategory === oldName) data.mainCategory = newName;
+    }
+  } else {
+    if (!Array.isArray(data[field])) data[field] = [];
+    if (oldName === null) {
+      // Add
+      if (!data[field].includes(newName)) data[field].push(newName);
+    } else if (newName === null) {
+      // Remove
+      data[field] = data[field].filter(v => v !== oldName);
+      if (data[field].length === 0) delete data[field];
+    } else {
+      // Rename
+      data[field] = data[field].map(v => v === oldName ? newName : v);
+    }
+  }
+
+  const newYaml = jsyaml.dump(data, { lineWidth: -1, noCompatMode: true, quotingType: '"' });
+  const updated = `${fm.open}${newYaml}${fm.close}${fm.body}`;
+  if (updated === original) return;
+
+  const action = oldName === null ? `Lisää "${newName}"` : newName === null ? `Poista "${oldName}"` : `"${oldName}" → "${newName}"`;
+  await fetch(url, {
+    method: "PUT", headers,
+    body: JSON.stringify({ message: action, content: b64encode(updated), sha: fileData.sha, branch: BRANCH })
+  });
+}
+
+// Refresh local allPosts entry after a single-post save
+async function refreshPost(path) {
+  const res = await fetch("/admin/categories-data.json?t=" + Date.now());
+  if (res.ok) {
+    allPosts = await res.json();
+  }
+}
+
+function showPanelNotice(msg, type) {
+  const el = document.getElementById("posts-panel-notice");
+  el.innerHTML = `<div class="notice notice-${type}">${esc(msg)}</div>`;
+  setTimeout(() => { el.innerHTML = ""; }, 5000);
+}
+
+// ── Extend modalSave to handle pill-remove ────────────────────────────────────
+(function () {
+  const orig = window.modalSave;
+  window.modalSave = async function () {
+    if (modalMode && modalMode.type === "pill-remove") {
+      const { path, field, name } = modalMode;
+      closeModal();
+      try {
+        await updateSinglePost(path, field, name, null);
+        await refreshPost(path);
+        renderPostsTable();
+        showPanelNotice(`Poistettu: "${name}"`, "success");
+      } catch (e) {
+        showPanelNotice(e.message, "error");
+      }
+      return;
+    }
+    orig.call(this);
+  };
+}());
 </script>
 </body>
 </html>
