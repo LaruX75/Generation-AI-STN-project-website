@@ -9,13 +9,20 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: system-ui, sans-serif; font-size: 14px; background: #f5f5f5; color: #222; }
 
-    header {
-      background: #1a1a2e; color: #fff; padding: 14px 20px;
-      display: flex; align-items: center; gap: 16px;
+    #admin-navbar {
+      background: #1a1a2e; height: 40px;
+      display: flex; align-items: center; padding: 0 16px; gap: 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
     }
-    header h1 { font-size: 16px; font-weight: 600; }
-    header a { color: #aac4ff; text-decoration: none; font-size: 13px; }
-    header a:hover { text-decoration: underline; }
+    #admin-navbar .nav-brand {
+      color: #e2e8f0; font-weight: 600; margin-right: 20px; white-space: nowrap;
+    }
+    #admin-navbar a {
+      color: #94a3b8; text-decoration: none;
+      padding: 0 14px; height: 40px; display: flex; align-items: center;
+    }
+    #admin-navbar a:hover { color: #e2e8f0; background: rgba(255,255,255,0.07); }
+    #admin-navbar a.active { color: #fff; border-bottom: 2px solid #60a5fa; }
 
     .container { max-width: 900px; margin: 0 auto; padding: 20px; }
 
@@ -183,10 +190,11 @@
 </head>
 <body>
 
-<header>
-  <a href="/admin/">← Sveltia</a>
-  <h1>Kategorioiden ja tagien hallinta</h1>
-</header>
+<nav id="admin-navbar">
+  <span class="nav-brand">Generation AI</span>
+  <a href="/admin/">Sveltia CMS</a>
+  <a href="/admin/categories.html" class="active">Kategoriatyökalu</a>
+</nav>
 
 <div class="container">
 
