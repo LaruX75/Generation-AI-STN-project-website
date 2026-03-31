@@ -1260,6 +1260,10 @@ body.search-modal-open { overflow: hidden; }
 .news-intro-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; margin: 0 0 .5rem; color: var(--global-palette2, #446d33); }
 .news-intro-desc { font-size: 1.05rem; color: #444; margin: 0; }
 
+@media (max-width: 700px) {
+  .news-intro { padding: 2rem 1rem 1.25rem; }
+}
+
 /* ── Kadence tabs ───────────────────────────────────────────────────────────── */
 .kb-tabs { margin: 1.5rem 0; }
 .kt-tabs-title-list { display: flex; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; gap: .25rem; border-bottom: 2px solid var(--global-palette7, #eee); }
@@ -3879,9 +3883,27 @@ a.publication-hero-author-name:hover {
   color: var(--global-palette1, #314e25);
   text-decoration: underline;
 }
+@media (max-width: 700px) {
+  .teacher-tools,
+  .teacher-materials,
+  .teacher-guide,
+  .teacher-about {
+    padding: 2.5rem 1rem;
+  }
+  .teacher-tools-lead   { margin-bottom: 1.5rem; }
+  .teacher-materials-desc { margin-bottom: 1.25rem; }
+}
 @media (max-width: 640px) {
   .teacher-tools-grid { grid-template-columns: 1fr; }
   .teacher-guide-card { padding: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .teacher-tools,
+  .teacher-materials,
+  .teacher-guide,
+  .teacher-about {
+    padding: 2rem 0.875rem;
+  }
 }
 
 /* ── Tutkijalle page ─────────────────────────────────────────────────────── */
@@ -4327,9 +4349,27 @@ a.publication-hero-author-name:hover {
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
 }
+@media (max-width: 700px) {
+  .public-intro,
+  .public-book,
+  .public-tools,
+  .public-media {
+    padding: 2.5rem 1rem;
+  }
+  .public-media-heading { margin-bottom: 1.25rem; }
+  .public-tools-desc    { margin-bottom: 1.25rem; }
+}
 @media (max-width: 640px) {
   .public-book-layout { grid-template-columns: 1fr; }
   .public-book-badge { display: none; }
+}
+@media (max-width: 480px) {
+  .public-intro,
+  .public-book,
+  .public-tools,
+  .public-media {
+    padding: 2rem 0.875rem;
+  }
 }
 
 /* Tools grid */
@@ -4491,8 +4531,28 @@ a.publication-hero-author-name:hover {
 
 @media (max-width: 700px) {
   .stakeholder-activities-page,
-  .researcher-presentations {
-    padding: 3rem 1rem;
+  .researcher-presentations,
+  .researcher-intro,
+  .researcher-themes,
+  .researcher-shield,
+  .researcher-events,
+  .researcher-publications {
+    padding: 2.5rem 1rem;
+  }
+  .researcher-themes-lead  { margin-bottom: 1.5rem; }
+  .researcher-events-heading,
+  .researcher-publications-heading { margin-bottom: 1rem; }
+  .researcher-publications-lead    { margin-bottom: 1.25rem; }
+}
+@media (max-width: 480px) {
+  .stakeholder-activities-page,
+  .researcher-presentations,
+  .researcher-intro,
+  .researcher-themes,
+  .researcher-shield,
+  .researcher-events,
+  .researcher-publications {
+    padding: 2rem 0.875rem;
   }
 }
 
@@ -4914,6 +4974,151 @@ a.publication-hero-author-name:hover {
   color: #666;
   margin-top: 0.2em;
   font-style: italic;
+}
+.scipub-inline-actions {
+  margin-top: 0.55rem;
+}
+.scipub-cite-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid #d7dde5;
+  background: #f7f9fc;
+  color: #1f3f2a;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.scipub-cite-btn:hover,
+.scipub-cite-btn:focus-visible {
+  background: #eef5ef;
+  border-color: var(--global-palette1, #3a7c3a);
+  color: var(--global-palette1, #3a7c3a);
+}
+.scipub-citation-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: max(64px, 8vh) 1rem 2rem;
+}
+.scipub-citation-modal[hidden] {
+  display: none;
+}
+.scipub-citation-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.52);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.scipub-citation-modal__box {
+  position: relative;
+  width: min(760px, 96vw);
+  max-height: calc(100vh - max(64px, 8vh) - 2rem);
+  overflow: auto;
+  background: #fff;
+  color: #0f172a;
+  border-radius: 18px;
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.28);
+  padding: 1.25rem;
+}
+.scipub-citation-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.scipub-citation-modal__title {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.scipub-citation-modal__close,
+.scipub-citation-modal__action {
+  border: 1px solid #d7dde5;
+  background: #fff;
+  color: #0f172a;
+  border-radius: 10px;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.scipub-citation-modal__close:hover,
+.scipub-citation-modal__close:focus-visible,
+.scipub-citation-modal__action:hover,
+.scipub-citation-modal__action:focus-visible {
+  border-color: var(--global-palette1, #3a7c3a);
+  color: var(--global-palette1, #3a7c3a);
+  background: #f7fbf7;
+}
+.scipub-citation-modal__toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.scipub-citation-modal__field,
+.scipub-citation-modal__preview {
+  display: grid;
+  gap: 0.4rem;
+}
+.scipub-citation-modal__label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #334155;
+}
+.scipub-citation-modal__select {
+  min-width: 180px;
+  border: 1px solid #d7dde5;
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+  background: #fff;
+  font: inherit;
+}
+.scipub-citation-modal__actions {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+.scipub-citation-modal__textarea {
+  width: 100%;
+  min-height: 280px;
+  resize: vertical;
+  border: 1px solid #d7dde5;
+  border-radius: 12px;
+  padding: 0.85rem 0.95rem;
+  background: #f8fafc;
+  color: #0f172a;
+  font: 0.85rem/1.55 SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (max-width: 700px) {
+  .scipub-citation-modal__box {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+  .scipub-citation-modal__toolbar {
+    align-items: stretch;
+  }
+  .scipub-citation-modal__field,
+  .scipub-citation-modal__preview,
+  .scipub-citation-modal__actions {
+    width: 100%;
+  }
+  .scipub-citation-modal__action,
+  .scipub-citation-modal__close {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Institutional visibility */
