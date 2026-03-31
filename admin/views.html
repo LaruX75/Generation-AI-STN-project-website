@@ -114,6 +114,20 @@
     .pill-editing button { background: none; border: none; cursor: pointer; font-size: 12px; padding: 0 2px; }
     .saving-spinner { font-size: 11px; color: #6b7280; }
 
+    /* ── Options editor ── */
+    .opts-row { display: flex; gap: 6px; align-items: center; margin-bottom: 6px; }
+    .opts-row .inp-label { width: 150px; padding: 5px 8px; border: 1px solid #ccc; border-radius: 5px; font-size: 12px; font-family: inherit; }
+    .opts-row .inp-cats  { flex: 1; padding: 5px 8px; border: 1px solid #ccc; border-radius: 5px; font-size: 12px; font-family: inherit; color: #374151; }
+    .opts-row .inp-cats::placeholder { color: #9ca3af; }
+    .opts-header { display: flex; gap: 6px; margin-bottom: 4px; font-size: 11px; font-weight: 600; color: #6b7280; }
+    .opts-header .h-label { width: 150px; }
+    .opts-header .h-cats  { flex: 1; }
+    #opts-modal .modal { width: 560px; }
+    .btn-gear { background: none; border: 1px solid #d1d5db; border-radius: 5px; color: #6b7280; font-size: 12px; padding: 5px 9px; cursor: pointer; white-space: nowrap; }
+    .btn-gear:hover { background: #f3f4f6; color: #374151; border-color: #9ca3af; }
+    .btn-reset { background: none; border: 1px solid #d1d5db; border-radius: 6px; color: #6b7280; font-size: 12px; padding: 7px 12px; cursor: pointer; font-family: inherit; margin-right: auto; }
+    .btn-reset:hover { background: #fef3c7; border-color: #f59e0b; color: #92400e; }
+
     /* ── Modal ── */
     .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 100; }
     .modal { background: #fff; border-radius: 10px; padding: 24px; width: 420px; max-width: 95vw; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
@@ -168,6 +182,7 @@
       <div class="toolbar">
         <input type="text" id="uutiset-search" placeholder="Hae otsikolla…" oninput="renderTab('uutiset')">
         <span class="count-label" id="uutiset-count"></span>
+        <button class="btn-gear" onclick="openOptsModal('source')">⚙ Muokkaa lähteitä</button>
       </div>
       <table>
         <thead><tr>
@@ -187,6 +202,7 @@
       <div class="toolbar">
         <input type="text" id="tapahtumat-search" placeholder="Hae otsikolla…" oninput="renderTab('tapahtumat')">
         <span class="count-label" id="tapahtumat-count"></span>
+        <button class="btn-gear" onclick="openOptsModal('tap-type')">⚙ Muokkaa tyyppejä</button>
       </div>
       <table>
         <thead><tr>
@@ -206,6 +222,7 @@
       <div class="toolbar">
         <input type="text" id="toiminta-search" placeholder="Hae otsikolla…" oninput="renderTab('toiminta')">
         <span class="count-label" id="toiminta-count"></span>
+        <button class="btn-gear" onclick="openOptsModal('toi-type')">⚙ Muokkaa tyyppejä</button>
       </div>
       <table>
         <thead><tr>
@@ -239,13 +256,29 @@
   </div>
 </div>
 
+<!-- Options editor modal -->
+<div class="modal-overlay" id="opts-modal" style="display:none" onclick="if(event.target===this)closeOptsModal()">
+  <div class="modal">
+    <h3 id="opts-modal-title"></h3>
+    <p id="opts-modal-desc" style="color:#555;font-size:12px;margin-bottom:10px"></p>
+    <div class="opts-header"><span class="h-label">Nimi</span><span class="h-cats">Kategoriatunnisteet (pilkuilla erotettu)</span><span style="width:28px"></span></div>
+    <div id="opts-list"></div>
+    <button class="pill-add-btn" style="margin-top:6px" onclick="addOptsRow()">+ Lisää vaihtoehto</button>
+    <div class="modal-actions" style="margin-top:16px">
+      <button class="btn-reset" onclick="resetOptsDefaults()">Palauta oletukset</button>
+      <button class="btn-cancel" onclick="closeOptsModal()">Peruuta</button>
+      <button class="btn-save" onclick="saveOpts()">Tallenna</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const REPO = "LaruX75/Generation-AI-STN-project-website";
 const BRANCH = "main";
 
 // ── Field option sets ─────────────────────────────────────────────────────────
 
-const SOURCE_OPTIONS = [
+const DEFAULT_SOURCE_OPTIONS = [
   { value: "hanke",   label: "Hanke",             cats: [] },
   { value: "yle",     label: "Yle",               cats: ["YLE", "Yle"] },
   { value: "mtv",     label: "MTV",               cats: ["MTV3", "MTV Uutiset", "MTV"] },
@@ -253,13 +286,13 @@ const SOURCE_OPTIONS = [
   { value: "podcast", label: "Podcast",           cats: ["Podcast"] },
   { value: "blogi",   label: "Blogi",             cats: ["Blogikirjoitus"] },
 ];
-const TAPAHTUMAT_TYPE_OPTIONS = [
+const DEFAULT_TAP_TYPE_OPTIONS = [
   { value: "tapahtuma",   label: "Tapahtuma",                  cats: ["Tapahtuma"] },
   { value: "konferenssi", label: "Konferenssit ja seminaarit", cats: ["Konferenssit ja seminaarit"] },
   { value: "webinaari",   label: "Webinaari",                  cats: ["Webinaari"] },
   { value: "tyopaja",     label: "Työpaja",                    cats: ["Työpaja"] },
 ];
-const TOIMINTA_TYPE_OPTIONS = [
+const DEFAULT_TOI_TYPE_OPTIONS = [
   { value: "",                label: "— ei tyyppiä —",     cats: [] },
   { value: "julkaisu",        label: "Julkaisu",            cats: ["Julkaisu"] },
   { value: "blogi",           label: "Blogikirjoitus",      cats: ["Blogikirjoitus"] },
@@ -267,9 +300,20 @@ const TOIMINTA_TYPE_OPTIONS = [
   { value: "tyopaja",         label: "Työpaja",             cats: ["Työpaja"] },
   { value: "koulutus",        label: "Koulutus",            cats: ["Koulutus"] },
 ];
-const ALL_SOURCE_CATS    = SOURCE_OPTIONS.flatMap(o => o.cats);
-const ALL_TAP_TYPE_CATS  = TAPAHTUMAT_TYPE_OPTIONS.flatMap(o => o.cats);
-const ALL_TOI_TYPE_CATS  = TOIMINTA_TYPE_OPTIONS.flatMap(o => o.cats);
+
+function loadOpts(key, defaults) {
+  try { const s = localStorage.getItem("genai-opts-" + key); return s ? JSON.parse(s) : defaults; } catch { return defaults; }
+}
+let SOURCE_OPTIONS          = loadOpts("source",   DEFAULT_SOURCE_OPTIONS);
+let TAPAHTUMAT_TYPE_OPTIONS = loadOpts("tap-type", DEFAULT_TAP_TYPE_OPTIONS);
+let TOIMINTA_TYPE_OPTIONS   = loadOpts("toi-type", DEFAULT_TOI_TYPE_OPTIONS);
+let ALL_SOURCE_CATS, ALL_TAP_TYPE_CATS, ALL_TOI_TYPE_CATS;
+function recomputeAllCats() {
+  ALL_SOURCE_CATS   = SOURCE_OPTIONS.flatMap(o => o.cats);
+  ALL_TAP_TYPE_CATS = TAPAHTUMAT_TYPE_OPTIONS.flatMap(o => o.cats);
+  ALL_TOI_TYPE_CATS = TOIMINTA_TYPE_OPTIONS.flatMap(o => o.cats);
+}
+recomputeAllCats();
 
 // ── Auth ──────────────────────────────────────────────────────────────────────
 
@@ -667,6 +711,69 @@ function showNotice(msg, type) {
   const el = document.getElementById("notice");
   el.innerHTML = `<div class="notice notice-${type}">${esc(msg)}</div>`;
   setTimeout(() => { el.innerHTML = ""; }, 6000);
+}
+
+// ── Options editor ─────────────────────────────────────────────────────────────
+
+let optsFieldType = null;
+let optsRows = [];
+
+function openOptsModal(fieldType) {
+  optsFieldType = fieldType;
+  const map = {
+    "source":   { title: "Lähteet (Uutiset)",      opts: SOURCE_OPTIONS,          desc: "Ensimmäinen kategoria lisätään julkaisuun; kaikki tunnisteet käytetään tunnistuksessa." },
+    "tap-type": { title: "Tyypit (Tapahtumat)",     opts: TAPAHTUMAT_TYPE_OPTIONS, desc: "Ensimmäinen kategoria lisätään julkaisuun; kaikki tunnisteet käytetään tunnistuksessa." },
+    "toi-type": { title: "Tyypit (Toiminta)",       opts: TOIMINTA_TYPE_OPTIONS,   desc: "Jätä kategoria-kenttä tyhjäksi jos vaihtoehto tarkoittaa 'ei tyyppiä'." },
+  };
+  const { title, opts, desc } = map[fieldType];
+  document.getElementById("opts-modal-title").textContent = "Muokkaa: " + title;
+  document.getElementById("opts-modal-desc").textContent = desc;
+  optsRows = opts.map(o => ({ value: o.value, label: o.label, cats: [...o.cats] }));
+  renderOptsRows();
+  document.getElementById("opts-modal").style.display = "flex";
+}
+
+function renderOptsRows() {
+  const list = document.getElementById("opts-list");
+  list.innerHTML = optsRows.map((row, i) => `
+    <div class="opts-row">
+      <input class="inp-label" type="text" value="${esc(row.label)}" placeholder="Nimi" oninput="optsRows[${i}].label=this.value">
+      <input class="inp-cats"  type="text" value="${esc(row.cats.join(", "))}" placeholder="esim. YLE, Yle" oninput="optsRows[${i}].cats=this.value.split(',').map(s=>s.trim()).filter(Boolean)">
+      <button class="pill-btn remove" style="font-size:16px;padding:0 4px" onclick="optsRows.splice(${i},1);renderOptsRows()" title="Poista">×</button>
+    </div>`).join("");
+}
+
+function addOptsRow() {
+  optsRows.push({ value: "", label: "", cats: [] });
+  renderOptsRows();
+  const inputs = document.querySelectorAll("#opts-list .inp-label");
+  if (inputs.length) inputs[inputs.length - 1].focus();
+}
+
+function saveOpts() {
+  const opts = optsRows.map((row, i) => ({
+    value: row.value || row.label.toLowerCase().replace(/\s+/g, "_").replace(/[^a-z0-9_]/g, "") || String(i),
+    label: row.label || "—",
+    cats: row.cats
+  }));
+  localStorage.setItem("genai-opts-" + optsFieldType, JSON.stringify(opts));
+  if (optsFieldType === "source")   SOURCE_OPTIONS          = opts;
+  else if (optsFieldType === "tap-type") TAPAHTUMAT_TYPE_OPTIONS = opts;
+  else if (optsFieldType === "toi-type") TOIMINTA_TYPE_OPTIONS   = opts;
+  recomputeAllCats();
+  closeOptsModal();
+  rerenderCurrentTab();
+}
+
+function resetOptsDefaults() {
+  const map = { "source": DEFAULT_SOURCE_OPTIONS, "tap-type": DEFAULT_TAP_TYPE_OPTIONS, "toi-type": DEFAULT_TOI_TYPE_OPTIONS };
+  optsRows = map[optsFieldType].map(o => ({ ...o, cats: [...o.cats] }));
+  renderOptsRows();
+}
+
+function closeOptsModal() {
+  document.getElementById("opts-modal").style.display = "none";
+  optsFieldType = null;
 }
 </script>
 </body>
