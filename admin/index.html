@@ -21,6 +21,13 @@
     }
     #admin-navbar a:hover { color: #e2e8f0; background: rgba(255,255,255,0.07); }
     #admin-navbar a.active { color: #fff; border-bottom: 2px solid #60a5fa; }
+    #admin-navbar .nav-spacer { flex: 1; }
+    #admin-navbar .nav-logout {
+      background: none; border: 1px solid #475569; color: #94a3b8;
+      padding: 4px 12px; border-radius: 5px; cursor: pointer;
+      font-size: 12px; font-family: inherit;
+    }
+    #admin-navbar .nav-logout:hover { border-color: #94a3b8; color: #e2e8f0; }
     /* Push Sveltia down */
     body { padding-top: 40px !important; }
   </style>
@@ -30,7 +37,18 @@
     <span class="nav-brand">Generation AI</span>
     <a href="/admin/" class="active">Sveltia CMS</a>
     <a href="/admin/categories.html">Kategoriatyökalu</a>
+    <span class="nav-spacer"></span>
+    <button class="nav-logout" onclick="adminLogout()">Kirjaudu ulos</button>
   </nav>
+  <script>
+    function adminLogout() {
+      Object.keys(localStorage)
+        .filter(k => k.startsWith("sveltia-cms"))
+        .forEach(k => localStorage.removeItem(k));
+      localStorage.removeItem("genai-cat-token");
+      location.href = "/admin/";
+    }
+  </script>
   <!-- Sveltia CMS -->
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
 </body>
