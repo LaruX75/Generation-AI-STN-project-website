@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Näkymien hallinta — Generation AI</title>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; font-size: 14px; background: #f5f5f5; color: #222; }
+
+    #admin-navbar {
+      background: #1a1a2e; height: 40px;
+      display: flex; align-items: center; padding: 0 16px; gap: 0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    }
+    #admin-navbar .nav-brand { color: #e2e8f0; font-weight: 600; margin-right: 20px; white-space: nowrap; }
+    #admin-navbar a {
+      color: #94a3b8; text-decoration: none;
+      padding: 0 14px; height: 40px; display: flex; align-items: center;
+    }
+    #admin-navbar a:hover { color: #e2e8f0; background: rgba(255,255,255,0.07); }
+    #admin-navbar a.active { color: #fff; border-bottom: 2px solid #60a5fa; }
+    #admin-navbar .nav-spacer { flex: 1; }
+    #admin-navbar .nav-logout {
+      background: none; border: 1px solid #475569; color: #94a3b8;
+      padding: 4px 12px; border-radius: 5px; cursor: pointer;
+      font-size: 12px; font-family: inherit;
+    }
+    #admin-navbar .nav-logout:hover { border-color: #94a3b8; color: #e2e8f0; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+    .auth-card {
+      background: #fff; border: 1px solid #ddd; border-radius: 8px;
+      padding: 24px; margin-bottom: 20px;
+    }
+    .auth-card h2 { font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+    .auth-card p { color: #666; font-size: 13px; margin-bottom: 12px; }
+    .auth-card a { color: #2563eb; }
+    .input-row { display: flex; gap: 8px; }
+    input[type="password"], input[type="text"] {
+      flex: 1; padding: 8px 10px; border: 1px solid #ccc; border-radius: 6px;
+      font-size: 13px; font-family: monospace;
+    }
+    button { padding: 8px 16px; border: none; border-radius: 6px; font-size: 13px; cursor: pointer; font-family: inherit; }
+    .btn-primary { background: #2563eb; color: #fff; }
+    .btn-primary:hover { background: #1d4ed8; }
+    .btn-primary:disabled { background: #93c5fd; cursor: not-allowed; }
+
+    .tabs { display: flex; border-bottom: 2px solid #e5e7eb; margin-bottom: 16px; }
+    .tab {
+      padding: 8px 20px; cursor: pointer; font-size: 13px; font-weight: 500;
+      border-bottom: 2px solid transparent; margin-bottom: -2px; color: #6b7280;
+    }
+    .tab.active { border-bottom-color: #2563eb; color: #2563eb; }
+    .tab:hover:not(.active) { color: #374151; }
+
+    .toolbar { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; }
+    .toolbar input[type="text"] { flex: 1; max-width: 320px; font-family: inherit; font-size: 13px; }
+    .count-label { font-size: 12px; color: #6b7280; }
+
+    table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb; }
+    th { background: #f9fafb; font-size: 12px; font-weight: 600; text-align: left; padding: 8px 12px; color: #374151; border-bottom: 1px solid #e5e7eb; cursor: pointer; user-select: none; }
+    th:hover { background: #f3f4f6; }
+    th .sort-icon { margin-left: 4px; opacity: 0.4; }
+    th.sorted .sort-icon { opacity: 1; }
+    td { padding: 8px 12px; border-bottom: 1px solid #f3f4f6; vertical-align: middle; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #fafafa; }
+
+    .title-link { color: #1d4ed8; text-decoration: none; font-size: 13px; }
+    .title-link:hover { text-decoration: underline; }
+    .date-cell { color: #6b7280; font-size: 12px; white-space: nowrap; }
+
+    /* Inline field editor */
+    .field-cell { min-width: 180px; }
+    .field-select {
+      width: 100%; padding: 5px 8px; border: 1px solid #d1d5db; border-radius: 6px;
+      font-size: 12px; background: #fff; cursor: pointer; font-family: inherit;
+    }
+    .field-select:focus { border-color: #60a5fa; outline: none; box-shadow: 0 0 0 2px #bfdbfe; }
+    .field-select.dirty { border-color: #f59e0b; background: #fffbeb; }
+    .row-status { font-size: 11px; min-width: 90px; }
+    .status-saving { color: #6b7280; }
+    .status-ok { color: #059669; }
+    .status-error { color: #dc2626; }
+
+    .notice { padding: 10px 14px; border-radius: 6px; font-size: 13px; margin-bottom: 12px; }
+    .notice-error { background: #fde8e8; color: #c81e1e; border: 1px solid #fbd5d5; }
+    .notice-success { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+
+    #main { display: none; }
+  </style>
+</head>
+<body>
+
+<nav id="admin-navbar">
+  <span class="nav-brand">Generation AI</span>
+  <a href="/admin/">Sveltia CMS</a>
+  <a href="/admin/categories.html">Kategoriatyökalu</a>
+  <a href="/admin/views.html" class="active">Näkymien hallinta</a>
+  <span class="nav-spacer"></span>
+  <button class="nav-logout" onclick="adminLogout()">Kirjaudu ulos</button>
+</nav>
+
+<div class="container">
+  <div id="notice"></div>
+
+  <div class="auth-card" id="auth-card">
+    <h2>Kirjaudu ensin Sveltiaan</h2>
+    <p>Työkalu käyttää automaattisesti Sveltian GitHub-kirjautumista. Kirjaudu ensin <a href="/admin/">Sveltiaan</a> ja palaa sitten tänne.</p>
+    <p style="margin-top:8px">Tai syötä <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">GitHub Personal Access Token</a> (scope: <code>repo</code>):</p>
+    <div class="input-row" style="margin-top:10px">
+      <input type="password" id="token-input" placeholder="ghp_..." autocomplete="off">
+      <button class="btn-primary" onclick="loadData(false)">Lataa</button>
+    </div>
+  </div>
+
+  <div id="main">
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('uutiset')">Uutiset</div>
+      <div class="tab" onclick="switchTab('tapahtumat')">Tapahtumat</div>
+      <div class="tab" onclick="switchTab('toiminta')">Toiminta</div>
+    </div>
+
+    <div id="tab-uutiset">
+      <div class="toolbar">
+        <input type="text" id="uutiset-search" placeholder="Hae otsikolla…" oninput="renderTab('uutiset')">
+        <span class="count-label" id="uutiset-count"></span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th onclick="setSort('uutiset','date')" id="uutiset-th-date">Päivämäärä <span class="sort-icon">↕</span></th>
+            <th onclick="setSort('uutiset','title')" id="uutiset-th-title">Otsikko <span class="sort-icon">↕</span></th>
+            <th style="width:200px">Lähde</th>
+            <th style="width:110px"></th>
+          </tr>
+        </thead>
+        <tbody id="uutiset-tbody"></tbody>
+      </table>
+    </div>
+
+    <div id="tab-tapahtumat" style="display:none">
+      <div class="toolbar">
+        <input type="text" id="tapahtumat-search" placeholder="Hae otsikolla…" oninput="renderTab('tapahtumat')">
+        <span class="count-label" id="tapahtumat-count"></span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th onclick="setSort('tapahtumat','date')" id="tapahtumat-th-date">Päivämäärä <span class="sort-icon">↕</span></th>
+            <th onclick="setSort('tapahtumat','title')" id="tapahtumat-th-title">Otsikko <span class="sort-icon">↕</span></th>
+            <th style="width:220px">Tyyppi</th>
+            <th style="width:110px"></th>
+          </tr>
+        </thead>
+        <tbody id="tapahtumat-tbody"></tbody>
+      </table>
+    </div>
+
+    <div id="tab-toiminta" style="display:none">
+      <div class="toolbar">
+        <input type="text" id="toiminta-search" placeholder="Hae otsikolla…" oninput="renderTab('toiminta')">
+        <span class="count-label" id="toiminta-count"></span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th onclick="setSort('toiminta','date')" id="toiminta-th-date">Päivämäärä <span class="sort-icon">↕</span></th>
+            <th onclick="setSort('toiminta','title')" id="toiminta-th-title">Otsikko <span class="sort-icon">↕</span></th>
+            <th style="width:220px">Tyyppi</th>
+            <th style="width:110px"></th>
+          </tr>
+        </thead>
+        <tbody id="toiminta-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+const REPO = "LaruX75/Generation-AI-STN-project-website";
+const BRANCH = "main";
+
+// ── Field definitions ─────────────────────────────────────────────────────────
+
+// Source categories for Uutiset (in subCategories or extraCategories)
+const SOURCE_OPTIONS = [
+  { value: "hanke",  label: "Hanke",             cats: [] },
+  { value: "yle",    label: "Yle",               cats: ["YLE", "Yle"] },
+  { value: "mtv",    label: "MTV",               cats: ["MTV3", "MTV Uutiset", "MTV"] },
+  { value: "hs",     label: "Helsingin Sanomat", cats: ["Helsingin Sanomat", "HS"] },
+  { value: "podcast",label: "Podcast",           cats: ["Podcast"] },
+  { value: "blogi",  label: "Blogi",             cats: ["Blogikirjoitus"] },
+];
+
+// Type categories for Tapahtumat (in subCategories/extraCategories)
+const TAPAHTUMAT_TYPE_OPTIONS = [
+  { value: "tapahtuma",    label: "Tapahtuma",                  cats: ["Tapahtuma"] },
+  { value: "konferenssi",  label: "Konferenssit ja seminaarit", cats: ["Konferenssit ja seminaarit"] },
+  { value: "webinaari",    label: "Webinaari",                  cats: ["Webinaari"] },
+  { value: "tyopaja",      label: "Työpaja",                    cats: ["Työpaja"] },
+];
+
+// Type categories for Toiminta (in subCategories)
+const TOIMINTA_TYPE_OPTIONS = [
+  { value: "",               label: "— ei tyyppiä —",    cats: [] },
+  { value: "julkaisu",       label: "Julkaisu",           cats: ["Julkaisu"] },
+  { value: "blogi",          label: "Blogikirjoitus",     cats: ["Blogikirjoitus"] },
+  { value: "konferenssijulk",label: "Konferenssijulkaisu",cats: ["Konferenssijulkaisu"] },
+  { value: "tyopaja",        label: "Työpaja",            cats: ["Työpaja"] },
+  { value: "koulutus",       label: "Koulutus",           cats: ["Koulutus"] },
+];
+
+// ── Auth ──────────────────────────────────────────────────────────────────────
+
+let allPosts = [];
+let token = "";
+
+function getSveltiaToken() {
+  try { return JSON.parse(localStorage.getItem("sveltia-cms.user") || "{}").token || ""; } catch { return ""; }
+}
+
+function adminLogout() {
+  Object.keys(localStorage).filter(k => k.startsWith("sveltia-cms")).forEach(k => localStorage.removeItem(k));
+  localStorage.removeItem("genai-cat-token");
+  location.href = "/admin/";
+}
+
+(function init() {
+  const t = getSveltiaToken() || localStorage.getItem("genai-cat-token") || "";
+  if (t) {
+    token = t;
+    document.getElementById("auth-card").style.display = "none";
+    loadData(true);
+  }
+}());
+
+async function loadData(autoAuth) {
+  if (!autoAuth) {
+    const t = document.getElementById("token-input").value.trim();
+    if (!t) { showNotice("Anna GitHub token.", "error"); return; }
+    token = t;
+    localStorage.setItem("genai-cat-token", token);
+  }
+  const btn = document.querySelector("#auth-card button");
+  if (btn) { btn.disabled = true; btn.textContent = "Ladataan…"; }
+  try {
+    const res = await fetch("/admin/categories-data.json");
+    if (!res.ok) throw new Error("categories-data.json ei löydy — buildaa sivusto ensin.");
+    allPosts = await res.json();
+    document.getElementById("auth-card").style.display = "none";
+    document.getElementById("main").style.display = "block";
+    renderTab("uutiset"); renderTab("tapahtumat"); renderTab("toiminta");
+  } catch (e) {
+    showNotice(e.message, "error");
+    document.getElementById("auth-card").style.display = "";
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = "Lataa"; }
+  }
+}
+
+// ── Tabs & sorting ────────────────────────────────────────────────────────────
+
+let currentTab = "uutiset";
+const sortState = { uutiset: { col: "date", asc: false }, tapahtumat: { col: "date", asc: false }, toiminta: { col: "date", asc: false } };
+
+function switchTab(name) {
+  currentTab = name;
+  ["uutiset","tapahtumat","toiminta"].forEach(t => {
+    document.getElementById(`tab-${t}`).style.display = t === name ? "" : "none";
+    document.querySelectorAll(".tab")[["uutiset","tapahtumat","toiminta"].indexOf(t)]
+      .classList.toggle("active", t === name);
+  });
+}
+
+function setSort(tab, col) {
+  if (sortState[tab].col === col) sortState[tab].asc = !sortState[tab].asc;
+  else { sortState[tab].col = col; sortState[tab].asc = col === "title"; }
+  ["date","title"].forEach(c => {
+    const th = document.getElementById(`${tab}-th-${c}`);
+    if (!th) return;
+    th.classList.toggle("sorted", sortState[tab].col === c);
+    th.querySelector(".sort-icon").textContent = sortState[tab].col === c ? (sortState[tab].asc ? "↑" : "↓") : "↕";
+  });
+  renderTab(tab);
+}
+
+// ── Field detection ───────────────────────────────────────────────────────────
+
+function allCats(post) {
+  return [post.mainCategory, ...(post.subCategories||[]), ...(post.extraCategories||[])].filter(Boolean);
+}
+
+function detectSource(post) {
+  const cats = allCats(post);
+  for (const opt of SOURCE_OPTIONS) {
+    if (opt.cats.length && opt.cats.some(c => cats.includes(c))) return opt.value;
+  }
+  return "hanke";
+}
+
+function detectTapahtumatType(post) {
+  const cats = allCats(post);
+  for (const opt of TAPAHTUMAT_TYPE_OPTIONS) {
+    if (opt.cats.some(c => cats.includes(c))) return opt.value;
+  }
+  return "tapahtuma";
+}
+
+function detectToimintaType(post) {
+  const subs = post.subCategories || [];
+  for (const opt of TOIMINTA_TYPE_OPTIONS) {
+    if (opt.cats.length && opt.cats.some(c => subs.includes(c))) return opt.value;
+  }
+  return "";
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+
+function renderTab(tab) {
+  const q = (document.getElementById(`${tab}-search`)?.value || "").toLowerCase();
+
+  let posts;
+  if (tab === "uutiset")    posts = allPosts.filter(p => p.mainCategory === "Mediassa");
+  if (tab === "tapahtumat") posts = allPosts.filter(p => p.mainCategory === "Tapahtumat");
+  if (tab === "toiminta")   posts = allPosts.filter(p => p.mainCategory === "Toiminta");
+
+  if (q) posts = posts.filter(p => p.title.toLowerCase().includes(q));
+
+  const { col, asc } = sortState[tab];
+  posts = posts.slice().sort((a, b) => {
+    const va = col === "date" ? (a.date || "") : a.title.toLowerCase();
+    const vb = col === "date" ? (b.date || "") : b.title.toLowerCase();
+    return asc ? va.localeCompare(vb) : vb.localeCompare(va);
+  });
+
+  document.getElementById(`${tab}-count`).textContent = `${posts.length} julkaisua`;
+
+  const rows = posts.map(post => {
+    const ep = esc(post.path);
+    let fieldHtml;
+
+    if (tab === "uutiset") {
+      const cur = detectSource(post);
+      fieldHtml = selectHtml(ep, "source", SOURCE_OPTIONS, cur);
+    } else if (tab === "tapahtumat") {
+      const cur = detectTapahtumatType(post);
+      fieldHtml = selectHtml(ep, "tapahtumat-type", TAPAHTUMAT_TYPE_OPTIONS, cur);
+    } else {
+      const cur = detectToimintaType(post);
+      fieldHtml = selectHtml(ep, "toiminta-type", TOIMINTA_TYPE_OPTIONS, cur);
+    }
+
+    return `<tr>
+      <td class="date-cell">${esc(post.date || "")}</td>
+      <td><a class="title-link" href="${esc(post.url)}" target="_blank">${esc(post.title)}</a></td>
+      <td class="field-cell">${fieldHtml}</td>
+      <td class="row-status" id="status-${ep}"></td>
+    </tr>`;
+  }).join("");
+
+  document.getElementById(`${tab}-tbody`).innerHTML = rows;
+}
+
+function selectHtml(path, fieldType, options, currentValue) {
+  const opts = options.map(o =>
+    `<option value="${esc(o.value)}" ${o.value === currentValue ? "selected" : ""}>${esc(o.label)}</option>`
+  ).join("");
+  return `<select class="field-select" onchange="onFieldChange('${path}','${fieldType}',this)">${opts}</select>`;
+}
+
+// ── Save on change ────────────────────────────────────────────────────────────
+
+async function onFieldChange(path, fieldType, select) {
+  const newValue = select.value;
+  select.classList.add("dirty");
+  const statusEl = document.getElementById(`status-${path}`);
+  statusEl.className = "row-status status-saving";
+  statusEl.textContent = "Tallennetaan…";
+
+  try {
+    if (fieldType === "source") {
+      await saveSource(path, newValue);
+    } else if (fieldType === "tapahtumat-type") {
+      await saveTapahtumatType(path, newValue);
+    } else if (fieldType === "toiminta-type") {
+      await saveToimintaType(path, newValue);
+    }
+    select.classList.remove("dirty");
+    statusEl.className = "row-status status-ok";
+    statusEl.textContent = "✓ Tallennettu";
+    // Update local data
+    await refreshData();
+    setTimeout(() => { if (statusEl) statusEl.textContent = ""; }, 3000);
+  } catch (e) {
+    statusEl.className = "row-status status-error";
+    statusEl.textContent = "Virhe: " + e.message;
+  }
+}
+
+// ── Field-specific save logic ─────────────────────────────────────────────────
+
+const ALL_SOURCE_CATS = SOURCE_OPTIONS.flatMap(o => o.cats);
+const ALL_TAP_TYPE_CATS = TAPAHTUMAT_TYPE_OPTIONS.flatMap(o => o.cats);
+const ALL_TOI_TYPE_CATS = TOIMINTA_TYPE_OPTIONS.flatMap(o => o.cats);
+
+async function saveSource(path, newValue) {
+  const opt = SOURCE_OPTIONS.find(o => o.value === newValue);
+  if (!opt) return;
+  await modifyPost(path, data => {
+    // Remove all source identifiers from sub + extra
+    if (data.subCategories) data.subCategories = data.subCategories.filter(c => !ALL_SOURCE_CATS.includes(c));
+    if (data.extraCategories) data.extraCategories = data.extraCategories.filter(c => !ALL_SOURCE_CATS.includes(c));
+    // Add new source to subCategories (unless "hanke" = no tag)
+    if (opt.cats.length) {
+      if (!data.subCategories) data.subCategories = [];
+      if (!data.subCategories.includes(opt.cats[0])) data.subCategories.push(opt.cats[0]);
+    }
+    // Cleanup empty arrays
+    if (data.subCategories && data.subCategories.length === 0) delete data.subCategories;
+    if (data.extraCategories && data.extraCategories.length === 0) delete data.extraCategories;
+  });
+}
+
+async function saveTapahtumatType(path, newValue) {
+  const opt = TAPAHTUMAT_TYPE_OPTIONS.find(o => o.value === newValue);
+  if (!opt) return;
+  await modifyPost(path, data => {
+    if (data.subCategories) data.subCategories = data.subCategories.filter(c => !ALL_TAP_TYPE_CATS.includes(c));
+    if (data.extraCategories) data.extraCategories = data.extraCategories.filter(c => !ALL_TAP_TYPE_CATS.includes(c));
+    if (opt.cats.length) {
+      if (!data.subCategories) data.subCategories = [];
+      if (!data.subCategories.includes(opt.cats[0])) data.subCategories.push(opt.cats[0]);
+    }
+    if (data.subCategories && data.subCategories.length === 0) delete data.subCategories;
+    if (data.extraCategories && data.extraCategories.length === 0) delete data.extraCategories;
+  });
+}
+
+async function saveToimintaType(path, newValue) {
+  const opt = TOIMINTA_TYPE_OPTIONS.find(o => o.value === newValue);
+  if (!opt) return;
+  await modifyPost(path, data => {
+    if (data.subCategories) data.subCategories = data.subCategories.filter(c => !ALL_TOI_TYPE_CATS.includes(c));
+    if (opt.cats.length) {
+      if (!data.subCategories) data.subCategories = [];
+      if (!data.subCategories.includes(opt.cats[0])) data.subCategories.push(opt.cats[0]);
+    }
+    if (data.subCategories && data.subCategories.length === 0) delete data.subCategories;
+  });
+}
+
+// ── GitHub file update ────────────────────────────────────────────────────────
+
+async function modifyPost(filePath, mutate) {
+  const url = `https://api.github.com/repos/${REPO}/contents/${filePath}`;
+  const headers = { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" };
+
+  const res = await fetch(url, { headers });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const fileData = await res.json();
+  const original = b64decode(fileData.content);
+
+  const fm = parseFrontmatter(original);
+  if (!fm) throw new Error("Frontmatter ei löydy");
+  let data;
+  try { data = jsyaml.load(fm.yaml); } catch { throw new Error("YAML-virhe"); }
+
+  mutate(data);
+
+  const newYaml = jsyaml.dump(data, { lineWidth: -1, noCompatMode: true, quotingType: '"' });
+  const updated = `${fm.open}${newYaml}${fm.close}${fm.body}`;
+  if (updated === original) return;
+
+  await fetch(url, {
+    method: "PUT", headers,
+    body: JSON.stringify({ message: `Päivitä kenttä: ${filePath.split("/").pop()}`, content: b64encode(updated), sha: fileData.sha, branch: BRANCH })
+  });
+}
+
+async function refreshData() {
+  const res = await fetch("/admin/categories-data.json?t=" + Date.now());
+  if (res.ok) allPosts = await res.json();
+}
+
+// ── Utils ─────────────────────────────────────────────────────────────────────
+
+function parseFrontmatter(content) {
+  const m = content.match(/^(---\r?\n)([\s\S]*?)\r?\n(---\r?\n?)([\s\S]*)$/);
+  if (!m) return null;
+  return { open: m[1], yaml: m[2], close: m[3], body: m[4] };
+}
+
+function b64decode(str) {
+  return decodeURIComponent(atob(str.replace(/\s/g, "")).split("").map(c => "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2)).join(""));
+}
+
+function b64encode(str) { return btoa(unescape(encodeURIComponent(str))); }
+
+function esc(s) {
+  return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+}
+
+function showNotice(msg, type) {
+  const el = document.getElementById("notice");
+  el.innerHTML = `<div class="notice notice-${type}">${esc(msg)}</div>`;
+  setTimeout(() => { el.innerHTML = ""; }, 6000);
+}
+</script>
+</body>
+</html>
