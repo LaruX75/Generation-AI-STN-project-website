@@ -301,12 +301,9 @@ const DEFAULT_TOI_TYPE_OPTIONS = [
   { value: "koulutus",        label: "Koulutus",            cats: ["Koulutus"] },
 ];
 
-function loadOpts(key, defaults) {
-  try { const s = localStorage.getItem("genai-opts-" + key); return s ? JSON.parse(s) : defaults; } catch { return defaults; }
-}
-let SOURCE_OPTIONS          = loadOpts("source",   DEFAULT_SOURCE_OPTIONS);
-let TAPAHTUMAT_TYPE_OPTIONS = loadOpts("tap-type", DEFAULT_TAP_TYPE_OPTIONS);
-let TOIMINTA_TYPE_OPTIONS   = loadOpts("toi-type", DEFAULT_TOI_TYPE_OPTIONS);
+let SOURCE_OPTIONS          = DEFAULT_SOURCE_OPTIONS;
+let TAPAHTUMAT_TYPE_OPTIONS = DEFAULT_TAP_TYPE_OPTIONS;
+let TOIMINTA_TYPE_OPTIONS   = DEFAULT_TOI_TYPE_OPTIONS;
 let ALL_SOURCE_CATS, ALL_TAP_TYPE_CATS, ALL_TOI_TYPE_CATS;
 function recomputeAllCats() {
   ALL_SOURCE_CATS   = SOURCE_OPTIONS.flatMap(o => o.cats);
@@ -343,9 +340,19 @@ async function loadData(auto) {
   const btn = document.querySelector("#auth-card button");
   if (btn) { btn.disabled = true; btn.textContent = "Ladataan…"; }
   try {
-    const res = await fetch("/admin/categories-data.json");
-    if (!res.ok) throw new Error("categories-data.json ei löydy — buildaa sivusto ensin.");
-    allPosts = await res.json();
+    const [postsRes, cfgRes] = await Promise.all([
+      fetch("/admin/categories-data.json"),
+      fetch("/admin/views-config.json?t=" + Date.now())
+    ]);
+    if (!postsRes.ok) throw new Error("categories-data.json ei löydy — buildaa sivusto ensin.");
+    allPosts = await postsRes.json();
+    if (cfgRes.ok) {
+      const cfg = await cfgRes.json();
+      if (cfg.sourceOptions)        SOURCE_OPTIONS          = cfg.sourceOptions;
+      if (cfg.tapahtumatTypeOptions) TAPAHTUMAT_TYPE_OPTIONS = cfg.tapahtumatTypeOptions;
+      if (cfg.toimintaTypeOptions)   TOIMINTA_TYPE_OPTIONS   = cfg.toimintaTypeOptions;
+      recomputeAllCats();
+    }
     document.getElementById("auth-card").style.display = "none";
     document.getElementById("main").style.display = "block";
     renderTab("uutiset"); renderTab("tapahtumat"); renderTab("toiminta");
@@ -786,19 +793,46 @@ function addOptsRow() {
   if (inputs.length) inputs[inputs.length - 1].focus();
 }
 
-function saveOpts() {
+async function saveOpts() {
   const opts = optsRows.map((row, i) => ({
-    value: row.value || row.label.toLowerCase().replace(/\s+/g, "_").replace(/[^a-z0-9_]/g, "") || String(i),
+    value: row.value || row.label.toLowerCase().replace(/\s+/g, "_").replace(/[^a-z0-9_äöå]/g, "") || String(i),
     label: row.label || "—",
     cats: row.cats
   }));
-  localStorage.setItem("genai-opts-" + optsFieldType, JSON.stringify(opts));
-  if (optsFieldType === "source")   SOURCE_OPTIONS          = opts;
-  else if (optsFieldType === "tap-type") TAPAHTUMAT_TYPE_OPTIONS = opts;
-  else if (optsFieldType === "toi-type") TOIMINTA_TYPE_OPTIONS   = opts;
-  recomputeAllCats();
-  closeOptsModal();
-  rerenderCurrentTab();
+
+  const saveBtn = document.getElementById("opts-modal").querySelector(".btn-save");
+  saveBtn.disabled = true; saveBtn.textContent = "Tallennetaan…";
+
+  try {
+    // Build updated config by merging with current options
+    const newCfg = {
+      sourceOptions:          optsFieldType === "source"   ? opts : SOURCE_OPTIONS,
+      tapahtumatTypeOptions:  optsFieldType === "tap-type" ? opts : TAPAHTUMAT_TYPE_OPTIONS,
+      toimintaTypeOptions:    optsFieldType === "toi-type" ? opts : TOIMINTA_TYPE_OPTIONS
+    };
+    const cfgPath = "admin/views-config.json";
+    const url = `https://api.github.com/repos/${REPO}/contents/${cfgPath}`;
+    const headers = { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" };
+    // Get current SHA
+    const getRes = await fetch(url, { headers });
+    const sha = getRes.ok ? (await getRes.json()).sha : undefined;
+    const body = { message: "Päivitä views-config.json", content: b64encode(JSON.stringify(newCfg, null, 2)), branch: BRANCH };
+    if (sha) body.sha = sha;
+    const putRes = await fetch(url, { method: "PUT", headers, body: JSON.stringify(body) });
+    if (!putRes.ok) throw new Error(`GitHub API ${putRes.status}`);
+
+    // Apply in memory
+    if (optsFieldType === "source")        SOURCE_OPTIONS          = opts;
+    else if (optsFieldType === "tap-type") TAPAHTUMAT_TYPE_OPTIONS = opts;
+    else if (optsFieldType === "toi-type") TOIMINTA_TYPE_OPTIONS   = opts;
+    recomputeAllCats();
+    closeOptsModal();
+    rerenderCurrentTab();
+    showNotice("Vaihtoehdot tallennettu GitHubiin.", "success");
+  } catch(e) {
+    showNotice("Tallennusvirhe: " + e.message, "error");
+    saveBtn.disabled = false; saveBtn.textContent = "Tallenna";
+  }
 }
 
 function resetOptsDefaults() {

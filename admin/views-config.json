@@ -1,0 +1,24 @@
+{
+  "sourceOptions": [
+    { "value": "hanke",   "label": "Hanke",             "cats": [] },
+    { "value": "yle",     "label": "Yle",               "cats": ["YLE", "Yle"] },
+    { "value": "mtv",     "label": "MTV",               "cats": ["MTV3", "MTV Uutiset", "MTV"] },
+    { "value": "hs",      "label": "Helsingin Sanomat", "cats": ["Helsingin Sanomat", "HS"] },
+    { "value": "podcast", "label": "Podcast",           "cats": ["Podcast"] },
+    { "value": "blogi",   "label": "Blogi",             "cats": ["Blogikirjoitus"] }
+  ],
+  "tapahtumatTypeOptions": [
+    { "value": "tapahtuma",   "label": "Tapahtuma",                  "cats": ["Tapahtuma"] },
+    { "value": "konferenssi", "label": "Konferenssit ja seminaarit", "cats": ["Konferenssit ja seminaarit"] },
+    { "value": "webinaari",   "label": "Webinaari",                  "cats": ["Webinaari"] },
+    { "value": "tyopaja",     "label": "Työpaja",                    "cats": ["Työpaja"] }
+  ],
+  "toimintaTypeOptions": [
+    { "value": "",                "label": "— ei tyyppiä —",     "cats": [] },
+    { "value": "julkaisu",        "label": "Julkaisu",            "cats": ["Julkaisu"] },
+    { "value": "blogi",           "label": "Blogikirjoitus",      "cats": ["Blogikirjoitus"] },
+    { "value": "konferenssijulk", "label": "Konferenssijulkaisu", "cats": ["Konferenssijulkaisu"] },
+    { "value": "tyopaja",         "label": "Työpaja",             "cats": ["Työpaja"] },
+    { "value": "koulutus",        "label": "Koulutus",            "cats": ["Koulutus"] }
+  ]
+}
