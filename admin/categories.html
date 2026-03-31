@@ -76,6 +76,21 @@
 
     .actions { display: flex; gap: 6px; }
 
+    /* Tree */
+    tr.cat-parent td { background: #f0f4ff; font-weight: 600; }
+    tr.cat-parent:hover td { background: #e4ecff; }
+    tr.cat-parent .toggle {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 18px; height: 18px; cursor: pointer; font-style: normal;
+      transition: transform 0.15s; user-select: none; margin-right: 4px; color: #6b7280;
+    }
+    tr.cat-parent.collapsed .toggle { transform: rotate(-90deg); }
+    tr.cat-child td:first-child { padding-left: 40px; }
+    tr.cat-child { display: table-row; }
+    tr.cat-child.hidden { display: none; }
+    tr.cat-orphan-header td { background: #fafafa; color: #9ca3af; font-size: 12px; font-style: italic; }
+    tr.cat-orphan-header:hover td { background: #fafafa; }
+
     /* Modal */
     .modal-overlay {
       position: fixed; inset: 0; background: rgba(0,0,0,0.4);
@@ -159,7 +174,6 @@
         <thead>
           <tr>
             <th>Nimi</th>
-            <th>Tyyppi</th>
             <th style="width:60px;text-align:right">Postit</th>
             <th style="width:140px"></th>
           </tr>
@@ -288,15 +302,37 @@ function switchTab(name) {
 
 // ── Build maps ────────────────────────────────────────────────────────────────
 
+// Returns { tree: Map<mainCat, {count, children: Map<name,count>}>, orphans: Map<name,count> }
+function buildCategoryTree() {
+  const tree = new Map();
+  const orphans = new Map();
+
+  for (const post of allPosts) {
+    const main = post.mainCategory;
+    if (main) {
+      if (!tree.has(main)) tree.set(main, { count: 0, children: new Map() });
+      const node = tree.get(main);
+      node.count++;
+      for (const c of [...(post.subCategories || []), ...(post.extraCategories || [])]) {
+        node.children.set(c, (node.children.get(c) || 0) + 1);
+      }
+    } else {
+      for (const c of [...(post.subCategories || []), ...(post.extraCategories || [])]) {
+        orphans.set(c, (orphans.get(c) || 0) + 1);
+      }
+    }
+  }
+  return { tree, orphans };
+}
+
+// Flat map used by affectedPaths / rename logic (unchanged)
 function buildCategoryMap() {
-  const map = new Map(); // name → { count, types: Set }
+  const map = new Map();
   for (const post of allPosts) {
     const add = (name, type) => {
       if (!name) return;
       if (!map.has(name)) map.set(name, { count: 0, types: new Set() });
-      const entry = map.get(name);
-      entry.count++;
-      entry.types.add(type);
+      const e = map.get(name); e.count++; e.types.add(type);
     };
     add(post.mainCategory, "main");
     (post.subCategories || []).forEach(c => add(c, "sub"));
@@ -317,36 +353,89 @@ function buildTagMap() {
 
 // ── Render ────────────────────────────────────────────────────────────────────
 
+const expandedState = {}; // mainCat name → bool (default true)
+
+function toggleParent(name) {
+  expandedState[name] = !(expandedState[name] !== false); // default true
+  renderCategories();
+}
+
 function renderCategories() {
-  const q = document.getElementById("cat-search").value.toLowerCase();
-  const map = buildCategoryMap();
-  let entries = [...map.entries()]
-    .filter(([name]) => !q || name.toLowerCase().includes(q))
-    .sort((a, b) => b[1].count - a[1].count || a[0].localeCompare(b[0], "fi"));
+  const q = document.getElementById("cat-search").value.trim().toLowerCase();
+  const { tree, orphans } = buildCategoryTree();
 
-  document.getElementById("cat-count").textContent = `${entries.length} kategoriaa`;
+  const actionsHtml = name => `
+    <div class="actions">
+      <button class="btn-sm btn-rename" onclick="openRename('category','${esc(name)}')">Nimeä</button>
+      <button class="btn-sm btn-delete" onclick="openDelete('category','${esc(name)}')">Poista</button>
+    </div>`;
 
-  const typeLabel = types => {
-    const badges = [];
-    if (types.has("main"))  badges.push('<span class="badge badge-main">pää</span>');
-    if (types.has("sub"))   badges.push('<span class="badge badge-sub">ala</span>');
-    if (types.has("extra")) badges.push('<span class="badge badge-extra">lisä</span>');
-    return badges.join(" ");
-  };
+  let rows = "";
+  let totalUnique = 0;
 
-  document.getElementById("cat-tbody").innerHTML = entries.map(([name, {count, types}]) => `
-    <tr>
-      <td><strong>${esc(name)}</strong></td>
-      <td>${typeLabel(types)}</td>
-      <td style="text-align:right;color:#6b7280">${count}</td>
-      <td>
-        <div class="actions">
-          <button class="btn-sm btn-rename" onclick="openRename('category','${esc(name)}')">Nimeä</button>
-          <button class="btn-sm btn-delete" onclick="openDelete('category','${esc(name)}')">Poista</button>
-        </div>
-      </td>
-    </tr>
-  `).join("");
+  if (q) {
+    // ── Flat search mode ──
+    const map = buildCategoryMap();
+    const matches = [...map.entries()]
+      .filter(([name]) => name.toLowerCase().includes(q))
+      .sort((a, b) => b[1].count - a[1].count || a[0].localeCompare(b[0], "fi"));
+    totalUnique = matches.length;
+    rows = matches.map(([name, {count}]) => `
+      <tr>
+        <td>${esc(name)}</td>
+        <td style="text-align:right;color:#6b7280">${count}</td>
+        <td>${actionsHtml(name)}</td>
+      </tr>`).join("");
+  } else {
+    // ── Tree mode ──
+    const sorted = [...tree.entries()].sort((a, b) => b[1].count - a[1].count || a[0].localeCompare(b[0], "fi"));
+    totalUnique = tree.size;
+
+    for (const [main, { count, children }] of sorted) {
+      const expanded = expandedState[main] !== false;
+      const hasChildren = children.size > 0;
+      const collapsedClass = !expanded ? " collapsed" : "";
+      const toggle = hasChildren
+        ? `<span class="toggle" onclick="toggleParent('${esc(main)}')">▾</span>`
+        : `<span style="display:inline-block;width:22px"></span>`;
+
+      rows += `<tr class="cat-parent${collapsedClass}">
+        <td>${toggle}${esc(main)}</td>
+        <td style="text-align:right;color:#374151">${count}</td>
+        <td>${actionsHtml(main)}</td>
+      </tr>`;
+
+      if (hasChildren) {
+        const childRows = [...children.entries()]
+          .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "fi"));
+        for (const [child, childCount] of childRows) {
+          rows += `<tr class="cat-child${expanded ? "" : " hidden"}">
+            <td>${esc(child)}</td>
+            <td style="text-align:right;color:#6b7280">${childCount}</td>
+            <td>${actionsHtml(child)}</td>
+          </tr>`;
+        }
+      }
+    }
+
+    // Orphans (sub/extra without mainCategory)
+    if (orphans.size > 0) {
+      totalUnique += orphans.size;
+      rows += `<tr class="cat-orphan-header">
+        <td colspan="3">— ilman pääkategoriaa —</td>
+      </tr>`;
+      for (const [name, count] of [...orphans.entries()].sort((a,b) => a[0].localeCompare(b[0],"fi"))) {
+        rows += `<tr>
+          <td style="padding-left:40px;color:#6b7280">${esc(name)}</td>
+          <td style="text-align:right;color:#6b7280">${count}</td>
+          <td>${actionsHtml(name)}</td>
+        </tr>`;
+      }
+    }
+  }
+
+  document.getElementById("cat-count").textContent = `${totalUnique} kategoriaa`;
+  document.getElementById("cat-tbody").innerHTML = rows;
 }
 
 function renderTags() {
