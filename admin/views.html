@@ -357,6 +357,26 @@ async function loadData(auto) {
   }
 }
 
+function applyFieldChangeToMemory(path, fieldType, newValue) {
+  const post = allPosts.find(p => p.path === path);
+  if (!post) return;
+  if (fieldType === "source") {
+    const opt = SOURCE_OPTIONS.find(o => o.value === newValue);
+    post.subCategories   = (post.subCategories||[]).filter(c => !ALL_SOURCE_CATS.includes(c));
+    post.extraCategories = (post.extraCategories||[]).filter(c => !ALL_SOURCE_CATS.includes(c));
+    if (opt?.cats.length && !post.subCategories.includes(opt.cats[0])) post.subCategories.push(opt.cats[0]);
+  } else if (fieldType === "tap-type") {
+    const opt = TAPAHTUMAT_TYPE_OPTIONS.find(o => o.value === newValue);
+    post.subCategories   = (post.subCategories||[]).filter(c => !ALL_TAP_TYPE_CATS.includes(c));
+    post.extraCategories = (post.extraCategories||[]).filter(c => !ALL_TAP_TYPE_CATS.includes(c));
+    if (opt?.cats.length && !post.subCategories.includes(opt.cats[0])) post.subCategories.push(opt.cats[0]);
+  } else if (fieldType === "toi-type") {
+    const opt = TOIMINTA_TYPE_OPTIONS.find(o => o.value === newValue);
+    post.subCategories = (post.subCategories||[]).filter(c => !ALL_TOI_TYPE_CATS.includes(c));
+    if (opt?.cats.length && !post.subCategories.includes(opt.cats[0])) post.subCategories.push(opt.cats[0]);
+  }
+}
+
 // ── Tabs & sorting ────────────────────────────────────────────────────────────
 
 const sortState = {
@@ -519,7 +539,7 @@ async function commitAdd(path, type, btn) {
   const field = type === "tag" ? "tags" : "subCategories";
   try {
     await updateSinglePost(path, field, null, name);
-    await refreshData();
+    applyToMemory(path, field, null, name);
     rerenderCurrentTab();
   } catch(e) { showNotice(e.message, "error"); rerenderCurrentTab(); }
 }
@@ -549,7 +569,7 @@ async function commitEdit(path, field, oldName, btn) {
   wrap.innerHTML = `<span class="saving-spinner">…</span>`;
   try {
     await updateSinglePost(path, field, oldName, newName);
-    await refreshData();
+    applyToMemory(path, field, oldName, newName);
     rerenderCurrentTab();
   } catch(e) { showNotice(e.message, "error"); rerenderCurrentTab(); }
 }
@@ -582,7 +602,7 @@ async function modalSave() {
     closeModal();
     try {
       await updateSinglePost(path, field, name, null);
-      await refreshData();
+      applyToMemory(path, field, name, null);
       rerenderCurrentTab();
     } catch(e) { showNotice(e.message, "error"); }
     return;
@@ -627,7 +647,8 @@ async function onFieldChange(path, fieldType, select) {
       });
     }
     if (statusEl) { statusEl.className = "save-status status-ok"; statusEl.textContent = "✓ Tallennettu"; }
-    await refreshData();
+    applyFieldChangeToMemory(path, fieldType, newValue);
+    rerenderCurrentTab();
     setTimeout(() => { if (statusEl) statusEl.textContent = ""; }, 3000);
   } catch(e) {
     if (statusEl) { statusEl.className = "save-status status-error"; statusEl.textContent = "Virhe: "+e.message; }
@@ -681,9 +702,24 @@ async function modifyFrontmatter(filePath, mutate) {
   });
 }
 
-async function refreshData() {
-  const res = await fetch("/admin/categories-data.json?t=" + Date.now());
-  if (res.ok) allPosts = await res.json();
+// Update allPosts in memory immediately — categories-data.json is stale until next build
+function applyToMemory(path, field, oldName, newName) {
+  const post = allPosts.find(p => p.path === path);
+  if (!post) return;
+  if (field === "mainCategory") {
+    if (oldName === null)      post.mainCategory = newName;
+    else if (newName === null) post.mainCategory = null;
+    else if (post.mainCategory === oldName) post.mainCategory = newName;
+  } else {
+    if (!Array.isArray(post[field])) post[field] = [];
+    if (oldName === null) {
+      if (!post[field].includes(newName)) post[field].push(newName);
+    } else if (newName === null) {
+      post[field] = post[field].filter(v => v !== oldName);
+    } else {
+      post[field] = post[field].map(v => v === oldName ? newName : v);
+    }
+  }
 }
 
 function rerenderCurrentTab() {

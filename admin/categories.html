@@ -650,6 +650,21 @@ async function applyChange(field, oldName, newName, paths) {
   for (const path of paths) {
     try {
       await updateFile(path, field, oldName, newName);
+      // Update in memory for each modified post
+      const post = allPosts.find(p => p.path === path);
+      if (post) {
+        if (field === "tag") {
+          if (newName) post.tags = (post.tags||[]).map(t => t === oldName ? newName : t);
+          else         post.tags = (post.tags||[]).filter(t => t !== oldName);
+        } else {
+          if (post.mainCategory === oldName) post.mainCategory = newName || null;
+          ["subCategories","extraCategories"].forEach(f => {
+            if (!Array.isArray(post[f])) return;
+            if (newName) post[f] = post[f].map(v => v === oldName ? newName : v);
+            else         post[f] = post[f].filter(v => v !== oldName);
+          });
+        }
+      }
       done++;
       setProgress(done, paths.length);
     } catch (e) {
@@ -666,13 +681,8 @@ async function applyChange(field, oldName, newName, paths) {
     showNotice(`${action} — ${done} tiedostoa päivitetty.`, "success");
   }
 
-  // Refresh local data
-  const res = await fetch("/admin/categories-data.json?t=" + Date.now());
-  if (res.ok) {
-    allPosts = await res.json();
-    renderCategories();
-    renderTags();
-  }
+  renderCategories();
+  renderTags();
 }
 
 async function updateFile(filePath, field, oldName, newName) {
@@ -942,7 +952,7 @@ async function commitAdd(path, type, btn) {
   const field = type === "tag" ? "tags" : "subCategories";
   try {
     await updateSinglePost(path, field, null, name); // null oldName = add
-    await refreshPost(path);
+    applyToMemory(path, field, null, name);
     renderPostsTable();
     showPanelNotice(`Lisätty: "${name}"`, "success");
   } catch (e) {
@@ -978,7 +988,7 @@ async function commitEdit(path, field, oldName, btn) {
 
   try {
     await updateSinglePost(path, field, oldName, newName);
-    await refreshPost(path);
+    applyToMemory(path, field, oldName, newName);
     renderPostsTable();
     showPanelNotice(`"${oldName}" → "${newName}"`, "success");
   } catch (e) {
@@ -1063,11 +1073,23 @@ async function updateSinglePost(path, field, oldName, newName) {
   });
 }
 
-// Refresh local allPosts entry after a single-post save
-async function refreshPost(path) {
-  const res = await fetch("/admin/categories-data.json?t=" + Date.now());
-  if (res.ok) {
-    allPosts = await res.json();
+// Update allPosts in memory immediately — categories-data.json is stale until next build
+function applyToMemory(path, field, oldName, newName) {
+  const post = allPosts.find(p => p.path === path);
+  if (!post) return;
+  if (field === "mainCategory") {
+    if (oldName === null)      post.mainCategory = newName;
+    else if (newName === null) post.mainCategory = null;
+    else if (post.mainCategory === oldName) post.mainCategory = newName;
+  } else {
+    if (!Array.isArray(post[field])) post[field] = [];
+    if (oldName === null) {
+      if (!post[field].includes(newName)) post[field].push(newName);
+    } else if (newName === null) {
+      post[field] = post[field].filter(v => v !== oldName);
+    } else {
+      post[field] = post[field].map(v => v === oldName ? newName : v);
+    }
   }
 }
 
@@ -1086,7 +1108,7 @@ function showPanelNotice(msg, type) {
       closeModal();
       try {
         await updateSinglePost(path, field, name, null);
-        await refreshPost(path);
+        applyToMemory(path, field, name, null);
         renderPostsTable();
         showPanelNotice(`Poistettu: "${name}"`, "success");
       } catch (e) {
