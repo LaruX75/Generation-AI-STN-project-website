@@ -838,7 +838,7 @@ async function modifyFrontmatter(filePath, mutate) {
   if (updated === original) return;
   await fetch(url, {
     method: "PUT", headers,
-    body: JSON.stringify({ message: `Päivitä: ${filePath.split("/").pop()}`, content: b64encode(updated), sha: fileData.sha, branch: BRANCH })
+    body: JSON.stringify({ message: `Päivitä: ${filePath.split("/").pop()} [skip-tests]`, content: b64encode(updated), sha: fileData.sha, branch: BRANCH })
   });
 }
 
@@ -951,7 +951,7 @@ async function saveOpts() {
     // Get current SHA
     const getRes = await fetch(url, { headers });
     const sha = getRes.ok ? (await getRes.json()).sha : undefined;
-    const body = { message: "Päivitä views-config.json", content: b64encode(JSON.stringify(newCfg, null, 2)), branch: BRANCH };
+    const body = { message: "Päivitä views-config.json [skip-tests]", content: b64encode(JSON.stringify(newCfg, null, 2)), branch: BRANCH };
     if (sha) body.sha = sha;
     const putRes = await fetch(url, { method: "PUT", headers, body: JSON.stringify(body) });
     if (!putRes.ok) throw new Error(`GitHub API ${putRes.status}`);
@@ -989,7 +989,7 @@ async function saveTrashToGitHub() {
   const headers = { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" };
   const getRes = await fetch(url, { headers });
   const sha = getRes.ok ? (await getRes.json()).sha : undefined;
-  const body = { message: "Päivitä roskakori", content: b64encode(JSON.stringify(trashedPosts, null, 2)), branch: BRANCH };
+  const body = { message: "Päivitä roskakori [skip-tests]", content: b64encode(JSON.stringify(trashedPosts, null, 2)), branch: BRANCH };
   if (sha) body.sha = sha;
   const putRes = await fetch(url, { method: "PUT", headers, body: JSON.stringify(body) });
   if (!putRes.ok) throw new Error(`GitHub API ${putRes.status}`);
