@@ -372,9 +372,10 @@ async function loadData(auto) {
   const btn = document.querySelector("#auth-card button");
   if (btn) { btn.disabled = true; btn.textContent = "Ladataan…"; }
   try {
-    const [postsRes, cfgRes] = await Promise.all([
+    const [postsRes, cfgRes, trashRes] = await Promise.all([
       fetch("/admin/categories-data.json"),
-      fetch("/admin/views-config.json?t=" + Date.now())
+      fetch("/admin/views-config.json?t=" + Date.now()),
+      fetch("/admin/trash.json?t=" + Date.now())
     ]);
     if (!postsRes.ok) throw new Error("categories-data.json ei löydy — buildaa sivusto ensin.");
     allPosts = await postsRes.json();
@@ -385,6 +386,12 @@ async function loadData(auto) {
       if (cfg.toimintaTypeOptions)   TOIMINTA_TYPE_OPTIONS   = cfg.toimintaTypeOptions;
       recomputeAllCats();
     }
+    if (trashRes.ok) {
+      try { trashedPosts = await trashRes.json(); } catch { trashedPosts = []; }
+      const trashedPaths = new Set(trashedPosts.map(p => p.path));
+      allPosts = allPosts.filter(p => !trashedPaths.has(p.path));
+    }
+    updateTrashBadge();
     document.getElementById("auth-card").style.display = "none";
     document.getElementById("main").style.display = "block";
     renderTab("uutiset"); renderTab("tapahtumat"); renderTab("toiminta");
@@ -651,14 +658,20 @@ async function modalSave() {
   if (modalMode.type === "trash") {
     const { path, title } = modalMode;
     closeModal();
+    const post = allPosts.find(p => p.path === path);
+    if (!post) return;
     try {
-      await modifyFrontmatter(path, data => { data.draft = true; });
-      const idx = allPosts.findIndex(p => p.path === path);
-      if (idx >= 0) trashedPosts.push(...allPosts.splice(idx, 1));
+      await modifyFrontmatter(path, data => { data.eleventyExcludeFromCollections = true; });
+      trashedPosts.push({ ...post, trashedAt: new Date().toISOString() });
+      await saveTrashToGitHub();
+      allPosts = allPosts.filter(p => p.path !== path);
       rerenderCurrentTab();
       updateTrashBadge();
       showNotice(`"${title}" siirretty roskakoriin.`, "success");
-    } catch(e) { showNotice("Virhe: " + e.message, "error"); }
+    } catch(e) {
+      trashedPosts = trashedPosts.filter(p => p.path !== path);
+      showNotice("Virhe: " + e.message, "error");
+    }
     return;
   }
   closeModal();
@@ -897,6 +910,18 @@ function closeOptsModal() {
 
 // ── Trash ─────────────────────────────────────────────────────────────────────
 
+async function saveTrashToGitHub() {
+  const trashPath = "admin/trash.json";
+  const url = `https://api.github.com/repos/${REPO}/contents/${trashPath}`;
+  const headers = { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" };
+  const getRes = await fetch(url, { headers });
+  const sha = getRes.ok ? (await getRes.json()).sha : undefined;
+  const body = { message: "Päivitä roskakori", content: b64encode(JSON.stringify(trashedPosts, null, 2)), branch: BRANCH };
+  if (sha) body.sha = sha;
+  const putRes = await fetch(url, { method: "PUT", headers, body: JSON.stringify(body) });
+  if (!putRes.ok) throw new Error(`GitHub API ${putRes.status}`);
+}
+
 function confirmTrash(path) {
   const post = allPosts.find(p => p.path === path);
   if (!post) return;
@@ -904,7 +929,7 @@ function confirmTrash(path) {
   document.getElementById("modal-title").textContent = "Siirrä roskakoriin?";
   document.getElementById("modal-desc").textContent = `"${post.title}" merkitään luonnokseksi GitHubissa ja poistetaan näkymästä.`;
   const w = document.getElementById("modal-warning");
-  w.textContent = "Voit palauttaa tietueen Roskakori-välilehdeltä tämän istunnon aikana.";
+  w.textContent = "Tietue poistetaan kokoelmista seuraavassa buildissa. Voit palauttaa sen Roskakori-välilehdeltä.";
   w.style.display = "";
   document.getElementById("modal-rename-fields").style.display = "none";
   const btn = document.getElementById("modal-save-btn");
@@ -916,11 +941,14 @@ async function restorePost(path) {
   const post = trashedPosts.find(p => p.path === path);
   if (!post) return;
   try {
-    await modifyFrontmatter(path, data => { delete data.draft; });
-    const idx = trashedPosts.findIndex(p => p.path === path);
-    if (idx >= 0) allPosts.push(...trashedPosts.splice(idx, 1));
+    await modifyFrontmatter(path, data => { delete data.eleventyExcludeFromCollections; });
+    trashedPosts = trashedPosts.filter(p => p.path !== path);
+    await saveTrashToGitHub();
+    const { trashedAt, ...restored } = post;
+    allPosts.push(restored);
     renderTrash();
     updateTrashBadge();
+    rerenderCurrentTab();
     showNotice(`"${post.title}" palautettu.`, "success");
   } catch(e) { showNotice("Virhe: " + e.message, "error"); }
 }
