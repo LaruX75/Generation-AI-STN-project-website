@@ -1,1 +1,181 @@
-{ "fetchedAt": null, "count": 0, "articles": [] }
+{
+  "fetchedAt": "2026-06-16T21:01:03.232Z",
+  "count": 25,
+  "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-13T17:03:30Z",
+      "title": "Yhdysvaltojen hallinto käski Anthropicia katkaisemaan kaikilta ulkomaalaisilta pääsyn tehokkaaseen tekoälymalliin",
+      "url": "https://yle.fi/a/74-20231417",
+      "lead": "Eurooppalaiset poliitikot pitävät Yhdysvaltojen päätöstä esimerkkinä Euroopan teknologisesta riippuvuudesta."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-13T13:06:33Z",
+      "title": "Samalla kun Venäjä tekee jo iskuja autonomisilla aseilla, Pentagon riitelee tekoälyjättien kanssa",
+      "url": "https://yle.fi/a/74-20230565",
+      "lead": "Autonomisten aseiden kehittäminen on ollut pitkään punainen vaate teknologia­yhtiöiden työntekijöiden keskuudessa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-12T08:08:53Z",
+      "title": "Tekoälyn käyttö töissä voi aiheuttaa ”aivo­kärähdyksen”",
+      "url": "https://yle.fi/a/74-20226132",
+      "lead": "Tekoälyn aiheuttama kuormitus on työsuojelu­kysymys, sanoo Työterveys­laitoksen tutkimus­päällikkö Virpi Kalakoski."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-12T03:00:35Z",
+      "title": "Venäjän autonomiset droonit hyökkäsivät torille, jolla oli siviilejä – ilman ihmistä toimivista aseista paljon havaintoja",
+      "url": "https://yle.fi/a/74-20229902",
+      "lead": "Suomeen harhautuneissa drooneissa on voinut olla autonomisia piirteitä. Venäjän uskotaan tekevän Ukrainassa kokeiluja täysin autonomisilla asejärjes­telmillä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-11T12:47:54Z",
+      "title": "Opiskelija, oletko huijannut tekoälyn avulla? Kerro kokemuksistasi, teemme juttua",
+      "url": "https://yle.fi/a/74-20231067",
+      "lead": "Keräämme opiskelijoiden tai jo valmistuneiden kokemuksia tekoälyn käytöstä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-10T15:01:18Z",
+      "title": "Prinssi William: Asunnottomuus estettävissä tekoälyn avulla",
+      "url": "https://yle.fi/a/74-20230897",
+      "lead": "Prinssi Williamin hyväntekeväisyys­hanke julkaisi tekoäly­pohjaisen järjestelmän, joka tunnistaa asunnottomuuden riskit."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-10T13:24:51Z",
+      "title": "Tekoäly kehitti rokotteen ensimmäistä kertaa – ”superantigeeni” voi kiriä muuntuvat virukset kiinni",
+      "url": "https://yle.fi/a/74-20230560",
+      "lead": "Asiantuntijan mielestä kaikki keinot kannattaa ottaa käyttöön rokotetutkimuksessa, mutta tekoäly ei ole oikotie nopeisiin tuloksiin."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-09T16:07:28Z",
+      "title": "Euroopan komissio määrää Metan avaamaan Whatsappin kilpaileville tekoäly-boteille ilmaiseksi",
+      "url": "https://yle.fi/a/74-20230649",
+      "lead": "EU aloitti joulukuussa tutkimuksen yhdysvaltalaisen yhtiön käytännöstä estää muiden kuin Meta AI:n pääsy palveluun."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-09T07:11:02Z",
+      "title": "Saksa perustaa tekoälyä tutkivan turvallisuusviraston",
+      "url": "https://yle.fi/a/74-20230510",
+      "lead": ""
+    },
+    {
+      "personName": "Teemu Roos",
+      "datePublished": "2026-06-06T02:31:35Z",
+      "title": "Asiantuntija uskoo, että opiskelijoita ei voi estää huijaamasta etätenteissä tekoälyllä",
+      "url": "https://yle.fi/a/74-20230056",
+      "lead": "Tietojenkäsittely­tieteen professorin Teemu Roosin mukaan ainoa aukoton ratkaisu olisi asentaa opiskelijoiden koteihin 360 asteen kamera. Se ei ole realismia."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-05T08:31:26Z",
+      "title": "Analyysi: Ammatti­korkeakoulut ovat housut kintuissa tekoälyn edessä",
+      "url": "https://yle.fi/a/74-20229124",
+      "lead": "Mikään selitys ei saa näyttämään hyvältä sitä, että korkeakoulu­tasoisilla kursseilla pystyy helposti huijaamaan, kirjoittaa Ylen toimittaja Alberto Politi."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-05T02:30:35Z",
+      "title": "Ylen toimittaja huijasi tekoälyllä ja läpäisi tehohoidon etäkurssin oppimatta mitään",
+      "url": "https://yle.fi/a/74-20224850",
+      "lead": "Ylen toimittaja ilmoittautui opiskelijaksi kolmeen avoimeen ammattikorkea­kouluun. Selvisi, että terveysalan etäkursseja on todella helppo läpäistä tekoälyllä huijaamalla."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-03T02:00:35Z",
+      "title": "Olga Temonen kuoli viime vuonna – nyt hänen tekoälyllä luotu äänensä kertoo sairastu­misestaan",
+      "url": "https://yle.fi/a/74-20229349",
+      "lead": "Edesmenneestä Olga Temosesta kertova äänikirja ilmestyy keskiviikkona kahtena versiona. Toisessa kuullaan tekoälyllä luotua Temosta, toisessa ääninäyttelijää."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-01T17:28:31Z",
+      "title": "Tekoäly aivojen vartijana – oululais­­keksintö tuo tehohoidossa näkymättömän näkyviin",
+      "url": "https://yle.fi/a/74-20226950",
+      "lead": "Teho-osastolla aivot jäävät usein ilman valvontaa, toisin kuin sydän ja keuhkot. Aivojen toiminnan seuranta tarjoaa miljardiluokan kaupalliset mahdollisuudet."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-01T16:32:59Z",
+      "title": "Tekoälyjätti Anthropic aloitti virallisesti listautumis­prosessin",
+      "url": "https://yle.fi/a/74-20229234",
+      "lead": "Hakemuksen sisältö ei vielä ole julkinen."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-05-31T14:00:12Z",
+      "title": "Tekoäly ratkaisi vuosikymmeniä avoinna olleen matematiikan ongelman",
+      "url": "https://yle.fi/a/74-20228996",
+      "lead": "Open AI kertoo tekoälynsä murtautuneen läpi pulmassa, jota kärkimatemaatikot ratkoivat 80 vuotta. Matemaatikot ovat innoissaan tekoälyn kyvykkyydestä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-05-29T07:30:56Z",
+      "title": "Käytettiinkö Postin uusissa merkeissä tekoälyä? Soitimme suunnittelijalle",
+      "url": "https://yle.fi/a/74-20228571",
+      "lead": "Posti julkaisi uusia postimerkkejä. Kahta merkkiä alettiin epäillä tekoälyn tekemäksi. Soitimme suunnittelijalle ja kysyimme asiasta."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-05-28T05:27:15Z",
+      "title": "Kysely: Kolmasosa toimi­henkilöistä uskoo tekoälyn korvaavan työnsä",
+      "url": "https://yle.fi/a/74-20228372",
+      "lead": "Osuus on kasvussa, käy ilmi Ammattiliitto Pron vuosittaisesta jäsenkyselystä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-05-28T01:08:23Z",
+      "title": "Amnesty: Generatiivinen tekoäly perustuu miljardien ihmisten tietojen keruuseen ilman lupaa",
+      "url": "https://yle.fi/a/74-20228356",
+      "lead": "Ihmisoikeusjärjestö vaatii valtioita puuttumaan tekoälyjärjestelmiin, jotka perustuvat laittomaan massadatankeruuseen."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-05-26T05:00:35Z",
+      "title": "Tekoäly mullisti koodaamisen, ja nyt suomalaisyhtiö aikoo tehdä saman teolliselle suunnittelulle",
+      "url": "https://yle.fi/a/74-20227787",
+      "lead": "Kvantti­algoritmeja kehittävä Quanscient näkee tekoälyssä valtavan potentiaalin teollisen suunnittelun tehostajana."
+    },
+    {
+      "personName": "Susanna Lindroos-Hovinheimo",
+      "datePublished": "2026-03-11T11:29:07Z",
+      "title": "Eduskunta äänesti: Susanna Lindroos-Hovinheimo apulaisoikeus­asiamieheksi",
+      "url": "https://yle.fi/a/74-20214749",
+      "lead": "Lindroos-Hovinheimo astuu tehtävään huhtikuussa apulaisoikeus­asiamies Maija Sakslinin seuraajana."
+    },
+    {
+      "personName": "Susanna Lindroos-Hovinheimo",
+      "datePublished": "2026-03-05T11:21:10Z",
+      "title": "Perustuslakivaliokunta esittää apulaisoikeusasia­mieheksi Susanna Lindroos-Hovinheimoa tai Eeva Nykästä",
+      "url": "https://yle.fi/a/74-20213792",
+      "lead": ""
+    },
+    {
+      "personName": "Teemu Roos",
+      "datePublished": "2023-12-28T16:30:25Z",
+      "title": "Monet tutkijat sortuvat liioitteluun tekoälyn tulevaisuudesta – kolme esimerkkiä osoittaa, miten todellisuus tulee vastaan",
+      "url": "https://yle.fi/a/20-10005737",
+      "lead": "Helsingin yliopiston tietojenkäsittelytieteen professorin Teemu Roosin mukaan spektaakkelimaiset ennustukset tekoälystä johtuvat usein siitä, että toisten ihmisten tekemää työtä on helppo vähätellä. "
+    },
+    {
+      "personName": "Teemu Roos",
+      "datePublished": "2023-05-27T05:05:34Z",
+      "title": "Tekoälyn kehitys pelästyttää ja ala pyytää lisää sääntelyä – suomalaistutkijan mukaan merkittäviä haittoja on jo nähty",
+      "url": "https://yle.fi/a/74-20033804",
+      "lead": "Ykkösaamun suorassa lähetyksessä keskusteltiin tekoälyn kehityksestä, sen nopeudesta ja kehityksen seurauksista yhteiskunnissa. Vieraana oli professori Teemu Roos Suomen tekoälykeskuksesta."
+    },
+    {
+      "personName": "Teemu Roos",
+      "datePublished": "2023-05-25T11:05:51Z",
+      "title": "Ykkösaamun vieraana on professori Teemu Roos – mitä haluat kysyä tekoälyasiantuntijalta?",
+      "url": "https://yle.fi/a/74-20021683",
+      "lead": "Tekoälyn nopea kehittyminen on saanut ihmiset mietteliäiksi.  Miten tekoälyn uhat ja mahdollisuudet painottuvat? Ykkösaamun vieraana TV1:ssä ja Yle Radio 1:ssä lauantaina on tietojenkäsittelytieteen professori, tekoälyyn erikoistunut Teemu Roos."
+    }
+  ]
+}
