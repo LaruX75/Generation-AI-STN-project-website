@@ -1,0 +1,32 @@
+name: Fetch YLE News
+
+on:
+  schedule:
+    - cron: "0 5 * * *"   # Päivittäin klo 05:00 UTC = 07:00 / 08:00 Suomi
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Hae YLE-artikkelit
+        run: node scripts/fetch-yle-news.js
+
+      - name: Tallenna tulokset
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add admin/yle-results.json
+          git diff --staged --quiet && echo "Ei muutoksia" || git commit -m "Päivitä YLE-uutiset [skip-tests]" && git push
