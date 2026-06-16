@@ -358,6 +358,22 @@
 const REPO = "LaruX75/Generation-AI-STN-project-website";
 const BRANCH = "main";
 
+// ── Sveltia editor URL ────────────────────────────────────────────────────────
+
+const SVELTIA_COLLECTIONS = {
+  "Mediassa":   "fi_mediassa",
+  "Tapahtumat": "fi_tapahtumat",
+  "Toiminta":   "fi_toiminta",
+  "Tutkimus":   "fi_tutkimus"
+};
+
+function sveltiaEditUrl(post) {
+  const col = SVELTIA_COLLECTIONS[post.mainCategory];
+  if (!col) return null;
+  const slug = post.path.replace(/^.*\//, "").replace(/\.\w+$/, "");
+  return `/admin/#/collections/${col}/entries/${slug}`;
+}
+
 // ── Field option sets ─────────────────────────────────────────────────────────
 
 const DEFAULT_SOURCE_OPTIONS = [
@@ -564,12 +580,13 @@ function renderTab(tab) {
     const statusBtn = isHidden
       ? `<button class="btn-draft" id="stbtn-${ep}" onclick="togglePublish('${ep}')" title="Luonnos — ei näy sivustolla">○ Luonnos</button>`
       : `<button class="btn-pub"   id="stbtn-${ep}" onclick="togglePublish('${ep}')" title="Julkaistu — näkyy sivustolla">● Julkaistu</button>`;
+    const editUrl = sveltiaEditUrl(post);
     return `<tr data-path="${ep}"${isHidden ? ' class="is-hidden"' : ''}>
       <td class="col-date">
         <div class="post-date">${esc(post.date||"")}</div>
-        <a class="title-link" href="${esc(post.url)}" target="_blank" style="font-size:11px;font-weight:normal">↗</a>
+        <a class="title-link" href="${esc(post.url)}" target="_blank" style="font-size:11px;font-weight:normal" title="Avaa sivustolla">↗</a>
       </td>
-      <td class="col-title"><a class="title-link" href="${esc(post.url)}" target="_blank">${esc(post.title)}</a></td>
+      <td class="col-title"><a class="title-link" href="${editUrl ? esc(editUrl) : esc(post.url)}" target="_blank" title="${editUrl ? "Avaa Sveltia-editorissa" : "Avaa sivustolla"}">${esc(post.title)}</a></td>
       <td class="col-excerpt"><div class="post-excerpt">${esc(post.excerpt||"")}</div></td>
       <td class="col-field">
         ${fieldCell}
