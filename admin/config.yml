@@ -70,6 +70,9 @@ collections:
       - { label: "Avainsanat", name: "tags", widget: "list", required: false }
       - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Kirjoittaja", name: "author", widget: "string", required: false, default: "admin" }
+      - { label: "Piilotettu", name: "hidden", widget: "hidden", required: false }
+      - { label: "Lähde-URL", name: "sourceUrl", widget: "hidden", required: false }
+      - { label: "EleventyExclude", name: "eleventyExcludeFromCollections", widget: "hidden", required: false }
       - { label: "Sisältö", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
 
   - name: "fi_tapahtumat"
@@ -127,6 +130,9 @@ collections:
       - { label: "Avainsanat", name: "tags", widget: "list", required: false }
       - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Kirjoittaja", name: "author", widget: "string", required: false, default: "admin" }
+      - { label: "Piilotettu", name: "hidden", widget: "hidden", required: false }
+      - { label: "Lähde-URL", name: "sourceUrl", widget: "hidden", required: false }
+      - { label: "EleventyExclude", name: "eleventyExcludeFromCollections", widget: "hidden", required: false }
       - { label: "Sisältö", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
 
   - name: "fi_toiminta"
@@ -171,6 +177,9 @@ collections:
       - { label: "Avainsanat", name: "tags", widget: "list", required: false }
       - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Kirjoittaja", name: "author", widget: "string", required: false, default: "admin" }
+      - { label: "Piilotettu", name: "hidden", widget: "hidden", required: false }
+      - { label: "Lähde-URL", name: "sourceUrl", widget: "hidden", required: false }
+      - { label: "EleventyExclude", name: "eleventyExcludeFromCollections", widget: "hidden", required: false }
       - { label: "Sisältö", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
 
   - name: "fi_tutkimus"
@@ -222,6 +231,9 @@ collections:
       - { label: "Avainsanat", name: "tags", widget: "list", required: false }
       - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Kirjoittaja", name: "author", widget: "string", required: false, default: "admin" }
+      - { label: "Piilotettu", name: "hidden", widget: "hidden", required: false }
+      - { label: "Lähde-URL", name: "sourceUrl", widget: "hidden", required: false }
+      - { label: "EleventyExclude", name: "eleventyExcludeFromCollections", widget: "hidden", required: false }
       - { label: "Sisältö", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
 
   - name: "pages_fi"
