@@ -1,12 +1,27 @@
 {
   "people": [
-    {
-      "name": "Teemu Roos",
-      "language": "fi",
-      "uiLanguage": "fi",
-      "type": "article",
-      "limit": 10,
-      "maxPages": 2
-    }
+    { "name": "Teemu Roos",                  "language": "fi", "uiLanguage": "fi", "limit": 10, "maxPages": 2 },
+    { "name": "Matti Tedre",                 "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Kati Mäkitalo",               "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Henriikka Vartiainen",        "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Kaiju Kangas",                "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Sini Davies",                 "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Kamrul Faisal",               "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Eveliina Ignatius",           "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Megumi Iwata",                "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Ilkka Jormanainen",           "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Juho Kahila",                 "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Jussi Koivisto",              "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Matias Koivulehto",           "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Jari Laru",                   "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Susanna Lindroos-Hovinheimo", "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Sonsoles Lopez-Pernas",       "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Tarja Pietarinen",            "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Nicolas Pope",                "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Elisa Silvennoinen",          "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Kati Sormunen",               "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Milka Sormunen",              "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Eva Suomi",                   "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 },
+    { "name": "Sirkku Tahvanainen",          "language": "fi", "uiLanguage": "fi", "limit": 5,  "maxPages": 1 }
   ]
 }
