@@ -3,6 +3,12 @@ name: Quick Deploy (no tests)
 on:
   push:
     branches: [main]
+    paths:
+      - "content/posts/**"
+      - "admin/trash.json"
+      - "admin/views-config.json"
+      - "admin/yle-results.json"
+  workflow_dispatch:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
@@ -18,7 +24,6 @@ concurrency:
 
 jobs:
   build:
-    if: contains(github.event.head_commit.message, '[skip-tests]')
     runs-on: ubuntu-latest
 
     steps:

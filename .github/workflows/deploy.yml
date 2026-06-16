@@ -3,6 +3,11 @@ name: Deploy
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "content/posts/**"
+      - "admin/trash.json"
+      - "admin/views-config.json"
+      - "admin/yle-results.json"
   workflow_dispatch:
 
 env:
@@ -19,7 +24,6 @@ concurrency:
 
 jobs:
   build:
-    if: "!contains(github.event.head_commit.message, '[skip-tests]')"
     runs-on: ubuntu-latest
 
     steps:
