@@ -155,6 +155,28 @@
     .trash-badge { display: none; font-size: 10px; background: #fee2e2; color: #dc2626; border-radius: 8px; padding: 0 5px; margin-left: 3px; vertical-align: middle; }
     .trash-badge.has-items { display: inline; }
 
+    /* ── YLE panel ── */
+    .btn-yle { background: #00205b; border: none; border-radius: 6px; color: #fff; padding: 7px 13px; cursor: pointer; font-size: 12px; font-weight: 600; font-family: inherit; white-space: nowrap; }
+    .btn-yle:hover { background: #001a47; }
+    .btn-yle:disabled { background: #6b7280; cursor: not-allowed; }
+    .yle-panel { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; margin-bottom: 12px; overflow: hidden; max-height: 420px; overflow-y: auto; }
+    .yle-panel-header { position: sticky; top: 0; background: #f9fafb; border-bottom: 1px solid #e5e7eb; padding: 7px 12px; display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #374151; z-index: 1; }
+    .yle-panel-close { background: none; border: none; cursor: pointer; color: #9ca3af; font-size: 16px; margin-left: auto; padding: 0 2px; line-height: 1; }
+    .yle-panel-close:hover { color: #374151; }
+    .yle-row { display: flex; gap: 10px; align-items: flex-start; padding: 8px 12px; border-bottom: 1px solid #f3f4f6; }
+    .yle-row:last-child { border-bottom: none; }
+    .yle-row.exists { opacity: 0.4; }
+    .yle-meta { flex: 1; min-width: 0; }
+    .yle-date { font-size: 11px; color: #9ca3af; }
+    .yle-title { font-size: 13px; font-weight: 500; color: #1d4ed8; text-decoration: none; display: block; line-height: 1.3; }
+    .yle-title:hover { text-decoration: underline; }
+    .yle-lead { font-size: 12px; color: #555; margin-top: 2px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .yle-person { font-size: 11px; color: #6b7280; margin-top: 2px; }
+    .btn-yle-create { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 5px; color: #1d4ed8; padding: 4px 10px; cursor: pointer; font-size: 11px; font-weight: 600; font-family: inherit; white-space: nowrap; flex-shrink: 0; align-self: center; }
+    .btn-yle-create:hover { background: #dbeafe; }
+    .btn-yle-create:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn-yle-exists { background: none; border: none; color: #9ca3af; font-size: 11px; white-space: nowrap; flex-shrink: 0; align-self: center; padding: 0; }
+
     /* ── Modal ── */
     .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 100; }
     .modal { background: #fff; border-radius: 10px; padding: 24px; width: 420px; max-width: 95vw; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
@@ -208,9 +230,17 @@
     <!-- Uutiset -->
     <div id="tab-uutiset">
       <div class="toolbar">
+        <button class="btn-yle" id="yle-fetch-btn" onclick="fetchYleNews()">YLE Hae uutiset</button>
         <input type="text" id="uutiset-search" placeholder="Hae otsikolla…" oninput="renderTab('uutiset')">
         <span class="count-label" id="uutiset-count"></span>
         <button class="btn-gear" onclick="openOptsModal('source')">⚙ Muokkaa lähteitä</button>
+      </div>
+      <div id="yle-panel" style="display:none" class="yle-panel">
+        <div class="yle-panel-header">
+          <span id="yle-panel-title">Haetaan YLE-artikkeleita…</span>
+          <button class="yle-panel-close" onclick="document.getElementById('yle-panel').style.display='none'" title="Sulje">✕</button>
+        </div>
+        <div id="yle-panel-list"></div>
       </div>
       <table>
         <thead><tr>
@@ -1002,6 +1032,171 @@ function updateTrashBadge() {
   if (!badge) return;
   badge.textContent = trashedPosts.length || "";
   badge.classList.toggle("has-items", trashedPosts.length > 0);
+}
+
+// ── YLE news fetch ────────────────────────────────────────────────────────────
+
+const YLE_API      = "https://yle-fi-search.api.yle.fi/v1/search";
+const YLE_APP_ID   = "hakuylefi_v2_prod";
+const YLE_APP_KEY  = "4c1422b466ee676e03c4ba9866c0921f";
+
+let yleArticles = [];
+
+function slugify(str) {
+  return String(str)
+    .toLowerCase()
+    .normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .replace(/[äå]/g, "a").replace(/ö/g, "o")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+async function fetchYleNews() {
+  const btn = document.getElementById("yle-fetch-btn");
+  btn.disabled = true; btn.textContent = "Haetaan…";
+  const panel = document.getElementById("yle-panel");
+  const listEl = document.getElementById("yle-panel-list");
+  panel.style.display = "";
+  document.getElementById("yle-panel-title").textContent = "Haetaan YLE-artikkeleita…";
+  listEl.innerHTML = `<div style="padding:16px;color:#6b7280;font-size:12px">Haetaan…</div>`;
+
+  try {
+    // Load people list from GitHub
+    const cfgUrl = `https://api.github.com/repos/${REPO}/contents/src/_data/ylenews.config.json`;
+    const cfgHeaders = { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json" };
+    const cfgRes = await fetch(cfgUrl, { headers: cfgHeaders });
+    const people = cfgRes.ok ? (JSON.parse(b64decode((await cfgRes.json()).content)).people || []) : [];
+
+    const seen = new Set();
+    const results = [];
+
+    // Search by person
+    for (const person of people) {
+      const params = new URLSearchParams({
+        app_id: YLE_APP_ID, app_key: YLE_APP_KEY,
+        query: person.name, type: person.type || "article",
+        language: person.language || "fi", uiLanguage: person.uiLanguage || "fi",
+        limit: person.limit || 5, offset: 0
+      });
+      try {
+        const res = await fetch(`${YLE_API}?${params}`);
+        if (!res.ok) continue;
+        const data = await res.json();
+        for (const item of (data.data || [])) {
+          const url = item?.url?.full || item?.url?.short || "";
+          if (!url || seen.has(url)) continue;
+          const haystack = `${item.headline||""} ${item.lead||""} ${(item.author||[]).join(" ")}`.toLowerCase();
+          const terms = (person.matchTerms || [person.name]).map(t => t.toLowerCase());
+          if (!terms.some(t => haystack.includes(t))) continue;
+          seen.add(url);
+          results.push({ personName: person.name, datePublished: item.datePublished || "", title: item.headline || "", url, lead: item.lead || "" });
+        }
+      } catch { /* CORS tai verkkovirhe — skipataan */ }
+    }
+
+    // Search for "tekoäly"
+    try {
+      const aiParams = new URLSearchParams({ app_id: YLE_APP_ID, app_key: YLE_APP_KEY, query: "tekoäly", type: "article", language: "fi", uiLanguage: "fi", limit: 20, offset: 0 });
+      const res = await fetch(`${YLE_API}?${aiParams}`);
+      if (res.ok) {
+        const data = await res.json();
+        for (const item of (data.data || [])) {
+          const url = item?.url?.full || item?.url?.short || "";
+          if (!url || seen.has(url)) continue;
+          seen.add(url);
+          results.push({ personName: "tekoäly", datePublished: item.datePublished || "", title: item.headline || "", url, lead: item.lead || "" });
+        }
+      }
+    } catch {}
+
+    results.sort((a, b) => (b.datePublished || "").localeCompare(a.datePublished || ""));
+    yleArticles = results;
+    renderYlePanel();
+  } catch(e) {
+    listEl.innerHTML = `<div style="padding:16px;color:#dc2626;font-size:12px">Virhe: ${esc(e.message)}</div>`;
+    document.getElementById("yle-panel-title").textContent = "Haku epäonnistui";
+  } finally {
+    btn.disabled = false; btn.textContent = "YLE Hae uutiset";
+  }
+}
+
+function existingSourceUrls() {
+  const urls = new Set(allPosts.map(p => p.sourceUrl).filter(Boolean));
+  // Also check posts created in this session (in-memory)
+  return urls;
+}
+
+function renderYlePanel() {
+  const existing = existingSourceUrls();
+  const newCount = yleArticles.filter(a => !existing.has(a.url)).length;
+  document.getElementById("yle-panel-title").textContent =
+    `${yleArticles.length} artikkelia — ${newCount} uutta`;
+
+  document.getElementById("yle-panel-list").innerHTML = yleArticles.map((a, i) => {
+    const isExisting = existing.has(a.url);
+    const dateLabel = a.datePublished ? a.datePublished.slice(0, 10) : "";
+    const actionBtn = isExisting
+      ? `<span class="btn-yle-exists">Jo olemassa</span>`
+      : `<button class="btn-yle-create" id="yle-btn-${i}" onclick="createYleDraft(${i})">+ Luo luonnos</button>`;
+    return `<div class="yle-row${isExisting ? " exists" : ""}" id="yle-row-${i}">
+      <div class="yle-meta">
+        <div class="yle-date">${esc(dateLabel)} · ${esc(a.personName)}</div>
+        <a class="yle-title" href="${esc(a.url)}" target="_blank">${esc(a.title)}</a>
+        ${a.lead ? `<div class="yle-lead">${esc(a.lead)}</div>` : ""}
+      </div>
+      ${actionBtn}
+    </div>`;
+  }).join("");
+}
+
+async function createYleDraft(idx) {
+  const article = yleArticles[idx];
+  if (!article) return;
+  const btn = document.getElementById(`yle-btn-${idx}`);
+  if (btn) { btn.disabled = true; btn.textContent = "Luodaan…"; }
+
+  try {
+    const dateStr = article.datePublished ? article.datePublished.slice(0, 10) : new Date().toISOString().slice(0, 10);
+    const slug = `yle-${slugify(article.title).slice(0, 65)}`;
+    const permalink = `/ajankohtaista/yle/${slug}/`;
+    const fullTitle = `YLE: ${article.title}`;
+    const tags = (article.personName && article.personName !== "tekoäly") ? [article.personName] : [];
+
+    const fmData = {
+      title: fullTitle, date: dateStr, slug, permalink,
+      status: "publish", sourceType: "posts", sourceUrl: article.url,
+      excerpt: article.lead || "", mainCategory: "Mediassa",
+      subCategories: ["YLE"], tags, hidden: true,
+      author: "admin", layout: "layouts/post.njk"
+    };
+    const yamlStr = jsyaml.dump(fmData, { lineWidth: -1, noCompatMode: true, quotingType: '"' });
+    const body = article.lead
+      ? `${article.lead}\n\n[Lue koko artikkeli YLE:stä](${article.url})\n`
+      : `[Lue artikkeli YLE:stä](${article.url})\n`;
+    const fileContent = `---\n${yamlStr}---\n\n${body}`;
+    const filePath = `content/posts/${dateStr}-${slug}.md`;
+
+    const apiUrl = `https://api.github.com/repos/${REPO}/contents/${filePath}`;
+    const headers = { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" };
+    const putRes = await fetch(apiUrl, {
+      method: "PUT", headers,
+      body: JSON.stringify({ message: `Lisää YLE-luonnos: ${fullTitle}`, content: b64encode(fileContent), branch: BRANCH })
+    });
+    if (!putRes.ok) throw new Error(`GitHub API ${putRes.status}`);
+
+    // Add to allPosts in memory so it appears in Uutiset tab immediately
+    allPosts.push({
+      path: filePath, url: permalink, title: fullTitle, date: dateStr,
+      mainCategory: "Mediassa", subCategories: ["YLE"], extraCategories: [],
+      tags, hidden: true, sourceUrl: article.url, excerpt: article.lead || ""
+    });
+
+    if (btn) { btn.textContent = "✓ Luonnos luotu"; btn.style.background = "#d1fae5"; btn.style.color = "#065f46"; btn.style.borderColor = "#6ee7b7"; }
+    renderTab("uutiset");
+  } catch(e) {
+    if (btn) { btn.disabled = false; btn.textContent = "+ Luo luonnos"; }
+    showNotice("Virhe: " + e.message, "error");
+  }
 }
 
 // ── Publish / draft toggle ────────────────────────────────────────────────────
