@@ -8,8 +8,11 @@
     "dev:live": "node scripts/run-with-data-mode.js live ./node_modules/.bin/eleventy --serve",
     "prebuild": "node scripts/normalize-localized-frontmatter.js && node scripts/clean-output.js",
     "build": "npm run build:offline",
+    "postbuild": "node scripts/run-pagefind.js",
     "build:offline": "node scripts/run-with-data-mode.js offline ./node_modules/.bin/eleventy",
+    "postbuild:offline": "node scripts/run-pagefind.js",
     "build:live": "node scripts/run-with-data-mode.js live ./node_modules/.bin/eleventy",
+    "postbuild:live": "node scripts/run-pagefind.js",
     "build:test": "node scripts/normalize-localized-frontmatter.js && node scripts/clean-output.js _site_playwright && ELEVENTY_OUTPUT_DIR=_site_playwright node scripts/run-with-data-mode.js offline ./node_modules/.bin/eleventy",
     "data:refresh": "node scripts/refresh-data-cache.js",
     "search:index": "node scripts/run-pagefind.js",
@@ -20,7 +23,7 @@
     "translations:check": "node scripts/check-translations.js"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy": "^3.1.6",
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-navigation": "^1.0.5",
     "@uncenter/eleventy-plugin-toc": "^2.0.0",
@@ -28,10 +31,10 @@
     "vanilla-cookieconsent": "^3.1.0"
   },
   "devDependencies": {
-    "@anthropic-ai/sdk": "^0.80.0",
+    "@anthropic-ai/sdk": "^0.104.2",
     "@axe-core/playwright": "^4.11.1",
-    "@playwright/test": "^1.58.2",
-    "pagefind": "^1.4.0",
-    "playwright-core": "^1.58.2"
+    "@playwright/test": "^1.61.0",
+    "pagefind": "^1.5.2",
+    "playwright-core": "^1.61.0"
   }
 }
