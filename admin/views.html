@@ -128,6 +128,24 @@
     .btn-reset { background: none; border: 1px solid #d1d5db; border-radius: 6px; color: #6b7280; font-size: 12px; padding: 7px 12px; cursor: pointer; font-family: inherit; margin-right: auto; }
     .btn-reset:hover { background: #fef3c7; border-color: #f59e0b; color: #92400e; }
 
+    /* ── Status toggle ── */
+    .col-status { width: 82px; }
+    .btn-pub {
+      background: #dcfce7; border: 1px solid #86efac; border-radius: 10px;
+      color: #15803d; padding: 3px 8px; cursor: pointer; font-size: 11px; font-weight: 600;
+      white-space: nowrap; font-family: inherit; width: 100%;
+    }
+    .btn-pub:hover { background: #bbf7d0; border-color: #4ade80; }
+    .btn-pub.saving, .btn-draft.saving { opacity: 0.5; cursor: not-allowed; }
+    .btn-draft {
+      background: #f3f4f6; border: 1px solid #d1d5db; border-radius: 10px;
+      color: #6b7280; padding: 3px 8px; cursor: pointer; font-size: 11px; font-weight: 600;
+      white-space: nowrap; font-family: inherit; width: 100%;
+    }
+    .btn-draft:hover { background: #e5e7eb; border-color: #9ca3af; }
+    tr.is-hidden td { opacity: 0.55; }
+    tr.is-hidden td.col-status { opacity: 1; }
+
     /* ── Trash ── */
     .col-actions { width: 40px; text-align: center; }
     .btn-trash { background: none; border: 1px solid #fca5a5; border-radius: 5px; color: #dc2626; padding: 3px 6px; cursor: pointer; font-size: 14px; line-height: 1; }
@@ -202,6 +220,7 @@
           <th class="col-field">Lähde</th>
           <th class="col-cats">Kategoriat</th>
           <th class="col-tags">Avainsanat</th>
+          <th class="col-status">Tila</th>
           <th class="col-actions"></th>
         </tr></thead>
         <tbody id="uutiset-tbody"></tbody>
@@ -223,6 +242,7 @@
           <th class="col-field">Tyyppi</th>
           <th class="col-cats">Kategoriat</th>
           <th class="col-tags">Avainsanat</th>
+          <th class="col-status">Tila</th>
           <th class="col-actions"></th>
         </tr></thead>
         <tbody id="tapahtumat-tbody"></tbody>
@@ -244,6 +264,7 @@
           <th class="col-field">Tyyppi</th>
           <th class="col-cats">Kategoriat</th>
           <th class="col-tags">Avainsanat</th>
+          <th class="col-status">Tila</th>
           <th class="col-actions"></th>
         </tr></thead>
         <tbody id="toiminta-tbody"></tbody>
@@ -509,7 +530,11 @@ function renderTab(tab) {
     // Tag pills
     const tagPills = buildPillCell(post, "tag");
 
-    return `<tr data-path="${ep}">
+    const isHidden = !!post.hidden;
+    const statusBtn = isHidden
+      ? `<button class="btn-draft" id="stbtn-${ep}" onclick="togglePublish('${ep}')" title="Luonnos — ei näy sivustolla">○ Luonnos</button>`
+      : `<button class="btn-pub"   id="stbtn-${ep}" onclick="togglePublish('${ep}')" title="Julkaistu — näkyy sivustolla">● Julkaistu</button>`;
+    return `<tr data-path="${ep}"${isHidden ? ' class="is-hidden"' : ''}>
       <td class="col-date">
         <div class="post-date">${esc(post.date||"")}</div>
         <a class="title-link" href="${esc(post.url)}" target="_blank" style="font-size:11px;font-weight:normal">↗</a>
@@ -522,6 +547,7 @@ function renderTab(tab) {
       </td>
       <td class="col-cats">${catPills}</td>
       <td class="col-tags">${tagPills}</td>
+      <td class="col-status">${statusBtn}</td>
       <td class="col-actions"><button class="btn-trash" onclick="confirmTrash('${ep}')" title="Siirrä roskakoriin">🗑</button></td>
     </tr>`;
   }).join("");
@@ -976,6 +1002,39 @@ function updateTrashBadge() {
   if (!badge) return;
   badge.textContent = trashedPosts.length || "";
   badge.classList.toggle("has-items", trashedPosts.length > 0);
+}
+
+// ── Publish / draft toggle ────────────────────────────────────────────────────
+
+async function togglePublish(path) {
+  const post = allPosts.find(p => p.path === path);
+  if (!post) return;
+  const btn = document.getElementById(`stbtn-${path}`);
+  if (btn) { btn.classList.add("saving"); btn.disabled = true; }
+  const newHidden = !post.hidden;
+  try {
+    await modifyFrontmatter(path, data => {
+      if (newHidden) data.hidden = true;
+      else delete data.hidden;
+    });
+    post.hidden = newHidden;
+    // Update row in place without full re-render to avoid losing other UI state
+    const row = document.querySelector(`tr[data-path="${CSS.escape(path)}"]`);
+    if (row) {
+      row.classList.toggle("is-hidden", newHidden);
+      const cell = row.querySelector(".col-status");
+      if (cell) {
+        const ep = esc(path);
+        cell.innerHTML = newHidden
+          ? `<button class="btn-draft" id="stbtn-${ep}" onclick="togglePublish('${ep}')" title="Luonnos — ei näy sivustolla">○ Luonnos</button>`
+          : `<button class="btn-pub"   id="stbtn-${ep}" onclick="togglePublish('${ep}')" title="Julkaistu — näkyy sivustolla">● Julkaistu</button>`;
+      }
+    }
+    showNotice(newHidden ? `"${post.title}" merkitty luonnokseksi.` : `"${post.title}" julkaistu.`, "success");
+  } catch(e) {
+    if (btn) { btn.classList.remove("saving"); btn.disabled = false; }
+    showNotice("Virhe: " + e.message, "error");
+  }
 }
 </script>
 </body>

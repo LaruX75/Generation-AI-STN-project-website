@@ -39,6 +39,7 @@ module.exports = class CategoriesData {
         subCategories: p.data.subCategories || [],
         extraCategories: p.data.extraCategories || [],
         tags: p.data.tags || [],
+        hidden: p.data.hidden === true,
         excerpt: makeExcerpt(p.inputPath)
       }));
     return JSON.stringify(posts, null, 2);

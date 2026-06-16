@@ -244,13 +244,13 @@ module.exports = function(eleventyConfig) {
   const byDate = (a, b) => b.date - a.date;
 
   eleventyConfig.addCollection("posts", col =>
-    col.getAll().filter(p => p.data.sourceType === "posts").sort(byDate)
+    col.getAll().filter(p => p.data.sourceType === "posts" && !p.data.hidden).sort(byDate)
   );
   eleventyConfig.addCollection("ajankohtaista", col =>
-    col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).includes("Ajankohtaista")).sort(byDate)
+    col.getAll().filter(p => p.data.sourceType === "posts" && !p.data.hidden && (p.data.categories || []).includes("Ajankohtaista")).sort(byDate)
   );
   eleventyConfig.addCollection("media", col =>
-    col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).some(c => [
+    col.getAll().filter(p => p.data.sourceType === "posts" && !p.data.hidden && (p.data.categories || []).some(c => [
       // fi
       "Mediassa",
       // en
@@ -260,7 +260,7 @@ module.exports = function(eleventyConfig) {
     ].includes(c))).sort(byDate)
   );
   eleventyConfig.addCollection("tapahtumat", col =>
-    col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).some(c => [
+    col.getAll().filter(p => p.data.sourceType === "posts" && !p.data.hidden && (p.data.categories || []).some(c => [
       // fi
       "Tapahtumat",
       // en
@@ -270,7 +270,7 @@ module.exports = function(eleventyConfig) {
     ].includes(c))).sort(byDate)
   );
   eleventyConfig.addCollection("hankkeen-toiminta", col =>
-    col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).some(c => [
+    col.getAll().filter(p => p.data.sourceType === "posts" && !p.data.hidden && (p.data.categories || []).some(c => [
       // fi
       "Toiminta",
       // en
@@ -280,7 +280,7 @@ module.exports = function(eleventyConfig) {
     ].includes(c))).sort(byDate)
   );
   eleventyConfig.addCollection("tutkimus", col =>
-    col.getAll().filter(p => p.data.sourceType === "posts" && (p.data.categories || []).some(c => [
+    col.getAll().filter(p => p.data.sourceType === "posts" && !p.data.hidden && (p.data.categories || []).some(c => [
       // fi
       "Tutkimus",
       // en
