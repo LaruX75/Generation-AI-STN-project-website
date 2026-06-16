@@ -14,7 +14,11 @@
     "colAuthors": "Authors", "colYear": "Year", "colTitle": "Title", "colVenue": "Publication", "colLink": "Link", "colCode": "Code",
     "open": "Open", "newTab": "(opens in new tab)", "na": "—", "empty": "No results.",
     "prev": "← Previous", "next": "Next →",
-    "jsPage": "Page", "jsSep": "/", "jsResults": "results"
+    "jsPage": "Page", "jsSep": "/", "jsResults": "results",
+    "citeOpen": "Export citation", "citeTitle": "Export citation", "citeFormat": "Citation format",
+    "citeCopy": "Copy", "citeDownload": "Download", "citePreview": "Preview", "citeClose": "Close",
+    "citeBibtex": "BibTeX (.bib)", "citeApa": "APA", "citeMla": "MLA", "citeChicago": "Chicago",
+    "citeCopied": "Copied!"
   } %}
 {% elif lang == "sv" %}
   {% set lbl = {
@@ -27,7 +31,11 @@
     "colAuthors": "Författare", "colYear": "År", "colTitle": "Titel", "colVenue": "Publikation", "colLink": "Länk", "colCode": "Kod",
     "open": "Öppna", "newTab": "(öppnas i ny flik)", "na": "—", "empty": "Inga resultat.",
     "prev": "← Föregående", "next": "Nästa →",
-    "jsPage": "Sida", "jsSep": "/", "jsResults": "resultat"
+    "jsPage": "Sida", "jsSep": "/", "jsResults": "resultat",
+    "citeOpen": "Exportera referens", "citeTitle": "Exportera referens", "citeFormat": "Referensformat",
+    "citeCopy": "Kopiera", "citeDownload": "Ladda ner", "citePreview": "Förhandsvisning", "citeClose": "Stäng",
+    "citeBibtex": "BibTeX (.bib)", "citeApa": "APA", "citeMla": "MLA", "citeChicago": "Chicago",
+    "citeCopied": "Kopierad!"
   } %}
 {% else %}
   {% set lbl = {
@@ -40,7 +48,11 @@
     "colAuthors": "Tekijät", "colYear": "Vuosi", "colTitle": "Otsikko", "colVenue": "Julkaisun nimi", "colLink": "Linkki", "colCode": "Koodi",
     "open": "Avaa", "newTab": "(avautuu uudessa välilehdessä)", "na": "—", "empty": "Ei tuloksia.",
     "prev": "← Edellinen", "next": "Seuraava →",
-    "jsPage": "Sivu", "jsSep": "/", "jsResults": "tulosta"
+    "jsPage": "Sivu", "jsSep": "/", "jsResults": "tulosta",
+    "citeOpen": "Vie viite", "citeTitle": "Vie lähdeviite", "citeFormat": "Viittausmuoto",
+    "citeCopy": "Kopioi", "citeDownload": "Lataa", "citePreview": "Esikatselu", "citeClose": "Sulje",
+    "citeBibtex": "BibTeX (.bib)", "citeApa": "APA", "citeMla": "MLA", "citeChicago": "Chicago",
+    "citeCopied": "Kopioitu!"
   } %}
 {% endif %}
 
@@ -102,6 +114,13 @@
               {% else %}
                 {{ item.title | default('—') }}
               {% endif %}
+              <div class="scipub-inline-actions">
+                <button
+                  class="scipub-cite-btn"
+                  type="button"
+                  data-citation-id="{{ item.id }}"
+                >{{ lbl.citeOpen }}</button>
+              </div>
             </td>
             <td class="media-table-col--venue media-table-col--mobile-hide">{{ item.venue | default('—') }}</td>
             <td class="media-table-col--link media-table-col--mobile-hide">
@@ -129,8 +148,77 @@
 
 </section>
 
+<div
+  id="scipub-citation-modal"
+  class="scipub-citation-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="scipub-citation-title"
+  hidden
+>
+  <div class="scipub-citation-modal__backdrop" data-citation-close="backdrop" aria-hidden="true"></div>
+  <div class="scipub-citation-modal__box">
+    <div class="scipub-citation-modal__header">
+      <h3 id="scipub-citation-title" class="scipub-citation-modal__title">{{ lbl.citeTitle }}</h3>
+      <button class="scipub-citation-modal__close" type="button" data-citation-close="button" aria-label="{{ lbl.citeClose }}">{{ lbl.citeClose }}</button>
+    </div>
+    <div class="scipub-citation-modal__content">
+      <div class="scipub-citation-modal__toolbar">
+        <label class="scipub-citation-modal__field">
+          <span class="scipub-citation-modal__label">{{ lbl.citeFormat }}</span>
+          <select id="scipub-citation-format" class="scipub-citation-modal__select">
+            <option value="bibtex">{{ lbl.citeBibtex }}</option>
+            <option value="apa">{{ lbl.citeApa }}</option>
+            <option value="mla">{{ lbl.citeMla }}</option>
+            <option value="chicago">{{ lbl.citeChicago }}</option>
+          </select>
+        </label>
+        <div class="scipub-citation-modal__actions">
+          <button id="scipub-citation-copy" class="scipub-citation-modal__action" type="button">{{ lbl.citeCopy }}</button>
+          <button id="scipub-citation-download" class="scipub-citation-modal__action" type="button">{{ lbl.citeDownload }}</button>
+        </div>
+      </div>
+      <label class="scipub-citation-modal__preview" for="scipub-citation-preview">
+        <span class="scipub-citation-modal__label">{{ lbl.citePreview }}</span>
+        <textarea id="scipub-citation-preview" class="scipub-citation-modal__textarea" readonly></textarea>
+      </label>
+    </div>
+  </div>
+</div>
+
+<script id="scipub-citation-data" type="application/json">
+{
+{% for item in allItems %}
+  {{ item.id | dump | safe }}: {
+    "title": {{ item.title | dump | safe }},
+    "fileName": {{ item.citationFileName | dump | safe }},
+    "formats": {{ item.citationFormats | dump | safe }}
+  }{% if not loop.last %},{% endif %}
+{% endfor %}
+}
+</script>
+
 <script>
 (function () {
+  var citationDataEl = document.getElementById("scipub-citation-data");
+  var citationData = {};
+  var modal = document.getElementById("scipub-citation-modal");
+  var formatSelect = document.getElementById("scipub-citation-format");
+  var previewEl = document.getElementById("scipub-citation-preview");
+  var copyBtn = document.getElementById("scipub-citation-copy");
+  var downloadBtn = document.getElementById("scipub-citation-download");
+  var titleEl = document.getElementById("scipub-citation-title");
+  var lastTrigger = null;
+  var activeCitation = null;
+
+  if (citationDataEl) {
+    try {
+      citationData = JSON.parse(citationDataEl.textContent || "{}");
+    } catch (error) {
+      citationData = {};
+    }
+  }
+
   function applyAuthorFilterFromUrl() {
     var section = document.getElementById("scipub-table-section");
     if (!section) return;
@@ -143,6 +231,132 @@
     search.value = author;
     search.dispatchEvent(new Event("input", { bubbles: true }));
   }
+
+  function getSelectedFormat() {
+    return formatSelect ? formatSelect.value : "bibtex";
+  }
+
+  function getCitationText() {
+    if (!activeCitation || !activeCitation.formats) return "";
+    return activeCitation.formats[getSelectedFormat()] || "";
+  }
+
+  function updateCitationPreview() {
+    if (!previewEl) return;
+    previewEl.value = getCitationText();
+  }
+
+  function citationExtension(format) {
+    return format === "bibtex" ? "bib" : "txt";
+  }
+
+  function openCitationModal(trigger) {
+    var citationId = trigger && trigger.getAttribute("data-citation-id");
+    if (!citationId || !citationData[citationId] || !modal) return;
+    activeCitation = citationData[citationId];
+    lastTrigger = trigger;
+    if (titleEl && activeCitation.title) {
+      titleEl.textContent = "{{ lbl.citeTitle }}" + ": " + activeCitation.title;
+    }
+    if (formatSelect) formatSelect.value = "bibtex";
+    updateCitationPreview();
+    modal.hidden = false;
+    document.body.classList.add("search-modal-open");
+    if (formatSelect) formatSelect.focus();
+  }
+
+  function closeCitationModal() {
+    if (!modal || modal.hidden) return;
+    modal.hidden = true;
+    document.body.classList.remove("search-modal-open");
+    activeCitation = null;
+    if (titleEl) titleEl.textContent = "{{ lbl.citeTitle }}";
+    if (lastTrigger) lastTrigger.focus();
+  }
+
+  function fallbackCopy(text) {
+    if (!previewEl) return false;
+    previewEl.focus();
+    previewEl.select();
+    try {
+      return document.execCommand("copy");
+    } catch (error) {
+      return false;
+    }
+  }
+
+  async function copyCitation() {
+    var text = getCitationText();
+    if (!text || !copyBtn) return;
+    var copied = false;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        await navigator.clipboard.writeText(text);
+        copied = true;
+      } catch (error) {
+        copied = fallbackCopy(text);
+      }
+    } else {
+      copied = fallbackCopy(text);
+    }
+    if (!copied) return;
+    var original = copyBtn.textContent;
+    copyBtn.textContent = "{{ lbl.citeCopied }}";
+    window.setTimeout(function () {
+      copyBtn.textContent = original;
+    }, 1600);
+  }
+
+  function downloadCitation() {
+    var text = getCitationText();
+    if (!text || !activeCitation) return;
+    var format = getSelectedFormat();
+    var fileName = (activeCitation.fileName || "publication") + "." + citationExtension(format);
+    var blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+    var url = URL.createObjectURL(blob);
+    var link = document.createElement("a");
+    link.href = url;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.setTimeout(function () {
+      URL.revokeObjectURL(url);
+    }, 0);
+  }
+
+  document.addEventListener("click", function (e) {
+    var citeBtn = e.target.closest(".scipub-cite-btn");
+    if (citeBtn) {
+      openCitationModal(citeBtn);
+      return;
+    }
+
+    if (e.target.closest("[data-citation-close]")) {
+      closeCitationModal();
+    }
+  });
+
+  if (formatSelect) {
+    formatSelect.addEventListener("change", updateCitationPreview);
+  }
+
+  if (copyBtn) {
+    copyBtn.addEventListener("click", function () {
+      copyCitation();
+    });
+  }
+
+  if (downloadBtn) {
+    downloadBtn.addEventListener("click", downloadCitation);
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modal && !modal.hidden) {
+      e.preventDefault();
+      closeCitationModal();
+    }
+  });
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", applyAuthorFilterFromUrl);

@@ -128,6 +128,15 @@
     .btn-reset { background: none; border: 1px solid #d1d5db; border-radius: 6px; color: #6b7280; font-size: 12px; padding: 7px 12px; cursor: pointer; font-family: inherit; margin-right: auto; }
     .btn-reset:hover { background: #fef3c7; border-color: #f59e0b; color: #92400e; }
 
+    /* ── Trash ── */
+    .col-actions { width: 40px; text-align: center; }
+    .btn-trash { background: none; border: 1px solid #fca5a5; border-radius: 5px; color: #dc2626; padding: 3px 6px; cursor: pointer; font-size: 14px; line-height: 1; }
+    .btn-trash:hover { background: #fef2f2; border-color: #dc2626; }
+    .btn-restore { background: none; border: 1px solid #86efac; border-radius: 5px; color: #16a34a; padding: 3px 8px; cursor: pointer; font-size: 12px; font-family: inherit; white-space: nowrap; }
+    .btn-restore:hover { background: #f0fdf4; border-color: #16a34a; }
+    .trash-badge { display: none; font-size: 10px; background: #fee2e2; color: #dc2626; border-radius: 8px; padding: 0 5px; margin-left: 3px; vertical-align: middle; }
+    .trash-badge.has-items { display: inline; }
+
     /* ── Modal ── */
     .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 100; }
     .modal { background: #fff; border-radius: 10px; padding: 24px; width: 420px; max-width: 95vw; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
@@ -175,6 +184,7 @@
       <div class="tab active" onclick="switchTab('uutiset')">Uutiset</div>
       <div class="tab" onclick="switchTab('tapahtumat')">Tapahtumat</div>
       <div class="tab" onclick="switchTab('toiminta')">Toiminta</div>
+      <div class="tab" onclick="switchTab('roskakori')">🗑 Roskakori<span class="trash-badge" id="trash-badge"></span></div>
     </div>
 
     <!-- Uutiset -->
@@ -192,6 +202,7 @@
           <th class="col-field">Lähde</th>
           <th class="col-cats">Kategoriat</th>
           <th class="col-tags">Avainsanat</th>
+          <th class="col-actions"></th>
         </tr></thead>
         <tbody id="uutiset-tbody"></tbody>
       </table>
@@ -212,6 +223,7 @@
           <th class="col-field">Tyyppi</th>
           <th class="col-cats">Kategoriat</th>
           <th class="col-tags">Avainsanat</th>
+          <th class="col-actions"></th>
         </tr></thead>
         <tbody id="tapahtumat-tbody"></tbody>
       </table>
@@ -232,10 +244,29 @@
           <th class="col-field">Tyyppi</th>
           <th class="col-cats">Kategoriat</th>
           <th class="col-tags">Avainsanat</th>
+          <th class="col-actions"></th>
         </tr></thead>
         <tbody id="toiminta-tbody"></tbody>
       </table>
     </div>
+
+    <!-- Roskakori -->
+    <div id="tab-roskakori" style="display:none">
+      <div class="toolbar">
+        <span class="count-label" id="roskakori-count"></span>
+      </div>
+      <table>
+        <thead><tr>
+          <th class="col-date">Pvm</th>
+          <th class="col-title">Otsikko</th>
+          <th class="col-excerpt">Tiivistelmä</th>
+          <th style="width:90px">Alkuperä</th>
+          <th style="width:100px"></th>
+        </tr></thead>
+        <tbody id="roskakori-tbody"></tbody>
+      </table>
+    </div>
+
   </div>
 </div>
 
@@ -315,6 +346,7 @@ recomputeAllCats();
 // ── Auth ──────────────────────────────────────────────────────────────────────
 
 let allPosts = [];
+let trashedPosts = [];
 let token = "";
 let modalMode = null;
 
@@ -393,10 +425,11 @@ const sortState = {
 };
 
 function switchTab(name) {
-  ["uutiset","tapahtumat","toiminta"].forEach((t, i) => {
+  ["uutiset","tapahtumat","toiminta","roskakori"].forEach((t, i) => {
     document.getElementById("tab-"+t).style.display = t === name ? "" : "none";
     document.querySelectorAll(".tab")[i].classList.toggle("active", t === name);
   });
+  if (name === "roskakori") renderTrash();
 }
 
 function setSort(tab, col) {
@@ -482,6 +515,7 @@ function renderTab(tab) {
       </td>
       <td class="col-cats">${catPills}</td>
       <td class="col-tags">${tagPills}</td>
+      <td class="col-actions"><button class="btn-trash" onclick="confirmTrash('${ep}')" title="Siirrä roskakoriin">🗑</button></td>
     </tr>`;
   }).join("");
 
@@ -614,6 +648,19 @@ async function modalSave() {
     } catch(e) { showNotice(e.message, "error"); }
     return;
   }
+  if (modalMode.type === "trash") {
+    const { path, title } = modalMode;
+    closeModal();
+    try {
+      await modifyFrontmatter(path, data => { data.draft = true; });
+      const idx = allPosts.findIndex(p => p.path === path);
+      if (idx >= 0) trashedPosts.push(...allPosts.splice(idx, 1));
+      rerenderCurrentTab();
+      updateTrashBadge();
+      showNotice(`"${title}" siirretty roskakoriin.`, "success");
+    } catch(e) { showNotice("Virhe: " + e.message, "error"); }
+    return;
+  }
   closeModal();
 }
 
@@ -732,9 +779,11 @@ function applyToMemory(path, field, oldName, newName) {
 function rerenderCurrentTab() {
   const active = document.querySelector(".tab.active");
   if (!active) return;
-  const tabs = ["uutiset","tapahtumat","toiminta"];
+  const tabs = ["uutiset","tapahtumat","toiminta","roskakori"];
   const idx = [...document.querySelectorAll(".tab")].indexOf(active);
-  if (idx >= 0) renderTab(tabs[idx]);
+  if (idx < 0) return;
+  if (tabs[idx] === "roskakori") renderTrash();
+  else renderTab(tabs[idx]);
 }
 
 // ── Frontmatter & encoding utils ──────────────────────────────────────────────
@@ -844,6 +893,61 @@ function resetOptsDefaults() {
 function closeOptsModal() {
   document.getElementById("opts-modal").style.display = "none";
   optsFieldType = null;
+}
+
+// ── Trash ─────────────────────────────────────────────────────────────────────
+
+function confirmTrash(path) {
+  const post = allPosts.find(p => p.path === path);
+  if (!post) return;
+  modalMode = { type: "trash", path, title: post.title };
+  document.getElementById("modal-title").textContent = "Siirrä roskakoriin?";
+  document.getElementById("modal-desc").textContent = `"${post.title}" merkitään luonnokseksi GitHubissa ja poistetaan näkymästä.`;
+  const w = document.getElementById("modal-warning");
+  w.textContent = "Voit palauttaa tietueen Roskakori-välilehdeltä tämän istunnon aikana.";
+  w.style.display = "";
+  document.getElementById("modal-rename-fields").style.display = "none";
+  const btn = document.getElementById("modal-save-btn");
+  btn.textContent = "Siirrä roskakoriin"; btn.style.background = "#dc2626";
+  document.getElementById("modal").style.display = "flex";
+}
+
+async function restorePost(path) {
+  const post = trashedPosts.find(p => p.path === path);
+  if (!post) return;
+  try {
+    await modifyFrontmatter(path, data => { delete data.draft; });
+    const idx = trashedPosts.findIndex(p => p.path === path);
+    if (idx >= 0) allPosts.push(...trashedPosts.splice(idx, 1));
+    renderTrash();
+    updateTrashBadge();
+    showNotice(`"${post.title}" palautettu.`, "success");
+  } catch(e) { showNotice("Virhe: " + e.message, "error"); }
+}
+
+function renderTrash() {
+  const tbody = document.getElementById("roskakori-tbody");
+  if (!tbody) return;
+  document.getElementById("roskakori-count").textContent = trashedPosts.length ? `${trashedPosts.length} tietuetta` : "";
+  if (!trashedPosts.length) {
+    tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:24px;color:#9ca3af">Roskakori on tyhjä</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = trashedPosts.map(post => `
+    <tr>
+      <td class="col-date"><div class="post-date">${esc(post.date||"")}</div></td>
+      <td class="col-title"><a class="title-link" href="${esc(post.url)}" target="_blank">${esc(post.title)}</a></td>
+      <td class="col-excerpt"><div class="post-excerpt">${esc(post.excerpt||"")}</div></td>
+      <td style="font-size:12px;color:#6b7280">${esc(post.mainCategory||"")}</td>
+      <td style="width:100px"><button class="btn-restore" onclick="restorePost('${esc(post.path)}')">↩ Palauta</button></td>
+    </tr>`).join("");
+}
+
+function updateTrashBadge() {
+  const badge = document.getElementById("trash-badge");
+  if (!badge) return;
+  badge.textContent = trashedPosts.length || "";
+  badge.classList.toggle("has-items", trashedPosts.length > 0);
 }
 </script>
 </body>
