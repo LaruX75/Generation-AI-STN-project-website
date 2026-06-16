@@ -229,8 +229,11 @@
 
     <!-- Uutiset -->
     <div id="tab-uutiset">
-      <div class="toolbar">
+      <div style="margin-bottom:8px;display:flex;align-items:center;gap:10px;flex-wrap:wrap">
         <button class="btn-yle" id="yle-fetch-btn" onclick="fetchYleNews()">YLE Hae uutiset</button>
+        <span id="yle-debug" style="font-size:11px;color:#6b7280;font-family:monospace"></span>
+      </div>
+      <div class="toolbar">
         <input type="text" id="uutiset-search" placeholder="Hae otsikolla…" oninput="renderTab('uutiset')">
         <span class="count-label" id="uutiset-count"></span>
         <button class="btn-gear" onclick="openOptsModal('source')">⚙ Muokkaa lähteitä</button>
@@ -1070,7 +1073,12 @@ function slugify(str) {
 
 async function fetchYleNews() {
   const btn = document.getElementById("yle-fetch-btn");
+  const dbg = document.getElementById("yle-debug");
+  const log = msg => { dbg.textContent = msg; console.log("[YLE]", msg); };
+
   btn.disabled = true; btn.textContent = "Haetaan…";
+  log("Käynnistetty…");
+
   const panel = document.getElementById("yle-panel");
   const listEl = document.getElementById("yle-panel-list");
   panel.style.display = "";
@@ -1079,13 +1087,20 @@ async function fetchYleNews() {
 
   try {
     // Load people list from GitHub
+    log("Ladataan henkilölista GitHubista…");
     const cfgUrl = `https://api.github.com/repos/${REPO}/contents/src/_data/ylenews.config.json`;
     const cfgHeaders = { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json" };
     const cfgRes = await fetch(cfgUrl, { headers: cfgHeaders });
-    const people = cfgRes.ok ? (JSON.parse(b64decode((await cfgRes.json()).content)).people || []) : [];
+    if (!cfgRes.ok) {
+      log(`❌ GitHub config HTTP ${cfgRes.status} – tokenongelma?`);
+      throw new Error(`GitHub config fetch epäonnistui: HTTP ${cfgRes.status}`);
+    }
+    const people = JSON.parse(b64decode((await cfgRes.json()).content)).people || [];
+    log(`✓ ${people.length} henkilöä ladattu. Haetaan YLE API…`);
 
     const seen = new Set();
     const results = [];
+    let personHits = 0, personErrors = 0;
 
     // Search by person
     for (const person of people) {
@@ -1097,41 +1112,59 @@ async function fetchYleNews() {
       });
       try {
         const res = await fetch(`${YLE_API}?${params}`);
-        if (!res.ok) continue;
+        if (!res.ok) { personErrors++; log(`⚠ ${person.name}: HTTP ${res.status}`); continue; }
         const data = await res.json();
+        let added = 0;
         for (const item of (data.data || [])) {
           const url = item?.url?.full || item?.url?.short || "";
           if (!url || seen.has(url)) continue;
           const haystack = `${item.headline||""} ${item.lead||""} ${(item.author||[]).join(" ")}`.toLowerCase();
           const terms = (person.matchTerms || [person.name]).map(t => t.toLowerCase());
           if (!terms.some(t => haystack.includes(t))) continue;
-          seen.add(url);
+          seen.add(url); added++;
           results.push({ personName: person.name, datePublished: item.datePublished || "", title: item.headline || "", url, lead: item.lead || "" });
         }
-      } catch { /* CORS tai verkkovirhe — skipataan */ }
+        personHits += added;
+        log(`✓ ${person.name}: ${added} osumaa (yht. ${results.length})`);
+      } catch(e) {
+        personErrors++;
+        log(`❌ ${person.name}: ${e.message} (CORS?)`);
+        console.error("[YLE] person fetch error", person.name, e);
+      }
     }
 
     // Search for "tekoäly"
+    log(`Henkilöhaut valmis (${personHits} osumaa, ${personErrors} virh.). Haetaan "tekoäly"…`);
     try {
       const aiParams = new URLSearchParams({ app_id: YLE_APP_ID, app_key: YLE_APP_KEY, query: "tekoäly", type: "article", language: "fi", uiLanguage: "fi", limit: 20, offset: 0 });
       const res = await fetch(`${YLE_API}?${aiParams}`);
       if (res.ok) {
         const data = await res.json();
+        let aiAdded = 0;
         for (const item of (data.data || [])) {
           const url = item?.url?.full || item?.url?.short || "";
           if (!url || seen.has(url)) continue;
-          seen.add(url);
+          seen.add(url); aiAdded++;
           results.push({ personName: "tekoäly", datePublished: item.datePublished || "", title: item.headline || "", url, lead: item.lead || "" });
         }
+        log(`✓ tekoäly-haku: +${aiAdded} artikkelia`);
+      } else {
+        log(`⚠ tekoäly-haku: HTTP ${res.status}`);
       }
-    } catch {}
+    } catch(e) {
+      log(`❌ tekoäly-haku: ${e.message}`);
+      console.error("[YLE] tekoäly fetch error", e);
+    }
 
     results.sort((a, b) => (b.datePublished || "").localeCompare(a.datePublished || ""));
     yleArticles = results;
+    log(`✅ Valmis — ${results.length} artikkelia yhteensä`);
     renderYlePanel();
   } catch(e) {
     listEl.innerHTML = `<div style="padding:16px;color:#dc2626;font-size:12px">Virhe: ${esc(e.message)}</div>`;
     document.getElementById("yle-panel-title").textContent = "Haku epäonnistui";
+    log(`❌ Virhe: ${e.message}`);
+    console.error("[YLE] fetchYleNews error", e);
   } finally {
     btn.disabled = false; btn.textContent = "YLE Hae uutiset";
   }
