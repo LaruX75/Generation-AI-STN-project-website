@@ -1069,32 +1069,46 @@ function slugify(str) {
 }
 
 async function fetchYleNews() {
-  const btn  = document.getElementById("yle-fetch-btn");
-  const dbg  = document.getElementById("yle-debug");
-  const log  = msg => { dbg.textContent = msg; console.log("[YLE]", msg); };
-  const panel  = document.getElementById("yle-panel");
-  const listEl = document.getElementById("yle-panel-list");
+  const dbg = document.getElementById("yle-debug");
+  const setDbg = msg => { if (dbg) dbg.textContent = msg; console.log("[YLE]", msg); };
 
-  btn.disabled = true; btn.textContent = "Ladataan…";
-  log("Ladataan tallennettuja tuloksia…");
-  panel.style.display = "";
-  document.getElementById("yle-panel-title").textContent = "Ladataan…";
-  listEl.innerHTML = `<div style="padding:16px;color:#6b7280;font-size:12px">Ladataan…</div>`;
+  setDbg("Käynnistetty…");
+
+  const btn = document.getElementById("yle-fetch-btn");
+  if (btn) { btn.disabled = true; btn.textContent = "Ladataan…"; }
 
   try {
+    setDbg("Haetaan /admin/yle-results.json…");
     const res = await fetch(`/admin/yle-results.json?t=${Date.now()}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    setDbg(`Vastaus: HTTP ${res.status}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status} – tiedostoa ei löydy`);
+
     const data = await res.json();
+    setDbg(`JSON ok – ${(data.articles||[]).length} artikkelia`);
+
     yleArticles = data.articles || [];
     const ts = data.fetchedAt ? new Date(data.fetchedAt).toLocaleString("fi-FI") : "–";
-    log(`✅ ${yleArticles.length} artikkelia · Päivitetty: ${ts}`);
+
+    const panel = document.getElementById("yle-panel");
+    const listEl = document.getElementById("yle-panel-list");
+    const titleEl = document.getElementById("yle-panel-title");
+    if (panel) panel.style.display = "";
+    if (listEl) listEl.innerHTML = `<div style="padding:16px;color:#6b7280;font-size:12px">Renderöidään…</div>`;
+    if (titleEl) titleEl.textContent = "Ladataan…";
+
     renderYlePanel();
+    setDbg(`✅ ${yleArticles.length} artikkelia · Päivitetty: ${ts}`);
   } catch(e) {
-    listEl.innerHTML = `<div style="padding:16px;color:#dc2626;font-size:12px">Virhe: ${esc(e.message)}</div>`;
-    document.getElementById("yle-panel-title").textContent = "Lataus epäonnistui";
-    log(`❌ ${e.message}`);
+    console.error("[YLE] fetchYleNews:", e);
+    setDbg(`❌ ${e.message}`);
+    const panel = document.getElementById("yle-panel");
+    const listEl = document.getElementById("yle-panel-list");
+    const titleEl = document.getElementById("yle-panel-title");
+    if (panel) panel.style.display = "";
+    if (listEl) listEl.innerHTML = `<div style="padding:16px;color:#dc2626;font-size:12px">Virhe: ${esc(e.message)}</div>`;
+    if (titleEl) titleEl.textContent = "Lataus epäonnistui";
   } finally {
-    btn.disabled = false; btn.textContent = "YLE Hae uutiset";
+    if (btn) { btn.disabled = false; btn.textContent = "YLE Hae uutiset"; }
   }
 }
 
