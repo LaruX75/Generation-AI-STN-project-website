@@ -1,15 +1,12 @@
 ---
 title: Suomalainen AI-kasvatus Business Weekly -lehdessä
-date: '2026-03-24T00:00:00'
-updated: '2026-03-24T00:00:00'
+date: "2026-03-24T00:00:00"
+updated: "2026-03-24T00:00:00"
 slug: business-weekly-suomalainen-ai-kasvatus
 permalink: /ajankohtaista/business-weekly-suomalainen-ai-kasvatus/
 status: publish
 sourceType: posts
-excerpt: >-
-  Taiwanilainen Business Weekly (商業周刊) nro 2001 kirjoittaa suomalaisesta
-  AI-kasvatuksesta, Generation AI -hankkeesta ja haastattelee professori Teemu
-  Roosia.
+excerpt: Taiwanilainen Business Weekly (商業周刊) nro 2001 kirjoittaa suomalaisesta AI-kasvatuksesta, Generation AI -hankkeesta ja haastattelee professori Teemu Roosia.
 mainCategory: Mediassa
 subCategories:
   - Hanke mediassa
@@ -19,6 +16,7 @@ tags:
   - ai-lukutaito
 author: admin
 layout: layouts/post.njk
+hidden: true
 ---
 
 Taiwanilainen talousaikakauslehti **Business Weekly** (商業周刊) julkaisi maaliskuussa 2026 laajan jutun suomalaisesta koulutuksesta. Artikkelissa käsitellään muun muassa **Generation AI** -hanketta ja Helsingin yliopiston professori **Teemu Roosin** työtä AI-lukutaidon parissa. Alla käännös artikkelin sivulta 63.
