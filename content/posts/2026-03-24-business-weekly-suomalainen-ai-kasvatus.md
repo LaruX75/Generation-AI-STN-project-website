@@ -16,7 +16,6 @@ tags:
   - ai-lukutaito
 author: admin
 layout: layouts/post.njk
-hidden: true
 ---
 
 Taiwanilainen talousaikakauslehti **Business Weekly** (商業周刊) julkaisi maaliskuussa 2026 laajan jutun suomalaisesta koulutuksesta. Artikkelissa käsitellään muun muassa **Generation AI** -hanketta ja Helsingin yliopiston professori **Teemu Roosin** työtä AI-lukutaidon parissa. Alla käännös artikkelin sivulta 63.
