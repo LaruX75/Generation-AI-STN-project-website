@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-06-17T09:26:44.035Z",
+  "fetchedAt": "2026-06-18T09:10:35.227Z",
   "count": 25,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-17T09:29:52Z",
+      "title": "Elon Musk kehittää aivosirua, joka lukisi ajatuksia – professori kertoo, miksi siitä ei tarvitse olla huolissaan",
+      "url": "https://yle.fi/a/74-20231188",
+      "lead": "Elon Muskin Neuralink-aivosirusta ei pidä huolestua, vaikka suunnitelmat kuulostavat olevan kuin science fiction -elokuvasta, sanoo Lauri Parkkonen Aalto-yliopistosta."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-06-13T17:03:30Z",
@@ -127,13 +134,6 @@
       "title": "Kysely: Kolmasosa toimi­henkilöistä uskoo tekoälyn korvaavan työnsä",
       "url": "https://yle.fi/a/74-20228372",
       "lead": "Osuus on kasvussa, käy ilmi Ammattiliitto Pron vuosittaisesta jäsenkyselystä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-05-28T01:08:23Z",
-      "title": "Amnesty: Generatiivinen tekoäly perustuu miljardien ihmisten tietojen keruuseen ilman lupaa",
-      "url": "https://yle.fi/a/74-20228356",
-      "lead": "Ihmisoikeusjärjestö vaatii valtioita puuttumaan tekoälyjärjestelmiin, jotka perustuvat laittomaan massadatankeruuseen."
     },
     {
       "personName": "tekoäly",
