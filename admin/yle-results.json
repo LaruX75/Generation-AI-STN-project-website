@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-18T09:10:35.227Z",
+  "fetchedAt": "2026-06-19T09:25:22.724Z",
   "count": 25,
   "articles": [
     {
@@ -29,13 +29,6 @@
       "title": "Tekoälyn käyttö töissä voi aiheuttaa ”aivo­kärähdyksen”",
       "url": "https://yle.fi/a/74-20226132",
       "lead": "Tekoälyn aiheuttama kuormitus on työsuojelu­kysymys, sanoo Työterveys­laitoksen tutkimus­päällikkö Virpi Kalakoski."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-12T03:00:35Z",
-      "title": "Venäjän autonomiset droonit hyökkäsivät torille, jolla oli siviilejä – ilman ihmistä toimivista aseista paljon havaintoja",
-      "url": "https://yle.fi/a/74-20229902",
-      "lead": "Suomeen harhautuneissa drooneissa on voinut olla autonomisia piirteitä. Venäjän uskotaan tekevän Ukrainassa kokeiluja täysin autonomisilla asejärjes­telmillä."
     },
     {
       "personName": "tekoäly",
@@ -134,6 +127,13 @@
       "title": "Kysely: Kolmasosa toimi­henkilöistä uskoo tekoälyn korvaavan työnsä",
       "url": "https://yle.fi/a/74-20228372",
       "lead": "Osuus on kasvussa, käy ilmi Ammattiliitto Pron vuosittaisesta jäsenkyselystä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-05-28T01:08:23Z",
+      "title": "Amnesty: Generatiivinen tekoäly perustuu miljardien ihmisten tietojen keruuseen ilman lupaa",
+      "url": "https://yle.fi/a/74-20228356",
+      "lead": "Ihmisoikeusjärjestö vaatii valtioita puuttumaan tekoälyjärjestelmiin, jotka perustuvat laittomaan massadatankeruuseen."
     },
     {
       "personName": "tekoäly",
