@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-06-24T08:18:39.541Z",
+  "fetchedAt": "2026-06-25T08:18:18.063Z",
   "count": 25,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-24T17:00:38Z",
+      "title": "Näitkö kuvan kauniista naisesta MM-katsomossa? Hän saattoi olla tekoälyn luomus",
+      "url": "https://yle.fi/a/74-20232988",
+      "lead": "Tekoälyllä tehdyt kuvat jalka­pallo­joukkueiden ”naisfaneista” leviävät räjähdys­mäisesti sosiaalisessa mediassa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-24T11:53:38Z",
+      "title": "Lontoon poliisi lisää kasvojen­tunnistuksen käyttöä",
+      "url": "https://yle.fi/a/74-20233198",
+      "lead": ""
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-06-23T04:19:48Z",
@@ -15,13 +29,6 @@
       "title": "Elon Musk kehittää aivosirua, joka lukisi ajatuksia – professori kertoo, miksi siitä ei tarvitse olla huolissaan",
       "url": "https://yle.fi/a/74-20231188",
       "lead": "Elon Muskin Neuralink-aivosirusta ei pidä huolestua, vaikka suunnitelmat kuulostavat olevan kuin science fiction -elokuvasta, sanoo Lauri Parkkonen Aalto-yliopistosta."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-13T17:03:30Z",
-      "title": "Yhdysvaltojen hallinto käski Anthropicia katkaisemaan kaikilta ulkomaalaisilta pääsyn tehokkaaseen tekoälymalliin",
-      "url": "https://yle.fi/a/74-20231417",
-      "lead": "Eurooppalaiset poliitikot pitävät Yhdysvaltojen päätöstä esimerkkinä Euroopan teknologisesta riippuvuudesta."
     },
     {
       "personName": "tekoäly",
@@ -127,13 +134,6 @@
       "title": "Käytettiinkö Postin uusissa merkeissä tekoälyä? Soitimme suunnittelijalle",
       "url": "https://yle.fi/a/74-20228571",
       "lead": "Posti julkaisi uusia postimerkkejä. Kahta merkkiä alettiin epäillä tekoälyn tekemäksi. Soitimme suunnittelijalle ja kysyimme asiasta."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-05-28T05:27:15Z",
-      "title": "Kysely: Kolmasosa toimi­henkilöistä uskoo tekoälyn korvaavan työnsä",
-      "url": "https://yle.fi/a/74-20228372",
-      "lead": "Osuus on kasvussa, käy ilmi Ammattiliitto Pron vuosittaisesta jäsenkyselystä."
     },
     {
       "personName": "tekoäly",
