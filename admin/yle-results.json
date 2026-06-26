@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-06-25T08:18:18.063Z",
+  "fetchedAt": "2026-06-26T08:26:21.774Z",
   "count": 25,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-26T07:33:27Z",
+      "title": "VM:n kansliapäällikkö HS:lle: Julkinen sektori muuttuu tekoälypohjaiseksi",
+      "url": "https://yle.fi/a/74-20233557",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-25T12:51:32Z",
+      "title": "Pohjanmaan hyvinvointialueella käytössä tekoälytulkki – asiakkaat saavat apua yli 70 kielellä",
+      "url": "https://yle.fi/a/74-20233438",
+      "lead": "Hyvinvointialueelta uskotaan, että palveluiden läpimenoaika lyhenee merkittävästi."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-06-24T17:00:38Z",
@@ -50,13 +64,6 @@
       "title": "Opiskelija, oletko huijannut tekoälyn avulla? Kerro kokemuksistasi, teemme juttua",
       "url": "https://yle.fi/a/74-20231067",
       "lead": "Keräämme opiskelijoiden tai jo valmistuneiden kokemuksia tekoälyn käytöstä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-10T15:01:18Z",
-      "title": "Prinssi William: Asunnottomuus estettävissä tekoälyn avulla",
-      "url": "https://yle.fi/a/74-20230897",
-      "lead": "Prinssi Williamin hyväntekeväisyys­hanke julkaisi tekoäly­pohjaisen järjestelmän, joka tunnistaa asunnottomuuden riskit."
     },
     {
       "personName": "tekoäly",
@@ -127,13 +134,6 @@
       "title": "Tekoäly ratkaisi vuosikymmeniä avoinna olleen matematiikan ongelman",
       "url": "https://yle.fi/a/74-20228996",
       "lead": "Open AI kertoo tekoälynsä murtautuneen läpi pulmassa, jota kärkimatemaatikot ratkoivat 80 vuotta. Matemaatikot ovat innoissaan tekoälyn kyvykkyydestä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-05-29T07:30:56Z",
-      "title": "Käytettiinkö Postin uusissa merkeissä tekoälyä? Soitimme suunnittelijalle",
-      "url": "https://yle.fi/a/74-20228571",
-      "lead": "Posti julkaisi uusia postimerkkejä. Kahta merkkiä alettiin epäillä tekoälyn tekemäksi. Soitimme suunnittelijalle ja kysyimme asiasta."
     },
     {
       "personName": "tekoäly",
