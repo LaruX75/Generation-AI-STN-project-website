@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-06-26T08:26:21.774Z",
+  "fetchedAt": "2026-06-27T07:44:23.064Z",
   "count": 25,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-26T09:50:07Z",
+      "title": "Työnantaja hukkuu Kiinassa tekoälyllä tehtailtuihin työhakemuksiin: ”Eivät edes tiedä hakeneensa”",
+      "url": "https://yle.fi/a/74-20228076",
+      "lead": "Kansainvälisen vakuutusyhtiön rekrytoija otti Ylen mukaansa työpaikkamessuille, joilla kiinalaisnuoret etsivät töitä."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-06-26T07:33:27Z",
@@ -36,13 +43,6 @@
       "title": "Guardian: HR-konsultti voitti oikeudessa AI-asianajajan avulla",
       "url": "https://yle.fi/a/74-20232827",
       "lead": "Tekoäly hoiti kaiken oikeudenkäyntiä edeltävän oikeudellisen työn. Itse oikeudenkäynnissä asiakasta edusti kuitenkin ihmisasianajaja."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-17T09:29:52Z",
-      "title": "Elon Musk kehittää aivosirua, joka lukisi ajatuksia – professori kertoo, miksi siitä ei tarvitse olla huolissaan",
-      "url": "https://yle.fi/a/74-20231188",
-      "lead": "Elon Muskin Neuralink-aivosirusta ei pidä huolestua, vaikka suunnitelmat kuulostavat olevan kuin science fiction -elokuvasta, sanoo Lauri Parkkonen Aalto-yliopistosta."
     },
     {
       "personName": "tekoäly",
