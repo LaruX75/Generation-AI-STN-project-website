@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-06-27T07:44:23.064Z",
-  "count": 25,
+  "fetchedAt": "2026-06-28T08:16:57.534Z",
+  "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-28T05:46:39Z",
+      "title": "FT: Google asetti Metalle tekoälyn käytön rajoituksia",
+      "url": "https://yle.fi/a/74-20233765",
+      "lead": "Googlella ja muilla yhtiöillä on pulaa laskentatehosta, jota tekoälypalveluiden kasvava kysyntä vaatii."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-27T15:20:24Z",
+      "title": "Suomalaisryhmä voitti hackathonin: Tekoäly löytää turva-aukot jo ennen koodin kirjoittamista",
+      "url": "https://yle.fi/a/74-20233633",
+      "lead": "Iso hakkeri­tapahtuma Sunstead Hack keräsi 80 opiskelijaa Levin huipulle pohtimaan ongelmia, jotka liittyivät tekoälyyn. Voitto meni suomalaiselle ryhmälle."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-06-26T09:50:07Z",
@@ -134,13 +148,6 @@
       "title": "Tekoäly ratkaisi vuosikymmeniä avoinna olleen matematiikan ongelman",
       "url": "https://yle.fi/a/74-20228996",
       "lead": "Open AI kertoo tekoälynsä murtautuneen läpi pulmassa, jota kärkimatemaatikot ratkoivat 80 vuotta. Matemaatikot ovat innoissaan tekoälyn kyvykkyydestä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-05-26T05:00:35Z",
-      "title": "Tekoäly mullisti koodaamisen, ja nyt suomalaisyhtiö aikoo tehdä saman teolliselle suunnittelulle",
-      "url": "https://yle.fi/a/74-20227787",
-      "lead": "Kvantti­algoritmeja kehittävä Quanscient näkee tekoälyssä valtavan potentiaalin teollisen suunnittelun tehostajana."
     },
     {
       "personName": "Susanna Lindroos-Hovinheimo",
