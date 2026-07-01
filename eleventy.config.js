@@ -500,8 +500,6 @@ module.exports = function(eleventyConfig) {
       .replace(/(url=)\/(?!\/)/g,      `$1${REPO_PREFIX}/`);
   });
 
-  eleventyConfig.addGlobalData("isPlaywrightBuild", () => process.env.PLAYWRIGHT_BUILD === "1");
-
   return {
     dir: { input: "content", includes: "../_includes", data: "../_data", output: outputDirName },
     templateFormats: ["md", "njk", "html", "11ty.js"],
