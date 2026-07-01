@@ -5,6 +5,9 @@ const BASE_URL = `http://127.0.0.1:${PLAYWRIGHT_PORT}`;
 module.exports = defineConfig({
   testDir: "./tests/e2e",
   fullyParallel: true,
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 2 : 0,
+  workers: process.env.CI ? 1 : undefined,
   timeout: 30_000,
   expect: {
     timeout: 5_000,
@@ -27,6 +30,18 @@ module.exports = defineConfig({
       name: "mobile-chromium",
       use: {
         ...devices["Pixel 7"],
+      },
+      testIgnore: [
+        "**/button-hover-colors.spec.js",
+        "**/desktop-megamenu.spec.js",
+        "**/header-logo.spec.js",
+        "**/hero-consistency.spec.js",
+      ],
+    },
+    {
+      name: "desktop-chromium",
+      use: {
+        ...devices["Desktop Chrome"],
       },
     },
   ],

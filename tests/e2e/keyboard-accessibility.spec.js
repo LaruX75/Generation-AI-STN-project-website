@@ -20,7 +20,8 @@ async function acceptNecessaryCookies(page) {
   }
 }
 
-test("Skip link becomes visible and moves focus to main content", async ({ page }) => {
+test("Skip link becomes visible and moves focus to main content", async ({ page, isMobile }, testInfo) => {
+  testInfo.skip(isMobile, "Tab-näppäin ei toimi mobiililaitteilla");
   await page.goto("/opettajalle/");
   await acceptNecessaryCookies(page);
 
@@ -65,7 +66,8 @@ test("Desktop submenu closes with Escape and restores focus to its toggle", asyn
   await expect(teachersToggle).toBeFocused();
 });
 
-test("Accessibility tools dialog traps focus and closes back to the trigger", async ({ page }) => {
+test("Accessibility tools dialog traps focus and closes back to the trigger", async ({ page, isMobile }, testInfo) => {
+  testInfo.skip(isMobile, "Näppäimistönavigaatio ei toimi mobiililaitteilla");
   await page.goto("/opettajalle/");
   await acceptNecessaryCookies(page);
 
