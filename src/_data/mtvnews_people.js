@@ -4,7 +4,10 @@ module.exports = async function mtvNewsPeopleDataSource() {
   const people = loadConfiguredPeople();
   if (!people.length) return [];
 
-  return searchMtvNewsForPeople(people, {
-    limit: 10
-  });
+  try {
+    return await searchMtvNewsForPeople(people, { limit: 10 });
+  } catch (e) {
+    console.warn(`[mtvnews_people] MTV-uutishaku epäonnistui: ${e.message}`);
+    return [];
+  }
 };

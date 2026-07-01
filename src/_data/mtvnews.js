@@ -256,24 +256,29 @@ async function getArticleMetadata(url) {
   const forceRefresh = parseBoolean(process.env.MTV_NEWS_FORCE_REFRESH);
   const cacheKey = `mtv:article:${url}`;
 
-  return remember(
-    cacheKey,
-    async () => {
-      const html = await fetchText(url);
-      const article = parseArticleJsonLd(html) || {};
+  try {
+    return await remember(
+      cacheKey,
+      async () => {
+        const html = await fetchText(url);
+        const article = parseArticleJsonLd(html) || {};
 
-      return {
-        datePublished: normalizeWhitespace(article.datePublished || ""),
-        title: normalizeWhitespace(decodeHtmlEntities(article.headline || article.name || "")),
-        description: normalizeWhitespace(decodeHtmlEntities(article.description || "")),
-        keywords: normalizeWhitespace(article.keywords || "")
-          .split(",")
-          .map(keyword => normalizeWhitespace(keyword))
-          .filter(Boolean)
-      };
-    },
-    { forceRefresh }
-  );
+        return {
+          datePublished: normalizeWhitespace(article.datePublished || ""),
+          title: normalizeWhitespace(decodeHtmlEntities(article.headline || article.name || "")),
+          description: normalizeWhitespace(decodeHtmlEntities(article.description || "")),
+          keywords: normalizeWhitespace(article.keywords || "")
+            .split(",")
+            .map(keyword => normalizeWhitespace(keyword))
+            .filter(Boolean)
+        };
+      },
+      { forceRefresh }
+    );
+  } catch (e) {
+    console.warn(`[mtvnews] artikkelin metatietojen haku epäonnistui (${url}): ${e.message}`);
+    return { datePublished: "", title: "", description: "", keywords: [] };
+  }
 }
 
 function normalizeTopicItem(item = {}, context = {}) {
