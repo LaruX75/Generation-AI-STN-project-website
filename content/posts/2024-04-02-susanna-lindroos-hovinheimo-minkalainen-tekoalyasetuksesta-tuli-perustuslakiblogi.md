@@ -1,23 +1,13 @@
 ---
-title: >-
-  Susanna Lindroos-Hovinheimo: Minkälainen tekoälyasetuksesta tuli?
-  (Perustuslakiblogi)
-date: '2024-04-02T16:55:22'
-updated: '2024-04-02T16:55:27'
-slug: >-
-  susanna-lindroos-hovinheimo-minkalainen-tekoalyasetuksesta-tuli-perustuslakiblogi
-permalink: >-
-  /ajankohtaista/susanna-lindroos-hovinheimo-minkalainen-tekoalyasetuksesta-tuli-perustuslakiblogi/
+title: "Susanna Lindroos-Hovinheimo: Minkälainen tekoälyasetuksesta tuli? (Perustuslakiblogi)"
+date: "2024-04-02T16:55:22"
+updated: "2024-04-02T16:55:27"
+slug: susanna-lindroos-hovinheimo-minkalainen-tekoalyasetuksesta-tuli-perustuslakiblogi
+permalink: /ajankohtaista/susanna-lindroos-hovinheimo-minkalainen-tekoalyasetuksesta-tuli-perustuslakiblogi/
 status: publish
 sourceType: posts
-excerpt: >-
-  EU:n tekoälyasetusta säädettiin pitkään ja perusteellisesti. Nyt teksti on
-  valmis ja voimme pohtia, minkälainen siitä tuli. Ensimmäiseksi täytyy todeta,
-  että siitä tuli pitkä. Asetus sisältää 113 artiklaa ja yksi artikla on
-  tyypillisesti pidempi kuin yksi A4-liuska. Pelkän soveltamisalansa
-  julistamiseksi 2 artiklassa asetus tarvitsee 12 kohtaa, joista useampi
-  sisältää alakohtia. Johdanto-osassa on 180 kohtaa. Liitteitä on…
-mainCategory: Mediassa
+excerpt: EU:n tekoälyasetusta säädettiin pitkään ja perusteellisesti. Nyt teksti on valmis ja voimme pohtia, minkälainen siitä tuli. Ensimmäiseksi täytyy todeta, että siitä tuli pitkä. Asetus sisältää 113 artiklaa ja yksi artikla on tyypillisesti pidempi kuin yksi A4-liuska. Pelkän soveltamisalansa julistamiseksi 2 artiklassa asetus tarvitsee 12 kohtaa, joista useampi sisältää alakohtia. Johdanto-osassa on 180 kohtaa. Liitteitä on…
+mainCategory: Media
 subCategories:
   - Blogikirjoitus
 extraCategories:
