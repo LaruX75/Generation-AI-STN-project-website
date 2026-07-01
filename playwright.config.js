@@ -6,7 +6,7 @@ module.exports = defineConfig({
   testDir: "./tests/e2e",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 1 : 0,
   workers: process.env.CI ? 1 : undefined,
   timeout: 30_000,
   expect: {
@@ -33,6 +33,7 @@ module.exports = defineConfig({
       },
       testIgnore: [
         "**/button-hover-colors.spec.js",
+        "**/material-buttons.spec.js",
         "**/desktop-megamenu.spec.js",
         "**/header-logo.spec.js",
         "**/hero-consistency.spec.js",

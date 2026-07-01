@@ -13,7 +13,7 @@
     "postbuild:offline": "node scripts/run-pagefind.js",
     "build:live": "node scripts/run-with-data-mode.js live ./node_modules/.bin/eleventy",
     "postbuild:live": "node scripts/run-pagefind.js",
-    "build:test": "node scripts/normalize-localized-frontmatter.js && node scripts/clean-output.js _site_playwright && ELEVENTY_OUTPUT_DIR=_site_playwright node scripts/run-with-data-mode.js offline ./node_modules/.bin/eleventy",
+    "build:test": "node scripts/normalize-localized-frontmatter.js && node scripts/clean-output.js _site_playwright && PLAYWRIGHT_BUILD=1 ELEVENTY_OUTPUT_DIR=_site_playwright node scripts/run-with-data-mode.js offline ./node_modules/.bin/eleventy",
     "data:refresh": "node scripts/refresh-data-cache.js",
     "search:index": "node scripts/run-pagefind.js",
     "test:e2e": "playwright test",

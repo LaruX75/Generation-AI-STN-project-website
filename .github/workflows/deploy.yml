@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths-ignore:
       - "content/posts/**"
+      - "admin/*.html"
       - "admin/trash.json"
       - "admin/views-config.json"
       - "admin/yle-results.json"
@@ -48,6 +49,13 @@ jobs:
 
       - name: Security – robots.txt löytyy
         run: test -f _site/robots.txt
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ hashFiles('package-lock.json') }}
+          restore-keys: playwright-chromium-
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium

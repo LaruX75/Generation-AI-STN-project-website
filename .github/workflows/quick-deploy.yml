@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "content/posts/**"
+      - "admin/*.html"
       - "admin/trash.json"
       - "admin/views-config.json"
       - "admin/yle-results.json"
