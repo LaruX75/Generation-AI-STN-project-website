@@ -12,7 +12,6 @@ subCategories:
   - YLE
 tags:
   - Teemu Roos
-hidden: true
 author: admin
 layout: layouts/post.njk
 ---
