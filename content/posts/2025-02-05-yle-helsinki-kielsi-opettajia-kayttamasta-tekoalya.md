@@ -1,16 +1,13 @@
 ---
-title: 'YLE: Helsinki kielsi opettajia käyttämästä tekoälyä'
-date: '2025-02-05T17:06:00'
-updated: '2025-02-05T17:06:00'
+title: "YLE: Helsinki kielsi opettajia käyttämästä tekoälyä"
+date: "2025-02-05T17:06:00"
+updated: "2025-02-05T17:06:00"
 slug: yle-helsinki-kielsi-opettajia-kayttamasta-tekoalya
 permalink: /ajankohtaista/yle-helsinki-kielsi-opettajia-kayttamasta-tekoalya/
 status: publish
 sourceType: posts
-excerpt: >-
-  Yle haastatteli Teemu Roosia 5.2.2025 Helsingin kaupungin päätöksestä kieltää
-  tekoälytyökalujen käyttö kouluissa toistaiseksi. Alkuperäinen juttu:
-  https://yle.fi/a/74-20141409
-mainCategory: Mediassa
+excerpt: "Yle haastatteli Teemu Roosia 5.2.2025 Helsingin kaupungin päätöksestä kieltää tekoälytyökalujen käyttö kouluissa toistaiseksi. Alkuperäinen juttu: https://yle.fi/a/74-20141409"
+mainCategory: Media
 subCategories:
   - Hanke mediassa
   - Haastattelu
