@@ -1,17 +1,13 @@
 ---
-title: 'MTV Huomenta Suomi: Tekoälyä kansalle'
-date: '2023-09-06T09:56:10'
-updated: '2023-09-22T10:00:34'
+title: "MTV Huomenta Suomi: Tekoälyä kansalle"
+date: "2023-09-06T09:56:10"
+updated: "2023-09-22T10:00:34"
 slug: mtv-huomenta-suomi-tekoalya-kansalle
 permalink: /mtv3/mtv-huomenta-suomi-tekoalya-kansalle/
 status: publish
 sourceType: posts
-excerpt: >-
-  Prof. Teemu Roos kävi MTV Huomenta Suomen vieraana 6.9.2023. Hänen kanssaan
-  tekoälystä oli keskustelemassa myös Reaktorin tekoälyliiketoiminnan johtaja
-  Hanna Hagström. Katso tallenne
-  täältä:https://www.mtv.fi/sarja/huomenta-suomi-1485/tekoalya-kansalle-20358397
-mainCategory: Mediassa
+excerpt: Prof. Teemu Roos kävi MTV Huomenta Suomen vieraana 6.9.2023. Hänen kanssaan tekoälystä oli keskustelemassa myös Reaktorin tekoälyliiketoiminnan johtaja Hanna Hagström. Katso tallenne täältä:https://www.mtv.fi/sarja/huomenta-suomi-1485/tekoalya-kansalle-20358397
+mainCategory: Media
 subCategories:
   - Hanke mediassa
   - Haastattelu
