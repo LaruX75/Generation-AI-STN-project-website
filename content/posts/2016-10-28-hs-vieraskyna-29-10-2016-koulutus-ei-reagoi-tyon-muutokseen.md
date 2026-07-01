@@ -1,20 +1,13 @@
 ---
-title: 'HS Vieraskynä 29.10.2016: Koulutus ei reagoi työn muutokseen'
-date: '2016-10-29T00:22:00'
-updated: '2023-09-19T18:10:55'
+title: "HS Vieraskynä 29.10.2016: Koulutus ei reagoi työn muutokseen"
+date: "2016-10-29T00:22:00"
+updated: "2023-09-19T18:10:55"
 slug: hs-vieraskyna-29-10-2016-koulutus-ei-reagoi-tyon-muutokseen
 permalink: /ajankohtaista/hs-vieraskyna-29-10-2016-koulutus-ei-reagoi-tyon-muutokseen/
 status: publish
 sourceType: posts
-excerpt: >-
-  Tietotyö vähenee koneiden kehittyessä, ja opetuksessa pitäisi antaa valmiuksia
-  uudenlaiseen designtyöhön, kirjoittavat Matti Tedre ja Peter J. Denning.
-  TIETOTEKNINEN vallankumous etenee huimaa vauhtia. Yksilöllisiin tarpeisiin
-  räätälöidyt älypuhelimet yltävät vuosituhannen alun supertietokoneiden tehoon
-  ja pitävät meidät verkossa lähes kaikkialla. Itsestään ajavat autot kulkevat
-  jo teillä. Uberin ja Airbnb:n kaltaiset firmat haastavat vanhat
-  liiketoimintamallit. Tietokoneet tarkkailevat terveyttä ja…
-mainCategory: Mediassa
+excerpt: Tietotyö vähenee koneiden kehittyessä, ja opetuksessa pitäisi antaa valmiuksia uudenlaiseen designtyöhön, kirjoittavat Matti Tedre ja Peter J. Denning. TIETOTEKNINEN vallankumous etenee huimaa vauhtia. Yksilöllisiin tarpeisiin räätälöidyt älypuhelimet yltävät vuosituhannen alun supertietokoneiden tehoon ja pitävät meidät verkossa lähes kaikkialla. Itsestään ajavat autot kulkevat jo teillä. Uberin ja Airbnb:n kaltaiset firmat haastavat vanhat liiketoimintamallit. Tietokoneet tarkkailevat terveyttä ja…
+mainCategory: Media
 subCategories:
   - Hanke mediassa
 extraCategories:
@@ -25,8 +18,7 @@ tags:
   - Matti Tedre
   - Peter Denning
 author: admin
-featuredImage: >-
-  https://www.generation-ai-stn.fi/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnotized_computer_hyper_reali_7e5fceac-75e4-4087-8364-b0ae1a8e0b00.png
+featuredImage: https://www.generation-ai-stn.fi/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnotized_computer_hyper_reali_7e5fceac-75e4-4087-8364-b0ae1a8e0b00.png
 layout: layouts/post.njk
 ---
 
