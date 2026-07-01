@@ -240,6 +240,7 @@
       <div class="toolbar">
         <input type="text" id="cat-search" placeholder="Hae kategoriaa..." oninput="renderCategories()">
         <span class="count-label" id="cat-count"></span>
+        <button class="btn-primary btn-sm" onclick="openAdd()">+ Lisää kategoria</button>
       </div>
       <table>
         <thead>
@@ -304,6 +305,15 @@
       <label>Uusi nimi</label>
       <input type="text" id="modal-new-name" onkeydown="if(event.key==='Enter')modalSave()">
     </div>
+    <div id="modal-add-fields" style="display:none">
+      <label>Nimi</label>
+      <input type="text" id="modal-add-name" placeholder="Uusi kategoria" onkeydown="if(event.key==='Enter')modalSave()">
+      <label style="margin-top:12px">Tyyppi</label>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+        <label style="font-weight:normal;font-size:13px"><input type="radio" name="modal-add-type" value="subCategories" checked> Tarkempi tyyppi (subCategories)</label>
+        <label style="font-weight:normal;font-size:13px"><input type="radio" name="modal-add-type" value="extraCategories"> Muu kategoria (extraCategories)</label>
+      </div>
+    </div>
     <div class="modal-actions">
       <button class="btn-cancel" onclick="closeModal()">Peruuta</button>
       <button class="btn-save btn-primary" id="modal-save-btn" onclick="modalSave()">Tallenna</button>
@@ -336,7 +346,12 @@ const BRANCH = "main";
 
 let allPosts = [];
 let token = "";
-let modalMode = null; // { type: "rename"|"delete", field: "category"|"tag", name: "...", affectedPaths: [...] }
+let modalMode = null; // { type: "rename"|"delete"|"add", field: "category"|"tag", name: "...", affectedPaths: [...] }
+let pendingCategories = JSON.parse(localStorage.getItem("genai-pending-cats") || "[]"); // [{ name, type }]
+
+function savePendingCategories() {
+  localStorage.setItem("genai-pending-cats", JSON.stringify(pendingCategories));
+}
 
 // ── Auth & load ───────────────────────────────────────────────────────────────
 
@@ -378,6 +393,13 @@ async function loadData(autoAuth) {
     const res = await fetch("/admin/categories-data.json");
     if (!res.ok) throw new Error("categories-data.json ei löydy. Buildaa sivusto ensin.");
     allPosts = await res.json();
+    // Remove pending categories that now exist in actual post data
+    pendingCategories = pendingCategories.filter(c => !allPosts.some(p =>
+      p.mainCategory === c.name ||
+      (p.subCategories || []).includes(c.name) ||
+      (p.extraCategories || []).includes(c.name)
+    ));
+    savePendingCategories();
     document.getElementById("auth-card").style.display = "none";
     document.getElementById("main").style.display = "block";
     renderCategories();
@@ -488,6 +510,20 @@ function renderCategories() {
         <td style="text-align:right;color:#6b7280">${count}</td>
         <td>${actionsHtml(name)}</td>
       </tr>`).join("");
+    // Pending matches
+    const matchedNames = new Set(matches.map(([n]) => n));
+    const pendingMatches = pendingCategories.filter(c =>
+      c.name.toLowerCase().includes(q) && !matchedNames.has(c.name)
+    );
+    totalUnique += pendingMatches.length;
+    for (const { name, type } of pendingMatches) {
+      const badge = type === "subCategories" ? "badge-sub" : "badge-extra";
+      rows += `<tr>
+        <td>${nameHtml(name)} <span class="badge ${badge}">uusi</span></td>
+        <td style="text-align:right;color:#6b7280">0</td>
+        <td><div class="actions"><button class="btn-sm btn-delete" onclick="removePending('${esc(name)}')">Poista</button></div></td>
+      </tr>`;
+    }
   } else {
     // ── Tree mode ──
     const sorted = [...tree.entries()].sort((a, b) => b[1].count - a[1].count || a[0].localeCompare(b[0], "fi"));
@@ -534,6 +570,24 @@ function renderCategories() {
         </tr>`;
       }
     }
+
+    // Pending (added via tool, no posts yet)
+    const knownNames = new Set([...tree.keys(), ...orphans.keys()]);
+    const shownPending = pendingCategories.filter(c => !knownNames.has(c.name));
+    if (shownPending.length > 0) {
+      totalUnique += shownPending.length;
+      rows += `<tr class="cat-orphan-header">
+        <td colspan="3">— uudet, ei posteja vielä —</td>
+      </tr>`;
+      for (const { name, type } of shownPending) {
+        const badge = type === "subCategories" ? "badge-sub" : "badge-extra";
+        rows += `<tr>
+          <td style="padding-left:40px">${nameHtml(name)} <span class="badge ${badge}">uusi</span></td>
+          <td style="text-align:right;color:#6b7280">0</td>
+          <td><div class="actions"><button class="btn-sm btn-delete" onclick="removePending('${esc(name)}')">Poista</button></div></td>
+        </tr>`;
+      }
+    }
   }
 
   document.getElementById("cat-count").textContent = `${totalUnique} kategoriaa`;
@@ -573,6 +627,7 @@ function openRename(field, name) {
   document.getElementById("modal-desc").textContent =
     `Muutos päivitetään ${affected.length} tiedostoon.`;
   document.getElementById("modal-warning").style.display = "none";
+  document.getElementById("modal-add-fields").style.display = "none";
   document.getElementById("modal-rename-fields").style.display = "";
   document.getElementById("modal-new-name").value = name;
   document.getElementById("modal-save-btn").textContent = "Nimeä";
@@ -601,6 +656,7 @@ function openDelete(field, name) {
   }
 
   document.getElementById("modal-rename-fields").style.display = "none";
+  document.getElementById("modal-add-fields").style.display = "none";
   document.getElementById("modal-save-btn").textContent = "Poista";
   document.getElementById("modal-save-btn").style.background = "#dc2626";
   document.getElementById("modal").style.display = "flex";
@@ -614,7 +670,18 @@ function closeModal() {
 
 async function modalSave() {
   if (!modalMode) return;
-  const { type, field, name, affected } = modalMode;
+  const { type } = modalMode;
+
+  if (type === "add") {
+    const name = document.getElementById("modal-add-name").value.trim();
+    if (!name) { document.getElementById("modal-add-name").focus(); return; }
+    const fieldType = document.querySelector('input[name="modal-add-type"]:checked').value;
+    closeModal();
+    await addCategory(name, fieldType);
+    return;
+  }
+
+  const { field, name, affected } = modalMode;
   const newName = type === "rename" ? document.getElementById("modal-new-name").value.trim() : null;
 
   if (type === "rename" && (!newName || newName === name)) {
@@ -624,6 +691,122 @@ async function modalSave() {
 
   closeModal();
   await applyChange(field, name, newName, affected);
+}
+
+// ── Add category ─────────────────────────────────────────────────────────────
+
+function openAdd() {
+  modalMode = { type: "add" };
+  document.getElementById("modal-title").textContent = "Lisää uusi kategoria";
+  document.getElementById("modal-desc").textContent =
+    "Kategoria lisätään config.yml-tiedostoon ja näkyy heti työkalussa.";
+  document.getElementById("modal-warning").style.display = "none";
+  document.getElementById("modal-rename-fields").style.display = "none";
+  document.getElementById("modal-add-fields").style.display = "";
+  document.getElementById("modal-add-name").value = "";
+  document.querySelector('input[name="modal-add-type"][value="subCategories"]').checked = true;
+  document.getElementById("modal-save-btn").textContent = "Lisää";
+  document.getElementById("modal-save-btn").style.background = "";
+  document.getElementById("modal").style.display = "flex";
+  setTimeout(() => document.getElementById("modal-add-name").focus(), 50);
+}
+
+async function addCategory(name, fieldType) {
+  const alreadyExists = allPosts.some(p =>
+    p.mainCategory === name ||
+    (p.subCategories || []).includes(name) ||
+    (p.extraCategories || []).includes(name)
+  ) || pendingCategories.some(c => c.name === name);
+
+  try {
+    await addCategoryToConfig(name, fieldType);
+    if (!alreadyExists) {
+      pendingCategories.push({ name, type: fieldType });
+      savePendingCategories();
+    }
+    showNotice(`Kategoria "${name}" lisätty.`, "success");
+    renderCategories();
+  } catch (e) {
+    showNotice(`Virhe: ${e.message}`, "error");
+  }
+}
+
+function addOptionToConfigField(content, fieldName, newOption) {
+  const lines = content.split('\n');
+  const insertions = []; // { afterLine: index, line: string }
+
+  for (let i = 0; i < lines.length; i++) {
+    if (!lines[i].match(new RegExp(`^\\s+name:\\s*["']?${fieldName}["']?\\s*$`))) continue;
+
+    for (let j = i + 1; j < Math.min(i + 10, lines.length); j++) {
+      if (!lines[j].match(/^\s+options:\s*$/)) continue;
+
+      const baseIndent = lines[j].match(/^(\s+)/)[1];
+      const listIndent = baseIndent + '  ';
+      let lastItemIdx = j;
+      let k = j + 1;
+      const existingValues = [];
+      while (k < lines.length && lines[k].startsWith(listIndent + '- ')) {
+        lastItemIdx = k;
+        const m = lines[k].match(/["'](.+?)["']/);
+        if (m) existingValues.push(m[1]);
+        k++;
+      }
+      if (!existingValues.includes(newOption)) {
+        insertions.push({ afterLine: lastItemIdx, line: `${listIndent}- "${newOption}"` });
+      }
+      break;
+    }
+  }
+
+  if (insertions.length === 0) {
+    throw new Error(`Kenttää "${fieldName}" ei löydy config.yml:stä tai arvo on jo olemassa`);
+  }
+
+  // Apply in reverse order so earlier line indices stay valid
+  insertions.sort((a, b) => b.afterLine - a.afterLine);
+  const result = [...lines];
+  for (const { afterLine, line } of insertions) {
+    result.splice(afterLine + 1, 0, line);
+  }
+  return result.join('\n');
+}
+
+async function addCategoryToConfig(name, fieldName) {
+  const configPath = "admin/config.yml";
+  const url = `https://api.github.com/repos/${REPO}/contents/${configPath}`;
+  const headers = {
+    Authorization: `token ${token}`,
+    Accept: "application/vnd.github.v3+json",
+    "Content-Type": "application/json"
+  };
+
+  const res = await fetch(url, { headers });
+  if (!res.ok) throw new Error(`config.yml: HTTP ${res.status}`);
+  const fileData = await res.json();
+  const original = b64decode(fileData.content);
+
+  const updated = addOptionToConfigField(original, fieldName, name);
+  if (updated === original) {
+    throw new Error(`"${name}" on jo olemassa config.yml:ssä`);
+  }
+
+  await fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify({
+      message: `Lisää kategoria "${name}" (${fieldName})`,
+      content: b64encode(updated),
+      sha: fileData.sha,
+      branch: BRANCH
+    })
+  });
+}
+
+function removePending(name) {
+  pendingCategories = pendingCategories.filter(c => c.name !== name);
+  savePendingCategories();
+  renderCategories();
 }
 
 // ── Change application ────────────────────────────────────────────────────────
