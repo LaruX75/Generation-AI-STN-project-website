@@ -36,7 +36,8 @@ test("Skip link becomes visible and moves focus to main content", async ({ page,
   await expect(page.locator("#main-content")).toBeFocused();
 });
 
-test("Mobile navigation closes with Escape and returns focus to the menu toggle", async ({ page }) => {
+test("Mobile navigation closes with Escape and returns focus to the menu toggle", async ({ page, isMobile }, testInfo) => {
+  testInfo.skip(!isMobile, "Mobiilinavigaatiotesti — ajetaan vain mobile-projektissa");
   await page.goto(fixtureUrl);
 
   const menuToggle = page.getByRole("button", { name: /Avaa navigaatio|Toggle navigation|Öppna navigering/i });

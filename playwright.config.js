@@ -43,6 +43,9 @@ module.exports = defineConfig({
       use: {
         ...devices["Desktop Chrome"],
       },
+      testIgnore: [
+        "**/mobile-megamenu.spec.js",
+      ],
     },
   ],
 });
