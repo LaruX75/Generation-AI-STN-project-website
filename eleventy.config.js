@@ -252,7 +252,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("media", col =>
     col.getAll().filter(p => p.data.sourceType === "posts" && !p.data.hidden && (p.data.categories || []).some(c => [
       // fi
-      "Mediassa",
+      "Mediassa", "Media",
       // en
       "In the media",
       // sv
