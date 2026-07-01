@@ -7,7 +7,7 @@ status: publish
 sourceType: posts
 sourceUrl: https://yle.fi/a/74-20214749
 excerpt: Lindroos-Hovinheimo astuu tehtävään huhtikuussa apulaisoikeus­asiamies Maija Sakslinin seuraajana.
-mainCategory: Mediassa
+mainCategory: Media
 subCategories:
   - YLE
 tags:
