@@ -1,25 +1,13 @@
 ---
-title: >-
-  Tarvitseeko tekoäly kansainvälisiä sääntöjä? Nämä kolme asiaa EU:n
-  ehdotuksesta tekoälyn sääntelemiseksi tulisi tietää
-date: '2021-09-14T00:45:00'
-updated: '2023-09-19T18:10:09'
-slug: >-
-  tarvitseeko-tekoaly-kansainvalisia-saantoja-nama-kolme-asiaa-eun-ehdotuksesta-tekoalyn-saantelemiseksi-tulisi-tietaa
-permalink: >-
-  /helsingin-yliopisto/tarvitseeko-tekoaly-kansainvalisia-saantoja-nama-kolme-asiaa-eun-ehdotuksesta-tekoalyn-saantelemiseksi-tulisi-tietaa/
+title: Tarvitseeko tekoäly kansainvälisiä sääntöjä? Nämä kolme asiaa EU:n ehdotuksesta tekoälyn sääntelemiseksi tulisi tietää
+date: "2021-09-14T00:45:00"
+updated: "2023-09-19T18:10:09"
+slug: tarvitseeko-tekoaly-kansainvalisia-saantoja-nama-kolme-asiaa-eun-ehdotuksesta-tekoalyn-saantelemiseksi-tulisi-tietaa
+permalink: /helsingin-yliopisto/tarvitseeko-tekoaly-kansainvalisia-saantoja-nama-kolme-asiaa-eun-ehdotuksesta-tekoalyn-saantelemiseksi-tulisi-tietaa/
 status: publish
 sourceType: posts
-excerpt: >-
-  Hankkeemme tutkija Susanna Lindroos-Hovila kertoo 14.9.2021 Helsingin
-  yliopiston tiedekulman jutussa EU:n ehdotuksesta tekoälyn sääntelemiseksi.
-  Alla lainaus tiedekulmassa julkaistusta jutusta. 1. Sääntely kohdistuu
-  tekoälytuotteisiin Komissio näkee sääntelyn ennen kaikkea tuotesääntelynä.
-  Lainsäädännöllä on tarkoitus rajoittaa niitä järjestelmiä, joita saadaan
-  käyttää EU:n sisämarkkinoilla ja tuoda tänne. Tarkoituksena on lisätä
-  kansalaisten luottamusta tuotteisiin eli tekoälyjärjestelmiin EU:n sisällä
-  sekä luoda…
-mainCategory: Mediassa
+excerpt: Hankkeemme tutkija Susanna Lindroos-Hovila kertoo 14.9.2021 Helsingin yliopiston tiedekulman jutussa EU:n ehdotuksesta tekoälyn sääntelemiseksi. Alla lainaus tiedekulmassa julkaistusta jutusta. 1. Sääntely kohdistuu tekoälytuotteisiin Komissio näkee sääntelyn ennen kaikkea tuotesääntelynä. Lainsäädännöllä on tarkoitus rajoittaa niitä järjestelmiä, joita saadaan käyttää EU:n sisämarkkinoilla ja tuoda tänne. Tarkoituksena on lisätä kansalaisten luottamusta tuotteisiin eli tekoälyjärjestelmiin EU:n sisällä sekä luoda…
+mainCategory: Media
 subCategories:
   - Hanke mediassa
 extraCategories:
