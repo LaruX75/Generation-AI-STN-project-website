@@ -24,6 +24,8 @@ module.exports = defineConfig({
     trace: "on-first-retry",
     screenshot: "only-on-failure",
     video: "retain-on-failure",
+    navigationTimeout: 15_000,
+    waitUntil: "domcontentloaded",
   },
   projects: [
     {
