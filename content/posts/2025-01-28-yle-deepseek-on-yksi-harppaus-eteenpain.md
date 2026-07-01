@@ -1,18 +1,13 @@
 ---
-title: >-
-  YLE: Suomalaiset tekoälyasiantuntijat: Deepseek on yksi harppaus eteenpäin ja
-  kohta tulee seuraava
-date: '2025-01-28T20:49:00'
-updated: '2025-01-28T20:49:00'
+title: "YLE: Suomalaiset tekoälyasiantuntijat: Deepseek on yksi harppaus eteenpäin ja kohta tulee seuraava"
+date: "2025-01-28T20:49:00"
+updated: "2025-01-28T20:49:00"
 slug: yle-deepseek-on-yksi-harppaus-eteenpain
 permalink: /ajankohtaista/yle-deepseek-on-yksi-harppaus-eteenpain/
 status: publish
 sourceType: posts
-excerpt: >-
-  Yle haastatteli tietojenkäsittelytieteen professori Teemu Roosia 28.1.2025
-  Deepseekistä ja sen merkityksestä tekoälykilpailulle. Alkuperäinen juttu:
-  https://yle.fi/a/74-20139814
-mainCategory: Mediassa
+excerpt: "Yle haastatteli tietojenkäsittelytieteen professori Teemu Roosia 28.1.2025 Deepseekistä ja sen merkityksestä tekoälykilpailulle. Alkuperäinen juttu: https://yle.fi/a/74-20139814"
+mainCategory: Media
 subCategories:
   - Hanke mediassa
   - Haastattelu
