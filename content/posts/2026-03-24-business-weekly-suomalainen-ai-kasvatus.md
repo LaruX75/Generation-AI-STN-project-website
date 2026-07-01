@@ -10,6 +10,7 @@ excerpt: Taiwanilainen Business Weekly (商業周刊) nro 2001 kirjoittaa suomal
 mainCategory: Media
 subCategories:
   - Hanke mediassa
+  - Muu media
 tags:
   - business weekly
   - teemu roos

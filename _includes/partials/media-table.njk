@@ -6,6 +6,7 @@
     "heading": "News", "search": "Search news", "placeholder": "Search by title…",
     "srcLabel": "Filter by source", "srcAll": "All sources",
     "mtv": "MTV News", "hs": "Helsingin Sanomat", "hanke": "Project", "iv": "Universities",
+    "podcast": "Podcast", "muu": "Other media",
     "yrLabel": "Filter by year", "yrAll": "All years",
     "aria": "Media publications", "ariaPag": "Result page",
     "colDate": "Date", "colSrc": "Source", "colTitle": "Title", "colContent": "Content", "colLink": "Link",
@@ -19,6 +20,7 @@
     "heading": "Nyheter", "search": "Sök i nyheter", "placeholder": "Sök på rubrik…",
     "srcLabel": "Filtrera efter källa", "srcAll": "Alla källor",
     "mtv": "MTV Nyheter", "hs": "Helsingin Sanomat", "hanke": "Projekt", "iv": "Universitet",
+    "podcast": "Podcast", "muu": "Övriga medier",
     "yrLabel": "Filtrera efter år", "yrAll": "Alla år",
     "aria": "Mediapublikationer", "ariaPag": "Resultatsida",
     "colDate": "Datum", "colSrc": "Källa", "colTitle": "Rubrik", "colContent": "Innehåll", "colLink": "Länk",
@@ -32,6 +34,7 @@
     "heading": "Uutiset", "search": "Hae uutisista", "placeholder": "Hae otsikolla…",
     "srcLabel": "Suodata lähteen mukaan", "srcAll": "Kaikki lähteet",
     "mtv": "MTV Uutiset", "hs": "Helsingin Sanomat", "hanke": "Hanke", "iv": "Yliopistot",
+    "podcast": "Podcast", "muu": "Muu media",
     "yrLabel": "Suodata vuoden mukaan", "yrAll": "Kaikki vuodet",
     "aria": "Mediajulkaisut", "ariaPag": "Tulossivu",
     "colDate": "Päivämäärä", "colSrc": "Lähde", "colTitle": "Otsikko", "colContent": "Sisältö", "colLink": "Linkki",
@@ -60,6 +63,8 @@
           <option value="hs">{{ lbl.hs }}</option>
           <option value="hanke">{{ lbl.hanke }}</option>
           <option value="iv">{{ lbl.iv }}</option>
+          <option value="podcast">{{ lbl.podcast }}</option>
+          <option value="muu">{{ lbl.muu }}</option>
         </select>
         <label for="media-filter-year" class="sr-only">{{ lbl.yrLabel }}</label>
         <select id="media-filter-year" class="media-table-filter" data-grid-filter="year" data-grid-populate-options="year">
@@ -85,17 +90,26 @@
         {% for post in allItems %}
           {% set postSource = "hanke" %}
           {% set postSourceLabel = lbl.hankeBadge %}
-          {% if post.data.categories %}
-            {% if "YLE" in post.data.categories or "Yle" in post.data.categories or "yle" in post.data.categories %}
-              {% set postSource = "yle" %}
-              {% set postSourceLabel = "Yle" %}
-            {% elif "MTV3" in post.data.categories or "MTV Uutiset" in post.data.categories or "MTV" in post.data.categories %}
-              {% set postSource = "mtv" %}
-              {% set postSourceLabel = lbl.mtv %}
-            {% elif "Helsingin Sanomat" in post.data.categories or "HS" in post.data.categories %}
-              {% set postSource = "hs" %}
-              {% set postSourceLabel = lbl.hs %}
-            {% endif %}
+          {% set _sc = (post.data.categories or []) %}
+          {% set _st = (post.data.tags or []) %}
+          {% if "YLE" in _sc or "Yle" in _sc or "yle" in _sc or "YLE" in _st or "Yle" in _st or "yle" in _st %}
+            {% set postSource = "yle" %}
+            {% set postSourceLabel = "Yle" %}
+          {% elif "MTV3" in _sc or "MTV Uutiset" in _sc or "MTV" in _sc or "mtv3" in _sc or "MTV3" in _st or "mtv3" in _st or "MTV" in _st %}
+            {% set postSource = "mtv" %}
+            {% set postSourceLabel = lbl.mtv %}
+          {% elif "Helsingin Sanomat" in _sc or "HS" in _sc or "Helsingin Sanomat" in _st or "HS" in _st %}
+            {% set postSource = "hs" %}
+            {% set postSourceLabel = lbl.hs %}
+          {% elif "Helsingin yliopisto" in _sc or "FCAI" in _sc or "Yliopistojen uutiset" in _sc or "Helsingin yliopisto" in _st or "FCAI" in _st %}
+            {% set postSource = "iv" %}
+            {% set postSourceLabel = lbl.iv %}
+          {% elif "Podcast" in _sc or "Podcast" in _st %}
+            {% set postSource = "podcast" %}
+            {% set postSourceLabel = lbl.podcast %}
+          {% elif "Muu media" in _sc or "Muu media" in _st %}
+            {% set postSource = "muu" %}
+            {% set postSourceLabel = lbl.muu %}
           {% endif %}
           <tr class="media-table-row"
             data-source="{{ postSource }}"

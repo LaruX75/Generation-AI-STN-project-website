@@ -10,6 +10,7 @@ excerpt: "Mielipidekirjoitus, joka julkaistiin Helsingin Sanomissa 16.12.2024. L
 mainCategory: Media
 subCategories:
   - Mielipidekirjoitus
+  - Helsingin Sanomat
 tags:
   - digitalisaatio
   - koneoppiminen

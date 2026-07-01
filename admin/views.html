@@ -224,6 +224,7 @@
       <div class="tab active" onclick="switchTab('uutiset')">Uutiset</div>
       <div class="tab" onclick="switchTab('tapahtumat')">Tapahtumat</div>
       <div class="tab" onclick="switchTab('toiminta')">Toiminta</div>
+      <div class="tab" onclick="switchTab('media')">Media</div>
       <div class="tab" onclick="switchTab('roskakori')">🗑 Roskakori<span class="trash-badge" id="trash-badge"></span></div>
     </div>
 
@@ -302,6 +303,28 @@
           <th class="col-actions"></th>
         </tr></thead>
         <tbody id="toiminta-tbody"></tbody>
+      </table>
+    </div>
+
+    <!-- Media -->
+    <div id="tab-media" style="display:none">
+      <div class="toolbar">
+        <input type="text" id="media-search" placeholder="Hae otsikolla…" oninput="renderTab('media')">
+        <span class="count-label" id="media-count"></span>
+        <button class="btn-gear" onclick="openOptsModal('source')">⚙ Muokkaa lähteitä</button>
+      </div>
+      <table>
+        <thead><tr>
+          <th class="col-date" onclick="setSort('media','date')">Pvm <span class="sort-icon">↓</span></th>
+          <th class="col-title" onclick="setSort('media','title')">Otsikko <span class="sort-icon">↕</span></th>
+          <th class="col-excerpt">Tiivistelmä</th>
+          <th class="col-field">Lähde</th>
+          <th class="col-cats">Kategoriat</th>
+          <th class="col-tags">Avainsanat</th>
+          <th class="col-status">Tila</th>
+          <th class="col-actions"></th>
+        </tr></thead>
+        <tbody id="media-tbody"></tbody>
       </table>
     </div>
 
@@ -465,7 +488,7 @@ async function loadData(auto) {
     updateTrashBadge();
     document.getElementById("auth-card").style.display = "none";
     document.getElementById("main").style.display = "block";
-    renderTab("uutiset"); renderTab("tapahtumat"); renderTab("toiminta");
+    renderTab("uutiset"); renderTab("tapahtumat"); renderTab("toiminta"); renderTab("media");
   } catch(e) {
     showNotice(e.message, "error");
     document.getElementById("auth-card").style.display = "";
@@ -499,15 +522,17 @@ function applyFieldChangeToMemory(path, fieldType, newValue) {
 const sortState = {
   uutiset:    { col: "date", asc: false },
   tapahtumat: { col: "date", asc: false },
-  toiminta:   { col: "date", asc: false }
+  toiminta:   { col: "date", asc: false },
+  media:      { col: "date", asc: false }
 };
 
 function switchTab(name) {
-  ["uutiset","tapahtumat","toiminta","roskakori"].forEach((t, i) => {
+  ["uutiset","tapahtumat","toiminta","media","roskakori"].forEach((t, i) => {
     document.getElementById("tab-"+t).style.display = t === name ? "" : "none";
     document.querySelectorAll(".tab")[i].classList.toggle("active", t === name);
   });
   if (name === "roskakori") renderTrash();
+  else if (name === "media") renderTab("media");
 }
 
 function setSort(tab, col) {
@@ -549,8 +574,13 @@ function detectToimintaType(post) {
 
 function renderTab(tab) {
   const q = (document.getElementById(`${tab}-search`)?.value || "").toLowerCase();
-  const mainCat = tab === "uutiset" ? "Mediassa" : tab === "tapahtumat" ? "Tapahtumat" : "Toiminta";
-  let posts = allPosts.filter(p => p.mainCategory === mainCat);
+  let posts;
+  if (tab === "media") {
+    posts = allPosts.filter(p => p.mainCategory === "Media" || p.mainCategory === "Mediassa");
+  } else {
+    const mainCat = tab === "uutiset" ? "Mediassa" : tab === "tapahtumat" ? "Tapahtumat" : "Toiminta";
+    posts = allPosts.filter(p => p.mainCategory === mainCat);
+  }
   if (q) posts = posts.filter(p => p.title.toLowerCase().includes(q));
 
   const { col, asc } = sortState[tab];
@@ -567,7 +597,7 @@ function renderTab(tab) {
 
     // Source/type dropdown cell
     let fieldCell;
-    if (tab === "uutiset") {
+    if (tab === "uutiset" || tab === "media") {
       fieldCell = fieldDropdownHtml(ep, "source", SOURCE_OPTIONS, detectSource(post));
     } else if (tab === "tapahtumat") {
       fieldCell = fieldDropdownHtml(ep, "tap-type", TAPAHTUMAT_TYPE_OPTIONS, detectTapahtumatType(post));
@@ -869,7 +899,7 @@ function applyToMemory(path, field, oldName, newName) {
 function rerenderCurrentTab() {
   const active = document.querySelector(".tab.active");
   if (!active) return;
-  const tabs = ["uutiset","tapahtumat","toiminta","roskakori"];
+  const tabs = ["uutiset","tapahtumat","toiminta","media","roskakori"];
   const idx = [...document.querySelectorAll(".tab")].indexOf(active);
   if (idx < 0) return;
   if (tabs[idx] === "roskakori") renderTrash();

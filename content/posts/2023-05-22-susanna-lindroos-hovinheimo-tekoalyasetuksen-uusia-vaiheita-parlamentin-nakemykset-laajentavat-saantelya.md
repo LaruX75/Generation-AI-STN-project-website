@@ -10,6 +10,7 @@ excerpt: "Alla oleva blogikirjoitus on julkaistu 22.5.2023 Perustuslakiblogissa,
 mainCategory: Media
 subCategories:
   - Blogikirjoitus
+  - Helsingin yliopisto
 tags:
   - Euroopan unioni
   - lainsäädäntö

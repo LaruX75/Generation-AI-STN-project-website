@@ -11,6 +11,7 @@ mainCategory: Media
 subCategories:
   - Hanke mediassa
   - Haastattelu
+  - Muu media
 tags:
   - alarmismi
   - kansan uutiset
