@@ -1,19 +1,13 @@
 ---
-title: >-
-  YLE: Perustuslakivaliokunta esittää apulaisoikeusasiamieheksi Susanna
-  Lindroos-Hovinheimoa tai Eeva Nykästä
-date: '2026-03-05T13:21:00'
-updated: '2026-03-05T13:21:00'
+title: "YLE: Perustuslakivaliokunta esittää apulaisoikeusasiamieheksi Susanna Lindroos-Hovinheimoa tai Eeva Nykästä"
+date: "2026-03-05T13:21:00"
+updated: "2026-03-05T13:21:00"
 slug: yle-perustuslakivaliokunta-esittaa-susannaa-apulaisoikeusasiamieheksi
-permalink: >-
-  /ajankohtaista/yle-perustuslakivaliokunta-esittaa-susannaa-apulaisoikeusasiamieheksi/
+permalink: /ajankohtaista/yle-perustuslakivaliokunta-esittaa-susannaa-apulaisoikeusasiamieheksi/
 status: publish
 sourceType: posts
-excerpt: >-
-  Yle uutisoi 5.3.2026, että perustuslakivaliokunta esittää
-  apulaisoikeusasiamieheksi Susanna Lindroos-Hovinheimoa tai Eeva Nykästä.
-  Alkuperäinen juttu: https://yle.fi/uutiset/lyhyesti/74-20213792
-mainCategory: Mediassa
+excerpt: "Yle uutisoi 5.3.2026, että perustuslakivaliokunta esittää apulaisoikeusasiamieheksi Susanna Lindroos-Hovinheimoa tai Eeva Nykästä. Alkuperäinen juttu: https://yle.fi/uutiset/lyhyesti/74-20213792"
+mainCategory: Media
 subCategories:
   - Hanke mediassa
   - YLE
