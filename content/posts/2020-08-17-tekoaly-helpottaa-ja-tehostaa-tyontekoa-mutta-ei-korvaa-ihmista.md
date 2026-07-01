@@ -1,21 +1,13 @@
 ---
-title: 'Tekoäly helpottaa ja tehostaa työntekoa, mutta ei korvaa ihmistä'
-date: '2020-08-17T16:41:34'
-updated: '2023-01-20T16:53:11'
+title: Tekoäly helpottaa ja tehostaa työntekoa, mutta ei korvaa ihmistä
+date: "2020-08-17T16:41:34"
+updated: "2023-01-20T16:53:11"
 slug: tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista
-permalink: >-
-  /ajankohtaista/tekoaly-uutisointi-hankkeen-ulkopuolella/tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista/
+permalink: /ajankohtaista/tekoaly-uutisointi-hankkeen-ulkopuolella/tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista/
 status: publish
 sourceType: posts
-excerpt: >-
-  Helsingin yliopiston matemaattis-luonnontieteellisen tiedekunnan Prof. Teemu
-  Roosin professorinimitykseen liittyvä tiedekunnan lyhyt haastattelu sekä
-  videoluento. Julkaistu Helsingin yliopiston sivuilla uutisena 17.8.2020
-  Tekoälystä on tullut reilussa kymmenessä vuodessa olennainen osa maailmaamme.
-  Sitä täytyy tutkia, jotta todellisen elämän epävarmuudet ja tarpeet osataan
-  ottaa huomioon järjestelmien kehitykseen.
-  https://www.helsinki.fi/fi/matemaattis-luonnontieteellinen-tiedekunta/ajankohtaista/teemu-roos-tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista
-mainCategory: Mediassa
+excerpt: Helsingin yliopiston matemaattis-luonnontieteellisen tiedekunnan Prof. Teemu Roosin professorinimitykseen liittyvä tiedekunnan lyhyt haastattelu sekä videoluento. Julkaistu Helsingin yliopiston sivuilla uutisena 17.8.2020 Tekoälystä on tullut reilussa kymmenessä vuodessa olennainen osa maailmaamme. Sitä täytyy tutkia, jotta todellisen elämän epävarmuudet ja tarpeet osataan ottaa huomioon järjestelmien kehitykseen. https://www.helsinki.fi/fi/matemaattis-luonnontieteellinen-tiedekunta/ajankohtaista/teemu-roos-tekoaly-helpottaa-ja-tehostaa-tyontekoa-mutta-ei-korvaa-ihmista
+mainCategory: Media
 subCategories:
   - Ajankohtaista hankkeen ulkopuolella
 extraCategories:
@@ -30,8 +22,7 @@ tags:
   - Uutinen
   - Video
 author: admin
-featuredImage: >-
-  https://www.generation-ai-stn.fi/wp-content/uploads/2020/08/Frozen_tired_android_in_blizzard_full_body_slim_s_2ac03fe9-2a0f-4123-91d9-107183b00b46.png
+featuredImage: https://www.generation-ai-stn.fi/wp-content/uploads/2020/08/Frozen_tired_android_in_blizzard_full_body_slim_s_2ac03fe9-2a0f-4123-91d9-107183b00b46.png
 layout: layouts/post.njk
 ---
 
