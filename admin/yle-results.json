@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-06-30T08:25:31.860Z",
+  "fetchedAt": "2026-07-01T08:45:36.128Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-01T05:22:26Z",
+      "title": "Tekoäly vaatii valtavasti sähköä: Wärtsilä sai jättitilauksen Yhdysvalloista",
+      "url": "https://yle.fi/a/74-20234223",
+      "lead": "Wärtsilä toimittaa moottorit voimalaan, joka turvaa sähkönsaannin massiivisille datakeskushankkeille Yhdysvalloissa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-01T00:51:08Z",
+      "title": "Yhdysvallat poistaa vientirajoitukset Anthropicin tehokkailta tekoälymalleilta",
+      "url": "https://yle.fi/a/74-20234231",
+      "lead": "Aiemmin huhtikuussa Mythos 5 -tekoälymalli herätti paljon huomiota, kun Anthropic julkaisi raportin tekoälymallin kyvyistä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-06-30T10:38:25Z",
+      "title": "Ford pettyi tekoälyyn: otti satoja vanhoja työntekijöitä takaisin palkkalistoilleen",
+      "url": "https://yle.fi/a/74-20234142",
+      "lead": "Tekoäly ei ollut laadun­varmistuksessa yhtä taitava kuin insinöörit."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-06-29T07:09:16Z",
@@ -120,27 +141,6 @@
       "title": "Asiantuntija uskoo, että opiskelijoita ei voi estää huijaamasta etätenteissä tekoälyllä",
       "url": "https://yle.fi/a/74-20230056",
       "lead": "Tietojenkäsittely­tieteen professorin Teemu Roosin mukaan ainoa aukoton ratkaisu olisi asentaa opiskelijoiden koteihin 360 asteen kamera. Se ei ole realismia."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-05T02:30:35Z",
-      "title": "Ylen toimittaja huijasi tekoälyllä ja läpäisi tehohoidon etäkurssin oppimatta mitään",
-      "url": "https://yle.fi/a/74-20224850",
-      "lead": "Ylen toimittaja ilmoittautui opiskelijaksi kolmeen avoimeen ammattikorkea­kouluun. Selvisi, että terveysalan etäkursseja on todella helppo läpäistä tekoälyllä huijaamalla."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-03T02:00:35Z",
-      "title": "Olga Temonen kuoli viime vuonna – nyt hänen tekoälyllä luotu äänensä kertoo sairastu­misestaan",
-      "url": "https://yle.fi/a/74-20229349",
-      "lead": "Edesmenneestä Olga Temosesta kertova äänikirja ilmestyy keskiviikkona kahtena versiona. Toisessa kuullaan tekoälyllä luotua Temosta, toisessa ääninäyttelijää."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-01T16:32:59Z",
-      "title": "Tekoälyjätti Anthropic aloitti virallisesti listautumis­prosessin",
-      "url": "https://yle.fi/a/74-20229234",
-      "lead": "Hakemuksen sisältö ei vielä ole julkinen."
     },
     {
       "personName": "tekoäly",
