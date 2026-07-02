@@ -3,7 +3,7 @@ function buildDataFetchEnv({ mode = "offline", forceRefresh = false } = {}) {
   const env = {
     DATA_FETCH_ENABLED: live ? "1" : "0",
     GITHUB_ENABLE_NETWORK: live ? "1" : "0",
-    SCHOLARLY_PUBLICATIONS_ENABLE_NETWORK: live ? "1" : "0",
+    SCHOLARLY_PUBLICATIONS_ENABLE_NETWORK: "0", // tilapäisesti pois käytöstä — DBLP/Crossref epäluotettavia CI:ssä
   };
 
   if (forceRefresh) {
