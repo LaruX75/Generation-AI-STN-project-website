@@ -31,9 +31,14 @@ async function acceptNecessaryCookies(page) {
     /Endast nödvändiga/i,
   ];
 
+  // Defer-skriptit ajetaan DOMContentLoaded-eventin jälkeen, joten
+  // cookie consent -dialogi ei välttämättä ole vielä näkyvissä.
+  // Odotetaan nappia enintään 5s ennen kuin luovutaan.
   for (const label of buttonLabels) {
     const button = page.getByRole("button", { name: label }).first();
-    if (await button.isVisible().catch(() => false)) {
+    const appeared = await button.waitFor({ state: "visible", timeout: 5000 })
+      .then(() => true).catch(() => false);
+    if (appeared) {
       await button.click();
       return;
     }
