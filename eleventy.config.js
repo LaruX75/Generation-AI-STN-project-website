@@ -254,9 +254,9 @@ module.exports = function(eleventyConfig) {
       // fi
       "Mediassa", "Media",
       // en
-      "In the media",
+      "In the media", "GenAI project staff in the media",
       // sv
-      "I media"
+      "I media", "GenAI-projektets medarbetare i media"
     ].includes(c))).sort(byDate)
   );
   eleventyConfig.addCollection("tapahtumat", col =>
@@ -331,7 +331,7 @@ module.exports = function(eleventyConfig) {
     const localized = list.filter(item => {
       return resolveLocale(item?.data?.lang, item?.url) === locale;
     });
-    return localized.length ? localized : list;
+    return localized;
   });
   eleventyConfig.addFilter("limitItems", (items, count) => {
     const list = Array.isArray(items) ? items : [];
