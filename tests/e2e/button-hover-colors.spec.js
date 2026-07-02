@@ -25,18 +25,19 @@ function contrastRatio(foreground, background) {
 }
 
 async function acceptNecessaryCookies(page) {
+  // CookieConsent.run() on window load -handlerissa, joten banneri ilmestyy
+  // vasta load-eventin jälkeen. Odotetaan load ennen kuin etsitään nappia.
+  await page.waitForLoadState("load");
+
   const buttonLabels = [
     /Vain välttämättömät/i,
     /Necessary only/i,
     /Endast nödvändiga/i,
   ];
 
-  // Defer-skriptit ajetaan DOMContentLoaded-eventin jälkeen, joten
-  // cookie consent -dialogi ei välttämättä ole vielä näkyvissä.
-  // Odotetaan nappia enintään 5s ennen kuin luovutaan.
   for (const label of buttonLabels) {
     const button = page.getByRole("button", { name: label }).first();
-    const appeared = await button.waitFor({ state: "visible", timeout: 5000 })
+    const appeared = await button.waitFor({ state: "visible", timeout: 3000 })
       .then(() => true).catch(() => false);
     if (appeared) {
       await button.click();
