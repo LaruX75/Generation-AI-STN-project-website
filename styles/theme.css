@@ -1621,7 +1621,7 @@ body.search-modal-open { overflow: hidden; }
 }
 /* Prose typography for post body */
 .post-content { line-height: 1.75; color: #1e293b; }
-.post-content > * + * { margin-top: 1.5em; }
+.post-content > * + * { margin-top: 2em; }
 .post-content p { margin: 0; }
 .post-content h2 {
   font-size: 1.4rem; font-weight: 700;
@@ -1645,9 +1645,6 @@ body.search-modal-open { overflow: hidden; }
   border-left: 3px solid var(--global-palette2, #446d33);
   padding-left: 1rem; color: #475569;
   margin: 0;
-}
-.post-content .speech-quote {
-  padding-left: 1.5rem;
 }
 .post-footer {
   margin-top: 3rem; padding-top: 1.5rem;
