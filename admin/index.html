@@ -62,13 +62,27 @@
   <!-- Sveltia CMS -->
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
   <script>
-    // Shadow DOM injection — toimii jos fixed-asemointi on shadow DOM:n sisällä
+    // Shadow DOM injection — pysytään aina viimeisenä jotta !important voittaa
+    // Sveltia lisää omia <style>-elementtejään shadow rootiin myöhemmin
+    // (erit. normaalikirjautumisessa ilman login-ruutua), jolloin prepend häviää.
+    // MutationObserver siirtää tyylin loppuun aina kun shadow root muuttuu.
     function patchSveltiaCMS() {
       const host = document.querySelector('sveltia-cms');
       if (!host?.shadowRoot) { setTimeout(patchSveltiaCMS, 200); return; }
-      const style = document.createElement('style');
-      style.textContent = ':host { top: 40px !important; height: calc(100vh - 40px) !important; }';
-      host.shadowRoot.prepend(style);
+
+      function ensureStyleLast() {
+        let style = host.shadowRoot.querySelector('#admin-navbar-offset');
+        if (style && style === host.shadowRoot.lastElementChild) return;
+        if (!style) {
+          style = document.createElement('style');
+          style.id = 'admin-navbar-offset';
+          style.textContent = ':host { position: fixed !important; top: 40px !important; left: 0 !important; right: 0 !important; bottom: 0 !important; height: calc(100vh - 40px) !important; }';
+        }
+        host.shadowRoot.appendChild(style); // viimeiseksi → voittaa !important-kilpailun
+      }
+
+      ensureStyleLast();
+      new MutationObserver(ensureStyleLast).observe(host.shadowRoot, { childList: true });
     }
     setTimeout(patchSveltiaCMS, 300);
   </script>
