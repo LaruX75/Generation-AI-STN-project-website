@@ -487,6 +487,13 @@ module.exports = function(eleventyConfig) {
     await runPagefind({ site: directories.output });
   });
 
+  // Mark paragraphs starting with – (en-dash) as speech quotes so CSS can style them.
+  // Applies globally to all posts without any per-post changes.
+  eleventyConfig.addTransform("speechQuote", function(content, outputPath) {
+    if (!outputPath || !outputPath.endsWith(".html")) return content;
+    return content.replace(/<p>(–|—)/g, '<p class="speech-quote">$1');
+  });
+
   // Prefix all root-relative paths in output HTML for GitHub Pages project site.
   // Remove this transform when switching to a custom domain served from /.
   const REPO_PREFIX = "";
