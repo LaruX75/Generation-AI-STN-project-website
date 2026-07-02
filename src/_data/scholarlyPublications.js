@@ -204,23 +204,26 @@ function buildUrl(base, pathname, params = {}) {
 }
 
 async function fetchJson(url, { headers = {} } = {}) {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
-
-  try {
-    const response = await fetch(url, {
-      headers,
-      signal: controller.signal
-    });
-
-    if (!response.ok) {
-      throw new Error(`Request failed (${response.status}) for ${url}`);
+  let lastError;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    if (attempt > 0) await new Promise(r => setTimeout(r, 2000 * attempt));
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+    try {
+      const response = await fetch(url, { headers, signal: controller.signal });
+      if (!response.ok) {
+        throw new Error(`Request failed (${response.status}) for ${url}`);
+      }
+      return await response.json();
+    } catch (err) {
+      lastError = err;
+      const isRetriable = err.message?.includes("(429)") || err.message === "fetch failed";
+      if (!isRetriable || attempt >= 2) throw err;
+    } finally {
+      clearTimeout(timeoutId);
     }
-
-    return response.json();
-  } finally {
-    clearTimeout(timeout);
   }
+  throw lastError;
 }
 
 async function rememberScholarly(key, factory) {
@@ -697,16 +700,16 @@ module.exports = async function scholarlyPublicationsData() {
   const people = loadConfiguredPeople();
   if (!people.length) return [];
 
-  const results = await Promise.all(
-    people.map(person =>
-      fetchPersonPublications(person).catch(error => {
-        console.warn(
-          `[scholarlyPublications] Julkaisujen haku epäonnistui henkilölle ${person.name}: ${error.message}`
-        );
-        return [];
-      })
-    )
-  );
+  const results = [];
+  for (const person of people) {
+    const result = await fetchPersonPublications(person).catch(error => {
+      console.warn(
+        `[scholarlyPublications] Julkaisujen haku epäonnistui henkilölle ${person.name}: ${error.message}`
+      );
+      return [];
+    });
+    results.push(result);
+  }
 
   return sortPublications(results.flat());
 };

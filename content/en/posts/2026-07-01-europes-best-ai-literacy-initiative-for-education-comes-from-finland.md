@@ -2,7 +2,7 @@
 title: Europe’s best AI literacy initiative for education comes from Finland
 date: 2026-07-01T16:59:00
 updated: 2026-07-01T16:59:00
-slug: European award
+slug: europes-best-ai-literacy-initiative-for-education-comes-from-finland
 permalink: Europe’s best AI literacy initiative for education comes from Finland
 lang: en
 sourceType: posts
