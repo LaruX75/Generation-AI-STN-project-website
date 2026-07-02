@@ -12,6 +12,11 @@ site_url: https://generation-ai-stn.fi
 display_url: https://generation-ai-stn.fi
 locale: "fi"
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 collections:
   # ── SUOMI ──────────────────────────────────────────────────────────────────
   - name: "fi_ajankohtaista"
@@ -23,7 +28,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_field: title
     summary: "{{mainCategory}} — {{date}} — {{title}}"
-    preview_path: "{{permalink}}"
+    preview_path: "ajankohtaista/{{slug}}"
     sortable_fields: ["date", "title", "mainCategory"]
     view_filters:
       - label: "Mediassa"
@@ -45,8 +50,6 @@ collections:
       - { label: "Otsikko", name: "title", widget: "string" }
       - { label: "Päivämäärä", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
       - { label: "Päivitetty", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
       - { label: "Kieli", name: "lang", widget: "hidden", default: "fi" }
       - { label: "Tyyppi", name: "sourceType", widget: "hidden", default: "posts" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
@@ -108,7 +111,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_field: title
     summary: "{{date}} — {{title}}"
-    preview_path: "{{permalink}}"
+    preview_path: "ajankohtaista/{{slug}}"
     sortable_fields: ["date", "title"]
     view_groups:
       - label: "Vuosi"
@@ -118,8 +121,6 @@ collections:
       - { label: "Otsikko", name: "title", widget: "string" }
       - { label: "Päivämäärä", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
       - { label: "Päivitetty", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
       - { label: "Kieli", name: "lang", widget: "hidden", default: "fi" }
       - { label: "Tyyppi", name: "sourceType", widget: "hidden", default: "posts" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
@@ -194,7 +195,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_field: title
     summary: "{{date}} — {{title}}"
-    preview_path: "{{permalink}}"
+    preview_path: "en/current-affairs/{{slug}}"
     sortable_fields: ["date", "title"]
     view_filters:
       - label: "News from"
@@ -222,8 +223,6 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
       - { label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
       - { label: "Language", name: "lang", widget: "hidden", default: "en" }
       - { label: "Source type", name: "sourceType", widget: "hidden", default: "posts" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
@@ -315,7 +314,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_field: title
     summary: "{{date}} — {{title}}"
-    preview_path: "{{permalink}}"
+    preview_path: "sv/nyheter-fran/{{slug}}"
     sortable_fields: ["date", "title"]
     view_filters:
       - label: "Nyheter från"
@@ -343,8 +342,6 @@ collections:
       - { label: "Titel", name: "title", widget: "string" }
       - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
       - { label: "Uppdaterad", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
       - { label: "Språk", name: "lang", widget: "hidden", default: "sv" }
       - { label: "Källtyp", name: "sourceType", widget: "hidden", default: "posts" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }

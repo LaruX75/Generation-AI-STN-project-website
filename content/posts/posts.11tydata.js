@@ -9,6 +9,11 @@ module.exports = {
         return result;
       }
       return data.categories || [];
+    },
+    permalink: data => {
+      if (data.permalink) return data.permalink;
+      const slug = (data.page.fileSlug || "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
+      return slug ? `/ajankohtaista/${slug}/` : undefined;
     }
   }
 };
