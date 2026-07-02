@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-07-01T08:45:36.128Z",
+  "fetchedAt": "2026-07-02T08:08:57.172Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-02T07:15:49Z",
+      "title": "Teknologiajätit syöksyivät Etelä-Korean pörssissä",
+      "url": "https://yle.fi/a/74-20234486",
+      "lead": "Pelot tekoälyyn liittyvästä arvostuskuplasta ovat nostaneet päätään. Hermoilu heijastuu myös Helsingin pörssiin."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-01T09:39:35Z",
+      "title": "Suomalais­tutkijat kehittivät palkitun tavan opettaa tekoälyä lapsille",
+      "url": "https://yle.fi/a/74-20234281",
+      "lead": "Tutkijoiden kehittämä oppimis­ympäristö sai tällä viikolla Euroopan unionin digitaalisten taitojen palkinnon."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-01T05:22:26Z",
@@ -74,13 +88,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-06-25T12:51:32Z",
-      "title": "Pohjanmaan hyvinvointialueella käytössä tekoälytulkki – asiakkaat saavat apua yli 70 kielellä",
-      "url": "https://yle.fi/a/74-20233438",
-      "lead": "Hyvinvointialueelta uskotaan, että palveluiden läpimenoaika lyhenee merkittävästi."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-06-24T17:00:38Z",
       "title": "Näitkö kuvan kauniista naisesta MM-katsomossa? Hän saattoi olla tekoälyn luomus",
       "url": "https://yle.fi/a/74-20232988",
@@ -120,13 +127,6 @@
       "title": "Opiskelija, oletko huijannut tekoälyn avulla? Kerro kokemuksistasi, teemme juttua",
       "url": "https://yle.fi/a/74-20231067",
       "lead": "Keräämme opiskelijoiden tai jo valmistuneiden kokemuksia tekoälyn käytöstä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-09T16:07:28Z",
-      "title": "Euroopan komissio määrää Metan avaamaan Whatsappin kilpaileville tekoäly-boteille ilmaiseksi",
-      "url": "https://yle.fi/a/74-20230649",
-      "lead": "EU aloitti joulukuussa tutkimuksen yhdysvaltalaisen yhtiön käytännöstä estää muiden kuin Meta AI:n pääsy palveluun."
     },
     {
       "personName": "tekoäly",
