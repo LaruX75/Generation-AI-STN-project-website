@@ -1621,8 +1621,8 @@ body.search-modal-open { overflow: hidden; }
 }
 /* Prose typography for post body */
 .post-content { line-height: 1.75; color: #1e293b; }
+.post-content > * { margin: 0; }
 .post-content > * + * { margin-top: 2em; }
-.post-content p { margin: 0; }
 .post-content h2 {
   font-size: 1.4rem; font-weight: 700;
   color: var(--global-palette3, #2c5f2e);
