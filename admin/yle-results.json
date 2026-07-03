@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-07-02T08:08:57.172Z",
+  "fetchedAt": "2026-07-03T07:56:34.237Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-02T16:08:52Z",
+      "title": "FT: Open AI haluaa tekoäly-yhtiöiden lahjoittavan viiden prosentin osuudet yhtiöistään Trumpin hallinnolle",
+      "url": "https://yle.fi/a/74-20234633",
+      "lead": "OpenAI:n johto ehdottaa, että jokaisen Yhdysvaltain suurimmista tekoälykehittäjistä tulisi antaa viisi prosenttia osakkeistaan valtiollisille rahastoille."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-02T07:15:49Z",
@@ -141,13 +148,6 @@
       "title": "Asiantuntija uskoo, että opiskelijoita ei voi estää huijaamasta etätenteissä tekoälyllä",
       "url": "https://yle.fi/a/74-20230056",
       "lead": "Tietojenkäsittely­tieteen professorin Teemu Roosin mukaan ainoa aukoton ratkaisu olisi asentaa opiskelijoiden koteihin 360 asteen kamera. Se ei ole realismia."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-05-31T14:00:12Z",
-      "title": "Tekoäly ratkaisi vuosikymmeniä avoinna olleen matematiikan ongelman",
-      "url": "https://yle.fi/a/74-20228996",
-      "lead": "Open AI kertoo tekoälynsä murtautuneen läpi pulmassa, jota kärkimatemaatikot ratkoivat 80 vuotta. Matemaatikot ovat innoissaan tekoälyn kyvykkyydestä."
     },
     {
       "personName": "Susanna Lindroos-Hovinheimo",
