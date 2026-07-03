@@ -508,7 +508,7 @@ module.exports = function(eleventyConfig) {
   });
 
   return {
-    dir: { input: "content", includes: "../_includes", data: "../_data", output: outputDirName },
+    dir: { input: "content", includes: "../_includes", data: "../src/_data", output: outputDirName },
     templateFormats: ["md", "njk", "html", "11ty.js"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
