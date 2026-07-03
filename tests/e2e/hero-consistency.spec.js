@@ -1,5 +1,5 @@
 const { test, expect } = require("@playwright/test");
-const navigation = require("../../_data/navigation.json");
+const navigation = require("../../src/_data/navigation.json");
 const { acceptNecessaryCookies } = require("./helpers");
 
 const mainMenu = Array.isArray(navigation)
