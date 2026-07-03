@@ -1,0 +1,6 @@
+{
+  "sourceType": "posts",
+  "lang": "sv",
+  "layout": "layouts/post.njk",
+  "status": "publish"
+}

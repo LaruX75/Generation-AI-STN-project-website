@@ -1,8 +1,0 @@
-{
-  "tags": [
-    "posts",
-    "posts-sv"
-  ],
-  "lang": "sv",
-  "layout": "layouts/post.njk"
-}
