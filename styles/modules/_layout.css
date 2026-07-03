@@ -1,0 +1,395 @@
+
+/* ── Feather icons (list items, nav) ───────────────────────────────────────── */
+.feather-icon { display: inline-flex; align-items: center; flex-shrink: 0; }
+.feather-icon svg { width: 1em; height: 1em; vertical-align: middle; }
+
+/* kt-svg-icon-list: icon + text side by side */
+.kt-svg-icon-list-item-wrap { display: flex; align-items: flex-start; gap: 0.5em; }
+.kt-svg-icon-list-text { flex: 1; }
+
+/* ── Kadence buttons ───────────────────────────────────────────────────────── */
+.kb-btn-wrap,
+.kb-buttons-wrap,
+.kb-btn-align-wrap { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.kb-btn-align-center { justify-content: center; }
+.kb-btn-align-right  { justify-content: flex-end; }
+.kb-btn-align-left   { justify-content: flex-start; }
+
+.kb-button,
+.kb-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  text-decoration: none;
+  padding: 0.7em 1.75em;
+  border-radius: 36px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  background: #d9e3cf;
+  color: var(--global-palette1, #314e25);
+  box-shadow: inset 0 0 0 -7px rgba(0,0,0,0);
+}
+.kb-button:hover,
+.kb-btn:hover {
+  background: #bbcca8;
+  color: var(--global-palette1, #314e25);
+  box-shadow: inset 0 15px 25px -7px rgba(0,0,0,0.1);
+}
+.kb-btn-size-small  { font-size: 0.8rem; padding: 0.45em 1em; }
+.kb-btn-size-medium { font-size: 0.95rem; padding: 0.65em 1.5em; }
+.kb-btn-size-large  { font-size: 1.1rem; padding: 0.8em 1.75em; }
+.kb-btn-size-xlarge { font-size: 1.3rem; padding: 1em 2em; }
+
+/* Outline / ghost style */
+.kb-btn-style-outline {
+  background: transparent;
+  border-color: currentColor;
+  color: var(--global-palette1, #314e25);
+}
+.kb-btn-style-outline:hover {
+  background: var(--global-palette1, #314e25);
+  color: var(--global-palette9, #fff);
+}
+
+/* ── Kadence image block ───────────────────────────────────────────────────── */
+.kb-image-wrap { display: block; }
+.kb-image-wrap img { display: block; max-width: 100%; height: auto; }
+.kb-image-wrap.kb-icon-block { display: flex; justify-content: flex-start; margin-bottom: 1rem; }
+.kb-image-wrap.kb-icon-block svg { flex-shrink: 0; }
+
+/* ── Page layout — CSS grid for alignfull breakout ─────────────────────────── */
+.page { margin: 0; }
+.page-content {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(0, 1fr)
+    [content-start] min(var(--global-content-width, 1290px), calc(100% - 2 * var(--global-content-edge-padding, 1.5rem)))
+    [content-end] minmax(0, 1fr)
+    [full-end];
+}
+.page-content > * { grid-column: content; }
+.page-content > .alignfull,
+.page-content > .alignwide { grid-column: full; }
+.page-related-shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--global-content-edge-padding, 1.5rem) 0;
+}
+.page-content > p,
+.page-content > ul,
+.page-content > ol,
+.page-content > blockquote,
+.page-content > h2,
+.page-content > h3,
+.page-content > h4,
+.page-content > hr {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-content > p,
+.page-content > li,
+.doc-body p,
+.doc-body li {
+  font-size: 1.03rem;
+  line-height: 1.75;
+  color: #1e293b;
+}
+.page-content > * + p,
+.page-content > p + p,
+.doc-body > * + * {
+  margin-top: 1.2em;
+}
+.page-content > h2,
+.doc-body h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--global-palette3, #2c5f2e);
+  margin-top: 2.25em;
+  margin-bottom: 0.5em;
+}
+.page-content > h3,
+.doc-body h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--global-palette1, #314e25);
+  margin-top: 2em;
+  margin-bottom: 0.4em;
+}
+.page-content > ul,
+.page-content > ol,
+.doc-body ul,
+.doc-body ol {
+  padding-left: 1.5em;
+}
+.page-content :where(p, li, dt, dd, blockquote, figcaption, td, th) a,
+.doc-body a {
+  color: var(--global-palette2, #446d33);
+  text-decoration: underline;
+}
+.page-content :where(p, li, dt, dd, blockquote, figcaption, td, th) a:hover,
+.doc-body a:hover {
+  color: var(--global-palette1, #314e25);
+}
+.doc-content {
+  min-width: 0;
+}
+.doc-body {
+  line-height: 1.75;
+  color: #1e293b;
+}
+.doc-body > *:first-child {
+  margin-top: 0;
+}
+
+/* ── Kadence rowlayout column grid ─────────────────────────────────────────── */
+.kt-row-column-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--global-row-gutter-md, 2rem);
+  position: relative;
+  z-index: 1;
+}
+.alignfull > .kt-row-column-wrap {
+  padding-left: var(--global-content-edge-padding, 1.5rem);
+  padding-right: var(--global-content-edge-padding, 1.5rem);
+  max-width: var(--global-content-width, 1290px);
+  margin-left: auto;
+  margin-right: auto;
+}
+/* overlay + separator positioning */
+.kb-row-layout-wrap { position: relative; }
+.kt-row-layout-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.kb-has-bg-img > .kt-row-layout-overlay {
+  background: linear-gradient(135deg, var(--global-palette1, #314e25) 50%, var(--global-palette9, #fff) 100%);
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+/* Auto-detect column count via :has() — works regardless of kb-col-N class value */
+@media (min-width: 768px) {
+  .kt-row-column-wrap:has(> .kb-section-container:nth-child(2)) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .kt-row-column-wrap.kb-layout-left-golden:has(> .kb-section-container:nth-child(2)) {
+    grid-template-columns: 2fr 1fr;
+  }
+  .kt-row-column-wrap.kb-layout-right-golden:has(> .kb-section-container:nth-child(2)) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media (min-width: 1025px) {
+  .kt-row-column-wrap:has(> .kb-section-container:nth-child(3)) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .kt-row-column-wrap:has(> .kb-section-container:nth-child(4)) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ── Kadence row separators ─────────────────────────────────────────────────── */
+.kt-row-layout-bottom-sep,
+.kt-svg-for-bottom-sep {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.kt-row-layout-top-sep,
+.kt-svg-for-top-sep {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.kt-row-layout-bottom-sep svg,
+.kt-row-layout-top-sep svg,
+.kt-svg-for-top-sep svg,
+.kt-svg-for-bottom-sep svg {
+  fill: currentColor !important;
+  display: block;
+  width: 107%;
+  height: 100px;
+  margin-left: -3.5%;
+}
+
+/* ── Kadence postgrid / Splide carousel ────────────────────────────────────── */
+.kb-post-grid,
+.kb-posts-block {
+  padding: 1rem 0;
+}
+
+/* Carousel postgrids — full-width background, track spans viewport */
+.kb-post-grid--carousel {
+  background: var(--global-palette7, #f0f4ec);
+  padding: 3rem 0 2.5rem;
+}
+/* Title aligns with content column */
+.kb-post-grid--carousel .kb-post-feed-header {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.kb-post-feed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 1.25rem;
+}
+
+.kb-post-feed-title {
+  margin: 0;
+  color: var(--global-palette1, #314e25);
+  font-family: var(--global-heading-font-family, Arial, Helvetica, sans-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.1;
+}
+
+.kb-post-feed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.kb-post-feed-carousel-wrap {
+  position: relative;
+}
+
+.kb-post-feed-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  user-select: none;
+  padding-left: max(1.5rem, calc((100vw - 900px) / 2));
+  padding-right: max(1.5rem, calc((100vw - 900px) / 2));
+  padding-bottom: 1.5rem;
+  scrollbar-width: none;
+}
+.kb-post-feed-carousel::-webkit-scrollbar { display: none; }
+
+.kb-post-feed-carousel > .kb-post-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 1024px) {
+  .kb-post-feed-carousel > .kb-post-card { flex: 0 0 260px; }
+}
+@media (max-width: 640px) {
+  .kb-post-feed-carousel > .kb-post-card { flex: 0 0 80vw; }
+}
+
+/* Prev/next nav buttons */
+.kb-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(calc(-50% - 0.75rem));
+  z-index: 2;
+  background: var(--global-palette9, #fff);
+  border: 1px solid rgba(49,78,37,.15);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--global-palette1, #314e25);
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  transition: background .15s, box-shadow .15s, opacity .15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kb-carousel-btn:hover,
+.kb-carousel-btn:focus-visible { background: var(--global-palette7, #f0f4ec); box-shadow: 0 4px 12px rgba(0,0,0,.15); outline: 3px solid var(--global-palette2, #446d33); outline-offset: 2px; }
+.kb-carousel-btn--edge { opacity: 0.2; pointer-events: none; }
+.kb-carousel-btn--prev { left: max(0.5rem, calc((100vw - 900px) / 2 - 52px)); }
+.kb-carousel-btn--next { right: max(0.5rem, calc((100vw - 900px) / 2 - 52px)); }
+@media (max-width: 960px) {
+  .kb-carousel-btn--prev { left: 0.5rem; }
+  .kb-carousel-btn--next { right: 0.5rem; }
+}
+
+.kb-post-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--global-palette9, #fff);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 15px 15px -10px rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.kb-post-card__image-link {
+  display: block;
+}
+
+.kb-post-card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.kb-post-card__body {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.kb-post-card__date {
+  font-size: 0.8rem;
+  color: #5e6c7b;
+  margin-bottom: 0.6rem;
+}
+
+.kb-post-card__title {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.kb-post-card__title a {
+  text-decoration: none;
+  color: var(--global-palette1, #314e25);
+}
+
+.kb-post-card__title a:hover {
+  color: var(--global-palette2, #446d33);
+}
+
+.kb-post-card__excerpt {
+  font-size: 0.875rem;
+  margin: 0;
+  color: var(--global-palette3, #000);
+  opacity: 0.78;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

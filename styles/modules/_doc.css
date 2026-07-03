@@ -1,0 +1,426 @@
+
+/* ── BetterDocs listing ───────────────────────────────────────────────────── */
+.docs-index { margin-top: 3rem; }
+.docs-kb-section { margin-bottom: 2.5rem; }
+.docs-kb-title { font-size: 1.4rem; margin-bottom: 0.75rem; color: var(--global-palette3, #333); border-bottom: 2px solid var(--global-palette6, #ccc); padding-bottom: 0.25rem; }
+.docs-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.5rem; }
+.docs-list-item a { display: block; padding: 0.6rem 0.9rem; background: var(--global-palette8, #f5f5f5); border-radius: 4px; text-decoration: none; color: var(--global-palette3, #333); transition: background 0.15s; }
+.docs-list-item a:hover { background: var(--global-palette7, #e8eef5); }
+.docs-cat { display: block; font-size: 0.75rem; color: var(--global-palette6, #888); margin-top: 0.2rem; }
+
+/* ── Doc layout (sidebar + content) ──────────────────────────────────────── */
+.doc-layout { display: grid; grid-template-columns: 240px 1fr; gap: 2rem; align-items: start; max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+.doc-sidebar { position: sticky; top: 1rem; }
+.doc-sidebar-link { display: block; padding: 0.4rem 0.75rem; border-radius: 4px; text-decoration: none; color: var(--global-palette3, #333); font-size: 0.9rem; }
+.doc-sidebar-link:hover { background: var(--global-palette8, #f5f5f5); }
+.doc-sidebar-link.is-active { background: var(--global-palette6, #dde4f0); font-weight: 600; }
+.doc-title { margin-bottom: 0.5rem; }
+.doc-category { font-size: 0.8rem; color: var(--global-palette6, #888); margin-bottom: 1.5rem; }
+@media (max-width: 700px) {
+  .doc-layout { grid-template-columns: 1fr; }
+  .doc-sidebar { position: static; }
+}
+
+/* ── 404 page ────────────────────────────────────────────────────────────── */
+.error-404 { min-height: 60vh; display: flex; align-items: center; justify-content: center; }
+.error-404-inner { text-align: center; padding: 3rem 1.5rem; max-width: 560px; margin: 0 auto; }
+.error-404-code { font-size: clamp(5rem, 20vw, 9rem); font-weight: 700; line-height: 1; color: var(--global-palette7, #f0f4ec); letter-spacing: -0.04em; }
+.error-404-title { font-size: clamp(1.4rem, 4vw, 2rem); margin: 0.25rem 0 0.75rem; }
+.error-404-desc { color: #555; margin: 0 0 2rem; }
+.error-404-suggestions { margin: 0 0 2rem; }
+.error-404-suggestions-label { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--global-palette5, #3b5e2c); margin: 0 0 0.75rem; }
+.error-404-suggestions-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; align-items: center; }
+.error-404-suggestions-list a { display: inline-block; padding: 0.5em 1.2em; background: var(--global-palette7, #f0f4ec); border-radius: 5px; text-decoration: none; color: var(--global-palette3, #000); font-weight: 500; transition: background 0.15s; }
+.error-404-suggestions-list a:hover { background: #dde9d5; }
+.e404-ext { font-size: 0.75em; color: var(--global-palette5, #3b5e2c); }
+.error-404-home { display: inline-block; margin-top: 0.5rem; color: var(--global-palette2, #446d33); font-size: 0.9rem; }
+
+/* ── gen-ai.fi tool cards (materiaalit-sivu) ─────────────────────────────── */
+.gen-ai-tools-intro { max-width: 700px; margin: 0 0 2rem; }
+.gen-ai-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  row-gap: 0.6rem;
+  margin: 0 0 2.5rem;
+}
+@media (max-width: 900px) { .gen-ai-tool-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .gen-ai-tool-grid { grid-template-columns: 1fr; } }
+
+/* Each card spans 8 rows (image · type · badge · title · desc · meta · links · legal)
+   and uses subgrid so all cards in the same visual row share row heights */
+.gen-ai-tool-card {
+  display: grid;
+  grid-row: span 8;
+  grid-template-rows: subgrid;
+  align-items: start;
+  background: var(--global-palette9, #fff);
+  border: 1px solid #dde5d6;
+  border-radius: 8px;
+  padding: 0 0 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(49,78,37,0.07);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.gen-ai-tool-card:hover { box-shadow: 0 6px 18px rgba(49,78,37,0.14); transform: translateY(-2px); }
+
+/* Hero image row */
+.gen-ai-tool-card-image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #e8f0e4;
+}
+.gen-ai-tool-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+.gen-ai-tool-card-image--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #b0c4a8;
+  background: linear-gradient(135deg, #e8f0e4 0%, #d4e4cc 100%);
+}
+.gen-ai-tool-card-type {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--global-palette2, #446d33);
+  border-bottom: 2px solid var(--global-palette2, #446d33);
+  padding: 0.1em 0;
+  margin: 1.1rem 1.5rem 0.75rem;
+}
+.gen-ai-tool-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+  padding: 0 1.5rem;
+}
+.gen-ai-tool-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.15em 0.6em;
+  border-radius: 3px;
+}
+.gen-ai-tool-badge--active { background: #e2f0dc; color: #2d5a1e; }
+.gen-ai-tool-badge--beta { background: #dce8f8; color: #1a4a80; }
+.gen-ai-tool-badge--new { background: #fff3cd; color: #7a5c00; }
+.gen-ai-tool-card-title {
+  font-size: 1.15rem;
+  margin: 0;
+  padding: 0 1.5rem;
+  color: var(--global-palette3, #000);
+}
+.gen-ai-tool-card-desc { font-size: 0.9rem; line-height: 1.55; color: #444; margin: 0; padding: 0 1.5rem; }
+.gen-ai-tool-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-content: start;
+  padding: 0 1.5rem;
+}
+.gen-ai-tool-tag {
+  font-size: 0.72rem;
+  background: var(--global-palette7, #f0f4ec);
+  color: var(--global-palette5, #3b5e2c);
+  padding: 0.15em 0.55em;
+  border-radius: 3px;
+}
+.gen-ai-tool-card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: stretch;
+  align-self: start;
+  padding: 0 1.5rem;
+}
+/* Shared button base */
+.gen-ai-tool-card-about,
+.gen-ai-tool-card-link,
+.gen-ai-tool-card-curriculum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 0.55em 1em;
+  min-height: 2.65rem;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+/* Kuvaus — secondary outlined */
+.gen-ai-tool-card-about {
+  color: var(--global-palette1, #314e25);
+  border: 1.5px solid #c2d3b8;
+  background: #fff;
+}
+.gen-ai-tool-card-about:hover { border-color: var(--global-palette2, #446d33); background: var(--global-palette7, #f0f4ec); color: var(--global-palette1, #314e25); }
+/* Kokeile — primary filled */
+.gen-ai-tool-card-link {
+  background: var(--global-palette2, #446d33);
+  color: #fff;
+  border: 1.5px solid transparent;
+}
+.gen-ai-tool-card-link:hover { background: var(--global-palette1, #314e25); color: #fff; }
+.gen-ai-tool-card-link--disabled {
+  background: #e8e8e8;
+  color: #999;
+  cursor: default;
+  border-color: transparent;
+}
+.gen-ai-tool-card-link--disabled:hover { background: #e8e8e8; color: #999; }
+/* Oppimateriaalit — tertiary soft */
+.gen-ai-tool-card-curriculum {
+  font-size: 0.82rem;
+  color: var(--global-palette4, #314e25);
+  background: var(--global-palette7, #f0f4ec);
+  border: 1.5px solid transparent;
+}
+.gen-ai-tool-card-curriculum:hover { background: #dde9d5; }
+.gen-ai-tool-card--github .gen-ai-tool-card-desc strong {
+  color: var(--global-palette1, #314e25);
+}
+/* ── Tool card legal row ──────────────────────────────────────────────────── */
+.gen-ai-tool-card-legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.75rem;
+  margin-top: auto;
+  padding: 0.75rem 1.5rem 0;
+  border-top: 1px solid rgba(15,23,42,0.07);
+}
+.gen-ai-tool-legal-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--global-palette1, #314e25);
+  background: var(--global-palette7, #f0f4ec);
+  border: 1px solid #c2d3b8;
+  border-radius: 4px;
+  padding: 0.15em 0.5em;
+}
+.gen-ai-tool-legal-link {
+  font-size: 0.78rem;
+  color: #64748b;
+  text-decoration: none;
+}
+.gen-ai-tool-legal-link:hover { color: var(--global-palette2, #446d33); text-decoration: underline; }
+.gen-ai-tool-legal-link--github::before { content: ""; }
+
+/* ── Open source repo pills ───────────────────────────────────────────────── */
+.mat-open-repos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+.mat-open-repo {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--global-palette1, #314e25);
+  background: #fff;
+  border: 1.5px solid #c2d3b8;
+  border-radius: 20px;
+  padding: 0.35em 0.9em;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.mat-open-repo:hover {
+  border-color: var(--global-palette2, #446d33);
+  background: var(--global-palette7, #f0f4ec);
+}
+.gen-ai-tools-curricula {
+  background: var(--global-palette7, #f0f4ec);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin-top: 0.5rem;
+}
+.gen-ai-tools-curricula h3 { margin: 0 0 0.5rem; }
+.gen-ai-tools-curricula ul { margin: 0.5rem 0 1.25rem; padding-left: 1.4rem; }
+.gen-ai-tools-curricula li { margin-bottom: 0.4rem; }
+
+/* ── Materiaalit page sections ────────────────────────────────────────────── */
+.mat-section {
+  padding: 3.5rem 0;
+}
+.mat-section--alt {
+  background: var(--global-palette7, #f0f4ec);
+}
+.mat-section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.mat-section-inner--narrow {
+  max-width: 680px;
+}
+.mat-section-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.75rem;
+  color: var(--global-palette3, #111);
+}
+@media (max-width: 700px) {
+  .mat-section { padding: 2.5rem 0; }
+  .mat-section-inner { padding: 0 1rem; }
+  .mat-section-heading { margin-bottom: 1.25rem; }
+}
+
+/* Curricula cards — 2-column grid matching the tool card style */
+.mat-curricula-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 600px) { .mat-curricula-grid { grid-template-columns: 1fr; } }
+
+.mat-curricula-card {
+  background: var(--global-palette9, #fff);
+  border: 1px solid #dde5d6;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(49,78,37,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.mat-curricula-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--global-palette3, #111);
+}
+.mat-curricula-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #444;
+  margin: 0;
+  flex-grow: 1;
+}
+.mat-curricula-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* Publication cards grid */
+.mat-pub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+@media (max-width: 680px) { .mat-pub-grid { grid-template-columns: 1fr; } }
+
+.mat-pub-card {
+  background: #fff;
+  border: 1px solid #dde5d6;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(49,78,37,0.07);
+  transition: box-shadow 0.2s;
+}
+.mat-pub-card:hover { box-shadow: 0 6px 20px rgba(49,78,37,0.13); }
+
+/* Coloured top accent bar */
+.mat-pub-card-accent {
+  height: 5px;
+}
+.mat-pub-card--book  .mat-pub-card-accent { background: linear-gradient(90deg, #314e25, #5a8a40); }
+.mat-pub-card--guide .mat-pub-card-accent { background: linear-gradient(90deg, #1d4079, #3b70c4); }
+.mat-pub-card--case  .mat-pub-card-accent { background: linear-gradient(90deg, #7a4a00, #c47b1a); }
+
+.mat-pub-card-body {
+  padding: 1.5rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Type badge */
+.mat-pub-card-type {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 4px;
+  padding: 0.2em 0.65em;
+  margin-bottom: 0.75rem;
+  align-self: flex-start;
+}
+.mat-pub-card--book  .mat-pub-card-type { background: #eaf2e4; color: #314e25; }
+.mat-pub-card--guide .mat-pub-card-type { background: #e6eef8; color: #1d4079; }
+.mat-pub-card--case  .mat-pub-card-type { background: #fdf0e0; color: #7a4a00; }
+
+.mat-pub-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.75rem;
+  color: #0f172a;
+}
+.mat-pub-card-desc {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #475569;
+  margin: 0 0 0.75rem;
+  flex: 1;
+}
+.mat-pub-card-authors {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-style: italic;
+  margin: 0 0 1.25rem;
+}
+
+.mat-pub-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+.mat-pub-card-btn {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.mat-pub-card-btn--primary {
+  background: var(--global-palette2, #446d33);
+  color: #fff;
+}
+.mat-pub-card-btn--primary:hover {
+  background: var(--global-palette1, #314e25);
+  color: #fff;
+}
+.mat-pub-card-btn--secondary {
+  background: transparent;
+  color: var(--global-palette2, #446d33);
+  border: 1px solid currentColor;
+}
+.mat-pub-card-btn--secondary:hover { background: #f0f7eb; }
