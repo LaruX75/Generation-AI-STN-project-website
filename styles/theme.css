@@ -1658,6 +1658,15 @@ body.search-modal-open { overflow: hidden; }
   text-decoration: none; transition: background 0.15s;
 }
 .post-tag:hover { background: #e2e8f0; color: #1e293b; }
+.post-edit-link {
+  display: inline-flex; align-items: center; gap: 0.4em;
+  margin-top: 2rem;
+  padding: 0.35em 0.85em;
+  border: 1px solid #cbd5e1; border-radius: 6px;
+  color: #64748b; font-size: 0.8rem; text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+.post-edit-link:hover { border-color: var(--global-palette2, #446d33); color: var(--global-palette2, #446d33); }
 /* Related posts */
 .post-related {
   margin-top: 3.5rem; padding-top: 2rem;
