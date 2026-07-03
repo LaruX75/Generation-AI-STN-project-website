@@ -1,24 +1,9 @@
 const { test, expect } = require("@playwright/test");
 const path = require("node:path");
 const { pathToFileURL } = require("node:url");
+const { acceptNecessaryCookies } = require("./helpers");
 
 const fixtureUrl = pathToFileURL(path.join(__dirname, "..", "fixtures", "mobile-nav.html")).href;
-
-async function acceptNecessaryCookies(page) {
-  const buttonLabels = [
-    /Vain välttämättömät/i,
-    /Necessary only/i,
-    /Endast nödvändiga/i,
-  ];
-
-  for (const label of buttonLabels) {
-    const button = page.getByRole("button", { name: label }).first();
-    if (await button.isVisible().catch(() => false)) {
-      await button.click();
-      return;
-    }
-  }
-}
 
 test("Skip link becomes visible and moves focus to main content", async ({ page, isMobile }, testInfo) => {
   testInfo.skip(isMobile, "Tab-näppäin ei toimi mobiililaitteilla");

@@ -1,20 +1,5 @@
 const { test, expect } = require("@playwright/test");
-
-async function dismissCookies(page) {
-  const buttonLabels = [
-    /Vain välttämättömät/i,
-    /Necessary only/i,
-    /Endast nödvändiga/i,
-  ];
-
-  for (const label of buttonLabels) {
-    const button = page.getByRole("button", { name: label }).first();
-    if (await button.isVisible().catch(() => false)) {
-      await button.click();
-      return;
-    }
-  }
-}
+const { acceptNecessaryCookies: dismissCookies } = require("./helpers");
 
 test.use({
   viewport: { width: 1440, height: 900 },

@@ -1,4 +1,5 @@
 const { test, expect } = require("@playwright/test");
+const { acceptNecessaryCookies } = require("./helpers");
 
 function parseRgb(rgb) {
   const matches = rgb.match(/\d+/g) || [];
@@ -22,22 +23,6 @@ function contrastRatio(foreground, background) {
   const bg = relativeLuminance(parseRgb(background));
   const [lighter, darker] = fg > bg ? [fg, bg] : [bg, fg];
   return (lighter + 0.05) / (darker + 0.05);
-}
-
-async function acceptNecessaryCookies(page) {
-  const buttonLabels = [
-    /Vain välttämättömät/i,
-    /Necessary only/i,
-    /Endast nödvändiga/i,
-  ];
-
-  for (const label of buttonLabels) {
-    const button = page.getByRole("button", { name: label }).first();
-    if (await button.isVisible().catch(() => false)) {
-      await button.click();
-      return;
-    }
-  }
 }
 
 test("Materials page action buttons keep their intended colors", async ({ page }) => {

@@ -1,4 +1,5 @@
 const { test, expect } = require("@playwright/test");
+const { acceptNecessaryCookies } = require("./helpers");
 
 function parseRgb(rgb) {
   const matches = rgb.match(/\d+/g) || [];
@@ -22,28 +23,6 @@ function contrastRatio(foreground, background) {
   const bg = relativeLuminance(parseRgb(background));
   const [lighter, darker] = fg > bg ? [fg, bg] : [bg, fg];
   return (lighter + 0.05) / (darker + 0.05);
-}
-
-async function acceptNecessaryCookies(page) {
-  // CookieConsent.run() on window load -handlerissa, joten banneri ilmestyy
-  // vasta load-eventin jälkeen. Odotetaan load ennen kuin etsitään nappia.
-  await page.waitForLoadState("load");
-
-  const buttonLabels = [
-    /Vain välttämättömät/i,
-    /Necessary only/i,
-    /Endast nödvändiga/i,
-  ];
-
-  for (const label of buttonLabels) {
-    const button = page.getByRole("button", { name: label }).first();
-    const appeared = await button.waitFor({ state: "visible", timeout: 3000 })
-      .then(() => true).catch(() => false);
-    if (appeared) {
-      await button.click();
-      return;
-    }
-  }
 }
 
 async function expectHoverColors(page, selector, expected) {

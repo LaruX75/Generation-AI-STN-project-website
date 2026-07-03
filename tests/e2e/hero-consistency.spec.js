@@ -1,5 +1,6 @@
 const { test, expect } = require("@playwright/test");
 const navigation = require("../../_data/navigation.json");
+const { acceptNecessaryCookies } = require("./helpers");
 
 const mainMenu = Array.isArray(navigation)
   ? navigation.find(menu => menu.slug === "paavalikko")
@@ -11,22 +12,6 @@ const mainMenuUrls = (mainMenu?.items || [])
     title: item.title,
     url: item.url,
   }));
-
-async function acceptNecessaryCookies(page) {
-  const buttonLabels = [
-    /Vain välttämättömät/i,
-    /Necessary only/i,
-    /Endast nödvändiga/i,
-  ];
-
-  for (const label of buttonLabels) {
-    const button = page.getByRole("button", { name: label }).first();
-    if (await button.isVisible().catch(() => false)) {
-      await button.click();
-      return;
-    }
-  }
-}
 
 async function getHeroSignature(page, url) {
   await page.goto(url);

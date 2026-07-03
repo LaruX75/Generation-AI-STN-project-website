@@ -1,5 +1,6 @@
 const { test, expect } = require("@playwright/test");
 const AxeBuilder = require("@axe-core/playwright").default;
+const { acceptNecessaryCookies } = require("./helpers");
 
 const auditedPages = [
   { name: "Finnish home", url: "/" },
@@ -14,22 +15,6 @@ const auditedPages = [
   { name: "English home", url: "/en/" },
   { name: "Swedish home", url: "/sv/" },
 ];
-
-async function acceptNecessaryCookies(page) {
-  const buttonLabels = [
-    /Vain välttämättömät/i,
-    /Necessary only/i,
-    /Endast nödvändiga/i,
-  ];
-
-  for (const label of buttonLabels) {
-    const button = page.getByRole("button", { name: label }).first();
-    if (await button.isVisible().catch(() => false)) {
-      await button.click();
-      return;
-    }
-  }
-}
 
 function formatViolations(violations) {
   return violations
