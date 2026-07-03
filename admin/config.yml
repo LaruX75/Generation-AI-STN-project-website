@@ -12,24 +12,33 @@ site_url: https://generation-ai-stn.fi
 display_url: https://generation-ai-stn.fi
 locale: "fi"
 
+i18n:
+  structure: multiple_folders
+  locales: [fi, en, sv]
+  default_locale: fi
+
 slug:
   encoding: "ascii"
   clean_accents: true
   sanitize_replacement: "-"
 
 collections:
-  # ── SUOMI ──────────────────────────────────────────────────────────────────
-  - name: "fi_ajankohtaista"
-    label: "Ajankohtaista"
+  # ── JULKAISUT (FI / EN / SV — i18n) ───────────────────────────────────────
+  - name: "posts"
+    label: "Julkaisut"
     label_singular: "Julkaisu"
     icon: "newspaper"
     folder: "content/posts"
     create: true
+    i18n: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_field: title
-    summary: "{{mainCategory}} — {{date}} — {{title}}"
-    preview_path: "ajankohtaista/{{slug}}"
-    sortable_fields: ["date", "title", "mainCategory"]
+    summary: "{{date}} — {{title}}"
+    preview_path:
+      fi: "ajankohtaista/{{slug}}"
+      en: "en/current-affairs/{{slug}}"
+      sv: "sv/nyheter-fran/{{slug}}"
+    sortable_fields: ["date", "title"]
     view_filters:
       - label: "Mediassa"
         field: mainCategory
@@ -40,50 +49,115 @@ collections:
       - label: "Toiminta"
         field: mainCategory
         pattern: "Toiminta"
+      - label: "Tutkimus"
+        field: mainCategory
+        pattern: "Tutkimus"
+      - label: "Research (EN)"
+        field: mainCategory
+        pattern: "Research"
+      - label: "Forskning (SV)"
+        field: mainCategory
+        pattern: "Forskning"
     view_groups:
-      - label: "Tyyppi"
+      - label: "Kategoria"
         field: mainCategory
       - label: "Vuosi"
         field: date
         pattern: "\\d{4}"
     fields:
-      - { label: "Otsikko", name: "title", widget: "string" }
-      - { label: "Päivämäärä", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
-      - { label: "Päivitetty", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
-      - { label: "Kieli", name: "lang", widget: "hidden", default: "fi" }
-      - { label: "Tyyppi", name: "sourceType", widget: "hidden", default: "posts" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
-      - { label: "Status", name: "status", widget: "hidden", default: "publish" }
-      - label: "Pääkategoria"
+      - label: "Otsikko / Title / Titel"
+        name: "title"
+        widget: "string"
+        i18n: true
+      - label: "Päivämäärä / Date / Datum"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DDTHH:mm:ss"
+        i18n: duplicate
+      - label: "Päivitetty / Updated / Uppdaterad"
+        name: "updated"
+        widget: "datetime"
+        format: "YYYY-MM-DDTHH:mm:ss"
+        required: false
+        i18n: duplicate
+      - label: "Pääkategoria / Main category / Huvudkategori"
         name: "mainCategory"
         widget: "select"
+        required: false
+        i18n: true
         options:
-          - "Mediassa"
-          - "Tapahtumat"
-          - "Toiminta"
-      - { label: "Lyhennelmä", name: "excerpt", widget: "text", required: false }
-      - label: "Tarkempi tyyppi"
+          # ── Suomi ──
+          - { label: "Mediassa (fi)", value: "Mediassa" }
+          - { label: "Tapahtumat (fi)", value: "Tapahtumat" }
+          - { label: "Toiminta (fi)", value: "Toiminta" }
+          - { label: "Tutkimus (fi)", value: "Tutkimus" }
+          # ── English ──
+          - { label: "In the media (en)", value: "In the media" }
+          - { label: "Events (en)", value: "Events" }
+          - { label: "Project activities (en)", value: "Project activities" }
+          - { label: "Research (en)", value: "Research" }
+          - { label: "News from (en)", value: "News from" }
+          - { label: "Media (en)", value: "Media" }
+          - { label: "University of Helsinki (en)", value: "University of Helsinki" }
+          - { label: "Generation AI Monthly AI News – newsletter (en)", value: "Generation AI Monthly AI News (newsletter)" }
+          # ── Svenska ──
+          - { label: "I media (sv)", value: "I media" }
+          - { label: "Evenemang (sv)", value: "Evenemang" }
+          - { label: "Projektaktiviteter (sv)", value: "Projektaktiviteter" }
+          - { label: "Forskning (sv)", value: "Forskning" }
+          - { label: "Nyheter från (sv)", value: "Nyheter från" }
+          - { label: "Helsingfors universitet (sv)", value: "Helsingfors universitet" }
+          - { label: "Generation AI Monthly AI News – nyhetsbrev (sv)", value: "Generation AI Monthly AI News (nyhetsbrev)" }
+      - label: "Lyhennelmä / Excerpt / Utdrag"
+        name: "excerpt"
+        widget: "text"
+        required: false
+        i18n: true
+      - label: "Tarkempi tyyppi / Subcategories / Underkategorier"
         name: "subCategories"
         widget: "select"
         multiple: true
         required: false
+        i18n: true
         options:
-          - "Blogikirjoitus"
-          - "Haastattelu"
-          - "Koulutus"
-          - "Konferenssit ja seminaarit"
-          - "Lehdistötiedote"
-          - "Mielipidekirjoitus"
-          - "Podcast"
-          - "Tapahtuma"
-          - "Webinaari"
-          - "Työpaja"
-          - "YLE"
-      - label: "Muut kategoriat"
+          # ── Suomi ──
+          - { label: "Blogikirjoitus (fi)", value: "Blogikirjoitus" }
+          - { label: "Haastattelu (fi)", value: "Haastattelu" }
+          - { label: "Koulutus (fi)", value: "Koulutus" }
+          - { label: "Konferenssit ja seminaarit (fi)", value: "Konferenssit ja seminaarit" }
+          - { label: "Lehdistötiedote (fi)", value: "Lehdistötiedote" }
+          - { label: "Mielipidekirjoitus (fi)", value: "Mielipidekirjoitus" }
+          - { label: "Podcast (fi)", value: "Podcast" }
+          - { label: "Tapahtuma (fi)", value: "Tapahtuma" }
+          - { label: "Webinaari (fi)", value: "Webinaari" }
+          - { label: "Työpaja (fi)", value: "Työpaja" }
+          - { label: "YLE (fi)", value: "YLE" }
+          # ── English ──
+          - { label: "Blog post (en)", value: "Blog post" }
+          - { label: "GenAI staff at events (en)", value: "GenAI project staff at events" }
+          - { label: "GenAI staff in the media (en)", value: "GenAI project staff in the media" }
+          - { label: "Opinion piece (en)", value: "Opinion piece" }
+          - { label: "Webinar (en)", value: "Webinar" }
+          - { label: "Children's rights (en)", value: "Children's rights" }
+          - { label: "Conference proceedings (en)", value: "Conference proceedings" }
+          - { label: "Press release (en)", value: "Press release" }
+          - { label: "Published on (en)", value: "Published on" }
+          # ── Svenska ──
+          - { label: "Blogginlägg (sv)", value: "Blogginlägg" }
+          - { label: "Debattartikel (sv)", value: "Debattartikel" }
+          - { label: "GenAI personal i media (sv)", value: "GenAI-projektets personal i media" }
+          - { label: "GenAI personal vid evenemang (sv)", value: "GenAI-projektets personal vid evenemang" }
+          - { label: "Webbinarium (sv)", value: "Webbinarium" }
+          - { label: "Barns rättigheter (sv)", value: "Barns rättigheter" }
+          - { label: "Konferenshandlingar (sv)", value: "Konferenshandlingar" }
+          - { label: "Pressmeddelande (sv)", value: "Pressmeddelande" }
+          - { label: "Publicerad på (sv)", value: "Publicerad på" }
+      - label: "Muut kategoriat / Extra categories / Extra kategorier"
         name: "extraCategories"
         widget: "select"
         multiple: true
         required: false
+        i18n: true
         options:
           - "Esiopetus"
           - "FCAI"
@@ -94,65 +168,13 @@ collections:
           - "Sovellukset"
           - "Yliopistojen uutiset"
           - "Youtube"
-      - { label: "Avainsanat", name: "tags", widget: "list", required: false }
-      - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
-      - { label: "Kirjoittaja", name: "author", widget: "string", required: false, default: "admin" }
-      - { label: "Piilotettu", name: "hidden", widget: "hidden", required: false }
-      - { label: "Lähde-URL", name: "sourceUrl", widget: "hidden", required: false }
-      - { label: "EleventyExclude", name: "eleventyExcludeFromCollections", widget: "hidden", required: false }
-      - { label: "Sisältö", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
-
-  - name: "fi_tutkimus"
-    label: "Tutkimus"
-    label_singular: "Tutkimusjulkaisu"
-    icon: "science"
-    folder: "content/posts"
-    create: true
-    filter: { field: mainCategory, value: "Tutkimus" }
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    identifier_field: title
-    summary: "{{date}} — {{title}}"
-    preview_path: "ajankohtaista/{{slug}}"
-    sortable_fields: ["date", "title"]
-    view_groups:
-      - label: "Vuosi"
-        field: date
-        pattern: "\\d{4}"
-    fields:
-      - { label: "Otsikko", name: "title", widget: "string" }
-      - { label: "Päivämäärä", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
-      - { label: "Päivitetty", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
-      - { label: "Kieli", name: "lang", widget: "hidden", default: "fi" }
-      - { label: "Tyyppi", name: "sourceType", widget: "hidden", default: "posts" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
-      - { label: "Status", name: "status", widget: "hidden", default: "publish" }
-      - { label: "Kategoria", name: "mainCategory", widget: "hidden", default: "Tutkimus" }
-      - { label: "Lyhennelmä", name: "excerpt", widget: "text", required: false }
-      - label: "Tarkempi tyyppi"
-        name: "subCategories"
-        widget: "select"
-        multiple: true
-        required: false
-        options:
-          - "Blogikirjoitus"
-          - "Julkaisu"
-          - "Konferenssijulkaisu"
-          - "Lasten oikeudet"
-      - label: "Muut kategoriat"
-        name: "extraCategories"
-        widget: "select"
-        multiple: true
-        required: false
-        options:
-          - "Helsingin yliopisto"
-          - "Itä-Suomen yliopisto"
-      - { label: "Avainsanat", name: "tags", widget: "list", required: false }
-      - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
-      - { label: "Kirjoittaja", name: "author", widget: "string", required: false, default: "admin" }
-      - { label: "Piilotettu", name: "hidden", widget: "hidden", required: false }
-      - { label: "Lähde-URL", name: "sourceUrl", widget: "hidden", required: false }
-      - { label: "EleventyExclude", name: "eleventyExcludeFromCollections", widget: "hidden", required: false }
-      - { label: "Sisältö", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
+      - { label: "Avainsanat / Tags / Taggar", name: "tags", widget: "list", required: false, i18n: true }
+      - { label: "Kuva (URL) / Featured image / Bild (URL)", name: "featuredImage", widget: "string", required: false, i18n: duplicate }
+      - { label: "Kirjoittaja / Author / Författare", name: "author", widget: "string", required: false, default: "admin", i18n: duplicate }
+      - { label: "Piilotettu", name: "hidden", widget: "hidden", required: false, i18n: duplicate }
+      - { label: "Lähde-URL", name: "sourceUrl", widget: "hidden", required: false, i18n: duplicate }
+      - { label: "EleventyExclude", name: "eleventyExcludeFromCollections", widget: "hidden", required: false, i18n: duplicate }
+      - { label: "Sisältö / Content / Innehåll", name: "body", widget: "markdown", modes: ["rich_text", "raw"], i18n: true }
 
   - name: "pages_fi"
     label: "Sivut (suomi)"
@@ -186,94 +208,6 @@ collections:
       - { label: "Kuva (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Sisältö", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
 
-  # ── ENGLISH ────────────────────────────────────────────────────────────────
-  - name: "posts_en"
-    label: "Posts (English)"
-    label_singular: "Post (English)"
-    icon: "edit_note"
-    folder: "content/en/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    identifier_field: title
-    summary: "{{date}} — {{title}}"
-    preview_path: "en/current-affairs/{{slug}}"
-    sortable_fields: ["date", "title"]
-    view_filters:
-      - label: "News from"
-        field: mainCategory
-        pattern: "News from"
-      - label: "Research"
-        field: mainCategory
-        pattern: "Research"
-      - label: "Staff in media"
-        field: subCategories
-        pattern: "media"
-      - label: "Staff at events"
-        field: subCategories
-        pattern: "events"
-      - label: "Webinar"
-        field: subCategories
-        pattern: "Webinar"
-    view_groups:
-      - label: "Main category"
-        field: mainCategory
-      - label: "Year"
-        field: date
-        pattern: "\\d{4}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
-      - { label: "Updated", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
-      - { label: "Language", name: "lang", widget: "hidden", default: "en" }
-      - { label: "Source type", name: "sourceType", widget: "hidden", default: "posts" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
-      - { label: "Status", name: "status", widget: "hidden", default: "publish" }
-      - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
-      - label: "Main category"
-        name: "mainCategory"
-        widget: "select"
-        required: false
-        options:
-          - "News from"
-          - "Generation AI Monthly AI News (newsletter)"
-          - "Media"
-          - "Project activities"
-          - "Research"
-          - "University of Helsinki"
-      - label: "Subcategories"
-        name: "subCategories"
-        widget: "select"
-        multiple: true
-        required: false
-        options:
-          - "Blog post"
-          - "GenAI project staff at events"
-          - "GenAI project staff in the media"
-          - "Opinion piece"
-          - "Podcast"
-          - "Webinar"
-          - "YLE"
-          - "Children's rights"
-          - "Conference proceedings"
-          - "Press release"
-          - "Published on"
-      - label: "Extra categories"
-        name: "extraCategories"
-        widget: "select"
-        multiple: true
-        required: false
-        options:
-          - "News from"
-          - "Generation AI Monthly AI News (newsletter)"
-          - "Media"
-          - "Project activities"
-          - "Research"
-          - "University of Helsinki"
-      - { label: "Tags", name: "tags", widget: "list", required: false }
-      - { label: "Featured image (URL)", name: "featuredImage", widget: "string", required: false }
-      - { label: "Author", name: "author", widget: "string", required: false, default: "admin" }
-      - { label: "Content", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
-
   - name: "pages_en"
     label: "Pages (English)"
     label_singular: "Page (English)"
@@ -305,94 +239,6 @@ collections:
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Featured image (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Content", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
-
-  # ── SVENSKA ────────────────────────────────────────────────────────────────
-  - name: "posts_sv"
-    label: "Inlägg (svenska)"
-    label_singular: "Inlägg (svenska)"
-    icon: "edit_note"
-    folder: "content/sv/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    identifier_field: title
-    summary: "{{date}} — {{title}}"
-    preview_path: "sv/nyheter-fran/{{slug}}"
-    sortable_fields: ["date", "title"]
-    view_filters:
-      - label: "Nyheter från"
-        field: mainCategory
-        pattern: "Nyheter från"
-      - label: "Forskning"
-        field: mainCategory
-        pattern: "Forskning"
-      - label: "Personal i media"
-        field: subCategories
-        pattern: "personal i media"
-      - label: "Personal vid evenemang"
-        field: subCategories
-        pattern: "evenemang"
-      - label: "Webbinarium"
-        field: subCategories
-        pattern: "Webbinarium"
-    view_groups:
-      - label: "Huvudkategori"
-        field: mainCategory
-      - label: "År"
-        field: date
-        pattern: "\\d{4}"
-    fields:
-      - { label: "Titel", name: "title", widget: "string" }
-      - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss" }
-      - { label: "Uppdaterad", name: "updated", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss", required: false }
-      - { label: "Språk", name: "lang", widget: "hidden", default: "sv" }
-      - { label: "Källtyp", name: "sourceType", widget: "hidden", default: "posts" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
-      - { label: "Status", name: "status", widget: "hidden", default: "publish" }
-      - { label: "Utdrag", name: "excerpt", widget: "text", required: false }
-      - label: "Huvudkategori"
-        name: "mainCategory"
-        widget: "select"
-        required: false
-        options:
-          - "Nyheter från"
-          - "Forskning"
-          - "Generation AI Monthly AI News (nyhetsbrev)"
-          - "Helsingfors universitet"
-          - "Media"
-          - "Projektaktiviteter"
-      - label: "Underkategorier"
-        name: "subCategories"
-        widget: "select"
-        multiple: true
-        required: false
-        options:
-          - "Blogginlägg"
-          - "Debattartikel"
-          - "GenAI-projektets personal i media"
-          - "GenAI-projektets personal vid evenemang"
-          - "Podcast"
-          - "Webbinarium"
-          - "YLE"
-          - "Barns rättigheter"
-          - "Konferenshandlingar"
-          - "Pressmeddelande"
-          - "Publicerad på"
-      - label: "Extra kategorier"
-        name: "extraCategories"
-        widget: "select"
-        multiple: true
-        required: false
-        options:
-          - "Nyheter från"
-          - "Forskning"
-          - "Generation AI Monthly AI News (nyhetsbrev)"
-          - "Helsingfors universitet"
-          - "Media"
-          - "Projektaktiviteter"
-      - { label: "Taggar", name: "tags", widget: "list", required: false }
-      - { label: "Bild (URL)", name: "featuredImage", widget: "string", required: false }
-      - { label: "Författare", name: "author", widget: "string", required: false, default: "admin" }
-      - { label: "Innehåll", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
 
   # ── SIDOSRYHMÄTAPAHTUMAT ───────────────────────────────────────────────────
   - name: "stakeholder_activities"

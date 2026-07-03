@@ -1,0 +1,6 @@
+{
+  "sourceType": "posts",
+  "lang": "fi",
+  "layout": "layouts/post.njk",
+  "status": "publish"
+}

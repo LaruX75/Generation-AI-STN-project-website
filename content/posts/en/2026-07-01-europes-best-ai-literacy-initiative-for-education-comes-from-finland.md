@@ -1,5 +1,5 @@
 ---
-title: Europe’s best AI literacy initiative for education comes from Finland
+title: 'Europe’s best AI literacy initiative for education comes from Finland'
 date: 2026-07-01T16:59:00
 updated: 2026-07-01T16:59:00
 slug: europes-best-ai-literacy-initiative-for-education-comes-from-finland
@@ -8,7 +8,7 @@ lang: en
 sourceType: posts
 layout: layouts/post.njk
 status: publish
-excerpt: Generation AI, a Finnish initiative for AI literacy in education and research, has won the European Union’s 2026 Digital Skills Award for promoting AI literacy among children and young people. The award ceremony was held in Brussels on 30 June 2026.
+excerpt: 'Generation AI, a Finnish initiative for AI literacy in education and research, has won the European Union’s 2026 Digital Skills Award for promoting AI literacy among children and young people. The award ceremony was held in Brussels on 30 June 2026.'
 mainCategory: ''
 subCategories: []
 extraCategories: []
