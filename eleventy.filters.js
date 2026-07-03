@@ -1,4 +1,4 @@
-const { existsSync } = require("node:fs");
+const { existsSync, readFileSync } = require("node:fs");
 const path = require("node:path");
 
 const pad = value => String(value).padStart(2, "0");
@@ -324,5 +324,13 @@ module.exports = function registerFilters(eleventyConfig) {
   eleventyConfig.addFilter("rssDate", value => {
     const date = value instanceof Date ? value : new Date(value);
     return Number.isNaN(date.getTime()) ? new Date().toUTCString() : date.toUTCString();
+  });
+
+  eleventyConfig.addShortcode("inlineCss", (filePath) => {
+    try {
+      return readFileSync(path.join(process.cwd(), filePath), "utf8");
+    } catch {
+      return "";
+    }
   });
 };
