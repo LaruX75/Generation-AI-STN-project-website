@@ -315,7 +315,7 @@
   color: #fff;
 }
 
-.media-gridjs-container .media-gridjs-notfound td {
+.media-gridjs-container td.media-gridjs-notfound {
   padding: 2rem;
   text-align: center;
   color: #888;
@@ -465,13 +465,13 @@
     color: #666;
   }
   /* Notfound-rivi: ei korttiasettelua */
-  .media-gridjs-container .media-gridjs-notfound .gridjs-td {
+  .media-gridjs-container .gridjs-td.media-gridjs-notfound {
     flex: 0 0 100%;
     order: 0;
     text-align: center;
     padding: 2rem;
   }
-  .media-gridjs-container .media-gridjs-notfound .gridjs-td::before {
+  .media-gridjs-container .gridjs-td.media-gridjs-notfound::before {
     display: none;
   }
 }
