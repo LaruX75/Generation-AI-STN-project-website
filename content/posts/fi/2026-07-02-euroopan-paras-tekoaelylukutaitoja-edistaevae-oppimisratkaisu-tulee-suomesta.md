@@ -2,10 +2,6 @@
 title: Euroopan paras tekoälylukutaitoja edistävä oppimisratkaisu tulee Suomesta
 date: 2026-07-02T13:18:00
 updated: 2026-07-02T13:18:00
-lang: fi
-sourceType: posts
-layout: layouts/post.njk
-status: publish
 mainCategory: Mediassa
 excerpt: Suomalainen Generation AI -oppimiskokonaisuus on voittanut Euroopan unionin vuoden 2026 digitaalisten taitojen palkinnon lasten ja nuorten tekoälylukutaidon edistämisestä. Tunnustus jaettiin 30.6.2026 Brysselissä järjestetyssä palkintoseremoniassa.
 subCategories:
@@ -18,9 +14,13 @@ tags:
   - Tekoälylukutaito
 featuredImage: ''
 author: admin
+status: publish
+lang: fi
+sourceType: posts
+layout: layouts/post.njk
 ---
 
-Lehdistötiedote on Itä-Suomen yliopiston tekemä ja löytyy myös täältä: https://www.uef.fi/fi/artikkeli/euroopan-paras-tekoalylukutaitoja-edistava-oppimisratkaisu-tulee-suomesta
+**Tämä on alunperin Itä-Suomen yliopiston lehdistötiedote:** [https://www.uef.fi/fi/artikkeli/euroopan-paras-tekoalylukutaitoja-edistava-oppimisratkaisu-tulee-suomesta](https://www.uef.fi/fi/artikkeli/euroopan-paras-tekoalylukutaitoja-edistava-oppimisratkaisu-tulee-suomesta)
 
 _Digital Skills for Education_ -kategoriassa oli mukana 90 osallistujaa, ja koko kilpailussa yhteensä 220 osallistujaa.
 
