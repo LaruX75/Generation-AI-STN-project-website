@@ -137,7 +137,7 @@
             </td>
             <td class="media-table-col--link media-table-col--mobile-hide">
               {% if post.url %}
-                <a href="{{ post.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;<span aria-hidden="true">↗</span><span class="sr-only">{{ lbl.newTab }}</span></a>
+                <a href="{{ post.url }}" class="media-table-link" aria-hidden="true" tabindex="-1" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;<span aria-hidden="true">↗</span></a>
               {% else %}
                 <span class="media-table-na">—</span>
               {% endif %}
@@ -172,7 +172,7 @@
             </td>
             <td class="media-table-col--link media-table-col--mobile-hide">
               {% if item.url %}
-                <a href="{{ item.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;<span aria-hidden="true">↗</span><span class="sr-only">{{ lbl.newTab }}</span></a>
+                <a href="{{ item.url }}" class="media-table-link" aria-hidden="true" tabindex="-1" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;<span aria-hidden="true">↗</span></a>
               {% else %}
                 <span class="media-table-na">—</span>
               {% endif %}
