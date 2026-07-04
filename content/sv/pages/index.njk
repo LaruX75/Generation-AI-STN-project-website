@@ -138,18 +138,49 @@ heroBgImage: /assets/hero/heroloikkija.png
   </div>
 </section>
 
-{% set kadenceBlock = {
-  "name": "kadence/postgrid",
-  "shortName": "postgrid",
-  "attrs": {
-    "uniqueID": "306_f40128-32-sv",
-    "collection": "posts_sv",
-    "postsToShow": 6,
-    "postLayout": "carousel",
-    "title": "Aktuellt"
-  }
-} %}
-{% set _kb_home_carousel = kadenceBlock %}
-{% set kadenceInnerHtml %}{% endset %}
-{% set kadenceBlock = _kb_home_carousel %}
-{% include "blocks/kadence/postgrid.njk" %}
+{# ── EU Digital Skills Award 2026 ────────────────────────────────────────── #}
+<section class="home-award">
+  <div class="home-award-inner">
+    <div class="home-award-medal" aria-hidden="true">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 4L19.09 11.26L27 12.27L21.5 17.64L22.91 25.5L16 21.77L9.09 25.5L10.5 17.64L5 12.27L12.91 11.26L16 4Z" fill="#f7c948" stroke="#f7c948" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="home-award-content">
+      <p class="home-award-label">EU Digital Skills Award 2026</p>
+      <h2 class="home-award-title">Forskare vid Uleåborgs universitet bidrar till en AI-litteracitetslösning som belönats av EU</h2>
+      <p class="home-award-desc">Generation AI har vunnit Europeiska unionens Digital Skills Award 2026.</p>
+      <a class="home-award-btn" href="/sv/aktuellt/forskare-vid-uleaborgs-universitet-bidrar-till-en-ai-litteracitetslosning-som-belonats-av-eu/">Läs mer →</a>
+    </div>
+  </div>
+</section>
+
+{# ── Aktuellt — statiskt rutnät ──────────────────────────────────────────── #}
+<section class="home-news alignfull">
+  <div class="home-news-inner">
+    <header class="home-news-header">
+      <h2 class="home-news-title">Aktuellt</h2>
+    </header>
+    <div class="kb-post-feed-grid">
+      {% for post in collections["posts_sv"] | localizedItems(lang, page.url) | limitItems(3) %}
+        <article class="kb-post-card">
+          {% if post.data.featuredImage %}
+            <a class="kb-post-card__image-link" href="{{ post.url }}">
+              <img class="kb-post-card__image" src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}">
+            </a>
+          {% endif %}
+          <div class="kb-post-card__body">
+            {% if post.date %}
+              <time class="kb-post-card__date" datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date('d.m.Y') }}</time>
+            {% endif %}
+            <h3 class="kb-post-card__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+            {% if post.data.excerpt %}
+              <p class="kb-post-card__excerpt">{{ post.data.excerpt }}</p>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+    <p class="home-news-more"><a href="/sv/aktuellt/">Alla nyheter →</a></p>
+  </div>
+</section>

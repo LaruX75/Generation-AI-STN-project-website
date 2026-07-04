@@ -460,3 +460,85 @@
   .genai-brand-strip-inner { flex-direction: column; align-items: flex-start; }
   .genai-brand-strip-cta { align-self: stretch; text-align: center; }
 }
+
+/* ── EU Digital Skills Award highlight ───────────────────────────── */
+.home-award {
+  background: linear-gradient(135deg, #f5a623 0%, #f7c948 100%);
+  padding: 3rem 1.5rem;
+}
+.home-award-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.home-award-medal {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #2d1a00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-award-medal svg { display: block; }
+.home-award-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #7a4500;
+  margin: 0 0 0.4rem;
+}
+.home-award-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2d1a00;
+  margin: 0 0 0.55rem;
+  line-height: 1.3;
+}
+.home-award-desc {
+  font-size: 0.97rem;
+  color: #4a2d00;
+  margin: 0 0 1.1rem;
+}
+.home-award-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55em 1.3em;
+  background: #2d1a00;
+  color: #f7c948;
+  border-radius: 36px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.93rem;
+  transition: background 0.15s;
+}
+.home-award-btn:hover { background: #4a2d00; color: #f7c948; }
+@media (max-width: 640px) {
+  .home-award-inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .home-award-title { font-size: 1.15rem; }
+}
+
+/* ── Home news static grid ───────────────────────────────────────── */
+.home-news { padding: 3rem 1.5rem; background: #fff; }
+.home-news-inner {
+  max-width: var(--global-content-width, 1200px);
+  margin: 0 auto;
+}
+.home-news-header { margin-bottom: 1.5rem; }
+.home-news-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--global-palette1, #314e25);
+  margin: 0;
+}
+.home-news-more { text-align: right; margin-top: 1.5rem; }
+.home-news-more a {
+  font-weight: 600;
+  color: var(--global-palette1, #314e25);
+  text-decoration: none;
+}
+.home-news-more a:hover { text-decoration: underline; }
