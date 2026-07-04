@@ -4,24 +4,40 @@ seoTitle: Tieteelliset julkaisut — Generation AI
 seoDescription: Generation AI -hankkeen tieteelliset julkaisut — vertaisarvioidut artikkelit, kirjat ja muut julkaisut.
 date: "2023-01-29T20:19:24"
 slug: ajankohtaista-julkaisut
-permalink: /ajankohtaista/julkaisut/
+permalink: "/ajankohtaista/julkaisut/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+pagination:
+  data: scientificPublications.tableItems
+  size: 100
 status: publish
 sourceType: pages
 translationKey: current-affairs-publications
 layout: layouts/page.njk
 pageHero: true
+eleventyExcludeFromCollections: true
 ---
 
 <section class="news-intro">
   <div class="news-intro-inner">
-    <p class="news-intro-desc">Generation AI -hankkeen tieteelliset julkaisut.</p>
+    <p class="news-intro-desc">Generation AI -hankkeen tieteelliset julkaisut.{% if pagination.pages.length > 1 %} Sivu {{ pagination.pageNumber + 1 }}/{{ pagination.pages.length }}.{% endif %}</p>
   </div>
 </section>
 
+{% set pagedPublications = pagination.items %}
 <div class="kb-tabs">
   {% set activeTab = "julkaisut" %}
   {% include "partials/ajankohtaista-tabnav.njk" %}
   <div class="kt-tabs-content-wrap">
     {% include "partials/scientific-publications-table.njk" %}
+    {% if pagination.pages.length > 1 %}
+    <nav class="scipub-page-nav" aria-label="Julkaisusivutus">
+      {% if pagination.href.previous %}
+        <a class="scipub-page-btn" href="{{ pagination.href.previous }}">← Edellinen</a>
+      {% endif %}
+      <span class="scipub-page-info">Sivu {{ pagination.pageNumber + 1 }} / {{ pagination.pages.length }}</span>
+      {% if pagination.href.next %}
+        <a class="scipub-page-btn" href="{{ pagination.href.next }}">Seuraava →</a>
+      {% endif %}
+    </nav>
+    {% endif %}
   </div>
 </div>

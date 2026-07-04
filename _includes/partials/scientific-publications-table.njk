@@ -1,4 +1,4 @@
-{% set allItems = scientificPublications.tableItems or [] %}
+{% set allItems = pagedPublications if pagedPublications else (scientificPublications.tableItems or []) %}
 {% set scipubAuthorParam = "scipub-author" %}
 {% set scipubAuthorBaseUrl = page.url or "/" %}
 {% set scipubAuthorHash = scipubTabHash or "" %}
@@ -203,22 +203,11 @@
   </div>
 </div>
 
-<script id="scipub-citation-data" type="application/json">
-{
-{% for item in allItems %}
-  {{ item.id | dump | safe }}: {
-    "title": {{ item.title | dump | safe }},
-    "fileName": {{ item.citationFileName | dump | safe }},
-    "formats": {{ item.citationFormats | dump | safe }}
-  }{% if not loop.last %},{% endif %}
-{% endfor %}
-}
-</script>
-
 <script>
 (function () {
-  var citationDataEl = document.getElementById("scipub-citation-data");
-  var citationData = {};
+  var citationData = null;
+  var citationLoading = false;
+  var pendingTrigger = null;
   var modal = document.getElementById("scipub-citation-modal");
   var formatSelect = document.getElementById("scipub-citation-format");
   var previewEl = document.getElementById("scipub-citation-preview");
@@ -228,12 +217,22 @@
   var lastTrigger = null;
   var activeCitation = null;
 
-  if (citationDataEl) {
-    try {
-      citationData = JSON.parse(citationDataEl.textContent || "{}");
-    } catch (error) {
-      citationData = {};
-    }
+  function loadCitationData(callback) {
+    if (citationData !== null) { callback(citationData); return; }
+    if (citationLoading) { pendingTrigger = callback; return; }
+    citationLoading = true;
+    fetch("/scipub-citations.json")
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        citationData = d;
+        citationLoading = false;
+        callback(d);
+        if (pendingTrigger) { pendingTrigger(d); pendingTrigger = null; }
+      })
+      .catch(function () {
+        citationData = {};
+        citationLoading = false;
+      });
   }
 
   function applyAuthorFilterFromUrl() {
@@ -269,17 +268,20 @@
 
   function openCitationModal(trigger) {
     var citationId = trigger && trigger.getAttribute("data-citation-id");
-    if (!citationId || !citationData[citationId] || !modal) return;
-    activeCitation = citationData[citationId];
-    lastTrigger = trigger;
-    if (titleEl && activeCitation.title) {
-      titleEl.textContent = "{{ lbl.citeTitle }}" + ": " + activeCitation.title;
-    }
-    if (formatSelect) formatSelect.value = "bibtex";
-    updateCitationPreview();
-    modal.hidden = false;
-    document.body.classList.add("search-modal-open");
-    if (formatSelect) formatSelect.focus();
+    if (!citationId || !modal) return;
+    loadCitationData(function (data) {
+      if (!data[citationId]) return;
+      activeCitation = data[citationId];
+      lastTrigger = trigger;
+      if (titleEl && activeCitation.title) {
+        titleEl.textContent = "{{ lbl.citeTitle }}" + ": " + activeCitation.title;
+      }
+      if (formatSelect) formatSelect.value = "bibtex";
+      updateCitationPreview();
+      modal.hidden = false;
+      document.body.classList.add("search-modal-open");
+      if (formatSelect) formatSelect.focus();
+    });
   }
 
   function closeCitationModal() {
