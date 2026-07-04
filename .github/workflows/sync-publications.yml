@@ -21,10 +21,18 @@ jobs:
         with:
           node-version: "24"
 
-      - name: Synkronoi julkaisut OpenAlexista
+      - name: Cache API responses
+        uses: actions/cache@v4
+        with:
+          path: .cache/api
+          key: api-cache-researchfi-${{ github.run_id }}
+          restore-keys: api-cache-researchfi-
+
+      - name: Synkronoi julkaisut (OpenAlex + Research.fi)
         run: node scripts/sync-scientific-publications.js
         env:
           OPENALEX_MAILTO: jari.laru@gmail.com
+          RESEARCHFI_LIMIT_PER_PERSON: "0"
 
       - name: Tallenna muutokset
         run: |
@@ -33,5 +41,5 @@ jobs:
           git add src/_data/scientificPublications.data.json
           git diff --staged --quiet \
             && echo "Ei uusia julkaisuja — ei commitoida" \
-            || git commit -m "Päivitä tieteelliset julkaisut OpenAlexista [skip-tests]" \
+            || git commit -m "Päivitä tieteelliset julkaisut (OpenAlex + Research.fi) [skip-tests]" \
             && git push

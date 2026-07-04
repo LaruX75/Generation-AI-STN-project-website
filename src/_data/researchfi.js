@@ -770,11 +770,13 @@ async function fetchOrcidPublications(orcid, personConfig = {}, limit = DEFAULT_
 
 async function fetchPublicationsForPerson(personConfig) {
   const source = detectSourceFromConfig(personConfig);
-  const limit =
-    personConfig.limit ||
-    (Number.isFinite(Number(process.env.RESEARCHFI_LIMIT_PER_PERSON))
-      ? Number(process.env.RESEARCHFI_LIMIT_PER_PERSON)
-      : DEFAULT_LIMIT_PER_PERSON);
+  // Env var overrides per-person limit (0 = unlimited, used by sync script)
+  const envLimit = process.env.RESEARCHFI_LIMIT_PER_PERSON !== undefined
+    ? Number(process.env.RESEARCHFI_LIMIT_PER_PERSON)
+    : NaN;
+  const limit = Number.isFinite(envLimit)
+    ? envLimit
+    : (personConfig.limit ?? DEFAULT_LIMIT_PER_PERSON);
 
   if (source === "orcid" && personConfig.orcid) {
     return fetchOrcidPublications(personConfig.orcid, personConfig, limit);

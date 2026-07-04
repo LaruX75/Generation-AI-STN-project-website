@@ -13,6 +13,10 @@
 const fs   = require("node:fs");
 const path = require("node:path");
 
+// Unlimited fetch from Research.fi profiles (override per-person limit)
+process.env.RESEARCHFI_LIMIT_PER_PERSON = "0";
+const researchfiDataSource = require("../src/_data/researchfi.js");
+
 const DATA_PATH   = path.join(__dirname, "../src/_data/scientificPublications.data.json");
 const CONFIG_PATH = path.join(__dirname, "../src/_data/researchfi.config.json");
 
@@ -123,6 +127,42 @@ function guessCode(openAlexType) {
   return TYPE_TO_CODE[openAlexType || ""] || "";
 }
 
+/** Hakee kaikki Research.fi-profiilijulkaisut (ei rajoitusta) */
+async function fetchResearchFiPublications() {
+  console.log("\nHaetaan julkaisuja Research.fi/profiileista (ei rajaa)...");
+  try {
+    const pubs = await researchfiDataSource();
+    console.log(`Research.fi: ${pubs.length} julkaisua yhteensä`);
+    return pubs;
+  } catch (err) {
+    console.warn(`[researchfi] Virhe — ${err.message.split("\n")[0]}`);
+    return [];
+  }
+}
+
+/** Mappaa Research.fi-julkaisu yhteiseen formaattiin */
+function mapResearchFiRecord(pub, idx) {
+  const doi  = normalizeDoi(pub.doi || "");
+  const year = Number(pub.year) || null;
+  const code = String(pub.typeCode || "").trim();
+  const idSlug =
+    (code.toLowerCase().replace(/[^a-z0-9]/g, "") || "rf") +
+    "-" + (year || "nodate") +
+    "-rf" + idx;
+  return {
+    id:          idSlug,
+    code,
+    year,
+    status:      "Published",
+    authorsText: String(pub.authors || "").trim(),
+    title:       String(pub.title  || "").trim(),
+    venue:       String(pub.place  || "").trim(),
+    doi,
+    url:         doi ? "" : String(pub.link || "").trim(),
+    notes:       "",
+  };
+}
+
 async function main() {
   const existing = JSON.parse(fs.readFileSync(DATA_PATH, "utf8"));
   const config   = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
@@ -198,6 +238,30 @@ async function main() {
     existingTitles.add(title);
     nextIdx++;
   }
+
+  // ── Research.fi / profiilisivut ──────────────────────────────────────────────
+  const rfPubs = await fetchResearchFiPublications();
+  let rfNew = 0;
+
+  for (const [idx, pub] of rfPubs.entries()) {
+    const title = (pub.title || "").toLowerCase().trim();
+    const doi   = normalizeDoi(pub.doi || "");
+    const year  = Number(pub.year) || null;
+
+    if (!title) continue;
+    if (year && year < MIN_YEAR) continue;
+    if (doi   && existingDois.has(doi))     continue;
+    if (title && existingTitles.has(title)) continue;
+
+    const record = mapResearchFiRecord(pub, nextIdx);
+    newItems.push(record);
+    if (doi) existingDois.add(doi);
+    existingTitles.add(title);
+    nextIdx++;
+    rfNew++;
+  }
+
+  console.log(`Research.fi: ${rfNew} uutta julkaisua (ei ollut listalla)`);
 
   if (!newItems.length) {
     console.log("\nKaikki julkaisut ovat jo listalla — ei muutoksia.");
