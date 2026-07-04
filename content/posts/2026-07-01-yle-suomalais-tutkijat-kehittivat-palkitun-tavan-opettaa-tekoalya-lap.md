@@ -10,7 +10,8 @@ excerpt: Tutkijoiden kehittämä oppimis­ympäristö sai tällä viikolla Euroo
 mainCategory: Mediassa
 subCategories:
   - YLE
-tags: []
+tags:
+  - Tekoäly, tekoälylukutaito, palkinto
 author: admin
 layout: layouts/post.njk
 ---
