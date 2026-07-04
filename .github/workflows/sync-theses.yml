@@ -1,0 +1,35 @@
+name: Sync Theses (OuluREPO)
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"   # Joka maanantai klo 05:00 UTC = 07:00/08:00 Suomi
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Hae opinnäytteet OuluREPO:sta
+        run: node scripts/sync-theses.js
+
+      - name: Tallenna muutokset
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add src/_data/theses.data.json
+          git diff --staged --quiet \
+            && echo "Ei uusia opinnäytteitä — ei commitoida" \
+            || git commit -m "Päivitä opinnäytteet (OuluREPO) [skip-tests]" \
+            && git push
