@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-07-03T07:56:34.237Z",
+  "fetchedAt": "2026-07-04T07:38:45.781Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-04T02:20:35Z",
+      "title": "Lääkäri Elina Heikkinen sai humpuukia suoltavan kaiman Youtubeen – mikään hahmossa ei ole totta",
+      "url": "https://yle.fi/a/74-20234271",
+      "lead": "Ylen verifiointiimi löysi Youtubesta tekoäly­videoita, jotka antavat kyseenalaisia terveysneuvoja. Videot ovat keränneet 4,3 miljoonaa katselukertaa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-03T14:45:35Z",
+      "title": "Antti Pohjola teki tekoäly­videon Lionel Messistä ja Argentiinasta – reaktiot häkellyttivät: ”Täysin surrealistista”",
+      "url": "https://yle.fi/a/74-20234582",
+      "lead": "Antti Pohjola on Buenos Airesissa asuva videotuottaja. MM-kisojen alla hän sai työtarjouksen, jonka seurauksia ei olisi voinut kuvitella."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-03T14:28:58Z",
+      "title": "Teknojättien kurssit heiluvat – OP:n asiantuntija kertoo, mitä piensijoittajan on hyvä huomata",
+      "url": "https://yle.fi/a/74-20234594",
+      "lead": "Yhdysvaltojen teknologiajättien kurssit ovat painuneet rivakan nousun jälkeen. Yhtiöt tekevät silti kovaa tulosta, muistuttaa OP:n sijoitusjohtaja."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-02T16:08:52Z",
@@ -102,24 +123,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-06-24T11:53:38Z",
-      "title": "Lontoon poliisi lisää kasvojen­tunnistuksen käyttöä",
-      "url": "https://yle.fi/a/74-20233198",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-06-23T04:19:48Z",
       "title": "Guardian: HR-konsultti voitti oikeudessa AI-asianajajan avulla",
       "url": "https://yle.fi/a/74-20232827",
       "lead": "Tekoäly hoiti kaiken oikeudenkäyntiä edeltävän oikeudellisen työn. Itse oikeudenkäynnissä asiakasta edusti kuitenkin ihmisasianajaja."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-13T13:06:33Z",
-      "title": "Samalla kun Venäjä tekee jo iskuja autonomisilla aseilla, Pentagon riitelee tekoälyjättien kanssa",
-      "url": "https://yle.fi/a/74-20230565",
-      "lead": "Autonomisten aseiden kehittäminen on ollut pitkään punainen vaate teknologia­yhtiöiden työntekijöiden keskuudessa."
     },
     {
       "personName": "tekoäly",
@@ -134,13 +141,6 @@
       "title": "Opiskelija, oletko huijannut tekoälyn avulla? Kerro kokemuksistasi, teemme juttua",
       "url": "https://yle.fi/a/74-20231067",
       "lead": "Keräämme opiskelijoiden tai jo valmistuneiden kokemuksia tekoälyn käytöstä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-09T07:11:02Z",
-      "title": "Saksa perustaa tekoälyä tutkivan turvallisuusviraston",
-      "url": "https://yle.fi/a/74-20230510",
-      "lead": ""
     },
     {
       "personName": "Teemu Roos",
