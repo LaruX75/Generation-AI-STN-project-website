@@ -12,7 +12,12 @@ module.exports = {
     },
     permalink: data => {
       if (data.permalink) return data.permalink;
-      const slug = (data.page.fileSlug || "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
+      const titleSlug = String(data.title || "")
+        .toLowerCase()
+        .replace(/[''ʼ`]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+      const slug = titleSlug || (data.page.fileSlug || "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
       return slug ? `/en/current-affairs/${slug}/` : undefined;
     }
   }
