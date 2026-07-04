@@ -333,6 +333,12 @@
   .kb-carousel-btn--prev { left: 0.5rem; }
   .kb-carousel-btn--next { right: 0.5rem; }
 }
+@media (scripting: none) {
+  .kb-carousel-btn { display: none; }
+  .kb-post-feed-carousel { scrollbar-width: auto; padding-bottom: 0; }
+  .kb-post-feed-carousel::-webkit-scrollbar { display: block; height: 6px; }
+  .kb-post-feed-carousel::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+}
 
 .kb-post-card {
   display: flex;
