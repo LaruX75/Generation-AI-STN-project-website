@@ -56,7 +56,7 @@
   } %}
 {% endif %}
 
-<section class="media-table-section" id="scipub-table-section" data-grid-enhance data-grid-page-size="100">
+<section class="media-table-section" id="scipub-table-section" data-grid-enhance data-grid-page-size="25">
 
   <div class="media-table-header">
     <h2 class="media-table-heading">{{ lbl.heading }}</h2>
@@ -86,7 +86,7 @@
     <table class="media-table" id="scipub-table" data-grid-source>
       <thead>
         <tr>
-          <th scope="col" class="media-table-col--authors">{{ lbl.colAuthors }}</th>
+          <th scope="col" class="media-table-col--authors media-table-col--mobile-hide">{{ lbl.colAuthors }}</th>
           <th scope="col" class="media-table-col--date">{{ lbl.colYear }}</th>
           <th scope="col" class="media-table-col--title">{{ lbl.colTitle }}</th>
           <th scope="col" class="media-table-col--venue media-table-col--mobile-hide">{{ lbl.colVenue }}</th>
@@ -100,7 +100,7 @@
             data-year="{{ item.year | default('') }}"
             data-category="{% if item.code and item.code | truncate(1, true, '') == 'A' %}a{% elif item.code and (item.code | truncate(1, true, '') == 'B' or item.code | truncate(1, true, '') == 'E') %}be{% else %}other{% endif %}"
             data-search="{{ item.searchText | lower | default('') }} {{ item.authorsText | lower | default('') }}">
-            <td class="media-table-col--authors">
+            <td class="media-table-col--authors media-table-col--mobile-hide">
               {% if item.authors and item.authors.length %}
                 {% for author in item.authors %}<a class="scipub-author-link" href="{{ scipubAuthorBaseUrl }}?{{ scipubAuthorParam }}={{ author | urlencode }}{{ scipubAuthorHash }}">{{ author }}</a>{% if not loop.last %}; {% endif %}{% endfor %}
               {% else %}
@@ -114,6 +114,7 @@
               {% else %}
                 {{ item.title | default('—') }}
               {% endif %}
+              {% if item.authorsText %}<small class="scipub-mobile-authors">{{ item.authorsText }}</small>{% endif %}
               <div class="scipub-inline-actions">
                 <button
                   class="scipub-cite-btn"
