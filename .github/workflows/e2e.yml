@@ -1,0 +1,152 @@
+name: E2E Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: "Ajettava testi (tyhjä = kaikki)"
+        required: false
+        default: ""
+        type: choice
+        options:
+          - ""
+          - "keyboard-accessibility.spec.js"
+          - "desktop-megamenu.spec.js"
+          - "mobile-megamenu.spec.js"
+          - "header-logo.spec.js"
+          - "hero-consistency.spec.js"
+          - "button-hover-colors.spec.js"
+          - "material-buttons.spec.js"
+          - "wcag-aa.spec.js"
+
+  push:
+    branches: [main]
+    paths:
+      # Koodimuutokset jotka vaikuttavat toiminnallisuuteen
+      - "scripts/**"
+      - "_includes/**"
+      - "src/styles/**"
+      - "src/scripts/**"
+      - "eleventy.config.js"
+      - "playwright.config.js"
+      - "package*.json"
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 2   # tarvitaan HEAD~1 vertailuun
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci --include=dev
+
+      - name: Cache API responses
+        uses: actions/cache@v4
+        with:
+          path: .cache/api
+          key: api-cache-${{ github.run_id }}
+          restore-keys: api-cache-
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ hashFiles('package-lock.json') }}
+          restore-keys: playwright-chromium-
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      # Selvitetään mitkä spec-tiedostot ajetaan:
+      #   1. workflow_dispatch + spec-input → vain se yksi
+      #   2. workflow_dispatch ilman input → kaikki
+      #   3. push → katsotaan muuttuneet tiedostot ja ajetaan relevantit
+      - name: Resolve test specs
+        id: specs
+        shell: bash
+        run: |
+          # 1) Manuaalinen ajo spesifisellä tiedostolla
+          if [ -n "${{ inputs.spec }}" ]; then
+            echo "pattern=tests/e2e/${{ inputs.spec }}" >> "$GITHUB_OUTPUT"
+            echo "reason=manuaalinen: ${{ inputs.spec }}" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # 2) Manuaalinen ajo ilman valintaa → kaikki
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "pattern=" >> "$GITHUB_OUTPUT"
+            echo "reason=manuaalinen: kaikki testit" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # 3) Push → muuttuneet tiedostot
+          CHANGED=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || echo "ALL")
+          echo "Muuttuneet tiedostot:"
+          echo "$CHANGED"
+
+          # Jos git diff ei toimi (esim. squash), aja kaikki
+          if [ "$CHANGED" = "ALL" ]; then
+            echo "pattern=" >> "$GITHUB_OUTPUT"
+            echo "reason=kaikki (git diff epäonnistui)" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          SPECS=""
+
+          # accessibility.js → saavutettavuustestit
+          if echo "$CHANGED" | grep -qF "scripts/accessibility.js"; then
+            SPECS="$SPECS keyboard-accessibility.spec.js"
+          fi
+
+          # Navigaatio / header → menu- ja logotestit
+          if echo "$CHANGED" | grep -qE "scripts/nav\.js|site-header\.njk|megamenu|mobile-menu"; then
+            SPECS="$SPECS desktop-megamenu.spec.js mobile-megamenu.spec.js header-logo.spec.js"
+          fi
+
+          # CSS/tyylit → visuaaliset ja kontrastit
+          if echo "$CHANGED" | grep -qE "src/styles/|\.css$"; then
+            SPECS="$SPECS button-hover-colors.spec.js material-buttons.spec.js wcag-aa.spec.js"
+          fi
+
+          # Layout-templaalit tai hero → layout- ja herotestit
+          if echo "$CHANGED" | grep -qE "layouts/|hero|page\.njk|post\.njk|base\.njk"; then
+            SPECS="$SPECS hero-consistency.spec.js wcag-aa.spec.js keyboard-accessibility.spec.js"
+          fi
+
+          # Jos speksejä ei tunnistettu, aja kaikki
+          if [ -z "$SPECS" ]; then
+            echo "pattern=" >> "$GITHUB_OUTPUT"
+            echo "reason=kaikki (ei tarkkaa osumaa)" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Deduplikoi ja rakenna polut
+          UNIQUE=$(echo "$SPECS" | tr ' ' '\n' | sort -u | grep -v '^$')
+          PATHS=$(echo "$UNIQUE" | sed 's|^|tests/e2e/|' | tr '\n' ' ' | xargs)
+          NAMES=$(echo "$UNIQUE" | tr '\n' ' ' | xargs)
+
+          echo "pattern=$PATHS" >> "$GITHUB_OUTPUT"
+          echo "reason=valikoitu: $NAMES" >> "$GITHUB_OUTPUT"
+
+      - name: "E2E-testit (${{ steps.specs.outputs.reason }})"
+        run: |
+          PAT="${{ steps.specs.outputs.pattern }}"
+          if [ -z "$PAT" ]; then
+            echo "Ajetaan kaikki testit"
+            npm run test:e2e
+          else
+            echo "Ajetaan: $PAT"
+            npx playwright test $PAT
+          fi
+        env:
+          CI: "true"
