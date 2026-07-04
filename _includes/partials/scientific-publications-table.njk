@@ -94,8 +94,14 @@
           <th scope="col" class="media-table-col--source media-table-col--mobile-hide">{{ lbl.colCode }}</th>
         </tr>
       </thead>
-      <tbody id="scipub-table-body">
-        {% for item in allItems %}
+      {#
+        Makro välttää rivirakenteen toistoa: 2024+ rivit renderöidään suoraan
+        <tbody>:hin, vanhemmat <template data-grid-defer>:iin. JS siirtää
+        template-sisällön <tbody>:hin ennen GridJS:n alustusta, joten GridJS
+        näkee kaikki rivit — mutta selain ei renderöi template-sisältöä
+        ennen JS:ää, mikä keventää alkuperäistä DOM-painoa merkittävästi.
+      #}
+      {% macro pubRow(item) %}
           <tr class="media-table-row"
             data-year="{{ item.year | default('') }}"
             data-category="{% if item.code and item.code | truncate(1, true, '') == 'A' %}a{% elif item.code and (item.code | truncate(1, true, '') == 'B' or item.code | truncate(1, true, '') == 'E') %}be{% else %}other{% endif %}"
@@ -135,9 +141,19 @@
               <span class="scipub-badge">{{ item.code | default('—') }}</span>
             </td>
           </tr>
+      {% endmacro %}
+      <tbody id="scipub-table-body">
+        {% for item in allItems %}
+          {% if item.year and item.year >= 2024 %}{{ pubRow(item) }}{% endif %}
         {% endfor %}
       </tbody>
     </table>
+    {# Vanhemmat rivit (< 2024) siirretään JS:ssä tbody:hin ennen GridJS-alustusta #}
+    <template data-grid-defer="scipub-table-body">
+      {% for item in allItems %}
+        {% if not (item.year and item.year >= 2024) %}{{ pubRow(item) }}{% endif %}
+      {% endfor %}
+    </template>
     <p class="media-table-empty" id="scipub-empty" hidden>{{ lbl.empty }}</p>
   </div>
 

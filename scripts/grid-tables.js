@@ -218,6 +218,17 @@
 
     if (!sourceTable || !sourceTable.tHead || !sourceTable.tBodies.length) return null;
 
+    // Expand any deferred <template data-grid-defer="tbodyId"> into the target tbody
+    var deferTemplate = section.querySelector("template[data-grid-defer]");
+    if (deferTemplate) {
+      var tbodyId = deferTemplate.getAttribute("data-grid-defer");
+      var targetBody = tbodyId
+        ? document.getElementById(tbodyId)
+        : sourceTable.tBodies[0];
+      if (targetBody) targetBody.appendChild(deferTemplate.content);
+      deferTemplate.remove();
+    }
+
     headerCells = Array.from(sourceTable.tHead.querySelectorAll("th"));
     bodyRows = Array.from(sourceTable.tBodies[0].querySelectorAll("tr"));
     wrap = sourceTable.closest(".media-table-wrap");
