@@ -2,7 +2,7 @@
 title: Oulun yliopiston tutkijoita mukana palkitussa tekoälylukutaidon oppimisratkaisussa
 date: 2026-07-04T11:47:00
 updated: ''
-mainCategory: ''
+mainCategory: Mediassa
 excerpt: Suomalainen Generation AI -oppimiskokonaisuus on voittanut Euroopan unionin vuoden 2026 digitaalisten taitojen palkinnon lasten ja nuorten tekoälylukutaidon edistämisestä. Hankkeessa on mukana tutkijoita Oulun yliopistosta.
 subCategories:
   - Lehdistötiedote
