@@ -2,7 +2,7 @@ const { mkdir, readFile, stat, writeFile } = require("node:fs/promises");
 const { createHash } = require("node:crypto");
 const path = require("node:path");
 
-const DEFAULT_CACHE_DIR = path.join(process.cwd(), ".cache", "researchfi");
+const DEFAULT_CACHE_DIR = path.join(process.cwd(), ".cache", "api");
 const DEFAULT_TTL_SECONDS = 60 * 60 * 24;
 
 function parseBoolean(value) {
@@ -10,13 +10,13 @@ function parseBoolean(value) {
 }
 
 function getCacheDir() {
-  return process.env.RESEARCHFI_CACHE_DIR || DEFAULT_CACHE_DIR;
+  return process.env.API_CACHE_DIR || DEFAULT_CACHE_DIR;
 }
 
 function getTtlSeconds(ttlSeconds) {
   if (Number.isFinite(ttlSeconds)) return ttlSeconds;
 
-  const fromEnv = Number(process.env.RESEARCHFI_CACHE_TTL_SECONDS);
+  const fromEnv = Number(process.env.API_CACHE_TTL_SECONDS);
   return Number.isFinite(fromEnv) && fromEnv >= 0 ? fromEnv : DEFAULT_TTL_SECONDS;
 }
 
