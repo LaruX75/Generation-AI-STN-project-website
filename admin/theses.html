@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opinnäytteet — Generation AI admin</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; height: 100%; background: #f1f5f9; font-family: system-ui, sans-serif; font-size: 13px; }
+    body { padding-top: 40px; }
+
+    /* ── Navbar ──────────────────────────────────────────────── */
+    #admin-navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 99999;
+      background: #1a1a2e; height: 40px;
+      display: flex; align-items: center; padding: 0 16px; gap: 0;
+      font-size: 13px; box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
+    #admin-navbar .nav-brand { color: #e2e8f0; font-weight: 600; margin-right: 20px; white-space: nowrap; }
+    #admin-navbar a { color: #94a3b8; text-decoration: none; padding: 0 14px; height: 40px; display: flex; align-items: center; }
+    #admin-navbar a:hover { color: #e2e8f0; background: rgba(255,255,255,0.07); }
+    #admin-navbar a.active { color: #fff; border-bottom: 2px solid #60a5fa; }
+    #admin-navbar .nav-spacer { flex: 1; }
+    #admin-navbar .nav-logout {
+      background: none; border: 1px solid #475569; color: #94a3b8;
+      padding: 4px 12px; border-radius: 5px; cursor: pointer;
+      font-size: 12px; font-family: inherit;
+    }
+    #admin-navbar .nav-logout:hover { border-color: #94a3b8; color: #e2e8f0; }
+
+    /* ── Layout ──────────────────────────────────────────────── */
+    #wrap { max-width: 1400px; margin: 0 auto; padding: 20px 16px; }
+
+    /* ── Auth card ───────────────────────────────────────────── */
+    #auth-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 24px; max-width: 480px; margin: 40px auto; }
+    #auth-card h2 { font-size: 14px; font-weight: 600; margin: 0 0 8px; }
+    #auth-card p { color: #666; margin: 0 0 8px; }
+    #auth-card a { color: #2563eb; }
+    #token-row { display: flex; gap: 8px; margin-top: 8px; }
+    #token-input { flex: 1; padding: 6px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px; }
+    #token-btn { padding: 6px 14px; background: #2563eb; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 13px; }
+
+    /* ── Toolbar ─────────────────────────────────────────────── */
+    #toolbar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+    #toolbar h1 { font-size: 16px; font-weight: 700; color: #1e293b; margin: 0; }
+    .count-badge { background: #dbeafe; color: #1d4ed8; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+    .toolbar-spacer { flex: 1; }
+    .btn { padding: 6px 14px; border-radius: 6px; border: none; cursor: pointer; font-size: 12px; font-weight: 500; }
+    .btn-primary { background: #2563eb; color: #fff; }
+    .btn-primary:hover { background: #1d4ed8; }
+    .btn-secondary { background: #e2e8f0; color: #334155; }
+    .btn-secondary:hover { background: #cbd5e1; }
+    #search-input { padding: 6px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px; width: 220px; }
+    #year-filter, #type-filter { padding: 6px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px; }
+
+    /* ── Notice ──────────────────────────────────────────────── */
+    #notice { display: none; padding: 8px 14px; border-radius: 6px; font-size: 12px; margin-bottom: 10px; }
+    #notice.ok   { background: #dcfce7; color: #15803d; display: block; }
+    #notice.err  { background: #fee2e2; color: #b91c1c; display: block; }
+    #notice.info { background: #dbeafe; color: #1d4ed8; display: block; }
+
+    /* ── Table ───────────────────────────────────────────────── */
+    #table-wrap { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    thead th { background: #f8fafc; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: #64748b; padding: 8px 10px; text-align: left; border-bottom: 1px solid #e2e8f0; white-space: nowrap; }
+    tbody tr { border-bottom: 1px solid #f1f5f9; }
+    tbody tr:hover { background: #f8fafc; }
+    td { padding: 7px 10px; vertical-align: top; }
+    .td-year     { width: 54px; font-weight: 600; color: #475569; white-space: nowrap; }
+    .td-type     { width: 110px; }
+    .td-author   { width: 150px; color: #475569; font-size: 12px; }
+    .td-title    { min-width: 240px; }
+    .td-supervisors { width: 150px; color: #64748b; font-size: 12px; }
+    .td-uni      { width: 130px; color: #64748b; font-size: 12px; }
+    .td-link     { width: 70px; }
+    .td-actions  { width: 90px; white-space: nowrap; }
+
+    .title-text { font-weight: 500; color: #1e293b; line-height: 1.35; }
+    .type-badge {
+      display: inline-block; padding: 2px 7px; border-radius: 10px; font-size: 11px; font-weight: 500;
+      background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0;
+    }
+    .type-badge.vaitoskirja { background: #fef3c7; color: #92400e; border-color: #fde68a; }
+    .type-badge.lisensiaatti { background: #ede9fe; color: #6d28d9; border-color: #ddd6fe; }
+    .type-badge.amk { background: #f0f9ff; color: #0369a1; border-color: #bae6fd; }
+    .ext-link { font-size: 11px; color: #2563eb; text-decoration: none; }
+    .ext-link:hover { text-decoration: underline; }
+    .action-btn {
+      background: none; border: none; cursor: pointer; padding: 3px 6px;
+      color: #64748b; border-radius: 4px; font-size: 12px; line-height: 1;
+    }
+    .action-btn:hover { background: #e2e8f0; }
+    .action-delete:hover { background: #fee2e2; color: #dc2626; }
+    #empty-row td { text-align: center; color: #94a3b8; padding: 32px; }
+    .unsaved-dot { display: inline-block; width: 7px; height: 7px; background: #f59e0b; border-radius: 50%; margin-left: 5px; }
+
+    /* ── Save bar ────────────────────────────────────────────── */
+    #save-bar {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0;
+      background: #1e293b; color: #fff; padding: 10px 20px;
+      align-items: center; gap: 14px; z-index: 9000; font-size: 13px;
+    }
+    #save-bar.visible { display: flex; }
+    #save-bar .save-msg { flex: 1; }
+    #save-btn { padding: 7px 20px; background: #2563eb; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; }
+    #save-btn:disabled { opacity: .6; cursor: default; }
+    #discard-btn { padding: 7px 14px; background: #475569; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+
+    /* ── Modal ───────────────────────────────────────────────── */
+    #modal-overlay {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45);
+      z-index: 10000; align-items: flex-start; justify-content: center; padding: 40px 16px;
+    }
+    #modal-overlay.open { display: flex; }
+    #modal-box {
+      background: #fff; border-radius: 10px; width: min(660px, 100%);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25); overflow: hidden;
+      max-height: calc(100vh - 80px); display: flex; flex-direction: column;
+    }
+    #modal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px 12px; border-bottom: 1px solid #e2e8f0;
+    }
+    #modal-title { font-size: 15px; font-weight: 700; color: #1e293b; margin: 0; }
+    #modal-close {
+      background: none; border: none; cursor: pointer; color: #64748b;
+      font-size: 20px; line-height: 1; padding: 2px 6px; border-radius: 4px;
+    }
+    #modal-close:hover { background: #f1f5f9; }
+    #modal-body { padding: 20px; overflow-y: auto; flex: 1; }
+    #modal-footer {
+      padding: 12px 20px; border-top: 1px solid #e2e8f0;
+      display: flex; justify-content: flex-end; gap: 8px;
+    }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+    .form-grid .full { grid-column: 1 / -1; }
+    .form-group { display: flex; flex-direction: column; gap: 4px; }
+    .form-group label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: #64748b; }
+    .form-group input, .form-group select, .form-group textarea {
+      padding: 7px 10px; border: 1px solid #cbd5e1; border-radius: 6px;
+      font-size: 13px; font-family: inherit; background: #fff;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: #2563eb; box-shadow: 0 0 0 2px rgba(37,99,235,0.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-hint { font-size: 11px; color: #94a3b8; margin-top: 2px; }
+  </style>
+</head>
+<body>
+
+<nav id="admin-navbar">
+  <span class="nav-brand">Generation AI</span>
+  <a href="/admin/">Sveltia CMS</a>
+  <a href="/admin/categories.html">Kategoriatyökalu</a>
+  <a href="/admin/views.html">Ajankohtaista</a>
+  <a href="/admin/publications.html">Julkaisut</a>
+  <a href="/admin/theses.html" class="active">Opinnäytteet</a>
+  <span class="nav-spacer"></span>
+  <button class="nav-logout" onclick="adminLogout()">Kirjaudu ulos</button>
+</nav>
+
+<div id="wrap">
+
+  <div id="auth-card">
+    <h2>Opinnäytteiden hallinta</h2>
+    <p>Työkalu käyttää automaattisesti Sveltian GitHub-kirjautumista. Kirjaudu ensin <a href="/admin/">Sveltiaan</a> ja palaa sitten tänne.</p>
+    <p>Tai syötä <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">GitHub Personal Access Token</a> (scope: <code>repo</code>):</p>
+    <div id="token-row">
+      <input type="password" id="token-input" placeholder="ghp_..." autocomplete="off">
+      <button id="token-btn" onclick="loginWithToken()">Kirjaudu</button>
+    </div>
+  </div>
+
+  <div id="main" style="display:none">
+    <div id="toolbar">
+      <h1>Opinnäytteet</h1>
+      <span class="count-badge" id="count-badge">—</span>
+      <div class="toolbar-spacer"></div>
+      <input type="search" id="search-input" placeholder="Hae otsikolla, tekijällä…" oninput="renderTable()">
+      <select id="year-filter" onchange="renderTable()">
+        <option value="">Kaikki vuodet</option>
+      </select>
+      <select id="type-filter" onchange="renderTable()">
+        <option value="">Kaikki tyypit</option>
+        <option value="pro gradu">Pro gradu</option>
+        <option value="kandidaatintyö">Kandidaatintyö</option>
+        <option value="väitöskirja">Väitöskirja</option>
+        <option value="lisensiaatintyö">Lisensiaatintyö</option>
+        <option value="amk-yamk">AMK / YAMK</option>
+        <option value="muu">Muu</option>
+      </select>
+      <button class="btn btn-primary" onclick="openAddModal()">+ Lisää opinnäyte</button>
+    </div>
+
+    <div id="notice"></div>
+
+    <div id="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="td-year">Vuosi</th>
+            <th class="td-type">Tyyppi</th>
+            <th class="td-author">Tekijä</th>
+            <th class="td-title">
+              Otsikko
+              <span id="unsaved-indicator" class="unsaved-dot" style="display:none"></span>
+            </th>
+            <th class="td-supervisors">Ohjaajat</th>
+            <th class="td-uni">Yliopisto</th>
+            <th class="td-link">Linkki</th>
+            <th class="td-actions">Toiminnot</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<div id="save-bar">
+  <span class="save-msg" id="save-msg">Tallentamattomia muutoksia</span>
+  <button id="discard-btn" onclick="discardChanges()">Hylkää</button>
+  <button id="save-btn" onclick="saveChanges()">Tallenna GitHubiin</button>
+</div>
+
+<!-- ── Add / Edit modal ───────────────────────────────────────────────── -->
+<div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div id="modal-box">
+    <div id="modal-header">
+      <h2 id="modal-title">Lisää opinnäyte</h2>
+      <button id="modal-close" onclick="closeModal()" aria-label="Sulje">✕</button>
+    </div>
+    <div id="modal-body">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="f-year">Vuosi *</label>
+          <input type="number" id="f-year" min="1990" max="2099" placeholder="2024">
+        </div>
+        <div class="form-group">
+          <label for="f-type">Tyyppi *</label>
+          <select id="f-type">
+            <option value="pro gradu">Pro gradu</option>
+            <option value="kandidaatintyö">Kandidaatintyö</option>
+            <option value="väitöskirja">Väitöskirja</option>
+            <option value="lisensiaatintyö">Lisensiaatintyö</option>
+            <option value="amk-yamk">AMK / YAMK</option>
+            <option value="muu">Muu</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label for="f-title">Otsikko *</label>
+          <input type="text" id="f-title" placeholder="Opinnäytteen otsikko">
+        </div>
+        <div class="form-group">
+          <label for="f-author">Tekijä *</label>
+          <input type="text" id="f-author" placeholder="Sukunimi, Etunimi">
+        </div>
+        <div class="form-group">
+          <label for="f-language">Kieli</label>
+          <select id="f-language">
+            <option value="fi">Suomi</option>
+            <option value="en">Englanti</option>
+            <option value="sv">Ruotsi</option>
+            <option value="muu">Muu</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="f-supervisors">Ohjaajat</label>
+          <input type="text" id="f-supervisors" placeholder="Laru, J.; Vartiainen, H.">
+          <span class="form-hint">Erota puolipisteellä</span>
+        </div>
+        <div class="form-group">
+          <label for="f-university">Yliopisto / korkeakoulu</label>
+          <input type="text" id="f-university" list="uni-list" placeholder="Oulun yliopisto">
+          <datalist id="uni-list">
+            <option value="Oulun yliopisto">
+            <option value="Helsingin yliopisto">
+            <option value="Itä-Suomen yliopisto">
+            <option value="Jyväskylän yliopisto">
+            <option value="Tampereen yliopisto">
+            <option value="Aalto-yliopisto">
+            <option value="Turun yliopisto">
+            <option value="Lapin yliopisto">
+            <option value="Vaasan yliopisto">
+            <option value="Oulun ammattikorkeakoulu">
+          </datalist>
+        </div>
+        <div class="form-group">
+          <label for="f-url">Linkki (URL)</label>
+          <input type="url" id="f-url" placeholder="https://oulurepo.oulu.fi/…">
+        </div>
+        <div class="form-group full">
+          <label for="f-keywords">Avainsanat</label>
+          <input type="text" id="f-keywords" placeholder="tekoäly; oppiminen; K-12">
+          <span class="form-hint">Erota puolipisteellä</span>
+        </div>
+        <div class="form-group full">
+          <label for="f-abstract">Tiivistelmä</label>
+          <textarea id="f-abstract" placeholder="Opinnäytteen tiivistelmä (valinnainen)"></textarea>
+        </div>
+        <div class="form-group full">
+          <label for="f-notes">Huomiot</label>
+          <input type="text" id="f-notes" placeholder="Vapaamuotoiset lisätiedot">
+        </div>
+      </div>
+    </div>
+    <div id="modal-footer">
+      <button class="btn btn-secondary" onclick="closeModal()">Peruuta</button>
+      <button class="btn btn-primary" onclick="saveModal()">Tallenna</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const REPO      = "LaruX75/Generation-AI-STN-project-website";
+const BRANCH    = "main";
+const DATA_PATH = "src/_data/theses.data.json";
+
+let token    = "";
+let theses   = [];
+let fileSha  = "";
+let dirty    = false;
+let editId   = null;   // null = add mode, string = edit mode
+
+/* ── Auth ─────────────────────────────────────────────────────────── */
+function getSveltiaToken() {
+  try { return JSON.parse(localStorage.getItem("sveltia-cms.user") || "{}").token || ""; } catch { return ""; }
+}
+function adminLogout() {
+  Object.keys(localStorage).filter(k => k.startsWith("sveltia-cms")).forEach(k => localStorage.removeItem(k));
+  localStorage.removeItem("genai-thesis-token");
+  location.href = "/admin/";
+}
+function loginWithToken() {
+  const t = document.getElementById("token-input").value.trim();
+  if (!t) { showNotice("Anna token.", "err"); return; }
+  token = t;
+  localStorage.setItem("genai-thesis-token", token);
+  init();
+}
+function tryAutoLogin() {
+  const t = getSveltiaToken() || localStorage.getItem("genai-thesis-token") || "";
+  if (t) { token = t; init(); }
+}
+
+/* ── GitHub API ──────────────────────────────────────────────────── */
+function b64decode(str) { return decodeURIComponent(escape(atob(str.replace(/\s/g, "")))); }
+function b64encode(str) { return btoa(unescape(encodeURIComponent(str))); }
+
+async function ghGet(path) {
+  const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
+    headers: { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json" }
+  });
+  if (!res.ok) throw new Error(`GitHub ${res.status}: ${path}`);
+  return res.json();
+}
+async function ghPut(path, sha, content, message) {
+  const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
+    method: "PUT",
+    headers: { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" },
+    body: JSON.stringify({ message, content: b64encode(content), sha, branch: BRANCH })
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `GitHub PUT ${res.status}`);
+  }
+  return res.json();
+}
+
+/* ── Load & init ─────────────────────────────────────────────────── */
+async function init() {
+  document.getElementById("auth-card").style.display = "none";
+  document.getElementById("main").style.display = "";
+  showNotice("Ladataan opinnäytetietoja…", "info");
+  try {
+    const file = await ghGet(DATA_PATH);
+    fileSha = file.sha;
+    theses  = JSON.parse(b64decode(file.content));
+    populateYearFilter();
+    renderTable();
+    showNotice("", "");
+  } catch (err) {
+    document.getElementById("auth-card").style.display = "";
+    document.getElementById("main").style.display = "none";
+    showNotice("Lataus epäonnistui: " + err.message, "err");
+  }
+}
+
+/* ── Year filter ─────────────────────────────────────────────────── */
+function populateYearFilter() {
+  const years = [...new Set(theses.map(t => t.year).filter(Boolean))].sort((a, b) => b - a);
+  const sel = document.getElementById("year-filter");
+  sel.querySelectorAll("option:not(:first-child)").forEach(o => o.remove());
+  years.forEach(y => {
+    const opt = document.createElement("option");
+    opt.value = y; opt.textContent = y;
+    sel.appendChild(opt);
+  });
+}
+
+/* ── Helpers ─────────────────────────────────────────────────────── */
+function esc(str) {
+  return String(str || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+function truncate(str, n) { return str.length > n ? str.slice(0, n) + "…" : str; }
+function typeBadgeClass(type) {
+  if (type === "väitöskirja")      return "type-badge vaitoskirja";
+  if (type === "lisensiaatintyö")  return "type-badge lisensiaatti";
+  if (type === "amk-yamk")         return "type-badge amk";
+  return "type-badge";
+}
+function typeLabel(type) {
+  const map = {
+    "pro gradu":      "Pro gradu",
+    "kandidaatintyö": "Kandintyö",
+    "väitöskirja":    "Väitöskirja",
+    "lisensiaatintyö":"Lisensiaatti",
+    "amk-yamk":       "AMK / YAMK",
+    "muu":            "Muu",
+  };
+  return map[type] || type || "—";
+}
+function genId() {
+  return "thesis-" + Date.now() + "-" + Math.random().toString(36).slice(2, 6);
+}
+function showNotice(msg, type) {
+  const el = document.getElementById("notice");
+  if (!msg) { el.style.display = "none"; el.className = ""; return; }
+  el.textContent = msg;
+  el.className = type;
+}
+
+/* ── Render ──────────────────────────────────────────────────────── */
+function renderTable() {
+  const q    = document.getElementById("search-input").value.toLowerCase().trim();
+  const year = document.getElementById("year-filter").value;
+  const type = document.getElementById("type-filter").value;
+  const tbody = document.getElementById("table-body");
+
+  let filtered = theses.filter(t => {
+    if (year && String(t.year) !== year) return false;
+    if (type && t.type !== type) return false;
+    if (q) {
+      const hay = [t.title, t.author, t.supervisors, t.university, t.keywords].join(" ").toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  filtered.sort((a, b) => (b.year || 0) - (a.year || 0));
+
+  document.getElementById("count-badge").textContent =
+    filtered.length === theses.length
+      ? `${theses.length} opinnäytettä`
+      : `${filtered.length} / ${theses.length}`;
+
+  if (!filtered.length) {
+    tbody.innerHTML = `<tr id="empty-row"><td colspan="8">Ei opinnäytteitä. Lisää ensimmäinen painamalla "+ Lisää opinnäyte".</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = filtered.map(t => {
+    const linkHtml = t.url
+      ? `<a class="ext-link" href="${esc(t.url)}" target="_blank" rel="noopener">Avaa ↗</a>`
+      : "–";
+    return `<tr data-id="${esc(t.id)}">
+      <td class="td-year">${t.year || "–"}</td>
+      <td class="td-type"><span class="${typeBadgeClass(t.type)}">${esc(typeLabel(t.type))}</span></td>
+      <td class="td-author">${esc(truncate(t.author || "", 40))}</td>
+      <td class="td-title"><span class="title-text">${esc(t.title || "")}</span></td>
+      <td class="td-supervisors">${esc(truncate(t.supervisors || "", 50))}</td>
+      <td class="td-uni">${esc(truncate(t.university || "", 30))}</td>
+      <td class="td-link">${linkHtml}</td>
+      <td class="td-actions">
+        <button class="action-btn" onclick="openEditModal('${esc(t.id)}')" title="Muokkaa">✏️</button>
+        <button class="action-btn action-delete" onclick="deleteRow('${esc(t.id)}')" title="Poista">🗑</button>
+      </td>
+    </tr>`;
+  }).join("");
+}
+
+/* ── Delete ──────────────────────────────────────────────────────── */
+function deleteRow(id) {
+  const t = theses.find(x => x.id === id);
+  if (!t) return;
+  if (!confirm(`Poistetaanko opinnäyte?\n\n"${t.title}"\n${t.author || ""}, ${t.year || ""}`)) return;
+  theses = theses.filter(x => x.id !== id);
+  renderTable();
+  populateYearFilter();
+  markDirty();
+}
+
+/* ── Dirty state ─────────────────────────────────────────────────── */
+function markDirty() {
+  dirty = true;
+  document.getElementById("save-bar").classList.add("visible");
+  document.getElementById("unsaved-indicator").style.display = "";
+}
+function discardChanges() {
+  if (!confirm("Hylätäänkö kaikki tallentamattomat muutokset?")) return;
+  dirty = false;
+  document.getElementById("save-bar").classList.remove("visible");
+  document.getElementById("unsaved-indicator").style.display = "none";
+  init();
+}
+
+/* ── Save to GitHub ──────────────────────────────────────────────── */
+async function saveChanges() {
+  const btn = document.getElementById("save-btn");
+  btn.disabled = true;
+  btn.textContent = "Tallennetaan…";
+  showNotice("Tallennetaan GitHubiin…", "info");
+  try {
+    const content = JSON.stringify(theses, null, 2) + "\n";
+    const result  = await ghPut(DATA_PATH, fileSha, content, "Päivitä opinnäytteet (admin)");
+    fileSha = result.content.sha;
+    dirty = false;
+    document.getElementById("save-bar").classList.remove("visible");
+    document.getElementById("unsaved-indicator").style.display = "none";
+    showNotice(`Tallennettu — ${theses.length} opinnäytettä.`, "ok");
+  } catch (err) {
+    showNotice("Tallennus epäonnistui: " + err.message, "err");
+  }
+  btn.disabled = false;
+  btn.textContent = "Tallenna GitHubiin";
+}
+
+/* ── Modal: open add ─────────────────────────────────────────────── */
+function openAddModal() {
+  editId = null;
+  document.getElementById("modal-title").textContent = "Lisää opinnäyte";
+  clearForm();
+  document.getElementById("modal-overlay").classList.add("open");
+  document.getElementById("f-year").focus();
+}
+
+/* ── Modal: open edit ────────────────────────────────────────────── */
+function openEditModal(id) {
+  const t = theses.find(x => x.id === id);
+  if (!t) return;
+  editId = id;
+  document.getElementById("modal-title").textContent = "Muokkaa opinnäytettä";
+  document.getElementById("f-year").value        = t.year       || "";
+  document.getElementById("f-type").value        = t.type       || "pro gradu";
+  document.getElementById("f-title").value       = t.title      || "";
+  document.getElementById("f-author").value      = t.author     || "";
+  document.getElementById("f-language").value    = t.language   || "fi";
+  document.getElementById("f-supervisors").value = t.supervisors|| "";
+  document.getElementById("f-university").value  = t.university || "";
+  document.getElementById("f-url").value         = t.url        || "";
+  document.getElementById("f-keywords").value    = t.keywords   || "";
+  document.getElementById("f-abstract").value    = t.abstract   || "";
+  document.getElementById("f-notes").value       = t.notes      || "";
+  document.getElementById("modal-overlay").classList.add("open");
+  document.getElementById("f-title").focus();
+}
+
+function clearForm() {
+  ["f-year","f-title","f-author","f-supervisors","f-university","f-url","f-keywords","f-abstract","f-notes"]
+    .forEach(id => { document.getElementById(id).value = ""; });
+  document.getElementById("f-type").value     = "pro gradu";
+  document.getElementById("f-language").value = "fi";
+}
+
+function closeModal() {
+  document.getElementById("modal-overlay").classList.remove("open");
+  editId = null;
+}
+
+/* ── Modal: save ─────────────────────────────────────────────────── */
+function saveModal() {
+  const year  = parseInt(document.getElementById("f-year").value, 10) || null;
+  const type  = document.getElementById("f-type").value.trim();
+  const title = document.getElementById("f-title").value.trim();
+  const author= document.getElementById("f-author").value.trim();
+
+  if (!title) { alert("Otsikko on pakollinen."); return; }
+  if (!author){ alert("Tekijä on pakollinen."); return; }
+
+  const record = {
+    id:          editId || genId(),
+    type,
+    year,
+    title,
+    author,
+    language:    document.getElementById("f-language").value.trim() || "fi",
+    supervisors: document.getElementById("f-supervisors").value.trim(),
+    university:  document.getElementById("f-university").value.trim(),
+    url:         document.getElementById("f-url").value.trim(),
+    keywords:    document.getElementById("f-keywords").value.trim(),
+    abstract:    document.getElementById("f-abstract").value.trim(),
+    notes:       document.getElementById("f-notes").value.trim(),
+  };
+
+  if (editId) {
+    const idx = theses.findIndex(x => x.id === editId);
+    if (idx !== -1) theses[idx] = record;
+  } else {
+    theses.push(record);
+  }
+
+  closeModal();
+  populateYearFilter();
+  renderTable();
+  markDirty();
+}
+
+/* ── Keyboard: close modal on Escape ────────────────────────────── */
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && document.getElementById("modal-overlay").classList.contains("open")) {
+    closeModal();
+  }
+});
+document.getElementById("modal-overlay").addEventListener("click", e => {
+  if (e.target === document.getElementById("modal-overlay")) closeModal();
+});
+
+/* ── Boot ────────────────────────────────────────────────────────── */
+tryAutoLogin();
+</script>
+</body>
+</html>
