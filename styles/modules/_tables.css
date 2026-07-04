@@ -393,7 +393,7 @@
     line-height: 1.4;
   }
 
-  /* ── Card layout for GridJS tables ── */
+  /* ── Card layout: otsikko ensin, meta-rivi alla ── */
   .media-table-wrap {
     border: none;
     background: transparent;
@@ -408,45 +408,68 @@
   .media-gridjs-container .gridjs-thead {
     display: none;
   }
+  /* Kortti-kontti: flex-wrap järjestää otsikon ensin, meta-rivin alle */
   .media-gridjs-container .gridjs-tr {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     border: 1px solid #e0e5ea;
     border-radius: 8px;
     margin-bottom: 0.6rem;
     background: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
   }
   .media-gridjs-container .gridjs-tr:hover .gridjs-td {
     background: transparent;
   }
+  /* Kaikki solut: ei label-etuliitettä */
   .media-gridjs-container .gridjs-td {
-    display: flex;
-    gap: 0.6rem;
-    align-items: flex-start;
-    padding: 0.45rem 0.75rem;
-    border-bottom: 1px solid #f0f2f5;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border: none;
     font-size: 0.875rem;
-    width: 100% !important;
-  }
-  .media-gridjs-container .gridjs-td:last-child {
-    border-bottom: none;
   }
   .media-gridjs-container .gridjs-td::before {
-    content: attr(data-label);
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    min-width: 5.5rem;
-    max-width: 5.5rem;
-    flex-shrink: 0;
-    padding-top: 0.1rem;
+    display: none;
   }
-  /* Notfound row: reset card layout */
+  /* Otsikko: täyslevyinen, ensimmäisenä, pääsisältö */
+  .media-gridjs-container .gridjs-td.media-table-col--title {
+    order: 1;
+    flex: 0 0 100%;
+    padding: 0.65rem 0.75rem 0.5rem;
+    font-size: 0.92rem;
+    border-bottom: 1px solid #f0f2f5;
+  }
+  /* Lähde/tyyppi-badge: meta-rivin vasen puoli */
+  .media-gridjs-container .gridjs-td.media-table-col--source {
+    order: 2;
+    flex: 0 0 auto;
+    padding: 0.38rem 0.4rem 0.42rem 0.75rem;
+  }
+  /* Erotinpiste lähteen perässä kun päivämäärä on vieressä */
+  .media-gridjs-container .gridjs-td.media-table-col--source::after {
+    content: "·";
+    color: #ccc;
+    margin-left: 0.45rem;
+  }
+  /* Päivämäärä: meta-rivin oikea puoli */
+  .media-gridjs-container .gridjs-td.media-table-col--date {
+    order: 3;
+    flex: 1 0 auto;
+    padding: 0.38rem 0.75rem 0.42rem 0.3rem;
+    font-size: 0.78rem;
+    color: #666;
+  }
+  .media-gridjs-container .gridjs-td.media-table-col--date time {
+    font-size: 0.78rem;
+    color: #666;
+  }
+  /* Notfound-rivi: ei korttiasettelua */
   .media-gridjs-container .media-gridjs-notfound .gridjs-td {
-    display: table-cell;
-    width: auto !important;
+    flex: 0 0 100%;
+    order: 0;
+    text-align: center;
+    padding: 2rem;
   }
   .media-gridjs-container .media-gridjs-notfound .gridjs-td::before {
     display: none;
