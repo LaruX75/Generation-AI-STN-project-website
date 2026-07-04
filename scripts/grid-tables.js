@@ -166,7 +166,15 @@
       });
     }
 
-    var data = filteredRows.map(function (row) { return row.cells; });
+    var data = filteredRows.map(function (row) {
+      if (!isMobile || !row.mobileExtras) return row.cells;
+      var extras = row.mobileExtras;
+      var hasExtras = Object.keys(extras).length > 0;
+      if (!hasExtras) return row.cells;
+      return row.cells.map(function (cell, i) {
+        return extras[i] ? cell + extras[i] : cell;
+      });
+    });
 
     state.countEl.textContent = filteredRows.length + " " + state.messages.pagination.results;
 
@@ -259,10 +267,17 @@
         };
       }),
       rows: bodyRows.map(function (row) {
-        return {
-          dataset: row.dataset,
-          cells: Array.from(row.cells).map(function (cell) { return cell.innerHTML.trim(); })
-        };
+        var mobileExtras = {};
+        var cells = Array.from(row.cells).map(function (cell, i) {
+          var mobileEl = cell.querySelector(".scipub-mobile-authors");
+          if (!mobileEl) return cell.innerHTML.trim();
+          var clone = cell.cloneNode(true);
+          var clonedEl = clone.querySelector(".scipub-mobile-authors");
+          mobileExtras[i] = clonedEl.outerHTML;
+          clonedEl.remove();
+          return clone.innerHTML.trim();
+        });
+        return { dataset: row.dataset, cells: cells, mobileExtras: mobileExtras };
       }),
       filters: Array.from(section.querySelectorAll("[data-grid-filter]")).map(function (el) {
         return {
