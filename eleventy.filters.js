@@ -235,6 +235,18 @@ module.exports = function registerFilters(eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter("deduplicateByTitle", (ivItems, cmsItems) => {
+    const seen = new Set(
+      (cmsItems || [])
+        .map(p => String(p?.data?.title || "").toLowerCase().trim())
+        .filter(Boolean)
+    );
+    return (ivItems || []).filter(item => {
+      const title = String(item?.title || "").toLowerCase().trim();
+      return !title || !seen.has(title);
+    });
+  });
+
   eleventyConfig.addFilter("date", formatDate);
   eleventyConfig.addFilter("isHttpUrl", value => /^https?:\/\//i.test(String(value || "").trim()));
   eleventyConfig.addFilter("jsonLd", value => JSON.stringify(value, null, 2));

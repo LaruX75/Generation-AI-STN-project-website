@@ -1,5 +1,5 @@
 {% set allItems = mediaItems or [] %}
-{% set ivNewsItems = institutionalVisibility.items or [] %}
+{% set ivNewsItems = (institutionalVisibility.items or []) | deduplicateByTitle(allItems) %}
 
 {% if lang == "en" %}
   {% set lbl = {
