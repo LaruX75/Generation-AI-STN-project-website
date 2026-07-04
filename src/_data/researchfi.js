@@ -2,6 +2,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { readCache, remember } = require("./_apiCache");
 
+const CACHE_TTL = 604800; // 7 days
+
 const ENDPOINT =
   process.env.RESEARCHFI_ENDPOINT ||
   "https://researchfi-api-production.2.rahtiapp.fi/portalapi/person/_search";
@@ -617,7 +619,7 @@ async function fetchPersonRecord(orcid) {
 
         return response.json();
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch (error) {
     const stale = await readCache(cacheKey, { ttlSeconds: 0 });
@@ -648,7 +650,7 @@ async function fetchPersonRecordByName(name) {
 
         return response.json();
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch (error) {
     const stale = await readCache(cacheKey, { ttlSeconds: 0 });
@@ -674,7 +676,7 @@ async function fetchTextWithCache(cacheKey, url, headers = {}) {
 
         return response.text();
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch (error) {
     const stale = await readCache(cacheKey, { ttlSeconds: 0 });
@@ -700,7 +702,7 @@ async function fetchJsonWithCache(cacheKey, url, headers = {}) {
 
         return response.json();
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch (error) {
     const stale = await readCache(cacheKey, { ttlSeconds: 0 });

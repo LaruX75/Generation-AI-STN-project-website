@@ -1,5 +1,7 @@
 const { readCache, remember } = require("./_apiCache");
 
+const CACHE_TTL = 259200; // 72h
+
 const HEUREKA_SITE_URL = "https://www.heureka.fi";
 const HEUREKA_SITEMAP_INDEX_URL = `${HEUREKA_SITE_URL}/sitemap.xml`;
 const HTML_HEADERS = {
@@ -249,7 +251,7 @@ async function fetchTextWithCache(cacheKey, url, headers = {}) {
 
         return response.text();
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch (error) {
     const stale = await readCache(cacheKey, { ttlSeconds: 0 });

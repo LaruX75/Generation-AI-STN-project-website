@@ -1,5 +1,7 @@
 const { readCache, remember } = require("./_apiCache");
 
+const CACHE_TTL = 259200; // 72h
+
 const OULU_BASE_URL = "https://www.oulu.fi";
 const OULU_HTML_HEADERS = {
   Accept: "text/html,application/xhtml+xml"
@@ -243,7 +245,7 @@ async function fetchTextWithCache(cacheKey, url, headers = {}) {
 
         return response.text();
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch (error) {
     const stale = await readCache(cacheKey, { ttlSeconds: 0 });

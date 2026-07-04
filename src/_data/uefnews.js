@@ -1,5 +1,7 @@
 const { readCache, remember } = require("./_apiCache");
 
+const CACHE_TTL = 259200; // 72h
+
 const UEF_ADDSEARCH_SITEKEY = "9247c7e785f81d2b504eedfae2b6ba69";
 const UEF_ADDSEARCH_API_HOST = "api-eu.addsearch.com";
 const UEF_HTML_HEADERS = {
@@ -308,7 +310,7 @@ async function fetchTextWithCache(cacheKey, url, headers = {}) {
 
         return response.text();
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch (error) {
     const stale = await readCache(cacheKey, { ttlSeconds: 0 });
@@ -338,7 +340,7 @@ async function fetchJsonWithCache(cacheKey, url) {
 
         return response.json();
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch (error) {
     const stale = await readCache(cacheKey, { ttlSeconds: 0 });

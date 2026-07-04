@@ -2,6 +2,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { readCache, remember } = require("./_apiCache");
 
+const CACHE_TTL = 604800; // 7 days
+
 const OPENALEX_API_BASE = process.env.OPENALEX_API_BASE || "https://api.openalex.org";
 const CROSSREF_API_BASE = process.env.CROSSREF_API_BASE || "https://api.crossref.org";
 const DBLP_API_BASE = process.env.DBLP_API_BASE || "https://dblp.org/search";
@@ -228,7 +230,7 @@ async function fetchJson(url, { headers = {} } = {}) {
 
 async function rememberScholarly(key, factory) {
   if (SCHOLARLY_PUBLICATIONS_FORCE_REFRESH) {
-    return remember(key, factory, { forceRefresh: true });
+    return remember(key, factory, { forceRefresh: true, ttlSeconds: CACHE_TTL });
   }
 
   if (!SCHOLARLY_PUBLICATIONS_ENABLE_NETWORK) {
@@ -241,7 +243,7 @@ async function rememberScholarly(key, factory) {
     return null;
   }
 
-  return remember(key, factory, { forceRefresh: false });
+  return remember(key, factory, { forceRefresh: false, ttlSeconds: CACHE_TTL });
 }
 
 function canUseOpenAlexNetwork() {
@@ -414,7 +416,8 @@ async function resolveOpenAlexAuthor(person) {
     `scholarly-publications:openalex:author-search:${person.name}:${person.organization || ""}`,
     () => fetchJson(url),
     {
-      forceRefresh: SCHOLARLY_PUBLICATIONS_FORCE_REFRESH
+      forceRefresh: SCHOLARLY_PUBLICATIONS_FORCE_REFRESH,
+      ttlSeconds: CACHE_TTL
     }
   );
 

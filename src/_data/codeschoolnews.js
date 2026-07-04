@@ -1,5 +1,7 @@
 const { readCache, remember } = require("./_apiCache");
 
+const CACHE_TTL = 172800; // 48h
+
 const CODESCHOOL_SITE_URL = "https://www.codeschool.fi";
 const CODESCHOOL_SITEMAP_URL = `${CODESCHOOL_SITE_URL}/sitemap.xml`;
 const HTML_HEADERS = {
@@ -132,7 +134,7 @@ async function fetchTextWithCache(cacheKey, url, headers = {}) {
 
         return response.text();
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch (error) {
     const stale = await readCache(cacheKey, { ttlSeconds: 0 });
@@ -162,7 +164,7 @@ async function fetchJsonWithCache(cacheKey, url) {
 
         return response.json();
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch (error) {
     const stale = await readCache(cacheKey, { ttlSeconds: 0 });

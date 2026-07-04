@@ -2,6 +2,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { readCache, remember } = require("./_apiCache");
 
+const CACHE_TTL = 259200; // 72h
+
 const HELSINKI_NEWS_HEADERS = {
   Accept: "text/html,application/xhtml+xml"
 };
@@ -378,7 +380,7 @@ async function fetchTextWithCache(cacheKey, url, headers = {}) {
 
         return response.text();
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch (error) {
     const stale = await readCache(cacheKey, { ttlSeconds: 0 });
@@ -407,7 +409,7 @@ async function fetchJsonWithCache(cacheKey, url, options = {}) {
 
         return response.json();
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch (error) {
     const stale = await readCache(cacheKey, { ttlSeconds: 0 });

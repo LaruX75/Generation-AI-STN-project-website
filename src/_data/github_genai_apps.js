@@ -2,6 +2,8 @@ const config = require("./github_genai_apps.config.json");
 const snapshot = require("./github_genai_apps.snapshot.json");
 const { isNetworkEnabled, parseBoolean, readCache, writeCache } = require("./_apiCache");
 
+const CACHE_TTL = 172800; // 48h
+
 const GITHUB_API_BASE_URL = "https://api.github.com";
 
 function shouldUseNetwork() {

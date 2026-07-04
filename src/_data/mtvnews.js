@@ -3,6 +3,8 @@ const path = require("node:path");
 const { gunzipSync } = require("node:zlib");
 const { remember } = require("./_apiCache");
 
+const CACHE_TTL = 172800; // 48h
+
 const MTV_BASE_URL = "https://www.mtvuutiset.fi";
 const MTV_TOP_TAGS_SITEMAP_URL =
   "https://www.mtvuutiset.fi/data/sitemap/Sites/MTVUutiset/TopTags/sitemap1.xml.gz";
@@ -153,7 +155,7 @@ async function getTopTagsSitemapEntries() {
       });
       return Array.from(xml.matchAll(/<loc>([^<]+)<\/loc>/g)).map(match => match[1]);
     },
-    { forceRefresh }
+    { forceRefresh, ttlSeconds: CACHE_TTL }
   );
 }
 
@@ -193,7 +195,7 @@ async function getNewsSitemapItems() {
 
       return items;
     },
-    { forceRefresh }
+    { forceRefresh, ttlSeconds: CACHE_TTL }
   );
 }
 
@@ -273,7 +275,7 @@ async function getArticleMetadata(url) {
             .filter(Boolean)
         };
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch (e) {
     console.warn(`[mtvnews] artikkelin metatietojen haku epäonnistui (${url}): ${e.message}`);
@@ -334,7 +336,7 @@ async function parseTopicPageItems(topicUrl, options = {}) {
 
       return items;
     },
-    { forceRefresh }
+    { forceRefresh, ttlSeconds: CACHE_TTL }
   );
 
   const selected = rawItems.slice(0, limit);

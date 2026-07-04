@@ -1,5 +1,7 @@
 const { readCache, remember } = require("./_apiCache");
 
+const CACHE_TTL = 172800; // 48h
+
 const HS_NEWS_SITEMAP_URL = "https://www.hs.fi/rss/custom/news-sitemap.xml";
 const DEFAULT_LIMIT = 20;
 
@@ -89,7 +91,7 @@ async function getHsNewsSitemapItems() {
 
         return items;
       },
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
   } catch {
     const stale = await readCache(cacheKey, { ttlSeconds: 0 });

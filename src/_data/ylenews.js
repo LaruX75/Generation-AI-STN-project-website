@@ -2,6 +2,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { remember } = require("./_apiCache");
 
+const CACHE_TTL = 172800; // 48h
+
 const YLE_SEARCH_PAGE_URL = "https://haku.yle.fi/";
 const YLE_SEARCH_PAGE_DEFAULTS = {
   appId: "hakuylefi_v2_prod",
@@ -146,7 +148,7 @@ async function getYleSearchClientConfig() {
         searchApiUrl: parsed.searchApiUrl || YLE_SEARCH_PAGE_DEFAULTS.searchApiUrl
       };
     },
-    { forceRefresh }
+    { forceRefresh, ttlSeconds: CACHE_TTL }
   );
 }
 
@@ -234,7 +236,7 @@ async function searchYleNews(query, options = {}) {
     const payload = await remember(
       cacheKey,
       async () => fetchJson(buildSearchUrl(clientConfig, params)),
-      { forceRefresh }
+      { forceRefresh, ttlSeconds: CACHE_TTL }
     );
 
     total = Number(payload?.meta?.count) || total;
