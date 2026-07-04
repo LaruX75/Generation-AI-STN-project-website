@@ -77,8 +77,7 @@
   }
 
   /* ── Init ───────────────────────────────────────────────────────────── */
-  document.addEventListener('DOMContentLoaded', function () {
-    var state = load();
+  var state = load();
     var lang = document.documentElement.lang || 'fi';
     applyState(state);
 
@@ -186,5 +185,4 @@
 
     function commit() { applyState(state); save(state); }
     function on(id, fn) { var el = document.getElementById(id); if (el) el.addEventListener('click', fn); }
-  });
 })();
