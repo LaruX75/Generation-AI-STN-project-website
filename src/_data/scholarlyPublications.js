@@ -585,7 +585,7 @@ async function fetchDblpPublications(person) {
   const authorToken = buildDblpAuthorToken(person);
   if (!authorToken) return [];
 
-  const url = buildUrl(DBLP_API_BASE, "/publ/api", {
+  const url = buildUrl(DBLP_API_BASE, "publ/api", {
     q: `author:${authorToken}:`,
     format: "json",
     h: Math.max(person.limit * 5, 10)
@@ -675,16 +675,14 @@ function deduplicatePublications(items) {
 }
 
 async function fetchPersonPublications(person) {
-  const [openAlexItems, crossrefItems, dblpItems] = await Promise.all([
-    fetchOpenAlexPublications(person),
-    fetchCrossrefPublications(person),
-    fetchDblpPublications(person)
+  const [openAlexItems, crossrefItems] = await Promise.all([
+    fetchOpenAlexPublications(person).catch(() => []),
+    fetchCrossrefPublications(person).catch(() => []),
   ]);
 
   const merged = deduplicatePublications([
     ...openAlexItems,
     ...crossrefItems,
-    ...dblpItems
   ]);
 
   const enriched = await Promise.all(
