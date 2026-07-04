@@ -73,14 +73,6 @@
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); modal.hidden ? openModal() : closeModal(); }
   });
 
-  // Fill keyboard shortcut label and reveal it after OS detection
-  (function () {
-    var kbd = document.querySelector('.site-search-kbd');
-    if (!kbd) return;
-    var isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform || navigator.userAgent);
-    kbd.textContent = isMac ? '⌘K' : 'Ctrl K';
-    kbd.classList.add('is-ready');
-  }());
   modal.addEventListener('keydown', function (e) {
     if (e.key !== 'Tab') return;
     var focusable = Array.prototype.slice.call(
