@@ -386,39 +386,22 @@ body.kb-nav-open {
 .search-page { padding: 2rem var(--global-content-edge-padding, 1.5rem); max-width: var(--global-content-narrow-width, 842px); margin: 0 auto; }
 .search-page h1 { margin-top: 0; }
 
-/* Override Pagefind UI colours to match site palette */
+/* Pagefind Component UI theming */
 :root {
-  --pagefind-ui-scale: 1;
-  --pagefind-ui-primary: var(--global-palette1, #314e25);
-  --pagefind-ui-text: var(--global-palette3, #000);
-  --pagefind-ui-background: var(--global-palette9, #fff);
-  --pagefind-ui-border: var(--global-palette7, #e0e8d8);
-  --pagefind-ui-tag: var(--global-palette7, #e0e8d8);
-  --pagefind-ui-border-width: 1px;
-  --pagefind-ui-border-radius: 6px;
-  --pagefind-ui-image-border-radius: 4px;
-  --pagefind-ui-font: var(--global-body-font-family, sans-serif);
+  --pf-text: var(--global-palette3, #1a1a1a);
+  --pf-background: var(--global-palette9, #fff);
+  --pf-border: var(--global-palette7, #dde8d6);
+  --pf-border-focus: var(--global-palette1, #314e25);
+  --pf-outline-focus: var(--global-palette1, #314e25);
+  --pf-hover: var(--global-palette8, #f3f7ef);
+  --pf-font: var(--global-body-font-family, sans-serif);
+  --pf-border-radius: 6px;
+  --pf-modal-max-width: 660px;
+  --pf-modal-top: max(56px, 7vh);
+  --pf-modal-backdrop: rgba(0, 0, 0, 0.45);
+  --pf-shadow-lg: 0 8px 16px rgba(0,0,0,0.08), 0 24px 64px rgba(0,0,0,0.22);
 }
 
-/* ── Search modal ────────────────────────────────────────────────────────────── */
-@keyframes search-modal-in {
-  from { opacity: 0; transform: scale(0.96) translateY(-8px); }
-  to   { opacity: 1; transform: none; }
-}
-@keyframes search-backdrop-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-.search-modal { position: fixed; inset: 0; z-index: 9000; display: flex; align-items: flex-start; justify-content: center; padding: max(56px, 7vh) 1rem 2rem; }
-.search-modal[hidden] { display: none; }
-.search-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.45); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); animation: search-backdrop-in 0.15s ease; }
-body.search-modal-open { overflow: hidden; }
-.search-modal-box { position: relative; width: min(660px, 94vw); background: var(--global-palette9, #fff); border-radius: 14px; padding: 1.25rem 1.5rem 1.5rem; box-shadow: 0 8px 16px rgba(0,0,0,0.08), 0 24px 64px rgba(0,0,0,0.22); max-height: calc(100vh - max(56px, 7vh) - 2rem); overflow-y: auto; animation: search-modal-in 0.18s cubic-bezier(0.22,1,0.36,1); }
-.search-modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.875rem; }
-.search-modal-title { font-weight: 700; font-size: 0.9rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--global-palette5, #3b5e2c); }
-.search-modal-close { background: none; border: none; cursor: pointer; color: var(--global-palette5, #3b5e2c); padding: 4px; line-height: 1; border-radius: 6px; display: flex; align-items: center; transition: background 0.12s, color 0.12s; }
-.search-modal-close:hover { background: var(--global-palette7, #edf2e8); color: var(--global-palette1, #314e25); }
-.search-modal-close:focus-visible { outline: 2px solid var(--global-palette1, #314e25); outline-offset: 2px; }
 
 /* ── 404 inline search ───────────────────────────────────────────────────────── */
 .error-404-search { margin-top: 2rem; text-align: left; width: 100%; }
