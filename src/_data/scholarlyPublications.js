@@ -6,7 +6,7 @@ const CACHE_TTL = 604800; // 7 days
 
 const OPENALEX_API_BASE = process.env.OPENALEX_API_BASE || "https://api.openalex.org";
 const CROSSREF_API_BASE = process.env.CROSSREF_API_BASE || "https://api.crossref.org";
-const DBLP_API_BASE = process.env.DBLP_API_BASE || "https://dblp.org/search";
+const DBLP_API_BASE = process.env.DBLP_API_BASE || "https://dblp.org/search/";
 const DEFAULT_LIMIT_PER_PERSON = 3;
 const REQUEST_TIMEOUT_MS = 20_000;
 const OPENALEX_API_KEY = String(process.env.OPENALEX_API_KEY || "").trim();
@@ -377,7 +377,8 @@ function scoreOpenAlexAuthor(candidate, person) {
   if (normalizeName(candidate.display_name) === normalizeName(person.name)) score += 100;
   if (person.orcid && normalizeWhitespace(candidate.orcid).includes(person.orcid)) score += 80;
 
-  const institutionName = normalizeWhitespace(candidate?.last_known_institution?.display_name);
+  const institutions = candidate?.last_known_institutions || (candidate?.last_known_institution ? [candidate.last_known_institution] : []);
+  const institutionName = normalizeWhitespace(institutions[0]?.display_name);
   if (person.organization && institutionName) {
     if (normalizeName(institutionName).includes(normalizeName(person.organization))) score += 25;
   }
@@ -409,7 +410,7 @@ async function resolveOpenAlexAuthor(person) {
   const url = buildOpenAlexUrl("/authors", {
     search: person.name,
     "per-page": 10,
-    select: "id,display_name,orcid,last_known_institution,works_count"
+    select: "id,display_name,orcid,last_known_institutions,works_count"
   });
 
   const payload = await remember(
@@ -699,6 +700,16 @@ async function fetchPersonPublications(person) {
     }));
 }
 
+const SNAPSHOT_PATH = path.join(__dirname, "publications-snapshot.json");
+
+function loadSnapshot() {
+  try {
+    return JSON.parse(fs.readFileSync(SNAPSHOT_PATH, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
 module.exports = async function scholarlyPublicationsData() {
   const people = loadConfiguredPeople();
   if (!people.length) return [];
@@ -714,5 +725,14 @@ module.exports = async function scholarlyPublicationsData() {
     results.push(result);
   }
 
-  return sortPublications(results.flat());
+  const publications = sortPublications(results.flat());
+  if (publications.length > 0) return publications;
+
+  const snapshot = loadSnapshot();
+  if (snapshot) {
+    console.log("[scholarlyPublications] Käytetään paikallista snapshotia (verkko pois päältä).");
+    return snapshot;
+  }
+
+  return [];
 };
