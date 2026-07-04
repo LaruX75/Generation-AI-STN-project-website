@@ -18,7 +18,7 @@ async function main() {
     console.warn("[fetch-publications] Ei julkaisuja — snapshotia ei päivitetty.");
     process.exit(1);
   }
-  const dest = path.join(__dirname, "../src/_data/publications-snapshot.json");
+  const dest = path.join(__dirname, "../data/publications-snapshot.json");
   fs.writeFileSync(dest, JSON.stringify(publications, null, 2), "utf8");
   console.log(`[fetch-publications] Tallennettu ${publications.length} julkaisua → ${dest}`);
 }

@@ -698,7 +698,7 @@ async function fetchPersonPublications(person) {
     }));
 }
 
-const SNAPSHOT_PATH = path.join(__dirname, "publications-snapshot.json");
+const SNAPSHOT_PATH = path.join(__dirname, "../../data/publications-snapshot.json");
 
 function loadSnapshot() {
   try {
