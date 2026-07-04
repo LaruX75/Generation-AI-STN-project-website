@@ -338,6 +338,9 @@
     flex-direction: column;
     align-items: stretch;
   }
+  .media-table-search-wrap {
+    flex: none;
+  }
   .media-table-filters {
     flex-direction: column;
   }
