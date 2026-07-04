@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Julkaisut — Generation AI admin</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; height: 100%; background: #f1f5f9; font-family: system-ui, sans-serif; font-size: 13px; }
+    body { padding-top: 40px; }
+
+    /* ── Navbar ──────────────────────────────────────────────── */
+    #admin-navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 99999;
+      background: #1a1a2e; height: 40px;
+      display: flex; align-items: center; padding: 0 16px; gap: 0;
+      font-size: 13px; box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
+    #admin-navbar .nav-brand { color: #e2e8f0; font-weight: 600; margin-right: 20px; white-space: nowrap; }
+    #admin-navbar a { color: #94a3b8; text-decoration: none; padding: 0 14px; height: 40px; display: flex; align-items: center; }
+    #admin-navbar a:hover { color: #e2e8f0; background: rgba(255,255,255,0.07); }
+    #admin-navbar a.active { color: #fff; border-bottom: 2px solid #60a5fa; }
+    #admin-navbar .nav-spacer { flex: 1; }
+    #admin-navbar .nav-logout {
+      background: none; border: 1px solid #475569; color: #94a3b8;
+      padding: 4px 12px; border-radius: 5px; cursor: pointer;
+      font-size: 12px; font-family: inherit;
+    }
+    #admin-navbar .nav-logout:hover { border-color: #94a3b8; color: #e2e8f0; }
+
+    /* ── Layout ──────────────────────────────────────────────── */
+    #wrap { max-width: 1400px; margin: 0 auto; padding: 20px 16px; }
+
+    /* ── Auth card ───────────────────────────────────────────── */
+    #auth-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 24px; max-width: 480px; margin: 40px auto; }
+    #auth-card h2 { font-size: 14px; font-weight: 600; margin: 0 0 8px; }
+    #auth-card p { color: #666; margin: 0 0 8px; }
+    #auth-card a { color: #2563eb; }
+    #token-row { display: flex; gap: 8px; margin-top: 8px; }
+    #token-input { flex: 1; padding: 6px 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 13px; }
+    #token-btn { padding: 6px 14px; background: #2563eb; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 13px; }
+
+    /* ── Toolbar ─────────────────────────────────────────────── */
+    #toolbar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+    #toolbar h1 { font-size: 16px; font-weight: 700; color: #1e293b; margin: 0; }
+    .count-badge { background: #dbeafe; color: #1d4ed8; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+    .toolbar-spacer { flex: 1; }
+    .btn { padding: 6px 14px; border-radius: 6px; border: none; cursor: pointer; font-size: 12px; font-weight: 500; }
+    .btn-primary { background: #2563eb; color: #fff; }
+    .btn-primary:hover { background: #1d4ed8; }
+    .btn-sync { background: #0f766e; color: #fff; }
+    .btn-sync:hover { background: #0d6461; }
+    .btn-secondary { background: #e2e8f0; color: #334155; }
+    .btn-secondary:hover { background: #cbd5e1; }
+    #search-input { padding: 6px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px; width: 220px; }
+    #year-filter { padding: 6px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px; }
+
+    /* ── Notice ──────────────────────────────────────────────── */
+    #notice { display: none; padding: 8px 14px; border-radius: 6px; font-size: 12px; margin-bottom: 10px; }
+    #notice.ok   { background: #dcfce7; color: #15803d; }
+    #notice.err  { background: #fee2e2; color: #b91c1c; }
+    #notice.info { background: #dbeafe; color: #1d4ed8; }
+
+    /* ── Table ───────────────────────────────────────────────── */
+    #table-wrap { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    thead th { background: #f8fafc; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: #64748b; padding: 8px 10px; text-align: left; border-bottom: 1px solid #e2e8f0; white-space: nowrap; }
+    tbody tr { border-bottom: 1px solid #f1f5f9; }
+    tbody tr:hover { background: #f8fafc; }
+    tbody tr.row-hidden { opacity: .45; }
+    td { padding: 7px 10px; vertical-align: top; }
+    .td-year { width: 54px; font-weight: 600; color: #475569; white-space: nowrap; }
+    .td-code { width: 90px; }
+    .td-authors { width: 180px; color: #475569; font-size: 12px; }
+    .td-title { min-width: 240px; }
+    .td-venue { width: 160px; color: #64748b; font-size: 12px; }
+    .td-link { width: 80px; }
+    .td-actions { width: 80px; white-space: nowrap; }
+
+    .title-text { font-weight: 500; color: #1e293b; line-height: 1.35; }
+    .code-select {
+      width: 72px; padding: 3px 5px; border: 1px solid #cbd5e1; border-radius: 4px;
+      font-size: 12px; background: #f8fafc; cursor: pointer;
+    }
+    .code-select.is-dirty { border-color: #f59e0b; background: #fffbeb; }
+    .doi-link { font-size: 11px; color: #2563eb; text-decoration: none; }
+    .doi-link:hover { text-decoration: underline; }
+    .action-delete {
+      background: none; border: none; cursor: pointer; padding: 3px 6px;
+      color: #94a3b8; border-radius: 4px; font-size: 13px; line-height: 1;
+    }
+    .action-delete:hover { background: #fee2e2; color: #dc2626; }
+    .unsaved-dot { display: inline-block; width: 7px; height: 7px; background: #f59e0b; border-radius: 50%; margin-left: 5px; }
+    #empty-row td { text-align: center; color: #94a3b8; padding: 32px; }
+
+    /* ── Save bar ────────────────────────────────────────────── */
+    #save-bar {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0;
+      background: #1e293b; color: #fff; padding: 10px 20px;
+      display: none; align-items: center; gap: 14px; z-index: 9000;
+      font-size: 13px;
+    }
+    #save-bar.visible { display: flex; }
+    #save-bar .save-msg { flex: 1; }
+    #save-btn { padding: 7px 20px; background: #2563eb; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; }
+    #save-btn:disabled { opacity: .6; cursor: default; }
+    #discard-btn { padding: 7px 14px; background: #475569; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<nav id="admin-navbar">
+  <span class="nav-brand">Generation AI</span>
+  <a href="/admin/">Sveltia CMS</a>
+  <a href="/admin/categories.html">Kategoriatyökalu</a>
+  <a href="/admin/views.html">Ajankohtaista</a>
+  <a href="/admin/publications.html" class="active">Julkaisut</a>
+  <span class="nav-spacer"></span>
+  <button class="nav-logout" onclick="adminLogout()">Kirjaudu ulos</button>
+</nav>
+
+<div id="wrap">
+
+  <div id="auth-card">
+    <h2>Julkaisujen hallinta</h2>
+    <p>Työkalu käyttää automaattisesti Sveltian GitHub-kirjautumista. Kirjaudu ensin <a href="/admin/">Sveltiaan</a> ja palaa sitten tänne.</p>
+    <p>Tai syötä <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">GitHub Personal Access Token</a> (scope: <code>repo</code>):</p>
+    <div id="token-row">
+      <input type="password" id="token-input" placeholder="ghp_..." autocomplete="off">
+      <button id="token-btn" onclick="loginWithToken()">Kirjaudu</button>
+    </div>
+  </div>
+
+  <div id="main" style="display:none">
+    <div id="toolbar">
+      <h1>Tieteelliset julkaisut</h1>
+      <span class="count-badge" id="count-badge">—</span>
+      <div class="toolbar-spacer"></div>
+      <input type="search" id="search-input" placeholder="Hae otsikolla, tekijällä…" oninput="renderTable()">
+      <select id="year-filter" onchange="renderTable()">
+        <option value="">Kaikki vuodet</option>
+      </select>
+      <button class="btn btn-sync" onclick="runSync()" title="Käynnistää GitHub Actions -ajon joka hakee uudet julkaisut OpenAlexista (~2 min)">↺ Hae OpenAlexista</button>
+    </div>
+
+    <div id="notice"></div>
+
+    <div id="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="td-year">Vuosi</th>
+            <th class="td-code">OKM-koodi<span id="unsaved-indicator" class="unsaved-dot" style="display:none"></span></th>
+            <th class="td-authors">Tekijät</th>
+            <th class="td-title">Otsikko</th>
+            <th class="td-venue">Julkaisupaikka</th>
+            <th class="td-link">Linkki</th>
+            <th class="td-actions">Toiminnot</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<div id="save-bar">
+  <span class="save-msg" id="save-msg">Tallentamattomia muutoksia</span>
+  <button id="discard-btn" onclick="discardChanges()">Hylkää</button>
+  <button id="save-btn" onclick="saveChanges()">Tallenna GitHubiin</button>
+</div>
+
+<script>
+const REPO   = "LaruX75/Generation-AI-STN-project-website";
+const BRANCH = "main";
+const DATA_PATH = "src/_data/scientificPublications.data.json";
+const SYNC_WORKFLOW = "sync-publications.yml";
+
+const OKM_CODES = [
+  "", "A1","A2","A3","A3c","A4",
+  "B1","B2","B3",
+  "D1","D2","D3","D4","D5",
+  "E1","E2","E3",
+  "G4","G5",
+  "Poster","Preprint","Other"
+];
+
+let token = "";
+let publications = [];   // current state (may have local edits)
+let fileSha = "";
+let dirty = false;
+
+/* ── Auth ──────────────────────────────────────────────────────────── */
+function getSveltiaToken() {
+  try { return JSON.parse(localStorage.getItem("sveltia-cms.user") || "{}").token || ""; } catch { return ""; }
+}
+
+function adminLogout() {
+  Object.keys(localStorage).filter(k => k.startsWith("sveltia-cms")).forEach(k => localStorage.removeItem(k));
+  localStorage.removeItem("genai-pub-token");
+  location.href = "/admin/";
+}
+
+function loginWithToken() {
+  const t = document.getElementById("token-input").value.trim();
+  if (!t) { showNotice("Anna token.", "err"); return; }
+  token = t;
+  localStorage.setItem("genai-pub-token", token);
+  init();
+}
+
+function tryAutoLogin() {
+  const t = getSveltiaToken() || localStorage.getItem("genai-pub-token") || "";
+  if (t) { token = t; init(); }
+}
+
+/* ── GitHub API ─────────────────────────────────────────────────────── */
+function b64decode(str) { return decodeURIComponent(escape(atob(str.replace(/\s/g, "")))); }
+function b64encode(str) { return btoa(unescape(encodeURIComponent(str))); }
+
+async function ghGet(path) {
+  const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
+    headers: { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json" }
+  });
+  if (!res.ok) throw new Error(`GitHub ${res.status}: ${path}`);
+  return res.json();
+}
+
+async function ghPut(path, sha, content, message) {
+  const res = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
+    method: "PUT",
+    headers: { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" },
+    body: JSON.stringify({ message, content: b64encode(content), sha, branch: BRANCH })
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `GitHub PUT ${res.status}`);
+  }
+  return res.json();
+}
+
+/* ── Load & init ───────────────────────────────────────────────────── */
+async function init() {
+  document.getElementById("auth-card").style.display = "none";
+  document.getElementById("main").style.display = "";
+  showNotice("Ladataan julkaisutietoja…", "info");
+  try {
+    const file = await ghGet(DATA_PATH);
+    fileSha = file.sha;
+    publications = JSON.parse(b64decode(file.content));
+    populateYearFilter();
+    renderTable();
+    showNotice("", "");
+  } catch (err) {
+    document.getElementById("auth-card").style.display = "";
+    document.getElementById("main").style.display = "none";
+    showNotice("Lataus epäonnistui: " + err.message, "err");
+  }
+}
+
+/* ── Year filter ────────────────────────────────────────────────────── */
+function populateYearFilter() {
+  const years = [...new Set(publications.map(p => p.year).filter(Boolean))].sort((a, b) => b - a);
+  const sel = document.getElementById("year-filter");
+  years.forEach(y => {
+    const opt = document.createElement("option");
+    opt.value = y; opt.textContent = y;
+    sel.appendChild(opt);
+  });
+}
+
+/* ── Render ─────────────────────────────────────────────────────────── */
+function renderTable() {
+  const q     = document.getElementById("search-input").value.toLowerCase().trim();
+  const year  = document.getElementById("year-filter").value;
+  const tbody = document.getElementById("table-body");
+
+  let filtered = publications.filter(p => {
+    if (year && String(p.year) !== year) return false;
+    if (q) {
+      const hay = [p.title, p.authorsText, p.venue, p.doi, p.code].join(" ").toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  // newest first
+  filtered.sort((a, b) => (b.year || 0) - (a.year || 0));
+
+  document.getElementById("count-badge").textContent =
+    filtered.length === publications.length
+      ? `${publications.length} julkaisua`
+      : `${filtered.length} / ${publications.length}`;
+
+  if (!filtered.length) {
+    tbody.innerHTML = `<tr id="empty-row"><td colspan="7">Ei tuloksia.</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = filtered.map(p => {
+    const doiHtml = p.doi
+      ? `<a class="doi-link" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">DOI ↗</a>`
+      : (p.url ? `<a class="doi-link" href="${esc(p.url)}" target="_blank" rel="noopener">Lähde ↗</a>` : "–");
+
+    const codeOpts = OKM_CODES.map(c =>
+      `<option value="${c}" ${c === (p.code || "") ? "selected" : ""}>${c || "–"}</option>`
+    ).join("");
+
+    return `<tr data-id="${esc(p.id)}">
+      <td class="td-year">${p.year || "–"}</td>
+      <td class="td-code">
+        <select class="code-select" data-id="${esc(p.id)}" onchange="onCodeChange(this)">
+          ${codeOpts}
+        </select>
+      </td>
+      <td class="td-authors">${esc(truncate(p.authorsText || "", 80))}</td>
+      <td class="td-title"><span class="title-text">${esc(p.title || "")}</span></td>
+      <td class="td-venue">${esc(truncate(p.venue || "", 60))}</td>
+      <td class="td-link">${doiHtml}</td>
+      <td class="td-actions">
+        <button class="action-delete" data-id="${esc(p.id)}" onclick="deleteRow(this)" title="Poista julkaisu">🗑</button>
+      </td>
+    </tr>`;
+  }).join("");
+}
+
+/* ── Code edit ──────────────────────────────────────────────────────── */
+function onCodeChange(sel) {
+  const id = sel.dataset.id;
+  const pub = publications.find(p => p.id === id);
+  if (!pub) return;
+  pub.code = sel.value;
+  sel.classList.add("is-dirty");
+  markDirty();
+}
+
+/* ── Delete ─────────────────────────────────────────────────────────── */
+function deleteRow(btn) {
+  const id = btn.dataset.id;
+  const pub = publications.find(p => p.id === id);
+  if (!pub) return;
+  if (!confirm(`Poistetaanko julkaisu?\n\n"${pub.title}"`)) return;
+  publications = publications.filter(p => p.id !== id);
+  btn.closest("tr").remove();
+  document.getElementById("count-badge").textContent =
+    `${publications.length} julkaisua`;
+  markDirty();
+}
+
+/* ── Dirty state ────────────────────────────────────────────────────── */
+function markDirty() {
+  dirty = true;
+  document.getElementById("save-bar").classList.add("visible");
+  document.getElementById("unsaved-indicator").style.display = "";
+}
+
+function discardChanges() {
+  if (!confirm("Hylätäänkö kaikki tallentamattomat muutokset?")) return;
+  dirty = false;
+  document.getElementById("save-bar").classList.remove("visible");
+  document.getElementById("unsaved-indicator").style.display = "none";
+  init();
+}
+
+/* ── Save ────────────────────────────────────────────────────────────── */
+async function saveChanges() {
+  const btn = document.getElementById("save-btn");
+  btn.disabled = true;
+  btn.textContent = "Tallennetaan…";
+  showNotice("Tallennetaan GitHubiin…", "info");
+  try {
+    const content = JSON.stringify(publications, null, 2) + "\n";
+    const result  = await ghPut(DATA_PATH, fileSha, content,
+      "Päivitä tieteelliset julkaisut (admin)");
+    fileSha = result.content.sha;
+    dirty = false;
+    document.getElementById("save-bar").classList.remove("visible");
+    document.getElementById("unsaved-indicator").style.display = "none";
+    document.querySelectorAll(".code-select.is-dirty").forEach(s => s.classList.remove("is-dirty"));
+    showNotice(`Tallennettu — ${publications.length} julkaisua.`, "ok");
+  } catch (err) {
+    showNotice("Tallennus epäonnistui: " + err.message, "err");
+  }
+  btn.disabled = false;
+  btn.textContent = "Tallenna GitHubiin";
+}
+
+/* ── Sync trigger ────────────────────────────────────────────────────── */
+async function runSync() {
+  if (!confirm("Käynnistetäänkö OpenAlex-haku GitHub Actionsissa?\n\nAjo kestää noin 2 minuuttia. Uudet julkaisut commitoidaan automaattisesti.")) return;
+  showNotice("Käynnistetään GitHub Actions…", "info");
+  const res = await fetch(
+    `https://api.github.com/repos/${REPO}/actions/workflows/${SYNC_WORKFLOW}/dispatches`,
+    {
+      method: "POST",
+      headers: { Authorization: `token ${token}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" },
+      body: JSON.stringify({ ref: BRANCH })
+    }
+  );
+  if (res.status === 204) {
+    showNotice("GitHub Actions käynnistetty! Päivitä sivu ~2 min kuluttua nähdäksesi uudet julkaisut.", "ok");
+  } else {
+    const err = await res.json().catch(() => ({}));
+    showNotice("Virhe: " + (err.message || res.status), "err");
+  }
+}
+
+/* ── Helpers ─────────────────────────────────────────────────────────── */
+function showNotice(msg, type) {
+  const el = document.getElementById("notice");
+  if (!msg) { el.style.display = "none"; return; }
+  el.textContent = msg;
+  el.className = type;
+  el.style.display = "";
+}
+
+function esc(str) {
+  return String(str || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+function truncate(str, n) {
+  return str.length > n ? str.slice(0, n) + "…" : str;
+}
+
+/* ── Boot ────────────────────────────────────────────────────────────── */
+tryAutoLogin();
+</script>
+</body>
+</html>
