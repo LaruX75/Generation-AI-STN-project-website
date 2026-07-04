@@ -16,7 +16,8 @@
       to: "-",
       loading: "Ladataan...",
       noRecordsFound: "Ei tuloksia.",
-      error: "Taulukon latauksessa tapahtui virhe."
+      error: "Taulukon latauksessa tapahtui virhe.",
+      filterToggle: "Suodata"
     },
     en: {
       results: "results",
@@ -30,7 +31,8 @@
       to: "to",
       loading: "Loading...",
       noRecordsFound: "No results.",
-      error: "An error occurred while loading the table."
+      error: "An error occurred while loading the table.",
+      filterToggle: "Filter"
     },
     sv: {
       results: "resultat",
@@ -44,7 +46,8 @@
       to: "-",
       loading: "Laddar...",
       noRecordsFound: "Inga resultat.",
-      error: "Ett fel uppstod nar tabellen laddades."
+      error: "Ett fel uppstod nar tabellen laddades.",
+      filterToggle: "Filtrera"
     }
   };
 
@@ -53,6 +56,11 @@
     if (lang.indexOf("en") === 0) return "en";
     if (lang.indexOf("sv") === 0) return "sv";
     return "fi";
+  }
+
+  function getLangMsg(key) {
+    var msg = I18N[getLang()] || I18N.fi;
+    return msg[key] || key;
   }
 
   function getMessages(section, emptyText) {
@@ -90,7 +98,7 @@
         hidden: !!(isMobile && column.mobileHide),
         sort: column.sortable,
         width: column.width || undefined,
-        attributes: { class: column.className },
+        attributes: { class: column.className, 'data-label': column.plainName },
         formatter: function (cell) {
           return GridNS.html(cell == null ? "" : String(cell));
         }
@@ -142,12 +150,25 @@
     });
   }
 
+  function getDateSortKey(row) {
+    var match = /<time[^>]+datetime="([^"]+)"/.exec(row.cells[0] || "");
+    if (match) return match[1];
+    return row.dataset.year || "";
+  }
+
   function renderGrid(state) {
     var filteredRows = filterRows(state);
     var isMobile = MOBILE_QUERY.matches;
+
+    if (state.defaultSort === "date-desc") {
+      filteredRows = filteredRows.slice().sort(function (a, b) {
+        return getDateSortKey(b).localeCompare(getDateSortKey(a));
+      });
+    }
+
     var data = filteredRows.map(function (row) { return row.cells; });
 
-    state.countEl.textContent = filteredRows.length + "\u00a0" + state.messages.pagination.results;
+    state.countEl.textContent = filteredRows.length + " " + state.messages.pagination.results;
 
     if (!state.grid) {
       state.grid = new GridNS.Grid({
@@ -215,9 +236,11 @@
 
     return {
       pageSize: Number(section.dataset.gridPageSize || 10),
+      defaultSort: section.dataset.gridDefaultSort || "",
       columns: headerCells.map(function (cell) {
         return {
           name: cell.innerHTML,
+          plainName: cell.textContent.trim(),
           className: cell.className || "",
           mobileHide: cell.classList.contains("media-table-col--mobile-hide"),
           sortable: shouldSort(cell.className || ""),
@@ -249,7 +272,28 @@
   function initSection(section) {
     var state = parseTable(section);
     var lastMobileState;
+    var filtersEl = section.querySelector(".media-table-filters");
+    var toggleBtn = null;
     if (!state) return;
+
+    // Collapsible filter toggle (visible on mobile only via CSS)
+    if (filtersEl) {
+      toggleBtn = document.createElement("button");
+      toggleBtn.type = "button";
+      toggleBtn.className = "media-table-filters-toggle";
+      toggleBtn.textContent = getLangMsg("filterToggle");
+      toggleBtn.setAttribute("aria-expanded", "false");
+      filtersEl.parentNode.insertBefore(toggleBtn, filtersEl);
+
+      if (MOBILE_QUERY.matches) filtersEl.hidden = true;
+
+      toggleBtn.addEventListener("click", function () {
+        var willShow = filtersEl.hidden;
+        filtersEl.hidden = !willShow;
+        toggleBtn.setAttribute("aria-expanded", String(willShow));
+        toggleBtn.classList.toggle("is-open", willShow);
+      });
+    }
 
     populateFilterOptions(state);
     renderGrid(state);
@@ -270,6 +314,17 @@
     MOBILE_QUERY.addEventListener("change", function () {
       if (lastMobileState !== MOBILE_QUERY.matches) {
         lastMobileState = MOBILE_QUERY.matches;
+        if (filtersEl) {
+          if (MOBILE_QUERY.matches) {
+            filtersEl.hidden = true;
+            if (toggleBtn) {
+              toggleBtn.setAttribute("aria-expanded", "false");
+              toggleBtn.classList.remove("is-open");
+            }
+          } else {
+            filtersEl.hidden = false;
+          }
+        }
         renderGrid(state);
       }
     });
