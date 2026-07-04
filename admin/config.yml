@@ -38,7 +38,11 @@ collections:
       fi: "ajankohtaista/{{slug}}"
       en: "en/current-affairs/{{slug}}"
       sv: "sv/nyheter-fran/{{slug}}"
-    sortable_fields: ["date", "title"]
+    sortable_fields:
+      fields: ["date", "title"]
+      default:
+        field: date
+        direction: Descending
     view_filters:
       - label: "Mediassa"
         field: mainCategory
@@ -187,7 +191,11 @@ collections:
     identifier_field: title
     summary: "{{title}} — {{permalink}}"
     preview_path: "{{permalink}}"
-    sortable_fields: ["date", "title"]
+    sortable_fields:
+      fields: ["date", "title"]
+      default:
+        field: date
+        direction: Descending
     view_groups:
       - label: "Vuosi"
         field: date
@@ -219,7 +227,11 @@ collections:
     identifier_field: title
     summary: "{{title}} — {{permalink}}"
     preview_path: "{{permalink}}"
-    sortable_fields: ["date", "title"]
+    sortable_fields:
+      fields: ["date", "title"]
+      default:
+        field: date
+        direction: Descending
     view_groups:
       - label: "Year"
         field: date
@@ -272,7 +284,11 @@ collections:
     identifier_field: title
     summary: "{{title}} — {{permalink}}"
     preview_path: "{{permalink}}"
-    sortable_fields: ["date", "title"]
+    sortable_fields:
+      fields: ["date", "title"]
+      default:
+        field: date
+        direction: Descending
     view_groups:
       - label: "År"
         field: date
