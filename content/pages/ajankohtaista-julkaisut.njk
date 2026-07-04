@@ -1,0 +1,27 @@
+---
+title: Julkaisut
+seoTitle: Tieteelliset julkaisut — Generation AI
+seoDescription: Generation AI -hankkeen tieteelliset julkaisut — vertaisarvioidut artikkelit, kirjat ja muut julkaisut.
+date: "2023-01-29T20:19:24"
+slug: ajankohtaista-julkaisut
+permalink: /ajankohtaista/julkaisut/
+status: publish
+sourceType: pages
+translationKey: current-affairs-publications
+layout: layouts/page.njk
+pageHero: true
+---
+
+<section class="news-intro">
+  <div class="news-intro-inner">
+    <p class="news-intro-desc">Generation AI -hankkeen tieteelliset julkaisut.</p>
+  </div>
+</section>
+
+<div class="kb-tabs">
+  {% set activeTab = "julkaisut" %}
+  {% include "partials/ajankohtaista-tabnav.njk" %}
+  <div class="kt-tabs-content-wrap">
+    {% include "partials/scientific-publications-table.njk" %}
+  </div>
+</div>

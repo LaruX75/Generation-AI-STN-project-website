@@ -1,0 +1,31 @@
+---
+title: Project activities
+seoTitle: Project activities — Generation AI
+seoDescription: Generation AI project activities and research events.
+date: "2023-01-29T20:19:24"
+slug: current-affairs-activities
+permalink: /en/current-affairs/activities/
+status: publish
+sourceType: pages
+translationKey: current-affairs-activities
+lang: en
+layout: layouts/page.njk
+pageHero: true
+---
+
+<section class="news-intro">
+  <div class="news-intro-inner">
+    <p class="news-intro-desc">Generation AI project activities and research events.</p>
+  </div>
+</section>
+
+{% set projectPosts = collections["hankkeen-toiminta"] | localizedItems(lang, page.url) %}
+{% set researchPosts = collections["tutkimus"] | localizedItems(lang, page.url) %}
+{% set toimintaCards = projectPosts | mergeChronologicalCards(stakeholderPageData.projectItems or []) %}
+<div class="kb-tabs">
+  {% set activeTab = "toiminta" %}
+  {% include "partials/ajankohtaista-tabnav.njk" %}
+  <div class="kt-tabs-content-wrap">
+    {% include "partials/toiminta-table.njk" %}
+  </div>
+</div>

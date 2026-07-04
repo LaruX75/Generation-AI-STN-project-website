@@ -1,0 +1,28 @@
+---
+title: Tapahtumat
+seoTitle: Tapahtumat — Generation AI
+seoDescription: Hankkeen tapahtumakalenteri — konferenssit, koulutukset ja muut tapahtumat.
+date: "2023-01-29T20:19:24"
+slug: ajankohtaista-tapahtumat
+permalink: /ajankohtaista/tapahtumat/
+status: publish
+sourceType: pages
+translationKey: current-affairs-events
+layout: layouts/page.njk
+pageHero: true
+---
+
+<section class="news-intro">
+  <div class="news-intro-inner">
+    <p class="news-intro-desc">Hankkeen tapahtumat — konferenssit, koulutukset ja muut tapahtumat.</p>
+  </div>
+</section>
+
+{% set tapahtumatItems = collections["tapahtumat"] | localizedItems(lang, page.url) %}
+<div class="kb-tabs">
+  {% set activeTab = "tapahtumat" %}
+  {% include "partials/ajankohtaista-tabnav.njk" %}
+  <div class="kt-tabs-content-wrap">
+    {% include "partials/tapahtumat-table.njk" %}
+  </div>
+</div>

@@ -1,0 +1,40 @@
+{# Tab navigation for Ajankohtaista / Current affairs / Aktuellt sub-pages.
+   Caller sets `activeTab`: "uutiset" | "tapahtumat" | "toiminta" | "julkaisut"
+   Reads global `lang`. #}
+
+{% if lang == "en" %}
+  {% set _tabs = [
+    { k: "uutiset",    href: "/en/current-affairs/",              label: "News" },
+    { k: "tapahtumat", href: "/en/current-affairs/events/",       label: "Events" },
+    { k: "toiminta",   href: "/en/current-affairs/activities/",   label: "Project activities" },
+    { k: "julkaisut",  href: "/en/current-affairs/publications/", label: "Conferences and publications" }
+  ] %}
+  {% set _navLabel = "Current affairs sections" %}
+{% elif lang == "sv" %}
+  {% set _tabs = [
+    { k: "uutiset",    href: "/sv/aktuellt/",                  label: "Nyheter" },
+    { k: "tapahtumat", href: "/sv/aktuellt/evenemang/",        label: "Evenemang" },
+    { k: "toiminta",   href: "/sv/aktuellt/verksamhet/",       label: "Projektverksamhet" },
+    { k: "julkaisut",  href: "/sv/aktuellt/publikationer/",    label: "Konferenser och publikationer" }
+  ] %}
+  {% set _navLabel = "Aktuellt-avsnitt" %}
+{% else %}
+  {% set _tabs = [
+    { k: "uutiset",    href: "/ajankohtaista/",            label: "Uutiset" },
+    { k: "tapahtumat", href: "/ajankohtaista/tapahtumat/", label: "Tapahtumat" },
+    { k: "toiminta",   href: "/ajankohtaista/toiminta/",   label: "Toiminta" },
+    { k: "julkaisut",  href: "/ajankohtaista/julkaisut/",  label: "Julkaisut" }
+  ] %}
+  {% set _navLabel = "Ajankohtaista-osiot" %}
+{% endif %}
+
+<ul class="kt-tabs-title-list" aria-label="{{ _navLabel }}">
+  {% for _t in _tabs %}
+    {% set _active = _t.k == activeTab %}
+    <li class="kt-title-item{% if _active %} kt-tab-title-active{% else %} kt-tab-title-inactive{% endif %}">
+      <a href="{{ _t.href }}" class="kt-tab-title"{% if _active %} aria-current="page"{% endif %}>
+        <span class="kt-title-text">{{ _t.label }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

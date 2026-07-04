@@ -21,73 +21,11 @@ pageHero: true
   </div>
 </section>
 
-{% set projectPosts = collections["hankkeen-toiminta"] | localizedItems(lang, page.url) %}
-{% set researchPosts = collections["tutkimus"] | localizedItems(lang, page.url) %}
-{% set projectCards = projectPosts | mergeChronologicalCards(stakeholderPageData.projectItems or []) %}
-{% set researchCards = researchPosts | mergeChronologicalCards(stakeholderPageData.researchItems or []) %}
-
-{% set kadenceBlock = {
-  "name": "kadence/tabs",
-  "shortName": "tabs",
-  "attrs": {
-    "uniqueID": "407_d2c3b0-sv"
-  }
-} %}
-{% set kadenceInnerHtml %}
-<ul class="kt-tabs-title-list"><li id="tab-media" class="kt-title-item kt-title-item-1 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-active"><a href="#tab-media" data-tab="1" class="kt-tab-title kt-tab-title-1"><span class="kt-title-text">Nyheter</span></a></li><li id="tab-tapahtumat" class="kt-title-item kt-title-item-2 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tapahtumat" data-tab="2" class="kt-tab-title kt-tab-title-2"><span class="kt-title-text">Evenemang</span></a></li><li id="tab-toiminta" class="kt-title-item kt-title-item-3 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-toiminta" data-tab="3" class="kt-tab-title kt-tab-title-3"><span class="kt-title-text">Projektverksamhet</span></a></li><li id="tab-tutkimus" class="kt-title-item kt-title-item-4 kt-tabs-svg-show-always kt-tabs-icon-side-right kt-tab-title-inactive"><a href="#tab-tutkimus" data-tab="4" class="kt-tab-title kt-tab-title-4"><span class="kt-title-text">Konferenser och publikationer</span></a></li></ul><div class="kt-tabs-content-wrap">{% set mediaItems = collections["media"] | localizedItems(lang, page.url) %}
-{% set kadenceBlock = {
-  "name": "kadence/tab",
-  "shortName": "tab",
-  "attrs": {
-    "uniqueID": "8958a6-sv"
-  }
-} %}
-{% set kadenceInnerHtml %}
-{% include "partials/media-table.njk" %}
-{% endset %}
-{% include "blocks/kadence/tab.njk" %}
-
-{% set kadenceBlock = {
-  "name": "kadence/tab",
-  "shortName": "tab",
-  "attrs": {
-    "uniqueID": "857bf9-sv"
-  }
-} %}
-{% set tapahtumatItems = collections["tapahtumat"] | localizedItems(lang, page.url) %}
-{% set kadenceInnerHtml %}
-{% include "partials/tapahtumat-table.njk" %}
-{% endset %}
-{% include "blocks/kadence/tab.njk" %}
-
-{% set kadenceBlock = {
-  "name": "kadence/tab",
-  "shortName": "tab",
-  "attrs": {
-    "uniqueID": "6c5534-sv"
-  }
-} %}
-{% set toimintaCards = projectCards %}
-{% set kadenceInnerHtml %}
-{% include "partials/toiminta-table.njk" %}
-{% endset %}
-{% include "blocks/kadence/tab.njk" %}
-
-{% set kadenceBlock = {
-  "name": "kadence/tab",
-  "shortName": "tab",
-  "attrs": {
-    "uniqueID": "defcbe-sv"
-  }
-} %}
-{% set tutkimusCards = researchCards %}
-{% set scipubTabHash = "#tab-tutkimus" %}
-{% set kadenceInnerHtml %}
-{% include "partials/tutkimus-table.njk" %}
-{% include "partials/scientific-publications-table.njk" %}
-{% endset %}
-{% include "blocks/kadence/tab.njk" %}
-
+{% set mediaItems = collections["media"] | localizedItems(lang, page.url) %}
+<div class="kb-tabs">
+  {% set activeTab = "uutiset" %}
+  {% include "partials/ajankohtaista-tabnav.njk" %}
+  <div class="kt-tabs-content-wrap">
+    {% include "partials/media-table.njk" %}
+  </div>
 </div>
-{% endset %}
-{% include "blocks/kadence/tabs.njk" %}

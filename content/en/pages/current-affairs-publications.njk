@@ -1,0 +1,31 @@
+---
+title: Conferences and publications
+seoTitle: Conferences and publications — Generation AI
+seoDescription: Generation AI scientific publications and conference presentations.
+date: "2023-01-29T20:19:24"
+slug: current-affairs-publications
+permalink: /en/current-affairs/publications/
+status: publish
+sourceType: pages
+translationKey: current-affairs-publications
+lang: en
+layout: layouts/page.njk
+pageHero: true
+---
+
+<section class="news-intro">
+  <div class="news-intro-inner">
+    <p class="news-intro-desc">Generation AI scientific publications and conference presentations.</p>
+  </div>
+</section>
+
+{% set researchPosts = collections["tutkimus"] | localizedItems(lang, page.url) %}
+{% set tutkimusCards = researchPosts | mergeChronologicalCards(stakeholderPageData.researchItems or []) %}
+<div class="kb-tabs">
+  {% set activeTab = "julkaisut" %}
+  {% include "partials/ajankohtaista-tabnav.njk" %}
+  <div class="kt-tabs-content-wrap">
+    {% include "partials/tutkimus-table.njk" %}
+    {% include "partials/scientific-publications-table.njk" %}
+  </div>
+</div>

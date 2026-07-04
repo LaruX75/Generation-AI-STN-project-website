@@ -1,0 +1,31 @@
+---
+title: Toiminta
+seoTitle: Hankkeen toiminta — Generation AI
+seoDescription: Generation AI -hankkeen toiminta — projektitoiminta ja tutkimustapahtumat.
+date: "2023-01-29T20:19:24"
+slug: ajankohtaista-toiminta
+permalink: /ajankohtaista/toiminta/
+status: publish
+sourceType: pages
+translationKey: current-affairs-activities
+layout: layouts/page.njk
+pageHero: true
+---
+
+<section class="news-intro">
+  <div class="news-intro-inner">
+    <p class="news-intro-desc">Hankkeen toiminta — projektitoiminta ja tutkimustapahtumat.</p>
+  </div>
+</section>
+
+{% set projectPosts = collections["hankkeen-toiminta"] | localizedItems(lang, page.url) %}
+{% set researchPosts = collections["tutkimus"] | localizedItems(lang, page.url) %}
+{% set toimintaCards = projectPosts | mergeChronologicalCards(stakeholderPageData.projectItems or []) %}
+{% set tutkimusCards = researchPosts | mergeChronologicalCards(stakeholderPageData.researchItems or []) %}
+<div class="kb-tabs">
+  {% set activeTab = "toiminta" %}
+  {% include "partials/ajankohtaista-tabnav.njk" %}
+  <div class="kt-tabs-content-wrap">
+    {% include "partials/toiminta-table.njk" %}
+  </div>
+</div>

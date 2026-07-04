@@ -1,0 +1,31 @@
+---
+title: Projektverksamhet
+seoTitle: Projektverksamhet — Generation AI
+seoDescription: Generation AI-projektets verksamhet och forskningsevenemang.
+date: "2023-01-29T20:19:24"
+slug: aktuellt-verksamhet
+permalink: /sv/aktuellt/verksamhet/
+status: publish
+sourceType: pages
+translationKey: current-affairs-activities
+lang: sv
+layout: layouts/page.njk
+pageHero: true
+---
+
+<section class="news-intro">
+  <div class="news-intro-inner">
+    <p class="news-intro-desc">Generation AI-projektets verksamhet och forskningsevenemang.</p>
+  </div>
+</section>
+
+{% set projectPosts = collections["hankkeen-toiminta"] | localizedItems(lang, page.url) %}
+{% set researchPosts = collections["tutkimus"] | localizedItems(lang, page.url) %}
+{% set toimintaCards = projectPosts | mergeChronologicalCards(stakeholderPageData.projectItems or []) %}
+<div class="kb-tabs">
+  {% set activeTab = "toiminta" %}
+  {% include "partials/ajankohtaista-tabnav.njk" %}
+  <div class="kt-tabs-content-wrap">
+    {% include "partials/toiminta-table.njk" %}
+  </div>
+</div>

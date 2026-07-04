@@ -1,0 +1,29 @@
+---
+title: Evenemang
+seoTitle: Evenemang — Generation AI
+seoDescription: Generation AI-projektets evenemang — konferenser, utbildningar och andra evenemang.
+date: "2023-01-29T20:19:24"
+slug: aktuellt-evenemang
+permalink: /sv/aktuellt/evenemang/
+status: publish
+sourceType: pages
+translationKey: current-affairs-events
+lang: sv
+layout: layouts/page.njk
+pageHero: true
+---
+
+<section class="news-intro">
+  <div class="news-intro-inner">
+    <p class="news-intro-desc">Generation AI-projektets evenemang — konferenser, utbildningar och andra evenemang.</p>
+  </div>
+</section>
+
+{% set tapahtumatItems = collections["tapahtumat"] | localizedItems(lang, page.url) %}
+<div class="kb-tabs">
+  {% set activeTab = "tapahtumat" %}
+  {% include "partials/ajankohtaista-tabnav.njk" %}
+  <div class="kt-tabs-content-wrap">
+    {% include "partials/tapahtumat-table.njk" %}
+  </div>
+</div>
