@@ -45,7 +45,7 @@
   } %}
 {% endif %}
 
-<section class="media-table-section" id="media-table-section" data-grid-enhance>
+<section class="media-table-section" id="media-table-section" data-grid-enhance data-grid-default-sort="date-desc">
 
   <div class="media-table-header">
     <h2 class="media-table-heading">{{ lbl.heading }}</h2>
@@ -163,14 +163,14 @@
                 {{ item.title | default('—') }}
               {% endif %}
             </td>
-            <td class="media-table-col--content">
+            <td class="media-table-col--content media-table-col--mobile-hide">
               {% if item.summary %}
                 {{ item.summary | truncate(200) }}
               {% else %}
                 <span class="media-table-na">{{ lbl.na }}</span>
               {% endif %}
             </td>
-            <td class="media-table-col--link">
+            <td class="media-table-col--link media-table-col--mobile-hide">
               {% if item.url %}
                 <a href="{{ item.url }}" class="media-table-link" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;<span aria-hidden="true">↗</span><span class="sr-only">{{ lbl.newTab }}</span></a>
               {% else %}
