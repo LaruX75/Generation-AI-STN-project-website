@@ -140,8 +140,10 @@
           {% endif %}
         {% endfor %}
 
-        {# --- Konferenssit ja tieteelliset tapahtumat -rivit --- #}
-        {% for card in allTutkimusCards %}
+        {# --- Konferenssit ja tieteelliset tapahtumat -rivit 2024+ → suoraan tbody --- #}
+        {# Vanhemmat rivit siirretään JS:ssä template-elementistä tbody:hin,
+           jolloin alkuperäinen DOM-paino kevenee merkittävästi. #}
+        {% macro tutkimusRow(card, lbl) %}
           {% if card.cardType == "post" %}
             {% set post = card.post %}
             <tr class="media-table-row"
@@ -192,10 +194,19 @@
               </td>
             </tr>
           {% endif %}
+        {% endmacro %}
+        {% for card in allTutkimusCards %}
+          {% if card.sortTimestamp >= 1704067200000 %}{{ tutkimusRow(card, lbl) }}{% endif %}
         {% endfor %}
 
       </tbody>
     </table>
+    {# Vanhemmat tieteelliset rivit (< 2024) — JS siirtää toiminta-table-body:hin ennen alustusta #}
+    <template data-grid-defer="toiminta-table-body">
+      {% for card in allTutkimusCards %}
+        {% if card.sortTimestamp < 1704067200000 %}{{ tutkimusRow(card, lbl) }}{% endif %}
+      {% endfor %}
+    </template>
     <p class="media-table-empty" id="toiminta-empty" hidden>{{ lbl.empty }}</p>
   </div>
 
