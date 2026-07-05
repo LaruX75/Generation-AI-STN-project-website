@@ -23,127 +23,50 @@ pageHero: true
 
     <div class="gen-ai-tool-grid">
 
+      {% for app in sovellukset[lang] %}
       <div class="gen-ai-tool-card">
-        <div class="gen-ai-tool-card-image"><img src="https://strapi.gen-ai.fi/uploads/tm_screenshot_collage_1b4dfa5288.png" alt="Skärmdump av appen Undervisbar maskin" loading="lazy"></div>
-        <span class="gen-ai-tool-card-type">Maskininlärning</span>
-        <div class="gen-ai-tool-card-header"><span class="gen-ai-tool-badge gen-ai-tool-badge--active">Tillgänglig</span></div>
-        <h3 class="gen-ai-tool-card-title">Undervisbar maskin</h3>
-        <p class="gen-ai-tool-card-desc">Bygg egna mobilappar med maskininlärning. Eleven lär maskinen att känna igen bilder från egna data — utan programmering.</p>
+        {% if app.image %}
+          <div class="gen-ai-tool-card-image"><img src="{{ app.image }}" alt="{{ app.imageAlt }}" loading="lazy"></div>
+        {% else %}
+          <div class="gen-ai-tool-card-image gen-ai-tool-card-image--placeholder" aria-hidden="true">⚙️</div>
+        {% endif %}
+        <span class="gen-ai-tool-card-type">{{ app.type }}</span>
+        {% if app.status == "active" %}
+          <div class="gen-ai-tool-card-header"><span class="gen-ai-tool-badge gen-ai-tool-badge--active">Tillgänglig</span></div>
+        {% elif app.status == "beta" %}
+          <div class="gen-ai-tool-card-header"><span class="gen-ai-tool-badge gen-ai-tool-badge--beta">Beta</span></div>
+        {% elif app.status == "coming" %}
+          <div class="gen-ai-tool-card-header"><span class="gen-ai-tool-badge gen-ai-tool-badge--new">Kommer snart</span></div>
+        {% endif %}
+        <h3 class="gen-ai-tool-card-title">{{ app.title }}</h3>
+        <p class="gen-ai-tool-card-desc">{{ app.desc }}</p>
         <div class="gen-ai-tool-card-meta">
-          <span class="gen-ai-tool-tag">Maskininlärning</span>
-          <span class="gen-ai-tool-tag">K–12</span>
+          {% for tag in app.tags %}<span class="gen-ai-tool-tag">{{ tag }}</span>{% endfor %}
         </div>
         <div class="gen-ai-tool-card-links">
-          <a class="gen-ai-tool-card-about" href="https://www.gen-ai.fi/sv/tools/tm" target="_blank" rel="noopener">Beskrivning</a>
-          <a class="gen-ai-tool-card-link" href="https://tm.gen-ai.fi" target="_blank" rel="noopener">Prova appen ↗</a>
-          <a class="gen-ai-tool-card-curriculum" href="https://www.gen-ai.fi/sv/materials/classifier-unit" target="_blank" rel="noopener">📚 Bygg din egen mobilapp · 6 lektioner</a>
+          {% if app.aboutUrl %}
+            <a class="gen-ai-tool-card-about" href="{{ app.aboutUrl }}" target="_blank" rel="noopener">Beskrivning</a>
+          {% endif %}
+          {% if app.status == "coming" %}
+            <span class="gen-ai-tool-card-link gen-ai-tool-card-link--disabled">Kommer snart</span>
+          {% elif app.status == "beta" %}
+            <a class="gen-ai-tool-card-link" href="{{ app.appUrl }}" target="_blank" rel="noopener">Prova betan ↗</a>
+          {% else %}
+            <a class="gen-ai-tool-card-link" href="{{ app.appUrl }}" target="_blank" rel="noopener">Prova appen ↗</a>
+          {% endif %}
+          {% for lesson in app.lessons %}
+            <a class="gen-ai-tool-card-curriculum" href="{{ lesson.url }}" target="_blank" rel="noopener">{{ lesson.text }}</a>
+          {% endfor %}
         </div>
-        <div class="gen-ai-tool-card-legal">
-          <span class="gen-ai-tool-legal-badge">MIT</span>
-          <a class="gen-ai-tool-legal-link" href="https://tm.gen-ai.fi/about" target="_blank" rel="noopener">Dataskyddsbeskrivning</a>
-          <a class="gen-ai-tool-legal-link" href="https://github.com/knicos/genai-tm" target="_blank" rel="noopener">GitHub</a>
-        </div>
+        {% if app.license %}
+          <div class="gen-ai-tool-card-legal">
+            <span class="gen-ai-tool-legal-badge">{{ app.license }}</span>
+            {% if app.privacyUrl %}<a class="gen-ai-tool-legal-link" href="{{ app.privacyUrl }}" target="_blank" rel="noopener">Dataskyddsbeskrivning</a>{% endif %}
+            {% if app.githubUrl %}<a class="gen-ai-tool-legal-link" href="{{ app.githubUrl }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+          </div>
+        {% endif %}
       </div>
-
-      <div class="gen-ai-tool-card">
-        <div class="gen-ai-tool-card-image"><img src="https://strapi.gen-ai.fi/uploads/somekone_screenshot_collage_17da94877f.png" alt="Skärmdump av appen Sociala medier-maskin" loading="lazy"></div>
-        <span class="gen-ai-tool-card-type">Rekommendationsalgoritm</span>
-        <div class="gen-ai-tool-card-header"><span class="gen-ai-tool-badge gen-ai-tool-badge--active">Tillgänglig</span></div>
-        <h3 class="gen-ai-tool-card-title">Sociala medier-maskin</h3>
-        <p class="gen-ai-tool-card-desc">Hur rekommenderar sociala medier innehåll? En simulator för klassrum. Eleverna ser hur profilering formar flödet.</p>
-        <div class="gen-ai-tool-card-meta">
-          <span class="gen-ai-tool-tag">Sociala algoritmer</span>
-          <span class="gen-ai-tool-tag">Medieläskunnighet</span>
-        </div>
-        <div class="gen-ai-tool-card-links">
-          <a class="gen-ai-tool-card-about" href="https://www.gen-ai.fi/sv/tools/somekone" target="_blank" rel="noopener">Beskrivning</a>
-          <a class="gen-ai-tool-card-link" href="https://somekone.gen-ai.fi" target="_blank" rel="noopener">Prova appen ↗</a>
-          <a class="gen-ai-tool-card-curriculum" href="https://www.gen-ai.fi/sv/materials/somekone-unit" target="_blank" rel="noopener">📚 Sociala medier-maskinens lektioner · 5 lektioner</a>
-        </div>
-        <div class="gen-ai-tool-card-legal">
-          <span class="gen-ai-tool-legal-badge">MIT</span>
-          <a class="gen-ai-tool-legal-link" href="https://somekone.gen-ai.fi/about" target="_blank" rel="noopener">Dataskyddsbeskrivning</a>
-          <a class="gen-ai-tool-legal-link" href="https://github.com/knicos/genai-somekone" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-
-      <div class="gen-ai-tool-card">
-        <div class="gen-ai-tool-card-image"><img src="https://strapi.gen-ai.fi/uploads/llm_screenshot_collage_82a45dfa6f.png" alt="Skärmdump av appen Liten språkmaskin" loading="lazy"></div>
-        <span class="gen-ai-tool-card-type">Generativ AI</span>
-        <div class="gen-ai-tool-card-header"><span class="gen-ai-tool-badge gen-ai-tool-badge--beta">Beta</span></div>
-        <h3 class="gen-ai-tool-card-title">Liten språkmaskin</h3>
-        <p class="gen-ai-tool-card-desc">Träna en egen liten språkmodell i webbläsaren. Visar hur språkmodeller förutsäger nästa ord — inga programmeringskunskaper behövs.</p>
-        <div class="gen-ai-tool-card-meta">
-          <span class="gen-ai-tool-tag">Språkmodell</span>
-          <span class="gen-ai-tool-tag">Generativ AI</span>
-        </div>
-        <div class="gen-ai-tool-card-links">
-          <a class="gen-ai-tool-card-about" href="https://www.gen-ai.fi/sv/tools/lm" target="_blank" rel="noopener">Beskrivning</a>
-          <a class="gen-ai-tool-card-link" href="https://lm.gen-ai.fi" target="_blank" rel="noopener">Prova betan ↗</a>
-        </div>
-        <div class="gen-ai-tool-card-legal">
-          <span class="gen-ai-tool-legal-badge">MIT</span>
-          <a class="gen-ai-tool-legal-link" href="https://lm.gen-ai.fi/about" target="_blank" rel="noopener">Dataskyddsbeskrivning</a>
-          <a class="gen-ai-tool-legal-link" href="https://github.com/knicos/genai-lm" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-
-      <div class="gen-ai-tool-card">
-        <div class="gen-ai-tool-card-image"><img src="https://strapi.gen-ai.fi/uploads/breakable_machine_screenshot_1a3e444fbf.png" alt="Skärmdump av appen Söndermaskin" loading="lazy"></div>
-        <span class="gen-ai-tool-card-type">AI-säkerhet</span>
-        <div class="gen-ai-tool-card-header"><span class="gen-ai-tool-badge gen-ai-tool-badge--beta">Beta</span></div>
-        <h3 class="gen-ai-tool-card-title">Söndermaskin</h3>
-        <p class="gen-ai-tool-card-desc">Tävla med klasskompisar om vem som lyckas lura AI:n. Lär ut om AI-systems sårbarheter och begränsningar.</p>
-        <div class="gen-ai-tool-card-meta">
-          <span class="gen-ai-tool-tag">Adversariella exempel</span>
-          <span class="gen-ai-tool-tag">AI-säkerhet</span>
-        </div>
-        <div class="gen-ai-tool-card-links">
-          <a class="gen-ai-tool-card-about" href="https://www.gen-ai.fi/sv/tools/bm" target="_blank" rel="noopener">Beskrivning</a>
-          <a class="gen-ai-tool-card-link" href="https://spoof.gen-ai.fi" target="_blank" rel="noopener">Prova betan ↗</a>
-        </div>
-        <div class="gen-ai-tool-card-legal">
-          <span class="gen-ai-tool-legal-badge">MIT</span>
-          <a class="gen-ai-tool-legal-link" href="https://spoof.gen-ai.fi/about" target="_blank" rel="noopener">Dataskyddsbeskrivning</a>
-        </div>
-      </div>
-
-      <div class="gen-ai-tool-card">
-        <div class="gen-ai-tool-card-image"><img src="https://strapi.gen-ai.fi/uploads/profilinggame_screenshot_collage_a58510867f.png" alt="Skärmdump av appen Profileringsspel" loading="lazy"></div>
-        <span class="gen-ai-tool-card-type">Integritet &amp; data</span>
-        <div class="gen-ai-tool-card-header"><span class="gen-ai-tool-badge gen-ai-tool-badge--beta">Beta</span></div>
-        <h3 class="gen-ai-tool-card-title">Profileringsspel</h3>
-        <p class="gen-ai-tool-card-desc">Lär dig hur digitala spår används för att bygga profiler. En spelbaserad klassrumsupplevelse om integritet och datainsamling.</p>
-        <div class="gen-ai-tool-card-meta">
-          <span class="gen-ai-tool-tag">Integritet</span>
-          <span class="gen-ai-tool-tag">Data</span>
-        </div>
-        <div class="gen-ai-tool-card-links">
-          <a class="gen-ai-tool-card-about" href="https://www.gen-ai.fi/sv/tools/profiling-game" target="_blank" rel="noopener">Beskrivning</a>
-          <a class="gen-ai-tool-card-link" href="https://classroom.gen-ai.fi" target="_blank" rel="noopener">Prova betan ↗</a>
-          <a class="gen-ai-tool-card-curriculum" href="https://www.gen-ai.fi/sv/materials/somekone-unit" target="_blank" rel="noopener">📚 Ingår i Sociala medier-maskinens lektioner</a>
-        </div>
-        <div class="gen-ai-tool-card-legal">
-          <span class="gen-ai-tool-legal-badge">MIT</span>
-          <a class="gen-ai-tool-legal-link" href="https://classroom.gen-ai.fi/about" target="_blank" rel="noopener">Dataskyddsbeskrivning</a>
-          <a class="gen-ai-tool-legal-link" href="https://github.com/knicos/genai-profiling" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-
-      <div class="gen-ai-tool-card">
-        <div class="gen-ai-tool-card-image gen-ai-tool-card-image--placeholder" aria-hidden="true">⚙️</div>
-        <span class="gen-ai-tool-card-type">Påverkansalgoritm</span>
-        <div class="gen-ai-tool-card-header"><span class="gen-ai-tool-badge gen-ai-tool-badge--new">Kommer snart</span></div>
-        <h3 class="gen-ai-tool-card-title">Manipuleringsspel</h3>
-        <p class="gen-ai-tool-card-desc">Kan du förändra människors beteende genom att forma flödet? Var plattformen och lär dig om algoritmer ur skaparens perspektiv.</p>
-        <div class="gen-ai-tool-card-meta">
-          <span class="gen-ai-tool-tag">Sociala algoritmer</span>
-          <span class="gen-ai-tool-tag">Kommer snart</span>
-        </div>
-        <div class="gen-ai-tool-card-links">
-          <span class="gen-ai-tool-card-link gen-ai-tool-card-link--disabled">Kommer snart</span>
-        </div>
-      </div>
+      {% endfor %}
 
     </div>
 
