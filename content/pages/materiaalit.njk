@@ -81,28 +81,20 @@ pageHero: true
     <h2 class="mat-section-heading">Opetuskokonaisuudet</h2>
     <div class="mat-curricula-grid">
 
-      <div class="mat-curricula-card">
-        <span class="gen-ai-tool-card-type">Opetuskokonaisuus</span>
-        <h3 class="mat-curricula-title">Tee oma mobiiliappi</h3>
-        <p class="mat-curricula-desc">Valmis 6 oppitunnin kokonaisuus Opetettava kone -sovellukselle. Oppilaat rakentavat oman koneoppimiseen perustuvan mobiiliapplikaation — ilman ohjelmointia.</p>
-        <div class="mat-curricula-meta">
-          <span class="gen-ai-tool-tag">6 oppituntia</span>
-          <span class="gen-ai-tool-tag">Opetettava kone</span>
+      {% for unit in oppimateriaalit %}
+        {% if lang in unit.lang %}
+        <div class="mat-curricula-card">
+          <span class="gen-ai-tool-card-type">{{ unit.typeLabel[lang] }}</span>
+          <h3 class="mat-curricula-title">{{ unit.title[lang] }}</h3>
+          <p class="mat-curricula-desc">{{ unit.desc[lang] }}</p>
+          <div class="mat-curricula-meta">
+            {% if unit.duration %}<span class="gen-ai-tool-tag">{{ unit.duration }} {{ unit.durationLabel[lang] }}</span>{% endif %}
+            {% for tag in unit.appTags[lang] %}<span class="gen-ai-tool-tag">{{ tag }}</span>{% endfor %}
+          </div>
+          <a class="gen-ai-tool-card-link" href="{{ unit.url[lang] }}" target="_blank" rel="noopener">{{ unit.linkLabel[lang] }}</a>
         </div>
-        <a class="gen-ai-tool-card-link" href="https://www.gen-ai.fi/fi/materials/classifier-unit" target="_blank" rel="noopener">Avaa oppimateriaali ↗</a>
-      </div>
-
-      <div class="mat-curricula-card">
-        <span class="gen-ai-tool-card-type">Opetuskokonaisuus</span>
-        <h3 class="mat-curricula-title">Somekone oppitunnit</h3>
-        <p class="mat-curricula-desc">Valmis 5 oppitunnin kokonaisuus Somekone- ja Profilointipeli-sovelluksille. Oppilaat tutkivat somealgoritmin toimintaa ja tietosuojakysymyksiä.</p>
-        <div class="mat-curricula-meta">
-          <span class="gen-ai-tool-tag">5 oppituntia</span>
-          <span class="gen-ai-tool-tag">Somekone</span>
-          <span class="gen-ai-tool-tag">Profilointipeli</span>
-        </div>
-        <a class="gen-ai-tool-card-link" href="https://www.gen-ai.fi/fi/materials/somekone-unit" target="_blank" rel="noopener">Avaa oppimateriaali ↗</a>
-      </div>
+        {% endif %}
+      {% endfor %}
 
     </div>
   </div>

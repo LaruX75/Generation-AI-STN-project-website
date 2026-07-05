@@ -81,28 +81,20 @@ pageHero: true
     <h2 class="mat-section-heading">Teaching Units</h2>
     <div class="mat-curricula-grid">
 
-      <div class="mat-curricula-card">
-        <span class="gen-ai-tool-card-type">Teaching Unit</span>
-        <h3 class="mat-curricula-title">Build Your Own Mobile App</h3>
-        <p class="mat-curricula-desc">A complete 6-lesson unit for the Teachable Machine app. Students build their own machine learning-based mobile application — no coding required.</p>
-        <div class="mat-curricula-meta">
-          <span class="gen-ai-tool-tag">6 lessons</span>
-          <span class="gen-ai-tool-tag">Teachable Machine</span>
+      {% for unit in oppimateriaalit %}
+        {% if lang in unit.lang %}
+        <div class="mat-curricula-card">
+          <span class="gen-ai-tool-card-type">{{ unit.typeLabel[lang] }}</span>
+          <h3 class="mat-curricula-title">{{ unit.title[lang] }}</h3>
+          <p class="mat-curricula-desc">{{ unit.desc[lang] }}</p>
+          <div class="mat-curricula-meta">
+            {% if unit.duration %}<span class="gen-ai-tool-tag">{{ unit.duration }} {{ unit.durationLabel[lang] }}</span>{% endif %}
+            {% for tag in unit.appTags[lang] %}<span class="gen-ai-tool-tag">{{ tag }}</span>{% endfor %}
+          </div>
+          <a class="gen-ai-tool-card-link" href="{{ unit.url[lang] }}" target="_blank" rel="noopener">{{ unit.linkLabel[lang] }}</a>
         </div>
-        <a class="gen-ai-tool-card-link" href="https://www.gen-ai.fi/en/materials/classifier-unit" target="_blank" rel="noopener">Open learning material ↗</a>
-      </div>
-
-      <div class="mat-curricula-card">
-        <span class="gen-ai-tool-card-type">Teaching Unit</span>
-        <h3 class="mat-curricula-title">Social Media Machine Lessons</h3>
-        <p class="mat-curricula-desc">A complete 5-lesson unit for the Social Media Machine and Profiling Game apps. Students explore how social algorithms work and privacy issues.</p>
-        <div class="mat-curricula-meta">
-          <span class="gen-ai-tool-tag">5 lessons</span>
-          <span class="gen-ai-tool-tag">Social Media Machine</span>
-          <span class="gen-ai-tool-tag">Profiling Game</span>
-        </div>
-        <a class="gen-ai-tool-card-link" href="https://www.gen-ai.fi/en/materials/somekone-unit" target="_blank" rel="noopener">Open learning material ↗</a>
-      </div>
+        {% endif %}
+      {% endfor %}
 
     </div>
   </div>

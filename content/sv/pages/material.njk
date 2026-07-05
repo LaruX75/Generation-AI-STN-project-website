@@ -81,28 +81,20 @@ pageHero: true
     <h2 class="mat-section-heading">Undervisningsenheter</h2>
     <div class="mat-curricula-grid">
 
-      <div class="mat-curricula-card">
-        <span class="gen-ai-tool-card-type">Undervisningsenhet</span>
-        <h3 class="mat-curricula-title">Bygg din egen mobilapp</h3>
-        <p class="mat-curricula-desc">En komplett enhet med 6 lektioner för appen Undervisbar maskin. Eleverna bygger en egen mobilapplikation baserad på maskininlärning — utan programmering.</p>
-        <div class="mat-curricula-meta">
-          <span class="gen-ai-tool-tag">6 lektioner</span>
-          <span class="gen-ai-tool-tag">Undervisbar maskin</span>
+      {% for unit in oppimateriaalit %}
+        {% if lang in unit.lang %}
+        <div class="mat-curricula-card">
+          <span class="gen-ai-tool-card-type">{{ unit.typeLabel[lang] }}</span>
+          <h3 class="mat-curricula-title">{{ unit.title[lang] }}</h3>
+          <p class="mat-curricula-desc">{{ unit.desc[lang] }}</p>
+          <div class="mat-curricula-meta">
+            {% if unit.duration %}<span class="gen-ai-tool-tag">{{ unit.duration }} {{ unit.durationLabel[lang] }}</span>{% endif %}
+            {% for tag in unit.appTags[lang] %}<span class="gen-ai-tool-tag">{{ tag }}</span>{% endfor %}
+          </div>
+          <a class="gen-ai-tool-card-link" href="{{ unit.url[lang] }}" target="_blank" rel="noopener">{{ unit.linkLabel[lang] }}</a>
         </div>
-        <a class="gen-ai-tool-card-link" href="https://www.gen-ai.fi/sv/materials/classifier-unit" target="_blank" rel="noopener">Öppna läromedel ↗</a>
-      </div>
-
-      <div class="mat-curricula-card">
-        <span class="gen-ai-tool-card-type">Undervisningsenhet</span>
-        <h3 class="mat-curricula-title">Sociala medier-maskinens lektioner</h3>
-        <p class="mat-curricula-desc">En komplett enhet med 5 lektioner för apparna Sociala medier-maskin och Profileringsspel. Eleverna utforskar hur sociala algoritmer fungerar och integritetsfrågor.</p>
-        <div class="mat-curricula-meta">
-          <span class="gen-ai-tool-tag">5 lektioner</span>
-          <span class="gen-ai-tool-tag">Sociala medier-maskin</span>
-          <span class="gen-ai-tool-tag">Profileringsspel</span>
-        </div>
-        <a class="gen-ai-tool-card-link" href="https://www.gen-ai.fi/sv/materials/somekone-unit" target="_blank" rel="noopener">Öppna läromedel ↗</a>
-      </div>
+        {% endif %}
+      {% endfor %}
 
     </div>
   </div>
