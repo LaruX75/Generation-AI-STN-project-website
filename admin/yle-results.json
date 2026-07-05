@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-07-04T10:37:16.998Z",
+  "fetchedAt": "2026-07-05T07:52:37.655Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-05T03:30:35Z",
+      "title": "Vähän tunnettu monimiljonääri osti Ylen lomasaaren ja uskoo, että tekoäly mullistaa kaiken – hyppäsimme kyytiin",
+      "url": "https://yle.fi/a/74-20231795",
+      "lead": "Rattia kääntää mies, joka vaurastui isolla kaupalla, viljelee huumoria ja uskoo että tekoäly mullistaa kaiken."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-04T02:20:35Z",
@@ -120,13 +127,6 @@
       "title": "Näitkö kuvan kauniista naisesta MM-katsomossa? Hän saattoi olla tekoälyn luomus",
       "url": "https://yle.fi/a/74-20232988",
       "lead": "Tekoälyllä tehdyt kuvat jalka­pallo­joukkueiden ”naisfaneista” leviävät räjähdys­mäisesti sosiaalisessa mediassa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-23T04:19:48Z",
-      "title": "Guardian: HR-konsultti voitti oikeudessa AI-asianajajan avulla",
-      "url": "https://yle.fi/a/74-20232827",
-      "lead": "Tekoäly hoiti kaiken oikeudenkäyntiä edeltävän oikeudellisen työn. Itse oikeudenkäynnissä asiakasta edusti kuitenkin ihmisasianajaja."
     },
     {
       "personName": "tekoäly",
