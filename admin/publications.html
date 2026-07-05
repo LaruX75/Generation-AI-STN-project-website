@@ -85,11 +85,43 @@
     .code-select.is-dirty { border-color: #f59e0b; background: #fffbeb; }
     .doi-link { font-size: 11px; color: #2563eb; text-decoration: none; }
     .doi-link:hover { text-decoration: underline; }
+    .action-edit {
+      background: none; border: none; cursor: pointer; padding: 3px 6px;
+      color: #94a3b8; border-radius: 4px; font-size: 13px; line-height: 1;
+    }
+    .action-edit:hover { background: #dbeafe; color: #2563eb; }
     .action-delete {
       background: none; border: none; cursor: pointer; padding: 3px 6px;
       color: #94a3b8; border-radius: 4px; font-size: 13px; line-height: 1;
     }
     .action-delete:hover { background: #fee2e2; color: #dc2626; }
+
+    /* ── Edit modal ──────────────────────────────────────────────── */
+    #edit-modal {
+      display: none; position: fixed; inset: 0; z-index: 10000;
+      background: rgba(0,0,0,.45); align-items: center; justify-content: center;
+    }
+    #edit-modal.open { display: flex; }
+    #edit-card {
+      background: #fff; border-radius: 10px; padding: 24px;
+      width: 560px; max-width: calc(100vw - 32px); max-height: 90vh; overflow-y: auto;
+      box-shadow: 0 8px 32px rgba(0,0,0,.22);
+    }
+    #edit-card h3 { margin: 0 0 16px; font-size: 14px; font-weight: 700; color: #1e293b; }
+    .edit-field { margin-bottom: 14px; }
+    .edit-field label { display: block; font-size: 11px; font-weight: 600; color: #64748b; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .05em; }
+    .edit-field input, .edit-field select, .edit-field textarea {
+      width: 100%; padding: 7px 10px; border: 1px solid #cbd5e1; border-radius: 5px;
+      font-size: 13px; font-family: inherit; color: #1e293b; background: #fff;
+    }
+    .edit-field input:focus, .edit-field select:focus, .edit-field textarea:focus {
+      outline: none; border-color: #3b82f6; box-shadow: 0 0 0 2px #bfdbfe;
+    }
+    .edit-field textarea { resize: vertical; min-height: 60px; }
+    .edit-row { display: flex; gap: 12px; }
+    .edit-row .edit-field { flex: 1; }
+    .edit-row .edit-field--narrow { flex: 0 0 110px; }
+    .edit-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 18px; }
     .unsaved-dot { display: inline-block; width: 7px; height: 7px; background: #f59e0b; border-radius: 50%; margin-left: 5px; }
     #empty-row td { text-align: center; color: #94a3b8; padding: 32px; }
 
@@ -170,6 +202,46 @@
   <span class="save-msg" id="save-msg">Tallentamattomia muutoksia</span>
   <button id="discard-btn" onclick="discardChanges()">Hylkää</button>
   <button id="save-btn" onclick="saveChanges()">Tallenna GitHubiin</button>
+</div>
+
+<div id="edit-modal" onclick="editModalBgClick(event)">
+  <div id="edit-card">
+    <h3>Muokkaa julkaisua</h3>
+    <div class="edit-field">
+      <label for="ef-title">Otsikko</label>
+      <textarea id="ef-title" rows="3"></textarea>
+    </div>
+    <div class="edit-field">
+      <label for="ef-authors">Tekijät</label>
+      <input type="text" id="ef-authors">
+    </div>
+    <div class="edit-field">
+      <label for="ef-venue">Julkaisupaikka</label>
+      <input type="text" id="ef-venue">
+    </div>
+    <div class="edit-row">
+      <div class="edit-field edit-field--narrow">
+        <label for="ef-year">Vuosi</label>
+        <input type="number" id="ef-year" min="2000" max="2099">
+      </div>
+      <div class="edit-field">
+        <label for="ef-code">OKM-koodi</label>
+        <select id="ef-code"></select>
+      </div>
+    </div>
+    <div class="edit-field">
+      <label for="ef-doi">DOI</label>
+      <input type="text" id="ef-doi" placeholder="10.xxxx/…">
+    </div>
+    <div class="edit-field">
+      <label for="ef-url">URL (jos ei DOI)</label>
+      <input type="url" id="ef-url" placeholder="https://…">
+    </div>
+    <div class="edit-actions">
+      <button class="btn btn-secondary" onclick="closeEdit()">Peruuta</button>
+      <button class="btn btn-primary" onclick="saveEdit()">Tallenna</button>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -320,6 +392,7 @@ function renderTable() {
       <td class="td-venue">${esc(truncate(p.venue || "", 60))}</td>
       <td class="td-link">${doiHtml}</td>
       <td class="td-actions">
+        <button class="action-edit" data-id="${esc(p.id)}" onclick="openEdit(this.dataset.id)" title="Muokkaa julkaisua">✏</button>
         <button class="action-delete" data-id="${esc(p.id)}" onclick="deleteRow(this)" title="Poista julkaisu">🗑</button>
       </td>
     </tr>`;
@@ -423,6 +496,53 @@ function esc(str) {
 function truncate(str, n) {
   return str.length > n ? str.slice(0, n) + "…" : str;
 }
+
+/* ── Edit modal ──────────────────────────────────────────────────────── */
+let editingId = null;
+
+function openEdit(id) {
+  const pub = publications.find(p => p.id === id);
+  if (!pub) return;
+  editingId = id;
+  document.getElementById("ef-title").value   = pub.title || "";
+  document.getElementById("ef-authors").value = pub.authorsText || "";
+  document.getElementById("ef-venue").value   = pub.venue || "";
+  document.getElementById("ef-year").value    = pub.year || "";
+  document.getElementById("ef-doi").value     = pub.doi || "";
+  document.getElementById("ef-url").value     = pub.url || "";
+  const codeSelect = document.getElementById("ef-code");
+  codeSelect.innerHTML = OKM_CODES.map(c =>
+    `<option value="${c}" ${c === (pub.code || "") ? "selected" : ""}>${c || "–"}</option>`
+  ).join("");
+  document.getElementById("edit-modal").classList.add("open");
+  document.getElementById("ef-title").focus();
+}
+
+function closeEdit() {
+  editingId = null;
+  document.getElementById("edit-modal").classList.remove("open");
+}
+
+function editModalBgClick(e) {
+  if (e.target === document.getElementById("edit-modal")) closeEdit();
+}
+
+function saveEdit() {
+  const pub = publications.find(p => p.id === editingId);
+  if (!pub) return;
+  pub.title       = document.getElementById("ef-title").value.trim();
+  pub.authorsText = document.getElementById("ef-authors").value.trim();
+  pub.venue       = document.getElementById("ef-venue").value.trim();
+  pub.year        = parseInt(document.getElementById("ef-year").value, 10) || pub.year;
+  pub.doi         = document.getElementById("ef-doi").value.trim();
+  pub.url         = document.getElementById("ef-url").value.trim();
+  pub.code        = document.getElementById("ef-code").value;
+  closeEdit();
+  markDirty();
+  renderTable();
+}
+
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeEdit(); });
 
 /* ── Boot ────────────────────────────────────────────────────────────── */
 tryAutoLogin();
