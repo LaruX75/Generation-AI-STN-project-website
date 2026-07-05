@@ -18,7 +18,8 @@ pageHero: true
   </div>
 </section>
 
-{% set tapahtumatItems = collections["tapahtumat"] | localizedItems(lang, page.url) %}
+{% set tapahtumatPosts = collections["tapahtumat"] | localizedItems(lang, page.url) %}
+{% set tapahtumatItems = tapahtumatPosts | mergeChronologicalCards(stakeholderPageData.projectItems or []) %}
 <div class="kb-tabs">
   {% set activeTab = "tapahtumat" %}
   {% include "partials/ajankohtaista-tabnav.njk" %}

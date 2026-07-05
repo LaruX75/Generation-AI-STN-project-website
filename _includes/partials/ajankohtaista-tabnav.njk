@@ -4,25 +4,25 @@
 
 {% if lang == "en" %}
   {% set _tabs = [
-    { k: "uutiset",    href: "/en/current-affairs/",              label: "News" },
-    { k: "tapahtumat", href: "/en/current-affairs/events/",       label: "Events" },
-    { k: "toiminta",   href: "/en/current-affairs/activities/",   label: "Project activities" },
-    { k: "julkaisut",  href: "/en/current-affairs/publications/", label: "Conferences and publications" }
+    { k: "uutiset",    href: "/en/current-affairs/",              label: "Media and news" },
+    { k: "tapahtumat", href: "/en/current-affairs/events/",       label: "Events and activities" },
+    { k: "toiminta",   href: "/en/current-affairs/activities/",   label: "Scientific activities" },
+    { k: "julkaisut",  href: "/en/current-affairs/publications/", label: "Publications" }
   ] %}
   {% set _navLabel = "Current affairs sections" %}
 {% elif lang == "sv" %}
   {% set _tabs = [
-    { k: "uutiset",    href: "/sv/aktuellt/",                  label: "Nyheter" },
-    { k: "tapahtumat", href: "/sv/aktuellt/evenemang/",        label: "Evenemang" },
-    { k: "toiminta",   href: "/sv/aktuellt/verksamhet/",       label: "Projektverksamhet" },
-    { k: "julkaisut",  href: "/sv/aktuellt/publikationer/",    label: "Konferenser och publikationer" }
+    { k: "uutiset",    href: "/sv/aktuellt/",                  label: "Media och nyheter" },
+    { k: "tapahtumat", href: "/sv/aktuellt/evenemang/",        label: "Evenemang och verksamhet" },
+    { k: "toiminta",   href: "/sv/aktuellt/verksamhet/",       label: "Vetenskaplig verksamhet" },
+    { k: "julkaisut",  href: "/sv/aktuellt/publikationer/",    label: "Publikationer" }
   ] %}
   {% set _navLabel = "Aktuellt-avsnitt" %}
 {% else %}
   {% set _tabs = [
-    { k: "uutiset",    href: "/ajankohtaista/",            label: "Uutiset" },
-    { k: "tapahtumat", href: "/ajankohtaista/tapahtumat/", label: "Tapahtumat" },
-    { k: "toiminta",   href: "/ajankohtaista/toiminta/",   label: "Toiminta" },
+    { k: "uutiset",    href: "/ajankohtaista/",            label: "Media ja uutiset" },
+    { k: "tapahtumat", href: "/ajankohtaista/tapahtumat/", label: "Tapahtumat ja toiminta" },
+    { k: "toiminta",   href: "/ajankohtaista/toiminta/",   label: "Tieteellinen toiminta" },
     { k: "julkaisut",  href: "/ajankohtaista/julkaisut/",  label: "Julkaisut" }
   ] %}
   {% set _navLabel = "Ajankohtaista-osiot" %}

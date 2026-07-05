@@ -3,14 +3,14 @@
 
 {% if lang == "en" %}
   {% set lbl = {
-    "heading": "Project activities", "search": "Search activities", "placeholder": "Search by title…",
+    "heading": "Scientific activities", "search": "Search activities", "placeholder": "Search by title…",
     "typeLabel": "Filter by type", "typeAll": "All types",
     "typePost": "Publications and reports", "typeStake": "Stakeholder collaboration",
     "typeConf": "Conferences", "typeTutkPost": "Scientific publications and presentations",
     "badgePost": "Publication", "badgeStake": "Stakeholder",
     "badgeConf": "Conference", "badgeTutkPost": "Scientific publication",
     "yrLabel": "Filter by year", "yrAll": "All years",
-    "aria": "Project activities", "ariaPag": "Result page",
+    "aria": "Scientific activities", "ariaPag": "Result page",
     "colDate": "Date", "colType": "Type", "colTitle": "Title / Topic", "colExtra": "Details", "colLink": "Link",
     "open": "Open", "na": "—", "empty": "No results.",
     "prev": "← Previous", "next": "Next →",
@@ -18,14 +18,14 @@
   } %}
 {% elif lang == "sv" %}
   {% set lbl = {
-    "heading": "Projektverksamhet", "search": "Sök verksamhet", "placeholder": "Sök på rubrik…",
+    "heading": "Vetenskaplig verksamhet", "search": "Sök verksamhet", "placeholder": "Sök på rubrik…",
     "typeLabel": "Filtrera efter typ", "typeAll": "Alla typer",
     "typePost": "Publikationer och rapporter", "typeStake": "Intressentsamarbete",
     "typeConf": "Konferenser", "typeTutkPost": "Vetenskapliga publikationer och presentationer",
     "badgePost": "Publikation", "badgeStake": "Intressent",
     "badgeConf": "Konferens", "badgeTutkPost": "Vetenskaplig publikation",
     "yrLabel": "Filtrera efter år", "yrAll": "Alla år",
-    "aria": "Projektverksamhet", "ariaPag": "Resultatsida",
+    "aria": "Vetenskaplig verksamhet", "ariaPag": "Resultatsida",
     "colDate": "Datum", "colType": "Typ", "colTitle": "Rubrik / Ämne", "colExtra": "Detaljer", "colLink": "Länk",
     "open": "Öppna", "na": "—", "empty": "Inga resultat.",
     "prev": "← Föregående", "next": "Nästa →",
@@ -33,14 +33,14 @@
   } %}
 {% else %}
   {% set lbl = {
-    "heading": "Toiminta", "search": "Hae toiminnasta", "placeholder": "Hae otsikolla…",
+    "heading": "Tieteellinen toiminta", "search": "Hae toiminnasta", "placeholder": "Hae otsikolla…",
     "typeLabel": "Suodata tyypeittäin", "typeAll": "Kaikki tyypit",
     "typePost": "Julkaisut ja raportit", "typeStake": "Sidosryhmäyhteistyö",
     "typeConf": "Konferenssit", "typeTutkPost": "Tieteelliset julkaisut ja esitykset",
     "badgePost": "Julkaisu", "badgeStake": "Sidosryhmä",
     "badgeConf": "Konferenssi", "badgeTutkPost": "Tieteellinen julkaisu",
     "yrLabel": "Suodata vuoden mukaan", "yrAll": "Kaikki vuodet",
-    "aria": "Toiminta", "ariaPag": "Tulossivu",
+    "aria": "Tieteellinen toiminta", "ariaPag": "Tulossivu",
     "colDate": "Päivämäärä", "colType": "Tyyppi", "colTitle": "Otsikko / Aihe", "colExtra": "Lisätiedot", "colLink": "Linkki",
     "open": "Avaa", "na": "—", "empty": "Ei tuloksia.",
     "prev": "← Edellinen", "next": "Seuraava →",
@@ -61,8 +61,6 @@
         <label for="toiminta-filter-type" class="sr-only">{{ lbl.typeLabel }}</label>
         <select id="toiminta-filter-type" class="media-table-filter" data-grid-filter="type">
           <option value="">{{ lbl.typeAll }}</option>
-          <option value="toiminta-post">{{ lbl.typePost }}</option>
-          <option value="toiminta-stakeholder">{{ lbl.typeStake }}</option>
           <option value="conference">{{ lbl.typeConf }}</option>
           <option value="tutkimus-post">{{ lbl.typeTutkPost }}</option>
         </select>

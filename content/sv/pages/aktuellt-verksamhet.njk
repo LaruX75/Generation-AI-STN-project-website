@@ -19,9 +19,8 @@ pageHero: true
   </div>
 </section>
 
-{% set projectPosts = collections["hankkeen-toiminta"] | localizedItems(lang, page.url) %}
 {% set researchPosts = collections["tutkimus"] | localizedItems(lang, page.url) %}
-{% set toimintaCards = projectPosts | mergeChronologicalCards(stakeholderPageData.projectItems or []) %}
+{% set tutkimusCards = researchPosts | mergeChronologicalCards(stakeholderPageData.researchItems or []) %}
 <div class="kb-tabs">
   {% set activeTab = "toiminta" %}
   {% include "partials/ajankohtaista-tabnav.njk" %}
