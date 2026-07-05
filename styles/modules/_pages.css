@@ -362,6 +362,12 @@
 }
 
 /* Research themes */
+.researcher-themes[id],
+.researcher-presentations[id],
+.researcher-publications[id] {
+  scroll-margin-top: var(--kb-header-height, 60px);
+}
+
 .researcher-themes {
   background: var(--global-palette7, #f0f4ec);
   padding: 4rem 1.5rem;
