@@ -1,4 +1,6 @@
 (function () {
+  var MQ_MOBILE = window.matchMedia('(max-width: 640px)');
+
   var LABELS = {
     fi: { expand: 'Näytä kaikki', collapse: 'Näytä vähemmän', unit: 'kpl' },
     en: { expand: 'Show all',     collapse: 'Show less',       unit: '' },
@@ -9,19 +11,31 @@
     return LABELS[document.documentElement.lang] || LABELS.fi;
   }
 
+  function getLimit() {
+    return MQ_MOBILE.matches ? 3 : 6;
+  }
+
   function init(el) {
+    var limit = getLimit();
     var items = Array.from(el.children);
-    if (items.length <= 3) return;
+    if (items.length <= limit) return;
 
     var total = items.length;
-    var lbl = getLabel();
+    var lbl   = getLabel();
     var countStr = lbl.unit ? total + ' ' + lbl.unit : String(total);
 
+    // Hide items beyond the visible limit
+    items.slice(limit).forEach(function (item) {
+      item.classList.add('truncate-hidden');
+    });
+
+    // Wrap in shell (needed for the gradient overlay)
     var shell = document.createElement('div');
     shell.className = 'truncate-shell';
     el.parentNode.insertBefore(shell, el);
     shell.appendChild(el);
 
+    // Footer with expand/collapse button
     var footer = document.createElement('div');
     footer.className = 'truncate-footer';
 
@@ -37,11 +51,14 @@
 
     btn.addEventListener('click', function () {
       var expanded = shell.classList.toggle('truncate-expanded');
-      btn.textContent = expanded ? btn.dataset.labelCollapse : btn.dataset.labelExpand;
-      btn.setAttribute('aria-expanded', String(expanded));
-      if (!expanded) {
+      if (expanded) {
+        items.slice(limit).forEach(function (item) { item.classList.remove('truncate-hidden'); });
+      } else {
+        items.slice(limit).forEach(function (item) { item.classList.add('truncate-hidden'); });
         shell.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
+      btn.textContent = expanded ? btn.dataset.labelCollapse : btn.dataset.labelExpand;
+      btn.setAttribute('aria-expanded', String(expanded));
     });
   }
 
