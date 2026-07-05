@@ -2,6 +2,13 @@
 permalink: /_headers
 eleventyExcludeFromCollections: true
 ---
+# Admin-sivut: löysempi CSP — Sveltia CMS tarvitsee unpkg.com:n ja GitHub-autentikoinnin
+/admin/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com https://github.com https://sveltia-cms-auth.fc4ydtm5bs.workers.dev https://raw.githubusercontent.com https://uploads.github.com; font-src 'self' data: https:; frame-src https://github.com; object-src 'none'; base-uri 'self'; form-action 'self' https://github.com;
+
 /*
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
