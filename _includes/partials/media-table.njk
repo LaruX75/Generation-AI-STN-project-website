@@ -1,5 +1,5 @@
 {% set allItems = mediaItems or [] %}
-{% set ivNewsItems = (institutionalVisibility.items or []) | deduplicateByTitle(allItems) %}
+{% set allMergedItems = allItems | mergeMediaChronological(institutionalVisibility.items or []) %}
 
 {% if lang == "en" %}
   {% set lbl = {
@@ -87,97 +87,98 @@
         </tr>
       </thead>
       <tbody id="media-table-body">
-        {% for post in allItems %}
-          {% set postSource = "hanke" %}
-          {% set postSourceLabel = lbl.hankeBadge %}
-          {% set _sc = (post.data.categories or []) %}
-          {% set _st = (post.data.tags or []) %}
-          {% if "YLE" in _sc or "Yle" in _sc or "yle" in _sc or "YLE" in _st or "Yle" in _st or "yle" in _st %}
-            {% set postSource = "yle" %}
-            {% set postSourceLabel = "Yle" %}
-          {% elif "MTV3" in _sc or "MTV Uutiset" in _sc or "MTV" in _sc or "mtv3" in _sc or "MTV3" in _st or "mtv3" in _st or "MTV" in _st %}
-            {% set postSource = "mtv" %}
-            {% set postSourceLabel = lbl.mtv %}
-          {% elif "Helsingin Sanomat" in _sc or "HS" in _sc or "Helsingin Sanomat" in _st or "HS" in _st %}
-            {% set postSource = "hs" %}
-            {% set postSourceLabel = lbl.hs %}
-          {% elif "Helsingin yliopisto" in _sc or "FCAI" in _sc or "Yliopistojen uutiset" in _sc or "Helsingin yliopisto" in _st or "FCAI" in _st %}
-            {% set postSource = "iv" %}
-            {% set postSourceLabel = lbl.iv %}
-          {% elif "Podcast" in _sc or "Podcast" in _st %}
-            {% set postSource = "podcast" %}
-            {% set postSourceLabel = lbl.podcast %}
-          {% elif "Muu media" in _sc or "Muu media" in _st %}
-            {% set postSource = "muu" %}
-            {% set postSourceLabel = lbl.muu %}
-          {% endif %}
-          <tr class="media-table-row"
-            data-source="{{ postSource }}"
-            data-year="{{ post.date | date('Y') }}"
-            data-search="{{ post.data.title | lower | default('') }}">
-            <td class="media-table-col--date">
-              <time datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date("d.m.Y") }}</time>
-            </td>
-            <td class="media-table-col--source">
-              <span class="media-table-source-badge media-table-source-badge--{{ postSource }}">{{ postSourceLabel }}</span>
-            </td>
-            <td class="media-table-col--title">
-              {% if post.url %}
-                <a href="{{ post.url }}" class="media-table-title-link" target="_blank" rel="noopener noreferrer">{{ post.data.title | default("—") }}<span class="sr-only"> {{ lbl.newTab }}</span></a>
-              {% else %}
-                {{ post.data.title | default("—") }}
-              {% endif %}
-            </td>
-            <td class="media-table-col--content media-table-col--mobile-hide">
-              {% if post.data.excerpt and post.data.excerpt != "[object Object]" %}
-                {{ post.data.excerpt | truncate(200) }}
-              {% else %}
-                <span class="media-table-na">{{ lbl.na }}</span>
-              {% endif %}
-            </td>
-            <td class="media-table-col--link media-table-col--mobile-hide">
-              {% if post.url %}
-                <a href="{{ post.url }}" class="media-table-link" aria-hidden="true" tabindex="-1" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;<span aria-hidden="true">↗</span></a>
-              {% else %}
-                <span class="media-table-na">—</span>
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
-        {% for item in ivNewsItems %}
-          {% if item.sourceLabel != "Helsingin yliopiston tutkimusportaali" %}
-          <tr class="media-table-row"
-            data-source="iv"
-            data-year="{{ item.sortDate | truncate(4, true, '') if item.sortDate else '' }}"
-            data-search="{{ item.title | lower | default('') }} {{ item.sourceLabel | lower | default('') }}">
-            <td class="media-table-col--date">
-              <time datetime="{{ item.sortDate | default('') }}">{{ item.dateLabel | default('—') }}</time>
-            </td>
-            <td class="media-table-col--source">
-              <span class="media-table-source-badge media-table-source-badge--iv">{{ item.sourceLabel | default('—') }}</span>
-            </td>
-            <td class="media-table-col--title">
-              {% if item.url %}
-                <a href="{{ item.url }}" class="media-table-title-link" target="_blank" rel="noopener">{{ item.title | default('—') }}<span class="sr-only"> {{ lbl.newTab }}</span></a>
-              {% else %}
-                {{ item.title | default('—') }}
-              {% endif %}
-            </td>
-            <td class="media-table-col--content media-table-col--mobile-hide">
-              {% if item.summary %}
-                {{ item.summary | truncate(200) }}
-              {% else %}
-                <span class="media-table-na">{{ lbl.na }}</span>
-              {% endif %}
-            </td>
-            <td class="media-table-col--link media-table-col--mobile-hide">
-              {% if item.url %}
-                <a href="{{ item.url }}" class="media-table-link" aria-hidden="true" tabindex="-1" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;<span aria-hidden="true">↗</span></a>
-              {% else %}
-                <span class="media-table-na">—</span>
-              {% endif %}
-            </td>
-          </tr>
+        {% for card in allMergedItems %}
+          {% if card.cardType == "post" %}
+            {% set post = card.post %}
+            {% set postSource = "hanke" %}
+            {% set postSourceLabel = lbl.hankeBadge %}
+            {% set _sc = (post.data.categories or []) %}
+            {% set _st = (post.data.tags or []) %}
+            {% if "YLE" in _sc or "Yle" in _sc or "yle" in _sc or "YLE" in _st or "Yle" in _st or "yle" in _st %}
+              {% set postSource = "yle" %}
+              {% set postSourceLabel = "Yle" %}
+            {% elif "MTV3" in _sc or "MTV Uutiset" in _sc or "MTV" in _sc or "mtv3" in _sc or "MTV3" in _st or "mtv3" in _st or "MTV" in _st %}
+              {% set postSource = "mtv" %}
+              {% set postSourceLabel = lbl.mtv %}
+            {% elif "Helsingin Sanomat" in _sc or "HS" in _sc or "Helsingin Sanomat" in _st or "HS" in _st %}
+              {% set postSource = "hs" %}
+              {% set postSourceLabel = lbl.hs %}
+            {% elif "Helsingin yliopisto" in _sc or "FCAI" in _sc or "Yliopistojen uutiset" in _sc or "Helsingin yliopisto" in _st or "FCAI" in _st %}
+              {% set postSource = "iv" %}
+              {% set postSourceLabel = lbl.iv %}
+            {% elif "Podcast" in _sc or "Podcast" in _st %}
+              {% set postSource = "podcast" %}
+              {% set postSourceLabel = lbl.podcast %}
+            {% elif "Muu media" in _sc or "Muu media" in _st %}
+              {% set postSource = "muu" %}
+              {% set postSourceLabel = lbl.muu %}
+            {% endif %}
+            <tr class="media-table-row"
+              data-source="{{ postSource }}"
+              data-year="{{ post.date | date('Y') }}"
+              data-search="{{ post.data.title | lower | default('') }}">
+              <td class="media-table-col--date">
+                <time datetime="{{ post.date | date('Y-m-d') }}">{{ post.date | date("d.m.Y") }}</time>
+              </td>
+              <td class="media-table-col--source">
+                <span class="media-table-source-badge media-table-source-badge--{{ postSource }}">{{ postSourceLabel }}</span>
+              </td>
+              <td class="media-table-col--title">
+                {% if post.url %}
+                  <a href="{{ post.url }}" class="media-table-title-link" target="_blank" rel="noopener noreferrer">{{ post.data.title | default("—") }}<span class="sr-only"> {{ lbl.newTab }}</span></a>
+                {% else %}
+                  {{ post.data.title | default("—") }}
+                {% endif %}
+              </td>
+              <td class="media-table-col--content media-table-col--mobile-hide">
+                {% if post.data.excerpt and post.data.excerpt != "[object Object]" %}
+                  {{ post.data.excerpt | truncate(200) }}
+                {% else %}
+                  <span class="media-table-na">{{ lbl.na }}</span>
+                {% endif %}
+              </td>
+              <td class="media-table-col--link media-table-col--mobile-hide">
+                {% if post.url %}
+                  <a href="{{ post.url }}" class="media-table-link" aria-hidden="true" tabindex="-1" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;<span aria-hidden="true">↗</span></a>
+                {% else %}
+                  <span class="media-table-na">—</span>
+                {% endif %}
+              </td>
+            </tr>
+          {% elif card.cardType == "iv" %}
+            {% set item = card.item %}
+            <tr class="media-table-row"
+              data-source="iv"
+              data-year="{{ item.sortDate | truncate(4, true, '') if item.sortDate else '' }}"
+              data-search="{{ item.title | lower | default('') }} {{ item.sourceLabel | lower | default('') }}">
+              <td class="media-table-col--date">
+                <time datetime="{{ item.sortDate | default('') }}">{{ item.dateLabel | default('—') }}</time>
+              </td>
+              <td class="media-table-col--source">
+                <span class="media-table-source-badge media-table-source-badge--iv">{{ item.sourceLabel | default('—') }}</span>
+              </td>
+              <td class="media-table-col--title">
+                {% if item.url %}
+                  <a href="{{ item.url }}" class="media-table-title-link" target="_blank" rel="noopener">{{ item.title | default('—') }}<span class="sr-only"> {{ lbl.newTab }}</span></a>
+                {% else %}
+                  {{ item.title | default('—') }}
+                {% endif %}
+              </td>
+              <td class="media-table-col--content media-table-col--mobile-hide">
+                {% if item.summary %}
+                  {{ item.summary | truncate(200) }}
+                {% else %}
+                  <span class="media-table-na">{{ lbl.na }}</span>
+                {% endif %}
+              </td>
+              <td class="media-table-col--link media-table-col--mobile-hide">
+                {% if item.url %}
+                  <a href="{{ item.url }}" class="media-table-link" aria-hidden="true" tabindex="-1" target="_blank" rel="noopener noreferrer">{{ lbl.open }}&nbsp;<span aria-hidden="true">↗</span></a>
+                {% else %}
+                  <span class="media-table-na">—</span>
+                {% endif %}
+              </td>
+            </tr>
           {% endif %}
         {% endfor %}
       </tbody>

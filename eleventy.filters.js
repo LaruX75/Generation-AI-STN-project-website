@@ -247,6 +247,31 @@ module.exports = function registerFilters(eleventyConfig) {
     });
   });
 
+  // Merges CMS media posts with IV news items into a single date-descending list.
+  // Filters out research-portal entries and deduplicates IV items against CMS titles.
+  eleventyConfig.addFilter("mergeMediaChronological", (cmsPosts, rawIvItems) => {
+    const posts = Array.isArray(cmsPosts) ? cmsPosts : [];
+    const seenTitles = new Set(
+      posts.map(p => String(p?.data?.title || "").toLowerCase().trim()).filter(Boolean)
+    );
+    const ivCards = (Array.isArray(rawIvItems) ? rawIvItems : [])
+      .filter(item => item?.sourceLabel !== "Helsingin yliopiston tutkimusportaali")
+      .filter(item => {
+        const t = String(item?.title || "").toLowerCase().trim();
+        return !t || !seenTitles.has(t);
+      })
+      .map(item => {
+        const ts = item?.sortDate ? Date.parse(`${item.sortDate}T00:00:00Z`) : Number.NEGATIVE_INFINITY;
+        return { cardType: "iv", item, sortTimestamp: Number.isNaN(ts) ? Number.NEGATIVE_INFINITY : ts };
+      });
+    const postCards = posts.map(post => {
+      const rawDate = post?.date instanceof Date ? post.date : new Date(post?.date);
+      const ts = Number.isNaN(rawDate.getTime()) ? Number.NEGATIVE_INFINITY : rawDate.getTime();
+      return { cardType: "post", post, sortTimestamp: ts };
+    });
+    return [...postCards, ...ivCards].sort((a, b) => b.sortTimestamp - a.sortTimestamp);
+  });
+
   eleventyConfig.addFilter("date", formatDate);
   eleventyConfig.addFilter("isHttpUrl", value => /^https?:\/\//i.test(String(value || "").trim()));
   eleventyConfig.addFilter("jsonLd", value => JSON.stringify(value, null, 2));
