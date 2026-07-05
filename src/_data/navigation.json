@@ -202,16 +202,8 @@
         "megamenu": true,
         "megamenuColumns": [
           {
-            "heading": "Resurssit",
-            "items": [
-              { "label": "Materiaalit", "url": "/materiaalit/", "target": "" },
-              { "label": "Opas: tietosuoja & sovellukset", "url": "/henkilotietojen-kasittely-alakoulussa/", "target": "" }
-            ]
-          },
-          {
             "heading": "Hanke",
             "items": [
-              { "label": "Hankkeen toiminta", "url": "/hankkeen-toiminta/", "target": "" },
               { "label": "Konsortio", "url": "/konsortio/", "target": "" },
               { "label": "SHIELD-ohjelma", "url": "/shield-ohjelma/", "target": "" }
             ]
