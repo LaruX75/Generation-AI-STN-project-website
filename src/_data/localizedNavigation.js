@@ -1,5 +1,7 @@
 const baseNavigation = require("./navigation.json");
 const buildTranslations = require("./translations.js");
+const stakeholderActivities = require("./stakeholderActivities.js");
+const HAS_RESEARCH_ITEMS = stakeholderActivities().researchItems.length > 0;
 
 const LABEL_OVERRIDES = {
   /* ── Top-level nav items ─────────────────────────────────────────────── */
@@ -25,6 +27,7 @@ const LABEL_OVERRIDES = {
   "Kategoriat":             { fi: "Kategoriat",           en: "Categories",              sv: "Kategorier" },
   "Tilaa":                  { fi: "Tilaa",                en: "Subscribe",               sv: "Prenumerera" },
   "Yhteys":                 { fi: "Yhteys",               en: "Contact",                 sv: "Kontakt" },
+  "Ohjelma ja verkosto":    { fi: "Ohjelma ja verkosto",  en: "Programme and network",   sv: "Program och nätverk" },
 
   /* ── App names ───────────────────────────────────────────────────────── */
   "Opetettava kone":        { fi: "Opetettava kone",      en: "Teachable Machine",       sv: "Undervisbar maskin" },
@@ -42,6 +45,9 @@ const LABEL_OVERRIDES = {
   "Tutkimus":               { fi: "Tutkimus",             en: "Research",                sv: "Forskning" },
   "Uutiskirje":             { fi: "Uutiskirje",           en: "Newsletter",              sv: "Nyhetsbrev" },
   "RSS-syöte":              { fi: "RSS-syöte",            en: "RSS feed",                sv: "RSS-flöde" },
+  "Hankkeen toiminta":      { fi: "Hankkeen toiminta",    en: "Project activities",      sv: "Projektaktiviteter" },
+  "Tutkimusteemat":         { fi: "Tutkimusteemat",       en: "Research themes",         sv: "Forskningsteman" },
+  "Esitelmät ja keynotet":  { fi: "Esitelmät ja keynotet", en: "Presentations and keynotes", sv: "Presentationer och keynotes" },
 
   /* ── External / misc items ───────────────────────────────────────────── */
   "50 myyttiä tekoälystä (PDF)": { fi: "50 myyttiä tekoälystä (PDF)", en: "50 myths about AI (PDF)", sv: "50 myter om AI (PDF)" },
@@ -64,6 +70,16 @@ const URL_OVERRIDES = {
   "/materiaalit/#tab-julkaisut":    { fi: "/materiaalit/#tab-julkaisut", en: "/en/materials/#tab-julkaisut", sv: "/sv/material/#tab-julkaisut" },
   "/en/activities/":                { fi: "/hankkeen-toiminta/",      en: "/en/activities/",            sv: "/sv/verksamhet/" },
   "/en/what-we-do/":                { fi: "/hankkeen-toiminta/",      en: "/en/activities/",            sv: "/sv/verksamhet/" },
+
+  /* ── Tutkijalle anchor links (per-language section IDs) ─────────────── */
+  "/tutkijalle/#teemat":            { fi: "/tutkijalle/#teemat",          en: "/en/research/#themes",              sv: "/sv/forskning/#teman" },
+  "/tutkijalle/#julkaisut":         { fi: "/tutkijalle/#julkaisut",       en: "/en/research/#publications",        sv: "/sv/forskning/#publikationer" },
+  "/tutkijalle/#esitelmat":         { fi: "/tutkijalle/#esitelmat",       en: "/en/research/#presentations",       sv: "/sv/forskning/#presentationer" },
+
+  /* ── Ajankohtaista sub-pages ─────────────────────────────────────────── */
+  "/ajankohtaista/tapahtumat/":     { fi: "/ajankohtaista/tapahtumat/",   en: "/en/current-affairs/events/",       sv: "/sv/aktuellt/evenemang/" },
+  "/ajankohtaista/toiminta/":       { fi: "/ajankohtaista/toiminta/",     en: "/en/current-affairs/activities/",   sv: "/sv/aktuellt/verksamhet/" },
+  "/ajankohtaista/julkaisut/":      { fi: "/ajankohtaista/julkaisut/",    en: "/en/current-affairs/publications/", sv: "/sv/aktuellt/publikationer/" },
 
   /* ── External gen-ai.fi tool pages ──────────────────────────────────── */
   "https://www.gen-ai.fi/fi/tools/tm":               { fi: "https://www.gen-ai.fi/fi/tools/tm",               en: "https://www.gen-ai.fi/en/tools/tm",               sv: "https://www.gen-ai.fi/sv/tools/tm" },
@@ -173,11 +189,13 @@ function localizeItem(item, locale, translations) {
     megamenuColumns: (item.megamenuColumns || []).map(column => ({
       ...column,
       heading: column.heading ? (LABEL_OVERRIDES[column.heading] ? (LABEL_OVERRIDES[column.heading][locale] || column.heading) : column.heading) : column.heading,
-      items: (column.items || []).map(sub => ({
-        ...sub,
-        label: getLocalizedLabel(sub.label, sub.url, locale, translations),
-        url: getLocalizedUrl(sub.url, locale, translations)
-      }))
+      items: (column.items || [])
+        .filter(sub => !sub.conditional || (sub.conditional === "hasResearchItems" && HAS_RESEARCH_ITEMS))
+        .map(sub => ({
+          ...sub,
+          label: getLocalizedLabel(sub.label, sub.url, locale, translations),
+          url: getLocalizedUrl(sub.url, locale, translations)
+        }))
     }))
   };
 }

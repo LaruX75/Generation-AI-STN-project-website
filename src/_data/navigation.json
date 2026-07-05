@@ -83,18 +83,25 @@
         "megamenu": true,
         "megamenuColumns": [
           {
-            "heading": "Julkaisut & tutkimus",
+            "heading": "Tutkimus",
             "items": [
+              { "label": "Tutkimusteemat", "url": "/tutkijalle/#teemat", "target": "" },
               { "label": "Tieteelliset julkaisut", "url": "/tutkijalle/#julkaisut", "target": "" },
-              { "label": "Ajankohtaista — tutkimus", "url": "/ajankohtaista/#tab-tutkimus", "target": "" }
+              { "label": "Esitelmät ja keynotet", "url": "/tutkijalle/#esitelmat", "target": "", "conditional": "hasResearchItems" }
             ]
           },
           {
-            "heading": "Hanke",
+            "heading": "Ohjelma ja verkosto",
             "items": [
               { "label": "SHIELD-ohjelma", "url": "/shield-ohjelma/", "target": "" },
-              { "label": "Konsortio", "url": "/konsortio/", "target": "" },
-              { "label": "Hankkeen toiminta", "url": "/hankkeen-toiminta/", "target": "" }
+              { "label": "Konsortio", "url": "/konsortio/", "target": "" }
+            ]
+          },
+          {
+            "heading": "Seuraa",
+            "items": [
+              { "label": "Ajankohtaista — tutkimus", "url": "/ajankohtaista/julkaisut/", "target": "" },
+              { "label": "Uutiskirje", "url": "/uutiskirje/", "target": "" }
             ]
           }
         ],
@@ -158,10 +165,10 @@
           {
             "heading": "Kategoriat",
             "items": [
-              { "label": "Media", "url": "/ajankohtaista/#tab-media", "target": "" },
-              { "label": "Tapahtumat", "url": "/ajankohtaista/#tab-tapahtumat", "target": "" },
-              { "label": "Hankkeen toiminta", "url": "/ajankohtaista/#tab-toiminta", "target": "" },
-              { "label": "Tutkimus", "url": "/ajankohtaista/#tab-tutkimus", "target": "" }
+              { "label": "Media", "url": "/ajankohtaista/", "target": "" },
+              { "label": "Tapahtumat", "url": "/ajankohtaista/tapahtumat/", "target": "" },
+              { "label": "Hankkeen toiminta", "url": "/ajankohtaista/toiminta/", "target": "" },
+              { "label": "Tutkimus", "url": "/ajankohtaista/julkaisut/", "target": "" }
             ]
           },
           {
