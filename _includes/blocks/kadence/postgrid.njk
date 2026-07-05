@@ -100,7 +100,7 @@
         <h2 class="kb-post-feed-title">{{ b.title }}</h2>
       </header>
     {% endif %}
-    <div class="kb-post-feed-grid">
+    <div class="kb-post-feed-grid" data-mobile-truncate>
       {% for post in items %}
         <article class="kb-post-card">
           {% if post.data.featuredImage %}
