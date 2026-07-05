@@ -101,7 +101,7 @@
           {
             "heading": "Seuraa",
             "items": [
-              { "label": "Ajankohtaista — tutkimus", "url": "/ajankohtaista/julkaisut/", "target": "" },
+              { "label": "Ajankohtaista — tutkimus", "url": "/ajankohtaista/toiminta/", "target": "" },
               { "label": "Uutiskirje", "url": "/uutiskirje/", "target": "" }
             ]
           }
@@ -166,10 +166,10 @@
           {
             "heading": "Kategoriat",
             "items": [
-              { "label": "Media", "url": "/ajankohtaista/", "target": "" },
-              { "label": "Tapahtumat", "url": "/ajankohtaista/tapahtumat/", "target": "" },
-              { "label": "Hankkeen toiminta", "url": "/ajankohtaista/toiminta/", "target": "" },
-              { "label": "Tutkimus", "url": "/ajankohtaista/julkaisut/", "target": "" }
+              { "label": "Media ja uutiset", "url": "/ajankohtaista/", "target": "" },
+              { "label": "Tapahtumat ja toiminta", "url": "/ajankohtaista/tapahtumat/", "target": "" },
+              { "label": "Tieteellinen toiminta", "url": "/ajankohtaista/toiminta/", "target": "" },
+              { "label": "Julkaisut", "url": "/ajankohtaista/julkaisut/", "target": "" }
             ]
           },
           {
