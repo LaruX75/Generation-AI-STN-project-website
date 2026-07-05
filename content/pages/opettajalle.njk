@@ -18,7 +18,7 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
 <section class="teacher-intro">
   <div class="teacher-intro-inner">
     <p class="teacher-intro-text">
-      Generation AI tarjoaa ilmaisia tekoälysovelluksia ja oppimateriaaleja suoraan luokkahuoneeseen — ei ohjelmointitaitoja, ei rekisteröitymistä.
+      Generation AI tarjoaa ilmaisia tekoälysovelluksia ja oppimateriaaleja suoraan luokkahuoneeseen — ei ohjelmointitaitoja tarvita.
     </p>
     <div class="teacher-intro-actions">
       <a class="teacher-intro-btn teacher-intro-btn--primary" href="https://www.gen-ai.fi/fi" target="_blank" rel="noopener">Avaa sovellukset gen-ai.fi:ssä ↗</a>
@@ -41,19 +41,11 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
   </div>
 </section>
 
-{# ── Miksi opettaa tekoälyä? ─────────────────────────────────────────────── #}
-<section class="teacher-why">
-  <div class="teacher-why-inner">
-    <h2 class="teacher-why-heading">Miksi opettaa tekoälyä?</h2>
-    <p class="teacher-why-text">Tekoäly ei ole taikuutta — se on ihmisten suunnittelemia järjestelmiä, jotka tekevät virheitä ja kantavat suunnittelijoidensa arvoja. Oppilaat, jotka ymmärtävät miten järjestelmät toimivat, voivat kyseenalaistaa, haastaa ja rakentaa niitä itse.</p>
-    <a class="teacher-why-cta" href="https://gen-ai.fi/fi/materials/basics" target="_blank" rel="noopener">Lue perusteopas →</a>
-  </div>
-</section>
-
-{# ── CEDE-malli ──────────────────────────────────────────────────────────── #}
+{# ── Miksi opettaa tekoälyä? + CEDE-malli ────────────────────────────────── #}
 <section class="teacher-cede">
   <div class="teacher-cede-inner">
-    <h2 class="teacher-cede-heading">Pedagoginen lähestymistapa: CEDE-malli</h2>
+    <h2 class="teacher-cede-heading">Miksi opettaa tekoälyä?</h2>
+    <p class="teacher-why-text">Tekoäly ei ole taikuutta — se on ihmisten suunnittelemia järjestelmiä, jotka tekevät virheitä ja kantavat suunnittelijoidensa arvoja. Oppilaat, jotka ymmärtävät miten järjestelmät toimivat, voivat kyseenalaistaa, haastaa ja rakentaa niitä itse.</p>
     <div class="teacher-cede-steps">
       <div class="teacher-cede-step">
         <span class="teacher-cede-num" aria-hidden="true">1</span>
@@ -76,7 +68,7 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
         <p class="teacher-cede-desc">Kuka hyötyy? Ketä voisi syrjiä? Mitä arvoja järjestelmä kantaa?</p>
       </div>
     </div>
-    <a class="teacher-cede-link" href="https://gen-ai.fi/fi/materials/basics" target="_blank" rel="noopener">Lue lisää CEDE-mallista perusteoppaasta →</a>
+    <a class="teacher-cede-link" href="https://gen-ai.fi/fi/materials/basics" target="_blank" rel="noopener">Lue perusteopas: tekoälyn perusteet ja CEDE-malli →</a>
   </div>
 </section>
 
@@ -110,24 +102,6 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
   </div>
 </section>
 
-{# ── Tutkittua ja palkittua ──────────────────────────────────────────────── #}
-<section class="teacher-recognition">
-  <div class="teacher-recognition-inner">
-    <span class="teacher-recognition-label">Tutkittua ja palkittua</span>
-    <div class="teacher-recognition-awards">
-      <div class="teacher-recognition-award">
-        <span class="teacher-recognition-award-text">EU Digital Skills Award<span class="teacher-recognition-award-year">2026</span></span>
-      </div>
-      <div class="teacher-recognition-award">
-        <span class="teacher-recognition-award-text">Best Open Educational Materials<span class="teacher-recognition-award-year">2025</span></span>
-      </div>
-      <div class="teacher-recognition-award">
-        <span class="teacher-recognition-award-text">Best Paper IEEE ICALT<span class="teacher-recognition-award-year">2024</span></span>
-      </div>
-    </div>
-  </div>
-</section>
-
 {# ── Sovellukset ─────────────────────────────────────────────────────────── #}
 <section class="teacher-tools">
   <div class="teacher-tools-inner">
@@ -136,21 +110,19 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
 
     <div class="teacher-tools-grid">
       {% for app in sovellukset[lang] %}
-        {% if app.featured %}
-        <div class="teacher-tool-card">
-          <h3 class="teacher-tool-name">{{ app.title }}</h3>
-          <div class="teacher-tool-tags">
-            {% for tag in app.tags %}<span class="gen-ai-tool-tag">{{ tag }}</span>{% endfor %}
-          </div>
-          <p class="teacher-tool-desc">{{ app.teacherDesc }}</p>
-          {% if app.appUrl %}
-            <a class="teacher-tool-link" href="{{ app.appUrl }}" target="_blank" rel="noopener">Avaa sovellus ↗</a>
-          {% endif %}
-          {% for lesson in app.lessons %}
-            <a class="teacher-tool-lesson" href="{{ lesson.url }}" target="_blank" rel="noopener">Oppitunnit →</a>
-          {% endfor %}
+      <div class="teacher-tool-card">
+        <h3 class="teacher-tool-name">{{ app.title }}</h3>
+        <div class="teacher-tool-tags">
+          {% for tag in app.tags %}<span class="gen-ai-tool-tag">{{ tag }}</span>{% endfor %}
         </div>
+        <p class="teacher-tool-desc">{{ app.teacherDesc }}</p>
+        {% if app.appUrl %}
+          <a class="teacher-tool-link" href="{{ app.appUrl }}" target="_blank" rel="noopener">Avaa sovellus ↗</a>
         {% endif %}
+        {% for lesson in app.lessons %}
+          <a class="teacher-tool-lesson" href="{{ lesson.url }}" target="_blank" rel="noopener">Oppitunnit →</a>
+        {% endfor %}
+      </div>
       {% endfor %}
     </div>
 
@@ -183,25 +155,13 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
   </div>
 </section>
 
-{# ── Taustaa hankkeesta ──────────────────────────────────────────────────── #}
+{# ── Yhteiskehittäminen ja tuki ───────────────────────────────────────────── #}
 <section class="teacher-about">
   <div class="teacher-about-inner">
     <h2 class="teacher-about-heading">Kehitämme sovelluksia ja materiaaleja yhdessä opettajien kanssa</h2>
     <p class="teacher-about-text">Hanke järjestää yhteissuunnitteluprojekteja esi- ja perusopetuksen opettajille ja opettajaopiskelijoille. Tavoitteena on, että oppijat ymmärtävät tekoälyyn liittyviä turvallisuuskysymyksiä sekä teknologioita kokeilujen ja keksimisen kautta.</p>
-    <p class="teacher-about-text">Kaikki sovellukset on suunniteltu skaalautuviksi — ne toimivat kaikilla laitteilla ilman asennusta tai rekisteröitymistä.</p>
-    <a class="teacher-about-link" href="/hankkeen-toiminta/">Lue lisää hankkeen toiminnasta →</a>
-  </div>
-</section>
-
-{# ── Tukiosio ────────────────────────────────────────────────────────────── #}
-<section class="teacher-support">
-  <div class="teacher-support-inner">
-    <h2 class="teacher-support-heading">Tarvitsetko apua käyttöönotossa?</h2>
-    <p class="teacher-support-desc">Autamme sovelluksen käyttöönottamisessa luokassasi. Voit myös ilmoittautua mukaan yhteissuunnitteluprojekteihin — kehitetään tekoälyopetusta yhdessä opettajien kanssa.</p>
-    <div class="teacher-support-actions">
-      <a class="teacher-support-btn" href="/ollaan-yhteydessa/">Ota yhteyttä</a>
-      <a class="teacher-support-btn teacher-support-btn--secondary" href="/ollaan-yhteydessa/">Ilmoittaudu mukaan</a>
-    </div>
+    <p class="teacher-about-text">Autamme sovelluksen käyttöönottamisessa luokassasi. Ota yhteyttä — kehitetään tekoälyopetusta yhdessä.</p>
+    <a class="teacher-support-btn" href="/ollaan-yhteydessa/">Ota yhteyttä</a>
   </div>
 </section>
 
