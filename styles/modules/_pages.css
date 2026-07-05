@@ -249,6 +249,12 @@
 .teacher-guide-inner {
   max-width: var(--global-content-narrow-width, 842px);
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+@media (max-width: 640px) {
+  .teacher-guide-inner { grid-template-columns: 1fr; }
 }
 .teacher-guide-card {
   background: #fff;
