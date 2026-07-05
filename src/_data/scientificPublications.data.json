@@ -2508,10 +2508,10 @@
   },
   {
     "id": "preprint-2026-rf315",
-    "code": "preprint",
+    "code": "",
     "year": 2026,
     "status": "Published",
-    "authorsText": "",
+    "authorsText": "Milka Sormunen,  Nicolas Pope, Elisa Silvennoinen, Matti Tedre",
     "title": "Operationalizing Child Rights in Educational Technology Design: A Case Example of Two AI Education Tools for K–12 Classrooms",
     "venue": "",
     "doi": "10.2139/ssrn.6278616",
@@ -3536,18 +3536,6 @@
     "venue": "ITK – Interaktiivinen tekniikka koulutuksessa 2024",
     "doi": "",
     "url": "https://researchportal.helsinki.fi/en/publications/4a4d41ab-9fe6-4300-977a-5d862ccd9abb",
-    "notes": ""
-  },
-  {
-    "id": "conferenceposter-2024-rf272",
-    "code": "conference-poster",
-    "year": 2024,
-    "status": "Published",
-    "authorsText": "",
-    "title": "Regional Ocean Forecasting with Hierarchical Graph Neural Networks",
-    "venue": "NeurIPS 2024 Workshop on Tackling Climate Change with Machine Learning, Vancouver, Canada, 15/12/2024",
-    "doi": "https://neurips.cc/virtual/2024/100541",
-    "url": "",
     "notes": ""
   },
   {
