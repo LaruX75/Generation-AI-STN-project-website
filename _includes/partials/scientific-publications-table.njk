@@ -248,6 +248,16 @@
     search.dispatchEvent(new Event("input", { bubbles: true }));
   }
 
+  function applyCatFilterFromUrl() {
+    var params = new URLSearchParams(window.location.search);
+    var cat = params.get("scipub-cat");
+    if (!cat) return;
+    var select = document.getElementById("scipub-filter-cat");
+    if (!select) return;
+    select.value = cat;
+    select.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+
   function getSelectedFormat() {
     return formatSelect ? formatSelect.value : "bibtex";
   }
@@ -378,10 +388,14 @@
   });
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", applyAuthorFilterFromUrl);
+    document.addEventListener("DOMContentLoaded", function () {
+      applyAuthorFilterFromUrl();
+      applyCatFilterFromUrl();
+    });
     return;
   }
 
   applyAuthorFilterFromUrl();
+  applyCatFilterFromUrl();
 }());
 </script>

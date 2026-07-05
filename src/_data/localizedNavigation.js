@@ -48,6 +48,7 @@ const LABEL_OVERRIDES = {
   "Hankkeen toiminta":      { fi: "Hankkeen toiminta",    en: "Project activities",      sv: "Projektaktiviteter" },
   "Tutkimusteemat":         { fi: "Tutkimusteemat",       en: "Research themes",         sv: "Forskningsteman" },
   "Esitelmät ja keynotet":  { fi: "Esitelmät ja keynotet", en: "Presentations and keynotes", sv: "Presentationer och keynotes" },
+  "Vertaisarvioidut artikkelit": { fi: "Vertaisarvioidut artikkelit", en: "Peer-reviewed articles", sv: "Referentgranskade artiklar" },
 
   /* ── External / misc items ───────────────────────────────────────────── */
   "50 myyttiä tekoälystä (PDF)": { fi: "50 myyttiä tekoälystä (PDF)", en: "50 myths about AI (PDF)", sv: "50 myter om AI (PDF)" },
@@ -72,9 +73,10 @@ const URL_OVERRIDES = {
   "/en/what-we-do/":                { fi: "/hankkeen-toiminta/",      en: "/en/activities/",            sv: "/sv/verksamhet/" },
 
   /* ── Tutkijalle anchor links (per-language section IDs) ─────────────── */
-  "/tutkijalle/#teemat":            { fi: "/tutkijalle/#teemat",          en: "/en/research/#themes",              sv: "/sv/forskning/#teman" },
-  "/tutkijalle/#julkaisut":         { fi: "/tutkijalle/#julkaisut",       en: "/en/research/#publications",        sv: "/sv/forskning/#publikationer" },
-  "/tutkijalle/#esitelmat":         { fi: "/tutkijalle/#esitelmat",       en: "/en/research/#presentations",       sv: "/sv/forskning/#presentationer" },
+  "/tutkijalle/#teemat":                      { fi: "/tutkijalle/#teemat",                     en: "/en/research/#themes",                     sv: "/sv/forskning/#teman" },
+  "/tutkijalle/#julkaisut":                   { fi: "/tutkijalle/#julkaisut",                  en: "/en/research/#publications",               sv: "/sv/forskning/#publikationer" },
+  "/tutkijalle/#esitelmat":                   { fi: "/tutkijalle/#esitelmat",                  en: "/en/research/#presentations",              sv: "/sv/forskning/#presentationer" },
+  "/tutkijalle/?scipub-cat=a#julkaisut":      { fi: "/tutkijalle/?scipub-cat=a#julkaisut",     en: "/en/research/?scipub-cat=a#publications",  sv: "/sv/forskning/?scipub-cat=a#publikationer" },
 
   /* ── Ajankohtaista sub-pages ─────────────────────────────────────────── */
   "/ajankohtaista/tapahtumat/":     { fi: "/ajankohtaista/tapahtumat/",   en: "/en/current-affairs/events/",       sv: "/sv/aktuellt/evenemang/" },

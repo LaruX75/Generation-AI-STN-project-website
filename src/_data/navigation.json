@@ -87,6 +87,7 @@
             "items": [
               { "label": "Tutkimusteemat", "url": "/tutkijalle/#teemat", "target": "" },
               { "label": "Tieteelliset julkaisut", "url": "/tutkijalle/#julkaisut", "target": "" },
+              { "label": "Vertaisarvioidut artikkelit", "url": "/tutkijalle/?scipub-cat=a#julkaisut", "target": "" },
               { "label": "Esitelmät ja keynotet", "url": "/tutkijalle/#esitelmat", "target": "", "conditional": "hasResearchItems" }
             ]
           },
