@@ -305,6 +305,92 @@
   }
 }
 
+/* Teacher tool card extras (tags + lesson link + all-apps CTA) */
+.teacher-tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.1rem;
+}
+.teacher-tool-lesson {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--global-palette1, #314e25);
+  text-decoration: none;
+}
+.teacher-tool-lesson:hover { text-decoration: underline; }
+
+.teacher-tools-cta {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+.teacher-tools-all-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: var(--global-palette2, #446d33);
+  color: #fff;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.teacher-tools-all-btn:hover { background: var(--global-palette1, #314e25); color: #fff; }
+
+/* Yhteiskehittäminen CTA button */
+.teacher-about-cta {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.65rem 1.5rem;
+  background: var(--global-palette2, #446d33);
+  color: #fff;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.teacher-about-cta:hover { background: var(--global-palette1, #314e25); color: #fff; }
+
+/* Newsletter CTA at bottom of teacher page */
+.teacher-newsletter {
+  background: var(--global-palette7, #f0f4ec);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+}
+.teacher-newsletter-inner {
+  max-width: 560px;
+  margin: 0 auto;
+}
+.teacher-newsletter-heading {
+  font-size: clamp(1.2rem, 1.1rem + 0.35vw, 1.45rem);
+  color: var(--global-palette1, #314e25);
+  margin: 0 0 0.75rem;
+}
+.teacher-newsletter-desc {
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+.teacher-newsletter-btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  background: var(--global-palette2, #446d33);
+  color: #fff;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.teacher-newsletter-btn:hover { background: var(--global-palette1, #314e25); color: #fff; }
+
+@media (max-width: 700px) {
+  .teacher-newsletter { padding: 2.5rem 1rem; }
+}
+
 /* ── Tutkijalle page ─────────────────────────────────────────────────────── */
 
 /* Intro */

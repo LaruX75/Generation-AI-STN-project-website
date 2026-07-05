@@ -9,6 +9,7 @@ permalink: /opettajalle/
 status: publish
 sourceType: pages
 layout: layouts/page.njk
+lang: fi
 pageHero: true
 heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnotized_computer_hyper_reali_7e5fceac-75e4-4087-8364-b0ae1a8e0b00.png"
 ---
@@ -32,21 +33,21 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     <h2 class="teacher-steps-heading">Aloita tästä</h2>
     <ol class="teacher-steps-list">
       <li class="teacher-step">
-        <div class="teacher-step-num">1</div>
+        <div class="teacher-step-num" aria-hidden="true">1</div>
         <div class="teacher-step-body">
           <h3 class="teacher-step-title">Valitse sovellus</h3>
           <p class="teacher-step-desc">Kuusi ilmaista sovellusta — valitse oppitunnin teemaan sopiva. Kaikki toimivat selaimessa ilman asennusta.</p>
         </div>
       </li>
       <li class="teacher-step">
-        <div class="teacher-step-num">2</div>
+        <div class="teacher-step-num" aria-hidden="true">2</div>
         <div class="teacher-step-body">
           <h3 class="teacher-step-title">Kokeile itse ensin</h3>
           <p class="teacher-step-desc">Jokainen sovellus on suunniteltu intuitiiviseksi — viisi minuuttia riittää ensikokemusten saamiseen.</p>
         </div>
       </li>
       <li class="teacher-step">
-        <div class="teacher-step-num">3</div>
+        <div class="teacher-step-num" aria-hidden="true">3</div>
         <div class="teacher-step-body">
           <h3 class="teacher-step-title">Vie luokkaan</h3>
           <p class="teacher-step-desc">Lataa valmiit tuntisuunnitelmat ja oppimateriaalit, tai käytä sovelluksia suoraan ohjattuna harjoituksena.</p>
@@ -59,47 +60,31 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
 {# ── Sovellukset ─────────────────────────────────────────────────────────── #}
 <section class="teacher-tools">
   <div class="teacher-tools-inner">
-    <h2 class="teacher-tools-heading">Kaikki kuusi sovellusta</h2>
-    <p class="teacher-tools-lead">Kaikki sovellukset ovat maksuttomia, selainpohjaisia ja suunniteltu esi- ja perusopetukseen.</p>
+    <h2 class="teacher-tools-heading">Sovellukset luokkahuoneeseen</h2>
+    <p class="teacher-tools-lead">Maksuttomia, selainpohjaisia tekoälysovelluksia esi- ja perusopetukseen — ei asennuksia, ei rekisteröitymistä.</p>
 
     <div class="teacher-tools-grid">
+      {% for app in sovellukset[lang] %}
+        {% if app.featured %}
+        <div class="teacher-tool-card">
+          <h3 class="teacher-tool-name">{{ app.title }}</h3>
+          <div class="teacher-tool-tags">
+            {% for tag in app.tags %}<span class="gen-ai-tool-tag">{{ tag }}</span>{% endfor %}
+          </div>
+          <p class="teacher-tool-desc">{{ app.teacherDesc }}</p>
+          {% if app.appUrl %}
+            <a class="teacher-tool-link" href="{{ app.appUrl }}" target="_blank" rel="noopener">Avaa sovellus ↗</a>
+          {% endif %}
+          {% for lesson in app.lessons %}
+            <a class="teacher-tool-lesson" href="{{ lesson.url }}" target="_blank" rel="noopener">Oppitunnit →</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
 
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Opetettava kone</h3>
-        <p class="teacher-tool-desc">Oppilas kouluttaa oman tekoälymallin kuvien, äänen tai asennon avulla. Havainnollistaa koneoppimisen perusidean konkreettisesti.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/fi/tools/tm" target="_blank" rel="noopener">Avaa sovellus ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Somekone</h3>
-        <p class="teacher-tool-desc">Sosiaalisen median simulaattori, joka näyttää kuinka algoritmit muokkaavat sitä, mitä näemme — suosittelu, kupla, manipulointi.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/fi/tools/somekone" target="_blank" rel="noopener">Avaa sovellus ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Pieni kielikone</h3>
-        <p class="teacher-tool-desc">Tutustuu kielimallien toimintaan: miten tekoäly ennustaa seuraavan sanan ja miksi se toisinaan erehtyy.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/fi/tools/lm" target="_blank" rel="noopener">Avaa sovellus ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Hajoava kone</h3>
-        <p class="teacher-tool-desc">Havainnollistaa tekoälyn haavoittuvuuksia: pieni muutos syötteessä voi johtaa täysin väärään lopputulokseen.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/fi/tools/bm" target="_blank" rel="noopener">Avaa sovellus ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Profilointipeli</h3>
-        <p class="teacher-tool-desc">Pelillinen kokemus siitä, miten dataa kerätään ja käytetään käyttäjäprofiilien luomiseen verkossa.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/fi/tools/profiling-game" target="_blank" rel="noopener">Avaa sovellus ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Manipulointipeli</h3>
-        <p class="teacher-tool-desc">Tutkii, miten algoritminen ympäristö voi vaikuttaa mielipiteisiin ja käyttäytymiseen — kriittisen medialukutaidon pohjaksi.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/fi/tools/manipulation-game" target="_blank" rel="noopener">Avaa sovellus ↗</a>
-      </div>
-
+    <div class="teacher-tools-cta">
+      <a class="teacher-tools-all-btn" href="/materiaalit/">Kaikki sovellukset ja materiaalit →</a>
     </div>
   </div>
 </section>
@@ -133,6 +118,16 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     <h2 class="teacher-about-heading">Kehitämme sovelluksia ja materiaaleja yhdessä opettajien kanssa</h2>
     <p class="teacher-about-text">Hanke järjestää yhteissuunnitteluprojekteja esi- ja perusopetuksen opettajille ja opettajaopiskelijoille. Tavoitteena on, että oppijat ymmärtävät tekoälyyn liittyviä turvallisuuskysymyksiä sekä teknologioita kokeilujen ja keksimisen kautta.</p>
     <p class="teacher-about-text">Kaikki sovellukset on suunniteltu skaalautuviksi — ne toimivat kaikilla laitteilla ilman asennusta tai rekisteröitymistä.</p>
+    <a class="teacher-about-cta" href="/ollaan-yhteydessa/">Ilmoittaudu mukaan</a>
     <a class="teacher-about-link" href="/hankkeen-toiminta/">Lue lisää hankkeen toiminnasta →</a>
+  </div>
+</section>
+
+{# ── Uutiskirje ──────────────────────────────────────────────────────────── #}
+<section class="teacher-newsletter">
+  <div class="teacher-newsletter-inner">
+    <h2 class="teacher-newsletter-heading">Pysy ajan tasalla</h2>
+    <p class="teacher-newsletter-desc">Tilaa Generation AI:n uutiskirje — saat tiedon uusista sovelluksista, oppimateriaaleista ja koulutuksista suoraan sähköpostiisi.</p>
+    <a class="teacher-newsletter-btn" href="/uutiskirje/">Tilaa uutiskirje →</a>
   </div>
 </section>

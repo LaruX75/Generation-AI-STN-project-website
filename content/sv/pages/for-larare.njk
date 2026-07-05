@@ -33,21 +33,21 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     <h2 class="teacher-steps-heading">Kom igång</h2>
     <ol class="teacher-steps-list">
       <li class="teacher-step">
-        <div class="teacher-step-num">1</div>
+        <div class="teacher-step-num" aria-hidden="true">1</div>
         <div class="teacher-step-body">
           <h3 class="teacher-step-title">Välj en app</h3>
           <p class="teacher-step-desc">Sex gratis appar — välj en som passar lektionens tema. Alla fungerar i webbläsaren utan installation.</p>
         </div>
       </li>
       <li class="teacher-step">
-        <div class="teacher-step-num">2</div>
+        <div class="teacher-step-num" aria-hidden="true">2</div>
         <div class="teacher-step-body">
           <h3 class="teacher-step-title">Prova själv först</h3>
           <p class="teacher-step-desc">Varje app är utformad för att vara intuitiv — fem minuter räcker för att bekanta sig.</p>
         </div>
       </li>
       <li class="teacher-step">
-        <div class="teacher-step-num">3</div>
+        <div class="teacher-step-num" aria-hidden="true">3</div>
         <div class="teacher-step-body">
           <h3 class="teacher-step-title">Ta in det i klassrummet</h3>
           <p class="teacher-step-desc">Ladda ned färdiga lektionsplaner och läromedel, eller använd apparna direkt som guidade övningar.</p>
@@ -60,47 +60,31 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
 {# ── Appar ───────────────────────────────────────────────────────────────── #}
 <section class="teacher-tools">
   <div class="teacher-tools-inner">
-    <h2 class="teacher-tools-heading">Alla sex appar</h2>
-    <p class="teacher-tools-lead">Alla appar är gratis, webbläsarbaserade och utformade för förskola och grundskola.</p>
+    <h2 class="teacher-tools-heading">Appar för klassrummet</h2>
+    <p class="teacher-tools-lead">Gratis, webbläsarbaserade AI-appar för förskola och grundskola — ingen installation, ingen registrering.</p>
 
     <div class="teacher-tools-grid">
+      {% for app in sovellukset[lang] %}
+        {% if app.featured %}
+        <div class="teacher-tool-card">
+          <h3 class="teacher-tool-name">{{ app.title }}</h3>
+          <div class="teacher-tool-tags">
+            {% for tag in app.tags %}<span class="gen-ai-tool-tag">{{ tag }}</span>{% endfor %}
+          </div>
+          <p class="teacher-tool-desc">{{ app.teacherDesc }}</p>
+          {% if app.appUrl %}
+            <a class="teacher-tool-link" href="{{ app.appUrl }}" target="_blank" rel="noopener">Öppna app ↗</a>
+          {% endif %}
+          {% for lesson in app.lessons %}
+            <a class="teacher-tool-lesson" href="{{ lesson.url }}" target="_blank" rel="noopener">Lektioner →</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
 
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Undervisbar maskin</h3>
-        <p class="teacher-tool-desc">Eleverna tränar en egen AI-modell med bilder, ljud eller rörelser. Illustrerar grundidén bakom maskininlärning på ett konkret sätt.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/sv/tools/tm" target="_blank" rel="noopener">Öppna app ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Sociala medier-maskin</h3>
-        <p class="teacher-tool-desc">En simulator för sociala medier som visar hur algoritmer formar vad vi ser — rekommendationer, filterbubblor, manipulation.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/sv/tools/somekone" target="_blank" rel="noopener">Öppna app ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Liten språkmaskin</h3>
-        <p class="teacher-tool-desc">Utforskar hur språkmodeller fungerar: hur AI förutsäger nästa ord och varför det ibland har fel.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/sv/tools/lm" target="_blank" rel="noopener">Öppna app ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Söndermaskin</h3>
-        <p class="teacher-tool-desc">Illustrerar AI:s sårbarheter: en liten förändring i indata kan leda till ett helt felaktigt resultat.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/sv/tools/bm" target="_blank" rel="noopener">Öppna app ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Profileringsspel</h3>
-        <p class="teacher-tool-desc">En spelbaserad upplevelse av hur data samlas in och används för att skapa användarprofiler online.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/sv/tools/profiling-game" target="_blank" rel="noopener">Öppna app ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Manipuleringsspel</h3>
-        <p class="teacher-tool-desc">Utforskar hur en algoritmisk miljö kan påverka åsikter och beteende — som grund för kritisk medieläskunnighet.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/sv/tools/manipulation-game" target="_blank" rel="noopener">Öppna app ↗</a>
-      </div>
-
+    <div class="teacher-tools-cta">
+      <a class="teacher-tools-all-btn" href="/sv/material/">Alla appar och material →</a>
     </div>
   </div>
 </section>
@@ -122,6 +106,16 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     <h2 class="teacher-about-heading">Vi utvecklar appar och material tillsammans med lärare</h2>
     <p class="teacher-about-text">Projektet organiserar samdesignprojekt för lärare och lärarstuderande i förskola och grundskola. Målet är att elever ska förstå AI-relaterade säkerhetsfrågor och teknologier genom experiment och uppfinningar.</p>
     <p class="teacher-about-text">Alla appar är utformade för att skalas — de fungerar på alla enheter utan installation eller registrering.</p>
+    <a class="teacher-about-cta" href="/sv/kontakta-oss/">Anmäl dig</a>
     <a class="teacher-about-link" href="/sv/verksamhet/">Läs mer om projektets verksamhet →</a>
+  </div>
+</section>
+
+{# ── Nyhetsbrev ──────────────────────────────────────────────────────────── #}
+<section class="teacher-newsletter">
+  <div class="teacher-newsletter-inner">
+    <h2 class="teacher-newsletter-heading">Håll dig uppdaterad</h2>
+    <p class="teacher-newsletter-desc">Prenumerera på Generation AI:s nyhetsbrev — få information om nya appar, läromedel och utbildningar direkt i din inkorg.</p>
+    <a class="teacher-newsletter-btn" href="/sv/nyhetsbrev/">Prenumerera →</a>
   </div>
 </section>

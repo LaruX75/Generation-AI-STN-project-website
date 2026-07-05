@@ -33,21 +33,21 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     <h2 class="teacher-steps-heading">Get Started</h2>
     <ol class="teacher-steps-list">
       <li class="teacher-step">
-        <div class="teacher-step-num">1</div>
+        <div class="teacher-step-num" aria-hidden="true">1</div>
         <div class="teacher-step-body">
           <h3 class="teacher-step-title">Choose an app</h3>
           <p class="teacher-step-desc">Six free apps — pick one that fits your lesson topic. All run in the browser with no installation.</p>
         </div>
       </li>
       <li class="teacher-step">
-        <div class="teacher-step-num">2</div>
+        <div class="teacher-step-num" aria-hidden="true">2</div>
         <div class="teacher-step-body">
           <h3 class="teacher-step-title">Try it yourself first</h3>
           <p class="teacher-step-desc">Every app is designed to be intuitive — five minutes is enough to get a feel for it.</p>
         </div>
       </li>
       <li class="teacher-step">
-        <div class="teacher-step-num">3</div>
+        <div class="teacher-step-num" aria-hidden="true">3</div>
         <div class="teacher-step-body">
           <h3 class="teacher-step-title">Bring it to class</h3>
           <p class="teacher-step-desc">Download ready-made lesson plans and learning materials, or use the apps directly as guided exercises.</p>
@@ -60,47 +60,31 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
 {# ── Apps ────────────────────────────────────────────────────────────────── #}
 <section class="teacher-tools">
   <div class="teacher-tools-inner">
-    <h2 class="teacher-tools-heading">All Six Apps</h2>
-    <p class="teacher-tools-lead">All apps are free, browser-based and designed for pre-primary and primary education.</p>
+    <h2 class="teacher-tools-heading">Apps for the classroom</h2>
+    <p class="teacher-tools-lead">Free, browser-based AI apps for pre-primary and primary education — no installation, no registration.</p>
 
     <div class="teacher-tools-grid">
+      {% for app in sovellukset[lang] %}
+        {% if app.featured %}
+        <div class="teacher-tool-card">
+          <h3 class="teacher-tool-name">{{ app.title }}</h3>
+          <div class="teacher-tool-tags">
+            {% for tag in app.tags %}<span class="gen-ai-tool-tag">{{ tag }}</span>{% endfor %}
+          </div>
+          <p class="teacher-tool-desc">{{ app.teacherDesc }}</p>
+          {% if app.appUrl %}
+            <a class="teacher-tool-link" href="{{ app.appUrl }}" target="_blank" rel="noopener">Open app ↗</a>
+          {% endif %}
+          {% for lesson in app.lessons %}
+            <a class="teacher-tool-lesson" href="{{ lesson.url }}" target="_blank" rel="noopener">Lessons →</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
 
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Teachable Machine</h3>
-        <p class="teacher-tool-desc">Students train their own AI model using images, sound or pose. Demonstrates the core idea of machine learning in a concrete, hands-on way.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/en/tools/tm" target="_blank" rel="noopener">Open app ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Social Media Machine</h3>
-        <p class="teacher-tool-desc">A social media simulator that shows how algorithms shape what we see — recommendations, filter bubbles, manipulation.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/en/tools/somekone" target="_blank" rel="noopener">Open app ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Small Language Machine</h3>
-        <p class="teacher-tool-desc">Explores how language models work: how AI predicts the next word and why it sometimes gets it wrong.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/en/tools/lm" target="_blank" rel="noopener">Open app ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Breakable Machine</h3>
-        <p class="teacher-tool-desc">Illustrates AI vulnerabilities: a small change in input can lead to a completely wrong outcome.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/en/tools/bm" target="_blank" rel="noopener">Open app ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Profiling Game</h3>
-        <p class="teacher-tool-desc">A game-based experience of how data is collected and used to create user profiles online.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/en/tools/profiling-game" target="_blank" rel="noopener">Open app ↗</a>
-      </div>
-
-      <div class="teacher-tool-card">
-        <h3 class="teacher-tool-name">Manipulation Game</h3>
-        <p class="teacher-tool-desc">Explores how an algorithmic environment can influence opinions and behaviour — a foundation for critical media literacy.</p>
-        <a class="teacher-tool-link" href="https://www.gen-ai.fi/en/tools/manipulation-game" target="_blank" rel="noopener">Open app ↗</a>
-      </div>
-
+    <div class="teacher-tools-cta">
+      <a class="teacher-tools-all-btn" href="/en/materials/">All apps and materials →</a>
     </div>
   </div>
 </section>
@@ -122,6 +106,16 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     <h2 class="teacher-about-heading">We develop apps and materials together with teachers</h2>
     <p class="teacher-about-text">The project organises co-design projects for pre-primary and primary school teachers and student teachers. The goal is for learners to understand AI-related safety issues and technologies through experimentation and invention.</p>
     <p class="teacher-about-text">All apps are designed to scale — they work on any device without installation or registration.</p>
+    <a class="teacher-about-cta" href="/en/contact-us/">Get involved</a>
     <a class="teacher-about-link" href="/en/activities/">Read more about project activities →</a>
+  </div>
+</section>
+
+{# ── Newsletter ──────────────────────────────────────────────────────────── #}
+<section class="teacher-newsletter">
+  <div class="teacher-newsletter-inner">
+    <h2 class="teacher-newsletter-heading">Stay up to date</h2>
+    <p class="teacher-newsletter-desc">Subscribe to the Generation AI newsletter — receive news about new apps, learning materials and training opportunities directly to your inbox.</p>
+    <a class="teacher-newsletter-btn" href="/en/newsletter/">Subscribe →</a>
   </div>
 </section>
