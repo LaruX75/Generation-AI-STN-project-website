@@ -18,13 +18,13 @@ authors:
     url: "https://researchportal.helsinki.fi/fi/persons/jenni-eveliina-ignatius"
 ---
 
-<p class="pub-lead">This guide is a brief overview of the processing of personal data of primary school pupils in situations where teaching makes use of applications or technologies provided by external parties. It is aimed at primary education professionals — above all, teaching staff. The legislative review focuses on the EU General Data Protection Regulation. <strong>The guide is a general overview, not an exhaustive legal analysis.</strong></p>
+<p class="pub-lead">This guide is a brief overview of the processing of personal data of primary school pupils in situations where teaching makes use of applications or technologies provided by external parties. It is aimed at primary education professionals – above all, teaching staff. The legislative review focuses on the EU General Data Protection Regulation. <strong>The guide is a general overview, not an exhaustive legal analysis.</strong></p>
 
 ## Introduction
 
-The use of various applications in primary education may be necessary for many reasons — media literacy, communication skills, digital skills education, and digital examinations are examples of justified uses. **A digitalising primary school brings data protection issues to the forefront.**
+The use of various applications in primary education may be necessary for many reasons – media literacy, communication skills, digital skills education, and digital examinations are examples of justified uses. **A digitalising primary school brings data protection issues to the forefront.**
 
-Children's personal data occupies a special position in data protection law. Their processing requires particular care — including in primary education. For data protection obligations to be met, it is important that teaching staff have up-to-date knowledge of data protection rules.
+Children's personal data occupies a special position in data protection law. Their processing requires particular care – including in primary education. For data protection obligations to be met, it is important that teaching staff have up-to-date knowledge of data protection rules.
 
 **Every child has the right to privacy and the protection of their personal data.** Other fundamental and human rights must also be taken into account: equality, non-discrimination, and the right to free primary education. For children's personal data, the best interests of the child must also be ensured in accordance with the UN Convention on the Rights of the Child.
 
@@ -34,11 +34,11 @@ The guidance in this guide applies to all personal data processing regardless of
 
 Children's personal data occupies a special position in data protection law and requires particular protection. The processing of personal data is part of everyday primary education.
 
-**Personal data** means, in principle, any information relating to an identified or identifiable natural person — this person is referred to as the **data subject**. The concept is broad: an audio recording, a photograph, or an identifiable physical characteristic are all personal data.
+**Personal data** means, in principle, any information relating to an identified or identifiable natural person – this person is referred to as the **data subject**. The concept is broad: an audio recording, a photograph, or an identifiable physical characteristic are all personal data.
 
 **Special categories of personal data** enjoy stricter protection. These include data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership, and genetic, biometric, or health data.
 
-The **controller** is the party that decides on and is responsible for the processing of personal data. Controllership cannot be agreed upon — actual control is decisive. **In primary education, the controller is the body that in the municipality is responsible for organising primary education** — usually the board or equivalent body responsible for educational affairs. It bears responsibility for all data protection obligations and is responsible for ensuring that teachers and other staff receive comprehensive guidance on the requirements of data protection law.
+The **controller** is the party that decides on and is responsible for the processing of personal data. Controllership cannot be agreed upon – actual control is decisive. **In primary education, the controller is the body that in the municipality is responsible for organising primary education** – usually the board or equivalent body responsible for educational affairs. It bears responsibility for all data protection obligations and is responsible for ensuring that teachers and other staff receive comprehensive guidance on the requirements of data protection law.
 
 ### 1.1 The Controller Is Responsible for Upholding Data Protection Principles
 
@@ -46,11 +46,11 @@ Responsibility for upholding data protection principles lies with the controller
 
 The data protection principles are:
 
-- **Lawfulness, fairness and transparency** — processing must have a legal basis and be carried out openly
-- **Purpose limitation** — data is collected only for a specific, pre-defined purpose
-- **Data minimisation** — only necessary data is collected
-- **Accuracy** — data must be kept up to date and accurate
-- **Storage limitation** — data is retained only for as long as necessary
+- **Lawfulness, fairness and transparency** – processing must have a legal basis and be carried out openly
+- **Purpose limitation** – data is collected only for a specific, pre-defined purpose
+- **Data minimisation** – only necessary data is collected
+- **Accuracy** – data must be kept up to date and accurate
+- **Storage limitation** – data is retained only for as long as necessary
 
 ### 1.2 The Legal Basis for Processing Is in Principle Statutory
 
@@ -83,14 +83,14 @@ Using a child's consent as the legal basis requires very careful prior assessmen
 
 <div class="pub-callout">
 
-**Important distinction — consents are not the same thing:**
+**Important distinction – consents are not the same thing:**
 
 - Consent serving as a **legal basis under the GDPR**
 - Consent to **participate in research or a pilot programme**
 - **Ethical consent**
 - Consent to **the use of technology**
 
-These must not be confused. In some situations, both GDPR consent and a separate participation permission are required — they serve different purposes. Not just any consent qualifies as a legal basis under the GDPR.
+These must not be confused. In some situations, both GDPR consent and a separate participation permission are required – they serve different purposes. Not just any consent qualifies as a legal basis under the GDPR.
 
 </div>
 
@@ -100,11 +100,11 @@ Various applications are present in children's leisure time and increasingly in 
 
 **All third-party applications used in teaching that process children's personal data remain the responsibility of the organiser of primary education acting as controller.**
 
-In the best case, the organiser of primary education centrally manages all applications and devices used in teaching. This enables the controller to fulfil its obligations — including conducting a **data protection impact assessment** under the GDPR before introducing applications.
+In the best case, the organiser of primary education centrally manages all applications and devices used in teaching. This enables the controller to fulfil its obligations – including conducting a **data protection impact assessment** under the GDPR before introducing applications.
 
 <div class="pub-callout">
 
-**Controller's responsibility:** A data protection impact assessment is always the controller's responsibility — it cannot be carried out at the level of individual teachers on a classroom-by-classroom basis. The assessment maps risks to data protection and information security in advance.
+**Controller's responsibility:** A data protection impact assessment is always the controller's responsibility – it cannot be carried out at the level of individual teachers on a classroom-by-classroom basis. The assessment maps risks to data protection and information security in advance.
 
 </div>
 
@@ -116,12 +116,12 @@ When considering the introduction of applications, the organiser of primary educ
 
 ### 2.2 Careful Provision of Information
 
-The information obligations under the GDPR protect the rights of the data subject. Clear and timely information enables the data subject to exercise their rights. **Pupils must be provided with information about the processing of their personal data in child-friendly language — including in connection with applications.**
+The information obligations under the GDPR protect the rights of the data subject. Clear and timely information enables the data subject to exercise their rights. **Pupils must be provided with information about the processing of their personal data in child-friendly language – including in connection with applications.**
 
 The special position of children under the GDPR requires that the vocabulary, tone, and style of information be adapted to the child's age level. Note that:
 
 - Children must be provided with information even when the consent to process their personal data is given by a guardian.
-- The special needs of other target groups must be taken into account — for example, information provided to persons with disabilities must ensure the accessibility of information.
+- The special needs of other target groups must be taken into account – for example, information provided to persons with disabilities must ensure the accessibility of information.
 
 ## 3. Practical Examples
 
@@ -131,19 +131,19 @@ The special position of children under the GDPR requires that the vocabulary, to
 
 #### Case Study: Google Suite for Education, Espoo (2018–2022)
 
-In 2018, a matter was brought before the Office of the Data Protection Ombudsman in which a person expressed concern about the use of Google Suite for Education in a school in the City of Espoo. The controller (the City of Espoo) considered that the legal basis applied was a statutory obligation — that the processing of personal data necessary to organise primary education also covers the programme in question.
+In 2018, a matter was brought before the Office of the Data Protection Ombudsman in which a person expressed concern about the use of Google Suite for Education in a school in the City of Espoo. The controller (the City of Espoo) considered that the legal basis applied was a statutory obligation – that the processing of personal data necessary to organise primary education also covers the programme in question.
 
-**Decision of the Data Protection Ombudsman (2021):** The use of the teaching programme was not in conformity with the GDPR. The statutory obligation to provide teaching is indeed the main legal basis — but it does not require the use of a particular electronic teaching programme. The specific risk factors noted were: the programme's use might involve data belonging to special categories of personal data, the controller's monitoring capabilities were limited, and the programme was used outside school as well, from the pupil's own devices.
+**Decision of the Data Protection Ombudsman (2021):** The use of the teaching programme was not in conformity with the GDPR. The statutory obligation to provide teaching is indeed the main legal basis – but it does not require the use of a particular electronic teaching programme. The specific risk factors noted were: the programme's use might involve data belonging to special categories of personal data, the controller's monitoring capabilities were limited, and the programme was used outside school as well, from the pupil's own devices.
 
 **Decision of the Administrative Court:** Notwithstanding the City of Espoo's appeal, the Administrative Court confirmed that the use of the programme could not be justified directly on the basis of the statutory primary education obligation. The special need for protection of children's personal data was emphasised in the ruling.
 
 </div>
 
-The case illustrates how important it is to assess the suitability of the legal basis carefully — especially for third-party applications. A standard data processing agreement is not sufficient as a safeguard when the data subjects are children and the controller's monitoring capabilities are limited.
+The case illustrates how important it is to assess the suitability of the legal basis carefully – especially for third-party applications. A standard data processing agreement is not sufficient as a safeguard when the data subjects are children and the controller's monitoring capabilities are limited.
 
 ### 3.2 Who Decides on the Use of an Application?
 
-Current legislation leaves discretion in the choice of applications — neither the Basic Education Act nor the national core curriculum separately prescribe which applications are used in teaching. This does not mean, however, that responsibility does not exist.
+Current legislation leaves discretion in the choice of applications – neither the Basic Education Act nor the national core curriculum separately prescribe which applications are used in teaching. This does not mean, however, that responsibility does not exist.
 
 <div class="pub-case">
 
@@ -151,7 +151,7 @@ Current legislation leaves discretion in the choice of applications — neither 
 
 A class teacher used an application belonging to their own company in physical education without the consent of guardians. Pupils' data was stored in the company's database, and the teacher shared posts about the use of the application on their social media accounts.
 
-**Decision of the Regional State Administrative Agency<sup><a href="#ref-1">[1]</a></sup>:** Homes should have been informed about the use of the application and permission should have been sought from guardians. Responsibility for the fulfilment of pupils' rights — and for the appropriateness of the applications used — lies with the organiser of education.
+**Decision of the Regional State Administrative Agency<sup><a href="#ref-1">[1]</a></sup>:** Homes should have been informed about the use of the application and permission should have been sought from guardians. Responsibility for the fulfilment of pupils' rights – and for the appropriateness of the applications used – lies with the organiser of education.
 
 *Note: the Regional State Administrative Agency does not supervise compliance with the GDPR, but the matters raised in the decision are also relevant from the perspective of the GDPR.*
 
@@ -161,12 +161,12 @@ The decision emphasises that the controller's responsibility extends from the ve
 
 ## Summary
 
-The use of applications, social media, and other technologies often involves the processing of personal data — in such cases, data protection rules must be complied with. The most important thing is to assess in advance what impact each technology has on the protection of personal data.
+The use of applications, social media, and other technologies often involves the processing of personal data – in such cases, data protection rules must be complied with. The most important thing is to assess in advance what impact each technology has on the protection of personal data.
 
 - **Children's personal data** requires special protection.
-- **The use of applications** often involves the processing of personal data — data protection law must be taken into account.
+- **The use of applications** often involves the processing of personal data – data protection law must be taken into account.
 - **Compliance with data protection law is the controller's responsibility.** The controller is also responsible for providing guidance to teachers and other staff.
-- **Careful advance planning of the use of applications and technology** is of primary importance — it enables requirements to be taken into account from the outset.
+- **Careful advance planning of the use of applications and technology** is of primary importance – it enables requirements to be taken into account from the outset.
 
 ---
 

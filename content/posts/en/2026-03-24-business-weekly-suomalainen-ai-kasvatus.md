@@ -29,7 +29,7 @@ Finnish schoolchildren attend school for only half a day, but they have two 30-m
 
 ## Crafts and creativity
 
-From the first grade, all pupils — both girls and boys — attend woodwork and handicraft classes to learn sawing and the use of tools. Turali firmly believes that wood and the sewing machine represent genuine creativity that AI can never replace — they are an irreplaceable treasure.
+From the first grade, all pupils – both girls and boys – attend woodwork and handicraft classes to learn sawing and the use of tools. Turali firmly believes that wood and the sewing machine represent genuine creativity that AI can never replace – they are an irreplaceable treasure.
 
 ## Generation AI and understanding artificial intelligence
 
@@ -37,7 +37,7 @@ With the advent of AI, education faces a new challenge: when information is too 
 
 ## Experiments in schools
 
-In one experiment, 13-year-old pupils used a simulated social media platform. They were then shown how their every click, pause, and rating had been recorded and categorised by algorithms — and how this affected what content and preferences they saw.
+In one experiment, 13-year-old pupils used a simulated social media platform. They were then shown how their every click, pause, and rating had been recorded and categorised by algorithms – and how this affected what content and preferences they saw.
 
 In another experiment, upper secondary students got to "train" a small language model themselves. They fed it a large number of fairy tales as training data. When the model was ready, it began seriously producing nonsense: *"Finland's economy is bad because the country has semi-animals."*
 
@@ -47,9 +47,9 @@ Roos explains that when children understand the principles behind AI, they are b
 
 These reflections have begun to spark wider debate in society. Haavisto notes that just a few years ago almost every primary school pupil had a smartphone. Today, more and more parents are instead buying smartwatches that can only make calls and have location tracking.
 
-At the same time, children's reading is recovering. Finnish library statistics show that children's borrowing figures have grown for three consecutive years. A campaign has even been launched: *"The library you like best is the person who reads a book to you"* — emphasising the human connection between parents and children.
+At the same time, children's reading is recovering. Finnish library statistics show that children's borrowing figures have grown for three consecutive years. A campaign has even been launched: *"The library you like best is the person who reads a book to you"* – emphasising the human connection between parents and children.
 
-Finnish educational thinking is very clear: emotional education and independent thinking are the foundation of everything. Children are taught from an early age to recognise risks — they are taught not only independent thinking but also emotional skills.
+Finnish educational thinking is very clear: emotional education and independent thinking are the foundation of everything. Children are taught from an early age to recognise risks – they are taught not only independent thinking but also emotional skills.
 
 ## 9-year-olds learn to spot fake news and use emojis
 
@@ -73,7 +73,7 @@ AI literacy teaching content at Tapanila School:
 **Producer:** Liu Peixiu (劉佩修)
 **Photographer:** Chen Zongyi (陳宗怡)
 
-The article is part of a larger feature for which the Business Weekly editorial team travelled to Finland to interview more than 40 people ranging from members of parliament to school principals and Uber drivers. The feature examines how Finland — the world's happiest country for eight consecutive years — responds to the challenges brought by AI through an equality-based strategy.
+The article is part of a larger feature for which the Business Weekly editorial team travelled to Finland to interview more than 40 people ranging from members of parliament to school principals and Uber drivers. The feature examines how Finland – the world's happiest country for eight consecutive years – responds to the challenges brought by AI through an equality-based strategy.
 
 ### Parts of the feature (no. 2001)
 

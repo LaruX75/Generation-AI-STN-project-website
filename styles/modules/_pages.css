@@ -385,6 +385,42 @@
 }
 .teacher-tools-all-btn:hover { background: var(--global-palette1, #314e25); color: #fff; }
 
+/* Design principles grid */
+.teacher-principles {
+  background: var(--global-palette1, #314e25);
+  padding: 3rem 1.5rem;
+}
+.teacher-principles-inner {
+  max-width: var(--global-content-narrow-width, 842px);
+  margin: 0 auto;
+}
+.teacher-principles-heading {
+  font-size: clamp(1.1rem, 1rem + 0.3vw, 1.3rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 1.25rem;
+  text-align: center;
+}
+.teacher-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+.teacher-principle {
+  background: rgba(255,255,255,0.1);
+  border-radius: 0.5rem;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #e8f0e2;
+}
+@media (max-width: 600px) {
+  .teacher-principles-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 380px) {
+  .teacher-principles-grid { grid-template-columns: 1fr; }
+}
+
 /* Yhteiskehittäminen CTA button */
 .teacher-about-cta {
   display: inline-block;

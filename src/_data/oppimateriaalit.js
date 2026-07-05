@@ -1,5 +1,5 @@
 /* Generation AI -oppimateriaalit ja opetuskokonaisuudet.
- * Rakenne: taulukko — filtteröidään lang-kentän perusteella.
+ * Rakenne: taulukko – filtteröidään lang-kentän perusteella.
  * type: "opas" | "oppituntikokonaisuus"
  * lang: kieliversiot joilla kortti näytetään, esim. ["fi"] tai ["fi","en","sv"]
  * Templates käyttävät: {% for unit in oppimateriaalit %}{% if lang in unit.lang %}
@@ -13,7 +13,7 @@ module.exports = [
     type: "opas",
     lang: ["fi"],
     title: {
-      fi: "Mikä tekoäly? — Perusteet opettajalle",
+      fi: "Mikä tekoäly? – Perusteet opettajalle",
     },
     typeLabel: {
       fi: "Opas",
@@ -49,9 +49,9 @@ module.exports = [
       sv: "Undervisningsenhet",
     },
     desc: {
-      fi: "Valmis 6 oppitunnin kokonaisuus Opetettava kone -sovellukselle. Oppilaat rakentavat oman koneoppimiseen perustuvan mobiiliapplikaation — ilman ohjelmointia.",
-      en: "A complete 6-lesson unit for the Teachable Machine app. Students build their own machine learning-based mobile application — no coding required.",
-      sv: "En komplett enhet med 6 lektioner för appen Undervisbar maskin. Eleverna bygger en egen mobilapplikation baserad på maskininlärning — utan programmering.",
+      fi: "Valmis 6 oppitunnin kokonaisuus Opetettava kone -sovellukselle. Oppilaat rakentavat oman koneoppimiseen perustuvan mobiiliapplikaation – ilman ohjelmointia.",
+      en: "A complete 6-lesson unit for the Teachable Machine app. Students build their own machine learning-based mobile application – no coding required.",
+      sv: "En komplett enhet med 6 lektioner för appen Undervisbar maskin. Eleverna bygger en egen mobilapplikation baserad på maskininlärning – utan programmering.",
     },
     duration: 6,
     durationLabel: {

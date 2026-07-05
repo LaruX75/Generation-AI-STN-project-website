@@ -17,13 +17,13 @@ authors:
     url: "https://researchportal.helsinki.fi/fi/persons/jenni-eveliina-ignatius"
 ---
 
-<p class="pub-lead">Tämä opas on lyhyt katsaus alakoulun oppilaiden henkilötietojen käsittelyyn tilanteissa, joissa opetuksessa hyödynnetään ulkopuolisen toimijan tarjoamia sovelluksia tai teknologioita. Se on suunnattu perusopetuksen ammattilaisille — ennen kaikkea opetushenkilökunnalle. Lainsäädännöllisen tarkastelun keskiössä on EU:n yleinen tietosuoja-asetus. <strong>Opas on yleisesitys, ei tyhjentävä oikeudellinen katsaus.</strong></p>
+<p class="pub-lead">Tämä opas on lyhyt katsaus alakoulun oppilaiden henkilötietojen käsittelyyn tilanteissa, joissa opetuksessa hyödynnetään ulkopuolisen toimijan tarjoamia sovelluksia tai teknologioita. Se on suunnattu perusopetuksen ammattilaisille – ennen kaikkea opetushenkilökunnalle. Lainsäädännöllisen tarkastelun keskiössä on EU:n yleinen tietosuoja-asetus. <strong>Opas on yleisesitys, ei tyhjentävä oikeudellinen katsaus.</strong></p>
 
 ## Johdanto
 
-Erilaisten sovellusten käyttö perusopetuksessa voi olla tarpeellista monesta syystä — mediakasvatus, viestintätaitojen harjoittelu, digitaitoihin liittyvä opetus tai sähköistyneet kokeet ovat esimerkkejä perustelluista syistä. **Digitalisoituva perusopetus nostaa tietosuojaan liittyvät kysymykset keskeiseen asemaan.**
+Erilaisten sovellusten käyttö perusopetuksessa voi olla tarpeellista monesta syystä – mediakasvatus, viestintätaitojen harjoittelu, digitaitoihin liittyvä opetus tai sähköistyneet kokeet ovat esimerkkejä perustelluista syistä. **Digitalisoituva perusopetus nostaa tietosuojaan liittyvät kysymykset keskeiseen asemaan.**
 
-Tietosuojasääntelyssä lasten henkilötiedot ovat erityisasemassa. Niiden käsittelyssä on noudatettava erityistä huolellisuutta — myös perusopetuksessa. Tietosuojavelvoitteiden täyttämiseksi on tärkeää, että opetushenkilökunnalla on ajantasaista tietoa tietosuojasääntelystä.
+Tietosuojasääntelyssä lasten henkilötiedot ovat erityisasemassa. Niiden käsittelyssä on noudatettava erityistä huolellisuutta – myös perusopetuksessa. Tietosuojavelvoitteiden täyttämiseksi on tärkeää, että opetushenkilökunnalla on ajantasaista tietoa tietosuojasääntelystä.
 
 **Jokaisella lapsella on oikeus yksityisyyteen ja henkilötietojensa suojaan.** Huomioon on otettava myös muut perus- ja ihmisoikeudet: yhdenvertaisuus, syrjimättömyys sekä oikeus maksuttomaan perusopetukseen. Lasten henkilötietojen kohdalla tulee huolehtia myös YK:n lapsen oikeuksien sopimuksen mukaisesti lapsen edun toteutumisesta.
 
@@ -33,11 +33,11 @@ Oppaan ohjeet koskevat kaikkea henkilötietojen käsittelyä riippumatta siitä,
 
 Lasten henkilötiedot ovat tietosuojasääntelyssä erityisasemassa ja vaativat erityistä suojelua. Henkilötietojen käsittely on osa perusopetuksen arkipäivää.
 
-**Henkilötietoja** ovat lähtökohtaisesti kaikki tiedot, jotka liittyvät tunnistettuun tai tunnistettavissa olevaan luonnolliseen henkilöön — tätä henkilöä kutsutaan **rekisteröidyksi**. Käsite on laaja: ääninauha, valokuva tai tunnistettava fyysinen piirre ovat kaikki henkilötietoja.
+**Henkilötietoja** ovat lähtökohtaisesti kaikki tiedot, jotka liittyvät tunnistettuun tai tunnistettavissa olevaan luonnolliseen henkilöön – tätä henkilöä kutsutaan **rekisteröidyksi**. Käsite on laaja: ääninauha, valokuva tai tunnistettava fyysinen piirre ovat kaikki henkilötietoja.
 
 **Erityiset henkilötietoryhmät** nauttivat tiukempaa suojaa. Niihin kuuluvat tiedot, joista ilmenee rotu tai etninen alkuperä, poliittiset mielipiteet, uskonnollinen tai filosofinen vakaumus, ammattiliiton jäsenyys sekä geneettiset, biometriset tai terveystiedot.
 
-**Rekisterinpitäjä** on taho, joka päättää henkilötietojen käsittelystä ja vastaa siitä. Rekisterinpitäjyyttä ei voida sopia — tosiasiallinen määräysvalta ratkaisee. **Perusopetuksessa rekisterinpitäjä on se toimielin, joka kunnassa vastaa perusopetuksen järjestämisestä** — yleensä opetustoimesta vastaava lautakunta tai vastaava elin. Se vastaa kaikista tietosuojavelvoitteista ja on vastuussa siitä, että opettajat ja muu henkilökunta saavat kattavan ohjeistuksen tietosuojasääntelyn vaatimuksista.
+**Rekisterinpitäjä** on taho, joka päättää henkilötietojen käsittelystä ja vastaa siitä. Rekisterinpitäjyyttä ei voida sopia – tosiasiallinen määräysvalta ratkaisee. **Perusopetuksessa rekisterinpitäjä on se toimielin, joka kunnassa vastaa perusopetuksen järjestämisestä** – yleensä opetustoimesta vastaava lautakunta tai vastaava elin. Se vastaa kaikista tietosuojavelvoitteista ja on vastuussa siitä, että opettajat ja muu henkilökunta saavat kattavan ohjeistuksen tietosuojasääntelyn vaatimuksista.
 
 ### 1.1 Rekisterinpitäjä huolehtii tietosuojaperiaatteiden toteutumisesta
 
@@ -45,11 +45,11 @@ Vastuu tietosuojaperiaatteiden toteutumisesta kuuluu rekisterinpitäjälle. Peri
 
 Tietosuojaperiaatteita ovat:
 
-- **Lainmukaisuus, kohtuullisuus ja läpinäkyvyys** — käsittelyllä on oltava laillinen peruste ja siitä on kerrottava avoimesti
-- **Käyttötarkoitussidonnaisuus** — tietoja kerätään vain tiettyyn, etukäteen määriteltyyn tarkoitukseen
-- **Tietojen minimointi** — kerätään vain tarpeellinen tieto
-- **Täsmällisyys** — tiedot on pidettävä ajantasaisina ja paikkansapitävinä
-- **Käsittelyn rajoittaminen** — tietoja säilytetään vain tarvittavan ajan
+- **Lainmukaisuus, kohtuullisuus ja läpinäkyvyys** – käsittelyllä on oltava laillinen peruste ja siitä on kerrottava avoimesti
+- **Käyttötarkoitussidonnaisuus** – tietoja kerätään vain tiettyyn, etukäteen määriteltyyn tarkoitukseen
+- **Tietojen minimointi** – kerätään vain tarpeellinen tieto
+- **Täsmällisyys** – tiedot on pidettävä ajantasaisina ja paikkansapitävinä
+- **Käsittelyn rajoittaminen** – tietoja säilytetään vain tarvittavan ajan
 
 ### 1.2 Henkilötietojen käsittelyperusteena on lähtökohtaisesti laki
 
@@ -82,14 +82,14 @@ Lapsen suostumuksen käyttäminen käsittelyperusteena vaatii hyvin huolellista 
 
 <div class="pub-callout">
 
-**Tärkeä ero — suostumukset eivät ole sama asia:**
+**Tärkeä ero – suostumukset eivät ole sama asia:**
 
 - Tietosuoja-asetuksen mukainen **käsittelyperusteena toimiva suostumus**
 - Suostumus **osallistua tutkimukseen tai pilottiohjelmaan**
 - **Eettinen suostumus**
 - Suostumus **teknologian hyödyntämiseen**
 
-Näitä ei tule sekoittaa toisiinsa. Joissain tilanteissa tarvitaan erikseen sekä tietosuoja-asetuksen mukainen suostumus että erillinen osallistumislupa — ne palvelevat eri tarkoituksia. Mikä tahansa suostumus ei kelpaa tietosuoja-asetuksen käsittelyperusteeksi.
+Näitä ei tule sekoittaa toisiinsa. Joissain tilanteissa tarvitaan erikseen sekä tietosuoja-asetuksen mukainen suostumus että erillinen osallistumislupa – ne palvelevat eri tarkoituksia. Mikä tahansa suostumus ei kelpaa tietosuoja-asetuksen käsittelyperusteeksi.
 
 </div>
 
@@ -99,11 +99,11 @@ Erilaiset sovellukset ovat läsnä lasten vapaa-ajalla ja enenevissä määrin m
 
 **Kaikki opetuksessa käytettävät kolmannen osapuolen sovellukset, joissa käsitellään lasten henkilötietoja, kuuluvat edelleen rekisterinpitäjänä toimivan perusopetuksen järjestäjän vastuulle.**
 
-Parhaassa tapauksessa perusopetuksen järjestäjä hallinnoi keskitetysti kaikkia opetuksessa käytettäviä sovelluksia ja laitteita. Tällöin rekisterinpitäjä pystyy täyttämään velvollisuutensa — muun muassa tekemään tietosuoja-asetuksen mukaisen **tietosuojavaikutusten arvioinnin** ennen sovellusten käyttöönottoa.
+Parhaassa tapauksessa perusopetuksen järjestäjä hallinnoi keskitetysti kaikkia opetuksessa käytettäviä sovelluksia ja laitteita. Tällöin rekisterinpitäjä pystyy täyttämään velvollisuutensa – muun muassa tekemään tietosuoja-asetuksen mukaisen **tietosuojavaikutusten arvioinnin** ennen sovellusten käyttöönottoa.
 
 <div class="pub-callout">
 
-**Rekisterinpitäjän vastuu:** Tietosuojavaikutusten arviointi on aina rekisterinpitäjän vastuulla — sitä ei voida toteuttaa yksittäisen opettajan tasolla luokkakohtaisesti. Arvioinnissa kartoitetaan etukäteen riskit tietosuojalle ja tietoturvalle.
+**Rekisterinpitäjän vastuu:** Tietosuojavaikutusten arviointi on aina rekisterinpitäjän vastuulla – sitä ei voida toteuttaa yksittäisen opettajan tasolla luokkakohtaisesti. Arvioinnissa kartoitetaan etukäteen riskit tietosuojalle ja tietoturvalle.
 
 </div>
 
@@ -115,12 +115,12 @@ Perusopetuksen järjestäjän on sovellusten käyttöönottoa harkitessaan aina 
 
 ### 2.2 Huolellinen informointi
 
-Tietosuoja-asetuksen informointivelvoitteet suojaavat rekisteröidyn oikeuksia. Selkeä ja oikea-aikainen tieto mahdollistaa sen, että rekisteröity voi käyttää oikeuksiaan. **Oppilaille tulee tarjota lapsiystävällisellä kielellä tietoa heidän henkilötietojensa käsittelystä — myös sovellusten yhteydessä.**
+Tietosuoja-asetuksen informointivelvoitteet suojaavat rekisteröidyn oikeuksia. Selkeä ja oikea-aikainen tieto mahdollistaa sen, että rekisteröity voi käyttää oikeuksiaan. **Oppilaille tulee tarjota lapsiystävällisellä kielellä tietoa heidän henkilötietojensa käsittelystä – myös sovellusten yhteydessä.**
 
 Lasten erityisasema tietosuoja-asetuksessa edellyttää, että informoinnin sanasto, sävy ja tyyli on sovitettu lapsen ikätasolle. Huomioitavaa:
 
 - Lapsille on annettava informointia myös silloin, kun suostumuksen henkilötietojen käsittelyyn antaa huoltaja.
-- Muiden kohderyhmien erityistarpeet on otettava huomioon — esimerkiksi vammaisille henkilöille annettavassa informoinnissa on varmistettava tiedon saavutettavuus.
+- Muiden kohderyhmien erityistarpeet on otettava huomioon – esimerkiksi vammaisille henkilöille annettavassa informoinnissa on varmistettava tiedon saavutettavuus.
 
 ## 3. Käytännön esimerkkejä
 
@@ -130,19 +130,19 @@ Lasten erityisasema tietosuoja-asetuksessa edellyttää, että informoinnin sana
 
 #### Tapausesimerkki: Google Suite for Education, Espoo (2018–2022)
 
-Vuonna 2018 tietosuojavaltuutetun toimistossa saatettiin vireille asia, jossa henkilö ilmaisi huolensa Google Suite for Education -ohjelman käytöstä Espoon kaupungin koulussa. Rekisterinpitäjä (Espoon kaupunki) katsoi, että käsittelyperusteena sovelletaan lakisääteistä velvoitetta — eli perusopetuksen järjestämiseksi tarpeellinen henkilötietojen käsittely kattaa myös kyseisen ohjelman.
+Vuonna 2018 tietosuojavaltuutetun toimistossa saatettiin vireille asia, jossa henkilö ilmaisi huolensa Google Suite for Education -ohjelman käytöstä Espoon kaupungin koulussa. Rekisterinpitäjä (Espoon kaupunki) katsoi, että käsittelyperusteena sovelletaan lakisääteistä velvoitetta – eli perusopetuksen järjestämiseksi tarpeellinen henkilötietojen käsittely kattaa myös kyseisen ohjelman.
 
-**Tietosuojavaltuutetun päätös (2021):** Opetusohjelman käyttö ei ollut tietosuoja-asetuksen mukaista. Lakisääteinen velvoite järjestää opetusta on kyllä pääsääntöinen käsittelyperuste — mutta se ei edellytä juuri tietyn sähköisen opetusohjelman käyttöä. Erityisinä riskitekijöinä huomioitiin: ohjelman käyttö saattoi sisältää erityisiin henkilötietoryhmiin kuuluvia tietoja, rekisterinpitäjän valvontamahdollisuudet olivat rajalliset, ja ohjelmaa käytettiin koulun ohella myös vapaa-ajalla oppilaan omilta laitteilta.
+**Tietosuojavaltuutetun päätös (2021):** Opetusohjelman käyttö ei ollut tietosuoja-asetuksen mukaista. Lakisääteinen velvoite järjestää opetusta on kyllä pääsääntöinen käsittelyperuste – mutta se ei edellytä juuri tietyn sähköisen opetusohjelman käyttöä. Erityisinä riskitekijöinä huomioitiin: ohjelman käyttö saattoi sisältää erityisiin henkilötietoryhmiin kuuluvia tietoja, rekisterinpitäjän valvontamahdollisuudet olivat rajalliset, ja ohjelmaa käytettiin koulun ohella myös vapaa-ajalla oppilaan omilta laitteilta.
 
 **Hallinto-oikeuden päätös:** Espoon kaupungin valituksesta huolimatta hallinto-oikeus vahvisti, ettei ohjelman käyttöä voitu oikeuttaa suoraan lakisääteisellä perusopetusvelvoitteella. Lasten henkilötietojen erityinen suojan tarve korostui ratkaisussa.
 
 </div>
 
-Tapaus osoittaa, kuinka tärkeää on arvioida käsittelyperusteen soveltuvuus tarkasti — erityisesti kolmannen osapuolen sovelluksissa. Vakiomuotoinen tietojenkäsittelysopimus ei riitä takeeksi, kun kyseessä ovat lasten henkilötiedot ja rekisterinpitäjän valvontamahdollisuudet ovat rajalliset.
+Tapaus osoittaa, kuinka tärkeää on arvioida käsittelyperusteen soveltuvuus tarkasti – erityisesti kolmannen osapuolen sovelluksissa. Vakiomuotoinen tietojenkäsittelysopimus ei riitä takeeksi, kun kyseessä ovat lasten henkilötiedot ja rekisterinpitäjän valvontamahdollisuudet ovat rajalliset.
 
 ### 3.2 Kuka päättää sovelluksen käytöstä?
 
-Nykyinen lainsäädäntö jättää harkinnanvaraa sovellusten valinnassa — perusopetuslaki tai opetussuunnitelman perusteet eivät erikseen määrää, mitä sovelluksia opetuksessa käytetään. Tämä ei kuitenkaan tarkoita, ettei vastuu ole olemassa.
+Nykyinen lainsäädäntö jättää harkinnanvaraa sovellusten valinnassa – perusopetuslaki tai opetussuunnitelman perusteet eivät erikseen määrää, mitä sovelluksia opetuksessa käytetään. Tämä ei kuitenkaan tarkoita, ettei vastuu ole olemassa.
 
 <div class="pub-case">
 
@@ -150,7 +150,7 @@ Nykyinen lainsäädäntö jättää harkinnanvaraa sovellusten valinnassa — pe
 
 Luokanopettaja käytti liikunnan opetuksessa oman yrityksensä sovellusta ilman huoltajien suostumusta. Oppilaiden tietoja tallennettiin yrityksen tietokantaan, ja opettaja jakoi julkaisuja sovelluksen käytöstä sosiaalisen median tileillään.
 
-**Aluehallintoviraston päätös<sup><a href="#viite-1">[1]</a></sup>:** Sovelluksen käytöstä olisi tullut tiedottaa koteihin ja huoltajilta olisi tullut pyytää lupa. Vastuu oppilaan oikeuksien toteutumisesta — ja käytettävien sovellusten asianmukaisuudesta — on opetuksen järjestäjällä.
+**Aluehallintoviraston päätös<sup><a href="#viite-1">[1]</a></sup>:** Sovelluksen käytöstä olisi tullut tiedottaa koteihin ja huoltajilta olisi tullut pyytää lupa. Vastuu oppilaan oikeuksien toteutumisesta – ja käytettävien sovellusten asianmukaisuudesta – on opetuksen järjestäjällä.
 
 *Huomio: aluehallintovirasto ei valvo tietosuoja-asetuksen noudattamista, mutta päätöksessä esitetyt seikat ovat merkityksellisiä myös tietosuoja-asetuksen näkökulmasta.*
 
@@ -160,12 +160,12 @@ Päätös korostaa rekisterinpitäjän vastuun ulottumista aina sovelluksen vali
 
 ## Yhteenveto
 
-Sovellusten, sosiaalisten medioiden ja muiden teknologioiden käyttöön sisältyy usein henkilötietojen käsittelyä — silloin tietosuojasääntöjä on noudatettava. Keskeisintä on arvioida etukäteen, millaisia vaikutuksia kullakin teknologialla on henkilötietojen suojaan.
+Sovellusten, sosiaalisten medioiden ja muiden teknologioiden käyttöön sisältyy usein henkilötietojen käsittelyä – silloin tietosuojasääntöjä on noudatettava. Keskeisintä on arvioida etukäteen, millaisia vaikutuksia kullakin teknologialla on henkilötietojen suojaan.
 
 - **Lasten henkilötiedot** vaativat erityistä suojelua.
-- **Sovellusten käyttöön** sisältyy usein henkilötietojen käsittelyä — tietosuojasääntely tulee ottaa huomioon.
+- **Sovellusten käyttöön** sisältyy usein henkilötietojen käsittelyä – tietosuojasääntely tulee ottaa huomioon.
 - **Tietosuojasääntelyn noudattaminen on rekisterinpitäjän vastuulla.** Rekisterinpitäjä vastaa myös opettajien ja muun henkilökunnan ohjeistamisesta.
-- **Sovellusten ja teknologian käytön huolellinen ennakkosuunnittelu** on ensisijaisen tärkeää — se mahdollistaa vaatimusten huomioimisen alusta alkaen.
+- **Sovellusten ja teknologian käytön huolellinen ennakkosuunnittelu** on ensisijaisen tärkeää – se mahdollistaa vaatimusten huomioimisen alusta alkaen.
 
 ---
 

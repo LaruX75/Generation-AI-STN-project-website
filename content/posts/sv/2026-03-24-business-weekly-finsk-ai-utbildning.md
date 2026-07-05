@@ -29,7 +29,7 @@ Finska skolbarn går i skolan bara en halv dag, men de har två raster på 30 mi
 
 ## Hantverk och kreativitet
 
-Från och med första klass går alla elever — både flickor och pojkar — till snickeri- och slöjdlektioner för att lära sig såga och använda verktyg. Turali är övertygad om att trä och symaskinen representerar äkta kreativitet som AI aldrig kan ersätta — de är en ovärderlig skatt.
+Från och med första klass går alla elever – både flickor och pojkar – till snickeri- och slöjdlektioner för att lära sig såga och använda verktyg. Turali är övertygad om att trä och symaskinen representerar äkta kreativitet som AI aldrig kan ersätta – de är en ovärderlig skatt.
 
 ## Generation AI och förståelse för artificiell intelligens
 
@@ -37,7 +37,7 @@ Med AI:s intåg har utbildningen fått en ny utmaning: när information är för
 
 ## Experiment i skolor
 
-I ett experiment använde 13-åriga elever en simulerad plattform för sociala medier. Därefter fick eleverna se hur varje klick, paus och betyg hade registrerats och kategoriserats av algoritmer — och hur detta påverkade vilket innehåll och vilka preferenser de fick se.
+I ett experiment använde 13-åriga elever en simulerad plattform för sociala medier. Därefter fick eleverna se hur varje klick, paus och betyg hade registrerats och kategoriserats av algoritmer – och hur detta påverkade vilket innehåll och vilka preferenser de fick se.
 
 I ett annat experiment fick gymnasieelever själva "träna" en liten språkmodell. De matade in ett stort antal sagor som träningsdata. När modellen var klar började den på allvar producera nonsens: *"Finlands ekonomi är dålig eftersom landet har halvdjur."*
 
@@ -47,9 +47,9 @@ Roos förklarar att när barn förstår principerna bakom AI kan de bättre iden
 
 Dessa reflektioner har börjat väcka diskussion i samhället i bredare kretsar. Haavisto konstaterar att för bara några år sedan hade nästan alla lågstadieelever en smartphone. I dag köper allt fler föräldrar i stället smartklockor som bara kan ringa och ha positionering.
 
-Samtidigt återhämtar sig barns läsning. Finsk biblioteksstatistik visar att barns lånetal har ökat tre år i rad. Det har till och med startats en kampanj: *"Det bibliotek du gillar mest är den person som läser en bok för dig"* — med betoning på den mänskliga kontakten mellan föräldrar och barn.
+Samtidigt återhämtar sig barns läsning. Finsk biblioteksstatistik visar att barns lånetal har ökat tre år i rad. Det har till och med startats en kampanj: *"Det bibliotek du gillar mest är den person som läser en bok för dig"* – med betoning på den mänskliga kontakten mellan föräldrar och barn.
 
-Det finska pedagogiska tänkandet är mycket tydligt: emotionell fostran och självständigt tänkande är grunden för allt. Barn lär sig tidigt att känna igen risker — de undervisas inte bara i självständigt tänkande utan också i emotionella färdigheter.
+Det finska pedagogiska tänkandet är mycket tydligt: emotionell fostran och självständigt tänkande är grunden för allt. Barn lär sig tidigt att känna igen risker – de undervisas inte bara i självständigt tänkande utan också i emotionella färdigheter.
 
 ## 9-åringar lär sig känna igen falska nyheter och använda emojis
 
@@ -73,7 +73,7 @@ AI-litteracitetsinnehåll vid Tapanila skola:
 **Producent:** Liu Peixiu (劉佩修)
 **Fotograf:** Chen Zongyi (陳宗怡)
 
-Artikeln är del av ett större reportage för vilket Business Weeklys redaktion reste till Finland för att intervjua över 40 personer — från riksdagsledamöter till rektorer och Uber-chaufförer. Reportaget handlar om hur Finland — världens lyckligaste land åtta år i rad — svarar på de utmaningar som AI medför med en jämlikhetsbaserad strategi.
+Artikeln är del av ett större reportage för vilket Business Weeklys redaktion reste till Finland för att intervjua över 40 personer – från riksdagsledamöter till rektorer och Uber-chaufförer. Reportaget handlar om hur Finland – världens lyckligaste land åtta år i rad – svarar på de utmaningar som AI medför med en jämlikhetsbaserad strategi.
 
 ### Reportagets delar (nr 2001)
 

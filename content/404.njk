@@ -48,12 +48,12 @@ layout: layouts/base.njk
       items: {
         fi: [
           { title: 'Opetettava kone',                           url: 'https://www.gen-ai.fi/fi/tools/tm',                   ext: true },
-          { title: 'Tee oma mobiiliappi — opetuskokonaisuus',   url: 'https://www.gen-ai.fi/fi/materials/classifier-unit',  ext: true },
+          { title: 'Tee oma mobiiliappi – opetuskokonaisuus',   url: 'https://www.gen-ai.fi/fi/materials/classifier-unit',  ext: true },
           { title: 'Materiaalit',                               url: '/materiaalit/' }
         ],
         en: [
           { title: 'Teachable Machine',                         url: 'https://www.gen-ai.fi/en/tools/tm',                   ext: true },
-          { title: 'Create Your Own Mobile App — unit',         url: 'https://www.gen-ai.fi/en/materials/classifier-unit',  ext: true },
+          { title: 'Create Your Own Mobile App – unit',         url: 'https://www.gen-ai.fi/en/materials/classifier-unit',  ext: true },
           { title: 'Materials',                                 url: '/en/materials/' }
         ],
         sv: [
@@ -137,15 +137,15 @@ layout: layouts/base.njk
       items: {
         fi: [
           { title: 'Materiaalit',                     url: '/materiaalit/' },
-          { title: 'Kaikki sovellukset — gen-ai.fi',  url: 'https://www.gen-ai.fi/fi', ext: true }
+          { title: 'Kaikki sovellukset – gen-ai.fi',  url: 'https://www.gen-ai.fi/fi', ext: true }
         ],
         en: [
           { title: 'Materials',                       url: '/en/materials/' },
-          { title: 'All tools — gen-ai.fi',           url: 'https://www.gen-ai.fi/en', ext: true }
+          { title: 'All tools – gen-ai.fi',           url: 'https://www.gen-ai.fi/en', ext: true }
         ],
         sv: [
           { title: 'Material',                        url: '/sv/material/' },
-          { title: 'Alla verktyg — gen-ai.fi',        url: 'https://www.gen-ai.fi/fi', ext: true }
+          { title: 'Alla verktyg – gen-ai.fi',        url: 'https://www.gen-ai.fi/fi', ext: true }
         ]
       }
     },
@@ -270,7 +270,7 @@ layout: layouts/base.njk
     document.head.appendChild(_s);
   }
 
-  if (!best || bestScore === 0) return; // no match — plain 404
+  if (!best || bestScore === 0) return; // no match – plain 404
 
   var items = (best.items[locale] || best.items['fi'] || []).slice(0, 3);
   if (!items.length) return;

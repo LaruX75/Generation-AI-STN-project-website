@@ -39,7 +39,7 @@ const LABEL_OVERRIDES = {
 
   /* ── Hash-linked items (won't be auto-translated via URL lookup) ─────── */
   "Tieteelliset julkaisut": { fi: "Tieteelliset julkaisut", en: "Scientific publications", sv: "Vetenskapliga publikationer" },
-  "Ajankohtaista — tutkimus": { fi: "Ajankohtaista — tutkimus", en: "Current affairs — research", sv: "Aktuellt — forskning" },
+  "Ajankohtaista – tutkimus": { fi: "Ajankohtaista – tutkimus", en: "Current affairs – research", sv: "Aktuellt – forskning" },
   "Tapahtumat":             { fi: "Tapahtumat",           en: "Events",                  sv: "Evenemang" },
   "Toiminta":               { fi: "Toiminta",              en: "Project activities",      sv: "Projektaktiviteter" },
   "Tutkimus":               { fi: "Tutkimus",             en: "Research",                sv: "Forskning" },
@@ -143,7 +143,7 @@ function isInternalUrl(url = "") {
 }
 
 function getLocalizedUrl(url, locale, translations) {
-  // Check URL_OVERRIDES first — handles both internal and external URLs
+  // Check URL_OVERRIDES first – handles both internal and external URLs
   const directOverride = URL_OVERRIDES[url];
   if (directOverride && directOverride[locale]) {
     return directOverride[locale];
@@ -173,7 +173,7 @@ function getLocalizedLabel(originalLabel, url, locale, translations) {
   if (!isInternalUrl(url)) return originalLabel;
 
   const { path, hash } = splitHash(url);
-  // Hash links point to a page section — keep the original label, not the page title
+  // Hash links point to a page section – keep the original label, not the page title
   if (hash) return originalLabel;
 
   const localizedTarget = translations.byUrl[path] && translations.byUrl[path][locale];
