@@ -42,9 +42,8 @@
     #cms-container {
       position: fixed;
       top: 40px; left: 0; right: 0; bottom: 0;
-      overflow: hidden;
-      /* transform + will-change varmistavat containing block -vaikutuksen
-         eri selaimissa ja Sveltian eri versioissa */
+      /* overflow: hidden poistettu — leikkasi Sveltian sisäisten
+         fixed-elementtien (dialogit, dropdownit) click-alueen */
       transform: translateZ(0);
       will-change: transform;
       z-index: 9000;
@@ -83,6 +82,6 @@
     }
   </script>
 
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+  <script src="https://unpkg.com/@sveltia/cms@0.169.0/dist/sveltia-cms.js"></script>
 </body>
 </html>
