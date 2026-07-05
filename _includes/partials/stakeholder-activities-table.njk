@@ -17,7 +17,7 @@
       <p class="stakeholder-activities__lead">{{ labels.lead }}</p>
     {% endif %}
   </div>
-  <div class="stakeholder-activities__grid">
+  <div class="stakeholder-activities__grid" data-mobile-truncate>
     {% for row in rows %}
       {% set stakeholderRow = row %}
       {% include "partials/stakeholder-activity-card.njk" %}

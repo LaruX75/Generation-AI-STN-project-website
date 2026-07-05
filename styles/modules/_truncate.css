@@ -1,0 +1,58 @@
+/* ── Mobile truncate: show 3 items + fade + expand button ──────────
+   JS (mobile-truncate.js) wraps any [data-mobile-truncate] element
+   that has > 3 children in a .truncate-shell div and appends a
+   .truncate-footer button. CSS handles the visual clipping.
+   ------------------------------------------------------------------ */
+
+/* Hidden on desktop — JS still runs so the DOM is ready if resized */
+.truncate-footer { display: none; }
+
+@media (max-width: 640px) {
+  /* Shell wraps the list/grid */
+  .truncate-shell { position: relative; }
+
+  /* Gradient fade — visible only when collapsed */
+  .truncate-shell:not(.truncate-expanded)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1) 90%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Hide items 4+ when collapsed */
+  .truncate-shell:not(.truncate-expanded) [data-mobile-truncate] > *:nth-child(n+4) {
+    display: none;
+  }
+
+  /* Show-more button */
+  .truncate-footer {
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem 0 0.5rem;
+  }
+
+  .truncate-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6em 1.6em;
+    background: var(--global-palette1, #314e25);
+    color: #fff;
+    border: none;
+    border-radius: 36px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .truncate-btn:hover,
+  .truncate-btn:focus-visible {
+    background: var(--global-palette2, #446d33);
+    outline: 2px solid var(--global-palette2, #446d33);
+    outline-offset: 2px;
+  }
+}
