@@ -48,27 +48,26 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     <p class="teacher-why-text">Tekoälytyökalut eivät ole taikuutta. Ne ovat ihmisen suunnittelemia järjestelmiä, jotka tekevät virheitä ja kantavat suunnittelijoidensa arvoja. Oppilaat, jotka ymmärtävät miten nämä järjestelmät toimivat, voivat kyseenalaistaa, haastaa ja rakentaa niitä itse.</p>
     <div class="teacher-cede-steps">
       <div class="teacher-cede-step">
-        <span class="teacher-cede-num" aria-hidden="true">1</span>
+        <span class="teacher-cede-num" aria-hidden="true">C</span>
         <p class="teacher-cede-title">Kontekstualisointi</p>
         <p class="teacher-cede-desc">Ankkuroidaan tekoäly oppilaiden arkeen ja puretaan myyttejä.</p>
       </div>
       <div class="teacher-cede-step">
-        <span class="teacher-cede-num" aria-hidden="true">2</span>
+        <span class="teacher-cede-num" aria-hidden="true">E</span>
         <p class="teacher-cede-title">Tutkiminen</p>
         <p class="teacher-cede-desc">Kokeellinen testaus: voiko tekoälyä huijata? Missä se erehtyy?</p>
       </div>
       <div class="teacher-cede-step">
-        <span class="teacher-cede-num" aria-hidden="true">3</span>
+        <span class="teacher-cede-num" aria-hidden="true">D</span>
         <p class="teacher-cede-title">Käytännön toteutus</p>
         <p class="teacher-cede-desc">Oppilas rakentajana – oma data, oma tekoälymalli.</p>
       </div>
       <div class="teacher-cede-step">
-        <span class="teacher-cede-num" aria-hidden="true">4</span>
+        <span class="teacher-cede-num" aria-hidden="true">E</span>
         <p class="teacher-cede-title">Eettinen pohdinta</p>
         <p class="teacher-cede-desc">Kuka hyötyy? Ketä voisi syrjiä? Mitä arvoja järjestelmä kantaa?</p>
       </div>
     </div>
-    <a class="teacher-cede-link" href="https://gen-ai.fi/fi/materials/basics" target="_blank" rel="noopener">Lue Tekoälyn perusteet opettajalle →</a>
   </div>
 </section>
 
@@ -111,12 +110,19 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
     <div class="teacher-tools-grid">
       {% for app in sovellukset[lang] %}
       <div class="teacher-tool-card">
+        {% if app.status == "coming" %}
+          <div class="teacher-tool-status"><span class="gen-ai-tool-badge gen-ai-tool-badge--new">Tulossa</span></div>
+        {% elif app.status == "beta" %}
+          <div class="teacher-tool-status"><span class="gen-ai-tool-badge gen-ai-tool-badge--beta">Beta</span></div>
+        {% endif %}
         <h3 class="teacher-tool-name">{{ app.title }}</h3>
         <div class="teacher-tool-tags">
           {% for tag in app.tags %}<span class="gen-ai-tool-tag">{{ tag }}</span>{% endfor %}
         </div>
         <p class="teacher-tool-desc">{{ app.teacherDesc }}</p>
-        {% if app.appUrl %}
+        {% if app.status == "coming" %}
+          <span class="teacher-tool-link teacher-tool-link--disabled">Tulossa pian</span>
+        {% elif app.appUrl %}
           <a class="teacher-tool-link" href="{{ app.appUrl }}" target="_blank" rel="noopener">Avaa sovellus ↗</a>
         {% endif %}
         {% for lesson in app.lessons %}
@@ -158,7 +164,7 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
   </div>
 </section>
 
-{# ── Tietosuojaopas ──────────────────────────────────────────────────────── #}
+{# ── Oppaat ──────────────────────────────────────────────────────────────── #}
 <section class="teacher-guide">
   <div class="teacher-guide-inner">
     <div class="teacher-guide-card">
@@ -173,6 +179,9 @@ heroImage: "/media/wp-content/uploads/2022/12/Child_using_a_mobile_phone_hypnoti
       <p class="teacher-guide-desc">Kattava johdatus tekoälyn mahdollisuuksiin ja rajoituksiin – opettajille, rehtoreille ja kaikille tekoälystä kiinnostuneille. Avoimesti ladattavissa.</p>
       <a class="teacher-guide-btn" href="https://doi.org/10.58181/VP9789523972513" target="_blank" rel="noopener">Avaa PDF ↗</a>
     </div>
+  </div>
+  <div class="teacher-guide-more">
+    <a class="teacher-guide-more-link" href="/oppaat/">Kaikki oppaat ja podcastit →</a>
   </div>
 </section>
 

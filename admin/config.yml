@@ -252,6 +252,35 @@ collections:
       - { label: "Featured image (URL)", name: "featuredImage", widget: "string", required: false }
       - { label: "Content", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
 
+  # ── ITK-JULKAISUT JA WEBINAARIT ───────────────────────────────────────────
+  - name: "itk"
+    label: "ITK-julkaisut ja webinaarit"
+    label_singular: "ITK-tapahtuma"
+    icon: "school"
+    files:
+      - name: "itk_items"
+        label: "ITK-julkaisut ja webinaarit"
+        file: "src/_data/itk.json"
+        fields:
+          - label: "Tapahtumat"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.vuosi}} — {{fields.otsikko}}"
+            fields:
+              - { label: "Otsikko", name: "otsikko", widget: "string" }
+              - { label: "Tekijät / Esiintyjät", name: "tekijat", widget: "string", required: false }
+              - { label: "Vuosi", name: "vuosi", widget: "string" }
+              - label: "Tyyppi"
+                name: "tyyppi"
+                widget: "select"
+                options:
+                  - { label: "Artikkeli", value: "Artikkeli" }
+                  - { label: "Webinaari", value: "Webinaari" }
+                  - { label: "Esitelmä", value: "Esitelma" }
+                  - { label: "Esitys", value: "Esitys" }
+              - { label: "Linkki", name: "linkki", widget: "string", required: false }
+              - { label: "Kuvaus", name: "kuvaus", widget: "text", required: false }
+
   # ── SIDOSRYHMÄTAPAHTUMAT ───────────────────────────────────────────────────
   - name: "stakeholder_activities"
     label: "Sidosryhmätapahtumat"

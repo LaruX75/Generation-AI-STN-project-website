@@ -9,6 +9,9 @@ const registerCollections = require("./eleventy.collections.js");
 module.exports = function(eleventyConfig) {
   const outputDirName = process.env.ELEVENTY_OUTPUT_DIR || "_site";
 
+  const yaml = require("js-yaml");
+  eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
+
   eleventyConfig.setWatchThrottleWaitTime(200);
   // Allow .well-known directory (dot-prefixed dirs are ignored by default)
   eleventyConfig.watchIgnores.delete("**/.well-known/**");

@@ -1,0 +1,133 @@
+---
+title: Oppaat
+seoTitle: Oppaat ja yleistajuiset julkaisut – Generation AI
+seoDescription: Generation AI -hankkeen oppaat, podcast ja yleistajuiset julkaisut. Henkilötietojen käsittely alakoulussa, Tekoälyn perusteet opettajalle, 50 myyttiä tekoälystä ja datasta.
+date: "2026-07-06T00:00:00"
+slug: oppaat
+permalink: /oppaat/
+status: publish
+sourceType: pages
+layout: layouts/page.njk
+lang: fi
+---
+
+<div data-pagefind-body>
+
+{# ── 1. Oppaat ───────────────────────────────────────────────────────────── #}
+<section class="mat-section">
+  <div class="mat-section-inner">
+    <h2 class="mat-section-heading">Oppaat</h2>
+    <div class="teacher-guide-inner">
+
+      <div class="teacher-guide-card">
+        <div class="teacher-guide-label">Opas opettajille ja rehtoreille</div>
+        <h3 class="teacher-guide-title">Henkilötietojen käsittely alakoulussa</h3>
+        <p class="teacher-guide-desc">Katsaus GDPR-sääntelyn soveltamiseen alakouluissa, erityisesti kolmannen osapuolen sovellusten käytössä. Käy läpi rekisterinpitäjän vastuun, käsittelyperusteet ja lasten erityisen suojan – käytännön esimerkein. Saatavilla vain suomeksi.</p>
+        <p class="teacher-guide-desc">Kirjoittaneet Susanna Lindroos-Hovinheimo &amp; Eveliina Ignatius.</p>
+        <a class="teacher-guide-btn" href="/henkilotietojen-kasittely-alakoulussa/">Avaa opas</a>
+      </div>
+
+      <div class="teacher-guide-card">
+        <div class="teacher-guide-label">Avoin oppimateriaali opettajille</div>
+        <h3 class="teacher-guide-title">Tekoälyn perusteet opettajalle</h3>
+        <p class="teacher-guide-desc">Kattava johdatus tekoälyn opettamiseen: peruskäsitteet, CEDE-pedagogiikkamalli ja valmiita oppitunti-ideoita. Taustatietoa ja käsitesanasto opettajan tueksi. Saatavilla myös englanniksi ja ruotsiksi.</p>
+        <a class="teacher-guide-btn" href="https://gen-ai.fi/fi/materials/basics" target="_blank" rel="noopener">Avaa oppimateriaali ↗</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# ── 2. 50 myyttiä + podcast ─────────────────────────────────────────────── #}
+<section class="mat-section mat-section--alt">
+  <div class="mat-section-inner">
+    <h2 class="mat-section-heading">50 myyttiä tekoälystä</h2>
+
+    <div class="oppaat-myths-layout">
+
+      <div class="oppaat-book-card">
+        <div class="oppaat-book-eyebrow">Avoin tietokirja</div>
+        <h3 class="oppaat-book-title">50 myyttiä tekoälystä ja datasta</h3>
+        <p class="oppaat-book-authors">Toim. Marianne Mäkelin, Elisa Silvennoinen &amp; Kati Mäkitalo – Vastapaino 2025</p>
+        <p class="oppaat-book-desc">Tekoäly ei ole taikaa eikä tuho – mutta se on täynnä myyttejä. Kirja murtaa 50 yleistä väärinkäsitystä tekoälystä ja datasta tutkimustietoon nojaten. Kirjoittajina 30 asiantuntijaa neljästä yliopistosta. Vapaasti ladattavissa.</p>
+        <div class="oppaat-book-actions">
+          <a class="oppaat-book-btn oppaat-book-btn--primary" href="https://doi.org/10.58181/VP9789523972513" target="_blank" rel="noopener">Lataa ilmaiseksi (PDF) ↗</a>
+          <a class="oppaat-book-btn oppaat-book-btn--secondary" href="https://vastapaino.fi/sivu/tuote/50-myyttia-tekoalysta-ja-datasta/5353057" target="_blank" rel="noopener">Vastapaino.fi ↗</a>
+        </div>
+      </div>
+
+      <div class="oppaat-podcast-card">
+        <div class="oppaat-podcast-eyebrow">Podcast</div>
+        <h3 class="oppaat-podcast-title">24 myyttiä tekoälystä ja datasta – joulukalenteri</h3>
+        <p class="oppaat-podcast-meta">Kausi 1 · 2025 · Spotify</p>
+        <a class="oppaat-podcast-spotify-btn" href="{{ myyttipodcast.kaudet[0].spotifyUrl }}" target="_blank" rel="noopener">Kuuntele Spotifyssa ↗</a>
+        {% set kausi = myyttipodcast.kaudet[0] %}
+        {% if kausi and kausi.jaksot and kausi.jaksot.length %}
+        <ul class="podcast-episode-list">
+          {% for jakso in kausi.jaksot %}
+          <li class="podcast-episode">
+            <span class="podcast-ep-num">{{ jakso.nro }}</span>
+            <span class="podcast-ep-title">{{ jakso.otsikko }}</span>
+            <span class="podcast-ep-duration">{{ jakso.kesto }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{# ── 3. ITK-julkaisut ja webinaarit ──────────────────────────────────────── #}
+<section class="mat-section">
+  <div class="mat-section-inner">
+    <h2 class="mat-section-heading">ITK-julkaisut ja webinaarit</h2>
+
+    {% if itk and itk.items and itk.items.length %}
+    <div class="itk-sublists">
+
+      <div class="itk-sublist">
+        <h3 class="itk-sublist-heading">Artikkelit ja esitelmät</h3>
+        <ul class="itk-list">
+          {% for item in itk.items %}
+          {% if item.tyyppi != "Webinaari" %}
+          <li class="itk-item">
+            <div class="itk-item-title">{% if item.linkki %}<a class="itk-item-link" href="{{ item.linkki }}" target="_blank" rel="noopener">{{ item.otsikko }} ↗</a>{% else %}{{ item.otsikko }}{% endif %}</div>
+            <div class="itk-item-meta">{% if item.tekijat %}{{ item.tekijat }}{% if item.vuosi %} · {% endif %}{% endif %}{% if item.vuosi %}{{ item.vuosi }}{% endif %}</div>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="itk-sublist">
+        <h3 class="itk-sublist-heading">Webinaarit</h3>
+        <ul class="itk-list">
+          {% for item in itk.items %}
+          {% if item.tyyppi == "Webinaari" %}
+          <li class="itk-item">
+            <div class="itk-item-title">{% if item.linkki %}<a class="itk-item-link" href="{{ item.linkki }}" target="_blank" rel="noopener">{{ item.otsikko }} ↗</a>{% else %}{{ item.otsikko }}{% endif %}</div>
+            <div class="itk-item-meta">{% if item.tekijat %}{{ item.tekijat }}{% if item.vuosi %} · {% endif %}{% endif %}{% if item.vuosi %}{{ item.vuosi }}{% endif %}</div>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+    {% else %}
+    <p class="itk-empty">Julkaisuja lisätään pian.</p>
+    {% endif %}
+
+  </div>
+</section>
+
+{# ── 4. Silta tieteellisiin julkaisuihin ─────────────────────────────────── #}
+<section class="mat-section mat-section--alt">
+  <div class="mat-section-inner mat-section-inner--narrow oppaat-bridge">
+    <p class="oppaat-bridge-text">Etsitkö tieteellisiä julkaisuja? <a href="/tutkijalle/#julkaisut">Tieteelliset julkaisut →</a></p>
+  </div>
+</section>
+
+</div>

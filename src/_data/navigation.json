@@ -58,7 +58,7 @@
               { "label": "Oppimateriaalit", "url": "/materiaalit/", "target": "" },
               { "label": "Tekoälyn perusteet opettajalle", "url": "https://gen-ai.fi/fi/materials/basics", "target": "_blank" },
               { "label": "Opas: tietosuoja & sovellukset", "url": "/henkilotietojen-kasittely-alakoulussa/", "target": "" },
-              { "label": "50 myyttiä tekoälystä (PDF)", "url": "https://doi.org/10.58181/VP9789523972513", "target": "_blank" }
+              { "label": "Oppaat ja julkaisut", "url": "/oppaat/", "target": "" }
             ]
           }
         ],
@@ -131,7 +131,7 @@
           {
             "heading": "Resurssit",
             "items": [
-              { "label": "50 myyttiä tekoälystä (PDF)", "url": "https://doi.org/10.58181/VP9789523972513", "target": "_blank" },
+              { "label": "Oppaat ja julkaisut", "url": "/oppaat/", "target": "" },
               { "label": "Sovellukset gen-ai.fi:ssä", "url": "https://www.gen-ai.fi/fi", "target": "_blank" }
             ]
           },

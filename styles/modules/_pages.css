@@ -1317,6 +1317,208 @@
   background: var(--global-palette9, #fff);
 }
 
+/* ── /oppaat/ ──────────────────────────────────────────────────────────────── */
+.oppaat-myths-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.oppaat-book-card,
+.oppaat-podcast-card {
+  background: var(--global-palette9, #fff);
+  border-radius: 10px;
+  padding: 1.75rem;
+  border: 1px solid var(--global-palette7, #d8decf);
+}
+.oppaat-book-eyebrow,
+.oppaat-podcast-eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--global-palette1, #314e25);
+  margin-bottom: 0.5rem;
+}
+.oppaat-book-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: var(--global-palette1, #314e25);
+}
+.oppaat-book-authors {
+  font-size: 0.82rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+.oppaat-book-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  color: #333;
+}
+.oppaat-book-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.oppaat-book-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.oppaat-book-btn--primary {
+  background: var(--global-palette1, #314e25);
+  color: #fff;
+}
+.oppaat-book-btn--primary:hover { background: #243d1b; }
+.oppaat-book-btn--secondary {
+  background: transparent;
+  color: var(--global-palette1, #314e25);
+  border: 1.5px solid var(--global-palette1, #314e25);
+}
+.oppaat-book-btn--secondary:hover { background: rgba(255,255,255,0.5); }
+.oppaat-podcast-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--global-palette1, #314e25);
+}
+.oppaat-podcast-meta {
+  font-size: 0.82rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+.oppaat-podcast-spotify-btn {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: #1DB954;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+}
+.oppaat-podcast-spotify-btn:hover { background: #17a349; }
+.podcast-episode-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.podcast-episode {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.83rem;
+}
+.podcast-episode:nth-child(odd) { background: rgba(0,0,0,0.03); }
+.podcast-ep-num {
+  font-weight: 700;
+  color: var(--global-palette1, #314e25);
+  min-width: 2.75rem;
+  flex-shrink: 0;
+  font-size: 0.78rem;
+}
+.podcast-ep-title { flex: 1; }
+.podcast-ep-duration {
+  color: #888;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+.itk-sublists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+.itk-sublist-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--global-palette1, #314e25);
+  border-bottom: 2px solid var(--global-palette7, #d8decf);
+  padding-bottom: 0.4rem;
+}
+.itk-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.itk-item {
+  border-bottom: 1px solid var(--global-palette7, #d8decf);
+  padding-bottom: 0.6rem;
+}
+.itk-item-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.itk-item-meta {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.2rem;
+}
+.itk-item-link {
+  color: var(--global-palette1, #314e25);
+  text-decoration: none;
+}
+.itk-item-link:hover { text-decoration: underline; }
+.itk-empty {
+  color: #888;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+.oppaat-bridge {
+  text-align: center;
+}
+.oppaat-bridge-text {
+  font-size: 1.05rem;
+  color: var(--global-palette1, #314e25);
+  margin: 0;
+}
+.oppaat-bridge-text a {
+  color: var(--global-palette1, #314e25);
+  font-weight: 600;
+}
+.teacher-guide-more {
+  padding: 1.25rem 0 0;
+  text-align: right;
+}
+.teacher-guide-more-link {
+  color: var(--global-palette1, #314e25);
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+.teacher-guide-more-link:hover { text-decoration: underline; }
+.teacher-tool-status { margin-bottom: 0.5rem; }
+.teacher-tool-link--disabled {
+  display: inline-block;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #999;
+  background: var(--global-palette8, #f7f9f5);
+  cursor: default;
+  border: 1px solid var(--global-palette7, #d8decf);
+}
+@media (max-width: 720px) {
+  .oppaat-myths-layout { grid-template-columns: 1fr; }
+  .itk-sublists { grid-template-columns: 1fr; }
+}
+
 .stakeholder-activities-page,
 .researcher-presentations {
   padding: 4rem 1.5rem;
