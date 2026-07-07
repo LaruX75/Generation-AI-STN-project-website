@@ -19,9 +19,9 @@ module.exports = function registerCollections(eleventyConfig) {
 
   eleventyConfig.addCollection("tapahtumat", col =>
     col.getAll().filter(p => p.data.sourceType === "posts" && !p.data.hidden && (p.data.categories || []).some(c => [
-      "Tapahtumat",
-      "Events",
-      "Evenemang"
+      "Tapahtumat", "Toiminta",
+      "Events", "Project activities",
+      "Evenemang", "Projektaktiviteter"
     ].includes(c))).sort(byDate)
   );
 
