@@ -108,11 +108,11 @@ const URL_OVERRIDES = {
 
 /* ── Item-level description overrides (keyed by FI desc text) ──────────── */
 const ITEM_DESC_OVERRIDES = {
-  "Kouluta oma tekoälymalli":         { fi: "Kouluta oma tekoälymalli",         en: "Train your own AI model",            sv: "Träna din egen AI-modell" },
-  "Algoritmit ja medialukutaito":     { fi: "Algoritmit ja medialukutaito",     en: "Algorithms and media literacy",      sv: "Algoritmer och mediekunskap" },
-  "Miten kielimalli toimii":          { fi: "Miten kielimalli toimii",          en: "How a language model works",         sv: "Hur en språkmodell fungerar" },
-  "Tekoälyn haavoittuvuudet":         { fi: "Tekoälyn haavoittuvuudet",         en: "AI vulnerabilities",                 sv: "AI:s sårbarheter" },
-  "Data ja yksityisyys":              { fi: "Data ja yksityisyys",              en: "Data and privacy",                   sv: "Data och integritet" },
+  "Tee pieni tekoälysovellus":         { fi: "Tee pieni tekoälysovellus",        en: "Build a small AI application",       sv: "Bygg en liten AI-applikation" },
+  "Algoritmit ja sosiaalinen media":  { fi: "Algoritmit ja sosiaalinen media",  en: "Algorithms and social media",        sv: "Algoritmer och sociala medier" },
+  "Miten tekoäly ennustaa sanoja":    { fi: "Miten tekoäly ennustaa sanoja",    en: "How AI predicts words",              sv: "Hur AI förutspår ord" },
+  "Kokeile huijata tekoälyä":         { fi: "Kokeile huijata tekoälyä",         en: "Try to fool the AI",                 sv: "Försök lura AI:n" },
+  "Arvaa kuka datan perusteella":     { fi: "Arvaa kuka datan perusteella",     en: "Guess who based on data",            sv: "Gissa vem utifrån data" },
   "Tulossa":                          { fi: "Tulossa",                          en: "Coming soon",                        sv: "Kommer snart" },
   "Valmiit kokonaisuudet luokkaan":   { fi: "Valmiit kokonaisuudet luokkaan",   en: "Ready-made units for the classroom", sv: "Färdiga enheter för klassrummet" },
   "Aloita tästä":                     { fi: "Aloita tästä",                     en: "Start here",                         sv: "Börja här" },

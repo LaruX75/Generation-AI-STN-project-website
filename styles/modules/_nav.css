@@ -344,14 +344,11 @@ body.kb-nav-open {
   display: block;
   padding: 0.32rem 0.25rem;
   border-radius: 4px;
-  color: #aaa;
+  color: #333;
   font-size: 0.875rem;
   line-height: 1.35;
   cursor: default;
   user-select: none;
-}
-.kb-mega-link--disabled .kb-mega-link-desc {
-  color: #bbb;
 }
 @media (max-width: 1024px) {
   .kb-mega-link-desc { display: none; }

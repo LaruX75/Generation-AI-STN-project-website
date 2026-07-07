@@ -44,11 +44,11 @@
           {
             "heading": "Sovellukset",
             "items": [
-              { "label": "Opetettava kone", "url": "https://www.gen-ai.fi/fi/tools/tm", "target": "_blank", "desc": "Kouluta oma tekoälymalli" },
-              { "label": "Somekone", "url": "https://www.gen-ai.fi/fi/tools/somekone", "target": "_blank", "desc": "Algoritmit ja medialukutaito" },
-              { "label": "Pieni kielikone", "url": "https://www.gen-ai.fi/fi/tools/lm", "target": "_blank", "desc": "Miten kielimalli toimii" },
-              { "label": "Hajoava kone", "url": "https://www.gen-ai.fi/fi/tools/bm", "target": "_blank", "desc": "Tekoälyn haavoittuvuudet" },
-              { "label": "Profilointipeli", "url": "https://www.gen-ai.fi/fi/tools/profiling-game", "target": "_blank", "desc": "Data ja yksityisyys" },
+              { "label": "Opetettava kone", "url": "https://www.gen-ai.fi/fi/tools/tm", "target": "_blank", "desc": "Tee pieni tekoälysovellus" },
+              { "label": "Somekone", "url": "https://www.gen-ai.fi/fi/tools/somekone", "target": "_blank", "desc": "Algoritmit ja sosiaalinen media" },
+              { "label": "Pieni kielikone", "url": "https://www.gen-ai.fi/fi/tools/lm", "target": "_blank", "desc": "Miten tekoäly ennustaa sanoja" },
+              { "label": "Hajoava kone", "url": "https://www.gen-ai.fi/fi/tools/bm", "target": "_blank", "desc": "Kokeile huijata tekoälyä" },
+              { "label": "Profilointipeli", "url": "https://www.gen-ai.fi/fi/tools/profiling-game", "target": "_blank", "desc": "Arvaa kuka datan perusteella" },
               { "label": "Manipulointipeli", "url": "", "target": "", "disabled": true, "desc": "Tulossa" }
             ]
           },
