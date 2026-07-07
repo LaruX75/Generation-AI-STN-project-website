@@ -1,79 +1,139 @@
 ---
 layout: layouts/base.njk
 ---
-<main class="myytti-page">
-  <div class="myytti-inner">
+<div class="myytti-shell">
 
-    <nav class="myytti-breadcrumb" aria-label="Sijainti">
-      <ol>
-        <li><a href="/">Etusivu</a></li>
-        <li><a href="/myytit/">50 myyttiä tekoälystä</a></li>
-        <li aria-current="page">{{ otsikko | truncate(55) }}</li>
-      </ol>
-    </nav>
-
-    <header class="myytti-header">
-      <div class="myytti-eyebrow">Myytti {{ numero }}</div>
-      <h1 class="myytti-title">{{ otsikko }}</h1>
-      {% if kirjoittajat and kirjoittajat.length %}
-      <p class="myytti-authors">{{ kirjoittajat | join(", ") }}</p>
-      {% endif %}
-    </header>
-
-    <div class="myytti-content">
-      {{ content | safe }}
-    </div>
-
-    <aside class="myytti-attribution" data-pagefind-ignore>
-      <p>Luku teoksesta <em>50 myyttiä tekoälystä ja datasta</em> / toim. Marianne Mäkelin, Elisa Silvennoinen &amp; Kati Mäkitalo. Kustannusosakeyhtiö Vastapaino, Tampere 2025.</p>
-      <p>DOI: <a href="https://doi.org/10.58181/VP9789523972513" target="_blank" rel="noopener">10.58181/VP9789523972513</a> &nbsp;·&nbsp; Lisenssi: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fi" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></p>
-      <p class="myytti-attribution-note">Teksti on julkaistu muuttamattomana; muoto on muunnettu verkkojulkaisua varten.</p>
-    </aside>
-
-    {% set jakso = myyttipodcastByMyytti[numero] %}
-    {% if jakso %}
-    <div class="myytti-podcast" data-pagefind-ignore>
-      <p class="myytti-podcast-label">Kuuntele podcast-jakso</p>
-      <a class="myytti-podcast-link" href="{{ jakso.url }}" target="_blank" rel="noopener">
-        <span class="myytti-podcast-play">▶</span>
-        <span class="myytti-podcast-meta">Jakso {{ jakso.nro }}: {{ jakso.otsikko }}</span>
-        <span class="myytti-podcast-duration">{{ jakso.kesto }}</span>
-      </a>
-    </div>
-    {% endif %}
-
-    {% if liittyvat_myytit and liittyvat_myytit.length %}
-    <nav class="myytti-related" aria-label="Liittyvät myytit" data-pagefind-ignore>
-      <h2 class="myytti-related-heading">Liittyvät myytit</h2>
-      <ul class="myytti-related-list">
-        {% for nro in liittyvat_myytit %}
-          {% set relMyytti = null %}
-          {% for luku in myytit.luvut %}
-            {% for m in luku.myytit %}
-              {% if m.nro == nro %}{% set relMyytti = m %}{% endif %}
+  {# ── Left sidebar: all 50 myths ───────────────────────────────────────────── #}
+  <aside class="myytti-sidebar" id="myytti-sidebar" data-pagefind-ignore>
+    <button class="myytti-sidebar-close" id="myytti-sidebar-close" aria-label="Sulje myyttivalikko">✕</button>
+    <div class="myytti-sidebar-inner">
+      <p class="myytti-sidebar-label"><a href="/myytit/" class="myytti-sidebar-index-link">50 myyttiä tekoälystä</a></p>
+      {% for luku in myytit.luvut %}
+      <div class="myytti-sidebar-section">
+        <h2 class="myytti-sidebar-section-heading">{{ luku.otsikko }}</h2>
+        <ul class="myytti-sidebar-list">
+          {% for m in luku.myytit %}
+            {% set mPage = null %}
+            {% for p in collections.myytit %}
+              {% if p.data.numero == m.nro %}{% set mPage = p %}{% endif %}
             {% endfor %}
+            <li class="myytti-sidebar-item{% if m.nro == numero %} myytti-sidebar-item--active{% endif %}">
+              {% if mPage %}
+                <a class="myytti-sidebar-link" href="{{ mPage.url }}"{% if m.nro == numero %} aria-current="page"{% endif %}>
+                  <span class="myytti-sidebar-num">{{ m.nro }}</span><span class="myytti-sidebar-name">{{ m.otsikko }}</span>
+                </a>
+              {% else %}
+                <span class="myytti-sidebar-link myytti-sidebar-link--unpub">
+                  <span class="myytti-sidebar-num">{{ m.nro }}</span><span class="myytti-sidebar-name">{{ m.otsikko }}</span>
+                </span>
+              {% endif %}
+            </li>
           {% endfor %}
-          {% set relPage = null %}
-          {% for p in collections.myytit %}
-            {% if p.data.numero == nro %}{% set relPage = p %}{% endif %}
-          {% endfor %}
-          {% if relMyytti %}
-          <li>
-            {% if relPage %}
-              <a href="{{ relPage.url }}">{{ nro }}. {{ relMyytti.otsikko }}</a>
-            {% else %}
-              <span>{{ nro }}. {{ relMyytti.otsikko }}</span>
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </aside>
+
+  <div class="myytti-sidebar-overlay" id="myytti-sidebar-overlay"></div>
+
+  {# ── Right: myth content ───────────────────────────────────────────────────── #}
+  <main class="myytti-page" id="main-content">
+    <div class="myytti-inner">
+
+      <div class="myytti-topbar">
+        <button class="myytti-sidebar-toggle" id="myytti-sidebar-toggle" aria-expanded="false" aria-controls="myytti-sidebar">
+          <span class="myytti-sidebar-toggle-icon">☰</span> Myytit 1–50
+        </button>
+        <nav class="myytti-breadcrumb" aria-label="Sijainti">
+          <ol>
+            <li><a href="/">Etusivu</a></li>
+            <li><a href="/myytit/">50 myyttiä</a></li>
+            <li aria-current="page">{{ otsikko | truncate(45) }}</li>
+          </ol>
+        </nav>
+      </div>
+
+      <header class="myytti-header">
+        <div class="myytti-eyebrow">Myytti {{ numero }}</div>
+        <h1 class="myytti-title">{{ otsikko }}</h1>
+        {% if kirjoittajat and kirjoittajat.length %}
+        <p class="myytti-authors">{{ kirjoittajat | join(", ") }}</p>
+        {% endif %}
+      </header>
+
+      <div class="myytti-content">
+        {{ content | safe }}
+      </div>
+
+      <aside class="myytti-attribution" data-pagefind-ignore>
+        <p>Luku teoksesta <em>50 myyttiä tekoälystä ja datasta</em> / toim. Marianne Mäkelin, Elisa Silvennoinen &amp; Kati Mäkitalo. Kustannusosakeyhtiö Vastapaino, Tampere 2025.</p>
+        <p>DOI: <a href="https://doi.org/10.58181/VP9789523972513" target="_blank" rel="noopener">10.58181/VP9789523972513</a> &nbsp;·&nbsp; Lisenssi: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fi" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></p>
+        <p class="myytti-attribution-note">Teksti on julkaistu muuttamattomana; muoto on muunnettu verkkojulkaisua varten.</p>
+      </aside>
+
+      {% set jakso = myyttipodcastByMyytti[numero] %}
+      {% if jakso %}
+      <div class="myytti-podcast" data-pagefind-ignore>
+        <p class="myytti-podcast-label">Kuuntele podcast-jakso</p>
+        <a class="myytti-podcast-link" href="{{ jakso.url }}" target="_blank" rel="noopener">
+          <span class="myytti-podcast-play">▶</span>
+          <span class="myytti-podcast-meta">Jakso {{ jakso.nro }}: {{ jakso.otsikko }}</span>
+          <span class="myytti-podcast-duration">{{ jakso.kesto }}</span>
+        </a>
+      </div>
+      {% endif %}
+
+      {% if liittyvat_myytit and liittyvat_myytit.length %}
+      <nav class="myytti-related" aria-label="Liittyvät myytit" data-pagefind-ignore>
+        <h2 class="myytti-related-heading">Liittyvät myytit</h2>
+        <ul class="myytti-related-list">
+          {% for nro in liittyvat_myytit %}
+            {% set relMyytti = null %}
+            {% for luku in myytit.luvut %}
+              {% for m in luku.myytit %}
+                {% if m.nro == nro %}{% set relMyytti = m %}{% endif %}
+              {% endfor %}
+            {% endfor %}
+            {% set relPage = null %}
+            {% for p in collections.myytit %}
+              {% if p.data.numero == nro %}{% set relPage = p %}{% endif %}
+            {% endfor %}
+            {% if relMyytti %}
+            <li>
+              {% if relPage %}
+                <a href="{{ relPage.url }}">{{ nro }}. {{ relMyytti.otsikko }}</a>
+              {% else %}
+                <span>{{ nro }}. {{ relMyytti.otsikko }}</span>
+              {% endif %}
+            </li>
             {% endif %}
-          </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
-    {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+      {% endif %}
 
-    <nav class="myytti-nav" aria-label="Selaa myyttejä" data-pagefind-ignore>
-      <a class="myytti-nav-back" href="/myytit/">← Kaikki myytit</a>
-    </nav>
+    </div>
+  </main>
 
-  </div>
-</main>
+</div>
+
+<script>
+(function () {
+  var toggle = document.getElementById('myytti-sidebar-toggle');
+  var close  = document.getElementById('myytti-sidebar-close');
+  var overlay = document.getElementById('myytti-sidebar-overlay');
+  var shell  = document.querySelector('.myytti-shell');
+
+  function open()  { shell.classList.add('myytti-sidebar--open');    toggle && toggle.setAttribute('aria-expanded', 'true'); }
+  function shut()  { shell.classList.remove('myytti-sidebar--open'); toggle && toggle.setAttribute('aria-expanded', 'false'); }
+
+  if (toggle)  toggle.addEventListener('click',  function () { shell.classList.contains('myytti-sidebar--open') ? shut() : open(); });
+  if (close)   close.addEventListener('click',   shut);
+  if (overlay) overlay.addEventListener('click', shut);
+
+  // Scroll active item into view inside the sidebar
+  var active = document.querySelector('.myytti-sidebar-item--active');
+  if (active) { active.scrollIntoView({ block: 'nearest', behavior: 'instant' }); }
+})();
+</script>

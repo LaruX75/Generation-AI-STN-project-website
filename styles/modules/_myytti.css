@@ -1,28 +1,180 @@
-/* ── Myyttisivu (yksittäinen luku) ───────────────────────────────────────── */
+/* ── Two-column shell ─────────────────────────────────────────────────────── */
+
+.myytti-shell {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  align-items: start;
+  min-height: calc(100dvh - var(--kb-header-height, 60px));
+}
+
+/* ── Sidebar ──────────────────────────────────────────────────────────────── */
+
+.myytti-sidebar {
+  position: sticky;
+  top: var(--kb-header-height, 60px);
+  height: calc(100dvh - var(--kb-header-height, 60px));
+  overflow-y: auto;
+  background: var(--global-palette8, #f7f9f5);
+  border-right: 1px solid var(--global-palette7, #d8decf);
+  scrollbar-width: thin;
+  scrollbar-color: var(--global-palette7, #d8decf) transparent;
+}
+
+.myytti-sidebar-inner {
+  padding: 1.25rem 0.75rem 2.5rem;
+}
+
+.myytti-sidebar-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.75rem 0.25rem;
+}
+
+.myytti-sidebar-index-link {
+  color: var(--global-palette1, #314e25);
+  text-decoration: none;
+}
+.myytti-sidebar-index-link:hover { text-decoration: underline; }
+
+.myytti-sidebar-section {
+  margin-bottom: 0.5rem;
+}
+
+.myytti-sidebar-section-heading {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #999;
+  margin: 1rem 0 0.3rem 0.25rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--global-palette7, #e0e8d8);
+}
+
+.myytti-sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.myytti-sidebar-link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  padding: 0.26rem 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--global-palette3, #333);
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+a.myytti-sidebar-link:hover {
+  background: var(--global-palette7, #e0e8d8);
+  color: var(--global-palette1, #314e25);
+}
+.myytti-sidebar-link--unpub {
+  color: #bbb;
+  cursor: default;
+}
+
+.myytti-sidebar-item--active .myytti-sidebar-link {
+  background: var(--global-palette1, #314e25);
+  color: #fff;
+  font-weight: 600;
+}
+.myytti-sidebar-item--active .myytti-sidebar-num {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.myytti-sidebar-num {
+  min-width: 1.5rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--global-palette2, #446d33);
+  flex-shrink: 0;
+  text-align: right;
+}
+
+/* Close button (mobile only) */
+.myytti-sidebar-close {
+  display: none;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  color: #666;
+  border-radius: 4px;
+}
+.myytti-sidebar-close:hover { background: var(--global-palette7, #e0e8d8); }
+
+/* Overlay (mobile) */
+.myytti-sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 499;
+}
+.myytti-shell.myytti-sidebar--open .myytti-sidebar-overlay { display: block; }
+
+/* ── Content area ─────────────────────────────────────────────────────────── */
 
 .myytti-page {
-  padding: 2rem 1.5rem 4rem;
+  min-width: 0;
+  padding: 1.75rem 2rem 4rem;
   background: var(--global-palette9, #fff);
 }
+
 .myytti-inner {
   max-width: 720px;
-  margin: 0 auto;
 }
+
+/* Topbar: toggle button + breadcrumb */
+.myytti-topbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.myytti-sidebar-toggle {
+  display: none; /* shown only on mobile */
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--global-palette8, #f7f9f5);
+  border: 1.5px solid var(--global-palette7, #d8decf);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--global-palette1, #314e25);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.myytti-sidebar-toggle:hover { background: var(--global-palette7, #e0e8d8); }
 
 /* Breadcrumb */
 .myytti-breadcrumb ol {
   display: flex;
   flex-wrap: wrap;
-  gap: 0 0.35rem;
+  gap: 0 0.3rem;
   list-style: none;
   padding: 0;
-  margin: 0 0 2rem;
-  font-size: 0.8rem;
+  margin: 0;
+  font-size: 0.78rem;
   color: #666;
 }
 .myytti-breadcrumb li + li::before {
   content: "›";
-  margin-right: 0.35rem;
+  margin-right: 0.3rem;
   color: #aaa;
 }
 .myytti-breadcrumb a {
@@ -46,7 +198,7 @@
   margin-bottom: 0.4rem;
 }
 .myytti-title {
-  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.2rem);
+  font-size: clamp(1.4rem, 1.2rem + 1vw, 2rem);
   line-height: 1.2;
   font-weight: 800;
   color: var(--global-palette1, #314e25);
@@ -58,28 +210,22 @@
   margin: 0;
 }
 
-/* Chapter content — verbatim book text */
+/* Chapter content */
 .myytti-content {
   font-size: 1.05rem;
   line-height: 1.72;
   color: var(--global-palette3, #1a1a1a);
   margin-bottom: 2.5rem;
 }
-.myytti-content p {
-  margin: 0 0 1.1em;
-  hyphens: auto;
-}
+.myytti-content p { margin: 0 0 1.1em; hyphens: auto; }
 .myytti-content p:first-of-type {
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   line-height: 1.65;
   color: var(--global-palette1, #314e25);
 }
-.myytti-content sup {
-  font-size: 0.68em;
-  color: #666;
-}
+.myytti-content sup { font-size: 0.68em; color: #666; }
 
-/* Attribution block */
+/* Attribution */
 .myytti-attribution {
   background: var(--global-palette8, #f7f9f5);
   border-left: 3px solid var(--global-palette7, #d8decf);
@@ -95,7 +241,7 @@
 .myytti-attribution a { color: var(--global-palette2, #446d33); }
 .myytti-attribution-note { font-style: italic; color: #777; }
 
-/* Podcast link */
+/* Podcast */
 .myytti-podcast {
   background: #f0faf2;
   border: 1px solid #c8e6c9;
@@ -126,9 +272,7 @@
 .myytti-podcast-duration { font-size: 0.78rem; color: #888; font-weight: 400; }
 
 /* Related myths */
-.myytti-related {
-  margin-bottom: 2rem;
-}
+.myytti-related { margin-bottom: 2rem; }
 .myytti-related-heading {
   font-size: 0.75rem;
   font-weight: 700;
@@ -139,27 +283,47 @@
   border-bottom: 1px solid var(--global-palette7, #d8decf);
   padding-bottom: 0.3rem;
 }
-.myytti-related-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-.myytti-related-list a {
-  color: var(--global-palette2, #446d33);
-  text-decoration: none;
-  font-size: 0.88rem;
-}
+.myytti-related-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.3rem; }
+.myytti-related-list a { color: var(--global-palette2, #446d33); text-decoration: none; font-size: 0.88rem; }
 .myytti-related-list a:hover { text-decoration: underline; }
 
-/* Back nav */
-.myytti-nav { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--global-palette7, #d8decf); }
-.myytti-nav-back { color: var(--global-palette2, #446d33); text-decoration: none; font-size: 0.88rem; font-weight: 600; }
-.myytti-nav-back:hover { text-decoration: underline; }
+/* ── Mobile (< 900px) ─────────────────────────────────────────────────────── */
 
-/* ── Myyttien indeksisivu ─────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .myytti-shell {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  .myytti-sidebar {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: var(--kb-header-height, 60px);
+    height: calc(100dvh - var(--kb-header-height, 60px));
+    width: min(300px, 85vw);
+    z-index: 500;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.18);
+    transform: translateX(-105%);
+    transition: transform 0.22s ease;
+  }
+
+  .myytti-shell.myytti-sidebar--open .myytti-sidebar {
+    transform: translateX(0);
+  }
+
+  .myytti-sidebar-close { display: block; }
+
+  .myytti-sidebar-toggle {
+    display: inline-flex;
+  }
+
+  .myytti-page { padding: 1.25rem 1rem 3rem; }
+  .myytti-content { font-size: 1rem; }
+  .myytti-content p:first-of-type { font-size: 1.05rem; }
+}
+
+/* ── Index page ───────────────────────────────────────────────────────────── */
 
 .myytit-intro {
   background: var(--global-palette8, #f7f9f5);
@@ -168,22 +332,9 @@
   margin-bottom: 2.5rem;
   border: 1px solid var(--global-palette7, #d8decf);
 }
-.myytit-intro-lead {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0 0 0.75rem;
-  color: var(--global-palette3, #1a1a1a);
-}
-.myytit-intro-license {
-  font-size: 0.85rem;
-  color: #666;
-  margin: 0 0 1.25rem;
-}
-.myytit-intro-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
+.myytit-intro-lead { font-size: 1rem; line-height: 1.6; margin: 0 0 0.75rem; color: var(--global-palette3, #1a1a1a); }
+.myytit-intro-license { font-size: 0.85rem; color: #666; margin: 0 0 1.25rem; }
+.myytit-intro-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .myytit-intro-btn {
   display: inline-block;
   padding: 0.5rem 1.1rem;
@@ -192,19 +343,11 @@
   font-weight: 600;
   text-decoration: none;
 }
-.myytit-intro-btn--primary {
-  background: var(--global-palette1, #314e25);
-  color: #fff;
-}
+.myytit-intro-btn--primary { background: var(--global-palette1, #314e25); color: #fff; }
 .myytit-intro-btn--primary:hover { background: #243d1b; }
-.myytit-intro-btn--secondary {
-  background: transparent;
-  color: var(--global-palette1, #314e25);
-  border: 1.5px solid var(--global-palette1, #314e25);
-}
+.myytit-intro-btn--secondary { background: transparent; color: var(--global-palette1, #314e25); border: 1.5px solid var(--global-palette1, #314e25); }
 .myytit-intro-btn--secondary:hover { background: var(--global-palette7, #e8eee4); }
 
-/* Chapter groups on index */
 .myytit-chapter-group { margin-bottom: 2rem; }
 .myytit-chapter-heading {
   font-size: 0.78rem;
@@ -216,11 +359,7 @@
   padding-bottom: 0.35rem;
   border-bottom: 2px solid var(--global-palette7, #d8decf);
 }
-.myytit-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+.myytit-list { list-style: none; padding: 0; margin: 0; }
 .myytit-item {
   display: flex;
   align-items: baseline;
@@ -231,24 +370,8 @@
   border-bottom: 1px solid var(--global-palette8, #f0f4ec);
 }
 .myytit-item:last-child { border-bottom: none; }
-.myytit-item-num {
-  min-width: 2rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--global-palette2, #446d33);
-  flex-shrink: 0;
-}
+.myytit-item-num { min-width: 2rem; font-size: 0.72rem; font-weight: 700; color: var(--global-palette2, #446d33); flex-shrink: 0; }
 .myytit-item-title { color: #666; }
-.myytit-item-link {
-  color: var(--global-palette1, #314e25);
-  text-decoration: none;
-  font-weight: 500;
-}
+.myytit-item-link { color: var(--global-palette1, #314e25); text-decoration: none; font-weight: 500; }
 .myytit-item-link:hover { text-decoration: underline; }
 .myytit-item--published .myytit-item-num { color: var(--global-palette1, #314e25); }
-
-@media (max-width: 600px) {
-  .myytti-page { padding: 1.5rem 1rem 3rem; }
-  .myytti-content { font-size: 1rem; }
-  .myytti-content p:first-of-type { font-size: 1.05rem; }
-}
