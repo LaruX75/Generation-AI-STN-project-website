@@ -11,37 +11,9 @@ layout: layouts/page.njk
 lang: fi
 ---
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Book",
-  "@id": "https://doi.org/10.58181/VP9789523972513",
-  "name": "50 myyttiä tekoälystä ja datasta",
-  "editor": [
-    { "@type": "Person", "name": "Marianne Mäkelin" },
-    { "@type": "Person", "name": "Elisa Silvennoinen" },
-    { "@type": "Person", "name": "Kati Mäkitalo" }
-  ],
-  "publisher": { "@type": "Organization", "name": "Kustannusosakeyhtiö Vastapaino" },
-  "datePublished": "2025",
-  "inLanguage": "fi",
-  "url": "https://doi.org/10.58181/VP9789523972513",
-  "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
-}
-</script>
-
 <div data-pagefind-body>
 <section class="mat-section">
   <div class="mat-section-inner mat-section-inner--narrow">
-
-    <div class="myytit-intro">
-      <p class="myytit-intro-lead"><em>50 myyttiä tekoälystä ja datasta</em> on avoin tietokirja, joka murtaa yleisiä väärinkäsityksiä tekoälystä ja datasta tutkimustietoon nojaten. Kirjoittajina 30 asiantuntijaa neljästä yliopistosta.</p>
-      <p class="myytit-intro-license">Kirja on lisensoitu <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fi" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a> -käyttöluvalla. Luvut julkaistaan täällä muuttamattomina; muoto on muunnettu verkkojulkaisua varten.</p>
-      <div class="myytit-intro-actions">
-        <a class="myytit-intro-btn myytit-intro-btn--primary" href="https://doi.org/10.58181/VP9789523972513" target="_blank" rel="noopener">Lataa kirja ilmaiseksi (PDF) ↗</a>
-        <a class="myytit-intro-btn myytit-intro-btn--secondary" href="{{ myyttipodcast.kaudet[0].spotifyUrl }}" target="_blank" rel="noopener">Podcast Spotifyssa ↗</a>
-      </div>
-    </div>
 
     {% for luku in myytit.luvut %}
     <section class="myytit-chapter-group">

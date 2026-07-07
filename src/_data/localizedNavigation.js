@@ -66,7 +66,6 @@ const LABEL_OVERRIDES = {
   "SHIELD-ohjelma":              { fi: "SHIELD-ohjelma",               en: "SHIELD programme",         sv: "SHIELD-programmet" },
   "Tekoälyn perusteet opettajalle": { fi: "Tekoälyn perusteet opettajalle", en: "AI basics for teachers", sv: "AI-grunder för lärare" },
   "Opas: tietosuoja & sovellukset": { fi: "Opas: tietosuoja & sovellukset", en: "Guide: privacy & apps", sv: "Guide: integritet & appar" },
-  "Tekoälymyytit":                  { fi: "Tekoälymyytit",                 en: "AI Myths",                 sv: "AI-myter" }
 };
 
 const URL_OVERRIDES = {
@@ -127,7 +126,6 @@ const ITEM_DESC_OVERRIDES = {
   "Myyttikirja, podcast, oppaat":     { fi: "Myyttikirja, podcast, oppaat",     en: "Myth book, podcast, guides",         sv: "Mytbok, podcast, guider" },
   "Uutiset ja tapahtumat":            { fi: "Uutiset ja tapahtumat",            en: "News and events",                    sv: "Nyheter och evenemang" },
   "Kysy, ehdota, tule mukaan":        { fi: "Kysy, ehdota, tule mukaan",        en: "Ask, suggest, get involved",         sv: "Fråga, föreslå, engagera dig" },
-  "Onko tekoäly luova? Entä puolueeton?": { fi: "Onko tekoäly luova? Entä puolueeton?", en: "Is AI creative? Is it unbiased?", sv: "Är AI kreativ? Är den opartisk?" }
 };
 
 /* ── Megamenu sidebar description texts ────────────────────────────────── */
