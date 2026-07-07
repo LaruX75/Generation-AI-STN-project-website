@@ -17,6 +17,7 @@ tags:
   - oikeus
 author: admin
 layout: layouts/post.njk
+noindex: true
 ---
 
 Yle uutisoi 5.3.2026, että perustuslakivaliokunta esittää eduskunnan apulaisoikeusasiamiehen tehtävään Susanna Lindroos-Hovinheimoa tai Eeva Nykästä. Alkuperäinen juttu on täällä: [https://yle.fi/uutiset/lyhyesti/74-20213792](https://yle.fi/uutiset/lyhyesti/74-20213792)

@@ -18,6 +18,7 @@ status: publish
 lang: fi
 sourceType: posts
 layout: layouts/post.njk
+canonicalUrl: "https://www.uef.fi/fi/artikkeli/euroopan-paras-tekoalylukutaitoja-edistava-oppimisratkaisu-tulee-suomesta"
 ---
 
 **Tämä on alunperin Itä-Suomen yliopiston lehdistötiedote:** [https://www.uef.fi/fi/artikkeli/euroopan-paras-tekoalylukutaitoja-edistava-oppimisratkaisu-tulee-suomesta](https://www.uef.fi/fi/artikkeli/euroopan-paras-tekoalylukutaitoja-edistava-oppimisratkaisu-tulee-suomesta)

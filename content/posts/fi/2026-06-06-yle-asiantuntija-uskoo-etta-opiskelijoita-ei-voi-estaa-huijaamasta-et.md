@@ -14,6 +14,7 @@ tags:
   - Teemu Roos
 author: admin
 layout: layouts/post.njk
+noindex: true
 ---
 
 Tietojenkäsittely­tieteen professorin Teemu Roosin mukaan ainoa aukoton ratkaisu olisi asentaa opiskelijoiden koteihin 360 asteen kamera. Se ei ole realismia.

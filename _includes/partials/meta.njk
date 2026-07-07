@@ -9,7 +9,7 @@
   <title>{% if seoTitle %}{{ seoTitle }}{% elif title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
   {% set _desc = [seoDescription, ogDescription, excerpt] | metaDescription(content, 170) %}
   {% if _desc %}<meta name="description" content="{{ _desc }}">{% endif %}
-  {% set _canonical = canonical if canonical else (site.url + page.url) %}
+  {% set _canonical = canonicalUrl if canonicalUrl else (canonical if canonical else (site.url + page.url)) %}
   {% set localeUrlOverrides = {
     "/": { "fi": "/", "en": "/en/", "sv": "/sv/" },
     "/en/": { "fi": "/", "en": "/en/", "sv": "/sv/" },
@@ -191,8 +191,12 @@
     }
   ]) %}
   {% if sourceType == "posts" %}
+    {% set _articleAuthor = {"@id": site.url + "/#organization"} %}
+    {% if author and author != "admin" %}
+      {% set _articleAuthor = {"@type": "Person", "name": author} %}
+    {% endif %}
     {% set _articleSchema = {
-      "@type": "Article",
+      "@type": "NewsArticle",
       "@id": _canonical + "#article",
       "headline": _ogTitle,
       "description": _desc,
@@ -202,6 +206,7 @@
       "dateModified": updated | rssDate if updated else (date | rssDate if date else ""),
       "inLanguage": _pageLang,
       "image": [_ogImage],
+      "author": _articleAuthor,
       "publisher": { "@id": site.url + "/#organization" }
     } %}
     {% set _schemaGraph = _schemaGraph.concat([_articleSchema]) %}

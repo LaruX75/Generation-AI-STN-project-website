@@ -16,6 +16,7 @@ tags:
   - oikeus
 author: admin
 layout: layouts/post.njk
+noindex: true
 ---
 
 MTV Uutiset kertoi 11.3.2026 Susanna Lindroos-Hovinheimon tulleen valituksi eduskunnan apulaisoikeusasiamieheksi. Alkuperäinen juttu on täällä: [https://www.mtvuutiset.fi/artikkeli/susanna-lindroos-hovinheimo-valittiin-eduskunnan-apulaisoikeusasiamieheksi/9308714](https://www.mtvuutiset.fi/artikkeli/susanna-lindroos-hovinheimo-valittiin-eduskunnan-apulaisoikeusasiamieheksi/9308714)

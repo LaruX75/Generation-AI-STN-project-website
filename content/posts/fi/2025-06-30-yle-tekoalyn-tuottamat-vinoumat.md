@@ -20,6 +20,7 @@ tags:
   - yle
 author: admin
 layout: layouts/post.njk
+noindex: true
 ---
 
 Yle Oppiminen haastatteli Teemu Roosia 30.6.2025 tekoälyn vinoumista ja siitä, mitä kuvageneraattorit oppivat ihmisten tuottamasta aineistosta. Alkuperäinen juttu on täällä: [https://yle.fi/a/74-20145829](https://yle.fi/a/74-20145829)

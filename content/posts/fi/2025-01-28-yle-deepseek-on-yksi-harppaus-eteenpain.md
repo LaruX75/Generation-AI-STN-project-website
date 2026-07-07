@@ -19,6 +19,7 @@ tags:
   - yle
 author: admin
 layout: layouts/post.njk
+noindex: true
 ---
 
 Yle haastatteli tietojenkäsittelytieteen professori Teemu Roosia 28.1.2025 Deepseekistä ja sen vaikutuksesta tekoälymarkkinaan. Alkuperäinen juttu on täällä: [https://yle.fi/a/74-20139814](https://yle.fi/a/74-20139814)

@@ -18,6 +18,7 @@ tags:
   - terveysdata
 author: admin
 layout: layouts/post.njk
+noindex: true
 ---
 
 MTV Uutiset haastatteli Teemu Roosia 1.3.2026 tekoälylle jaettavista terveystiedoista sekä arkipäiväisen tekoälykäytön riskeistä. Alkuperäinen juttu on täällä: [https://www.mtvuutiset.fi/artikkeli/kerrotko-tekoalylle-sairauksistasi-professorilta-selkea-ohje-todella-ikavia-tilanteita/9303078](https://www.mtvuutiset.fi/artikkeli/kerrotko-tekoalylle-sairauksistasi-professorilta-selkea-ohje-todella-ikavia-tilanteita/9303078)

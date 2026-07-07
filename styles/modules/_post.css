@@ -97,6 +97,22 @@
   text-decoration: none; transition: background 0.15s;
 }
 .post-tag:hover { background: #e2e8f0; color: #1e293b; }
+.post-read-more {
+  margin-top: 2.5rem; padding-top: 1.5rem;
+  border-top: 1px solid rgba(15,23,42,0.08);
+}
+.post-read-more-label {
+  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+  color: #64748b; margin: 0 0 0.5rem;
+}
+.post-read-more-links {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+  list-style: none; padding: 0; margin: 0;
+}
+.post-read-more-links a {
+  font-weight: 600; color: var(--global-palette1, #314e25); text-decoration: none;
+}
+.post-read-more-links a:hover { text-decoration: underline; }
 .post-edit-link {
   display: inline-flex; align-items: center; gap: 0.4em;
   margin-top: 2rem;

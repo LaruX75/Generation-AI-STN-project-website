@@ -19,6 +19,7 @@ tags:
   - yle
 author: admin
 layout: layouts/post.njk
+noindex: true
 ---
 
 Yle haastatteli Teemu Roosia 5.2.2025 Helsingin kaupungin päätöksestä kieltää tekoälytyökalujen käyttö kouluissa toistaiseksi. Alkuperäinen juttu on täällä: [https://yle.fi/a/74-20141409](https://yle.fi/a/74-20141409)

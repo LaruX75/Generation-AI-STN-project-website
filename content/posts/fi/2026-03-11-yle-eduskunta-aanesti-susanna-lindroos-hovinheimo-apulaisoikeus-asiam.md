@@ -15,6 +15,7 @@ tags:
 hidden: true
 author: admin
 layout: layouts/post.njk
+noindex: true
 ---
 
 Lindroos-Hovinheimo astuu tehtävään huhtikuussa apulaisoikeus­asiamies Maija Sakslinin seuraajana.
