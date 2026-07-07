@@ -80,7 +80,7 @@ layout: layouts/base.njk
     <footer class="post-footer">
       <div class="post-tags">
         {% for tag in tags %}
-        <a class="post-tag" href="{{ _searchBase }}?q={{ tag | urlencode }}">{{ tag }}</a>
+        <span class="post-tag">{{ tag }}</span>
         {% endfor %}
       </div>
     </footer>

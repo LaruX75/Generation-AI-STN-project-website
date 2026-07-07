@@ -63,7 +63,8 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   {# ── Robots / indexing ────────────────────────────────────────────────── #}
-  {% if noindex %}<meta name="robots" content="noindex">{% endif %}
+  {% if noindex %}<meta name="robots" content="noindex, follow">{% endif %}
+  {% if site.googleSiteVerification %}<meta name="google-site-verification" content="{{ site.googleSiteVerification }}">{% endif %}
   {# ── Open Graph ───────────────────────────────────────────────────────── #}
   {% set _ogType = "article" if sourceType == "posts" else "website" %}
   {% set _ogTitle = ogTitle if ogTitle else (seoTitle if seoTitle else title) %}
