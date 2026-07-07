@@ -19,7 +19,7 @@ kirjoittajat:
   - "Kati Sormunen"
   - "Matti Tedre"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 Minkälaisen kuvan piirtäisit tekoälystä? Hakukoneen kuvahausta saa käsityksen siitä, minkälaisia kuvia muut ovat aiheesta luoneet. Hakusana “tekoäly” tuottaa enimmäkseen sinisiä virtapiiriaivoja ja valkoisena hohtavia humanoidirobotteja. Viittaus aivoihin on tietysti ymmärrettävä. Meille tutuin älykkyyden muoto, eli ihmisäly, vaatii aivoja. Robottikuvat jatkavat tätä vertausta antamalla virtapiiriaivoille myös vartalon.<sup>9</sup>

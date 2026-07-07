@@ -16,7 +16,7 @@ kirjoittajat:
   - "Matti Tedre"
   - "Henriikka Vartiainen"
   - "Teppo Vesikukka"
-draft: true
+draft: false
 ---
 
 Arjessa käytämme lukuisia erilaisia tekoälyyn perustuvia sovelluksia. Teknologioiden jokapäiväisen käytön myötä meille kehittyy erilaisia arkiteorioita ja intuitiivisia käsityksiä siitä, miten tekoäly toimii. Nuo käsitykset syntyvät arkisissa käyttökokemuksissa, keskusteluissa toisten ihmisten kanssa ja populaarikulttuurin välittäminä.<sup>15</sup> Arkikäsitykset ovatkin usein käytännönläheisiä ja toimivat riittävän hyvin välittömissä käytännön tilanteissa – voimme esimerkiksi oppia soveltamaan sosiaalisen median alustoja omiin tarkoituksiin ilman systemaattista opetusta tai oppikirjoja.

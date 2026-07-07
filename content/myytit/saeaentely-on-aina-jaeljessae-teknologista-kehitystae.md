@@ -16,7 +16,7 @@ kirjoittajat:
   - "Elisa Silvennoinen"
   - "Karoliina Snell"
   - "Milka Sormunen"
-draft: true
+draft: false
 ---
 
 Myytti siitä, että sääntely on aina teknologista kehitystä jäljessä, pitää osittain paikkansa. Vaikka sääntely on usein teknologista kehitystä jäljessä, näin ei kuitenkaan aina ole. Monissa laeissa on sääntelyä sellaisista teknologioista, joita ei ole esimerkiksi lainkaan käytössä Suomessa. Tästä ajankohtaisin esimerkki lienee EU:n tekoälyasetus, jossa kielletään esimerkiksi sosiaalista pisteytystä tekevät tekoälyjärjestelmät. Tällaisia järjestelmiä ei juuri Euroopasta löydy.

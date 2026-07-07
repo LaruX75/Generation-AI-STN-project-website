@@ -16,7 +16,7 @@ kirjoittajat:
   - "Elisa Silvennoinen"
   - "Karoliina Snell"
   - "Milka Sormunen"
-draft: true
+draft: false
 ---
 
 Aikuisilla on lainsäädännön mukaan velvollisuus huolehtia lapsista, mistä seuraa, että aikuiset saavat tehdä laajasti päätöksiä lasten asioissa. Päätösvalta ei kuitenkaan ole rajoittamaton, vaan se vaihtelee asian ja lapsen iän mukaan. Lisäksi lainsäädäntö edellyttää, että aikuiset keskustelevat ennen päätöksentekoa lapsen kanssa ja antavat myös lapsen mielipiteelle merkitystä. Myytti aikuisten rajattomasta päätäntävallasta lasten datan suhteen ei siten pidä paikkaansa, vaan aikuiset saavat tehdä lasten datasta päätöksiä vain rajoitetusti.<sup>3</sup>

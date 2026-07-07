@@ -10,7 +10,7 @@ kirjoittajat:
   - "Karoliina Snell"
   - "Aaro Tupasela"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 Usein ajatellaan, että henkilötiedoilla viitataan ihmisten nimiin, yhteystietoihin ja vaikkapa syntymäaikaan. Henkilötiedoiksi voidaan kuitenkin laskea melkeinpä mikä vain tieto, joka voidaan jollakin tavoin yhdistää johonkin tiettyyn henkilöön. Samaten henkilötietojen käsittelyä voi olla hyvinkin monenlainen tietojen kerääminen, tallentaminen, muuttaminen, siirtäminen ja poistaminen. Henkilötietojen käsitteen laajuuden ymmärtäminen on tärkeää yksityisyyden ja henkilötietojen suojan toteuttamiseksi, sillä yksittäinen henkilö voidaan tunnistaa jo hyvinkin mitättömiltä tuntuvien tietojen perusteella. Liian suppea käsitys henkilötiedoista voi johtaa henkilötietojen virheelliseen käsittelyyn ja estää ihmisiä valvomasta tietosuojaoikeuksiaan.

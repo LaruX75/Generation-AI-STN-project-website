@@ -16,7 +16,7 @@ kirjoittajat:
   - "Matti Tedre"
   - "Henriikka Vartiainen"
   - "Teppo Vesikukka"
-draft: true
+draft: false
 ---
 
 Tekoälyuutisointi on viimeiset kymmenen vuotta kertonut tekoälyn urotöistä. Lehtiotsikoiden mukaan tekoäly löysi uusia planeettoja, kehitti uuden antibiootin ja optimoi yleisötapahtumien järjestämispaikat. Tekoäly myös voitti taidekilpailun ja suunnitteli uudenlaisen auton korin. Suurelle yleisölle suunnattu tietokirjallisuus puolestaan kertoo tekoälymurroksesta, jossa tekoäly ottaa tehtäväkseen ennen ihmisille kuuluneita töitä ja jopa haastaa ihmisen luovuuden ja älyn.

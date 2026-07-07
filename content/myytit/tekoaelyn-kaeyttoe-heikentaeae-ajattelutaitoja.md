@@ -16,7 +16,7 @@ kirjoittajat:
   - "Elisa Silvennoinen"
   - "Karoliina Snell"
   - "Milka Sormunen"
-draft: true
+draft: false
 ---
 
 Cogito, ergo sum eli ”ajattelen, siis olen” totesi ranskalainen filosofi ja rationalisti René Descartes jo 1600-luvulla pohtiessaan aistien merkitystä suhteessa olemassaoloon. Ajatteluun olennaisesti kuuluva omien aistihavaintojen epäily on siis edellytys mielen ja myös ihmisen tietoisuudelle omasta olemassaolostaan. Ajatteleva, itsestään tietoiseksi tuleva ihminen pyrkii oppimaan uutta itsestään sekä ympäristöstään ja oppiessaan uutta samalla harjaannuttaa myös omia ajattelutaitojaan. Ajattelutaidot pitävät sisällään kognitiivisia taitoja, kuten tiedonkäsittelyn ja ongelmanratkaisun, sekä metakognitiivisia taitoja eli omien ja muiden ihmisten kognitiivisten toimintojen tiedostamista ja itsesäätelyä.

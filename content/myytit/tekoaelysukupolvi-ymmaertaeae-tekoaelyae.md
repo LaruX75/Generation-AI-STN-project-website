@@ -16,7 +16,7 @@ kirjoittajat:
   - "Matti Tedre"
   - "Henriikka Vartiainen"
   - "Teppo Vesikukka"
-draft: true
+draft: false
 ---
 
 Laitteiden, alustojen ja palvelujen parantaminen tekoälyä käyttävillä ratkaisuilla on tehnyt tekoälystä arkipäiväistä ja usein myös näkymätöntä.<sup>10</sup> Esimerkiksi videopuhelu hyödyntää tusinoittain tekoälytoimintoja ilman että puhujan tarvitsee ajatella asiaa. Toisissa sovelluksissa tekoälyn rooli näkyy selkeämmin käyttäjille: esimerkiksi videoita suositteleva verkkosivu oppii nopeasti käyttäjän mieltymykset. Oppivien järjestelmien murros alkoi toden teolla 2000-luvulla, vaikka suurin osa niihin liittyvistä teknologisista innovaatioista on paljon vanhempia.

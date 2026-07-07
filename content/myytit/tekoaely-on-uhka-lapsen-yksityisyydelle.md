@@ -16,7 +16,7 @@ kirjoittajat:
   - "Elisa Silvennoinen"
   - "Karoliina Snell"
   - "Milka Sormunen"
-draft: true
+draft: false
 ---
 
 Tekoälyyn liittyy paljon yksityisyyden suojaan liittyviä riskejä. Lähes kaikki lapsen liikkeet digitaalisessa ympäristössä voidaan tallentaa. Lisäksi erilaiset valvonnan ja seuraamisen mahdollisuudet sekä riski siitä, että lapsi voidaan tulevaisuudessakin tunnistaa aikaisemmasta toiminnastaan digitaalisessa ympäristössä, uhkaavat lapsen oikeutta kehittyä omaksi itsekseen. Tekoäly voi siis olla uhka lapsen yksityisyydelle, mutta tämän korostaminen antaa tekoälyn vaikutuksista lapsen oikeuksiin liian suppean kuvan.

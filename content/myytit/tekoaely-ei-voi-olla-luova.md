@@ -19,7 +19,7 @@ kirjoittajat:
   - "Kati Sormunen"
   - "Matti Tedre"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 Ei ole tavatonta lukea uutista siitä, että generatiivinen tekoäly on säveltänyt kappaleen tai voittanut taidekilpailun. Tällaiset tapahtumat kirvoittavat usein kommentteja siitä, kuinka tekoäly ei koskaan voi olla luova samalla tavalla kuin ihminen. Tämä myytti on sekä totta että tarua. Tekoälyn luovuus poikkeaa monella tavalla ihmisen luovuudesta ja siitä, miten luovuus yleensä ymmärretään. On totta, että tekoäly voi luoda täysin uusia asioita, joita ei aiemmin ole ollut olemassa. Tekoäly voi esimerkiksi tuottaa uusia ja uniikkeja kuvateoksia, kirjoittaa tarinoita tai vaikkapa luoda uusia molekyylejä ennakoimalla, miten tietyt molekyylirakenteet voisivat toimia halutussa tarkoituksessa.

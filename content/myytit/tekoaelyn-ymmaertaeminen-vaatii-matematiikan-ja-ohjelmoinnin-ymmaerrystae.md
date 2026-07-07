@@ -19,7 +19,7 @@ kirjoittajat:
   - "Kati Sormunen"
   - "Matti Tedre"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 Tarina kertoo koneoppimistutkijasta, joka oli matkalla Yhdysvaltoihin konferenssimatkalle. Tutkija ilmoitti maahantulovirkailijalle matkansa syyn, jolloin virkailija kaivoi esiin muistiinpanonsa, juoksutti sormeaan sivulta toiselle, kunnes lopulta löysi etsimänsä: “Ah, matemaatikko! Määrittele Hilbertin avaruus.”

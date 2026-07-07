@@ -10,7 +10,7 @@ kirjoittajat:
   - "Karoliina Snell"
   - "Aaro Tupasela"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 Pilvipalveluja markkinoidaan tehokkaina ja turvallisina ratkaisuina niin yrityksille, julkiselle sektorille kuin yksityishenkilöillekin. Pilvi vertauskuvana eli metaforana datan tallentamisen paikasta häivyttää datan tallentamisen aineellisuuden ja paikallisuuden eli sen, että data sijaitsee lopulta aina jossakin fyysisessä datakeskuksessa, joka sijaitsee jossakin maassa. Samalla pilvipuhe on häivyttänyt datan tallentamiseen ja datakeskuksiin kytkeytyviä yhteiskunnallisia kysymyksiä ja poliittisia valintoja.

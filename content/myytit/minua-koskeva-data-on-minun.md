@@ -10,7 +10,7 @@ kirjoittajat:
   - "Karoliina Snell"
   - "Aaro Tupasela"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 Meistä kerätään päivittäin paljon dataa, esimerkiksi kun käytämme puhelinta, tietokonetta tai julkisia palveluita. Toisinaan datan keräämisestä ja käytöstä paljastuu yllättäviä asioita, jolloin kuulee usein sanottavan: ”Ei minun datallani saa tehdä noin, se on minun dataani!” Onko ihmisellä todella omistusoikeus hänestä kerättyyn dataan tai oikeus määrätä sen käytöstä?

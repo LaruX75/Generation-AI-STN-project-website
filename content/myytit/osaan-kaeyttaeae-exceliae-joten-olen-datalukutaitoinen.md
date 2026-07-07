@@ -10,7 +10,7 @@ kirjoittajat:
   - "Karoliina Snell"
   - "Aaro Tupasela"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 Datalukutaitona pidetään usein kykyä käsitellä dataa tilasto-ohjelmassa, kuten Excelissä, tai tilastotieteen perusteiden hallitsemista. Vaikka näitä taitoja ja tietoja ei ole syytä vähätellä, on datalukutaito ymmärrettävä tätä laajempana ilmiönä.

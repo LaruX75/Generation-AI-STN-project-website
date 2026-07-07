@@ -10,7 +10,7 @@ kirjoittajat:
   - "Karoliina Snell"
   - "Aaro Tupasela"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 EU:n yleisen tietosuoja-asetuksen (GDPR) tarjoama täydellinen tietosuoja on myytti. Todellisuudessa asetuksella pyritään parantamaan tietosuojaa ja antamaan ihmisille enemmän mahdollisuuksia hallita omia henkilötietojaan, mutta GDPR ei takaa ehdotonta henkilötietojen suojaa. Tämän ymmärtäminen on olennaista, sillä suojan laajuuden virheellinen tulkinta voi johtaa virheellisiin ja epärealistisiin odotuksiin sekä henkilötietojen väärinkäyttöön.

@@ -10,7 +10,7 @@ kirjoittajat:
   - "Karoliina Snell"
   - "Aaro Tupasela"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 Etenkin 2010-luvulta lähtien yhteiskunnassa on puhuttu kiihtyvästi datan hyödyntämisen edellytysten parantamisesta. Keskustelu on keskittynyt paljolti suurten datamassojen, eli niin kutsutun big datan, mahdollisuuksiin sekä datan vapauttamiseen siiloista. Tällaisissa visioissa data nähdään valmiina resurssina, joka on jo olemassa ja vain odottaa hyödyntämistä. Data, jolla on arvoa, ei kuitenkaan synny itsestään, vaan sen tuottaminen vaatii resursseja: osaavaa työvoimaa, teknologiaa, rahaa ja aikaa. Ajatus siitä, että organisaatioilla on olemassa valmiina paljon käyttökelpoista dataa, on myytti.

@@ -19,7 +19,7 @@ kirjoittajat:
   - "Kati Sormunen"
   - "Matti Tedre"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 Tekoälystä puhutaan paljon. Harvoin kuitenkaan pysähdymme pohtimaan, kuinka monitahoisesta ilmiöstä on kyse. Yksi tekoälyn määritelmään liittyvä myytti on se, että kyseessä olisi yksi yhtenäinen teknologia – tai teknologia ylipäätään.

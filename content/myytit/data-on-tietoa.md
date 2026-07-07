@@ -10,7 +10,7 @@ kirjoittajat:
   - "Karoliina Snell"
   - "Aaro Tupasela"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 Datasta puhutaan usein tietona, ja joskus tieto onkin dataa. Esimerkiksi väestörekisteri sisältää tärkeitä tietoja suomalaisista, ja näitä tietoja voidaan käyttää datana.<sup>1</sup> Mutta kaikki data ei muodostu tiedoista. Data on pikemminkin jotakin, jonka perusteella tietoväittämiä voidaan päätellä tai perustella.

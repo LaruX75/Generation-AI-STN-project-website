@@ -10,7 +10,7 @@ kirjoittajat:
   - "Karoliina Snell"
   - "Aaro Tupasela"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 Usein ajatellaan, että ihmisillä on oikeus kontrolloida sitä, minkälaista dataa heistä kerätään. Missä määrin tämä pitää paikkansa? Meillä kaikilla on lainsäädännön näkökulmasta mahdollisuus ainakin teoriassa saada tietää, missä paikoissa henkilötietojamme käsitellään. Emme kuitenkaan aina pysty vaikuttamaan siihen, että meistä kerätään dataa. Usein meistä kerätty data – oli se suostumuksella saatua tai ei – myös määrittyy lainsäädännöllisesti henkilötiedoiksi eli sellaiseksi dataksi, joka on yhdistettävissä johonkin tiettyyn henkilöön.

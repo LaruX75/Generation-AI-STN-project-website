@@ -16,7 +16,7 @@ kirjoittajat:
   - "Matti Tedre"
   - "Henriikka Vartiainen"
   - "Teppo Vesikukka"
-draft: true
+draft: false
 ---
 
 Kun puhutaan siitä, miten tekoäly voisi muuttaa oppimista, ajatellaan usein, että tekoäly kykenee personoimaan opetuksen niin, että voidaan puhua yksilöidystä opetuksesta. Ajatuksena on, että tekoäly pystyy tarjoamaan oppijalle juuri hänelle sopivaa materiaalia ja tehtäviä, jotka vastaavat oppijan tarpeita, taitotasoa ja tavoitteita. Toisin sanoen kaikille oppilaille pystyttäisiin tarjoamaan juuri kunkin osaamistason ja tarpeiden mukaista opetusta.<sup>9</sup> Tämä kuitenkin vaatisi sitä, että tekoäly kykenisi myös huomioimaan oppijan geneettisen ja sosioekonomisen taustan, sen hetkisen psyykkisen, sosioemotionaalisen ja fyysisen tilan, motivaation ja kiinnostukset sekä tunteet. Oppiminen onkin monisyinen ilmiö. Oppijan psyykkinen ja fyysinen olotila sekä oppimistilanteen konteksti vaikuttavat oppijan haluun ja kykyyn toimia ja oppia.

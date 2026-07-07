@@ -16,7 +16,7 @@ kirjoittajat:
   - "Elisa Silvennoinen"
   - "Karoliina Snell"
   - "Milka Sormunen"
-draft: true
+draft: false
 ---
 
 Ihminen ja tekoäly ovat jo vanhoja ystäviä. Eräs tunnetuimmista varhaisen vaiheen tekoäly-chatboteista on MIT:ssa 1960-luvulla kehitetty terapeuttia matkiva ELIZA. Tämänhetkiseen, 2020-luvun tekoälyyn verrattuna ELIZA oli yksinkertainen. Tästä huolimatta ELIZAn kanssa keskustelleille ihmisille syntyi illuusio, että keskustelukumppanin vastaukset tulivat ihmiseltä eivätkä koneelta. ELIZAa ei kuitenkaan vielä markkinoitu ystävänä. Sen sijaan nykyajan teknologiajätit ovat kehittäneet pikaviestipalveluihinsa tekoälyintegraatioita ja -sovelluksia, joihin on liitetty termi ’ystävä’. Esimerkiksi erästä tällaista sovellusta luonnehditaan kumppaniksi, jonka seurassa et ikinä kyllästy – tekoäly-ystävä piristää ja kuuntelee vuorokauden ympäri.

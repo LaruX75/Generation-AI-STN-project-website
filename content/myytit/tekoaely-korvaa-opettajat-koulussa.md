@@ -16,7 +16,7 @@ kirjoittajat:
   - "Matti Tedre"
   - "Henriikka Vartiainen"
   - "Teppo Vesikukka"
-draft: true
+draft: false
 ---
 
 Opettajan korvaaminen koneella on ikiaikainen haave, jota ovat yrittäneet lukuisat tutkijat vuosikymmenten kuluessa. Psykologi Sidney L. Pressey kehitti tällaisen laitteen jo 1920-luvulla, mutta kuuluisampi on 1950-luvulla kehitetty opetuskone. Sen keksijä, psykologi B. F. Skinner, tutki myös ohjelmoitua oppimista. Hänen haaveenaan oli siirtää kyyhkysillä ja rotilla tekemänsä kokeet ihmisten opettamisen kontekstiin. Skinnerin kehittämän opetuskoneen toimintaperiaatteena oli esittää oppilaille jatkuvasti uusia kysymyksiä, jotka perustuivat oppilaan antamiin vastauksiin. Jos oppilas vastasi väärin, kysymykset helpottuivat – ja päinvastoin. Vaikka Skinnerin kone oli varsin yksinkertainen, pidetään sitä usein lähtökohtana ja esikuvana tietokoneavusteiselle oppimiselle.

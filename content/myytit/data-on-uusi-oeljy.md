@@ -10,7 +10,7 @@ kirjoittajat:
   - "Karoliina Snell"
   - "Aaro Tupasela"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 Dataa kuvataan usein uudeksi luonnonvaraksi käyttämällä vertauskuvia, kuten öljyä tai kultaa. Nämä metaforat viittaavat siihen, että dataa on jo valmiiksi olemassa, ja se vain odottaa louhimista, keräämistä ja jalostamista uusiksi tuotteiksi ja palveluiksi, joista voi puolestaan tulla vaurauden ja kehityksen lähteitä. Datametaforat ovat hyödyllisiä monin tavoin – vaikka eivät olisikaan kaikilta osin täsmällisiä. Metaforat auttavat meitä yhdistämään käsityksiämme perinteisistä ja olemassa olevista ilmiöistä uudenlaisiin ilmiöihin. Metaforat voivat kuitenkin myös johtaa harhaan tai jopa väärinkäsityksiin.

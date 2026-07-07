@@ -19,7 +19,7 @@ kirjoittajat:
   - "Kati Sormunen"
   - "Matti Tedre"
   - "Petri Ylikoski"
-draft: true
+draft: false
 ---
 
 Tuskinpa kukaan meistä on välttynyt kuulemasta, kuinka tekoäly on tulevaisuutta. Koulumaailmassa tekoälyn ajatellaan yksilöllistävän opetusta, ja usealla eri elämänalueella tekoälyn ennustetaan joko korvaavan työntekijän kokonaan tai ainakin muuttavan radikaalisti työnkuvia. Tekoälyyn liittyvät tulevaisuudenvisiot ovat lisääntyneet hurjasti viimeisten vuosien aikana, kiitos suurten kielimallien ja generatiivisen tekoälyn. Tekoälyä itseään on kuitenkin tutkittu ja kehitetty systemaattisesti jo vuosikymmenten ajan, ja niinpä meidän elämämme on monin tavoin riippuvainen koneoppimiseen ja muihin tekoälyteknologioihin perustuvista sovelluksista ja laitteista. Jos on koskaan googlannut, somettanut tai käyttänyt sormenjälkitunnistetta tai itsepalvelukassaa, auton mukautuvaa vakionopeudensäädintä ja musiikin automaattista toistoa, robottiruohonleikkuria tai -imuria, on käyttänyt tekoälyä. Hyödynnämme tekoälyyn perustuvaa teknologiaa myös, kun etsimme sopivaa bussi-, juna- tai lentoreittiä. Voidaankin todeta, että tekoäly on yhtä lailla kaikkialla läsnä olevaa ja arkeemme sulautuvaa teknologiaa kuin ovat meille tutut älypuhelimet ja langattomat tietoliikenneverkotkin.
