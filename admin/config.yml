@@ -175,6 +175,19 @@ collections:
       - { label: "Avainsanat / Tags / Taggar", name: "tags", widget: "list", required: false, i18n: true }
       - { label: "Kuva (URL) / Featured image / Bild (URL)", name: "featuredImage", widget: "string", required: false, i18n: duplicate }
       - { label: "Kirjoittaja / Author / Författare", name: "author", widget: "string", required: false, default: "admin", i18n: duplicate }
+      - label: "Noindexoi (älä näytä hakukoneille)"
+        name: "noindex"
+        widget: "boolean"
+        required: false
+        default: false
+        i18n: duplicate
+        hint: "Rastita lyhyille mediaviittauksille (YLE/MTV-uutinen jossa oma sisältö minimaalinen). Sivu pysyy näkyvissä sivustolla, mutta ei indeksoidu Googleen."
+      - label: "Canonical-URL (uudelleenjulkaisu)"
+        name: "canonicalUrl"
+        widget: "string"
+        required: false
+        i18n: duplicate
+        hint: "Jos artikkeli on uudelleenjulkaistu toiselta sivustolta (esim. UEF- tai Oulu-tiedote), liitä tähän alkuperäinen URL. Google ohjaa arvon hakutulosten kanoniseksi sivuksi."
       - { label: "Piilotettu", name: "hidden", widget: "hidden", required: false, i18n: duplicate }
       - { label: "Lähde-URL", name: "sourceUrl", widget: "hidden", required: false, i18n: duplicate }
       - { label: "EleventyExclude", name: "eleventyExcludeFromCollections", widget: "hidden", required: false, i18n: duplicate }
