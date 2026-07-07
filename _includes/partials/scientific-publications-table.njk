@@ -1,7 +1,5 @@
 {% set allItems = pagedPublications if pagedPublications else (scientificPublications.tableItems or []) %}
 {% set scipubAuthorParam = "scipub-author" %}
-{% set scipubAuthorBaseUrl = page.url or "/" %}
-{% set scipubAuthorHash = scipubTabHash or "" %}
 
 {% if lang == "en" %}
   {% set lbl = {
@@ -108,7 +106,7 @@
             data-search="{{ item.searchText | lower | default('') }} {{ item.authorsText | lower | default('') }}">
             <td class="media-table-col--authors media-table-col--mobile-hide">
               {% if item.authors and item.authors.length %}
-                {% for author in item.authors %}<a class="scipub-author-link" href="{{ scipubAuthorBaseUrl }}?{{ scipubAuthorParam }}={{ author | urlencode }}{{ scipubAuthorHash }}">{{ author }}</a>{% if not loop.last %}; {% endif %}{% endfor %}
+                {% for author in item.authors %}<button class="scipub-author-link" type="button" data-author="{{ author }}">{{ author }}</button>{% if not loop.last %}; {% endif %}{% endfor %}
               {% else %}
                 {{ item.authorsText | default('—') }}
               {% endif %}
@@ -363,6 +361,20 @@
 
     if (e.target.closest("[data-citation-close]")) {
       closeCitationModal();
+    }
+
+    var authorBtn = e.target.closest(".scipub-author-link");
+    if (authorBtn) {
+      var author = authorBtn.getAttribute("data-author");
+      if (author) {
+        var section = document.getElementById("scipub-table-section");
+        var search = section ? section.querySelector("[data-grid-search]") : null;
+        if (search) {
+          search.value = author;
+          search.dispatchEvent(new Event("input", { bubbles: true }));
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
     }
   });
 

@@ -327,6 +327,21 @@
   display: none;
 }
 
+/* Author filter button — styled as inline link, no crawlable URL */
+.scipub-author-link {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: var(--global-palette2, #446d33);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.scipub-author-link:hover {
+  color: var(--global-palette1, #314e25);
+}
+
 /* Scientific publications — mobile author line below title */
 .scipub-mobile-authors {
   display: none;

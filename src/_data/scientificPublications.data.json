@@ -398,26 +398,6 @@
     "notes": ""
   },
   {
-    "id": "b2-2024-38",
-    "code": "B2",
-    "year": 2024,
-    "status": "Published",
-    "authorsText": "Lindroos-Hovinheimo, S",
-    "title": "Lyhyt johdatus unionin tekoalyasetukseen",
-    "venue": "In Puheenvuoroja sananvapaudesta: Viestintaoikeuden vuosikirja 2023, pp. 67-76. Forum Iuris",
-    "notes": ""
-  },
-  {
-    "id": "b2c-2023-39",
-    "code": "B2c",
-    "year": 2023,
-    "status": "Published",
-    "authorsText": "Lindroos-Hovinheimo, S",
-    "title": "Euroopan unionin tuomioistuimen punnintaa yksityisyydesta ja julkisuudesta",
-    "venue": "In Vapaita sanoja: Viestintaoikeuden vuosikirja 2022, Vol. 20, pp. 94-105. Forum Iuris",
-    "notes": ""
-  },
-  {
     "id": "a1-2024-40",
     "code": "A1",
     "year": 2024,
@@ -642,17 +622,6 @@
     "notes": ""
   },
   {
-    "id": "e3-2025-61",
-    "code": "E3",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Makelin, M.; Silvennoinen, E.; Makitalo, K. (eds.)",
-    "title": "50 myyttia tekoalysta ja datasta",
-    "venue": "Vastapaino",
-    "isbn": "9789523972759",
-    "notes": ""
-  },
-  {
     "id": "a4-2025-62",
     "code": "A4",
     "year": 2025,
@@ -734,36 +703,6 @@
     "authorsText": "Iwata, Megumi; Merikanto-Tolonen, Sanna; Laru, Jari; Mäkitalo, Kati",
     "title": "An Explainable AI Tools for K-12 Classroom: Generation AI Teachable Machine",
     "venue": "Proceedings : annual meeting of the international society of the learning sciences",
-    "notes": ""
-  },
-  {
-    "id": "e1-2025-70",
-    "code": "E1",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Davies, Sini; Faisal, Kamrul; Grohn, Tommi; Honkela, Antti; Iwata, Megumi; Kangas, Kaiju; Laru, Jari; Merikanto-Tolonen, Sanna; Makelin, Marianne; Makitalo, Kati; Roos, Teemu; Snell, Karoliina; Sormunen, Kati; Tedre, Matti; Ylikoski, Petri",
-    "title": "Mika tekoaly?",
-    "venue": "50 Myyttiä tekoälystä ja datasta",
-    "notes": ""
-  },
-  {
-    "id": "e1-2025-71",
-    "code": "E1",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Iwata, Megumi; Kahila, Juho; Laru, Jari; Lehto, Iiris; Lindroos-Hovinheimo, Susanna; Merikanto-Tolonen, Sanna; Makitalo, Kati; Pietarinen, Tarja Hannele; Roos, Teemu; Silvennoinen, Elisa; Snell, Karoliina; Sormunen, Milka",
-    "title": "Tekoaly ja data ihmisten arjessa",
-    "venue": "50 Myyttiä tekoälystä ja datasta",
-    "notes": ""
-  },
-  {
-    "id": "e1-2025-72",
-    "code": "E1",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Alastalo, Marja; Faisal, Kamrul; Iisakka, Essi; Iwata, Megumi; Laru, Jari; Lehto, Iiris; Merikanto-Tolonen, Sanna; Makelin, Marianne; Makitalo, Kati; Tedre, Matti; Vartiainen, Henriikka; Vesikukka, Teppo Pentti Johannes",
-    "title": "Mita tekoalylla ja datalla tehdaan?",
-    "venue": "50 Myyttiä tekoälystä ja datasta",
     "notes": ""
   },
   {
