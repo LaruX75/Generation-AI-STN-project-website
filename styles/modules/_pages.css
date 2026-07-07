@@ -1489,14 +1489,23 @@
   gap: 0.25rem;
 }
 .podcast-episode {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  padding: 0.3rem 0.5rem;
   border-radius: 5px;
   font-size: 0.83rem;
 }
 .podcast-episode:nth-child(odd) { background: rgba(0,0,0,0.03); }
+.podcast-ep-link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+.podcast-ep-link:hover .podcast-ep-title {
+  text-decoration: underline;
+  color: var(--global-palette1, #314e25);
+}
 .podcast-ep-num {
   font-weight: 700;
   color: var(--global-palette1, #314e25);

@@ -66,9 +66,11 @@ lang: fi
         <ul class="podcast-episode-list">
           {% for jakso in kausi.jaksot %}
           <li class="podcast-episode">
-            <span class="podcast-ep-num">{{ jakso.nro }}</span>
-            <span class="podcast-ep-title">{{ jakso.otsikko }}</span>
-            <span class="podcast-ep-duration">{{ jakso.kesto }}</span>
+            <a class="podcast-ep-link" href="{{ jakso.url }}" target="_blank" rel="noopener">
+              <span class="podcast-ep-num">{{ jakso.nro }}</span>
+              <span class="podcast-ep-title">{{ jakso.otsikko }}</span>
+              <span class="podcast-ep-duration">{{ jakso.kesto }}</span>
+            </a>
           </li>
           {% endfor %}
         </ul>
