@@ -43,6 +43,8 @@ lang: fi
   <div class="mat-section-inner">
     <h2 class="mat-section-heading">50 myyttiä tekoälystä</h2>
 
+    {% set kausi = myyttipodcast.kaudet[0] %}
+
     <div class="oppaat-myths-layout">
 
       <div class="oppaat-book-card">
@@ -60,21 +62,26 @@ lang: fi
         <div class="oppaat-podcast-eyebrow">Podcast</div>
         <h3 class="oppaat-podcast-title">24 myyttiä tekoälystä ja datasta – joulukalenteri</h3>
         <p class="oppaat-podcast-meta">Kausi 1 · 2025 · Spotify</p>
-        <a class="oppaat-podcast-spotify-btn" href="{{ myyttipodcast.kaudet[0].spotifyUrl }}" target="_blank" rel="noopener">Kuuntele Spotifyssa ↗</a>
-        {% set kausi = myyttipodcast.kaudet[0] %}
-        {% if kausi and kausi.jaksot and kausi.jaksot.length %}
-        <ul class="podcast-episode-list">
-          {% for jakso in kausi.jaksot %}
-          <li class="podcast-episode">
-            <a class="podcast-ep-link" href="{{ jakso.url }}" target="_blank" rel="noopener">
-              <span class="podcast-ep-num">{{ jakso.nro }}</span>
-              <span class="podcast-ep-title">{{ jakso.otsikko }}</span>
-              <span class="podcast-ep-duration">{{ jakso.kesto }}</span>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
+        <a class="oppaat-podcast-spotify-btn" href="{{ kausi.spotifyUrl }}" target="_blank" rel="noopener">Kuuntele Spotifyssa ↗</a>
+        <p class="oppaat-podcast-toc-intro">Podcast käsittelee 25 kirjan myyteistä – klikkaa ▶-merkkiä kuunnellaksesi jakson suoraan.</p>
+      </div>
+
+      <div class="myths-toc">
+        {% for luku in myytit.luvut %}
+        <div class="myths-chapter">
+          <h4 class="myths-chapter-heading">{{ luku.otsikko }}</h4>
+          <ul class="myths-list">
+            {% for m in luku.myytit %}
+              {% set jakso = myyttipodcastByMyytti[m.nro] %}
+              <li class="myth-row{% if jakso %} myth-row--has-episode{% endif %}">
+                <span class="myth-num">{{ m.nro }}</span>
+                <span class="myth-title">{{ m.otsikko }}</span>
+                {% if jakso %}<a class="myth-episode-badge" href="{{ jakso.url }}" target="_blank" rel="noopener" title="Jakso {{ jakso.nro }}: {{ jakso.otsikko }} ({{ jakso.kesto }})">▶ {{ jakso.nro }}</a>{% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
       </div>
 
     </div>

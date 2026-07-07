@@ -1,0 +1,115 @@
+luvut:
+  - otsikko: "Mitä data on?"
+    myytit:
+      - nro: 1
+        otsikko: "Data on tietoa"
+      - nro: 2
+        otsikko: "Osaan käyttää Exceliä, joten olen datalukutaitoinen"
+      - nro: 3
+        otsikko: "Data on uusi öljy"
+      - nro: 4
+        otsikko: "Data on pilvessä"
+      - nro: 5
+        otsikko: "Organisaatioilla on paljon valmista käyttökelpoista dataa"
+      - nro: 6
+        otsikko: "Raakadata on neutraalia ja puhdasta"
+      - nro: 7
+        otsikko: "Datan käsittely ei vaikuta siitä tehtyihin johtopäätöksiin"
+      - nro: 8
+        otsikko: "Minua koskeva data on minun"
+      - nro: 9
+        otsikko: "Voin määrätä siitä, minkälaista dataa minusta kerätään"
+      - nro: 10
+        otsikko: "Jos en esiinny omalla nimelläni, minua ei voi tunnistaa"
+      - nro: 11
+        otsikko: "Tietosuoja-asetus takaa suojan henkilötiedoille"
+
+  - otsikko: "Mikä tekoäly?"
+    myytit:
+      - nro: 12
+        otsikko: "Tekoäly on yksi, yhtenäinen teknologia"
+      - nro: 13
+        otsikko: "Tekoäly on tulevaisuutta"
+      - nro: 14
+        otsikko: "Tekoälyn kehitystä voi ennustaa"
+      - nro: 15
+        otsikko: "Tekoäly ei voi olla luova"
+      - nro: 16
+        otsikko: "Tekoäly toimii ilman ihmistä"
+      - nro: 17
+        otsikko: "Tekoälyn ymmärtäminen vaatii matematiikan ja ohjelmoinnin ymmärrystä"
+      - nro: 18
+        otsikko: "Tekoäly on sähkönsinistä"
+      - nro: 19
+        otsikko: "Kvanttilaskenta mullistaa tekoälyn"
+      - nro: 20
+        otsikko: "Tekoäly osaa, hallusinoi ja ajattelee kuin ihminen"
+      - nro: 21
+        otsikko: "Tekoäly korvaa ihmisen asiantuntemuksen ja arvostelukyvyn"
+      - nro: 22
+        otsikko: "Kukaan ei tiedä, miten tekoäly toimii"
+
+  - otsikko: "Mitä tekoälyllä ja datalla tehdään?"
+    myytit:
+      - nro: 23
+        otsikko: "Tekoälyn käyttäminen ja datan käsittely on ympäristöystävällistä"
+      - nro: 24
+        otsikko: "Datan visualisointi estää väärinymmärrykset"
+      - nro: 25
+        otsikko: "Datan avulla tehostetaan toimintaa"
+      - nro: 26
+        otsikko: "Data ja tekoäly pelastavat sote-palvelut"
+      - nro: 27
+        otsikko: "Tekoäly korvaa opettajat koulussa"
+      - nro: 28
+        otsikko: "Tekoäly personoi opetuksen ja oppimisen"
+      - nro: 29
+        otsikko: "Tekoälysukupolvi ymmärtää tekoälyä"
+      - nro: 30
+        otsikko: "Tekoäly ei tarvitse henkilötietoja toimiakseen"
+      - nro: 31
+        otsikko: "Tekoäly löysi uuden planeetan ja muita tekoälyn urotöitä"
+      - nro: 32
+        otsikko: "Tekoälyä oppii ymmärtämään sitä käyttämällä"
+
+  - otsikko: "Mitä kaikkea datan ja tekoälyn perusteella voidaan tietää?"
+    myytit:
+      - nro: 33
+        otsikko: "Mitä enemmän dataa, sen parempi"
+      - nro: 34
+        otsikko: "Tekoäly on hyvä ennustamaan"
+      - nro: 35
+        otsikko: "Kaikesta on dataa"
+      - nro: 36
+        otsikko: "Google tietää sinusta enemmän kuin äitisi"
+      - nro: 37
+        otsikko: "Data ei ole tulkinnanvaraista"
+      - nro: 38
+        otsikko: "Nimien poistaminen tekee datasta anonyymia ja tietoturvallista"
+      - nro: 39
+        otsikko: "Synteettinen data on valheellista ja siten turhaa"
+      - nro: 40
+        otsikko: "Mitä enemmän dataa, sitä parempi tekoäly"
+      - nro: 41
+        otsikko: "Tekoäly ennustaa sosiaaliseen riskiryhmään kuulumisen"
+
+  - otsikko: "Tekoäly ja data ihmisten arjessa"
+    myytit:
+      - nro: 42
+        otsikko: "Tekoäly ei vaikuta elämääni, jos en käytä sitä"
+      - nro: 43
+        otsikko: "Googlen tarkoitus on auttaa tiedon etsinnässä"
+      - nro: 44
+        otsikko: "Kun käytän Googlea, olen Googlen asiakas"
+      - nro: 45
+        otsikko: "Tekoäly korvaa ystävät"
+      - nro: 46
+        otsikko: "Aikuiset saavat päättää lasten datasta"
+      - nro: 47
+        otsikko: "Arjen digitalisaatio lisää vapaa-aikaa"
+      - nro: 48
+        otsikko: "Tekoälyn käyttö heikentää ajattelutaitoja"
+      - nro: 49
+        otsikko: "Sääntely on aina jäljessä teknologista kehitystä"
+      - nro: 50
+        otsikko: "Tekoäly on uhka lapsen yksityisyydelle"

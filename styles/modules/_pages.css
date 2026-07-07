@@ -1519,6 +1519,71 @@
   font-size: 0.75rem;
   flex-shrink: 0;
 }
+.oppaat-podcast-toc-intro {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0.5rem 0 0;
+}
+.myths-toc {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 3rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--global-palette7, #d8decf);
+  align-items: start;
+}
+.myths-chapter-heading {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--global-palette1, #314e25);
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--global-palette7, #d8decf);
+}
+.myths-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.myth-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  padding: 0.18rem 0;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+.myth-num {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--global-palette2, #446d33);
+  min-width: 1.75rem;
+  flex-shrink: 0;
+}
+.myth-title { flex: 1; color: #333; }
+.myth-episode-badge {
+  flex-shrink: 0;
+  font-size: 0.67rem;
+  font-weight: 700;
+  background: var(--global-palette7, #e4edd9);
+  color: var(--global-palette1, #314e25);
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.myth-episode-badge:hover {
+  background: var(--global-palette2, #446d33);
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .myths-toc { grid-template-columns: 1fr; }
+}
 .itk-sublists {
   display: grid;
   grid-template-columns: 1fr 1fr;
