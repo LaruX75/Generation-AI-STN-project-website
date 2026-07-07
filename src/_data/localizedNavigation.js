@@ -12,6 +12,7 @@ const LABEL_OVERRIDES = {
   "Toiminta":               { fi: "Toiminta",             en: "What we do",              sv: "Verksamhet" },
   "Konsortio":              { fi: "Konsortio",            en: "Consortium",              sv: "Konsortium" },
   "Ole yhteydessä":         { fi: "Ole yhteydessä",       en: "Get in touch",            sv: "Kontakta oss" },
+  "Ollaan yhteydessä":      { fi: "Ollaan yhteydessä",    en: "Get in touch",            sv: "Kontakta oss" },
   "Opettajalle":            { fi: "Opettajalle",          en: "For teachers",            sv: "För lärare" },
   "Yleistajuiset julkaisut":{ fi: "Yleistajuiset julkaisut", en: "Popular publications", sv: "Populärvetenskapliga publikationer" },
   "Tutkijalle":             { fi: "Tutkijalle",           en: "Research",                sv: "Forskning" },
@@ -20,8 +21,11 @@ const LABEL_OVERRIDES = {
 
   /* ── Megamenu column headings ────────────────────────────────────────── */
   "Sovellukset":            { fi: "Sovellukset",          en: "Applications",            sv: "Verktyg" },
+  "Materiaalit ja oppaat":  { fi: "Materiaalit ja oppaat", en: "Materials and guides",   sv: "Material och guider" },
+  "Tutustu tekoälyyn":      { fi: "Tutustu tekoälyyn",    en: "Discover AI",             sv: "Utforska AI" },
   "Julkaisut & tutkimus":   { fi: "Julkaisut & tutkimus", en: "Publications & research", sv: "Publikationer & forskning" },
   "Hanke":                  { fi: "Hanke",                en: "Project",                 sv: "Projektet" },
+  "Hanke ja verkosto":      { fi: "Hanke ja verkosto",    en: "Project and network",     sv: "Projekt och nätverk" },
   "Resurssit":              { fi: "Resurssit",            en: "Resources",               sv: "Resurser" },
   "Seuraa":                 { fi: "Seuraa",               en: "Follow",                  sv: "Följ" },
   "Kategoriat":             { fi: "Kategoriat",           en: "Categories",              sv: "Kategorier" },
@@ -41,11 +45,11 @@ const LABEL_OVERRIDES = {
   "Tieteelliset julkaisut": { fi: "Tieteelliset julkaisut", en: "Scientific publications", sv: "Vetenskapliga publikationer" },
   "Ajankohtaista – tutkimus": { fi: "Ajankohtaista – tutkimus", en: "Current affairs – research", sv: "Aktuellt – forskning" },
   "Tapahtumat":             { fi: "Tapahtumat",           en: "Events",                  sv: "Evenemang" },
-  "Toiminta":               { fi: "Toiminta",              en: "Project activities",      sv: "Projektaktiviteter" },
   "Tutkimus":               { fi: "Tutkimus",             en: "Research",                sv: "Forskning" },
   "Uutiskirje":             { fi: "Uutiskirje",           en: "Newsletter",              sv: "Nyhetsbrev" },
   "RSS-syöte":              { fi: "RSS-syöte",            en: "RSS feed",                sv: "RSS-flöde" },
   "Hankkeen toiminta":      { fi: "Hankkeen toiminta",    en: "Project activities",      sv: "Projektaktiviteter" },
+  "Kaikki uutiset":         { fi: "Kaikki uutiset",       en: "All news",                sv: "Alla nyheter" },
   "Media ja uutiset":       { fi: "Media ja uutiset",     en: "Media and news",          sv: "Media och nyheter" },
   "Tapahtumat ja toiminta": { fi: "Tapahtumat ja toiminta", en: "Events and activities", sv: "Evenemang och verksamhet" },
   "Tieteellinen toiminta":  { fi: "Tieteellinen toiminta", en: "Scientific activities",  sv: "Vetenskaplig verksamhet" },
@@ -53,11 +57,14 @@ const LABEL_OVERRIDES = {
   "Tutkimusteemat":         { fi: "Tutkimusteemat",       en: "Research themes",         sv: "Forskningsteman" },
   "Esitelmät ja keynotet":  { fi: "Esitelmät ja keynotet", en: "Presentations and keynotes", sv: "Presentationer och keynotes" },
   "Vertaisarvioidut artikkelit": { fi: "Vertaisarvioidut artikkelit", en: "Peer-reviewed articles", sv: "Referentgranskade artiklar" },
+  "Tuntisuunnitelmat ja tehtävät": { fi: "Tuntisuunnitelmat ja tehtävät", en: "Lesson plans and tasks", sv: "Lektionsplaner och uppgifter" },
+  "Oppaat ja julkaisut":    { fi: "Oppaat ja julkaisut",  en: "Guides and publications", sv: "Guider och publikationer" },
 
   /* ── External / misc items ───────────────────────────────────────────── */
   "50 myyttiä tekoälystä (PDF)": { fi: "50 myyttiä tekoälystä (PDF)", en: "50 myths about AI (PDF)", sv: "50 myter om AI (PDF)" },
   "Sovellukset gen-ai.fi:ssä":   { fi: "Sovellukset gen-ai.fi:ssä",   en: "Applications at gen-ai.fi", sv: "Verktyg på gen-ai.fi" },
   "SHIELD-ohjelma":              { fi: "SHIELD-ohjelma",               en: "SHIELD programme",         sv: "SHIELD-programmet" },
+  "Tekoälyn perusteet opettajalle": { fi: "Tekoälyn perusteet opettajalle", en: "AI basics for teachers", sv: "AI-grunder för lärare" },
   "Opas: tietosuoja & sovellukset": { fi: "Opas: tietosuoja & sovellukset", en: "Guide: privacy & apps", sv: "Guide: integritet & appar" }
 };
 
@@ -72,6 +79,7 @@ const URL_OVERRIDES = {
   "/opettajalle/":                  { fi: "/opettajalle/",            en: "/en/for-teachers/",          sv: "/sv/for-larare/" },
   "/tutkijalle/":                   { fi: "/tutkijalle/",             en: "/en/research/",              sv: "/sv/forskning/" },
   "/yleisolle/":                    { fi: "/yleisolle/",              en: "/en/for-everyone/",                     sv: "/sv/for-allmanheten/" },
+  "/oppaat/":                       { fi: "/oppaat/",                 en: "/oppaat/",                   sv: "/oppaat/" },
   "/materiaalit/#tab-julkaisut":    { fi: "/materiaalit/#tab-julkaisut", en: "/en/materials/#tab-julkaisut", sv: "/sv/material/#tab-julkaisut" },
   "/en/activities/":                { fi: "/hankkeen-toiminta/",      en: "/en/activities/",            sv: "/sv/verksamhet/" },
   "/en/what-we-do/":                { fi: "/hankkeen-toiminta/",      en: "/en/activities/",            sv: "/sv/verksamhet/" },
@@ -94,7 +102,29 @@ const URL_OVERRIDES = {
   "https://www.gen-ai.fi/fi/tools/bm":               { fi: "https://www.gen-ai.fi/fi/tools/bm",               en: "https://www.gen-ai.fi/en/tools/bm",               sv: "https://www.gen-ai.fi/sv/tools/bm" },
   "https://www.gen-ai.fi/fi/tools/profiling-game":   { fi: "https://www.gen-ai.fi/fi/tools/profiling-game",   en: "https://www.gen-ai.fi/en/tools/profiling-game",   sv: "https://www.gen-ai.fi/sv/tools/profiling-game" },
   "https://www.gen-ai.fi/fi/tools/manipulation-game":{ fi: "https://www.gen-ai.fi/fi/tools/manipulation-game",en: "https://www.gen-ai.fi/en/tools/manipulation-game", sv: "https://www.gen-ai.fi/sv/tools/manipulation-game" },
-  "https://www.gen-ai.fi/fi":                        { fi: "https://www.gen-ai.fi/fi",                        en: "https://www.gen-ai.fi/en",                        sv: "https://www.gen-ai.fi/sv" }
+  "https://www.gen-ai.fi/fi":                        { fi: "https://www.gen-ai.fi/fi",                        en: "https://www.gen-ai.fi/en",                        sv: "https://www.gen-ai.fi/sv" },
+  "https://gen-ai.fi/fi/materials/basics":           { fi: "https://gen-ai.fi/fi/materials/basics",           en: "https://gen-ai.fi/en/materials/basics",           sv: "https://gen-ai.fi/sv/materials/basics" }
+};
+
+/* ── Item-level description overrides (keyed by FI desc text) ──────────── */
+const ITEM_DESC_OVERRIDES = {
+  "Kouluta oma tekoälymalli":         { fi: "Kouluta oma tekoälymalli",         en: "Train your own AI model",            sv: "Träna din egen AI-modell" },
+  "Algoritmit ja medialukutaito":     { fi: "Algoritmit ja medialukutaito",     en: "Algorithms and media literacy",      sv: "Algoritmer och mediekunskap" },
+  "Miten kielimalli toimii":          { fi: "Miten kielimalli toimii",          en: "How a language model works",         sv: "Hur en språkmodell fungerar" },
+  "Tekoälyn haavoittuvuudet":         { fi: "Tekoälyn haavoittuvuudet",         en: "AI vulnerabilities",                 sv: "AI:s sårbarheter" },
+  "Data ja yksityisyys":              { fi: "Data ja yksityisyys",              en: "Data and privacy",                   sv: "Data och integritet" },
+  "Tulossa":                          { fi: "Tulossa",                          en: "Coming soon",                        sv: "Kommer snart" },
+  "Valmiit kokonaisuudet luokkaan":   { fi: "Valmiit kokonaisuudet luokkaan",   en: "Ready-made units for the classroom", sv: "Färdiga enheter för klassrummet" },
+  "Aloita tästä":                     { fi: "Aloita tästä",                     en: "Start here",                         sv: "Börja här" },
+  "Myyttikirja, podcast, tietosuoja": { fi: "Myyttikirja, podcast, tietosuoja", en: "Myth book, podcast, privacy",        sv: "Mytbok, podcast, integritet" },
+  "Mitä tutkimme ja miksi":           { fi: "Mitä tutkimme ja miksi",           en: "What we research and why",           sv: "Vad vi forskar om och varför" },
+  "Artikkelit, kirjat, opinnäytteet": { fi: "Artikkelit, kirjat, opinnäytteet", en: "Articles, books, theses",            sv: "Artiklar, böcker, avhandlingar" },
+  "STN-rahoitus ja ohjelma":          { fi: "STN-rahoitus ja ohjelma",          en: "STN funding and programme",          sv: "STN-finansiering och program" },
+  "Yliopistot ja kumppanit":          { fi: "Yliopistot ja kumppanit",          en: "Universities and partners",          sv: "Universitet och partner" },
+  "Kokeile selaimessa, ilmaiseksi":   { fi: "Kokeile selaimessa, ilmaiseksi",   en: "Try in browser, for free",           sv: "Prova i webbläsaren, gratis" },
+  "Myyttikirja, podcast, oppaat":     { fi: "Myyttikirja, podcast, oppaat",     en: "Myth book, podcast, guides",         sv: "Mytbok, podcast, guider" },
+  "Uutiset ja tapahtumat":            { fi: "Uutiset ja tapahtumat",            en: "News and events",                    sv: "Nyheter och evenemang" },
+  "Kysy, ehdota, tule mukaan":        { fi: "Kysy, ehdota, tule mukaan",        en: "Ask, suggest, get involved",         sv: "Fråga, föreslå, engagera dig" }
 };
 
 /* ── Megamenu sidebar description texts ────────────────────────────────── */
@@ -184,6 +214,13 @@ function getLocalizedLabel(originalLabel, url, locale, translations) {
   return originalLabel;
 }
 
+function getLocalizedDesc(desc, locale) {
+  if (!desc) return undefined;
+  const override = ITEM_DESC_OVERRIDES[desc];
+  if (override && override[locale]) return override[locale];
+  return desc;
+}
+
 function localizeItem(item, locale, translations) {
   const descOverride = DESCRIPTION_OVERRIDES[item.title];
   return {
@@ -200,7 +237,8 @@ function localizeItem(item, locale, translations) {
         .map(sub => ({
           ...sub,
           label: getLocalizedLabel(sub.label, sub.url, locale, translations),
-          url: getLocalizedUrl(sub.url, locale, translations)
+          url: getLocalizedUrl(sub.url, locale, translations),
+          desc: getLocalizedDesc(sub.desc, locale)
         }))
     }))
   };

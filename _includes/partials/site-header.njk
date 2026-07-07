@@ -81,7 +81,11 @@
                         <ul class="kb-mega-col-items">
                           {% for sub in col.items %}
                             <li class="menu-item">
-                              <a class="kb-mega-link" href="{{ sub.url }}"{% if sub.target %} target="{{ sub.target }}"{% endif %}>{{ sub.label }}{% if sub.target == "_blank" %} <span class="kb-mega-ext" aria-hidden="true">↗</span>{% endif %}</a>
+                              {% if sub.disabled %}
+                                <span class="kb-mega-link kb-mega-link--disabled">{{ sub.label }}{% if sub.desc %}<span class="kb-mega-link-desc">{{ sub.desc }}</span>{% endif %}</span>
+                              {% else %}
+                                <a class="kb-mega-link" href="{{ sub.url }}"{% if sub.target %} target="{{ sub.target }}"{% if sub.target == "_blank" %} rel="noopener"{% endif %}{% endif %}>{{ sub.label }}{% if sub.target == "_blank" %} <span class="kb-mega-ext" aria-hidden="true">↗</span>{% endif %}{% if sub.desc %}<span class="kb-mega-link-desc">{{ sub.desc }}</span>{% endif %}</a>
+                              {% endif %}
                             </li>
                           {% endfor %}
                         </ul>

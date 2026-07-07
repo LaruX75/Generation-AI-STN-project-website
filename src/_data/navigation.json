@@ -44,21 +44,20 @@
           {
             "heading": "Sovellukset",
             "items": [
-              { "label": "Opetettava kone", "url": "https://www.gen-ai.fi/fi/tools/tm", "target": "_blank" },
-              { "label": "Somekone", "url": "https://www.gen-ai.fi/fi/tools/somekone", "target": "_blank" },
-              { "label": "Pieni kielikone", "url": "https://www.gen-ai.fi/fi/tools/lm", "target": "_blank" },
-              { "label": "Hajoava kone", "url": "https://www.gen-ai.fi/fi/tools/bm", "target": "_blank" },
-              { "label": "Profilointipeli", "url": "https://www.gen-ai.fi/fi/tools/profiling-game", "target": "_blank" },
-              { "label": "Manipulointipeli", "url": "https://www.gen-ai.fi/fi/tools/manipulation-game", "target": "_blank" }
+              { "label": "Opetettava kone", "url": "https://www.gen-ai.fi/fi/tools/tm", "target": "_blank", "desc": "Kouluta oma tekoälymalli" },
+              { "label": "Somekone", "url": "https://www.gen-ai.fi/fi/tools/somekone", "target": "_blank", "desc": "Algoritmit ja medialukutaito" },
+              { "label": "Pieni kielikone", "url": "https://www.gen-ai.fi/fi/tools/lm", "target": "_blank", "desc": "Miten kielimalli toimii" },
+              { "label": "Hajoava kone", "url": "https://www.gen-ai.fi/fi/tools/bm", "target": "_blank", "desc": "Tekoälyn haavoittuvuudet" },
+              { "label": "Profilointipeli", "url": "https://www.gen-ai.fi/fi/tools/profiling-game", "target": "_blank", "desc": "Data ja yksityisyys" },
+              { "label": "Manipulointipeli", "url": "", "target": "", "disabled": true, "desc": "Tulossa" }
             ]
           },
           {
-            "heading": "Materiaalit",
+            "heading": "Materiaalit ja oppaat",
             "items": [
-              { "label": "Oppimateriaalit", "url": "/materiaalit/", "target": "" },
-              { "label": "Tekoälyn perusteet opettajalle", "url": "https://gen-ai.fi/fi/materials/basics", "target": "_blank" },
-              { "label": "Opas: tietosuoja & sovellukset", "url": "/henkilotietojen-kasittely-alakoulussa/", "target": "" },
-              { "label": "Oppaat ja julkaisut", "url": "/oppaat/", "target": "" }
+              { "label": "Tuntisuunnitelmat ja tehtävät", "url": "/materiaalit/", "target": "", "desc": "Valmiit kokonaisuudet luokkaan" },
+              { "label": "Tekoälyn perusteet opettajalle", "url": "https://gen-ai.fi/fi/materials/basics", "target": "_blank", "desc": "Aloita tästä" },
+              { "label": "Oppaat ja julkaisut", "url": "/oppaat/", "target": "", "desc": "Myyttikirja, podcast, tietosuoja" }
             ]
           }
         ],
@@ -86,24 +85,16 @@
           {
             "heading": "Tutkimus",
             "items": [
-              { "label": "Tutkimusteemat", "url": "/tutkijalle/#teemat", "target": "" },
-              { "label": "Tieteelliset julkaisut", "url": "/tutkijalle/#julkaisut", "target": "" },
-              { "label": "Vertaisarvioidut artikkelit", "url": "/tutkijalle/?scipub-cat=a#julkaisut", "target": "" },
+              { "label": "Tutkimusteemat", "url": "/tutkijalle/#teemat", "target": "", "desc": "Mitä tutkimme ja miksi" },
+              { "label": "Tieteelliset julkaisut", "url": "/tutkijalle/#julkaisut", "target": "", "desc": "Artikkelit, kirjat, opinnäytteet" },
               { "label": "Esitelmät ja keynotet", "url": "/tutkijalle/#esitelmat", "target": "", "conditional": "hasResearchItems" }
             ]
           },
           {
-            "heading": "Ohjelma ja verkosto",
+            "heading": "Hanke ja verkosto",
             "items": [
-              { "label": "SHIELD-ohjelma", "url": "/shield-ohjelma/", "target": "" },
-              { "label": "Konsortio", "url": "/konsortio/", "target": "" }
-            ]
-          },
-          {
-            "heading": "Seuraa",
-            "items": [
-              { "label": "Ajankohtaista – tutkimus", "url": "/ajankohtaista/toiminta/", "target": "" },
-              { "label": "Uutiskirje", "url": "/uutiskirje/", "target": "" }
+              { "label": "SHIELD-ohjelma", "url": "/shield-ohjelma/", "target": "", "desc": "STN-rahoitus ja ohjelma" },
+              { "label": "Konsortio", "url": "/konsortio/", "target": "", "desc": "Yliopistot ja kumppanit" }
             ]
           }
         ],
@@ -129,16 +120,16 @@
         "megamenu": true,
         "megamenuColumns": [
           {
-            "heading": "Resurssit",
+            "heading": "Tutustu tekoälyyn",
             "items": [
-              { "label": "Oppaat ja julkaisut", "url": "/oppaat/", "target": "" },
-              { "label": "Sovellukset gen-ai.fi:ssä", "url": "https://www.gen-ai.fi/fi", "target": "_blank" }
+              { "label": "Sovellukset gen-ai.fi:ssä", "url": "https://www.gen-ai.fi/fi", "target": "_blank", "desc": "Kokeile selaimessa, ilmaiseksi" },
+              { "label": "Oppaat ja julkaisut", "url": "/oppaat/", "target": "", "desc": "Myyttikirja, podcast, oppaat" }
             ]
           },
           {
             "heading": "Seuraa",
             "items": [
-              { "label": "Ajankohtaista", "url": "/ajankohtaista/", "target": "" },
+              { "label": "Ajankohtaista", "url": "/ajankohtaista/", "target": "", "desc": "Uutiset ja tapahtumat" },
               { "label": "Uutiskirje", "url": "/uutiskirje/", "target": "" }
             ]
           }
@@ -167,7 +158,7 @@
           {
             "heading": "Kategoriat",
             "items": [
-              { "label": "Media ja uutiset", "url": "/ajankohtaista/", "target": "" },
+              { "label": "Kaikki uutiset", "url": "/ajankohtaista/", "target": "" },
               { "label": "Tapahtumat ja toiminta", "url": "/ajankohtaista/tapahtumat/", "target": "" },
               { "label": "Tieteellinen toiminta", "url": "/ajankohtaista/toiminta/", "target": "" },
               { "label": "Julkaisut", "url": "/ajankohtaista/julkaisut/", "target": "" }
@@ -205,15 +196,14 @@
           {
             "heading": "Hanke",
             "items": [
-              { "label": "Konsortio", "url": "/konsortio/", "target": "" },
-              { "label": "SHIELD-ohjelma", "url": "/shield-ohjelma/", "target": "" }
+              { "label": "Konsortio", "url": "/konsortio/", "target": "", "desc": "Yliopistot ja kumppanit" },
+              { "label": "SHIELD-ohjelma", "url": "/shield-ohjelma/", "target": "", "desc": "STN-rahoitus ja ohjelma" }
             ]
           },
           {
             "heading": "Yhteys",
             "items": [
-              { "label": "Ota yhteyttä", "url": "/ollaan-yhteydessa/", "target": "" },
-              { "label": "Uutiskirje", "url": "/uutiskirje/", "target": "" }
+              { "label": "Ollaan yhteydessä", "url": "/ollaan-yhteydessa/", "target": "", "desc": "Kysy, ehdota, tule mukaan" }
             ]
           }
         ],
