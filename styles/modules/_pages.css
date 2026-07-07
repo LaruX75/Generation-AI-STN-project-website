@@ -1566,6 +1566,8 @@
   flex-shrink: 0;
 }
 .myth-title { flex: 1; color: #333; }
+.myth-title--link { color: var(--global-palette1, #314e25); text-decoration: none; }
+.myth-title--link:hover { text-decoration: underline; }
 .myth-episode-badge {
   flex-shrink: 0;
   font-size: 0.67rem;

@@ -1,0 +1,254 @@
+/* ── Myyttisivu (yksittäinen luku) ───────────────────────────────────────── */
+
+.myytti-page {
+  padding: 2rem 1.5rem 4rem;
+  background: var(--global-palette9, #fff);
+}
+.myytti-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Breadcrumb */
+.myytti-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.35rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+.myytti-breadcrumb li + li::before {
+  content: "›";
+  margin-right: 0.35rem;
+  color: #aaa;
+}
+.myytti-breadcrumb a {
+  color: var(--global-palette2, #446d33);
+  text-decoration: none;
+}
+.myytti-breadcrumb a:hover { text-decoration: underline; }
+
+/* Header */
+.myytti-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid var(--global-palette7, #d8decf);
+}
+.myytti-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--global-palette2, #446d33);
+  margin-bottom: 0.4rem;
+}
+.myytti-title {
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.2rem);
+  line-height: 1.2;
+  font-weight: 800;
+  color: var(--global-palette1, #314e25);
+  margin: 0 0 0.5rem;
+}
+.myytti-authors {
+  font-size: 0.88rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Chapter content — verbatim book text */
+.myytti-content {
+  font-size: 1.05rem;
+  line-height: 1.72;
+  color: var(--global-palette3, #1a1a1a);
+  margin-bottom: 2.5rem;
+}
+.myytti-content p {
+  margin: 0 0 1.1em;
+  hyphens: auto;
+}
+.myytti-content p:first-of-type {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--global-palette1, #314e25);
+}
+.myytti-content sup {
+  font-size: 0.68em;
+  color: #666;
+}
+
+/* Attribution block */
+.myytti-attribution {
+  background: var(--global-palette8, #f7f9f5);
+  border-left: 3px solid var(--global-palette7, #d8decf);
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  font-size: 0.83rem;
+  color: #555;
+  line-height: 1.55;
+}
+.myytti-attribution p { margin: 0 0 0.4rem; }
+.myytti-attribution p:last-child { margin: 0; }
+.myytti-attribution a { color: var(--global-palette2, #446d33); }
+.myytti-attribution-note { font-style: italic; color: #777; }
+
+/* Podcast link */
+.myytti-podcast {
+  background: #f0faf2;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+}
+.myytti-podcast-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--global-palette2, #446d33);
+  margin: 0 0 0.5rem;
+}
+.myytti-podcast-link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--global-palette1, #314e25);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.myytti-podcast-link:hover .myytti-podcast-meta { text-decoration: underline; }
+.myytti-podcast-play { color: #1DB954; font-size: 1rem; }
+.myytti-podcast-meta { flex: 1; }
+.myytti-podcast-duration { font-size: 0.78rem; color: #888; font-weight: 400; }
+
+/* Related myths */
+.myytti-related {
+  margin-bottom: 2rem;
+}
+.myytti-related-heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--global-palette2, #446d33);
+  margin: 0 0 0.75rem;
+  border-bottom: 1px solid var(--global-palette7, #d8decf);
+  padding-bottom: 0.3rem;
+}
+.myytti-related-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.myytti-related-list a {
+  color: var(--global-palette2, #446d33);
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+.myytti-related-list a:hover { text-decoration: underline; }
+
+/* Back nav */
+.myytti-nav { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--global-palette7, #d8decf); }
+.myytti-nav-back { color: var(--global-palette2, #446d33); text-decoration: none; font-size: 0.88rem; font-weight: 600; }
+.myytti-nav-back:hover { text-decoration: underline; }
+
+/* ── Myyttien indeksisivu ─────────────────────────────────────────────────── */
+
+.myytit-intro {
+  background: var(--global-palette8, #f7f9f5);
+  border-radius: 10px;
+  padding: 1.75rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--global-palette7, #d8decf);
+}
+.myytit-intro-lead {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+  color: var(--global-palette3, #1a1a1a);
+}
+.myytit-intro-license {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0 0 1.25rem;
+}
+.myytit-intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.myytit-intro-btn {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.myytit-intro-btn--primary {
+  background: var(--global-palette1, #314e25);
+  color: #fff;
+}
+.myytit-intro-btn--primary:hover { background: #243d1b; }
+.myytit-intro-btn--secondary {
+  background: transparent;
+  color: var(--global-palette1, #314e25);
+  border: 1.5px solid var(--global-palette1, #314e25);
+}
+.myytit-intro-btn--secondary:hover { background: var(--global-palette7, #e8eee4); }
+
+/* Chapter groups on index */
+.myytit-chapter-group { margin-bottom: 2rem; }
+.myytit-chapter-heading {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--global-palette1, #314e25);
+  margin: 0 0 0.6rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--global-palette7, #d8decf);
+}
+.myytit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.myytit-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #555;
+  border-bottom: 1px solid var(--global-palette8, #f0f4ec);
+}
+.myytit-item:last-child { border-bottom: none; }
+.myytit-item-num {
+  min-width: 2rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--global-palette2, #446d33);
+  flex-shrink: 0;
+}
+.myytit-item-title { color: #666; }
+.myytit-item-link {
+  color: var(--global-palette1, #314e25);
+  text-decoration: none;
+  font-weight: 500;
+}
+.myytit-item-link:hover { text-decoration: underline; }
+.myytit-item--published .myytit-item-num { color: var(--global-palette1, #314e25); }
+
+@media (max-width: 600px) {
+  .myytti-page { padding: 1.5rem 1rem 3rem; }
+  .myytti-content { font-size: 1rem; }
+  .myytti-content p:first-of-type { font-size: 1.05rem; }
+}

@@ -65,7 +65,8 @@ const LABEL_OVERRIDES = {
   "Sovellukset gen-ai.fi:ssä":   { fi: "Sovellukset gen-ai.fi:ssä",   en: "Applications at gen-ai.fi", sv: "Verktyg på gen-ai.fi" },
   "SHIELD-ohjelma":              { fi: "SHIELD-ohjelma",               en: "SHIELD programme",         sv: "SHIELD-programmet" },
   "Tekoälyn perusteet opettajalle": { fi: "Tekoälyn perusteet opettajalle", en: "AI basics for teachers", sv: "AI-grunder för lärare" },
-  "Opas: tietosuoja & sovellukset": { fi: "Opas: tietosuoja & sovellukset", en: "Guide: privacy & apps", sv: "Guide: integritet & appar" }
+  "Opas: tietosuoja & sovellukset": { fi: "Opas: tietosuoja & sovellukset", en: "Guide: privacy & apps", sv: "Guide: integritet & appar" },
+  "Tekoälymyytit":                  { fi: "Tekoälymyytit",                 en: "AI Myths",                 sv: "AI-myter" }
 };
 
 const URL_OVERRIDES = {
@@ -80,6 +81,7 @@ const URL_OVERRIDES = {
   "/tutkijalle/":                   { fi: "/tutkijalle/",             en: "/en/research/",              sv: "/sv/forskning/" },
   "/yleisolle/":                    { fi: "/yleisolle/",              en: "/en/for-everyone/",                     sv: "/sv/for-allmanheten/" },
   "/oppaat/":                       { fi: "/oppaat/",                 en: "/oppaat/",                   sv: "/oppaat/" },
+  "/myytit/":                       { fi: "/myytit/",                 en: "/myytit/",                   sv: "/myytit/" },
   "/materiaalit/#tab-julkaisut":    { fi: "/materiaalit/#tab-julkaisut", en: "/en/materials/#tab-julkaisut", sv: "/sv/material/#tab-julkaisut" },
   "/en/activities/":                { fi: "/hankkeen-toiminta/",      en: "/en/activities/",            sv: "/sv/verksamhet/" },
   "/en/what-we-do/":                { fi: "/hankkeen-toiminta/",      en: "/en/activities/",            sv: "/sv/verksamhet/" },
@@ -124,7 +126,8 @@ const ITEM_DESC_OVERRIDES = {
   "Kokeile selaimessa, ilmaiseksi":   { fi: "Kokeile selaimessa, ilmaiseksi",   en: "Try in browser, for free",           sv: "Prova i webbläsaren, gratis" },
   "Myyttikirja, podcast, oppaat":     { fi: "Myyttikirja, podcast, oppaat",     en: "Myth book, podcast, guides",         sv: "Mytbok, podcast, guider" },
   "Uutiset ja tapahtumat":            { fi: "Uutiset ja tapahtumat",            en: "News and events",                    sv: "Nyheter och evenemang" },
-  "Kysy, ehdota, tule mukaan":        { fi: "Kysy, ehdota, tule mukaan",        en: "Ask, suggest, get involved",         sv: "Fråga, föreslå, engagera dig" }
+  "Kysy, ehdota, tule mukaan":        { fi: "Kysy, ehdota, tule mukaan",        en: "Ask, suggest, get involved",         sv: "Fråga, föreslå, engagera dig" },
+  "Onko tekoäly luova? Entä puolueeton?": { fi: "Onko tekoäly luova? Entä puolueeton?", en: "Is AI creative? Is it unbiased?", sv: "Är AI kreativ? Är den opartisk?" }
 };
 
 /* ── Megamenu sidebar description texts ────────────────────────────────── */

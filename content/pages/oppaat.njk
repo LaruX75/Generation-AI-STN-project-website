@@ -55,6 +55,7 @@ lang: fi
         <div class="oppaat-book-actions">
           <a class="oppaat-book-btn oppaat-book-btn--primary" href="https://doi.org/10.58181/VP9789523972513" target="_blank" rel="noopener">Lataa ilmaiseksi (PDF) ↗</a>
           <a class="oppaat-book-btn oppaat-book-btn--secondary" href="https://vastapaino.fi/sivu/tuote/50-myyttia-tekoalysta-ja-datasta/5353057" target="_blank" rel="noopener">Vastapaino.fi ↗</a>
+          <a class="oppaat-book-btn oppaat-book-btn--secondary" href="/myytit/">Selaa myyttejä →</a>
         </div>
       </div>
 
@@ -73,10 +74,24 @@ lang: fi
           <ul class="myths-list">
             {% for m in luku.myytit %}
               {% set jakso = myyttipodcastByMyytti[m.nro] %}
+              {% set myyttisivu = null %}
+              {% for p in collections.myytit %}
+                {% if p.data.numero == m.nro %}{% set myyttisivu = p %}{% endif %}
+              {% endfor %}
               <li class="myth-row{% if jakso %} myth-row--has-episode{% endif %}">
                 <span class="myth-num">{{ m.nro }}</span>
-                <span class="myth-title">{{ m.otsikko }}</span>
-                {% if jakso %}<a class="myth-episode-badge" href="{{ jakso.url }}" target="_blank" rel="noopener" title="Jakso {{ jakso.nro }}: {{ jakso.otsikko }} ({{ jakso.kesto }})">▶ {{ jakso.nro }}</a>{% endif %}
+                {% if myyttisivu %}
+                  <a class="myth-title myth-title--link" href="{{ myyttisivu.url }}">{{ m.otsikko }}</a>
+                {% else %}
+                  <span class="myth-title">{{ m.otsikko }}</span>
+                {% endif %}
+                {% if jakso %}
+                  {% if myyttisivu %}
+                    <a class="myth-episode-badge" href="{{ myyttisivu.url }}" title="Jakso {{ jakso.nro }}: {{ jakso.otsikko }} ({{ jakso.kesto }})">▶ {{ jakso.nro }}</a>
+                  {% else %}
+                    <a class="myth-episode-badge" href="{{ jakso.url }}" target="_blank" rel="noopener" title="Jakso {{ jakso.nro }}: {{ jakso.otsikko }} ({{ jakso.kesto }})">▶ {{ jakso.nro }}</a>
+                  {% endif %}
+                {% endif %}
               </li>
             {% endfor %}
           </ul>

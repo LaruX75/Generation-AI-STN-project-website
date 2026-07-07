@@ -123,6 +123,7 @@
             "heading": "Tutustu tekoälyyn",
             "items": [
               { "label": "Sovellukset gen-ai.fi:ssä", "url": "https://www.gen-ai.fi/fi", "target": "_blank", "desc": "Kokeile selaimessa, ilmaiseksi" },
+              { "label": "Tekoälymyytit", "url": "/myytit/", "target": "", "desc": "Onko tekoäly luova? Entä puolueeton?" },
               { "label": "Oppaat ja julkaisut", "url": "/oppaat/", "target": "", "desc": "Myyttikirja, podcast, oppaat" }
             ]
           },

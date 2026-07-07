@@ -315,6 +315,79 @@ collections:
               - { label: "Päivämäärä", name: "date", widget: "string", required: false, hint: "Muodossa pp.kk.vvvv" }
               - { label: "Esittäjä(t)", name: "consortium", widget: "string", required: false, hint: "Hankkeen jäsenten lyhenteet, esim. MT, JL" }
 
+  # ── TEKOÄLYMYYTIT (kirjakappaleet) ────────────────────────────────────────
+  - name: "myytit"
+    label: "Tekoälymyytit (kirjakappaleet)"
+    label_singular: "Myytti"
+    icon: "auto_stories"
+    folder: "content/myytit"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    identifier_field: otsikko
+    summary: "{{numero}}. {{otsikko}}"
+    sortable_fields:
+      fields: ["numero", "otsikko"]
+      default:
+        field: numero
+        direction: Ascending
+    view_filters:
+      - label: "Luonnos"
+        field: draft
+        pattern: true
+      - label: "Julkaistu"
+        field: draft
+        pattern: false
+    fields:
+      - label: "Numero (1–50)"
+        name: "numero"
+        widget: "number"
+        min: 1
+        max: 50
+        hint: "Myytin järjestysnumero kirjassa."
+      - label: "Otsikko (TÄSMÄLLEEN kirjan muodossa)"
+        name: "otsikko"
+        widget: "string"
+        hint: "Kirjoita otsikko täsmälleen kirjan muodossa. Älä muokkaa."
+      - label: "Kysymysmuoto (title-tagissa)"
+        name: "kysymys"
+        widget: "string"
+        hint: "Esim. 'Onko data uusi öljy?' – käytetään VAIN title-tagissa ja meta descriptionissa, ei sivun sisällössä."
+      - label: "SEO-kuvaus (meta description)"
+        name: "seoDescription"
+        widget: "text"
+        required: false
+        hint: "Sivuston omaa metadataa, max ~160 merkkiä. Ei osa teosta."
+      - label: "Kirjoittajat (lukukohtaiset)"
+        name: "kirjoittajat"
+        widget: "list"
+        required: false
+        hint: "Luvun kirjoittajat, jos tiedossa. Ei ole pakollinen kenttä."
+      - label: "Podcast-jakso (myytti-numero)"
+        name: "podcast_jakso"
+        widget: "string"
+        required: false
+        hint: "Jakson numero myyttipodcast.yaml:ssa (esim. '3' tai '24a'). Haetaan automaattisesti myyttipodcastByMyytti-hakutaulukosta."
+      - label: "Liittyvät sovellukset"
+        name: "liittyvat_sovellukset"
+        widget: "list"
+        required: false
+      - label: "Liittyvät myytit (numerot)"
+        name: "liittyvat_myytit"
+        widget: "list"
+        required: false
+        hint: "Numerolista, esim. [1, 5, 12]. Generoi automaattiset linkit myyttisivuille."
+      - label: "Luonnos (älä julkaise)"
+        name: "draft"
+        widget: "boolean"
+        default: true
+        hint: "true = sivu ei julkaistu. false = sivu julkaistaan osoitteessa /myytit/[slug]/."
+      - label: "Sisältö – VERBATIM kirjasta (CC BY-NC-ND 4.0)"
+        name: "body"
+        widget: "markdown"
+        modes: ["rich_text", "raw"]
+        hint: "TÄRKEÄÄ: Teksti on luku sellaisenaan kirjasta. Älä muokkaa tai tiivistä. Kaikki muutokset ovat lisenssirikkeitä."
+
   - name: "pages_sv"
     label: "Sidor (svenska)"
     label_singular: "Sida (svenska)"

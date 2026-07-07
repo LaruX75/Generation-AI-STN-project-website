@@ -74,4 +74,10 @@ module.exports = function registerCollections(eleventyConfig) {
   eleventyConfig.addCollection("posts_fi", col =>
     col.getAll().filter(p => p.data.sourceType === "posts" && p.data.lang !== "en" && p.data.lang !== "sv").sort(byDate)
   );
+
+  eleventyConfig.addCollection("myytit", col =>
+    col.getAll()
+      .filter(p => p.data.sourceType === "myytit")
+      .sort((a, b) => (a.data.numero || 0) - (b.data.numero || 0))
+  );
 };

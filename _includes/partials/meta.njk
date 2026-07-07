@@ -163,7 +163,12 @@
       "item": site.url + _homePath
     }
   ] %}
-  {% if page.url != _homePath %}
+  {% if sourceType == "myytit" %}
+    {% set _breadcrumbItems = _breadcrumbItems.concat([
+      { "@type": "ListItem", "position": 2, "name": "50 myyttiä tekoälystä", "item": site.url + "/myytit/" },
+      { "@type": "ListItem", "position": 3, "name": otsikko if otsikko else title, "item": _canonical }
+    ]) %}
+  {% elif page.url != _homePath %}
     {% set _breadcrumbItems = _breadcrumbItems.concat([
       {
         "@type": "ListItem",
@@ -210,6 +215,39 @@
       "publisher": { "@id": site.url + "/#organization" }
     } %}
     {% set _schemaGraph = _schemaGraph.concat([_articleSchema]) %}
+  {% endif %}
+  {% if sourceType == "myytit" %}
+    {% set _chapterAuthor = {"@id": site.url + "/#organization"} %}
+    {% if kirjoittajat and kirjoittajat.length %}
+      {% set _chapterAuthor = {"@type": "Person", "name": kirjoittajat[0]} %}
+    {% endif %}
+    {% set _bookNode = {
+      "@type": "Book",
+      "@id": "https://doi.org/10.58181/VP9789523972513",
+      "name": "50 myyttiä tekoälystä ja datasta",
+      "editor": [
+        {"@type": "Person", "name": "Marianne Mäkelin"},
+        {"@type": "Person", "name": "Elisa Silvennoinen"},
+        {"@type": "Person", "name": "Kati Mäkitalo"}
+      ],
+      "publisher": {"@type": "Organization", "name": "Kustannusosakeyhtiö Vastapaino"},
+      "datePublished": "2025",
+      "inLanguage": "fi",
+      "url": "https://doi.org/10.58181/VP9789523972513",
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+    } %}
+    {% set _chapterSchema = {
+      "@type": "Chapter",
+      "@id": _canonical + "#chapter",
+      "name": otsikko if otsikko else title,
+      "position": numero,
+      "inLanguage": "fi",
+      "url": _canonical,
+      "author": _chapterAuthor,
+      "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "isPartOf": {"@id": "https://doi.org/10.58181/VP9789523972513"}
+    } %}
+    {% set _schemaGraph = _schemaGraph.concat([_chapterSchema, _bookNode]) %}
   {% endif %}
   <script type="application/ld+json">{{ { "@context": "https://schema.org", "@graph": _schemaGraph } | jsonLd | safe }}</script>
   <link rel="stylesheet" href="/styles/gridjs-mermaid.css">
