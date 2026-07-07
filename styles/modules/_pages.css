@@ -49,7 +49,7 @@
   border-color: var(--global-palette1, #314e25);
 }
 
-/* Awards badge row */
+/* Awards badge row — UNUSED: section removed in 2026-07 refactor */
 .teacher-awards {
   background: var(--global-palette9, #fff);
   padding: 0 1.5rem 2.25rem;
@@ -85,7 +85,7 @@
 
 /* Steps */
 .teacher-steps {
-  background: var(--global-palette7, #f0f4ec);
+  background: var(--global-palette9, #fff);
   padding: 3.5rem 1.5rem;
 }
 .teacher-steps-inner {
@@ -144,7 +144,7 @@
 
 /* Tools grid */
 .teacher-tools {
-  background: var(--global-palette9, #fff);
+  background: var(--global-palette8, #f7f9f5);
   padding: 4rem 1.5rem;
 }
 .teacher-tools-inner {
@@ -167,7 +167,7 @@
   gap: 1.5rem;
 }
 .teacher-tool-card {
-  background: var(--global-palette8, #f7f9f5);
+  background: var(--global-palette9, #fff);
   border-radius: 0.75rem;
   padding: 1.5rem;
   display: flex;
@@ -205,7 +205,7 @@
   text-decoration: underline;
 }
 
-/* Materials */
+/* Materials — UNUSED: section removed in 2026-07 refactor */
 .teacher-materials {
   background: var(--global-palette1, #314e25);
   padding: 4rem 1.5rem;
@@ -241,9 +241,9 @@
   color: var(--global-palette1, #314e25);
 }
 
-/* Privacy guide card */
+/* Guides section */
 .teacher-guide {
-  background: var(--global-palette7, #f0f4ec);
+  background: var(--global-palette9, #fff);
   padding: 4rem 1.5rem;
 }
 .teacher-guide-inner {
@@ -298,7 +298,7 @@
 
 /* About section */
 .teacher-about {
-  background: var(--global-palette9, #fff);
+  background: var(--global-palette8, #f7f9f5);
   padding: 4rem 1.5rem;
 }
 .teacher-about-inner {
@@ -326,6 +326,83 @@
   color: var(--global-palette1, #314e25);
   text-decoration: underline;
 }
+.teacher-about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.teacher-about-newsletter {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--global-palette2, #446d33);
+  text-decoration: none;
+}
+.teacher-about-newsletter:hover {
+  color: var(--global-palette1, #314e25);
+  text-decoration: underline;
+}
+
+/* Intro text link (secondary, no border) */
+.teacher-intro-link {
+  display: inline-block;
+  padding: 0.75rem 0.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--global-palette2, #446d33);
+  text-decoration: none;
+}
+.teacher-intro-link:hover {
+  color: var(--global-palette1, #314e25);
+  text-decoration: underline;
+}
+
+/* Guide section heading and single-card override */
+.teacher-guide-heading {
+  font-size: clamp(1.3rem, 1.15rem + 0.5vw, 1.6rem);
+  color: var(--global-palette1, #314e25);
+  margin: 0 0 1.25rem;
+}
+.teacher-guide-inner--single {
+  display: block;
+}
+
+/* Design principles in "why" section (light background) */
+.teacher-why-principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+.teacher-why-principle {
+  background: var(--global-palette9, #fff);
+  border-radius: 0.5rem;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #444;
+  border: 1px solid var(--global-palette7, #f0f4ec);
+}
+@media (max-width: 600px) {
+  .teacher-why-principles { grid-template-columns: 1fr 1fr; }
+}
+
+/* Anchor scroll offset */
+#sovellukset {
+  scroll-margin-top: var(--kb-header-height, 60px);
+}
+
+/* Mobile touch targets for tool links (min 44 px) */
+@media (max-width: 700px) {
+  .teacher-tool-link,
+  .teacher-tool-lesson {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
 @media (max-width: 700px) {
   .teacher-intro    { padding: 2rem 1rem 1.75rem; }
   .teacher-steps    { padding: 2.5rem 1rem; }
@@ -385,7 +462,7 @@
 }
 .teacher-tools-all-btn:hover { background: var(--global-palette1, #314e25); color: #fff; }
 
-/* Design principles grid */
+/* Design principles grid — UNUSED: principles moved into teacher-why section in 2026-07 refactor */
 .teacher-principles {
   background: var(--global-palette1, #314e25);
   padding: 3rem 1.5rem;
@@ -436,7 +513,7 @@
 }
 .teacher-about-cta:hover { background: var(--global-palette1, #314e25); color: #fff; }
 
-/* Newsletter CTA at bottom of teacher page */
+/* Newsletter CTA — UNUSED: section merged into teacher-about in 2026-07 refactor */
 .teacher-newsletter {
   background: var(--global-palette7, #f0f4ec);
   padding: 3.5rem 1.5rem;
@@ -475,9 +552,8 @@
 
 /* "Miksi opettaa tekoälyä?" */
 .teacher-why {
-  background: var(--global-palette9, #fff);
+  background: var(--global-palette8, #f7f9f5);
   padding: 3.5rem 1.5rem;
-  border-top: 1px solid var(--global-palette7, #f0f4ec);
 }
 .teacher-why-inner {
   max-width: var(--global-content-narrow-width, 842px);
@@ -507,7 +583,7 @@
 }
 .teacher-why-cta:hover { background: var(--global-palette1, #314e25); color: #fff; }
 
-/* CEDE-malli */
+/* CEDE-malli — UNUSED: section removed in 2026-07 refactor */
 .teacher-cede {
   background: var(--global-palette7, #f0f4ec);
   padding: 3.5rem 1.5rem;
@@ -588,7 +664,7 @@
   .teacher-cede-steps { grid-template-columns: 1fr; }
 }
 
-/* "Tutkittua ja palkittua" -nauha */
+/* "Tutkittua ja palkittua" -nauha — UNUSED: section removed in 2026-07 refactor */
 .teacher-recognition {
   background: linear-gradient(135deg, #fffbf0 0%, #fff8e0 100%);
   border-top: 1px solid #f0c030;
@@ -646,7 +722,7 @@
   .teacher-recognition-inner { flex-direction: column; gap: 0.75rem; }
 }
 
-/* Tukiosio */
+/* Tukiosio — UNUSED: section merged into teacher-about in 2026-07 refactor; teacher-support-btn still used */
 .teacher-support {
   background: var(--global-palette1, #314e25);
   padding: 3.5rem 1.5rem;
