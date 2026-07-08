@@ -99,17 +99,19 @@ lang: fi
               {% endfor %}
               <li class="myth-row{% if jakso %} myth-row--has-episode{% endif %}">
                 <span class="myth-num">{{ m.nro }}</span>
+                <span class="myth-badge-slot">
+                  {% if jakso %}
+                    {% if myyttisivu %}
+                      <a class="myth-episode-badge" href="{{ myyttisivu.url }}" title="Jakso {{ jakso.nro }}: {{ jakso.otsikko }} ({{ jakso.kesto }})">▶ {{ jakso.nro }}</a>
+                    {% else %}
+                      <a class="myth-episode-badge" href="{{ jakso.url }}" target="_blank" rel="noopener" title="Jakso {{ jakso.nro }}: {{ jakso.otsikko }} ({{ jakso.kesto }})">▶ {{ jakso.nro }}</a>
+                    {% endif %}
+                  {% endif %}
+                </span>
                 {% if myyttisivu %}
                   <a class="myth-title myth-title--link" href="{{ myyttisivu.url }}">{{ m.otsikko }}</a>
                 {% else %}
                   <span class="myth-title">{{ m.otsikko }}</span>
-                {% endif %}
-                {% if jakso %}
-                  {% if myyttisivu %}
-                    <a class="myth-episode-badge" href="{{ myyttisivu.url }}" title="Jakso {{ jakso.nro }}: {{ jakso.otsikko }} ({{ jakso.kesto }})">▶ {{ jakso.nro }}</a>
-                  {% else %}
-                    <a class="myth-episode-badge" href="{{ jakso.url }}" target="_blank" rel="noopener" title="Jakso {{ jakso.nro }}: {{ jakso.otsikko }} ({{ jakso.kesto }})">▶ {{ jakso.nro }}</a>
-                  {% endif %}
                 {% endif %}
               </li>
             {% endfor %}

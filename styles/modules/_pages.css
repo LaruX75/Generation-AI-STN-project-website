@@ -1565,11 +1565,16 @@
   min-width: 1.75rem;
   flex-shrink: 0;
 }
+.myth-badge-slot {
+  flex-shrink: 0;
+  min-width: 2.75rem;
+  display: flex;
+  align-items: center;
+}
 .myth-title { flex: 1; color: #333; }
 .myth-title--link { color: var(--global-palette1, #314e25); text-decoration: none; }
 .myth-title--link:hover { text-decoration: underline; }
 .myth-episode-badge {
-  flex-shrink: 0;
   font-size: 0.67rem;
   font-weight: 700;
   background: var(--global-palette7, #e4edd9);
