@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-07-08T07:23:56.014Z",
+  "fetchedAt": "2026-07-09T08:30:18.943Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-08T09:00:35Z",
+      "title": "Suomalaiselle IQM:lle 33 miljoonan euron kvanttitietokonetilaus Kajaanin tekoälytehtaalta",
+      "url": "https://yle.fi/a/74-20235270",
+      "lead": "Tekoälytehdas julkistaa pian myös 390 miljoonan euron arvoisen supertietokoneen toimittajan. EU rahoittaa koko hankkeesta puolet."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-06T21:30:51Z",
@@ -134,13 +141,6 @@
       "title": "Näitkö kuvan kauniista naisesta MM-katsomossa? Hän saattoi olla tekoälyn luomus",
       "url": "https://yle.fi/a/74-20232988",
       "lead": "Tekoälyllä tehdyt kuvat jalka­pallo­joukkueiden ”naisfaneista” leviävät räjähdys­mäisesti sosiaalisessa mediassa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-12T08:08:53Z",
-      "title": "Tekoälyn käyttö töissä voi aiheuttaa ”aivo­kärähdyksen”",
-      "url": "https://yle.fi/a/74-20226132",
-      "lead": "Tekoälyn aiheuttama kuormitus on työsuojelu­kysymys, sanoo Työterveys­laitoksen tutkimus­päällikkö Virpi Kalakoski."
     },
     {
       "personName": "Teemu Roos",
