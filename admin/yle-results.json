@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-07-09T08:30:18.943Z",
+  "fetchedAt": "2026-07-10T08:16:28.308Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-09T16:26:31Z",
+      "title": "Kaleva: Ouluun tavoitellaan tekoälyn gigatehdasta – Nokia vahvistaa tehdaspuheet, mutta ei sijaintia",
+      "url": "https://yle.fi/a/74-20235699",
+      "lead": "Nokia ei vahvista, että sen tavoittelema suuri gigatehdas sijoittuisi Ouluun. Suunnitelmissa Oulu on kuitenkin ollut, kertoo entinen ministerí."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-09T13:00:35Z",
+      "title": "Kyber­hyökkäysten määrä kasvussa",
+      "url": "https://yle.fi/a/74-20235672",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-09T09:02:17Z",
+      "title": "Pohjanmaan hyvinvointi­alueella tulkataan tekoälyn avulla reaaliajassa jo kymmenillä kielillä",
+      "url": "https://yle.fi/a/74-20233896",
+      "lead": "Viime vuonna pilottina alkanut tekoälytulkkaus on osoittautunut nopeaksi ja luotettavaksi muun muassa Närpiössä, jossa puhutaan kymmeniä eri kieliä."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-08T09:00:35Z",
@@ -53,13 +74,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-07-03T14:28:58Z",
-      "title": "Teknojättien kurssit heiluvat – OP:n asiantuntija kertoo, mitä piensijoittajan on hyvä huomata",
-      "url": "https://yle.fi/a/74-20234594",
-      "lead": "Yhdysvaltojen teknologiajättien kurssit ovat painuneet rivakan nousun jälkeen. Yhtiöt tekevät silti kovaa tulosta, muistuttaa OP:n sijoitusjohtaja."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-07-02T16:08:52Z",
       "title": "FT: Open AI haluaa tekoäly-yhtiöiden lahjoittavan viiden prosentin osuudet yhtiöistään Trumpin hallinnolle",
       "url": "https://yle.fi/a/74-20234633",
@@ -95,13 +109,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-06-29T07:09:16Z",
-      "title": "Etelä-Korea investoi massiivisesti tekoäly­bisnekseen",
-      "url": "https://yle.fi/a/74-20233870",
-      "lead": "Presidentin mukaan tavoitteena on vakiinnuttaa maan johtoasema tekoäly­teollisuudessa."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-06-29T05:40:44Z",
       "title": "”Pyrin välttämään tekoälyn käyttöä täysin” – tekoäly ahdistaa Z-sukupolvea",
       "url": "https://yle.fi/a/74-20229725",
@@ -113,13 +120,6 @@
       "title": "Väite: Tekoäly ei vie vasta­valmistuneiden töitä, mutta muuttaa niitä – nämä taidot ovat nyt haluttuja työmarkkinoilla",
       "url": "https://yle.fi/a/74-20232871",
       "lead": "Tekoäly voi auttaa nuoria kuromaan umpeen kokemuseroa senioreihin, sanoo teollisuus­professori Mika Ruokonen."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-28T05:46:39Z",
-      "title": "FT: Google asetti Metalle tekoälyn käytön rajoituksia",
-      "url": "https://yle.fi/a/74-20233765",
-      "lead": "Googlella ja muilla yhtiöillä on pulaa laskentatehosta, jota tekoälypalveluiden kasvava kysyntä vaatii."
     },
     {
       "personName": "tekoäly",
