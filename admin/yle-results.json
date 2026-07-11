@@ -1,7 +1,35 @@
 {
-  "fetchedAt": "2026-07-10T08:16:28.308Z",
+  "fetchedAt": "2026-07-11T07:07:10.540Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-11T06:46:14Z",
+      "title": "Meta poistaa käytöstä kritisoidun tekoälytyökalun",
+      "url": "https://yle.fi/a/74-20235934",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-11T03:30:35Z",
+      "title": "Konkari­vedonlyöjä aikoi downshiftata, mutta sitten tekoäly muutti suunnitelmat",
+      "url": "https://yle.fi/a/74-20235322",
+      "lead": "Suomen menestynein vedonlyöjä oli valmis vetäytymään eläkkeelle, kun tekoäly tuli ja teki tutkimisesta taas kivaa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-10T18:56:17Z",
+      "title": "Metan uudelle tekoäly­työkalulle sataa kritiikkiä – voi käyttää julkisten Instagram-profiilien kuvia",
+      "url": "https://yle.fi/a/74-20235908",
+      "lead": "Kuvien turvaamiseksi täytyy muokata asetuksia tai muuttaa tili yksityiseksi."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-10T14:13:48Z",
+      "title": "Vahinkoklikkaus – pääministeri Orpon tililtä jaettiin tekoälyllä tehty video Instagramissa",
+      "url": "https://yle.fi/a/74-20235792",
+      "lead": "Samasta videosta ovat tykänneet sosiaaliturvaministeri Karoliina Partanen ja eduskunnan varapuhemes Paula Risikko."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-09T16:26:31Z",
@@ -46,20 +74,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-07-05T08:02:38Z",
-      "title": "Katso miltä näyttää, kun drooni etsii pellosta ei-toivottuja viljoja Isossakyrössä",
-      "url": "https://yle.fi/a/74-20234711",
-      "lead": "Kyseessä on tekoälyä hyödyntävä pilottihanke. Drooni löytää ja tunnistaa vierasviljat, ja mobiilisovellus ohjaa viljelijän niiden luo."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-05T03:30:35Z",
-      "title": "Vähän tunnettu monimiljonääri osti Ylen lomasaaren ja uskoo, että tekoäly mullistaa kaiken – hyppäsimme kyytiin",
-      "url": "https://yle.fi/a/74-20231795",
-      "lead": "Rattia kääntää mies, joka vaurastui isolla kaupalla, viljelee huumoria ja uskoo että tekoäly mullistaa kaiken."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-07-04T02:20:35Z",
       "title": "Lääkäri Elina Heikkinen sai humpuukia suoltavan kaiman Youtubeen – mikään hahmossa ei ole totta",
       "url": "https://yle.fi/a/74-20234271",
@@ -81,24 +95,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-07-02T07:15:49Z",
-      "title": "Teknologiajätit syöksyivät Etelä-Korean pörssissä",
-      "url": "https://yle.fi/a/74-20234486",
-      "lead": "Pelot tekoälyyn liittyvästä arvostuskuplasta ovat nostaneet päätään. Hermoilu heijastuu myös Helsingin pörssiin."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-07-01T09:39:35Z",
       "title": "Suomalais­tutkijat kehittivät palkitun tavan opettaa tekoälyä lapsille",
       "url": "https://yle.fi/a/74-20234281",
       "lead": "Tutkijoiden kehittämä oppimis­ympäristö sai tällä viikolla Euroopan unionin digitaalisten taitojen palkinnon."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-01T00:51:08Z",
-      "title": "Yhdysvallat poistaa vientirajoitukset Anthropicin tehokkailta tekoälymalleilta",
-      "url": "https://yle.fi/a/74-20234231",
-      "lead": "Aiemmin huhtikuussa Mythos 5 -tekoälymalli herätti paljon huomiota, kun Anthropic julkaisi raportin tekoälymallin kyvyistä."
     },
     {
       "personName": "tekoäly",
