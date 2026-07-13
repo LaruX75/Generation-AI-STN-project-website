@@ -6200,5 +6200,29 @@
     "doi": "10.52202/068431-2590",
     "url": "",
     "notes": ""
+  },
+  {
+    "id": "a3c-2022-525",
+    "code": "A3c",
+    "year": 2022,
+    "status": "Published",
+    "authorsText": "Erkki Rötkönen; Calkin Suero Montero; Nicolas Pope; Erkki Sutinen",
+    "title": "Is It Real? – Learners’ Perceptions on Tele-Immersive 3D Video Technology and Its Further Use in K-12 Education",
+    "venue": "IFIP advances in information and communication technology",
+    "doi": "10.1007/978-3-030-97986-7_20",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "a1-2022-526",
+    "code": "A1",
+    "year": 2022,
+    "status": "Published",
+    "authorsText": "Nicolas Pope; Sebastian Hahta; Erkki Rötkönen; Naska Goagoses; Jason Mendes; Erkki Sutinen; Heike Winschiers‐Theophilus",
+    "title": "Remote Presence: Live Holograms for a Social Classroom",
+    "venue": "ACM International Conference on Interactive Media Experiences",
+    "doi": "10.1145/3505284.3532821",
+    "url": "",
+    "notes": ""
   }
 ]
