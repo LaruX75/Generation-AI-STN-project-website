@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-07-13T08:10:47.872Z",
+  "fetchedAt": "2026-07-14T07:05:18.842Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-14T06:00:35Z",
+      "title": "Suomalainen tekoäly-yhtiö Nest AI alkaa kouluttamaan tekoälymalleja Euroopan itärajan puolustukseen",
+      "url": "https://yle.fi/a/74-20236110",
+      "lead": "Nest AI:n tavoitteena on luoda puolustusteknologiaa, jota eurooppalaiset toimijat voivat itse omistaa ja kontrolloida."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-14T03:42:49Z",
+      "title": "Kiinan vienti kasvoi 27 prosenttia vuoden takaisesta – tekoälybuumi vauhdittaa kysyntää",
+      "url": "https://yle.fi/a/74-20236223",
+      "lead": "Viennin kasvu oli kesäkuussa ennustettua suurempaa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-13T10:08:15Z",
+      "title": "Analyysi: Kiina tekee pian jotain, joka paljastaa sen tekoälyyn liittyvän pelon",
+      "url": "https://yle.fi/a/74-20236067",
+      "lead": "Kiina kirittää tekoäly- ja robottialaa maailman ykköseksi, mutta heittelee samaan aikaan kapuloita alan rattaisiin, arvioi Ylen Aasian-kirjeenvaihtaja."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-12T02:43:13Z",
@@ -43,13 +64,6 @@
       "title": "Kaleva: Ouluun tavoitellaan tekoälyn gigatehdasta – Nokia vahvistaa tehdaspuheet, mutta ei sijaintia",
       "url": "https://yle.fi/a/74-20235699",
       "lead": "Nokia ei vahvista, että sen tavoittelema suuri gigatehdas sijoittuisi Ouluun. Suunnitelmissa Oulu on kuitenkin ollut, kertoo entinen ministerí."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-09T13:00:35Z",
-      "title": "Kyber­hyökkäysten määrä kasvussa",
-      "url": "https://yle.fi/a/74-20235672",
-      "lead": ""
     },
     {
       "personName": "tekoäly",
@@ -127,20 +141,6 @@
       "title": "Väite: Tekoäly ei vie vasta­valmistuneiden töitä, mutta muuttaa niitä – nämä taidot ovat nyt haluttuja työmarkkinoilla",
       "url": "https://yle.fi/a/74-20232871",
       "lead": "Tekoäly voi auttaa nuoria kuromaan umpeen kokemuseroa senioreihin, sanoo teollisuus­professori Mika Ruokonen."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-26T09:50:07Z",
-      "title": "Työnantaja hukkuu Kiinassa tekoälyllä tehtailtuihin työhakemuksiin: ”Eivät edes tiedä hakeneensa”",
-      "url": "https://yle.fi/a/74-20228076",
-      "lead": "Kansainvälisen vakuutusyhtiön rekrytoija otti Ylen mukaansa työpaikkamessuille, joilla kiinalaisnuoret etsivät töitä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-24T17:00:38Z",
-      "title": "Näitkö kuvan kauniista naisesta MM-katsomossa? Hän saattoi olla tekoälyn luomus",
-      "url": "https://yle.fi/a/74-20232988",
-      "lead": "Tekoälyllä tehdyt kuvat jalka­pallo­joukkueiden ”naisfaneista” leviävät räjähdys­mäisesti sosiaalisessa mediassa."
     },
     {
       "personName": "Teemu Roos",
