@@ -1,11 +1,25 @@
 {
-  "fetchedAt": "2026-07-14T07:05:18.842Z",
+  "fetchedAt": "2026-07-15T07:08:00.360Z",
   "count": 26,
   "articles": [
     {
       "personName": "tekoäly",
+      "datePublished": "2026-07-14T17:11:56Z",
+      "title": "Nuori, vaikeuttaako tekoäly työhön pääsyäsi? Kerro meille kokemuksesi, teemme aiheesta juttua",
+      "url": "https://yle.fi/a/74-20236289",
+      "lead": "Tekoäly on muovannut työelämää. Monet rutiininomaiset ja toistuvat työt automatisoituvat, mikä vaikeuttaa ensimmäistä työpaikkaansa etsivien tilannetta."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-14T09:53:40Z",
+      "title": "Influensserit markkinoivat huomaa­mattomilla kameroilla varustettuja älylaseja – salakuvaaminen suututtaa",
+      "url": "https://yle.fi/a/74-20236184",
+      "lead": "Metan älylaseja on maailmalla käytetty tirkistelyyn. Niillä kuvatut videot päätyvät tekoälyn kehittäjien katseltavaksi."
+    },
+    {
+      "personName": "tekoäly",
       "datePublished": "2026-07-14T06:00:35Z",
-      "title": "Suomalainen tekoäly-yhtiö Nest AI alkaa kouluttamaan tekoälymalleja Euroopan itärajan puolustukseen",
+      "title": "Suomalainen tekoäly-yhtiö Nest AI alkaa kouluttaa tekoälymalleja Euroopan itärajan puolustukseen",
       "url": "https://yle.fi/a/74-20236110",
       "lead": "Nest AI:n tavoitteena on luoda puolustusteknologiaa, jota eurooppalaiset toimijat voivat itse omistaa ja kontrolloida."
     },
@@ -60,13 +74,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-07-09T16:26:31Z",
-      "title": "Kaleva: Ouluun tavoitellaan tekoälyn gigatehdasta – Nokia vahvistaa tehdaspuheet, mutta ei sijaintia",
-      "url": "https://yle.fi/a/74-20235699",
-      "lead": "Nokia ei vahvista, että sen tavoittelema suuri gigatehdas sijoittuisi Ouluun. Suunnitelmissa Oulu on kuitenkin ollut, kertoo entinen ministerí."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-07-09T09:02:17Z",
       "title": "Pohjanmaan hyvinvointi­alueella tulkataan tekoälyn avulla reaaliajassa jo kymmenillä kielillä",
       "url": "https://yle.fi/a/74-20233896",
@@ -92,13 +99,6 @@
       "title": "Guterres: Tekoäly kehittyy säännöstelyä nopeammin",
       "url": "https://yle.fi/a/74-20235034",
       "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-04T02:20:35Z",
-      "title": "Lääkäri Elina Heikkinen sai humpuukia suoltavan kaiman Youtubeen – mikään hahmossa ei ole totta",
-      "url": "https://yle.fi/a/74-20234271",
-      "lead": "Ylen verifiointiimi löysi Youtubesta tekoäly­videoita, jotka antavat kyseenalaisia terveysneuvoja. Videot ovat keränneet 4,3 miljoonaa katselukertaa."
     },
     {
       "personName": "tekoäly",
