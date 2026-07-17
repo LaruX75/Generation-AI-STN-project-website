@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-07-16T07:17:38.228Z",
+  "fetchedAt": "2026-07-17T07:12:13.104Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-16T09:21:38Z",
+      "title": "Venäjä levittää yhä aidomman näköisiä tekoälyvideoita sodasta – asiantuntija kertoo huolestuttavan ilmiön yleistymisestä",
+      "url": "https://yle.fi/a/74-20232132",
+      "lead": "Venäjän tekoälyvideot kuvaavat Ukrainan väitettyä ahdinkoa rintamalla. Ylen haastatteleman asiantuntijan mukaan propaganda­kampanjalla on useita tarkoituksia."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-16T05:32:10Z",
@@ -134,13 +141,6 @@
       "title": "”Pyrin välttämään tekoälyn käyttöä täysin” – tekoäly ahdistaa Z-sukupolvea",
       "url": "https://yle.fi/a/74-20229725",
       "lead": "Yhdysvalloissa vastavalmistuneet buuasivat Google-pomon tekoälypuheille, ja Suomessakin näkyy nuorten penseys tekoälyä kohtaan."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-28T10:47:23Z",
-      "title": "Väite: Tekoäly ei vie vasta­valmistuneiden töitä, mutta muuttaa niitä – nämä taidot ovat nyt haluttuja työmarkkinoilla",
-      "url": "https://yle.fi/a/74-20232871",
-      "lead": "Tekoäly voi auttaa nuoria kuromaan umpeen kokemuseroa senioreihin, sanoo teollisuus­professori Mika Ruokonen."
     },
     {
       "personName": "Teemu Roos",
