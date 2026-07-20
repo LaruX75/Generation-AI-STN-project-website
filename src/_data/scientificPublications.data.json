@@ -6224,5 +6224,53 @@
     "doi": "10.1145/3505284.3532821",
     "url": "",
     "notes": ""
+  },
+  {
+    "id": "a3c-2026-527",
+    "code": "A3c",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Mary Webb; Matt Bower; Ana Camila Rodrigues Carvalho; Fredrik Mørk Røkenes; Jodie Torrington; Jonathan D. Cohen; Yousra Chtouki; Kathryn MacCallum; Tanya Linden; Deirdre Butler; Juliana Elisa Raffaghelli; Henriikka Vartiainen; Martina Ronci; Peter Tiernan; David M. Smith; Chris Shelton; Joyce Malyn-smith; Pierre Gorissen",
+    "title": "Thematic Working Group 5 -- Artificial Intelligence (AI) literacy for teaching and learning: design and implementation",
+    "venue": "ChiPrints (University of Chichester)",
+    "doi": "10.48550/arxiv.2601.08380",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "a1-2026-528",
+    "code": "A1",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Satu Kulmala; Kaiju Kangas; Kai Hakkarainen; Tiina Korhonen",
+    "title": "Teachers’ transformative professional agency: Inspiration and means for promoting educational change in the context of digitalization",
+    "venue": "Teaching and Teacher Education",
+    "doi": "10.1016/j.tate.2026.105742",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "a1-2026-529",
+    "code": "A1",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Elias Jääsaari; Ville Hyvönen; Teemu Roos",
+    "title": "LEMUR: Learned Multi-Vector Retrieval",
+    "venue": "Open MIND",
+    "doi": "10.48550/arxiv.2601.21853",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "b1-2024-530",
+    "code": "B1",
+    "year": 2024,
+    "status": "Published",
+    "authorsText": "Alex Urmeneta; Margarida Roméro; Valentina Petre; Ȃveanu, Gl; Alexandre Lepage; Simon Collin; Frédéric Alexandre; Marie-Hélène Comte; Aurélie Lagarrigue; Thierry Viéville; Michel Durampart; Philippe Bonfils; Isabelle Galy; Jérémy Camponovo; Florence Tressols; C. Boulord; Yann‐Aël Le Borgne; Patricia Corieri; Christelle Caucheteux; Lianne-Blue Hodgkins; Victoire Batifol; Laurent Fouché; Petros Lameras; Sylvester Arnab; Jonathan Reyes; Panos Kostakos; Solange Ciavaldini-Cartaut; Jean-François Métral; Paul Olry; Dominique Guidoni-Stoltz; Charles-Antoine Gagneur; Thomas B. Frøsig; Amanda Taylor; Jari Laru; Bastienne Bernasco; Oksana Strutynska; Marc-André Girard",
+    "title": "Creative Applications of Artificial Intelligence in Education",
+    "venue": "Palgrave studies in creativity and culture",
+    "doi": "10.1007/978-3-031-55272-4",
+    "url": "",
+    "notes": ""
   }
 ]
