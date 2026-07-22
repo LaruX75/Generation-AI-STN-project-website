@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-07-21T07:28:57.625Z",
+  "fetchedAt": "2026-07-22T07:30:26.131Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-21T12:44:47Z",
+      "title": "Millaista on tulevaisuuden sodankäynti?",
+      "url": "https://yle.fi/v/video/91-20237380",
+      "lead": "Jari Mäkinen kävi Pariisissa maailman suurimmilla sotilastekniikan messuilla. Mitä hän oppi messuilla? Videossa mukana videotoimittaja Susanna Nissinen."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-19T17:59:41Z",
@@ -106,13 +113,6 @@
       "title": "Guterres: Tekoäly kehittyy säännöstelyä nopeammin",
       "url": "https://yle.fi/a/74-20235034",
       "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-03T14:45:35Z",
-      "title": "Antti Pohjola teki tekoäly­videon Lionel Messistä ja Argentiinasta – reaktiot häkellyttivät: ”Täysin surrealistista”",
-      "url": "https://yle.fi/a/74-20234582",
-      "lead": "Antti Pohjola on Buenos Airesissa asuva videotuottaja. MM-kisojen alla hän sai työtarjouksen, jonka seurauksia ei olisi voinut kuvitella."
     },
     {
       "personName": "tekoäly",
