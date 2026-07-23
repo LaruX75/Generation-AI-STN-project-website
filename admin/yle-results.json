@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-07-22T07:30:26.131Z",
+  "fetchedAt": "2026-07-23T07:27:59.838Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-23T02:30:35Z",
+      "title": "Reipas 20 minuutin kävely nostaa tuhansien suomalaisten vakuutusturvaa",
+      "url": "https://yle.fi/a/74-20236871",
+      "lead": "Nordean äly­vakuutuksessa vakuutusturvaa voi parantaa harrastamalla liikuntaa. Jotta edun saa, on yhtiölle annettava pääsy esimerkiksi älykellon dataan."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-22T14:48:18Z",
+      "title": "Tekoälyllä tehdyt mikrosarjat koukuttavat somessa",
+      "url": "https://yle.fi/v/video/91-20237555",
+      "lead": "Lyhyissä jaksoissa eivät näyttele enää ihmiset vaan ihmismäiset hahmot. Yle kokeili mikrosarjan tekemistä tekoälyllä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-22T13:03:36Z",
+      "title": "Open AI:n tekoälyagentti karkasi ja teki tietomurron – professori: ”On otettu markkinointi­mielessä kaikki ilo irti”",
+      "url": "https://yle.fi/a/74-20237506",
+      "lead": "Tekoälyagentti onnistui murtautumaan ulos suljetusta testi­ympäristöstä, otti verkkoyhteyden ja teki kybermurron."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-21T12:44:47Z",
@@ -25,13 +46,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-07-16T05:32:10Z",
-      "title": "USA:ssa datakeskusten vastustus kasvaa – Mac Haddow pysäytti valtavan datakeskusalueen rakentamisen",
-      "url": "https://yle.fi/a/74-20233985",
-      "lead": "Yle matkasi Virginiaan selvittämään, miksi amerikkalaiset ovat kääntyneet nopeasti vastustamaan uusien datakeskusten rakentamista kotiseuduilleen."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-07-14T17:11:56Z",
       "title": "Nuori, vaikeuttaako tekoäly työelämään pääsyäsi? Kerro meille kokemuksesi, teemme aiheesta juttua",
       "url": "https://yle.fi/a/74-20236289",
@@ -50,13 +64,6 @@
       "title": "Suomalainen tekoäly-yhtiö Nest AI alkaa kouluttaa tekoälymalleja Euroopan itärajan puolustukseen",
       "url": "https://yle.fi/a/74-20236110",
       "lead": "Nest AI:n tavoitteena on luoda puolustusteknologiaa, jota eurooppalaiset toimijat voivat itse omistaa ja kontrolloida."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-14T03:42:49Z",
-      "title": "Kiinan vienti kasvoi 27 prosenttia vuoden takaisesta – tekoälybuumi vauhdittaa kysyntää",
-      "url": "https://yle.fi/a/74-20236223",
-      "lead": "Viennin kasvu oli kesäkuussa ennustettua suurempaa."
     },
     {
       "personName": "tekoäly",
@@ -120,13 +127,6 @@
       "title": "FT: Open AI haluaa tekoäly-yhtiöiden lahjoittavan viiden prosentin osuudet yhtiöistään Trumpin hallinnolle",
       "url": "https://yle.fi/a/74-20234633",
       "lead": "OpenAI:n johto ehdottaa, että jokaisen Yhdysvaltain suurimmista tekoälykehittäjistä tulisi antaa viisi prosenttia osakkeistaan valtiollisille rahastoille."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-01T09:39:35Z",
-      "title": "Suomalais­tutkijat kehittivät palkitun tavan opettaa tekoälyä lapsille",
-      "url": "https://yle.fi/a/74-20234281",
-      "lead": "Tutkijoiden kehittämä oppimis­ympäristö sai tällä viikolla Euroopan unionin digitaalisten taitojen palkinnon."
     },
     {
       "personName": "tekoäly",
