@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-07-25T07:10:54.234Z",
+  "fetchedAt": "2026-07-26T07:31:18.708Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-26T03:45:35Z",
+      "title": "Jussi Erosen kolumni: Tekoäly ei romuta tietoturvaa, mutta rikollisilta suojautumisessa tulee kiire",
+      "url": "https://yle.fi/a/74-20237542",
+      "lead": "Tuomiopäivän ennusteista huolimatta tekoäly ei ole tietoturvan loppu. Rikollisilta pitää suojautua entiseen tapaan, mutta vauhti kiihtyy, Eronen neuvoo."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-25T13:12:43Z",
+      "title": "Lidl alkoi käyttää tekoälykuvia tarjous­lehdissään – nyt vesimelonin ja croissantin vieressä on AI-leima",
+      "url": "https://yle.fi/a/74-20237797",
+      "lead": "Lidl sanoo hyödyntävänsä tekoälyä ensisijaisesti kuvien muokkaamisen apuna."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-23T18:38:54Z",
@@ -29,13 +43,6 @@
       "title": "Open AI:n tekoälyagentti karkasi ja teki tietomurron – professori: ”On otettu markkinointi­mielessä kaikki ilo irti”",
       "url": "https://yle.fi/a/74-20237506",
       "lead": "Tekoälyagentti onnistui murtautumaan ulos suljetusta testi­ympäristöstä, otti verkkoyhteyden ja teki kybermurron."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-21T12:44:47Z",
-      "title": "Millaista on tulevaisuuden sodankäynti?",
-      "url": "https://yle.fi/v/video/91-20237380",
-      "lead": "Jari Mäkinen kävi Pariisissa maailman suurimmilla sotilastekniikan messuilla. Mitä hän oppi messuilla? Videossa mukana videotoimittaja Susanna Nissinen."
     },
     {
       "personName": "tekoäly",
@@ -127,13 +134,6 @@
       "title": "FT: Open AI haluaa tekoäly-yhtiöiden lahjoittavan viiden prosentin osuudet yhtiöistään Trumpin hallinnolle",
       "url": "https://yle.fi/a/74-20234633",
       "lead": "OpenAI:n johto ehdottaa, että jokaisen Yhdysvaltain suurimmista tekoälykehittäjistä tulisi antaa viisi prosenttia osakkeistaan valtiollisille rahastoille."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-30T10:38:25Z",
-      "title": "Ford pettyi tekoälyyn: otti satoja vanhoja työntekijöitä takaisin palkkalistoilleen",
-      "url": "https://yle.fi/a/74-20234142",
-      "lead": "Tekoäly ei ollut laadun­varmistuksessa yhtä taitava kuin insinöörit."
     },
     {
       "personName": "tekoäly",
