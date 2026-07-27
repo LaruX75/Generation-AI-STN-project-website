@@ -6272,5 +6272,41 @@
     "doi": "10.1007/978-3-031-55272-4",
     "url": "",
     "notes": ""
+  },
+  {
+    "id": "a1-2026-531",
+    "code": "A1",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Krenare Pireva Nuci; Fisnik Dalipi; Italo Masiello; İsmail Çelik; Jari Laru; Blerim Saqipi; Arsim Susuri; Ali Shariq Imran",
+    "title": "Assessing digital competence of K1-12 teachers in Kosovo: A study through the lens of DigCompEdu and TPACK",
+    "venue": "Computers and Education Open",
+    "doi": "10.1016/j.caeo.2026.100396",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf532",
+    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Albadarin, Yazid; Saqr, Mohammed; Pope, Nicolas; Tukiainen, Markku",
+    "title": "Evaluating the Effect of Generative AI-Assisted Debugging on Students' Critical Thinking",
+    "venue": "Technology, knowledge and learning, [Epub ahead of print 11 July 2026], 1-39",
+    "doi": "",
+    "url": "https://doi.org/10.1007/s10758-026-09998-z",
+    "notes": ""
+  },
+  {
+    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf533",
+    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Ahmed, Hesham; Lopez-Pernas, Sonsoles; Vogelsmeier, Leonie V. D. E.; Tukiainen, Markku; Saqr, Mohammed",
+    "title": "An Instrument for Human-Based Evaluation of GenAI Educational Alignment",
+    "venue": "Technology, knowledge and learning, [Epub ahead of print 08 July 2026], 1-39",
+    "doi": "",
+    "url": "https://doi.org/10.1007/s10758-026-10005-8",
+    "notes": ""
   }
 ]
