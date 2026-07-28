@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-07-27T08:23:05.457Z",
+  "fetchedAt": "2026-07-28T07:33:54.409Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-28T05:00:35Z",
+      "title": "Irti algoritmista: Tekoäly listaykkösenä",
+      "url": "https://yle.fi/v/video/91-20238183",
+      "lead": "Nykyteknologian haitat ovat työntäneet ihmiset analogisuuden ja fyysisten levyjen pariin. Syöstävätkö tekoälybiisit striimausalustat lopulta pois vallasta?"
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-26T03:45:35Z",
@@ -22,13 +29,6 @@
       "title": "Trump aikoo puhua tekoälystä Xin kanssa",
       "url": "https://yle.fi/a/74-20237756",
       "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-23T02:30:35Z",
-      "title": "Reipas 20 minuutin kävely nostaa tuhansien suomalaisten vakuutusturvaa",
-      "url": "https://yle.fi/a/74-20236871",
-      "lead": "Nordean äly­vakuutuksessa vakuutusturvaa voi parantaa harrastamalla liikuntaa. Jotta edun saa, on yhtiölle annettava pääsy esimerkiksi älykellon dataan."
     },
     {
       "personName": "tekoäly",
