@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-07-29T07:37:58.669Z",
+  "fetchedAt": "2026-07-30T07:29:11.299Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-30T02:30:35Z",
+      "title": "Korvaako tekoäly julkisen sektorin työntekijät? Viron tekoäly­neuvonantaja: Voi käydä jopa päinvastoin",
+      "url": "https://yle.fi/a/74-20227212",
+      "lead": "Viron tekoäly­neuvonantaja Luukas Ilves arvioi, että tekoälyn yleistyminen ei välttämättä vähennä työpaikkoja Virossa, vaikka muualla maailmassa näin kävisikin."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-29T21:49:31Z",
+      "title": "Mittavat tekoälykustannukset painoivat Metan tulosta",
+      "url": "https://yle.fi/a/74-20238568",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-29T14:30:27Z",
+      "title": "Tekoälyosakkeet ovat paikoin rymistelleet alas – asian­tuntijoilta selvä neuvo pien­sijoittajille",
+      "url": "https://yle.fi/a/74-20238456",
+      "lead": "Etelä-Koreassa teknologia­yhtiöiden kyykkäys sai koko pörssin rajuun alamäkeen. Asian­tuntijoiden mukaan odotukset ovat nousseet ajoittain liian korkeiksi."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-29T02:37:38Z",
@@ -116,31 +137,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-07-06T21:30:51Z",
-      "title": "Reutersin lähteet: USA:n kyberturva­virasto tarkastaa hallinnon ohjelmistoja Anthropicin tekoälyllä",
-      "url": "https://yle.fi/a/74-20235152",
-      "lead": "Vaikka Anthropicin ja Valkoisen talon välit ovat kireät, on uutistoimisto Reutersin mukaan Yhdysvaltain hallinnossa innostusta käyttää yhtiön tekoäly­työkaluja."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-07-06T07:59:00Z",
       "title": "Guterres: Tekoäly kehittyy säännöstelyä nopeammin",
       "url": "https://yle.fi/a/74-20235034",
       "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-02T16:08:52Z",
-      "title": "FT: Open AI haluaa tekoäly-yhtiöiden lahjoittavan viiden prosentin osuudet yhtiöistään Trumpin hallinnolle",
-      "url": "https://yle.fi/a/74-20234633",
-      "lead": "OpenAI:n johto ehdottaa, että jokaisen Yhdysvaltain suurimmista tekoälykehittäjistä tulisi antaa viisi prosenttia osakkeistaan valtiollisille rahastoille."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-06-29T05:40:44Z",
-      "title": "”Pyrin välttämään tekoälyn käyttöä täysin” – tekoäly ahdistaa Z-sukupolvea",
-      "url": "https://yle.fi/a/74-20229725",
-      "lead": "Yhdysvalloissa vastavalmistuneet buuasivat Google-pomon tekoälypuheille, ja Suomessakin näkyy nuorten penseys tekoälyä kohtaan."
     },
     {
       "personName": "Teemu Roos",
