@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-07-30T07:29:11.299Z",
+  "fetchedAt": "2026-07-31T07:45:50.037Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-31T06:12:11Z",
+      "title": "Jo toinen tekoälykarkaus – tällä kertaa lipettiin lähti Anthropicin Claude",
+      "url": "https://yle.fi/a/74-20238786",
+      "lead": "Kyseessä on jo toinen kerta, kun tekoälymalli tekee tietomurron."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-07-30T18:43:52Z",
+      "title": "Kiina syyttää Yhdysvaltoja tekoäly­malliensa kopioinnista",
+      "url": "https://yle.fi/a/74-20238743",
+      "lead": ""
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-07-30T02:30:35Z",
@@ -116,13 +130,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-07-10T18:56:17Z",
-      "title": "Metan uudelle tekoäly­työkalulle sataa kritiikkiä – voi käyttää julkisten Instagram-profiilien kuvia",
-      "url": "https://yle.fi/a/74-20235908",
-      "lead": "Kuvien turvaamiseksi täytyy muokata asetuksia tai muuttaa tili yksityiseksi."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-07-10T14:13:48Z",
       "title": "Vahinkoklikkaus – pääministeri Orpon tililtä jaettiin tekoälyllä tehty video Instagramissa",
       "url": "https://yle.fi/a/74-20235792",
@@ -134,13 +141,6 @@
       "title": "Suomalaiselle IQM:lle 33 miljoonan euron kvanttitietokonetilaus Kajaanin tekoälytehtaalta",
       "url": "https://yle.fi/a/74-20235270",
       "lead": "Tekoälytehdas julkistaa pian myös 390 miljoonan euron arvoisen supertietokoneen toimittajan. EU rahoittaa koko hankkeesta puolet."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-06T07:59:00Z",
-      "title": "Guterres: Tekoäly kehittyy säännöstelyä nopeammin",
-      "url": "https://yle.fi/a/74-20235034",
-      "lead": ""
     },
     {
       "personName": "Teemu Roos",
