@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-08-06T07:34:16.928Z",
+  "fetchedAt": "2026-08-07T06:05:42.490Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-06T18:39:59Z",
+      "title": "Tekoäly loi juuri viruksia, joita ei löydy luonnosta",
+      "url": "https://yle.fi/a/74-20239791",
+      "lead": "Tulokset herättävät toivoa lääke­tieteellisistä edistys­askelista, mutta myös huolestuttavan mahdollisuuden, että teknologiaa voitaisiin joskus käyttää väärin."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-06T15:31:16Z",
+      "title": "Yli 100 opiskelupaikkaa jäi täyttämättä Itä-Suomen yliopistossa – professori uskoo, että syynä on huoli tekoälystä",
+      "url": "https://yle.fi/a/74-20239648",
+      "lead": "Professorin mielestä tekoäly ei vie työpaikkoja, vaan päinvastoin luo niitä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-06T12:56:23Z",
+      "title": "Metan Muse Spark -tekoälymalli murtautui toisen yrityksen järjestelmiin",
+      "url": "https://yle.fi/a/74-20239731",
+      "lead": "Kyseessä on jo kolmas kerta lyhyen ajan sisään, kun teknologia­yhtiön tekoäly teki tietomurron."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-08-05T09:24:43Z",
@@ -116,31 +137,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-07-14T17:11:56Z",
-      "title": "Nuori, vaikeuttaako tekoäly työelämään pääsyäsi? Kerro meille kokemuksesi, teemme aiheesta juttua",
-      "url": "https://yle.fi/a/74-20236289",
-      "lead": "Tekoäly on muovannut työelämää. Monet rutiininomaiset ja toistuvat työt automatisoituvat, mikä vaikeuttaa ensimmäistä työpaikkaansa etsivien tilannetta."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-07-14T06:00:35Z",
       "title": "Suomalainen tekoäly-yhtiö Nest AI alkaa kouluttaa tekoälymalleja Euroopan itärajan puolustukseen",
       "url": "https://yle.fi/a/74-20236110",
       "lead": "Nest AI:n tavoitteena on luoda puolustusteknologiaa, jota eurooppalaiset toimijat voivat itse omistaa ja kontrolloida."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-13T10:08:15Z",
-      "title": "Analyysi: Kiina tekee pian jotain, joka paljastaa sen tekoälyyn liittyvän pelon",
-      "url": "https://yle.fi/a/74-20236067",
-      "lead": "Kiina kirittää tekoäly- ja robottialaa maailman ykköseksi, mutta heittelee samaan aikaan kapuloita alan rattaisiin, arvioi Ylen Aasian-kirjeenvaihtaja."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-11T03:30:35Z",
-      "title": "Konkari­vedonlyöjä aikoi downshiftata, mutta sitten tekoäly muutti suunnitelmat",
-      "url": "https://yle.fi/a/74-20235322",
-      "lead": "Suomen menestynein vedonlyöjä oli valmis vetäytymään eläkkeelle, kun tekoäly tuli ja teki tutkimisesta taas kivaa."
     },
     {
       "personName": "Teemu Roos",
