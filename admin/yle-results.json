@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-13T06:10:49.912Z",
+  "fetchedAt": "2026-08-14T06:07:44.379Z",
   "count": 26,
   "articles": [
     {
@@ -14,6 +14,13 @@
       "datePublished": "2026-08-12T12:22:34Z",
       "title": "Tekoäly valmentaa varusmiehiä syömään paremmin",
       "url": "https://yle.fi/a/74-20240687",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-12T11:16:51Z",
+      "title": "Norjan öljyrahaston arvo voi tekoäly-yhtöiden romahtaessa laskea merkittävästi, varoittaa toimitusjohtaja",
+      "url": "https://yle.fi/a/74-20240658",
       "lead": ""
     },
     {
@@ -134,13 +141,6 @@
       "title": "Tekoälyllä tehdyt mikrosarjat koukuttavat somessa",
       "url": "https://yle.fi/v/video/91-20237555",
       "lead": "Lyhyissä jaksoissa eivät näyttele enää ihmiset vaan ihmismäiset hahmot. Yle kokeili mikrosarjan tekemistä tekoälyllä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-22T13:03:36Z",
-      "title": "Open AI:n tekoälyagentti karkasi ja teki tietomurron – professori: ”On otettu markkinointi­mielessä kaikki ilo irti”",
-      "url": "https://yle.fi/a/74-20237506",
-      "lead": "Tekoälyagentti onnistui murtautumaan ulos suljetusta testi­ympäristöstä, otti verkkoyhteyden ja teki kybermurron."
     },
     {
       "personName": "Teemu Roos",
