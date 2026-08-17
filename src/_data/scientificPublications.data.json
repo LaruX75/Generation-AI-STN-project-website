@@ -6428,5 +6428,41 @@
     "doi": "",
     "url": "https://openalex.org/W7199203982",
     "notes": ""
+  },
+  {
+    "id": "pub-2026-544",
+    "code": "",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Matt McLain; Peter Murphy; Brahim El Fadil; Qiuyue Yang; Mart Soobik; Kaiju Kangas; Émeline Roy; Franz Schröer; Wai Yip Antony Leung; Jeffrey Buckley; Keita Sera; Soo Chin Chia; Ruth Lemon; Caroline McFarland; Adri Du Toit; Charlotta Nordlöf; Szu-Chun Fan; John G. Wells",
+    "title": "Table 1. International Survey of Technology Education Curricula - 19 Jurisdictions [FULL DATASET]",
+    "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+    "doi": "10.5281/zenodo.19224429",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "g5-2026-545",
+    "code": "G5",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Kamrul Faisal",
+    "title": "Safeguarding vulnerable data subjects in the digital age: The evolving controllers’ responsibilities under European Union data protection law",
+    "venue": "Työväentutkimus Vuosikirja",
+    "doi": "10.13140/rg.2.2.29800.43523",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "a1-2026-546",
+    "code": "A1",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Sini Kontkanen; Vibeke Rønneberg; Tiina Matveinen; Ilkka Jormanainen",
+    "title": "Supporting children’s creative writing skills with the help of generative artificial intelligence",
+    "venue": "Hamburg University Press (Hamburg University)",
+    "doi": "10.57813/eleed.v1ise2026.271.g473",
+    "url": "",
+    "notes": ""
   }
 ]
