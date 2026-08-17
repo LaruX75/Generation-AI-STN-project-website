@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-08-16T05:20:51.954Z",
+  "fetchedAt": "2026-08-17T05:28:06.645Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-17T02:30:35Z",
+      "title": "Akavan puheenjohtaja huolestui tekoälystä: Hyvinvointi­yhteiskunta uhkaa rapautua",
+      "url": "https://yle.fi/a/74-20239543",
+      "lead": "Jos tekoäly korvaa ihmistyötä, yhtiöiden voittoja pitäisi verottaa ja rahat ohjata yhteiskunnan hyväksi sanoo Akavan puheenjohtaja Maria Löfgren."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-16T06:59:41Z",
+      "title": "Tekoäly-yhtiö Anthropic silppusi miljoonia kirjoja USA:ssa – nyt samasta on merkkejä Euroopassa",
+      "url": "https://yle.fi/a/74-20239464",
+      "lead": "Anthropic silppusi miljoonia kirjoja tekoälynsä kouluttamiseen. Nyt Euroopassa epäillään vastaavaa ilmiötä, kun antikvariaatit saavat  omituisia kirjatilauksia."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-08-15T03:45:35Z",
@@ -28,13 +42,6 @@
       "datePublished": "2026-08-12T12:22:34Z",
       "title": "Tekoäly valmentaa varusmiehiä syömään paremmin",
       "url": "https://yle.fi/a/74-20240687",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-12T11:16:51Z",
-      "title": "Norjan öljyrahaston arvo voi tekoäly-yhtöiden romahtaessa laskea merkittävästi, varoittaa toimitusjohtaja",
-      "url": "https://yle.fi/a/74-20240658",
       "lead": ""
     },
     {
@@ -134,13 +141,6 @@
       "title": "Tekoälyosakkeet ovat paikoin rymistelleet alas – asian­tuntijoilta selvä neuvo pien­sijoittajille",
       "url": "https://yle.fi/a/74-20238456",
       "lead": "Etelä-Koreassa teknologia­yhtiöiden kyykkäys sai koko pörssin rajuun alamäkeen. Asian­tuntijoiden mukaan odotukset ovat nousseet ajoittain liian korkeiksi."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-22T14:48:18Z",
-      "title": "Tekoälyllä tehdyt mikrosarjat koukuttavat somessa",
-      "url": "https://yle.fi/v/video/91-20237555",
-      "lead": "Lyhyissä jaksoissa eivät näyttele enää ihmiset vaan ihmismäiset hahmot. Yle kokeili mikrosarjan tekemistä tekoälyllä."
     },
     {
       "personName": "Teemu Roos",
