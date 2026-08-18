@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-08-17T05:28:06.645Z",
+  "fetchedAt": "2026-08-18T05:20:57.696Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-17T16:34:43Z",
+      "title": "Ministeriön tekoäly­näkemys närkästytti – strategia­johtaja vastaa: ”Keino puolustaa hyvin­vointi­valtion ydintä”",
+      "url": "https://yle.fi/a/74-20241446",
+      "lead": "Valtiovarainministeriön strategia- ja tutkimusjohtaja Olli Kärkkäisen mukaan tekoäly auttaa Suomea selviytymään julkisen sektorin suuresta eläköitymisaallosta."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-08-17T02:30:35Z",
@@ -120,13 +127,6 @@
       "title": "Jo toinen tekoälykarkaus – tällä kertaa lipettiin lähti Anthropicin Claude",
       "url": "https://yle.fi/a/74-20238786",
       "lead": "Kyseessä on jo toinen kerta, kun tekoälymalli tekee tietomurron."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-30T18:43:52Z",
-      "title": "Kiina syyttää Yhdysvaltoja tekoäly­malliensa kopioinnista",
-      "url": "https://yle.fi/a/74-20238743",
-      "lead": ""
     },
     {
       "personName": "tekoäly",
