@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-08-19T05:21:49.568Z",
+  "fetchedAt": "2026-08-20T05:22:57.059Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-20T04:33:08Z",
+      "title": "Saksan ja Ranskan vaaleihin iskettiin sadoilla valeuutisilla – vain Venäjä-myönteiset puolueet säästyivät",
+      "url": "https://yle.fi/a/74-20239835",
+      "lead": "Ulkopoliittisen instituutin asiantuntijan Marco Siddin mukaan disinformaation tavoite on väsyttää ihmisiä ja saada heidät kyllästymään politiikkaan."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-20T02:30:35Z",
+      "title": "Kysely: Puolet suomalaisista pelkää, että tekoäly johtaa massa­työttömyyteen – näin arvioivat asiantuntijat",
+      "url": "https://yle.fi/a/74-20240733",
+      "lead": "Tutkijat listaavat useita syitä, miksi tekoälyn vaikutus työllisyyteen voi jäädä ainakin lähi­tulevaisuudessa huomattavasti ihmisten pelkoa pienemmäksi."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-19T14:02:34Z",
+      "title": "Kuolema on tekninen ongelma, sanovat transhumanistit – tavoitteena satoja vuosia elämää",
+      "url": "https://yle.fi/a/74-20240222",
+      "lead": "Uusi kirja valaisee teknoutopioita. Venäläinen kosmismi halusi herättää kuolleet henkiin ja transhumanismi haluaa pidentää ihmiselämää."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-19T09:46:32Z",
+      "title": "Professori: Tekoäly houkuttelee opiskelijoita suorittamaan tehtäviä, ei oppimaan",
+      "url": "https://yle.fi/a/74-20240913",
+      "lead": "Suurin haaste on oppia yhdessä tekoälyn kanssa niin, ettei tekoäly ota ajattelusta vastuuta, sanoo kasvatustieteen professori Sanna Järvelä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-19T05:55:58Z",
+      "title": "Artturi Sarvela, 24, ei saa oman alan töitä, kun kokemusta puuttuu – eikä kokemusta saa ilman töitä",
+      "url": "https://yle.fi/a/74-20238140",
+      "lead": "Nuorilla on tekoäly­osaamista, mutta työpaikkoja ei löydy. Yritykset haluavat valmiita työntekijöitä, eivät koulutettavia."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-08-17T16:34:43Z",
@@ -50,13 +85,6 @@
       "title": "Tekoäly valmentaa varusmiehiä syömään paremmin",
       "url": "https://yle.fi/a/74-20240687",
       "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-12T06:12:13Z",
-      "title": "Tekoälyllä tehty bämä-paita",
-      "url": "https://yle.fi/v/video/91-20240469",
-      "lead": "Gogin kantabaarissa vieraina artisti Olga Heikkala sekä toimittaja Jasmin Beloued! Koko jakso Yle Areenassa."
     },
     {
       "personName": "tekoäly",
@@ -109,38 +137,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-08-02T04:00:39Z",
-      "title": "Professori kritisoi päättäjiä: Tekoälystä kerrotaan tarinaa, joka ei ole totta",
-      "url": "https://yle.fi/a/74-20238112",
-      "lead": "Professori Minna Ruckenstein kritisoi teknologia-alaa naisten vähättelystä: ”Me miehet ollaan tässä hoidettu nämä kovat koodi- ja raha-asiat”."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-02T01:31:47Z",
-      "title": "EU:n uudet tekoälysäännöt astuvat voimaan",
-      "url": "https://yle.fi/a/74-20239003",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-31T06:12:11Z",
-      "title": "Jo toinen tekoälykarkaus – tällä kertaa lipettiin lähti Anthropicin Claude",
-      "url": "https://yle.fi/a/74-20238786",
-      "lead": "Kyseessä on jo toinen kerta, kun tekoälymalli tekee tietomurron."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-07-30T02:30:35Z",
       "title": "Korvaako tekoäly julkisen sektorin työntekijät? Viron tekoäly­neuvonantaja: Voi käydä jopa päinvastoin",
       "url": "https://yle.fi/a/74-20227212",
       "lead": "Viron tekoäly­neuvonantaja Luukas Ilves arvioi, että tekoälyn yleistyminen ei välttämättä vähennä työpaikkoja Virossa, vaikka muualla maailmassa näin kävisikin."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-07-29T14:30:27Z",
-      "title": "Tekoälyosakkeet ovat paikoin rymistelleet alas – asian­tuntijoilta selvä neuvo pien­sijoittajille",
-      "url": "https://yle.fi/a/74-20238456",
-      "lead": "Etelä-Koreassa teknologia­yhtiöiden kyykkäys sai koko pörssin rajuun alamäkeen. Asian­tuntijoiden mukaan odotukset ovat nousseet ajoittain liian korkeiksi."
     },
     {
       "personName": "Teemu Roos",
