@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-08-23T05:21:34.023Z",
+  "fetchedAt": "2026-08-24T05:31:30.872Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-23T12:31:02Z",
+      "title": "Hittikirjailija Harari uskoo tekoälyn tunkeutuvan rakkauselämään",
+      "url": "https://yle.fi/a/74-20242449",
+      "lead": "Israelilainen tietokirjailija vaatii tekoälylle säätelyä. Argentiina haluaa jo sallia yritykset, joita johtavat botit."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-08-20T10:26:54Z",
@@ -85,13 +92,6 @@
       "title": "Tekoälysisältö on jatkossa pakko merkitä – tältä näyttävät uudet, viralliset kuvakkeet",
       "url": "https://yle.fi/a/74-20240576",
       "lead": "Jatkossa tekoälysisällöt on helpompi tunnistaa. Monet sovellukset ovat alkaneet merkitä tekoälyn käyttöä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-12T12:22:34Z",
-      "title": "Tekoäly valmentaa varusmiehiä syömään paremmin",
-      "url": "https://yle.fi/a/74-20240687",
-      "lead": ""
     },
     {
       "personName": "tekoäly",
