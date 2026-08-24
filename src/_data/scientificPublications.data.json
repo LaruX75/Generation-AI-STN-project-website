@@ -6464,5 +6464,65 @@
     "doi": "10.57813/eleed.v1ise2026.271.g473",
     "url": "",
     "notes": ""
+  },
+  {
+    "id": "a1-2026-547",
+    "code": "A1",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Alanur Ahsen Dalyanci; İsmail Çelik; Sini Kontkanen; Jari Laru; Pirkko Siklander",
+    "title": "Beyond AI Literacy: Exploring Pre-Service Teachers’ Pedagogical and Ethical Reasoning in Generative AI Integration in Education",
+    "venue": "Journal of Educational Computing Research",
+    "doi": "10.1177/07356331261479569",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "other-2026-rf548",
+    "code": "other",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "",
+    "title": "Käsityöoppiaineen vahvuus on laaja-alaisuudessa",
+    "venue": "",
+    "doi": "",
+    "url": "https://researchportal.helsinki.fi/en/publications/c91f94f2-57ce-4682-b8f5-7bbf0f782a20",
+    "notes": ""
+  },
+  {
+    "id": "journalarticle-2026-rf549",
+    "code": "journal-article",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "",
+    "title": "From policy to practice: A comparative study on inclusive and special education for students with SEND across Europe",
+    "venue": "European Journal of Special Needs Education",
+    "doi": "10.1080/08856257.2026.2649544",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "dissertationthesis-2026-rf550",
+    "code": "dissertation-thesis",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "",
+    "title": "Safeguarding vulnerable data subjects in the digital age",
+    "venue": "University of Helsinki",
+    "doi": "",
+    "url": "http://hdl.handle.net/10138/635542",
+    "notes": ""
+  },
+  {
+    "id": "b1kirjoitustieteellisessaikakauslehdess-2026-rf551",
+    "code": "B1 Kirjoitus tieteellisessä aikakauslehdessä",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Saqr, Mohammed; Lopez-Pernas, Sonsoles; Misiejuk, Kamila",
+    "title": "Nestimate : An R Package for dynamic, probabilistic, and high order network analysis",
+    "venue": "Applied psychological measurement, [Epub ahead of print July 26, 2026], 1-3",
+    "doi": "",
+    "url": "https://doi.org/10.1177/01466216261472019",
+    "notes": ""
   }
 ]
