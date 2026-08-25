@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-08-24T05:31:30.872Z",
+  "fetchedAt": "2026-08-25T05:24:31.262Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-24T19:12:40Z",
+      "title": "Henna Virkkunen A-studiossa: EU on varautunut siihen, että tekoäly karkaa ihmisen kontrollista",
+      "url": "https://yle.fi/a/74-20242668",
+      "lead": "Viime aikoina tekoäly­mallit ovat karanneet testi­ympäris­töistään ja aiheuttaneet vahinkoa kyber­turvallisuuden näkö­kulmasta."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-24T07:06:57Z",
+      "title": "Elina Valtonen: Tuen ehdotusta suojelupoliisin siirtämisestä ulkoministeriön ohjaukseen",
+      "url": "https://yle.fi/a/74-20242508",
+      "lead": "Ulkoministeri Valtonen kommentoi suurlähettiläs­päivillä myös tekoälyn synnyttämiä varallisuus­eroja."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-24T05:51:21Z",
+      "title": "DN: Ruotsin äärioikeisto käyttää julkkiksia teko­älyvideoissa – Tiktok hyväksyy",
+      "url": "https://yle.fi/a/74-20242506",
+      "lead": "Lehden mukaan Tiktok rikkoo omia säädöksiään hyväksymällä tekoälyvideot."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-08-23T12:31:02Z",
@@ -18,24 +39,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-08-20T04:33:08Z",
-      "title": "Saksan ja Ranskan vaaleihin iskettiin sadoilla valeuutisilla – vain Venäjä-myönteiset puolueet säästyivät",
-      "url": "https://yle.fi/a/74-20239835",
-      "lead": "Ulkopoliittisen instituutin asiantuntijan Marco Siddin mukaan disinformaation tavoite on väsyttää ihmisiä ja saada heidät kyllästymään politiikkaan."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-08-20T02:30:35Z",
       "title": "Kysely: Puolet suomalaisista pelkää, että tekoäly johtaa massa­työttömyyteen – näin arvioivat asiantuntijat",
       "url": "https://yle.fi/a/74-20240733",
       "lead": "Tutkijat listaavat useita syitä, miksi tekoälyn vaikutus työllisyyteen voi jäädä ainakin lähi­tulevaisuudessa huomattavasti ihmisten pelkoa pienemmäksi."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-19T14:02:34Z",
-      "title": "Kuolema on tekninen ongelma, sanovat transhumanistit – tavoitteena satoja vuosia elämää",
-      "url": "https://yle.fi/a/74-20240222",
-      "lead": "Uusi kirja valaisee teknoutopioita. Venäläinen kosmismi halusi herättää kuolleet henkiin ja transhumanismi haluaa pidentää ihmiselämää."
     },
     {
       "personName": "tekoäly",
@@ -120,13 +127,6 @@
       "title": "Tekoäly loi juuri viruksia, joita ei löydy luonnosta",
       "url": "https://yle.fi/a/74-20239791",
       "lead": "Tulokset herättävät toivoa lääke­tieteellisistä edistys­askelista, mutta myös huolestuttavan mahdollisuuden, että teknologiaa voitaisiin joskus käyttää väärin."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-06T15:31:16Z",
-      "title": "Yli 100 opiskelupaikkaa jäi täyttämättä Itä-Suomen yliopistossa – professori uskoo, että syynä on huoli tekoälystä",
-      "url": "https://yle.fi/a/74-20239648",
-      "lead": "Professorin mielestä tekoäly ei vie työpaikkoja, vaan päinvastoin luo niitä."
     },
     {
       "personName": "tekoäly",
