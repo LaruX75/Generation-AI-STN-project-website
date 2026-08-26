@@ -3130,54 +3130,6 @@
     "notes": ""
   },
   {
-    "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf401",
-    "code": "A3 Kirjan tai muun kokoomateoksen osa",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Saqr, Mohammed; López-Pernas, Sonsoles; Tikka, Santtu",
-    "title": "Mapping Relational Dynamics with Transition Network Analysis: A Primer and Tutorial",
-    "venue": "Saqr, Mohammed; López-Pernas, Sonsoles, Advanced Learning Analytics Methods: AI, Precision and Complexity, 371-411",
-    "doi": "",
-    "url": "https://doi.org/10.1007/978-3-031-95365-1_15",
-    "notes": ""
-  },
-  {
-    "id": "a2katsausartikkelitieteellisessaikakauslehdess-2025-rf402",
-    "code": "A2 Katsausartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Misiejuk, Kamila; Lopez-Pernas, Sonsoles; Kaliisa, Rogers; Saqr, Mohammed",
-    "title": "Mapping the Landscape of Generative Artificial Intelligence in Learning Analytics: A Systematic Literature Review",
-    "venue": "Journal of learning analytics, 12, 1, 12-31",
-    "doi": "",
-    "url": "https://doi.org/10.18608/jla.2025.8591",
-    "notes": ""
-  },
-  {
-    "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf403",
-    "code": "A3 Kirjan tai muun kokoomateoksen osa",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "López-Pernas, Sonsoles; Tikka, Santtu; Saqr, Mohammed",
-    "title": "Mining Patterns and Clusters with Transition Network Analysis: A Heterogeneity Approach",
-    "venue": "Saqr, Mohammed; López-Pernas, Sonsoles, Advanced Learning Analytics Methods: AI, Precision and Complexity, 447-468",
-    "doi": "",
-    "url": "https://doi.org/10.1007/978-3-031-95365-1_17",
-    "notes": ""
-  },
-  {
-    "id": "b2kirjantaimuunkokoomateoksenosa-2025-rf404",
-    "code": "B2 Kirjan tai muun kokoomateoksen osa",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Saqr, Mohammed; López-Pernas, Sonsoles",
-    "title": "Preface",
-    "venue": "Saqr, Mohammed; López-Pernas, Sonsoles, Advanced Learning Analytics Methods: AI, Precision and Complexity, vii-viii",
-    "doi": "",
-    "url": "https://doi.org/10.1007/978-3-031-95365-1",
-    "notes": ""
-  },
-  {
     "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf405",
     "code": "A3 Kirjan tai muun kokoomateoksen osa",
     "year": 2025,
@@ -3202,18 +3154,6 @@
     "notes": ""
   },
   {
-    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf407",
-    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "López-Pernas, Sonsoles; Conde, Miguel A.; Saqr, Mohammed",
-    "title": "Three shades of self-regulation with unique complex dynamics, drivers and targets for intervention",
-    "venue": "British journal of educational technology, [Epub ahead of print 25 November 2025], 1-22",
-    "doi": "",
-    "url": "https://doi.org/10.1111/bjet.70032",
-    "notes": ""
-  },
-  {
     "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf408",
     "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
     "year": 2025,
@@ -3226,18 +3166,6 @@
     "notes": ""
   },
   {
-    "id": "a4artikkelikonferenssijulkaisussa-2025-rf409",
-    "code": "A4 Artikkeli konferenssijulkaisussa",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Saqr, Mohammed; López-Pernas, Sonsoles; Törmänen, Tiina; Kaliisa, Rogers; Misiejuk, Kamila; Tikka, Santtu",
-    "title": "Transition Network Analysis: A Novel Framework for Modeling, Visualizing, and Identifying the Temporal Patterns of Learners and Learning Processes",
-    "venue": "Zamecnik, Andrew; Kuvar, Vishal; Wong, Aaron, 15th International Conference on Learning Analytics and Knowledge, LAK 2025, 351-361",
-    "doi": "",
-    "url": "https://doi.org/10.1145/3706468.3706513",
-    "notes": ""
-  },
-  {
     "id": "a2katsausartikkelitieteellisessaikakauslehdess-2025-rf410",
     "code": "A2 Katsausartikkeli tieteellisessä aikakauslehdessä",
     "year": 2025,
@@ -3247,18 +3175,6 @@
     "venue": "Frontiers in psychology, 16, 1691414",
     "doi": "",
     "url": "https://doi.org/10.3389/fpsyg.2025.1691414",
-    "notes": ""
-  },
-  {
-    "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf411",
-    "code": "A3 Kirjan tai muun kokoomateoksen osa",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "López-Pernas, Sonsoles; Heikkinen, Sami; Tlili, Ahmed; Majumdar, Rwitajit; Saqr, Mohammed",
-    "title": "Unpacking Learning in the Age of AI: Bridging AI, Complexity, and Precision Education",
-    "venue": "Saqr, Mohammed; López-Pernas, Sonsoles, Advanced Learning Analytics Methods: AI, Precision and Complexity, 1-14",
-    "doi": "",
-    "url": "https://doi.org/10.1007/978-3-031-95365-1_1",
     "notes": ""
   },
   {
