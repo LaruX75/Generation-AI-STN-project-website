@@ -1,5 +1,6 @@
 const path = require("node:path");
-const Image = require("@11ty/eleventy-img");
+const eleventyImage = require("@11ty/eleventy-img");
+const Image = eleventyImage.default || eleventyImage;
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginPublicationToc = require("./_plugins/publication-toc.js");
 const { runPagefind } = require("./scripts/run-pagefind");
@@ -54,7 +55,7 @@ module.exports = function(eleventyConfig) {
     if (!metadata || typeof metadata !== "object" || !Object.keys(metadata).length) {
       return `<img class="hero-bg-image" src="${originalSrc}" alt="" decoding="async" fetchpriority="high">`;
     }
-    return Image.generateHTML(metadata, {
+    return eleventyImage.generateHTML(metadata, {
       alt: "",
       src: originalSrc,
       sizes: "100vw",
