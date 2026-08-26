@@ -2818,18 +2818,6 @@
     "notes": ""
   },
   {
-    "id": "c2toimitettuteos-2025-rf375",
-    "code": "C2 Toimitettu teos",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Saqr, Mohammed; López-Pernas, Sonsoles",
-    "title": "Advanced Learning Analytics Methods: AI, Precision and Complexity",
-    "venue": "Springer",
-    "doi": "",
-    "url": "https://doi.org/10.1007/978-3-031-95365-1",
-    "notes": ""
-  },
-  {
     "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf376",
     "code": "A3 Kirjan tai muun kokoomateoksen osa",
     "year": 2025,
@@ -2959,18 +2947,6 @@
     "venue": "Saqr, Mohammed; López-Pernas, Sonsoles, Advanced Learning Analytics Methods: AI, Precision and Complexity, 289-311",
     "doi": "",
     "url": "https://doi.org/10.1007/978-3-031-95365-1_12",
-    "notes": ""
-  },
-  {
-    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf387",
-    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "V DE Vogelsmeier, Leonie; Oliveira, Eduardo; Misiejuk, Kamila; López-Pernas, Sonsoles; Saqr, Mohammed",
-    "title": "Delving into the psychology of Machines: Exploring the structure of self-regulated learning via LLM-generated survey responses",
-    "venue": "Computers in human behavior, 173, 108769",
-    "doi": "",
-    "url": "https://doi.org/10.1016/j.chb.2025.108769",
     "notes": ""
   },
   {
