@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-08-25T05:24:31.262Z",
+  "fetchedAt": "2026-08-26T05:26:21.000Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-25T07:02:04Z",
+      "title": "Jopa yli sadasta tytöstä on levitetty tekoälyllä tehtyjä alastonkuvia Lappeenrannassa",
+      "url": "https://yle.fi/a/74-20242691",
+      "lead": "Tapauksesta on tehty poliisille useita kymmeniä rikos­ilmoituksia."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-08-24T19:12:40Z",
@@ -50,13 +57,6 @@
       "title": "Professori: Tekoäly houkuttelee opiskelijoita suorittamaan tehtäviä, ei oppimaan",
       "url": "https://yle.fi/a/74-20240913",
       "lead": "Suurin haaste on oppia yhdessä tekoälyn kanssa niin, ettei tekoäly ota ajattelusta vastuuta, sanoo kasvatustieteen professori Sanna Järvelä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-19T05:55:58Z",
-      "title": "Artturi Sarvela, 24, ei saa oman alan töitä, kun kokemusta puuttuu – eikä kokemusta saa ilman töitä",
-      "url": "https://yle.fi/a/74-20238140",
-      "lead": "Nuorilla on tekoäly­osaamista, mutta työpaikkoja ei löydy. Yritykset haluavat valmiita työntekijöitä, eivät koulutettavia."
     },
     {
       "personName": "tekoäly",
