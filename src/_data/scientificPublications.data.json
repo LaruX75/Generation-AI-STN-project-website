@@ -3274,42 +3274,6 @@
     "notes": ""
   },
   {
-    "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf413",
-    "code": "A3 Kirjan tai muun kokoomateoksen osa",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "López-Pernas, Sonsoles; Misiejuk, Kamila; Saqr, Mohammed",
-    "title": "Using BERT-like Language Models for Automated Discourse Coding: A Primer and Tutorial",
-    "venue": "Saqr, Mohammed; López-Pernas, Sonsoles, Advanced Learning Analytics Methods: AI, Precision and Complexity, 235-259",
-    "doi": "",
-    "url": "https://doi.org/10.1007/978-3-031-95365-1_10",
-    "notes": ""
-  },
-  {
-    "id": "a4artikkelikonferenssijulkaisussa-2025-rf414",
-    "code": "A4 Artikkeli konferenssijulkaisussa",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Lopez-Pernas, Sonsoles; Misiejuk, Kamila; Jovanovic, Jelena; Milic, Miroslava Raspopovic; Conde, Miguel A; Saqr, Mohammed",
-    "title": "chatgptscrapeR: A Tool for Retrieving Student-AI Interactions",
-    "venue": "Chang, Maiga; Chen, Scott; Kuo, Rita; Sampson, Demetrios; Tlili, Ahmed; Tsai, Pei-Shu, Proceedings : 25th IEEE International Conference on Advanced Learning Technologies ICALT 2025, 134-136",
-    "doi": "",
-    "url": "https://doi.org/10.1109/ICALT64023.2025.00044",
-    "notes": ""
-  },
-  {
-    "id": "b1kirjoitustieteellisessaikakauslehdess-2025-rf415",
-    "code": "B1 Kirjoitus tieteellisessä aikakauslehdessä",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Tikka, Santtu; López-Pernas, Sonsoles; Saqr, Mohammed",
-    "title": "tna: An R Package for Transition Network Analysis",
-    "venue": "Applied psychological measurement, 49, 6, 326-328",
-    "doi": "",
-    "url": "https://doi.org/10.1177/01466216251348840",
-    "notes": ""
-  },
-  {
     "id": "e3editedpopularbook-2025-rf511",
     "code": "E3 Edited popular book",
     "year": 2025,
@@ -3319,30 +3283,6 @@
     "venue": "Vastapaino",
     "doi": "",
     "url": "https://doi.org/10.58181/VP9789523972513",
-    "notes": ""
-  },
-  {
-    "id": "b2booksection-2025-rf512",
-    "code": "B2 Book section",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Silvennoinen, Elisa",
-    "title": "KKO 2025:43 Alentuneen syyntakeisuuden arvioiminen",
-    "venue": "Hoffrén, Mia, KKO:n ratkaisut kommentein I/2025, 319-326",
-    "doi": "",
-    "url": "https://uef.cris.fi/publications/59331d9e-6ec6-48dd-8a91-a834bb89cd88",
-    "notes": ""
-  },
-  {
-    "id": "d1articleinatradejournal-2025-rf513",
-    "code": "D1 Article in a trade journal",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Silvennoinen, Elisa; Koskela, Tarja",
-    "title": "Kouluväkivalta johtaa lopulta harvoin tuomioon",
-    "venue": "Haaste, 1-2",
-    "doi": "",
-    "url": "https://rikoksentorjunta.fi/-/haaste-1-2-2025-kouluvakivalta-johtaa-lopulta-harvoin-tuomioon",
     "notes": ""
   },
   {
@@ -6006,54 +5946,6 @@
     "title": "Digital financial management skill training for women’s informal saving groups in Dodoma, Tanzania: Mapping user requirements",
     "venue": "African Journal of Science Technology Innovation and Development",
     "doi": "10.1080/20421338.2024.2434284",
-    "url": "",
-    "notes": ""
-  },
-  {
-    "id": "a1-2025-504",
-    "code": "A1",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Madina Hamisi Juma; Nasibu Rajabu Mramba; Jarkko Suhonen; Alsen Florian Kapinga; Matti Tedre",
-    "title": "Designing a Mobile Prototype for Supporting Financial Management Skills and Decision Making: A Co-Creation Study with Informal Saving Groups in Dodoma, Tanzania",
-    "venue": "",
-    "doi": "10.1109/etncc66224.2025.11299782",
-    "url": "",
-    "notes": ""
-  },
-  {
-    "id": "a1-2025-509",
-    "code": "A1",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Daniel Holmberg; Emanuela Clementi; Italo Epicoco; Teemu Roos",
-    "title": "Accurate Mediterranean Sea forecasting via graph-based deep learning",
-    "venue": "Scientific Reports",
-    "doi": "10.1038/s41598-025-31177-w",
-    "url": "",
-    "notes": ""
-  },
-  {
-    "id": "a1-2025-510",
-    "code": "A1",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Antti Etholén; Teemu Roos; Mirja Hänninen; Ioanna Bouri; Jenni Kulmala; Ossi Rahkonen; Anne Kouvonen; Tea Lallukka",
-    "title": "Forecasting Subjective Cognitive Decline: AI Approach Using Dynamic Bayesian Networks",
-    "venue": "Journal of Medical Internet Research",
-    "doi": "10.2196/65028",
-    "url": "",
-    "notes": ""
-  },
-  {
-    "id": "a1-2025-512",
-    "code": "A1",
-    "year": 2025,
-    "status": "Published",
-    "authorsText": "Daniel Holmberg; Manu Airaksinen; Viviana Marchi; Andrea Guzzetta; Anna Kivi; Leena Haataja; Sampsa Vanhatalo; Teemu Roos",
-    "title": "Learning Developmental Age From 3D Infant Kinetics Using Adaptive Graph Neural Networks",
-    "venue": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
-    "doi": "10.1109/tnsre.2025.3568269",
     "url": "",
     "notes": ""
   },
