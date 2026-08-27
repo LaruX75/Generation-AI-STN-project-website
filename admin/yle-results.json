@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-08-26T05:26:21.000Z",
+  "fetchedAt": "2026-08-27T16:01:20.778Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-27T02:30:35Z",
+      "title": "Maailman johtava tekoälytutkija kertoo, miksi ihmisten töiden katoaminen on aito riski",
+      "url": "https://yle.fi/a/74-20243082",
+      "lead": "Tekoälytutkija Bernhard Schölkopf katsoo, että yhteiskuntien nykyiset järjestelmät ja tavat toimia pitäisi miettiä uudelleen tekoälyn aikakaudella."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-26T21:12:17Z",
+      "title": "Teknologiajätti Nvidian liikevaihto yli tuplaantui",
+      "url": "https://yle.fi/a/74-20243125",
+      "lead": ""
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-08-25T07:02:04Z",
@@ -127,20 +141,6 @@
       "title": "Tekoäly loi juuri viruksia, joita ei löydy luonnosta",
       "url": "https://yle.fi/a/74-20239791",
       "lead": "Tulokset herättävät toivoa lääke­tieteellisistä edistys­askelista, mutta myös huolestuttavan mahdollisuuden, että teknologiaa voitaisiin joskus käyttää väärin."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-06T12:56:23Z",
-      "title": "Metan Muse Spark -tekoälymalli murtautui toisen yrityksen järjestelmiin",
-      "url": "https://yle.fi/a/74-20239731",
-      "lead": "Kyseessä on jo kolmas kerta lyhyen ajan sisään, kun teknologia­yhtiön tekoäly teki tietomurron."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-05T09:24:43Z",
-      "title": "Koodaustaidoton äiti rakensi sivuston, joka kokoaa Helsingin vaipan­vaihto­paikat kartalle – tekoälytutkija riemastui",
-      "url": "https://yle.fi/a/74-20239305",
-      "lead": "Tietojen­käsittely­tieteen professori Laura Ruotsalainen arvioi, että ohjelmoinnin ymmärtämisen merkitys korostuu entisestään tekoälyn aikakaudella."
     },
     {
       "personName": "Teemu Roos",
