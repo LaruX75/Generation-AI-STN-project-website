@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-08-27T16:01:20.778Z",
+  "fetchedAt": "2026-08-28T17:04:16.433Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-28T11:31:20Z",
+      "title": "Poliisi: Lappeenrannan syvä­väärennys­jutun epäiltyä on uhkailtu – tapauksesta on levinnyt myös virheellisiä tietoja",
+      "url": "https://yle.fi/a/74-20243474",
+      "lead": "Uhreja on poliisin mukaan aikaisemmin uskottua vähemmän. Rikosnimike on tällä hetkellä törkeä lasta seksuaalisesti esittävän kuvan levittäminen."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-08-27T02:30:35Z",
@@ -134,13 +141,6 @@
       "title": "Ootko flirttaillu tekoälyn kanssa?",
       "url": "https://yle.fi/v/video/91-20240171",
       "lead": "Mitä kaikkea tekoälyn kanssa voikaan tehdä? YleX Kesäiltapäivässä Imppu ja Linne arkipäivisin klo 14-17."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-06T18:39:59Z",
-      "title": "Tekoäly loi juuri viruksia, joita ei löydy luonnosta",
-      "url": "https://yle.fi/a/74-20239791",
-      "lead": "Tulokset herättävät toivoa lääke­tieteellisistä edistys­askelista, mutta myös huolestuttavan mahdollisuuden, että teknologiaa voitaisiin joskus käyttää väärin."
     },
     {
       "personName": "Teemu Roos",
