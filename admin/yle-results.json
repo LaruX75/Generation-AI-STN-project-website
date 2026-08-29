@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-08-28T17:04:16.433Z",
+  "fetchedAt": "2026-08-29T11:26:14.598Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-28T17:33:31Z",
+      "title": "Miten kotona voi toimia, jos nuoresta leviää väärennetty alaston­kuva? Rikosuhri­päivystyksen asiantuntija vastaa",
+      "url": "https://yle.fi/a/74-20243376",
+      "lead": "Rikosuhripäivystyksen asiantuntijan mukaan uhrille on hyvä sanoa, ettei väärennetty kuva ole hänen vikansa."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-08-28T11:31:20Z",
@@ -134,13 +141,6 @@
       "title": "Claude-tekoälymalli alkaa merkitä tekstit vesileimalla – leimat eivät ole täysin aukottomia",
       "url": "https://yle.fi/a/74-20240423",
       "lead": "Merkinnän tarkoitus on auttaa kolmansia osapuolia tunnistamaan tekoälyllä tehty sisältö."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-10T09:24:35Z",
-      "title": "Ootko flirttaillu tekoälyn kanssa?",
-      "url": "https://yle.fi/v/video/91-20240171",
-      "lead": "Mitä kaikkea tekoälyn kanssa voikaan tehdä? YleX Kesäiltapäivässä Imppu ja Linne arkipäivisin klo 14-17."
     },
     {
       "personName": "Teemu Roos",
