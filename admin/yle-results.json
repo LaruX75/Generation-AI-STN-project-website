@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-08-29T11:26:14.598Z",
+  "fetchedAt": "2026-08-30T10:12:26.551Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-30T03:45:35Z",
+      "title": "Roope Lipastin kolumni: Olisiko jossain vielä palvelu, jota ei tarvitse hoitaa itse?",
+      "url": "https://yle.fi/a/74-20243309",
+      "lead": "Mitä vähemmän palvelua, sitä enemmän aplikaatioita, joilla homma pitää hoitaa itse, Lipasti puhisee."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-29T14:28:49Z",
+      "title": "Somesta tuttu Amski joutuu työssään oikomaan tekoälyn virheitä: ”Mieluummin kuvia pelloilta kuin tarkastajia”",
+      "url": "https://yle.fi/a/74-20243219",
+      "lead": "Ruokaviraston satelliitti­seuranta aiheutti viime vuonna lähes 80 000 selvitys­pyyntöä. Tekoäly valvoo peltotukia, mutta tekee yhä paljon virheitä."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-08-28T17:33:31Z",
@@ -127,20 +141,6 @@
       "title": "Tekoälysisältö on jatkossa pakko merkitä – tältä näyttävät uudet, viralliset kuvakkeet",
       "url": "https://yle.fi/a/74-20240576",
       "lead": "Jatkossa tekoälysisällöt on helpompi tunnistaa. Monet sovellukset ovat alkaneet merkitä tekoälyn käyttöä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-11T14:59:42Z",
-      "title": "Spotify alkaa merkitä tekoälymusiikin",
-      "url": "https://yle.fi/a/74-20240495",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-11T13:19:50Z",
-      "title": "Claude-tekoälymalli alkaa merkitä tekstit vesileimalla – leimat eivät ole täysin aukottomia",
-      "url": "https://yle.fi/a/74-20240423",
-      "lead": "Merkinnän tarkoitus on auttaa kolmansia osapuolia tunnistamaan tekoälyllä tehty sisältö."
     },
     {
       "personName": "Teemu Roos",
