@@ -2422,18 +2422,6 @@
     "notes": ""
   },
   {
-    "id": "bookchapter-2026-rf275",
-    "code": "book-chapter",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "",
-    "title": "Matematiikka kuuluu kaikille – inklusiivista matematiikkaa monilukutaidon viitekehyksessä",
-    "venue": "Esi- ja alkuopetuksen käsikirja",
-    "doi": "",
-    "url": "https://researchportal.helsinki.fi/en/publications/596642c1-a84d-4398-a85d-ff4eb5f8e456",
-    "notes": ""
-  },
-  {
     "id": "journalarticle-2026-rf284",
     "code": "",
     "year": 2026,
@@ -5662,18 +5650,6 @@
     "notes": ""
   },
   {
-    "id": "a1-2026-515",
-    "code": "A1",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Fanni Franssila; Markku Alho; Ioanna Bouri; Daniel Holmberg; Minna Palmroth; Teemu Roos",
-    "title": "Machine Learning for Local Detection of Separators in Three‐Dimensional Magnetic Fields",
-    "venue": "Journal of Geophysical Research Machine Learning and Computation",
-    "doi": "10.1029/2025jh001202",
-    "url": "",
-    "notes": ""
-  },
-  {
     "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf517",
     "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
     "year": 2026,
@@ -5683,30 +5659,6 @@
     "venue": "Journal of research in childhood education, [Epub ahead of print 02 Jun 2026], 1-23",
     "doi": "",
     "url": "https://doi.org/10.1080/02568543.2026.2664889",
-    "notes": ""
-  },
-  {
-    "id": "a2katsausartikkelitieteellisessaikakauslehdess-2026-rf518",
-    "code": "A2 Katsausartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Conde, Miguel; Rodríguez-Sedano, Francisco J.; García-Peñalvo, Francisco J.; Suganuma, Laiany; Gonçalves, José; Jormanainen, Ilkka; Yigzaw, Samuel",
-    "title": "A Systematic Literature Review on the Benefits of Robotics and Active Learning Methodologies for Promoting STEAM Education among Students with Intellectual and Developmental Disabilities",
-    "venue": "International journal of engineering education, 42, 1, 57-70",
-    "doi": "",
-    "url": "https://www.ijee.ie/contents/c420126.html",
-    "notes": ""
-  },
-  {
-    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf519",
-    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Saqr, Mohammed; Lopez-Pernas, Sonsoles; Tormanen, Tiina",
-    "title": "A temporal network approach to reveal the longitudinal dynamics of CSCL group regulation and productive collaboration",
-    "venue": "International journal of computer-supported collaborative learning, [Epub ahead of print 19 Feb 2026], 1-34",
-    "doi": "",
-    "url": "https://doi.org/10.1007/s11412-025-09464-5",
     "notes": ""
   },
   {
@@ -5722,54 +5674,6 @@
     "notes": ""
   },
   {
-    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf521",
-    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Venäläinen, Kalle; Sointu, Erkko; Väisänen, Sanna; López Pernas, Sonsoles; Tuominen, Ville; Valtonen, Teemu; Saqr, Mohammed; Virtanen, Jyrki; Hirsto, Laura",
-    "title": "Differences of self-regulated learning between higher education students with and without a history of pedagogical support. A learning analytics approach",
-    "venue": "E-learning and education, [Published 2026-02-25], 1-22",
-    "doi": "",
-    "url": "https://doi.org/10.57813/eleed.v1ise2026.260",
-    "notes": ""
-  },
-  {
-    "id": "a4artikkelikonferenssijulkaisussa-2026-rf522",
-    "code": "A4 Artikkeli konferenssijulkaisussa",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Saqr, Mohammed; López-Pernas, Sonsoles; Tikka, Santtu; Spitzer, Markus",
-    "title": "Early Warning Signals Appear Long Before Dropping Out: An Idiographic Approach Grounded in Complex Dynamic Systems Theory",
-    "venue": "Wong, Aaron; Kuvar, Vishal, LAK '26: Proceedings of the LAK26: 16th International Learning Analytics and Knowledge Conference, 216-226",
-    "doi": "",
-    "url": "https://doi.org/10.1145/3785022.3785050",
-    "notes": ""
-  },
-  {
-    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf523",
-    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "López-Pernas, Sonsoles; Santamaría-Urbieta, Alexandra; Gordillo, Aldo; Barra, Enrique; López-Fernández, Daniel; Saqr, Mohammed",
-    "title": "From Play to Pedagogy: A Structured Topic Modeling Analysis of Escape Rooms Research",
-    "venue": "IEEE transactions on games, 18, 2, 233-245",
-    "doi": "",
-    "url": "https://doi.org/10.1109/TG.2026.3654896",
-    "notes": ""
-  },
-  {
-    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf524",
-    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Saqr, Mohammed; Misiejuk, Kamila; López-Pernas, Sonsoles",
-    "title": "Human-AI collaboration or obedient and often clueless AI in instruct, serve, repeat dynamics?",
-    "venue": "Internet and higher education, 70, 101087",
-    "doi": "",
-    "url": "https://doi.org/10.1016/j.iheduc.2026.101087",
-    "notes": ""
-  },
-  {
     "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf525",
     "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
     "year": 2026,
@@ -5779,42 +5683,6 @@
     "venue": "Smart learning environments, 13, 1, 28",
     "doi": "",
     "url": "https://doi.org/10.1186/s40561-026-00453-1",
-    "notes": ""
-  },
-  {
-    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf526",
-    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Teuber, Ziwen; López-Pernas, Sonsoles; Jordan, Gesine; Weber, Anke Maria; Greiff, Samuel; Kim, Su Yeong; Dicke, Theresa",
-    "title": "Mapping emotional components in daily parent–child interactions: A multilevel psychological network approach.",
-    "venue": "Emotion, [Epub ahead of print 7 May 2026], 1-18",
-    "doi": "",
-    "url": "https://doi.org/10.1037/emo0001678",
-    "notes": ""
-  },
-  {
-    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf528",
-    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "López-Pernas, Sonsoles; Conde, Miguel; Milić, Miroslava Raspopović; Saqr, Mohammed",
-    "title": "Stable means, shifting patterns: Examining SRL through a complex dynamic systems lens",
-    "venue": "Computers in human behavior reports, 22, 101038",
-    "doi": "",
-    "url": "https://doi.org/10.1016/j.chbr.2026.101038",
-    "notes": ""
-  },
-  {
-    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf529",
-    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Khairat, Aisha; Lopez-Pernas, Sonsoles; Zaalouk, Malak; Saqr, Mohammed",
-    "title": "Teachers' Perceptions of Empowerment Through Servant Leadership Using Latent Profile Analysis: A Person-Centered Approach to Community-Based Education",
-    "venue": "Technology, knowledge and learning, [Epub ahead of print 16 May 2026], 1-30",
-    "doi": "",
-    "url": "https://doi.org/10.1007/s10758-026-09985-4",
     "notes": ""
   },
   {
@@ -5974,18 +5842,6 @@
     "notes": ""
   },
   {
-    "id": "a1-2026-529",
-    "code": "A1",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Elias Jääsaari; Ville Hyvönen; Teemu Roos",
-    "title": "LEMUR: Learned Multi-Vector Retrieval",
-    "venue": "Open MIND",
-    "doi": "10.48550/arxiv.2601.21853",
-    "url": "",
-    "notes": ""
-  },
-  {
     "id": "b1-2024-530",
     "code": "B1",
     "year": 2024,
@@ -6022,18 +5878,6 @@
     "notes": ""
   },
   {
-    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf533",
-    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Ahmed, Hesham; Lopez-Pernas, Sonsoles; Vogelsmeier, Leonie V. D. E.; Tukiainen, Markku; Saqr, Mohammed",
-    "title": "An Instrument for Human-Based Evaluation of GenAI Educational Alignment",
-    "venue": "Technology, knowledge and learning, [Epub ahead of print 08 July 2026], 1-39",
-    "doi": "",
-    "url": "https://doi.org/10.1007/s10758-026-10005-8",
-    "notes": ""
-  },
-  {
     "id": "g5-2026-538",
     "code": "G5",
     "year": 2026,
@@ -6046,30 +5890,6 @@
     "notes": ""
   },
   {
-    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf539",
-    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Misiejuk, Kamila; Lopez-Pernas, Sonsoles; Oliveira, Eduardo Araujo; Eagan, Brendan; Saqr, Mohammed",
-    "title": "Comparing human and LLM ordered coding of qualitative data: How coding differences cascade through temporal analysis",
-    "venue": "Computers and education : artificial intelligence, 11, 100649",
-    "doi": "",
-    "url": "https://doi.org/10.1016/j.caeai.2026.100649",
-    "notes": ""
-  },
-  {
-    "id": "a2katsausartikkelitieteellisessaikakauslehdess-2026-rf540",
-    "code": "A2 Katsausartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Lopez-Pernas, Sonsoles; Barra, Enrique; Kostic, Milos; Milosevic, Miljan; Gordillo, Aldo; Saqr, Mohammed",
-    "title": "Escape rooms for media literacy: a systematic literature review",
-    "venue": "Behaviour and information technology, [Epub ahead of print 9 July 2026], 1-19",
-    "doi": "",
-    "url": "https://doi.org/10.1080/0144929X.2026.2699276",
-    "notes": ""
-  },
-  {
     "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf541",
     "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
     "year": 2026,
@@ -6079,30 +5899,6 @@
     "venue": "Journal of computer assisted learning, 42, 4, e70285",
     "doi": "",
     "url": "https://doi.org/10.1002/jcal.70285",
-    "notes": ""
-  },
-  {
-    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf542",
-    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Barra, Enrique; Pilicita, Anabel; Conde, Javier; Pozo, Alejandro; Lopez-Pernas, Sonsoles; Reviriego, Pedro",
-    "title": "Using AI-powered multiple-choice question generation for self-regulated learning",
-    "venue": "RED. Revista de educación a distancia, 26, 84, 5",
-    "doi": "",
-    "url": "https://doi.org/10.6018/red.711091",
-    "notes": ""
-  },
-  {
-    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf543",
-    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Bobrowicz, Katarzyna; Lopez-Pernas, Sonsoles; Saqr, Mohammed",
-    "title": "With Development and Parenting at Heart: Over 100 Years of Clinical Child and Adolescent Psychology",
-    "venue": "Review of general psychology, [Epub ahead of print 26 July 2026], 1-44",
-    "doi": "",
-    "url": "https://doi.org/10.1177/10892680261470677",
     "notes": ""
   },
   {
@@ -6154,18 +5950,6 @@
     "notes": ""
   },
   {
-    "id": "pub-2026-544",
-    "code": "",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Matt McLain; Peter Murphy; Brahim El Fadil; Qiuyue Yang; Mart Soobik; Kaiju Kangas; Émeline Roy; Franz Schröer; Wai Yip Antony Leung; Jeffrey Buckley; Keita Sera; Soo Chin Chia; Ruth Lemon; Caroline McFarland; Adri Du Toit; Charlotta Nordlöf; Szu-Chun Fan; John G. Wells",
-    "title": "Table 1. International Survey of Technology Education Curricula - 19 Jurisdictions [FULL DATASET]",
-    "venue": "Zenodo (CERN European Organization for Nuclear Research)",
-    "doi": "10.5281/zenodo.19224429",
-    "url": "",
-    "notes": ""
-  },
-  {
     "id": "g5-2026-545",
     "code": "G5",
     "year": 2026,
@@ -6202,18 +5986,6 @@
     "notes": ""
   },
   {
-    "id": "other-2026-rf548",
-    "code": "other",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "",
-    "title": "Käsityöoppiaineen vahvuus on laaja-alaisuudessa",
-    "venue": "",
-    "doi": "",
-    "url": "https://researchportal.helsinki.fi/en/publications/c91f94f2-57ce-4682-b8f5-7bbf0f782a20",
-    "notes": ""
-  },
-  {
     "id": "journalarticle-2026-rf549",
     "code": "journal-article",
     "year": 2026,
@@ -6235,42 +6007,6 @@
     "venue": "University of Helsinki",
     "doi": "",
     "url": "http://hdl.handle.net/10138/635542",
-    "notes": ""
-  },
-  {
-    "id": "b1kirjoitustieteellisessaikakauslehdess-2026-rf551",
-    "code": "B1 Kirjoitus tieteellisessä aikakauslehdessä",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Saqr, Mohammed; Lopez-Pernas, Sonsoles; Misiejuk, Kamila",
-    "title": "Nestimate : An R Package for dynamic, probabilistic, and high order network analysis",
-    "venue": "Applied psychological measurement, [Epub ahead of print July 26, 2026], 1-3",
-    "doi": "",
-    "url": "https://doi.org/10.1177/01466216261472019",
-    "notes": ""
-  },
-  {
-    "id": "pub-2026-533",
-    "code": "",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Ivan Zaitsev; Konstantinos Papadakis; Markku Alho; Sanni Hoilijoki; Urs Ganse; Teemu Roos; Minna Palmroth",
-    "title": "Quantification of non-Maxwellian properties in plasma mixing during magnetopause reconnection",
-    "venue": "",
-    "doi": "10.5194/egusphere-egu26-9730",
-    "url": "",
-    "notes": ""
-  },
-  {
-    "id": "a4artikkelikonferenssijulkaisussa-2026-rf534",
-    "code": "A4 Artikkeli konferenssijulkaisussa",
-    "year": 2026,
-    "status": "Published",
-    "authorsText": "Bäckman, Jenni; Piispa-Hakala, Satu; López Pernas, Sonsoles; Paavilainen, Teija; Hirsto, Laura",
-    "title": "Integrating Learning Analytics into a Blended Course: A Pilot Study",
-    "venue": "Bastiaens, Theo, Proceedings of EdMedia 2026 Edinburgh, 92-101",
-    "doi": "",
-    "url": "https://www.learntechlib.org/p/2129901/",
     "notes": ""
   },
   {
