@@ -1,7 +1,35 @@
 {
-  "fetchedAt": "2026-09-02T09:12:36.309Z",
+  "fetchedAt": "2026-09-03T09:20:06.214Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-03T08:00:25Z",
+      "title": "Jaakko Lempinen: Rakensin itselleni täydellisen tekoälyavustajan. Se toimi moitteetta ja oli hyödytön",
+      "url": "https://yle.fi/a/20-10009687",
+      "lead": "Keväällä ryhdyin rakentamaan itselleni sellaista avustajaa, jota tekoälyhype pian lupailee meille kaikille. Heinäkuussa se tunsi kalenterini, tavoitteeni ja unirytmini eikä erehtynyt juuri koskaan. Silti jokainen päivä avustajan kanssa toi lisää töitä, kunnes kielsin siltä juuri sen, missä sen pitäisi olla parhaimmillaan."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-02T14:10:46Z",
+      "title": "Uusi Macbook voi jäädä haaveeksi – kauppojen hyllyt ammottavat tyhjyyttään",
+      "url": "https://yle.fi/a/74-20244125",
+      "lead": "Macbook -kannettavissa tietokoneissa on saatavuus­ongelmia Suomessa. Syynä on maailman­laajuinen komponentti­pula, jonka taustalla on tekoälyn nopea kasvu."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-02T12:34:22Z",
+      "title": "Teknojätit kiinnostuivat muodista, tavoitteena valta",
+      "url": "https://yle.fi/v/video/91-20244169",
+      "lead": "Open AI:n kaltaiset teknolo­giayhtiöt lanseeraavat nyt vaate­mallistoja, sillä ne haluavat näyttäytyä trendikkäinä ja inhimillisinä, tutkija sanoo."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-02T10:00:16Z",
+      "title": "Teknojätit haluavat pukea sinut – tavoitteena trendikkyys ja valta",
+      "url": "https://yle.fi/a/74-20238724",
+      "lead": "Open AI:n kaltaiset teknolo­giayhtiöt lanseeraavat vaate­mallistoja, sillä ne haluavat näyttäytyä haluttavina lifestyle-brändeinä, tutkija sanoo."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-08-30T16:02:05Z",
@@ -18,24 +46,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-08-30T03:45:35Z",
-      "title": "Roope Lipastin kolumni: Olisiko jossain vielä palvelu, jota ei tarvitse hoitaa itse?",
-      "url": "https://yle.fi/a/74-20243309",
-      "lead": "Mitä vähemmän palvelua, sitä enemmän aplikaatioita, joilla homma pitää hoitaa itse, Lipasti puhisee."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-08-29T14:28:49Z",
       "title": "Somesta tuttu Amski joutuu työssään oikomaan tekoälyn virheitä: ”Mieluummin kuvia pelloilta kuin tarkastajia”",
       "url": "https://yle.fi/a/74-20243219",
       "lead": "Ruokaviraston satelliitti­seuranta aiheutti viime vuonna lähes 80 000 selvitys­pyyntöä. Tekoäly valvoo peltotukia, mutta tekee yhä paljon virheitä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-28T17:33:31Z",
-      "title": "Miten kotona voi toimia, jos nuoresta leviää väärennetty alaston­kuva? Rikosuhri­päivystyksen asiantuntija vastaa",
-      "url": "https://yle.fi/a/74-20243376",
-      "lead": "Rikosuhripäivystyksen asiantuntijan mukaan uhrille on hyvä sanoa, ettei väärennetty kuva ole hänen vikansa."
     },
     {
       "personName": "tekoäly",
@@ -57,13 +71,6 @@
       "title": "Elina Valtonen: Tuen ehdotusta suojelupoliisin siirtämisestä ulkoministeriön ohjaukseen",
       "url": "https://yle.fi/a/74-20242508",
       "lead": "Ulkoministeri Valtonen kommentoi suurlähettiläs­päivillä myös tekoälyn synnyttämiä varallisuus­eroja."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-24T05:51:21Z",
-      "title": "DN: Ruotsin äärioikeisto käyttää julkkiksia teko­älyvideoissa – Tiktok hyväksyy",
-      "url": "https://yle.fi/a/74-20242506",
-      "lead": "Lehden mukaan Tiktok rikkoo omia säädöksiään hyväksymällä tekoälyvideot."
     },
     {
       "personName": "tekoäly",
@@ -134,13 +141,6 @@
       "title": "Tekoälysisältö on jatkossa pakko merkitä – tältä näyttävät uudet, viralliset kuvakkeet",
       "url": "https://yle.fi/a/74-20240576",
       "lead": "Jatkossa tekoälysisällöt on helpompi tunnistaa. Monet sovellukset ovat alkaneet merkitä tekoälyn käyttöä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-11T13:19:50Z",
-      "title": "Claude-tekoälymalli alkaa merkitä tekstit vesileimalla – leimat eivät ole täysin aukottomia",
-      "url": "https://yle.fi/a/74-20240423",
-      "lead": "Merkinnän tarkoitus on auttaa kolmansia osapuolia tunnistamaan tekoälyllä tehty sisältö."
     },
     {
       "personName": "Teemu Roos",
