@@ -1,7 +1,35 @@
 {
-  "fetchedAt": "2026-09-03T09:20:06.214Z",
+  "fetchedAt": "2026-09-04T09:14:04.589Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-03T18:41:14Z",
+      "title": "Open AI julkaisee uuden tekoälymallin GPT-6 Astran",
+      "url": "https://yle.fi/a/74-20244514",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-03T15:14:50Z",
+      "title": "Kuusamossa suitsitaan nälkäisiä hirviä tekoälyn ja droonien avulla – tutustuimme uuteen teknologiaan",
+      "url": "https://yle.fi/a/74-20244144",
+      "lead": "Kameratekniikan ja tekoälyn avulla voidaan analysoida, mitkä taimet kannattaa suojata hirvi­karkotteella."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-03T13:14:13Z",
+      "title": "Nvidia ostaa tekoäly-yhtiön jättisummalla",
+      "url": "https://yle.fi/a/74-20244466",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-03T10:00:24Z",
+      "title": "Mikkeliin nousee 165 megawatin datakeskus – tekoälyalan jättiyritykset Open AI ja Amazon asiakkaina",
+      "url": "https://yle.fi/a/74-20244279",
+      "lead": "Mikkelin datakeskuksen käyttäjäksi tulee yhdysvaltalainen Cerebras. Yle selvitti, millaisesta yhtiöstä on kyse."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-03T08:00:25Z",
@@ -67,24 +95,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-08-24T07:06:57Z",
-      "title": "Elina Valtonen: Tuen ehdotusta suojelupoliisin siirtämisestä ulkoministeriön ohjaukseen",
-      "url": "https://yle.fi/a/74-20242508",
-      "lead": "Ulkoministeri Valtonen kommentoi suurlähettiläs­päivillä myös tekoälyn synnyttämiä varallisuus­eroja."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-08-23T12:31:02Z",
       "title": "Hittikirjailija Harari uskoo tekoälyn tunkeutuvan rakkauselämään",
       "url": "https://yle.fi/a/74-20242449",
       "lead": "Israelilainen tietokirjailija vaatii tekoälylle säätelyä. Argentiina haluaa jo sallia yritykset, joita johtavat botit."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-20T10:26:54Z",
-      "title": "Suomalaisten enemmistö pelkää, että tekoäly tuo massatyöttömyyden - miten oik...",
-      "url": "https://yle.fi/v/video/91-20242051",
-      "lead": ""
     },
     {
       "personName": "tekoäly",
@@ -120,20 +134,6 @@
       "title": "Tekoäly-yhtiö Anthropic silppusi miljoonia kirjoja USA:ssa – nyt samasta on merkkejä Euroopassa",
       "url": "https://yle.fi/a/74-20239464",
       "lead": "Anthropic silppusi miljoonia kirjoja tekoälynsä kouluttamiseen. Nyt Euroopassa epäillään vastaavaa ilmiötä, kun antikvariaatit saavat  omituisia kirjatilauksia."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-15T03:45:35Z",
-      "title": "Katri Saarikiven kolumni: Tekoäly ei oikeasti ymmärrä sinua, sillä se ei ole kokenut mitään",
-      "url": "https://yle.fi/a/74-20240669",
-      "lead": "Jaa tärkeät kokemukset ihan oikean ihmisen kanssa. Tutkimus osoittaa, että avautuminen tekoälylle voi pilata tyytyväisyyttä elämään, Saarikivi varoittaa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-14T16:40:44Z",
-      "title": "HS julkaisi tekoälyllä muokatun kuvan – työkalun uusi ominaisuus ei ollut työntekijän tiedossa",
-      "url": "https://yle.fi/a/74-20241104",
-      "lead": "– Tietenkin meillä pitäisi olla tiedossa kaikkien työkalujemme tekoälykehitys, HS:n toimituspäällikkö Emma-Leena Ovaskainen sanoo."
     },
     {
       "personName": "tekoäly",
