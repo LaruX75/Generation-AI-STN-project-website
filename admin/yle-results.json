@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-09-04T09:14:04.589Z",
+  "fetchedAt": "2026-09-05T08:44:51.146Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-04T15:35:55Z",
+      "title": "Reuters: Villiintyneet Open AI:n tekoälyagentit olivat hakkeroineet verkkosivuja jo kerrottua aiemmin",
+      "url": "https://yle.fi/a/74-20244693",
+      "lead": "OpenAI:n tekoälyagentit olivat käyttäneet saksalaista verkkosivua kiertääkseen rajoituksiaan ja jutellakseen keskenään. Open AI ei ollut kertonut tapauksesta."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-04T12:22:54Z",
+      "title": "Poliisi tarkentaa väärennettyihin tekoälykuviin Lappeenrannassa joutuneiden uhrien määrää – heitä on noin neljäkymmentä",
+      "url": "https://yle.fi/a/74-20244668",
+      "lead": "Lappeenrantalaisen alaikäisen pojan epäillään luoneen tekoälyllä alastonkuvia useista alaikäisistä tytöistä."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-03T18:41:14Z",
@@ -43,13 +57,6 @@
       "title": "Uusi Macbook voi jäädä haaveeksi – kauppojen hyllyt ammottavat tyhjyyttään",
       "url": "https://yle.fi/a/74-20244125",
       "lead": "Macbook -kannettavissa tietokoneissa on saatavuus­ongelmia Suomessa. Syynä on maailman­laajuinen komponentti­pula, jonka taustalla on tekoälyn nopea kasvu."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-02T12:34:22Z",
-      "title": "Teknojätit kiinnostuivat muodista, tavoitteena valta",
-      "url": "https://yle.fi/v/video/91-20244169",
-      "lead": "Open AI:n kaltaiset teknolo­giayhtiöt lanseeraavat nyt vaate­mallistoja, sillä ne haluavat näyttäytyä trendikkäinä ja inhimillisinä, tutkija sanoo."
     },
     {
       "personName": "tekoäly",
@@ -113,13 +120,6 @@
       "title": "Professori: Tekoäly houkuttelee opiskelijoita suorittamaan tehtäviä, ei oppimaan",
       "url": "https://yle.fi/a/74-20240913",
       "lead": "Suurin haaste on oppia yhdessä tekoälyn kanssa niin, ettei tekoäly ota ajattelusta vastuuta, sanoo kasvatustieteen professori Sanna Järvelä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-17T16:34:43Z",
-      "title": "Ministeriön tekoäly­näkemys närkästytti – strategia­johtaja vastaa: ”Keino puolustaa hyvin­vointi­valtion ydintä”",
-      "url": "https://yle.fi/a/74-20241446",
-      "lead": "Valtiovarainministeriön strategia- ja tutkimusjohtaja Olli Kärkkäisen mukaan tekoäly auttaa Suomea selviytymään julkisen sektorin suuresta eläköitymisaallosta."
     },
     {
       "personName": "tekoäly",
