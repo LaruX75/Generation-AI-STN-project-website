@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-09-05T08:44:51.146Z",
+  "fetchedAt": "2026-09-06T09:05:11.140Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-06T07:30:57Z",
+      "title": "Nokia hakee lupaa tekoälytehtaalle Oulun Toppilaan",
+      "url": "https://yle.fi/a/74-20244804",
+      "lead": "Kyse on esisopimuksesta, joka mahdollistaisi luvan datakeskuskampukselle ja sitä tukeville toiminnoille, kuten sähköasemalle ja vierailukeskukselle."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-05T10:58:55Z",
+      "title": "Näihin tiloihin tulee suomalais­tutkijoitakin auttava tekoälytehdas, joka on Euroopan unionin suurin",
+      "url": "https://yle.fi/a/74-20244665",
+      "lead": "Vuoden 2027 lopulla Kajaaniin valmistuvan tekoälytehtaan laskentateho vahvistaa Euroopan ja Suomen asemaa tutkimuksessa ja osaamisen kehittämisessä."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-04T15:35:55Z",
@@ -88,13 +102,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-08-27T02:30:35Z",
-      "title": "Maailman johtava tekoälytutkija kertoo, miksi ihmisten töiden katoaminen on aito riski",
-      "url": "https://yle.fi/a/74-20243082",
-      "lead": "Tekoälytutkija Bernhard Schölkopf katsoo, että yhteiskuntien nykyiset järjestelmät ja tavat toimia pitäisi miettiä uudelleen tekoälyn aikakaudella."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-08-24T19:12:40Z",
       "title": "Henna Virkkunen A-studiossa: EU on varautunut siihen, että tekoäly karkaa ihmisen kontrollista",
       "url": "https://yle.fi/a/74-20242668",
@@ -120,13 +127,6 @@
       "title": "Professori: Tekoäly houkuttelee opiskelijoita suorittamaan tehtäviä, ei oppimaan",
       "url": "https://yle.fi/a/74-20240913",
       "lead": "Suurin haaste on oppia yhdessä tekoälyn kanssa niin, ettei tekoäly ota ajattelusta vastuuta, sanoo kasvatustieteen professori Sanna Järvelä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-17T02:30:35Z",
-      "title": "Akavan puheenjohtaja huolestui tekoälystä: Hyvinvointi­yhteiskunta uhkaa rapautua",
-      "url": "https://yle.fi/a/74-20239543",
-      "lead": "Jos tekoäly korvaa ihmistyötä, yhtiöiden voittoja pitäisi verottaa ja rahat ohjata yhteiskunnan hyväksi, sanoo Akavan puheenjohtaja Maria Löfgren."
     },
     {
       "personName": "tekoäly",
