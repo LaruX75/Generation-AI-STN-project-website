@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-07T09:52:07.046Z",
+  "fetchedAt": "2026-09-08T09:16:23.045Z",
   "count": 26,
   "articles": [
     {
@@ -95,13 +95,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-08-29T14:28:49Z",
-      "title": "Somesta tuttu Amski joutuu työssään oikomaan tekoälyn virheitä: ”Mieluummin kuvia pelloilta kuin tarkastajia”",
-      "url": "https://yle.fi/a/74-20243219",
-      "lead": "Ruokaviraston satelliitti­seuranta aiheutti viime vuonna lähes 80 000 selvitys­pyyntöä. Tekoäly valvoo peltotukia, mutta tekee yhä paljon virheitä."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-08-24T19:12:40Z",
       "title": "Henna Virkkunen A-studiossa: EU on varautunut siihen, että tekoäly karkaa ihmisen kontrollista",
       "url": "https://yle.fi/a/74-20242668",
@@ -127,6 +120,13 @@
       "title": "Professori: Tekoäly houkuttelee opiskelijoita suorittamaan tehtäviä, ei oppimaan",
       "url": "https://yle.fi/a/74-20240913",
       "lead": "Suurin haaste on oppia yhdessä tekoälyn kanssa niin, ettei tekoäly ota ajattelusta vastuuta, sanoo kasvatustieteen professori Sanna Järvelä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-08-17T02:30:35Z",
+      "title": "Akavan puheenjohtaja huolestui tekoälystä: Hyvinvointi­yhteiskunta uhkaa rapautua",
+      "url": "https://yle.fi/a/74-20239543",
+      "lead": "Jos tekoäly korvaa ihmistyötä, yhtiöiden voittoja pitäisi verottaa ja rahat ohjata yhteiskunnan hyväksi, sanoo Akavan puheenjohtaja Maria Löfgren."
     },
     {
       "personName": "tekoäly",
