@@ -3,12 +3,6 @@ name: Deploy
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - "content/posts/**"
-      - "admin/*.html"
-      - "admin/trash.json"
-      - "admin/views-config.json"
-      - "admin/yle-results.json"
   workflow_dispatch:
 
 env:
@@ -45,8 +39,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .cache/api
-          key: api-cache-${{ github.run_id }}
-          restore-keys: api-cache-
+          key: api-cache-deploy-v2-${{ github.run_id }}
+          restore-keys: |
+            api-cache-deploy-v2-
 
       - name: Build
         run: npm run build:live
