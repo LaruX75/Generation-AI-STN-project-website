@@ -8,6 +8,7 @@ const auditedPages = [
   { name: "Research", url: "/tutkijalle/" },
   { name: "For everyone", url: "/yleisolle/" },
   { name: "Current affairs", url: "/ajankohtaista/" },
+  { name: "UNESCO award news", url: "/ajankohtaista/generation-ai-sai-merkittavan-unesco-palkinnon-tekoalykasvatuksesta/" },
   { name: "Project activities", url: "/hankkeen-toiminta/" },
   { name: "Teachable machine page", url: "/genai-opetettava-kone/" },
   { name: "Publication layout", url: "/henkilotietojen-kasittely-alakoulussa/" },
