@@ -1666,7 +1666,7 @@
   border-radius: 6px;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #999;
+  color: #666;
   background: var(--global-palette8, #f7f9f5);
   cursor: default;
   border: 1px solid var(--global-palette7, #d8decf);
