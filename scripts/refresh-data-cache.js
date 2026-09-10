@@ -4,7 +4,7 @@ const { buildDataFetchEnv } = require("./data-fetch-env");
 
 Object.assign(process.env, buildDataFetchEnv({ mode: "live", forceRefresh: true }));
 
-const DATA_DIR = path.join(process.cwd(), "_data");
+const DATA_DIR = path.join(process.cwd(), "src", "_data");
 
 async function loadDataModule(filePath) {
   const loaded = require(filePath);
