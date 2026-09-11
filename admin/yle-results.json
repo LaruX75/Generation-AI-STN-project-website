@@ -1,7 +1,35 @@
 {
-  "fetchedAt": "2026-09-10T09:18:40.906Z",
+  "fetchedAt": "2026-09-11T09:17:39.534Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-11T01:11:15Z",
+      "title": "Bloomberg: Open AI:n toimitusjohtaja Altman valmis hidastamaan tehokkaimpien tekoälymallien kehitystä",
+      "url": "https://yle.fi/a/74-20245705",
+      "lead": "Uutistoimiston lähteiden mukaan Altman kertoi asiasta koko yrityksen laajuisessa kokouksessa tällä viikolla."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-11T00:04:15Z",
+      "title": "Anthropic sanoi estäneensä ”pahantahtoisten toimijoiden” pyrkimyksiä käyttää tekoälymalleja kyberhyökkäyksiin ja valvontaan",
+      "url": "https://yle.fi/a/74-20245703",
+      "lead": "Aiemmin tällä viikolla Anthropicilta irtisanoutunut tutkija varoitti, että kilpajuoksu supertekoälyn kehittämiseksi on uhkapeliä ihmishengillä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-10T15:19:24Z",
+      "title": "Itä-Suomen yliopiston tekoälyhanke sai merkittävän tunnustuksen Unescolta",
+      "url": "https://yle.fi/a/74-20245612",
+      "lead": "Palkittu hanke edistää lasten ja nuorten tekoälyl­ukutaitoja."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-10T14:51:46Z",
+      "title": "Joko nyt kiinnostaa muoti?",
+      "url": "https://yle.fi/v/video/91-20245443",
+      "lead": "Otin haasteeksi tehdä muodista kiinnostavaa. Aiheen antoi Keinokahvi. Kerro, mikä viimeaikainen uutinen sinua ei ole kiinnostanut."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-08T19:00:49Z",
@@ -67,13 +95,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-03T10:00:24Z",
-      "title": "Mikkeliin nousee 165 megawatin datakeskus – tekoälyalan jättiyritykset Open AI ja Amazon asiakkaina",
-      "url": "https://yle.fi/a/74-20244279",
-      "lead": "Mikkelin datakeskuksen käyttäjäksi tulee yhdysvaltalainen Cerebras. Yle selvitti, millaisesta yhtiöstä on kyse."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-03T08:00:25Z",
       "title": "Jaakko Lempinen: Rakensin itselleni täydellisen tekoälyavustajan. Se toimi moitteetta ja oli hyödytön",
       "url": "https://yle.fi/a/20-10009687",
@@ -113,27 +134,6 @@
       "title": "Hittikirjailija Harari uskoo tekoälyn tunkeutuvan rakkauselämään",
       "url": "https://yle.fi/a/74-20242449",
       "lead": "Israelilainen tietokirjailija vaatii tekoälylle säätelyä. Argentiina haluaa jo sallia yritykset, joita johtavat botit."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-20T02:30:35Z",
-      "title": "Kysely: Puolet suomalaisista pelkää, että tekoäly johtaa massa­työttömyyteen – näin arvioivat asiantuntijat",
-      "url": "https://yle.fi/a/74-20240733",
-      "lead": "Tutkijat listaavat useita syitä, miksi tekoälyn vaikutus työllisyyteen voi jäädä ainakin lähi­tulevaisuudessa huomattavasti ihmisten pelkoa pienemmäksi."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-19T09:46:32Z",
-      "title": "Professori: Tekoäly houkuttelee opiskelijoita suorittamaan tehtäviä, ei oppimaan",
-      "url": "https://yle.fi/a/74-20240913",
-      "lead": "Suurin haaste on oppia yhdessä tekoälyn kanssa niin, ettei tekoäly ota ajattelusta vastuuta, sanoo kasvatustieteen professori Sanna Järvelä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-16T06:59:41Z",
-      "title": "Tekoäly-yhtiö Anthropic silppusi miljoonia kirjoja USA:ssa – nyt samasta on merkkejä Euroopassa",
-      "url": "https://yle.fi/a/74-20239464",
-      "lead": "Anthropic silppusi miljoonia kirjoja tekoälynsä kouluttamiseen. Nyt Euroopassa epäillään vastaavaa ilmiötä, kun antikvariaatit saavat  omituisia kirjatilauksia."
     },
     {
       "personName": "tekoäly",
