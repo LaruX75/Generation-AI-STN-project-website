@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-09-11T09:17:39.534Z",
+  "fetchedAt": "2026-09-12T08:57:56.921Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-12T05:01:48Z",
+      "title": "Analyysi: Google kertoi tällä viikolla jymyuutisen – Nokian tekoäly­tehtaasta sitä vasta odotetaan",
+      "url": "https://yle.fi/a/74-20245270",
+      "lead": "Kaikki merkit viittaavat siihen, että Nokia rakentaisi yhden EU:n tekoäly­tehtaista Ouluun. Kisa on silti kesken, kirjoittaa toimittaja Hanna Holopainen."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-12T02:52:32Z",
+      "title": "Jälleen julki uusi OpenAI:n tekoälymallien hyökkäys ulkopuoliseen palveluun",
+      "url": "https://yle.fi/a/74-20245954",
+      "lead": "Hyökkäys RubyGems-palveluun tapahtui toukokuussa eli yli kuukausi ennen aiemmin julki tullutta Hugging Face -hyökkäystä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-11T16:11:12Z",
+      "title": "Faru Yusupov keksi miten tekoälyllä voisi huijata kirjoituksissa, ja se ilahduttaa ylioppilastutkinto­lautakuntaa",
+      "url": "https://yle.fi/a/74-20245913",
+      "lead": "Käyttäjät ovat aikaisemminkin löytäneet kirjoituksissa käytettävästä Abitti-ohjelmasta tietoturva-aukkoja."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-11T01:11:15Z",
@@ -74,24 +95,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-03T18:41:14Z",
-      "title": "Open AI julkaisee uuden tekoälymallin GPT-6 Astran",
-      "url": "https://yle.fi/a/74-20244514",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-03T15:14:50Z",
       "title": "Kuusamossa suitsitaan nälkäisiä hirviä tekoälyn ja droonien avulla – tutustuimme uuteen teknologiaan",
       "url": "https://yle.fi/a/74-20244144",
       "lead": "Kameratekniikan ja tekoälyn avulla voidaan analysoida, mitkä taimet kannattaa suojata hirvi­karkotteella."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-03T13:14:13Z",
-      "title": "Nvidia ostaa tekoäly-yhtiön jättisummalla",
-      "url": "https://yle.fi/a/74-20244466",
-      "lead": ""
     },
     {
       "personName": "tekoäly",
@@ -106,13 +113,6 @@
       "title": "Uusi Macbook voi jäädä haaveeksi – kauppojen hyllyt ammottavat tyhjyyttään",
       "url": "https://yle.fi/a/74-20244125",
       "lead": "Macbook -kannettavissa tietokoneissa on saatavuus­ongelmia Suomessa. Syynä on maailman­laajuinen komponentti­pula, jonka taustalla on tekoälyn nopea kasvu."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-30T16:02:05Z",
-      "title": "Tekoäly iski jo työmarkkinoille – työministeri Marttisella yksi lääke mullistukseen",
-      "url": "https://yle.fi/a/74-20243578",
-      "lead": "Hallitus alkaa rakentaa viimeistä budjettiaan ensi viikolla. Työllisyys­kehitys vaikuttaa budjettiin isosti sekä työttömyys­korvauksien että verotulojen kautta."
     },
     {
       "personName": "tekoäly",
