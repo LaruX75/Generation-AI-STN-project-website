@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-09-12T08:57:56.921Z",
+  "fetchedAt": "2026-09-13T09:54:51.950Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-12T16:29:01Z",
+      "title": "Tekoäly-yhtiö Anthropicin toimitusjohtaja kehottaa hidastamaan oman alansa kehitystä",
+      "url": "https://yle.fi/a/74-20246005",
+      "lead": "Amodei ehdottaa tekoälymallien riippumatonta seurantaa niiden kehitys­vaiheessa, koko alaa koskevaa sääntelyä ja maailman­laajuista sääntelyä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-12T14:41:36Z",
+      "title": "Professori tyrmää tekoälytutkijoiden kauhukuvat ihmiskunnan lopusta",
+      "url": "https://yle.fi/a/74-20245802",
+      "lead": "Laura Ruotsalainen katsoo, että hurjat puheet vievät huomiota tekoälyn oikeista riskeistä kuten vaalivaikuttamisesta ja tietomurroista."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-12T05:01:48Z",
@@ -109,13 +123,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-02T14:10:46Z",
-      "title": "Uusi Macbook voi jäädä haaveeksi – kauppojen hyllyt ammottavat tyhjyyttään",
-      "url": "https://yle.fi/a/74-20244125",
-      "lead": "Macbook -kannettavissa tietokoneissa on saatavuus­ongelmia Suomessa. Syynä on maailman­laajuinen komponentti­pula, jonka taustalla on tekoälyn nopea kasvu."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-08-30T13:09:27Z",
       "title": "Stockmannin verkkokaupassa virheellinen tekoälykuva: ”Inhimillisistä syistä virheet eivät aina jää kiinni”",
       "url": "https://yle.fi/a/74-20243526",
@@ -134,13 +141,6 @@
       "title": "Hittikirjailija Harari uskoo tekoälyn tunkeutuvan rakkauselämään",
       "url": "https://yle.fi/a/74-20242449",
       "lead": "Israelilainen tietokirjailija vaatii tekoälylle säätelyä. Argentiina haluaa jo sallia yritykset, joita johtavat botit."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-12T14:00:33Z",
-      "title": "Tekoälysisältö on jatkossa pakko merkitä – tältä näyttävät uudet, viralliset kuvakkeet",
-      "url": "https://yle.fi/a/74-20240576",
-      "lead": "Jatkossa tekoälysisällöt on helpompi tunnistaa. Monet sovellukset ovat alkaneet merkitä tekoälyn käyttöä."
     },
     {
       "personName": "Teemu Roos",
