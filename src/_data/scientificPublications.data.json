@@ -6513,5 +6513,17 @@
     "doi": "",
     "url": "https://uef.cris.fi/publications/8e33d4df-714b-4ed3-84b1-0dce22b33e83",
     "notes": ""
+  },
+  {
+    "id": "conferencepresentation-2025-rf551",
+    "code": "conference-presentation",
+    "year": 2025,
+    "status": "Published",
+    "authorsText": "Daniel Rickard Holmberg; Ivan Zaitsev; Markku Juhani Alho; Ioanna Bouri; Fanni Sofia Franssila; Haewon Jeong; Minna Palmroth; Teemu Roos",
+    "title": "Graph-based Neural Space Weather Forecasting",
+    "venue": "NeurIPS 2025 Workshop on Machine Learning and the Physical Sciences, San Diego, United States, 06/12/2025",
+    "doi": "10.48550/arxiv.2509.19605",
+    "url": "",
+    "notes": ""
   }
 ]
