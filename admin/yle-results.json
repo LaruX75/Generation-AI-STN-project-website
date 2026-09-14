@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-09-13T09:54:51.950Z",
+  "fetchedAt": "2026-09-14T10:14:09.439Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-14T08:00:35Z",
+      "title": "Analyysi: Olen pitkään vastustanut tekoälyn ihmisen­kaltaistamista, mutta nyt se alkaa tuntua vaikealta",
+      "url": "https://yle.fi/a/74-20244697",
+      "lead": "Jos uskomme, että tekoäly tuhoaa ihmiskunnan, pidämme konetta moraalisena toimijana. Kone ei sitä ole, kirjoittaa Yle teknologia­toimittaja Teemu Hallamaa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-13T13:54:08Z",
+      "title": "Trump ei usko tekoäly-yhtiöiden varoituksiin",
+      "url": "https://yle.fi/a/74-20246058",
+      "lead": "Trump sanoo, että Yhdysvallat voisi asettaa rajoja tai ”tehdä sitä sun tätä”."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-13T11:18:24Z",
+      "title": "Analyysi: Tekoälyjohtajat varoittavat ihmiskunnan tuhosta – mutta onko kyse pelosta vai politiikasta?",
+      "url": "https://yle.fi/a/74-20246031",
+      "lead": "Tekoäly-yhtiöiden avainhenkilöt maalailevat nyt uhkakuvia, joissa heidän omat keksintönsä voivat tuhota ihmiskunnan. Tuholla pelottelu voi olla myös keino markkinoida, kirjoittaa Ylen taloustoimittaja Ville Kolari."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-12T16:29:01Z",
@@ -60,13 +81,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-10T14:51:46Z",
-      "title": "Joko nyt kiinnostaa muoti?",
-      "url": "https://yle.fi/v/video/91-20245443",
-      "lead": "Otin haasteeksi tehdä muodista kiinnostavaa. Aiheen antoi Keinokahvi. Kerro, mikä viimeaikainen uutinen sinua ei ole kiinnostanut."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-08T19:00:49Z",
       "title": "Open AI väittää ratkaisseensa yhden vuosituhannen matemaattisista mysteereistä",
       "url": "https://yle.fi/a/74-20245250",
@@ -99,20 +113,6 @@
       "title": "Reuters: Villiintyneet Open AI:n tekoälyagentit olivat hakkeroineet verkkosivuja jo kerrottua aiemmin",
       "url": "https://yle.fi/a/74-20244693",
       "lead": "OpenAI:n tekoälyagentit olivat käyttäneet saksalaista verkkosivua kiertääkseen rajoituksiaan ja jutellakseen keskenään. Open AI ei ollut kertonut tapauksesta."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-04T12:22:54Z",
-      "title": "Poliisi tarkentaa väärennettyihin tekoälykuviin Lappeenrannassa joutuneiden uhrien määrää – heitä on noin neljäkymmentä",
-      "url": "https://yle.fi/a/74-20244668",
-      "lead": "Lappeenrantalaisen alaikäisen pojan epäillään luoneen tekoälyllä alastonkuvia useista alaikäisistä tytöistä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-03T15:14:50Z",
-      "title": "Kuusamossa suitsitaan nälkäisiä hirviä tekoälyn ja droonien avulla – tutustuimme uuteen teknologiaan",
-      "url": "https://yle.fi/a/74-20244144",
-      "lead": "Kameratekniikan ja tekoälyn avulla voidaan analysoida, mitkä taimet kannattaa suojata hirvi­karkotteella."
     },
     {
       "personName": "tekoäly",
