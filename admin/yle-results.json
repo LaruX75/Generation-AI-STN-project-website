@@ -1,13 +1,34 @@
 {
-  "fetchedAt": "2026-09-14T10:14:09.439Z",
+  "fetchedAt": "2026-09-15T09:43:43.420Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-14T15:49:31Z",
+      "title": "Tekoälyhuoli painoi Helsingin pörssin laskuun maanantaina",
+      "url": "https://yle.fi/a/74-20246257",
+      "lead": "Johtavat tekoäly-yhtiöt esittivät viikonloppuna tekoälyn kehityksen hidastamista."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-14T15:03:43Z",
+      "title": "Trump sanoo olevansa riittävä turvatoimi tekoälyä vastaan",
+      "url": "https://yle.fi/a/74-20246254",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-14T11:09:49Z",
+      "title": "Kiinan tiedustelujohtaja varoittaa tekoälyn riskeistä",
+      "url": "https://yle.fi/a/74-20246194",
+      "lead": ""
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-14T08:00:35Z",
       "title": "Analyysi: Olen pitkään vastustanut tekoälyn ihmisen­kaltaistamista, mutta nyt se alkaa tuntua vaikealta",
       "url": "https://yle.fi/a/74-20244697",
-      "lead": "Jos uskomme, että tekoäly tuhoaa ihmiskunnan, pidämme konetta moraalisena toimijana. Kone ei sitä ole, kirjoittaa Yle teknologia­toimittaja Teemu Hallamaa."
+      "lead": "Jos uskomme, että tekoäly tuhoaa ihmiskunnan, pidämme konetta moraalisena toimijana. Kone ei sitä ole, kirjoittaa teknologia­toimittaja Teemu Hallamaa."
     },
     {
       "personName": "tekoäly",
@@ -116,31 +137,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-03T08:00:25Z",
-      "title": "Jaakko Lempinen: Rakensin itselleni täydellisen tekoälyavustajan. Se toimi moitteetta ja oli hyödytön",
-      "url": "https://yle.fi/a/20-10009687",
-      "lead": "Keväällä ryhdyin rakentamaan itselleni sellaista avustajaa, jota tekoälyhype pian lupailee meille kaikille. Heinäkuussa se tunsi kalenterini, tavoitteeni ja unirytmini eikä erehtynyt juuri koskaan. Silti jokainen päivä avustajan kanssa toi lisää töitä, kunnes kielsin siltä juuri sen, missä sen pitäisi olla parhaimmillaan."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-08-30T13:09:27Z",
       "title": "Stockmannin verkkokaupassa virheellinen tekoälykuva: ”Inhimillisistä syistä virheet eivät aina jää kiinni”",
       "url": "https://yle.fi/a/74-20243526",
       "lead": "Stockmann poisti virheellisen tekoälykuvan verkko­kaupastaan Ylen yhteydenoton jälkeen."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-24T19:12:40Z",
-      "title": "Henna Virkkunen A-studiossa: EU on varautunut siihen, että tekoäly karkaa ihmisen kontrollista",
-      "url": "https://yle.fi/a/74-20242668",
-      "lead": "Viime aikoina tekoäly­mallit ovat karanneet testi­ympäris­töistään ja aiheuttaneet vahinkoa kyber­turvallisuuden näkö­kulmasta."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-23T12:31:02Z",
-      "title": "Hittikirjailija Harari uskoo tekoälyn tunkeutuvan rakkauselämään",
-      "url": "https://yle.fi/a/74-20242449",
-      "lead": "Israelilainen tietokirjailija vaatii tekoälylle säätelyä. Argentiina haluaa jo sallia yritykset, joita johtavat botit."
     },
     {
       "personName": "Teemu Roos",
