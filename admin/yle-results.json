@@ -1,7 +1,35 @@
 {
-  "fetchedAt": "2026-09-15T09:43:43.420Z",
+  "fetchedAt": "2026-09-16T09:36:36.259Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-16T06:14:00Z",
+      "title": "Tanskan keskuspankki: Tekoäly vähentää työpaikkoja kahdelta työntekijäryhmältä",
+      "url": "https://yle.fi/a/74-20246509",
+      "lead": "Tekoäly vähentää nuorten ja hyvin koulutettujen tehtäviä, ilmenee Tanskan keskuspankin selvityksestä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-15T19:23:40Z",
+      "title": "Professori: Tekoälylle täytyy asettaa rajat",
+      "url": "https://yle.fi/a/74-20246472",
+      "lead": "Euroopan on päästävä tekoälyasioissa takapenkiltä kuljettajan paikalle, vertaa ohjelmisto­tekniikan professori Pekka Abrahamsson."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-15T17:11:29Z",
+      "title": "Maailman suurimmat tekoäly-yhtiöt suunnittelevat valvontaelintä",
+      "url": "https://yle.fi/a/74-20246467",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-15T15:58:52Z",
+      "title": "Analyysi: Tekoälypomot varoittavat nyt vaaroista, mutta sääntely törmää vuoreen nimeltä Donald Trump",
+      "url": "https://yle.fi/a/74-20246438",
+      "lead": "Tekoälystä eniten tietävät tuntuvat usein olevan siitä eniten huolissaan. Silti yhteiskunnat eivät juuri näytä varautuvan tulevaan myrskyyn."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-14T15:49:31Z",
@@ -102,27 +130,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-08T19:00:49Z",
-      "title": "Open AI väittää ratkaisseensa yhden vuosituhannen matemaattisista mysteereistä",
-      "url": "https://yle.fi/a/74-20245250",
-      "lead": "90 vuotta ratkaisematta ollut pulma on eräs maailman tärkeimmistä matemaattisista ongelmista. Kokeellisen tekoälyn tekemää ratkaisua ei ole voitu vahvistaa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-08T16:29:00Z",
-      "title": "Oulun yhdyskunta­lautakunta näyttää vihreää valoa Nokian tekoäly­tehtaalle",
-      "url": "https://yle.fi/a/74-20245240",
-      "lead": "Kaupan toteutumisessa on vielä monta mutkaa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-06T07:30:57Z",
-      "title": "Nokia hakee lupaa tekoälytehtaalle Oulun Toppilaan",
-      "url": "https://yle.fi/a/74-20244804",
-      "lead": "Kyse on esisopimuksesta, joka mahdollistaisi luvan datakeskuskampukselle ja sitä tukeville toiminnoille, kuten sähköasemalle ja vierailukeskukselle."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-05T10:58:55Z",
       "title": "Näihin tiloihin tulee suomalais­tutkijoitakin auttava tekoälytehdas, joka on Euroopan unionin suurin",
       "url": "https://yle.fi/a/74-20244665",
@@ -134,13 +141,6 @@
       "title": "Reuters: Villiintyneet Open AI:n tekoälyagentit olivat hakkeroineet verkkosivuja jo kerrottua aiemmin",
       "url": "https://yle.fi/a/74-20244693",
       "lead": "OpenAI:n tekoälyagentit olivat käyttäneet saksalaista verkkosivua kiertääkseen rajoituksiaan ja jutellakseen keskenään. Open AI ei ollut kertonut tapauksesta."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-08-30T13:09:27Z",
-      "title": "Stockmannin verkkokaupassa virheellinen tekoälykuva: ”Inhimillisistä syistä virheet eivät aina jää kiinni”",
-      "url": "https://yle.fi/a/74-20243526",
-      "lead": "Stockmann poisti virheellisen tekoälykuvan verkko­kaupastaan Ylen yhteydenoton jälkeen."
     },
     {
       "personName": "Teemu Roos",
