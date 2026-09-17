@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-09-16T09:36:36.259Z",
+  "fetchedAt": "2026-09-17T09:44:49.794Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-17T05:27:49Z",
+      "title": "Open AI:n tekoälyagentit lähtivät jälleen laukalle – tekoäly-yhtiö paljasti kuusi uutta tapausta",
+      "url": "https://yle.fi/a/74-20246704",
+      "lead": "Open AI kertoo luovansa uuden toimintamallin tekoälymalliensa tehokkaampaa valvomista ja seuraamista varten."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-16T18:20:55Z",
+      "title": "Axios: Yhdysvallat valmis keskustelemaan Kiinan kanssa tekoälystä",
+      "url": "https://yle.fi/a/74-20246684",
+      "lead": "Pelot tekoälyn vaaroista ovat voimistuneet viime viikkoina."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-16T14:32:01Z",
+      "title": "Kysely: Enemmistö amerikkalaisista katsoo, että tekoäly kehittyy liian nopeasti",
+      "url": "https://yle.fi/a/74-20246668",
+      "lead": ""
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-16T06:14:00Z",
@@ -102,13 +123,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-11T16:11:12Z",
-      "title": "Faru Yusupov keksi miten tekoälyllä voisi huijata kirjoituksissa, ja se ilahduttaa ylioppilastutkinto­lautakuntaa",
-      "url": "https://yle.fi/a/74-20245913",
-      "lead": "Käyttäjät ovat aikaisemminkin löytäneet kirjoituksissa käytettävästä Abitti-ohjelmasta tietoturva-aukkoja."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-11T01:11:15Z",
       "title": "Bloomberg: Open AI:n toimitusjohtaja Altman valmis hidastamaan tehokkaimpien tekoälymallien kehitystä",
       "url": "https://yle.fi/a/74-20245705",
@@ -127,20 +141,6 @@
       "title": "Itä-Suomen yliopiston tekoälyhanke sai merkittävän tunnustuksen Unescolta",
       "url": "https://yle.fi/a/74-20245612",
       "lead": "Palkittu hanke edistää lasten ja nuorten tekoälyl­ukutaitoja."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-05T10:58:55Z",
-      "title": "Näihin tiloihin tulee suomalais­tutkijoitakin auttava tekoälytehdas, joka on Euroopan unionin suurin",
-      "url": "https://yle.fi/a/74-20244665",
-      "lead": "Vuoden 2027 lopulla Kajaaniin valmistuvan tekoälytehtaan laskentateho vahvistaa Euroopan ja Suomen asemaa tutkimuksessa ja osaamisen kehittämisessä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-04T15:35:55Z",
-      "title": "Reuters: Villiintyneet Open AI:n tekoälyagentit olivat hakkeroineet verkkosivuja jo kerrottua aiemmin",
-      "url": "https://yle.fi/a/74-20244693",
-      "lead": "OpenAI:n tekoälyagentit olivat käyttäneet saksalaista verkkosivua kiertääkseen rajoituksiaan ja jutellakseen keskenään. Open AI ei ollut kertonut tapauksesta."
     },
     {
       "personName": "Teemu Roos",
