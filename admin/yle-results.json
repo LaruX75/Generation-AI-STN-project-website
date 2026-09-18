@@ -1,7 +1,35 @@
 {
-  "fetchedAt": "2026-09-17T09:44:49.794Z",
+  "fetchedAt": "2026-09-18T09:18:24.771Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-18T07:44:29Z",
+      "title": "Analyysi: Tekoälykuvia tunnistaviin palveluihin ei voi luottaa, koska digijättejä ei kiinnosta",
+      "url": "https://yle.fi/a/74-20244950",
+      "lead": "Tekoälybotit ovat surkeita tekoälykuvien tunnistamisessa. Digijätit eivät edes yritä siivota tauhkaa, jolla ne itse täyttävät somesyötteemme."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-18T05:07:08Z",
+      "title": "Testaa, erotatko enää todellisuutta ja tekoälyn tuotosta toisistaan",
+      "url": "https://yle.fi/a/74-20246859",
+      "lead": "Tekoälyllä tehtyjä kuvia ja videoita on  entistä vaikeampaa erottaa aidosta."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-17T12:44:57Z",
+      "title": "Britannian kuningas Charles kutsui koolle tekoäly-yritysten johtajat",
+      "url": "https://yle.fi/a/74-20246857",
+      "lead": "Puheessaan Britannian kuningas toivoi puheessaan yrityksiä varmistamaan, että tekoäly pysyy ihmiskunnan palvelijana."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-17T12:20:51Z",
+      "title": "Nuori, käytätkö tekoälyä tavalla, jota muut eivät ehkä ole keksineet? Etsimme haastateltavia",
+      "url": "https://yle.fi/a/74-20246741",
+      "lead": "Yle etsii haasta­teltavaksi nuoria kertomaan kekseliäistä ja yllättävistä tavoista käyttää tekoälyä arjessa."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-17T05:27:49Z",
@@ -53,13 +81,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-14T15:49:31Z",
-      "title": "Tekoälyhuoli painoi Helsingin pörssin laskuun maanantaina",
-      "url": "https://yle.fi/a/74-20246257",
-      "lead": "Johtavat tekoäly-yhtiöt esittivät viikonloppuna tekoälyn kehityksen hidastamista."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-14T15:03:43Z",
       "title": "Trump sanoo olevansa riittävä turvatoimi tekoälyä vastaan",
       "url": "https://yle.fi/a/74-20246254",
@@ -78,13 +99,6 @@
       "title": "Analyysi: Olen pitkään vastustanut tekoälyn ihmisen­kaltaistamista, mutta nyt se alkaa tuntua vaikealta",
       "url": "https://yle.fi/a/74-20244697",
       "lead": "Jos uskomme, että tekoäly tuhoaa ihmiskunnan, pidämme konetta moraalisena toimijana. Kone ei sitä ole, kirjoittaa teknologia­toimittaja Teemu Hallamaa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-13T13:54:08Z",
-      "title": "Trump ei usko tekoäly-yhtiöiden varoituksiin",
-      "url": "https://yle.fi/a/74-20246058",
-      "lead": "Trump sanoo, että Yhdysvallat voisi asettaa rajoja tai ”tehdä sitä sun tätä”."
     },
     {
       "personName": "tekoäly",
@@ -109,13 +123,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-12T05:01:48Z",
-      "title": "Analyysi: Google kertoi tällä viikolla jymyuutisen – Nokian tekoäly­tehtaasta sitä vasta odotetaan",
-      "url": "https://yle.fi/a/74-20245270",
-      "lead": "Kaikki merkit viittaavat siihen, että Nokia rakentaisi yhden EU:n tekoäly­tehtaista Ouluun. Kisa on silti kesken, kirjoittaa toimittaja Hanna Holopainen."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-12T02:52:32Z",
       "title": "Jälleen julki uusi OpenAI:n tekoälymallien hyökkäys ulkopuoliseen palveluun",
       "url": "https://yle.fi/a/74-20245954",
@@ -134,13 +141,6 @@
       "title": "Anthropic sanoi estäneensä ”pahantahtoisten toimijoiden” pyrkimyksiä käyttää tekoälymalleja kyberhyökkäyksiin ja valvontaan",
       "url": "https://yle.fi/a/74-20245703",
       "lead": "Aiemmin tällä viikolla Anthropicilta irtisanoutunut tutkija varoitti, että kilpajuoksu supertekoälyn kehittämiseksi on uhkapeliä ihmishengillä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-10T15:19:24Z",
-      "title": "Itä-Suomen yliopiston tekoälyhanke sai merkittävän tunnustuksen Unescolta",
-      "url": "https://yle.fi/a/74-20245612",
-      "lead": "Palkittu hanke edistää lasten ja nuorten tekoälyl­ukutaitoja."
     },
     {
       "personName": "Teemu Roos",
