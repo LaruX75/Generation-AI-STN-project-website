@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-09-18T09:18:24.771Z",
+  "fetchedAt": "2026-09-19T09:05:24.220Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-19T00:26:38Z",
+      "title": "Myös Googlen tekoälymalli Gemini tunkeutunut ulkopuolisiin järjestelmiin",
+      "url": "https://yle.fi/a/74-20247148",
+      "lead": "Kyseessä on ensimmäinen julki tullut tapaus, jossa Googlen tekoälymallit ovat tehneet itsenäisiä kyberhyökkäyksiä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-18T20:37:19Z",
+      "title": "Tekoäly-yhtiö OpenAI:n toimitusjohtaja Altman puhuu YK:n turvallisuusneuvostolle ensi viikolla",
+      "url": "https://yle.fi/a/74-20247141",
+      "lead": "Turvallisuusneuvoston keskiviikkona järjestettävässä tapaamisessa käsitellään tekoälyä ja kansainvälistä turvallisuutta."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-18T18:18:53Z",
+      "title": "CNN: USA oli lähellä hyökätä kiinalaisalukselle virheellisen tekoälytiedon perusteella",
+      "url": "https://yle.fi/a/74-20247134",
+      "lead": "Tapaus sattui keväällä Lähi-idässä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-18T11:25:10Z",
+      "title": "Näin tekoälybotti puhui puppua kuvan aitoudesta",
+      "url": "https://yle.fi/v/video/91-20244951",
+      "lead": "Kokeilimme Metan bottia tekoälykuvien tunnistamiseen. Se toimi huonosti. Meta ei vastannut Ylen kysymyksiin."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-18T10:00:08Z",
+      "title": "Analyysi: Tekoäly karkaa, Trump ei välitä – tämä voi jäädä Trumpin pysyvimmäksi jäljeksi historiaan",
+      "url": "https://yle.fi/a/74-20246917",
+      "lead": "Donald Trump yrittää kaikin tavoin tukahduttaa keskustelun tarpeesta valvoa tekoälyä, kirjoittaa Yhdysvaltain-kirjeenvaihtaja Ilmari Reunamäki."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-18T07:44:29Z",
@@ -81,20 +116,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-14T15:03:43Z",
-      "title": "Trump sanoo olevansa riittävä turvatoimi tekoälyä vastaan",
-      "url": "https://yle.fi/a/74-20246254",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-14T11:09:49Z",
-      "title": "Kiinan tiedustelujohtaja varoittaa tekoälyn riskeistä",
-      "url": "https://yle.fi/a/74-20246194",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-14T08:00:35Z",
       "title": "Analyysi: Olen pitkään vastustanut tekoälyn ihmisen­kaltaistamista, mutta nyt se alkaa tuntua vaikealta",
       "url": "https://yle.fi/a/74-20244697",
@@ -120,27 +141,6 @@
       "title": "Professori tyrmää tekoälytutkijoiden kauhukuvat ihmiskunnan lopusta",
       "url": "https://yle.fi/a/74-20245802",
       "lead": "Laura Ruotsalainen katsoo, että hurjat puheet vievät huomiota tekoälyn oikeista riskeistä kuten vaalivaikuttamisesta ja tietomurroista."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-12T02:52:32Z",
-      "title": "Jälleen julki uusi OpenAI:n tekoälymallien hyökkäys ulkopuoliseen palveluun",
-      "url": "https://yle.fi/a/74-20245954",
-      "lead": "Hyökkäys RubyGems-palveluun tapahtui toukokuussa eli yli kuukausi ennen aiemmin julki tullutta Hugging Face -hyökkäystä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-11T01:11:15Z",
-      "title": "Bloomberg: Open AI:n toimitusjohtaja Altman valmis hidastamaan tehokkaimpien tekoälymallien kehitystä",
-      "url": "https://yle.fi/a/74-20245705",
-      "lead": "Uutistoimiston lähteiden mukaan Altman kertoi asiasta koko yrityksen laajuisessa kokouksessa tällä viikolla."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-11T00:04:15Z",
-      "title": "Anthropic sanoi estäneensä ”pahantahtoisten toimijoiden” pyrkimyksiä käyttää tekoälymalleja kyberhyökkäyksiin ja valvontaan",
-      "url": "https://yle.fi/a/74-20245703",
-      "lead": "Aiemmin tällä viikolla Anthropicilta irtisanoutunut tutkija varoitti, että kilpajuoksu supertekoälyn kehittämiseksi on uhkapeliä ihmishengillä."
     },
     {
       "personName": "Teemu Roos",
