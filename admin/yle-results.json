@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-09-19T09:05:24.220Z",
+  "fetchedAt": "2026-09-20T09:32:06.002Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-20T07:47:09Z",
+      "title": "Kolme uhkakuvaa: näin tekoäly tuhoaisi meidät",
+      "url": "https://yle.fi/a/74-20246550",
+      "lead": "Suomalaiset professorit uskovat tekoälyn vaaroihin, mutta ovat eri mieltä pahimpien riskien todennäköi­syydestä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-19T17:26:32Z",
+      "title": "Trump sanoo luovansa tekoälyjoukot ja nimittävänsä tekoälytsaarin",
+      "url": "https://yle.fi/a/74-20247198",
+      "lead": "Keskustelu tekoälyn sääntelystä on ollut Washingtonissa vaimeaa, vaikka Piilaaksossa tekoälyn hallitsemattoman kehityksen vaaroista on puhuttu vuosikausia."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-19T00:26:38Z",
@@ -81,13 +95,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-16T14:32:01Z",
-      "title": "Kysely: Enemmistö amerikkalaisista katsoo, että tekoäly kehittyy liian nopeasti",
-      "url": "https://yle.fi/a/74-20246668",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-16T06:14:00Z",
       "title": "Tanskan keskuspankki: Tekoäly vähentää työpaikkoja kahdelta työntekijäryhmältä",
       "url": "https://yle.fi/a/74-20246509",
@@ -134,13 +141,6 @@
       "title": "Tekoäly-yhtiö Anthropicin toimitusjohtaja kehottaa hidastamaan oman alansa kehitystä",
       "url": "https://yle.fi/a/74-20246005",
       "lead": "Amodei ehdottaa tekoälymallien riippumatonta seurantaa niiden kehitys­vaiheessa, koko alaa koskevaa sääntelyä ja maailman­laajuista sääntelyä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-12T14:41:36Z",
-      "title": "Professori tyrmää tekoälytutkijoiden kauhukuvat ihmiskunnan lopusta",
-      "url": "https://yle.fi/a/74-20245802",
-      "lead": "Laura Ruotsalainen katsoo, että hurjat puheet vievät huomiota tekoälyn oikeista riskeistä kuten vaalivaikuttamisesta ja tietomurroista."
     },
     {
       "personName": "Teemu Roos",
