@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-09-20T09:32:06.002Z",
+  "fetchedAt": "2026-09-21T10:19:05.034Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-21T06:24:56Z",
+      "title": "Käytätkö tekoälyn suosituksia? Jos käytät, sinun on hyvä tietää, että niihin ostetaan mainoksia",
+      "url": "https://yle.fi/a/74-20244458",
+      "lead": "Osa suomalaisista yrityksistä ostaa jo näkyvyyttä tekoäly­hakuihin. Hakukone­liikenteen puolittuessa taistelu siirtyy suosituksiin."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-21T00:32:39Z",
+      "title": "USA:n Bessent keskusteli Kiinan edustajan kanssa tekoälystä",
+      "url": "https://yle.fi/a/74-20247285",
+      "lead": "Tapaamisen sanottiin pohjustaneen Trumpin ja Xiin tapaamista, jonka odotetaan tapahtuvan alkavalla viikolla."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-20T10:36:15Z",
+      "title": "Verotus on muuttunut yhteiskuntien mukana, mutta tekoälyn tekemän työn verottaminen ei ole helppoa",
+      "url": "https://yle.fi/a/74-20243999",
+      "lead": "Automaation lisääntyessä useissa maissa alettiin pohtia robottiveroa. Nyt tekoäly on tuonut saman keskustelun digitaalisiin töihin."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-20T07:47:09Z",
@@ -109,31 +130,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-15T17:11:29Z",
-      "title": "Maailman suurimmat tekoäly-yhtiöt suunnittelevat valvontaelintä",
-      "url": "https://yle.fi/a/74-20246467",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-15T15:58:52Z",
       "title": "Analyysi: Tekoälypomot varoittavat nyt vaaroista, mutta sääntely törmää vuoreen nimeltä Donald Trump",
       "url": "https://yle.fi/a/74-20246438",
       "lead": "Tekoälystä eniten tietävät tuntuvat usein olevan siitä eniten huolissaan. Silti yhteiskunnat eivät juuri näytä varautuvan tulevaan myrskyyn."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-14T08:00:35Z",
-      "title": "Analyysi: Olen pitkään vastustanut tekoälyn ihmisen­kaltaistamista, mutta nyt se alkaa tuntua vaikealta",
-      "url": "https://yle.fi/a/74-20244697",
-      "lead": "Jos uskomme, että tekoäly tuhoaa ihmiskunnan, pidämme konetta moraalisena toimijana. Kone ei sitä ole, kirjoittaa teknologia­toimittaja Teemu Hallamaa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-13T11:18:24Z",
-      "title": "Analyysi: Tekoälyjohtajat varoittavat ihmiskunnan tuhosta – mutta onko kyse pelosta vai politiikasta?",
-      "url": "https://yle.fi/a/74-20246031",
-      "lead": "Tekoäly-yhtiöiden avainhenkilöt maalailevat nyt uhkakuvia, joissa heidän omat keksintönsä voivat tuhota ihmiskunnan. Tuholla pelottelu voi olla myös keino markkinoida, kirjoittaa Ylen taloustoimittaja Ville Kolari."
     },
     {
       "personName": "tekoäly",
