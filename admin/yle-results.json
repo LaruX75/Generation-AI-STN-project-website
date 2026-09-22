@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-09-21T10:19:05.034Z",
+  "fetchedAt": "2026-09-22T09:34:14.421Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-21T16:00:07Z",
+      "title": "Alexander Stubb ja Norjan pääministeri vetoavat, että tekoäly on pidettävä ihmisen näpeissä – mukana jo 20 maata",
+      "url": "https://yle.fi/a/74-20247462",
+      "lead": "Vetoomuksessa kehotetaan tekoäly-yrityksiä laatimaan läpinäkyviä mekanismeja, joilla voidaan varmistaa, että tekoälyn kehitys ei uhkaa ihmiskunnan kehitystä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-21T15:58:36Z",
+      "title": "Presidentti Stubbilta vetoomus YK:ssa tekoälyn kansain­välisestä valvonnasta",
+      "url": "https://yle.fi/a/74-20247467",
+      "lead": "Vetoomuksessa kehotetaan tekoäly-yrityksiä laatimaan läpinäkyviä mekanismeja, joilla voidaan varmistaa, että tekoälyn kehitys ei uhkaa ihmiskunnan kehitystä."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-21T06:24:56Z",
@@ -116,13 +130,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-16T06:14:00Z",
-      "title": "Tanskan keskuspankki: Tekoäly vähentää työpaikkoja kahdelta työntekijäryhmältä",
-      "url": "https://yle.fi/a/74-20246509",
-      "lead": "Tekoäly vähentää nuorten ja hyvin koulutettujen tehtäviä, ilmenee Tanskan keskuspankin selvityksestä."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-15T19:23:40Z",
       "title": "Professori: Tekoälylle täytyy asettaa rajat",
       "url": "https://yle.fi/a/74-20246472",
@@ -134,13 +141,6 @@
       "title": "Analyysi: Tekoälypomot varoittavat nyt vaaroista, mutta sääntely törmää vuoreen nimeltä Donald Trump",
       "url": "https://yle.fi/a/74-20246438",
       "lead": "Tekoälystä eniten tietävät tuntuvat usein olevan siitä eniten huolissaan. Silti yhteiskunnat eivät juuri näytä varautuvan tulevaan myrskyyn."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-12T16:29:01Z",
-      "title": "Tekoäly-yhtiö Anthropicin toimitusjohtaja kehottaa hidastamaan oman alansa kehitystä",
-      "url": "https://yle.fi/a/74-20246005",
-      "lead": "Amodei ehdottaa tekoälymallien riippumatonta seurantaa niiden kehitys­vaiheessa, koko alaa koskevaa sääntelyä ja maailman­laajuista sääntelyä."
     },
     {
       "personName": "Teemu Roos",
