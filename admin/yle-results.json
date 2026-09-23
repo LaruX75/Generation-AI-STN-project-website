@@ -1,19 +1,19 @@
 {
-  "fetchedAt": "2026-09-22T09:34:14.421Z",
+  "fetchedAt": "2026-09-23T09:39:29.512Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-23T02:30:36Z",
+      "title": "Tekoälykirjuri auttaa nyt lääkäriä Riihimäellä niin, että tunnin homma hoituu vartissa",
+      "url": "https://yle.fi/a/74-20245626",
+      "lead": "Tekoälystä toivotaan pelastusta moneen julkisen sektorin palveluun. Tekoälyn tulo jakaa suomalaisia. Uusi tekniikka epäilyttää nuoria enemmän kuin vanhoja."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-21T16:00:07Z",
       "title": "Alexander Stubb ja Norjan pääministeri vetoavat, että tekoäly on pidettävä ihmisen näpeissä – mukana jo 20 maata",
       "url": "https://yle.fi/a/74-20247462",
-      "lead": "Vetoomuksessa kehotetaan tekoäly-yrityksiä laatimaan läpinäkyviä mekanismeja, joilla voidaan varmistaa, että tekoälyn kehitys ei uhkaa ihmiskunnan kehitystä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-21T15:58:36Z",
-      "title": "Presidentti Stubbilta vetoomus YK:ssa tekoälyn kansain­välisestä valvonnasta",
-      "url": "https://yle.fi/a/74-20247467",
       "lead": "Vetoomuksessa kehotetaan tekoäly-yrityksiä laatimaan läpinäkyviä mekanismeja, joilla voidaan varmistaa, että tekoälyn kehitys ei uhkaa ihmiskunnan kehitystä."
     },
     {
