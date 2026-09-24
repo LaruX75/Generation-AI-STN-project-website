@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-09-23T09:39:29.512Z",
+  "fetchedAt": "2026-09-24T09:38:31.737Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-24T02:30:35Z",
+      "title": "Miksi tekoäly nostaa asuntolainani korkoja?",
+      "url": "https://yle.fi/v/video/91-20246851",
+      "lead": "Tekoälyfirmat kilpailevat rahasta. Video: Esa Syväkuru"
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-23T21:48:49Z",
+      "title": "OpenAI:n tekoälyagentti murtautui Australian terveydenhuollon tietokantaan",
+      "url": "https://yle.fi/a/74-20247936",
+      "lead": "Tapaus lietsoo todennäköisesti entisestään huolta tekoälykehittäjien kyvystä hallita uutta teknologiaa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-23T15:34:55Z",
+      "title": "Suvi Auvinen huomasi, että Storytel teki tekoälytiivistelmiä hänen kirjastaan",
+      "url": "https://yle.fi/a/74-20247235",
+      "lead": "Storytelin mukaan tiivistelmät helpottavat äänikirjan kuuntelua, jos ajatukset harhailevat. Kirjailija Suvi Auvisen mielestä tekoäly ei palvele kuuntelijaa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-23T13:00:39Z",
+      "title": "Jotkut kansanedustajat kirjoittavat jo puheitaan suoraan tekoälyllä, sanoo Anna Kontula",
+      "url": "https://yle.fi/a/74-20247802",
+      "lead": "Vasemmistoliiton kansanedustajan Anna Kontulan mukaan poliittikojen keinot vaikuttaa tekoälyn uhkiin ovat tällä hetkellä vähäiset."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-23T12:46:54Z",
+      "title": "Tekoäly epäilyttää nuoria",
+      "url": "https://yle.fi/v/video/91-20247800",
+      "lead": "Nuoret suhtautuvat tekoälyyn epäluuloisemmin kuin vanhemmat. Tämä ilmenee Ylen teettämästä selvityksestä. Video: Jaakko Mannermaa, Tero Nikulainen"
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-23T02:30:36Z",
@@ -67,20 +102,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-18T18:18:53Z",
-      "title": "CNN: USA oli lähellä hyökätä kiinalaisalukselle virheellisen tekoälytiedon perusteella",
-      "url": "https://yle.fi/a/74-20247134",
-      "lead": "Tapaus sattui keväällä Lähi-idässä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-18T11:25:10Z",
-      "title": "Näin tekoälybotti puhui puppua kuvan aitoudesta",
-      "url": "https://yle.fi/v/video/91-20244951",
-      "lead": "Kokeilimme Metan bottia tekoälykuvien tunnistamiseen. Se toimi huonosti. Meta ei vastannut Ylen kysymyksiin."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-18T10:00:08Z",
       "title": "Analyysi: Tekoäly karkaa, Trump ei välitä – tämä voi jäädä Trumpin pysyvimmäksi jäljeksi historiaan",
       "url": "https://yle.fi/a/74-20246917",
@@ -102,13 +123,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-17T12:44:57Z",
-      "title": "Britannian kuningas Charles kutsui koolle tekoäly-yritysten johtajat",
-      "url": "https://yle.fi/a/74-20246857",
-      "lead": "Puheessaan Britannian kuningas toivoi puheessaan yrityksiä varmistamaan, että tekoäly pysyy ihmiskunnan palvelijana."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-17T12:20:51Z",
       "title": "Nuori, käytätkö tekoälyä tavalla, jota muut eivät ehkä ole keksineet? Etsimme haastateltavia",
       "url": "https://yle.fi/a/74-20246741",
@@ -120,20 +134,6 @@
       "title": "Open AI:n tekoälyagentit lähtivät jälleen laukalle – tekoäly-yhtiö paljasti kuusi uutta tapausta",
       "url": "https://yle.fi/a/74-20246704",
       "lead": "Open AI kertoo luovansa uuden toimintamallin tekoälymalliensa tehokkaampaa valvomista ja seuraamista varten."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-16T18:20:55Z",
-      "title": "Axios: Yhdysvallat valmis keskustelemaan Kiinan kanssa tekoälystä",
-      "url": "https://yle.fi/a/74-20246684",
-      "lead": "Pelot tekoälyn vaaroista ovat voimistuneet viime viikkoina."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-15T19:23:40Z",
-      "title": "Professori: Tekoälylle täytyy asettaa rajat",
-      "url": "https://yle.fi/a/74-20246472",
-      "lead": "Euroopan on päästävä tekoälyasioissa takapenkiltä kuljettajan paikalle, vertaa ohjelmisto­tekniikan professori Pekka Abrahamsson."
     },
     {
       "personName": "tekoäly",
