@@ -1,20 +1,20 @@
 {
-  "fetchedAt": "2026-09-24T09:38:31.737Z",
+  "fetchedAt": "2026-09-25T09:56:05.901Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-24T12:18:48Z",
+      "title": "Ranskassa pohditaan, onko syksyn bestseller tehty tekoälyllä – kustantaja puhuu vihakampanjasta",
+      "url": "https://yle.fi/a/74-20247795",
+      "lead": "Somessa leviää väite, jonka mukaan kanadalais-haitilaisen kirjailijan Thélyson Orélienin uutuusromaani olisi tekoälyn kirjoittama. Kirjailija kiistää syytökset."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-24T02:30:35Z",
       "title": "Miksi tekoäly nostaa asuntolainani korkoja?",
       "url": "https://yle.fi/v/video/91-20246851",
       "lead": "Tekoälyfirmat kilpailevat rahasta. Video: Esa Syväkuru"
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-23T21:48:49Z",
-      "title": "OpenAI:n tekoälyagentti murtautui Australian terveydenhuollon tietokantaan",
-      "url": "https://yle.fi/a/74-20247936",
-      "lead": "Tapaus lietsoo todennäköisesti entisestään huolta tekoälykehittäjien kyvystä hallita uutta teknologiaa."
     },
     {
       "personName": "tekoäly",
