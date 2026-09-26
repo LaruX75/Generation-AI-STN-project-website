@@ -1,7 +1,35 @@
 {
-  "fetchedAt": "2026-09-25T09:56:05.901Z",
+  "fetchedAt": "2026-09-26T09:38:19.016Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-26T07:23:48Z",
+      "title": "Johtaako tekoälyn kehitys ihmiskunnan tuhoon? Kyseessä voi olla teknologia­jättien informaatio-operaatio, uskoo asiantuntija",
+      "url": "https://yle.fi/a/74-20248405",
+      "lead": "Tekoälytutkijan mukaan johtavat tekoäly-yhtiöt saattavat uhkakuvien lietsomisella ja sääntelyä vaatimalla pyrkiä kampittamaan kilpailijoiden tuloa markkinoille."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-25T14:38:06Z",
+      "title": "Bill Gates varoittaa: Teko­äly voi johtaa miljardien kuolemaan",
+      "url": "https://yle.fi/a/74-20248345",
+      "lead": "Ohjelmistojätti Microsoftin perustajan mukaan tekoäly on riittävän tehokas aiheuttaakseen miljardien ihmisten kuoleman."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-25T13:15:54Z",
+      "title": "­HUSin tietohallinto­johtaja tekoäly­riskeistä: Nukumme yömme hyvin",
+      "url": "https://yle.fi/a/74-20248243",
+      "lead": "Tekoäly murtautui Australiassa julkisen terveyden­huollon järjestelmään. HUSin potilaiden tiedot on suojattu erittäin hyvin, sanoo tietohallinto­johtaja."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-25T11:01:35Z",
+      "title": "Tekoäly murtautui valtion sivuille Australiassa",
+      "url": "https://yle.fi/v/video/91-20248114",
+      "lead": "OpenAI:n tekoälyagentti tunkeutui luvatta Australian hallituksen verkkosivulle.Se pääsi terveyden­huollon järjestelmään ja sai tietoja, jotka eivät ole julkisia. Video: Anni Kavander, Alina Räisänen"
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-24T12:18:48Z",
@@ -102,20 +130,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-18T10:00:08Z",
-      "title": "Analyysi: Tekoäly karkaa, Trump ei välitä – tämä voi jäädä Trumpin pysyvimmäksi jäljeksi historiaan",
-      "url": "https://yle.fi/a/74-20246917",
-      "lead": "Donald Trump yrittää kaikin tavoin tukahduttaa keskustelun tarpeesta valvoa tekoälyä, kirjoittaa Yhdysvaltain-kirjeenvaihtaja Ilmari Reunamäki."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-18T07:44:29Z",
-      "title": "Analyysi: Tekoälykuvia tunnistaviin palveluihin ei voi luottaa, koska digijättejä ei kiinnosta",
-      "url": "https://yle.fi/a/74-20244950",
-      "lead": "Tekoälybotit ovat surkeita tekoälykuvien tunnistamisessa. Digijätit eivät edes yritä siivota tauhkaa, jolla ne itse täyttävät somesyötteemme."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-18T05:07:08Z",
       "title": "Testaa, erotatko enää todellisuutta ja tekoälyn tuotosta toisistaan",
       "url": "https://yle.fi/a/74-20246859",
@@ -123,24 +137,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-17T12:20:51Z",
-      "title": "Nuori, käytätkö tekoälyä tavalla, jota muut eivät ehkä ole keksineet? Etsimme haastateltavia",
-      "url": "https://yle.fi/a/74-20246741",
-      "lead": "Yle etsii haasta­teltavaksi nuoria kertomaan kekseliäistä ja yllättävistä tavoista käyttää tekoälyä arjessa."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-17T05:27:49Z",
       "title": "Open AI:n tekoälyagentit lähtivät jälleen laukalle – tekoäly-yhtiö paljasti kuusi uutta tapausta",
       "url": "https://yle.fi/a/74-20246704",
       "lead": "Open AI kertoo luovansa uuden toimintamallin tekoälymalliensa tehokkaampaa valvomista ja seuraamista varten."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-15T15:58:52Z",
-      "title": "Analyysi: Tekoälypomot varoittavat nyt vaaroista, mutta sääntely törmää vuoreen nimeltä Donald Trump",
-      "url": "https://yle.fi/a/74-20246438",
-      "lead": "Tekoälystä eniten tietävät tuntuvat usein olevan siitä eniten huolissaan. Silti yhteiskunnat eivät juuri näytä varautuvan tulevaan myrskyyn."
     },
     {
       "personName": "Teemu Roos",
