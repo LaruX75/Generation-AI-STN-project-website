@@ -1,20 +1,41 @@
 {
-  "fetchedAt": "2026-09-26T09:38:19.016Z",
+  "fetchedAt": "2026-09-27T10:18:06.772Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-27T10:18:04Z",
+      "title": "Israelissa käydään rumaa vaalikampanjaa – ministerin tekoälyvideossa palestiinalaisia vietiin vankileirille",
+      "url": "https://yle.fi/a/74-20247314",
+      "lead": "Israelissa järjestetään lokakuun lopussa parlamenttivaalit, joita pidetään tilinteon hetkenä pääministeri Benjamin Netanjahulle."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-27T06:17:34Z",
+      "title": "Tekoälyn uhkakuvia korostavat Piilaakson pomot kuuluvat kulttiin, josta leviää synkkiä tietoja",
+      "url": "https://yle.fi/a/74-20247760",
+      "lead": "Anthropicin ja Open AI:n vaatimukset säädellä tekoälyä vaikuttavat pelottelulta, joka hyödyttää yrityksiä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-27T05:11:24Z",
+      "title": "Riku Rantalan uusi sarja kuvittaa rikoksia tekoälyllä – vaarana on faktan ja fiktion sekoittuminen",
+      "url": "https://yle.fi/a/74-20248340",
+      "lead": "Sarjan tekijöiden mukaan rikoksiin liittyviltä henkilöiltä ei kysytty tekoälyn käytöstä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-26T12:44:55Z",
+      "title": "Tatuoija kohtaa nykyään tekoälykuvia päivittäin: ”Kutsun sitä varastetun taiteen pikaruoaksi”",
+      "url": "https://yle.fi/a/74-20247350",
+      "lead": "Moni hyödyntää tekoälyä suunni­tellessaan tatuointia. Sen avulla luodut kuvat ovat kuitenkin usein käyttö­kelvottomia sellaisenaan."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-26T07:23:48Z",
       "title": "Johtaako tekoälyn kehitys ihmiskunnan tuhoon? Kyseessä voi olla teknologia­jättien informaatio-operaatio, uskoo asiantuntija",
       "url": "https://yle.fi/a/74-20248405",
       "lead": "Tekoälytutkijan mukaan johtavat tekoäly-yhtiöt saattavat uhkakuvien lietsomisella ja sääntelyä vaatimalla pyrkiä kampittamaan kilpailijoiden tuloa markkinoille."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-25T14:38:06Z",
-      "title": "Bill Gates varoittaa: Teko­äly voi johtaa miljardien kuolemaan",
-      "url": "https://yle.fi/a/74-20248345",
-      "lead": "Ohjelmistojätti Microsoftin perustajan mukaan tekoäly on riittävän tehokas aiheuttaakseen miljardien ihmisten kuoleman."
     },
     {
       "personName": "tekoäly",
@@ -88,13 +109,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-21T00:32:39Z",
-      "title": "USA:n Bessent keskusteli Kiinan edustajan kanssa tekoälystä",
-      "url": "https://yle.fi/a/74-20247285",
-      "lead": "Tapaamisen sanottiin pohjustaneen Trumpin ja Xiin tapaamista, jonka odotetaan tapahtuvan alkavalla viikolla."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-20T10:36:15Z",
       "title": "Verotus on muuttunut yhteiskuntien mukana, mutta tekoälyn tekemän työn verottaminen ei ole helppoa",
       "url": "https://yle.fi/a/74-20243999",
@@ -116,24 +130,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-19T00:26:38Z",
-      "title": "Myös Googlen tekoälymalli Gemini tunkeutunut ulkopuolisiin järjestelmiin",
-      "url": "https://yle.fi/a/74-20247148",
-      "lead": "Kyseessä on ensimmäinen julki tullut tapaus, jossa Googlen tekoälymallit ovat tehneet itsenäisiä kyberhyökkäyksiä."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-18T20:37:19Z",
       "title": "Tekoäly-yhtiö OpenAI:n toimitusjohtaja Altman puhuu YK:n turvallisuusneuvostolle ensi viikolla",
       "url": "https://yle.fi/a/74-20247141",
       "lead": "Turvallisuusneuvoston keskiviikkona järjestettävässä tapaamisessa käsitellään tekoälyä ja kansainvälistä turvallisuutta."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-18T05:07:08Z",
-      "title": "Testaa, erotatko enää todellisuutta ja tekoälyn tuotosta toisistaan",
-      "url": "https://yle.fi/a/74-20246859",
-      "lead": "Tekoälyllä tehtyjä kuvia ja videoita on  entistä vaikeampaa erottaa aidosta."
     },
     {
       "personName": "tekoäly",
