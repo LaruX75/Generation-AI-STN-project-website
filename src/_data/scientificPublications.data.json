@@ -6597,5 +6597,77 @@
     "doi": "",
     "url": "https://researchportal.helsinki.fi/fi/publications/toistuvia-pettymyksi%C3%A4-pohdintaa-perustuslain-tulkinnan-vaikeudest/",
     "notes": ""
+  },
+  {
+    "id": "pub-2026-558",
+    "code": "",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Luis Morales‐Navarro; Yasmin B. Kafai; Olli Hilke; Nicolas Pope; Matti Tedre; Daniel J. Noh; Deborah Ann Fields; Danaé Metaxa; Jaemarie Solyst; R. Benjamin Shapiro; Chloe Fong; Faisal Nurdin; Sumita Sharma; Netta Iivari; Pauli Aleksi Klemettilä; Karl-Emil K. Bilstrup; Line Have Musaeus; Rotem Landesman; Jayne Everson; Jean J. Ryoo; Ole Sejer Iversen",
+    "title": "Learning to deconstruct AI/ML systems: Scaffolds to support learners in critically evaluating AI/ML systems",
+    "venue": "Proceedings.",
+    "doi": "10.22318/icls2026.998977",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "a1-2026-559",
+    "code": "A1",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Joyce Malyn‐Smith; Jodie Torrington; Mary Webb; Deirdre Butler; Jihyun Lee; Peter Tiernan; Yousra Chtouki; Matt Bower; Manal Yazbak Abu Ahmad; Ana Amélia Carvalho; Jonathan D. Cohen; Pierre Gorissen; Tanya Linden; Kathryn MacCallum; Juliana E. Raffagheli; Fredrik Mørk Røkenes; Martina Ronci; Chris Shelton; David Smith; Henriikka Vartiainen",
+    "title": "Navigating AI’s Educational Future: Expert Scenarios and Implications for Teaching and Teacher Preparation",
+    "venue": "Computers and Education Open",
+    "doi": "10.1016/j.caeo.2026.100422",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "pub-2026-560",
+    "code": "",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Anita Jantunen; Raisa Carpelan; Anni Loukomies; Tapio Lahtero; Arto Kallioniemi; Kati Sormunen",
+    "title": "Constructing Inclusive School Leadership: Finnish Principals’ Discourses about Bridging Ideals and Practice",
+    "venue": "",
+    "doi": "10.3102/2272837",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "a1-2026-562",
+    "code": "A1",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Yazid Albadarin; Mohammed Saqr; Nicolas Pope; Markku Tukiainen",
+    "title": "Evaluating the Effect of Generative AI-Assisted Debugging on Students’ Critical Thinking",
+    "venue": "Technology Knowledge and Learning",
+    "doi": "10.1007/s10758-026-09998-z",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "bookchapter-2026-rf563",
+    "code": "book-chapter",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Susanna Lindroos-Hovinheimo",
+    "title": "A Critique of EU Data Protection Law",
+    "venue": "Critical Theory and European Union Law: The Question of Postnational Emancipation",
+    "doi": "10.5040/9781509982059.ch-009",
+    "url": "",
+    "notes": ""
+  },
+  {
+    "id": "pub-2024-561",
+    "code": "",
+    "year": 2024,
+    "status": "Published",
+    "authorsText": "Davide Gnes; Milka Sormunen",
+    "title": "No Appetite for Conflict? Assessing how the European Parliament and the European Ombudsman Engage with Executive Discretion in Informalised EU Readmission Policy",
+    "venue": "",
+    "doi": "10.5040/9781509971626.ch-004",
+    "url": "",
+    "notes": ""
   }
 ]
