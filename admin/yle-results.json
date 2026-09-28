@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-09-27T10:18:06.772Z",
+  "fetchedAt": "2026-09-28T11:21:10.169Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-28T07:53:57Z",
+      "title": "Suomen ja Ruotsin välille rakennetaan uutta merikaapelia",
+      "url": "https://yle.fi/a/74-20248603",
+      "lead": "Tekoälyn ja datakeskusten räjähdysmäinen kasvu on lisännyt tarvetta uusille digitaalisille merikaapeleille."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-28T06:30:31Z",
+      "title": "Apulaisoikeusasiamies selvittää tekoälyn käyttöä kunnissa",
+      "url": "https://yle.fi/a/74-20248574",
+      "lead": "Laillisuusvalvoja on huolissaan siitä, miten perusoikeuksien sekä virkavastuun toteutuminen varmistetaan, kun tekoälyä hyödynnetään viranomaistoiminnassa."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-09-27T10:18:04Z",
@@ -109,13 +123,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-20T10:36:15Z",
-      "title": "Verotus on muuttunut yhteiskuntien mukana, mutta tekoälyn tekemän työn verottaminen ei ole helppoa",
-      "url": "https://yle.fi/a/74-20243999",
-      "lead": "Automaation lisääntyessä useissa maissa alettiin pohtia robottiveroa. Nyt tekoäly on tuonut saman keskustelun digitaalisiin töihin."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-20T07:47:09Z",
       "title": "Kolme uhkakuvaa: näin tekoäly tuhoaisi meidät",
       "url": "https://yle.fi/a/74-20246550",
@@ -134,13 +141,6 @@
       "title": "Tekoäly-yhtiö OpenAI:n toimitusjohtaja Altman puhuu YK:n turvallisuusneuvostolle ensi viikolla",
       "url": "https://yle.fi/a/74-20247141",
       "lead": "Turvallisuusneuvoston keskiviikkona järjestettävässä tapaamisessa käsitellään tekoälyä ja kansainvälistä turvallisuutta."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-17T05:27:49Z",
-      "title": "Open AI:n tekoälyagentit lähtivät jälleen laukalle – tekoäly-yhtiö paljasti kuusi uutta tapausta",
-      "url": "https://yle.fi/a/74-20246704",
-      "lead": "Open AI kertoo luovansa uuden toimintamallin tekoälymalliensa tehokkaampaa valvomista ja seuraamista varten."
     },
     {
       "personName": "Teemu Roos",
