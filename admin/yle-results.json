@@ -1,13 +1,34 @@
 {
-  "fetchedAt": "2026-09-29T10:59:32.013Z",
+  "fetchedAt": "2026-09-30T10:49:55.698Z",
   "count": 26,
   "articles": [
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-28T21:19:49Z",
-      "title": "Paavi Leo sivalsi epäsuorasti Trumpia tekoälyn vaarojen vähättelystä",
-      "url": "https://yle.fi/a/74-20248766",
-      "lead": "Trump sanoi viime viikolla YK:n yleiskokouksessa, että hän uskoo tekoälyn ihmiskunnalle aiheuttamiin vaaroihin liittyvien pelkojen olevan ”huijaus”."
+      "datePublished": "2026-09-30T05:33:05Z",
+      "title": "Tekoälytutkija ja ihmisoikeusaktivistit saivat ”vaihtoehto-Nobelin”",
+      "url": "https://yle.fi/a/74-20249017",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-29T18:56:36Z",
+      "title": "Trump kehui tekoäly­tapaamista",
+      "url": "https://yle.fi/a/74-20248990",
+      "lead": "Hän kertoi yritysten voivan hoitaa sääntelyn."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-29T17:40:15Z",
+      "title": "Trump esitteli tekoälyä käyttävän palvelun asiointiin viranomaisten kanssa",
+      "url": "https://yle.fi/a/74-20248981",
+      "lead": "America.gov-palvelun toiminnot ovat toistaiseksi rajalliset"
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-29T09:48:26Z",
+      "title": "Tekoäly-yhtiö Anthropic teki viime vuonna yli 8 miljardin dollarin liiketappion",
+      "url": "https://yle.fi/a/74-20248867",
+      "lead": ""
     },
     {
       "personName": "tekoäly",
@@ -81,13 +102,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-24T02:30:35Z",
-      "title": "Miksi tekoäly nostaa asuntolainani korkoja?",
-      "url": "https://yle.fi/v/video/91-20246851",
-      "lead": "Tekoälyfirmat kilpailevat rahasta. Video: Esa Syväkuru"
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-23T15:34:55Z",
       "title": "Suvi Auvinen huomasi, että Storytel teki tekoälytiivistelmiä hänen kirjastaan",
       "url": "https://yle.fi/a/74-20247235",
@@ -113,20 +127,6 @@
       "title": "Tekoälykirjuri auttaa nyt lääkäriä Riihimäellä niin, että tunnin homma hoituu vartissa",
       "url": "https://yle.fi/a/74-20245626",
       "lead": "Tekoälystä toivotaan pelastusta moneen julkisen sektorin palveluun. Tekoälyn tulo jakaa suomalaisia. Uusi tekniikka epäilyttää nuoria enemmän kuin vanhoja."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-21T16:00:07Z",
-      "title": "Alexander Stubb ja Norjan pääministeri vetoavat, että tekoäly on pidettävä ihmisen näpeissä – mukana jo 20 maata",
-      "url": "https://yle.fi/a/74-20247462",
-      "lead": "Vetoomuksessa kehotetaan tekoäly-yrityksiä laatimaan läpinäkyviä mekanismeja, joilla voidaan varmistaa, että tekoälyn kehitys ei uhkaa ihmiskunnan kehitystä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-21T06:24:56Z",
-      "title": "Käytätkö tekoälyn suosituksia? Jos käytät, sinun on hyvä tietää, että niihin ostetaan mainoksia",
-      "url": "https://yle.fi/a/74-20244458",
-      "lead": "Osa suomalaisista yrityksistä ostaa jo näkyvyyttä tekoäly­hakuihin. Hakukone­liikenteen puolittuessa taistelu siirtyy suosituksiin."
     },
     {
       "personName": "tekoäly",
