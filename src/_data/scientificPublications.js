@@ -1,4 +1,5 @@
 const records = require("./scientificPublications.data.json");
+const { findPublicationDecision, loadDecisions } = require("./publication-decisions.js");
 
 function normalizeWhitespace(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
@@ -211,7 +212,14 @@ function sortTableItems(items) {
 }
 
 module.exports = function scientificPublicationsData() {
-  const items = records.map((record, index) => {
+  const decisions = loadDecisions();
+
+  const items = records
+    .filter(record => {
+      const decision = findPublicationDecision(record, decisions);
+      return decision?.status !== "rejected";
+    })
+    .map((record, index) => {
     const link = buildLink(record);
 
     const authorsText = normalizeWhitespace(record.authorsText);
