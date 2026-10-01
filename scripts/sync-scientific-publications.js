@@ -19,6 +19,7 @@ const researchfiDataSource = require("../src/_data/researchfi.js");
 
 const DATA_PATH   = path.join(__dirname, "../src/_data/scientificPublications.data.json");
 const CONFIG_PATH = path.join(__dirname, "../src/_data/researchfi.config.json");
+const { loadDecisions, findPublicationDecision, normalizeDoi, buildSourceId, buildFallbackKey } = require("../src/_data/publication-decisions.js");
 
 const OPENALEX  = "https://api.openalex.org";
 const MAILTO    = process.env.OPENALEX_MAILTO || "jari.laru@gmail.com";
@@ -111,9 +112,10 @@ async function fetchWorksForAuthor(authorId, personName) {
   return (data.results || []).map(w => ({ ...w, _resolvedFor: personName }));
 }
 
-function normalizeDoi(raw) {
-  if (!raw) return "";
-  return raw.replace(/^https?:\/\/doi\.org\//i, "").toLowerCase().trim();
+/** Tarkistaa toimituksellisen päätöksen — palauttaa true jos julkaisu on rejected */
+function isRejected(candidate, decisions) {
+  const decision = findPublicationDecision(candidate, decisions);
+  return decision?.status === "rejected";
 }
 
 function formatAuthors(authorships) {
@@ -166,6 +168,7 @@ function mapResearchFiRecord(pub, idx) {
 async function main() {
   const existing = JSON.parse(fs.readFileSync(DATA_PATH, "utf8"));
   const config   = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
+  const decisions = loadDecisions();
 
   const existingDois   = new Set(existing.map(i => normalizeDoi(i.doi)).filter(Boolean));
   const existingTitles = new Set(
@@ -212,6 +215,20 @@ async function main() {
     // Älä lisää preprinttejä / postauksista
     if (["preprint", "posted-content"].includes(work.type)) continue;
 
+    // Toimituksellinen päätös — rejected ei tule takaisin
+    const candidate = {
+      doi,
+      title: work.display_name || "",
+      year: work.publication_year || null,
+      authorsText: formatAuthors(work.authorships),
+      sourceId: buildSourceId("openalex", work.id),
+      url: work.id || ""
+    };
+    if (isRejected(candidate, decisions)) {
+      console.log(`  [rejected] ${doi || title.slice(0, 50)} — jätetty pois päätöksen perusteella`);
+      continue;
+    }
+
     const year  = work.publication_year || null;
     const code  = guessCode(work.type);
     const venue = work.primary_location?.source?.display_name || "";
@@ -231,7 +248,9 @@ async function main() {
       venue,
       doi,
       url:         doi ? "" : (work.id || ""),
-      notes:       ""
+      notes:       "",
+      sourceId:    buildSourceId("openalex", work.id),
+      source:      "openalex"
     });
 
     existingDois.add(doi);
@@ -253,7 +272,25 @@ async function main() {
     if (doi   && existingDois.has(doi))     continue;
     if (title && existingTitles.has(title)) continue;
 
+    // Toimituksellinen päätös — rejected ei tule takaisin
+    const rfSource = pub.source || "researchfi";
+    const rfSourceId = buildSourceId(rfSource, pub.publicationId);
+    const candidate = {
+      doi,
+      title: pub.title || "",
+      year,
+      authorsText: pub.authors || "",
+      sourceId: rfSourceId,
+      url: pub.link || ""
+    };
+    if (isRejected(candidate, decisions)) {
+      console.log(`  [rejected] ${doi || title.slice(0, 50)} — jätetty pois päätöksen perusteella`);
+      continue;
+    }
+
     const record = mapResearchFiRecord(pub, nextIdx);
+    record.sourceId = rfSourceId;
+    record.source = rfSource;
     newItems.push(record);
     if (doi) existingDois.add(doi);
     existingTitles.add(title);
