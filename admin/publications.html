@@ -248,6 +248,7 @@
 const REPO   = "LaruX75/Generation-AI-STN-project-website";
 const BRANCH = "main";
 const DATA_PATH = "src/_data/scientificPublications.data.json";
+const DECISIONS_PATH = "src/_data/publication-decisions.json";
 const SYNC_WORKFLOW = "sync-publications.yml";
 
 const OKM_CODES = [
@@ -261,7 +262,9 @@ const OKM_CODES = [
 
 let token = "";
 let publications = [];   // current state (may have local edits)
+let decisions = [];      // publication decisions (rejected/approved/review)
 let fileSha = "";
+let decisionsSha = "";
 let dirty = false;
 
 /* ── Auth ──────────────────────────────────────────────────────────── */
@@ -322,6 +325,18 @@ async function init() {
     const file = await ghGet(DATA_PATH);
     fileSha = file.sha;
     publications = JSON.parse(b64decode(file.content));
+
+    let decisionsFile = null;
+    try {
+      decisionsFile = await ghGet(DECISIONS_PATH);
+      decisionsSha = decisionsFile.sha;
+      const parsed = JSON.parse(b64decode(decisionsFile.content));
+      decisions = Array.isArray(parsed.decisions) ? parsed.decisions : [];
+    } catch {
+      decisionsSha = "";
+      decisions = [];
+    }
+
     populateYearFilter();
     renderTable();
     showNotice("", "");
@@ -409,13 +424,77 @@ function onCodeChange(sel) {
   markDirty();
 }
 
+/* ── Decision helpers ────────────────────────────────────────────────── */
+function normalizeDoiClient(raw) {
+  if (!raw) return "";
+  return String(raw).replace(/^https?:\/\/(dx\.)?doi\.org\//i, "").replace(/^doi:\s*/i, "").toLowerCase().trim();
+}
+
+function buildFallbackKeyClient(title, year, authorsText) {
+  const normTitle = String(title || "").replace(/\s+/g, " ").toLowerCase().trim();
+  const first = (String(authorsText || "").split(/;\s*|\s*&\s*/)[0] || "").trim().toLowerCase();
+  return [normTitle, String(year || "").trim(), first].join("|");
+}
+
+function findDecisionForPub(pub) {
+  const doi = normalizeDoiClient(pub.doi);
+  const sourceId = pub.sourceId ? String(pub.sourceId).trim().toLowerCase() : "";
+  const url = pub.url ? String(pub.url).trim().toLowerCase() : "";
+  const fallbackKey = buildFallbackKeyClient(pub.title, pub.year, pub.authorsText);
+
+  return decisions.find(d => {
+    if (d.doi && doi && normalizeDoiClient(d.doi) === doi) return true;
+    if (d.sourceId && sourceId && String(d.sourceId).trim().toLowerCase() === sourceId) return true;
+    if (d.url && url && String(d.url).trim().toLowerCase() === url) return true;
+    if (d.fallbackKey && fallbackKey && String(d.fallbackKey).trim() === fallbackKey) return true;
+    return false;
+  }) || null;
+}
+
 /* ── Delete ─────────────────────────────────────────────────────────── */
 function deleteRow(btn) {
   const id = btn.dataset.id;
   const pub = publications.find(p => p.id === id);
   if (!pub) return;
-  if (!confirm(`Poistetaanko julkaisu?\n\n"${pub.title}"`)) return;
+
+  const existingDecision = findDecisionForPub(pub);
+  const isAlreadyRejected = existingDecision && existingDecision.status === "rejected";
+
+  const msg = isAlreadyRejected
+    ? `Julkaisu on jo merkitty toimituksellisesti hylätyksi.\n\n"${pub.title}"\n\nVarmistaako, että haluat silti poistaa sen listalta?`
+    : `Poistetaanko julkaisu?\n\n"${pub.title}"\n\nJulkaisu merkitään toimituksellisesti hylätyksi, jotta se ei palaa seuraavassa synkronoinnissa.`;
+
+  if (!confirm(msg)) return;
+
   publications = publications.filter(p => p.id !== id);
+
+  // Kirjoita rejected-päätös
+  const doi = normalizeDoiClient(pub.doi);
+  const sourceId = pub.sourceId || "";
+  const url = pub.url || "";
+  const fallbackKey = buildFallbackKeyClient(pub.title, pub.year, pub.authorsText);
+  const today = new Date().toISOString().slice(0, 10);
+
+  const decision = {
+    status: "rejected",
+    reason: "Poistettu adminin kautta",
+    date: today
+  };
+  if (doi) decision.doi = doi;
+  else if (sourceId) decision.sourceId = sourceId;
+  else if (url) decision.url = url;
+  else decision.fallbackKey = fallbackKey;
+
+  // Poista mahdollinen olemassa oleva päätös samasta julkaisusta
+  decisions = decisions.filter(d => {
+    if (d.doi && doi && normalizeDoiClient(d.doi) === doi) return false;
+    if (d.sourceId && sourceId && String(d.sourceId).trim().toLowerCase() === String(sourceId).trim().toLowerCase()) return false;
+    if (d.url && url && String(d.url).trim().toLowerCase() === String(url).trim().toLowerCase()) return false;
+    if (d.fallbackKey && fallbackKey && String(d.fallbackKey).trim() === fallbackKey) return false;
+    return true;
+  });
+  decisions.push(decision);
+
   btn.closest("tr").remove();
   document.getElementById("count-badge").textContent =
     `${publications.length} julkaisua`;
@@ -448,6 +527,15 @@ async function saveChanges() {
     const result  = await ghPut(DATA_PATH, fileSha, content,
       "Päivitä tieteelliset julkaisut (admin)");
     fileSha = result.content.sha;
+
+    // Tallenna päätökset, jos tiedosto on olemassa
+    if (decisionsSha) {
+      const decisionsContent = JSON.stringify({ decisions }, null, 2) + "\n";
+      const decResult = await ghPut(DECISIONS_PATH, decisionsSha, decisionsContent,
+        "Päivitä julkaisupäätökset (admin)");
+      decisionsSha = decResult.content.sha;
+    }
+
     dirty = false;
     document.getElementById("save-bar").classList.remove("visible");
     document.getElementById("unsaved-indicator").style.display = "none";

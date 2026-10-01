@@ -1,0 +1,788 @@
+{
+  "decisions": [
+    {
+      "status": "rejected",
+      "reason": "Animal welfare legislation; not a Generation AI publication",
+      "date": "2026-10-01",
+      "doi": "10.1111/jols.70027"
+    },
+    {
+      "status": "rejected",
+      "reason": "EU space law interview; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/8728276c-c45a-44a8-b9aa-6c583f753e1b"
+    },
+    {
+      "status": "rejected",
+      "reason": "KHO 2024:115 EU law commentary; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/8e525f3b-5083-49a0-83ed-50f66e55cee5"
+    },
+    {
+      "status": "rejected",
+      "reason": "EU readmission policy and Ombudsman; not a Generation AI publication",
+      "date": "2026-10-01",
+      "doi": "10.54648/euro2025034"
+    },
+    {
+      "status": "rejected",
+      "reason": "EU parliamentary scrutiny of readmission policy; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/a3cbb68e-5759-41a7-96a5-f2abb6985d01"
+    },
+    {
+      "status": "rejected",
+      "reason": "EU court access to information; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/f56c8880-a838-4ef0-b0ff-621767648b03"
+    },
+    {
+      "status": "rejected",
+      "reason": "Data protection and privacy law; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/be42eeb3-aba0-4dab-9e7b-991c15943209"
+    },
+    {
+      "status": "rejected",
+      "reason": "Medical AI research on cognitive decline prediction; not a Generation AI publication",
+      "date": "2026-10-01",
+      "doi": "10.2196/preprints.65028"
+    },
+    {
+      "status": "rejected",
+      "reason": "CJEU C-740/22 data protection ruling; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/541a86cf-8f3e-436f-85b0-f3287e210f42"
+    },
+    {
+      "status": "rejected",
+      "reason": "CJEU C-740/22 ruling in Finnish; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/dea5e856-fc83-4125-bf70-3bcb53d1dbc6"
+    },
+    {
+      "status": "rejected",
+      "reason": "Personal data protection in evidence law; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/37b67abe-9ffb-4daa-8241-7e43ecbaef73"
+    },
+    {
+      "status": "rejected",
+      "reason": "GDPR automated decision-making rulings; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/819f8563-0a37-47bd-b8d1-6261fc795521"
+    },
+    {
+      "status": "rejected",
+      "reason": "Finnish pushback law constitutional review; not a Generation AI publication",
+      "date": "2026-10-01",
+      "doi": "10.59704/9088afe685d52f8d"
+    },
+    {
+      "status": "rejected",
+      "reason": "EU Parliament and Ombudsman in readmission policy; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/d275e753-6448-4abc-8d92-04c4d58f133b"
+    },
+    {
+      "status": "rejected",
+      "reason": "Children rights in food systems; not a Generation AI publication",
+      "date": "2026-10-01",
+      "doi": "10.5751/es-15398-290329"
+    },
+    {
+      "status": "rejected",
+      "reason": "EU asylum and migration law; not a Generation AI publication",
+      "date": "2026-10-01",
+      "doi": "10.59704/62fce8d640d64d9b"
+    },
+    {
+      "status": "rejected",
+      "reason": "EU asylum policy reform; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/e89bc3ee-f6f4-446b-ba4e-98365438edc0"
+    },
+    {
+      "status": "rejected",
+      "reason": "Journalism and data privacy; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/c080e02e-b524-4078-b070-25e124a16266"
+    },
+    {
+      "status": "rejected",
+      "reason": "Book review on data protection law; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/e1f205f5-2bc4-40c8-85dc-264a5897b1c1"
+    },
+    {
+      "status": "rejected",
+      "reason": "Plasma physics simulations; not a Generation AI publication",
+      "date": "2026-10-01",
+      "doi": "10.48550/arxiv.2307.09469"
+    },
+    {
+      "status": "rejected",
+      "reason": "Legal scholarship on personhood; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/a9f400ee-d179-4312-9ecf-a9a6bc9d3905"
+    },
+    {
+      "status": "rejected",
+      "reason": "Supreme Court KKO 2023:14 commentary; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/f7ebef45-2a4e-42cd-a32e-5a938a1c23a3"
+    },
+    {
+      "status": "rejected",
+      "reason": "CJEU data protection in civil procedure; not a Generation AI publication",
+      "date": "2026-10-01",
+      "doi": "10.21552/edpl/2023/2/23"
+    },
+    {
+      "status": "rejected",
+      "reason": "Data protection impact on court proceedings; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/edff3922-7c59-44a2-b0ad-54a65e45d2fb"
+    },
+    {
+      "status": "rejected",
+      "reason": "Finnish climate judgment; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/286c93ec-9b82-4ad7-b667-b56d06fe3a93"
+    },
+    {
+      "status": "rejected",
+      "reason": "Bangladesh data privacy research; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/86144e24-df68-406e-be62-a5b374271e8b"
+    },
+    {
+      "status": "rejected",
+      "reason": "Data protection vs public access to information; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/fd4c3bc0-b514-4ada-8edb-6b4859800ace"
+    },
+    {
+      "status": "rejected",
+      "reason": "Court documents and journalists; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/8ccd8894-625e-48b8-bc3f-513c89a2cebb"
+    },
+    {
+      "status": "rejected",
+      "reason": "Jurisdiction and personality rights in online content; not a Generation AI publication",
+      "date": "2026-10-01",
+      "doi": "10.1177/1023263x221076392"
+    },
+    {
+      "status": "rejected",
+      "reason": "EU political advertising regulation; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/b91e6eb7-660e-4546-848d-aa66f9a11852"
+    },
+    {
+      "status": "rejected",
+      "reason": "EU asylum system legal boundaries; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/6b4e2e6d-32ff-4ce0-a1fa-ccdc04ecad4f"
+    },
+    {
+      "status": "rejected",
+      "reason": "EU asylum policy outdating; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/1d37907d-214f-4e67-b0de-2ba0922c2509"
+    },
+    {
+      "status": "rejected",
+      "reason": "EU external migration policy scrutiny; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/5487b91f-0ec2-4488-a3f8-5e862a4d5d3d"
+    },
+    {
+      "status": "rejected",
+      "reason": "Bangladesh data protection research; not a Generation AI publication",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/e0b59ec4-278d-4f93-9a08-320cfb800807"
+    },
+    {
+      "status": "rejected",
+      "reason": "Healthcare priority setting; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1186/s12889-025-25559-y"
+    },
+    {
+      "status": "rejected",
+      "reason": "Healthcare priority setting scoping review; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1136/bmjopen-2024-086342"
+    },
+    {
+      "status": "rejected",
+      "reason": "International Review of Constitutional Reform - Finland chapter; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/5feb369d-70cb-4a81-92b5-36135a40a70e"
+    },
+    {
+      "status": "rejected",
+      "reason": "Healthcare reform analysis; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/d38abe96-fd04-4c81-8c02-8519693d9563"
+    },
+    {
+      "status": "rejected",
+      "reason": "International Review of Constitutional Reform - Finland chapter; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/e0b29d7b-f778-47e1-9607-96c62b75992e"
+    },
+    {
+      "status": "rejected",
+      "reason": "ECHR case commentary; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/37732a7f-becd-4bfa-a84c-3a6d84a0e06d"
+    },
+    {
+      "status": "rejected",
+      "reason": "Legal opinion piece; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/1b8e5225-157d-4801-9c61-40bcd32da083"
+    },
+    {
+      "status": "rejected",
+      "reason": "Cancer register study; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1016/j.pmedr.2024.102607"
+    },
+    {
+      "status": "rejected",
+      "reason": "Approximate nearest neighbor search; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.52202/079017-3242"
+    },
+    {
+      "status": "rejected",
+      "reason": "Cognitive functioning forecasting; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1093/eurpub/ckae144.593"
+    },
+    {
+      "status": "rejected",
+      "reason": "Ocean forecasting; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "https://neurips.cc/virtual/2024/100541"
+    },
+    {
+      "status": "rejected",
+      "reason": "Skin cancer detection; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/s11063-022-11049-4"
+    },
+    {
+      "status": "rejected",
+      "reason": "Colorectal cancer register study; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1002/cnr2.1612"
+    },
+    {
+      "status": "rejected",
+      "reason": "Approximate nearest neighbor search; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.52202/068431-2590"
+    },
+    {
+      "status": "rejected",
+      "reason": "Mediterranean Sea forecasting; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1038/s41598-025-31177-w"
+    },
+    {
+      "status": "rejected",
+      "reason": "Infant developmental age from 3D kinematics; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1109/tnsre.2025.3568269"
+    },
+    {
+      "status": "rejected",
+      "reason": "Plasma physics; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.5194/egusphere-egu26-9730"
+    },
+    {
+      "status": "rejected",
+      "reason": "Magnetic field detection; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1029/2025jh001202"
+    },
+    {
+      "status": "rejected",
+      "reason": "Constitutional reform - Finland chapter; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/409dc068-8665-42b7-8233-356c050026f0"
+    },
+    {
+      "status": "rejected",
+      "reason": "Healthcare priority setting in Yleislaakari; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/b1db5909-ece3-49f6-b62d-a6a490414db5"
+    },
+    {
+      "status": "rejected",
+      "reason": "Healthcare service priority setting report; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/92048dbe-3d03-44be-ab96-fc70a37f267a"
+    },
+    {
+      "status": "rejected",
+      "reason": "Healthcare priority development report; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/0904c726-f0e9-40d3-a50f-d08db77aa766"
+    },
+    {
+      "status": "rejected",
+      "reason": "Data protection and freedom of expression in criminal data; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1108/dprg-10-2024-0260"
+    },
+    {
+      "status": "rejected",
+      "reason": "Purpose limitation in smart-city data processing; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1080/10811680.2023.2180266"
+    },
+    {
+      "status": "rejected",
+      "reason": "Climate crisis vulnerability theory; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/s12142-023-00686-4"
+    },
+    {
+      "status": "rejected",
+      "reason": "Learning through rejection book chapter; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003257936-6"
+    },
+    {
+      "status": "rejected",
+      "reason": "Maker practices and invention projects; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/s11412-024-09427-2"
+    },
+    {
+      "status": "rejected",
+      "reason": "Making Knowledge doctoral dissertation; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://helda.helsinki.fi/bitstreams/2dd7d2bd-fb2f-493f-89ed-b0a4c5739333/download"
+    },
+    {
+      "status": "rejected",
+      "reason": "K-12 Maker Education systematic review; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/s10798-024-09921-6"
+    },
+    {
+      "status": "rejected",
+      "reason": "Maker practices and invention projects; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1016/j.lcsi.2023.100692"
+    },
+    {
+      "status": "rejected",
+      "reason": "Cross-age peer tutoring in invention projects; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-14"
+    },
+    {
+      "status": "rejected",
+      "reason": "Epistemic objects in invention projects; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-4"
+    },
+    {
+      "status": "rejected",
+      "reason": "Knowledge creation through collaborative invention (Finnish); not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://openalex.org/W7198322828"
+    },
+    {
+      "status": "rejected",
+      "reason": "Children collaborative communication in problem-solving; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/s10798-025-10049-4"
+    },
+    {
+      "status": "rejected",
+      "reason": "Smartphones and social relationships at school; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1177/0044118x261465033"
+    },
+    {
+      "status": "rejected",
+      "reason": "World-making in makerspaces; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.22318/cscl2025.742732"
+    },
+    {
+      "status": "rejected",
+      "reason": "Diversity leadership in Finnish schools; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.3389/feduc.2024.1405481"
+    },
+    {
+      "status": "rejected",
+      "reason": "Co-invention projects in programming tournament; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/s10639-025-13509-5"
+    },
+    {
+      "status": "rejected",
+      "reason": "Play and sustainability in early childhood; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1016/j.learninstruc.2024.101963"
+    },
+    {
+      "status": "rejected",
+      "reason": "Sociomateriality in maker education; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003205838-13"
+    },
+    {
+      "status": "rejected",
+      "reason": "Collaborative invention in primary school science; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1186/s43031-023-00074-5"
+    },
+    {
+      "status": "rejected",
+      "reason": "Game jams future-oriented skills; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1016/j.caeo.2023.100129"
+    },
+    {
+      "status": "rejected",
+      "reason": "Peer assistance networks in Finnish schools; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1080/00313831.2023.2262505"
+    },
+    {
+      "status": "rejected",
+      "reason": "Video blogging and academic emotions; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1080/03004279.2023.2290670"
+    },
+    {
+      "status": "rejected",
+      "reason": "Creative learning in STEAM education; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/978-981-19-0568-1_9"
+    },
+    {
+      "status": "rejected",
+      "reason": "Technological competence in invention projects; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-9"
+    },
+    {
+      "status": "rejected",
+      "reason": "Designing the invention process; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-11"
+    },
+    {
+      "status": "rejected",
+      "reason": "Finnish teachers and programming curriculum; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1080/08993408.2022.2095595"
+    },
+    {
+      "status": "rejected",
+      "reason": "Orchestrating invention activities; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-12"
+    },
+    {
+      "status": "rejected",
+      "reason": "Collaboration in invention projects; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-5"
+    },
+    {
+      "status": "rejected",
+      "reason": "Technological competence in maker projects; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1111/jcal.13114"
+    },
+    {
+      "status": "rejected",
+      "reason": "Collaborative assessment in technology education; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1016/j.ijcci.2025.100779"
+    },
+    {
+      "status": "rejected",
+      "reason": "Pedagogical infrastructures in technology education; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/s10798-024-09915-4"
+    },
+    {
+      "status": "rejected",
+      "reason": "Maker mindset perceptions; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.7577/technea.5582"
+    },
+    {
+      "status": "rejected",
+      "reason": "Material prototyping in elementary design; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.24377/dteij.article1315"
+    },
+    {
+      "status": "rejected",
+      "reason": "Design thinking in lamp design; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.24377/dteij.article1662"
+    },
+    {
+      "status": "rejected",
+      "reason": "Pedagogical infrastructures in maker projects; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.24377/dteij.article1278"
+    },
+    {
+      "status": "rejected",
+      "reason": "Materiality in maker education; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1163/9789004681910_011"
+    },
+    {
+      "status": "rejected",
+      "reason": "Pre-primary technology education project; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.24377/dteij.article1235"
+    },
+    {
+      "status": "rejected",
+      "reason": "Invention Pedagogy book; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360"
+    },
+    {
+      "status": "rejected",
+      "reason": "Materiality in invention pedagogy; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-7"
+    },
+    {
+      "status": "rejected",
+      "reason": "Learning to create; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-6"
+    },
+    {
+      "status": "rejected",
+      "reason": "Invention Pedagogy book introduction; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-1"
+    },
+    {
+      "status": "rejected",
+      "reason": "Creativity constraints in craft education; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.7577/technea.4250"
+    },
+    {
+      "status": "rejected",
+      "reason": "Invention Pedagogy book conclusions; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-20"
+    },
+    {
+      "status": "rejected",
+      "reason": "Learning environments for invention pedagogy; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-17"
+    },
+    {
+      "status": "rejected",
+      "reason": "Learning by inventing; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-2"
+    },
+    {
+      "status": "rejected",
+      "reason": "Facilitating the invention process; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-10"
+    },
+    {
+      "status": "rejected",
+      "reason": "Inventive school culture; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.4324/9781003287360-16"
+    },
+    {
+      "status": "rejected",
+      "reason": "ISLS conference proceedings; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://researchportal.helsinki.fi/en/publications/17cf378c-77be-4c71-91c3-49fec9c8fef2"
+    },
+    {
+      "status": "rejected",
+      "reason": "Teachers professional agency in digitalization; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1016/j.tate.2026.105742"
+    },
+    {
+      "status": "rejected",
+      "reason": "Technology education curricula dataset; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.5281/zenodo.19224429"
+    },
+    {
+      "status": "rejected",
+      "reason": "CSCL topical review; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1016/j.compedu.2025.105246"
+    },
+    {
+      "status": "rejected",
+      "reason": "Learning analytics perceptions; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1007/s10758-025-09847-5"
+    },
+    {
+      "status": "rejected",
+      "reason": "Remote educational escape rooms; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1109/MIC.2023.3336057"
+    },
+    {
+      "status": "rejected",
+      "reason": "Database learning escape rooms; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1109/MIC.2023.3333199"
+    },
+    {
+      "status": "rejected",
+      "reason": "Escape room hint strategies; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.4438/1988-592X-RE-2024-405-626"
+    },
+    {
+      "status": "rejected",
+      "reason": "Group structure in collaborative learning; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1016/j.lindif.2024.102463"
+    },
+    {
+      "status": "rejected",
+      "reason": "Engagement dynamics in collaborative learning; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1016/j.chb.2023.108126"
+    },
+    {
+      "status": "rejected",
+      "reason": "Identity management in educational platforms; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.13052/jwe1540-9589.2345"
+    },
+    {
+      "status": "rejected",
+      "reason": "Educational escape rooms meta-analysis; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1109/TLT.2023.3328913"
+    },
+    {
+      "status": "rejected",
+      "reason": "Learning analytics in nursing students; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1186/s40461-023-00150-0"
+    },
+    {
+      "status": "rejected",
+      "reason": "Student feedback in MOOCs; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1109/MS.2023.3275035"
+    },
+    {
+      "status": "rejected",
+      "reason": "Online problem-based learning dynamics; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1007/s11412-023-09385-1"
+    },
+    {
+      "status": "rejected",
+      "reason": "Educational data virtual lab; not Generation AI",
+      "date": "2026-10-01",
+      "url": "http://dx.doi.org/10.1109/mcg.2022.3189557"
+    },
+    {
+      "status": "rejected",
+      "reason": "CSCL group regulation network analysis; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1007/s11412-025-09464-5"
+    },
+    {
+      "status": "rejected",
+      "reason": "Escape rooms for media literacy; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1080/0144929X.2026.2699276"
+    },
+    {
+      "status": "rejected",
+      "reason": "R package for network analysis; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1177/01466216261472019"
+    },
+    {
+      "status": "rejected",
+      "reason": "Servant leadership in community education; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1007/s10758-026-09985-4"
+    },
+    {
+      "status": "rejected",
+      "reason": "Clinical child psychology history; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://doi.org/10.1177/10892680261470677"
+    },
+    {
+      "status": "rejected",
+      "reason": "Duplicate of rejected personhood law chapter",
+      "date": "2026-10-01",
+      "aliasOf": "bookchapter-2023-rf304",
+      "url": "https://researchportal.helsinki.fi/en/publications/a9f400ee-d179-4312-9ecf-a9a6bc9d3905",
+      "fallbackKey": "how to study conceptions of personhood in law: the case of european privacy law|2023|lindroos-hovinheimo, s"
+    },
+    {
+      "status": "rejected",
+      "reason": "Duplicate of rejected GDPR automated decision-making article",
+      "date": "2026-10-01",
+      "aliasOf": "journalarticle-2024-rf295",
+      "url": "https://researchportal.helsinki.fi/en/publications/819f8563-0a37-47bd-b8d1-6261fc795521",
+      "fallbackKey": "automaattisen paatoksenteon maaritelma laajenee - euroopan unionin ensimmaiset tuomiot tietosuoja-asetuksen 22 artiklasta|2024|lindroos-hovinheimo, s"
+    },
+    {
+      "status": "rejected",
+      "reason": "Duplicate of rejected data protection book review",
+      "date": "2026-10-01",
+      "aliasOf": "journalarticle-2024-rf342",
+      "url": "https://researchportal.helsinki.fi/en/publications/e1f205f5-2bc4-40c8-85dc-264a5897b1c1",
+      "fallbackKey": "book review: gianclaudio malgieri, vulnerability and data protection law|2024|faisal, k"
+    },
+    {
+      "status": "rejected",
+      "reason": "Duplicate of rejected Lindroos interview (different year/URL)",
+      "date": "2026-10-01",
+      "aliasOf": "other-2025-rf286",
+      "url": "https://researchportal.helsinki.fi/en/publications/8728276c-c45a-44a8-b9aa-6c583f753e1b",
+      "aliasUrl": "https://researchportal.helsinki.fi/en/publications/3bc78723-d0fc-4bd0-b614-ce37918d1f6a"
+    },
+    {
+      "status": "rejected",
+      "reason": "Published version of rejected cognitive decline preprint",
+      "date": "2026-10-01",
+      "aliasOf": "preprint-2024-rf273",
+      "doi": "10.2196/preprints.65028",
+      "aliasDoi": "10.2196/65028"
+    }
+  ]
+}
