@@ -71,6 +71,12 @@ function findPublicationDecision(publication, decisions) {
     if (decision.fallbackKey && fallbackKey && String(decision.fallbackKey).trim() === fallbackKey) {
       return decision;
     }
+    if (decision.aliasDoi && doi && normalizeDoi(decision.aliasDoi) === doi) {
+      return decision;
+    }
+    if (decision.aliasUrl && url && String(decision.aliasUrl).trim().toLowerCase() === url) {
+      return decision;
+    }
   }
 
   return null;
