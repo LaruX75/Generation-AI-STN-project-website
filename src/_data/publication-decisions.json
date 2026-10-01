@@ -783,6 +783,156 @@
       "aliasOf": "preprint-2024-rf273",
       "doi": "10.2196/preprints.65028",
       "aliasDoi": "10.2196/65028"
+    },
+    {
+      "status": "rejected",
+      "reason": "Robotics course motivation study; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/978-3-031-98762-5_35"
+    },
+    {
+      "status": "rejected",
+      "reason": "ROS 2 learning environment development; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/978-3-031-98762-5_37"
+    },
+    {
+      "status": "rejected",
+      "reason": "Bird matching game design and rewards; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.17083/ijsg.v11i3.805"
+    },
+    {
+      "status": "rejected",
+      "reason": "Higher education robotics course projects; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/978-3-031-67059-6_4"
+    },
+    {
+      "status": "rejected",
+      "reason": "ROBOSTEAMSEN SEN robotics project; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1109/siie63180.2024.10604649"
+    },
+    {
+      "status": "rejected",
+      "reason": "Agile practices and customer experience; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/978-3-031-53227-6_27"
+    },
+    {
+      "status": "rejected",
+      "reason": "Koli Calling conference recap; not a research output",
+      "date": "2026-10-01",
+      "doi": "10.1145/3643836.3643841"
+    },
+    {
+      "status": "rejected",
+      "reason": "Youth research on appropriate digital content; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.57049/nuorisotutkimus.9138174"
+    },
+    {
+      "status": "rejected",
+      "reason": "Robotics education in Namibia; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/978-3-031-38454-7_7"
+    },
+    {
+      "status": "rejected",
+      "reason": "Koli Calling conference report; not a research output",
+      "date": "2026-10-01",
+      "doi": "10.1145/3584667.3584672"
+    },
+    {
+      "status": "rejected",
+      "reason": "Koli Calling call for papers; not a research output",
+      "date": "2026-10-01",
+      "doi": "10.1145/3607479.3607484"
+    },
+    {
+      "status": "rejected",
+      "reason": "Koli Calling invitation; not a research output",
+      "date": "2026-10-01",
+      "doi": "10.1145/3610585.3610588"
+    },
+    {
+      "status": "rejected",
+      "reason": "Scientometric study of game rewards; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1109/access.2022.3160230"
+    },
+    {
+      "status": "rejected",
+      "reason": "Reward types in mobile games; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1109/access.2022.3231936"
+    },
+    {
+      "status": "rejected",
+      "reason": "Gamer rage in children; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1016/j.ijcci.2022.100513"
+    },
+    {
+      "status": "rejected",
+      "reason": "Computational thinking robotics in Namibia; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.3390/s22218169"
+    },
+    {
+      "status": "rejected",
+      "reason": "Educational robotics taxonomy; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1007/978-3-031-12848-6_9"
+    },
+    {
+      "status": "rejected",
+      "reason": "UbuntuNet knowledge management; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.3390/systems10030079"
+    },
+    {
+      "status": "rejected",
+      "reason": "Koli Calling call for participation; not a research output",
+      "date": "2026-10-01",
+      "doi": "10.1145/3538522.3538528"
+    },
+    {
+      "status": "rejected",
+      "reason": "Koli Calling proceedings; not a research output",
+      "date": "2026-10-01",
+      "doi": "10.1145/3551627.3551629"
+    },
+    {
+      "status": "rejected",
+      "reason": "Doctoral dissertation on metagaming; not Generation AI",
+      "date": "2026-10-01",
+      "url": "http://urn.fi/URN:ISBN:978-952-61-4730-7"
+    },
+    {
+      "status": "rejected",
+      "reason": "Popular article on metagaming; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://digierko.fi/2022/04/27/mita-metapelaaminen-on/"
+    },
+    {
+      "status": "rejected",
+      "reason": "Special education framework (2007); predates Generation AI",
+      "date": "2026-10-01",
+      "url": "https://uef.cris.fi/publications/UEF-44552"
+    },
+    {
+      "status": "rejected",
+      "reason": "Kosovo teacher digital competence; not Generation AI",
+      "date": "2026-10-01",
+      "doi": "10.1016/j.caeo.2026.100396"
+    },
+    {
+      "status": "rejected",
+      "reason": "Robotics STEAM for intellectual disabilities SLR; not Generation AI",
+      "date": "2026-10-01",
+      "url": "https://www.ijee.ie/contents/c420126.html"
     }
   ]
 }
