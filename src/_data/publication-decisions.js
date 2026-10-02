@@ -59,6 +59,9 @@ function findPublicationDecision(publication, decisions) {
   const fallbackKey = buildFallbackKey(publication.title, publication.year, publication.authorsText);
 
   for (const decision of decisions) {
+    if (decision.id && publication.id && decision.id === publication.id) {
+      return decision;
+    }
     if (decision.doi && doi && normalizeDoi(decision.doi) === doi) {
       return decision;
     }
