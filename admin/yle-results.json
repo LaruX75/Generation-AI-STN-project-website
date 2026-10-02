@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-10-01T11:16:37.788Z",
+  "fetchedAt": "2026-10-02T10:48:53.978Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-02T00:00:01Z",
+      "title": "Open AI irtisanoi kolme työntekijäänsä arkaluonteisen tiedon huolimattomasta käsittelystä",
+      "url": "https://yle.fi/a/74-20249439",
+      "lead": "Työntekijät työskentelivät yhtiön turvallisuustiimissä ja ryhmässä, joka varmistaa tekoälymallien toimivan suunnitellulla tavalla."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-01T05:56:20Z",
@@ -113,13 +120,6 @@
       "title": "Suvi Auvinen huomasi, että Storytel teki tekoälytiivistelmiä hänen kirjastaan",
       "url": "https://yle.fi/a/74-20247235",
       "lead": "Storytelin mukaan tiivistelmät helpottavat äänikirjan kuuntelua, jos ajatukset harhailevat. Kirjailija Suvi Auvisen mielestä tekoäly ei palvele kuuntelijaa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-23T13:00:39Z",
-      "title": "Jotkut kansanedustajat kirjoittavat jo puheitaan suoraan tekoälyllä, sanoo Anna Kontula",
-      "url": "https://yle.fi/a/74-20247802",
-      "lead": "Vasemmistoliiton kansanedustajan Anna Kontulan mukaan poliittikojen keinot vaikuttaa tekoälyn uhkiin ovat tällä hetkellä vähäiset."
     },
     {
       "personName": "tekoäly",
