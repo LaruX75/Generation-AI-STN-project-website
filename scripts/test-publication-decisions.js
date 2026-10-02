@@ -367,6 +367,140 @@ test("sourceId match across sources", () => {
   assert.strictEqual(d?.status, "rejected");
 });
 
+// ── Stable identifier beats local id ─────────────────────────────────
+console.log("\nStable identifier priority (beats local id):");
+
+test("DOI wins when publication.id matches a different decision", () => {
+  const decs = [
+    { id: "pub-1", status: "keep", reason: "id-only decision", date: "2026-01-01" },
+    { doi: "10.5555/stable", status: "rejected", reason: "stable DOI decision", date: "2026-01-01" }
+  ];
+  const pub = { id: "pub-1", doi: "10.5555/stable", title: "T", year: 2026, authorsText: "A" };
+  const d = findPublicationDecision(pub, decs);
+  assert.strictEqual(d.status, "rejected", "stable DOI must beat local id");
+  assert.strictEqual(d.doi, "10.5555/stable");
+});
+
+test("sourceId wins when publication.id matches a different decision", () => {
+  const decs = [
+    { id: "pub-2", status: "keep", reason: "id-only decision", date: "2026-01-01" },
+    { sourceId: "openalex:W12345", status: "rejected", reason: "stable sourceId decision", date: "2026-01-01" }
+  ];
+  const pub = { id: "pub-2", sourceId: "openalex:W12345", title: "T", year: 2026, authorsText: "A" };
+  const d = findPublicationDecision(pub, decs);
+  assert.strictEqual(d.status, "rejected");
+  assert.strictEqual(d.sourceId, "openalex:W12345");
+});
+
+test("URL wins when publication.id matches a different decision", () => {
+  const decs = [
+    { id: "pub-3", status: "keep", reason: "id-only decision", date: "2026-01-01" },
+    { url: "https://portal.example/pub/abc", status: "rejected", reason: "stable URL decision", date: "2026-01-01" }
+  ];
+  const pub = { id: "pub-3", url: "https://portal.example/pub/abc", title: "T", year: 2026, authorsText: "A" };
+  const d = findPublicationDecision(pub, decs);
+  assert.strictEqual(d.status, "rejected");
+  assert.strictEqual(d.url, "https://portal.example/pub/abc");
+});
+
+test("fallbackKey wins when publication.id matches a different decision", () => {
+  const decs = [
+    { id: "pub-4", status: "keep", reason: "id-only decision", date: "2026-01-01" },
+    { fallbackKey: "stable title|2026|smith, j", status: "rejected", reason: "fallback decision", date: "2026-01-01" }
+  ];
+  const pub = { id: "pub-4", title: "Stable Title", year: 2026, authorsText: "Smith, J" };
+  const d = findPublicationDecision(pub, decs);
+  assert.strictEqual(d.status, "rejected");
+  assert.strictEqual(d.fallbackKey, "stable title|2026|smith, j");
+});
+
+test("ISBN on publication derives sourceId and beats local id", () => {
+  const decs = [
+    { id: "pub-5", status: "keep", reason: "id-only decision", date: "2026-01-01" },
+    { sourceId: "isbn:9789123456789", status: "rejected", reason: "ISBN-derived sourceId decision", date: "2026-01-01" }
+  ];
+  const pub = { id: "pub-5", isbn: "978-9123456789", title: "T", year: 2026, authorsText: "A" };
+  const d = findPublicationDecision(pub, decs);
+  assert.strictEqual(d.status, "rejected");
+});
+
+test("local id works as last-resort fallback when no stable identifier exists on publication", () => {
+  const decs = [
+    { id: "pub-6", status: "rejected", reason: "id-only decision", date: "2026-01-01" }
+  ];
+  const pub = { id: "pub-6", title: "T", year: 2026, authorsText: "A" };
+  const d = findPublicationDecision(pub, decs);
+  assert.strictEqual(d.status, "rejected");
+});
+
+test("local id does NOT override wrong stable identifier (no false positive)", () => {
+  const decs = [
+    { id: "pub-7", status: "keep", reason: "id-only decision", date: "2026-01-01" },
+    { doi: "10.5555/correct", status: "rejected", reason: "correct DOI decision", date: "2026-01-01" }
+  ];
+  const pub = { id: "pub-7", doi: "10.9999/wrong", title: "T", year: 2026, authorsText: "A" };
+  const d = findPublicationDecision(pub, decs);
+  assert.strictEqual(d.status, "keep", "no stable match → fall back to local id");
+});
+
+// ── Order-independence ───────────────────────────────────────────────
+console.log("\nOrder-independence:");
+
+test("decision order does not affect matching outcome (DOI vs id)", () => {
+  const forward = [
+    { id: "pub-A", status: "keep", reason: "id", date: "2026-01-01" },
+    { doi: "10.5555/order", status: "rejected", reason: "doi", date: "2026-01-01" }
+  ];
+  const reverse = [...forward].reverse();
+  const pub = { id: "pub-A", doi: "10.5555/order", title: "T", year: 2026, authorsText: "A" };
+  const forwardMatch = findPublicationDecision(pub, forward);
+  const reverseMatch = findPublicationDecision(pub, reverse);
+  assert.strictEqual(forwardMatch.status, "rejected");
+  assert.strictEqual(reverseMatch.status, "rejected");
+  assert.strictEqual(forwardMatch.doi, reverseMatch.doi);
+});
+
+test("decision order does not affect matching outcome (URL vs id)", () => {
+  const forward = [
+    { id: "pub-B", status: "keep", reason: "id", date: "2026-01-01" },
+    { url: "https://portal.example/order", status: "rejected", reason: "url", date: "2026-01-01" }
+  ];
+  const reverse = [...forward].reverse();
+  const pub = { id: "pub-B", url: "https://portal.example/order", title: "T", year: 2026, authorsText: "A" };
+  assert.strictEqual(findPublicationDecision(pub, forward).status, "rejected");
+  assert.strictEqual(findPublicationDecision(pub, reverse).status, "rejected");
+});
+
+// ── Volatility simulation ────────────────────────────────────────────
+console.log("\nVolatility simulation (migrated decision survives id churn):");
+
+test("migrated decision still matches after publication.id is removed", () => {
+  const decs = [
+    { doi: "10.5555/migrated", id: "pub-M", status: "rejected", reason: "migrated decision", date: "2026-01-01" }
+  ];
+  const withoutId = { doi: "10.5555/migrated", title: "T", year: 2026, authorsText: "A" };
+  const d = findPublicationDecision(withoutId, decs);
+  assert.strictEqual(d?.status, "rejected");
+});
+
+test("migrated decision still matches after publication.id is regenerated to a different string", () => {
+  const decs = [
+    { doi: "10.5555/migrated", id: "pub-M", status: "rejected", reason: "migrated decision", date: "2026-01-01" }
+  ];
+  const regenerated = { id: "regenerated-pub-M", doi: "10.5555/migrated", title: "T", year: 2026, authorsText: "A" };
+  const d = findPublicationDecision(regenerated, decs);
+  assert.strictEqual(d?.status, "rejected");
+});
+
+test("re-import of a REJECT with new local id but same DOI is still blocked", () => {
+  const decs = [
+    { doi: "10.5555/reimport", id: "original-id", status: "rejected", reason: "re-import test", date: "2026-01-01" }
+  ];
+  const reimported = { id: "new-id-after-sync", doi: "10.5555/reimport", title: "T", year: 2026, authorsText: "A" };
+  const d = findPublicationDecision(reimported, decs);
+  assert.strictEqual(d?.status, "rejected", "re-imported REJECT must still be filtered");
+});
+
 // ── Summary ───────────────────────────────────────────────────────────
 console.log(`\n${"=".repeat(50)}`);
 console.log(`Results: ${passed} passed, ${failed} failed, ${passed + failed} total`);

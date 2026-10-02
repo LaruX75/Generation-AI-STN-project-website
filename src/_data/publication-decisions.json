@@ -1943,151 +1943,172 @@
       "url": "https://doi.org/10.1016/j.chbr.2026.101038"
     },
     {
-      "id": "dissertationthesis-2026-rf550",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "http://hdl.handle.net/10138/635542",
+      "id": "dissertationthesis-2026-rf550"
     },
     {
-      "id": "journalarticle-2023-rf299",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/b9f4943c-5280-4fb5-a407-a3e6e2db52f9",
+      "id": "journalarticle-2023-rf299"
     },
     {
-      "id": "journalarticle-2023-rf297",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/6e5b5d9c-5ac9-4a31-88f9-be9bb09d6803",
+      "id": "journalarticle-2023-rf297"
     },
     {
-      "id": "bookchapter-2023-rf279",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.4324/9781003353683-19",
+      "id": "bookchapter-2023-rf279"
     },
     {
-      "id": "rf-2024-rf527",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.35542/osf.io/3qx2h",
+      "id": "rf-2024-rf527"
     },
     {
-      "id": "other-2024-rf343",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/2ef221c7-869d-454e-9c6a-5391a3a8fec0",
+      "id": "other-2024-rf343"
     },
     {
-      "id": "journalarticle-2024-rf340",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/42b954c9-31b9-4e03-8288-04c35f29fb26",
+      "id": "journalarticle-2024-rf340"
     },
     {
-      "id": "bookchapter-2024-rf296",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/864635bc-2a1f-4a68-9549-f338ca322eba",
+      "id": "bookchapter-2024-rf296"
     },
     {
-      "id": "journalarticle-2024-rf292",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/5da38c2c-fa6b-4a50-8a03-e97a1b8d815f",
+      "id": "journalarticle-2024-rf292"
     },
     {
-      "id": "dissertationthesis-2024-rf281",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/9ee282b6-9aba-4d6f-ac70-eb5005add1ac",
+      "id": "dissertationthesis-2024-rf281"
     },
     {
-      "id": "journalarticle-2025-rf338",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/ceb9478e-2b13-4d72-bbe4-54bd1279d061",
+      "id": "journalarticle-2025-rf338"
     },
     {
-      "id": "journalarticle-2025-rf337",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.5204/lthj.3821",
+      "id": "journalarticle-2025-rf337"
     },
     {
-      "id": "book-2025-rf288",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/8db0643b-e497-4e0c-a4c6-1f17a7b68202",
+      "id": "book-2025-rf288"
     },
     {
-      "id": "bookchapter-2025-rf285",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.4324/9781003565963-7",
+      "id": "bookchapter-2025-rf285"
     },
     {
-      "id": "bookchapter-2025-rf271",
       "status": "keep",
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.58181/vp9789523972513",
+      "id": "bookchapter-2025-rf271"
     },
     {
-      "id": "d4publisheddevelopmentorresearchreportorstudy-2025-rf261",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.70725/373097eiymbn",
+      "id": "d4publisheddevelopmentorresearchreportorstudy-2025-rf261"
     },
     {
-      "id": "journalarticle-2025-rf276",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.5817/sp2025-3-3",
+      "id": "journalarticle-2025-rf276"
     },
     {
-      "id": "book-2025-rf277",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/11140ded-747c-4dbe-8cf2-4a4e437c2064",
+      "id": "book-2025-rf277"
     },
     {
-      "id": "book-2025-rf278",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/ed605f44-7634-4c69-9290-474ceeb86b1e",
+      "id": "book-2025-rf278"
     },
     {
-      "id": "journalarticle-2025-rf289",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/c3c27d57-3f5e-45ae-85bc-bf3b5c6cd89e",
+      "id": "journalarticle-2025-rf289"
     },
     {
-      "id": "bookchapter-2023-rf280",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/3fe59dbc-a253-4a0a-b703-89476775097a",
+      "id": "bookchapter-2023-rf280"
     },
     {
       "id": "journalarticle-2023-rf298",
@@ -2097,1537 +2118,1756 @@
       "decidedBy": "jlaru"
     },
     {
-      "id": "journalarticle-2023-rf300",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/759d14a1-32c7-472a-8c07-59d8d3e97b42",
+      "id": "journalarticle-2023-rf300"
     },
     {
-      "id": "journalarticle-2023-rf302",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1007/s10978-023-09366-1",
+      "id": "journalarticle-2023-rf302"
     },
     {
-      "id": "journalarticle-2023-rf303",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/eecc0b90-1163-4cd8-9265-0754ea8a46a7",
+      "id": "journalarticle-2023-rf303"
     },
     {
-      "id": "conferencepaper-2022-rf269",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/e8102792-6dd6-4bce-bc02-ae194e7ae1cd",
+      "id": "conferencepaper-2022-rf269"
     },
     {
-      "id": "bookchapter-2022-rf282",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.7551/mitpress/13375.003.0008",
+      "id": "bookchapter-2022-rf282"
     },
     {
-      "id": "journalarticle-2022-rf283",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://publons.com/wos-op/publon/64075855/",
+      "id": "journalarticle-2022-rf283"
     },
     {
-      "id": "book-2022-rf312",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/f48441c9-9dad-427a-ac31-560684fe42fb",
+      "id": "book-2022-rf312"
     },
     {
-      "id": "journalarticle-2022-rf313",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/ee866379-41e8-4a7b-b778-82a6ad87fb3b",
+      "id": "journalarticle-2022-rf313"
     },
     {
-      "id": "journalarticle-2026-rf549",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1080/08856257.2026.2649544",
+      "id": "journalarticle-2026-rf549"
     },
     {
-      "id": "other-2026-rf530",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/c91f94f2-57ce-4682-b8f5-7bbf0f782a20",
+      "id": "other-2026-rf530"
     },
     {
-      "id": "bookchapter-2026-rf531",
       "status": "rejected",
       "reason": "Irrelevant to GenAI (no-member-match review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/596642c1-a84d-4398-a85d-ff4eb5f8e456",
+      "id": "bookchapter-2026-rf531"
     },
     {
-      "id": "a1-2024-105",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.2139/ssrn.4794092",
+      "id": "a1-2024-105"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf372",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.30191/ETS.202604_29(2).RP06",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf372"
     },
     {
-      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf373",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/978-3-031-95365-1_2",
+      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf373"
     },
     {
-      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf376",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/978-3-031-95365-1_8",
+      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf376"
     },
     {
-      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf378",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/978-3-031-95365-1_4",
+      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf378"
     },
     {
-      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf379",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/978-3-031-95365-1_3",
+      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf379"
     },
     {
-      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf381",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/978-3-031-95365-1_22",
+      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf381"
     },
     {
-      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf392",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/978-3-031-95365-1_6",
+      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf392"
     },
     {
-      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf397",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/978-3-031-95365-1_7",
+      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf397"
     },
     {
-      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf398",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/978-3-031-95365-1_11",
+      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf398"
     },
     {
-      "id": "b3vertaisarvioimatonartikkelikonferenssijulkaisussa-2025-rf399",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://ceur-ws.org/Vol-3938/Preface.pdf",
+      "id": "b3vertaisarvioimatonartikkelikonferenssijulkaisussa-2025-rf399"
     },
     {
-      "id": "a4artikkelikonferenssijulkaisussa-2025-rf400",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/978-981-96-5658-5_45",
+      "id": "a4artikkelikonferenssijulkaisussa-2025-rf400"
     },
     {
-      "id": "a4artikkelikonferenssijulkaisussa-2025-rf406",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1145/3769994.3770043",
+      "id": "a4artikkelikonferenssijulkaisussa-2025-rf406"
     },
     {
-      "id": "a2katsausartikkelitieteellisessaikakauslehdess-2025-rf410",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.3389/fpsyg.2025.1691414",
+      "id": "a2katsausartikkelitieteellisessaikakauslehdess-2025-rf410"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf236",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1177/14614448241252820",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf236"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf439",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1016/j.lindif.2024.102499",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf439"
     },
     {
-      "id": "b3vertaisarvioimatonartikkelikonferenssijulkaisussa-2024-rf456",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://ceur-ws.org/Vol-3696/preface.pdf",
+      "id": "b3vertaisarvioimatonartikkelikonferenssijulkaisussa-2024-rf456"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf466",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1186/s40561-024-00343-4",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf466"
     },
     {
-      "id": "i2tietojaviestinttekninenohjelmataiohjelmisto-nodate-rf467",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://github.com/sonsoleslp/chatgptscrapeR/",
+      "id": "i2tietojaviestinttekninenohjelmataiohjelmisto-nodate-rf467"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf520",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1016/j.chbr.2026.101130",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf520"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf537",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1016/j.chb.2025.108769",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf537"
     },
     {
-      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf544",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/978-3-031-95365-1_1",
+      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf544"
     },
     {
-      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf545",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/978-3-031-95365-1_10",
+      "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf545"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf540",
       "status": "keep",
       "reason": "GenAI-relevant (López-Pernas review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1016/j.iheduc.2026.101087",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf540"
     },
     {
-      "id": "a1-2023-10",
       "status": "keep",
       "reason": "GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1016/j.caeai.2023.100155",
+      "id": "a1-2023-10"
     },
     {
-      "id": "a1-2023-11",
       "status": "keep",
       "reason": "GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/access.2023.3269025",
+      "id": "a1-2023-11"
     },
     {
-      "id": "a1-2023-12",
       "status": "keep",
       "reason": "GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1080/08993408.2023.2175559",
+      "id": "a1-2023-12"
     },
     {
-      "id": "a2-2022-13",
       "status": "keep",
       "reason": "GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1007/s10639-022-11416-7",
+      "id": "a2-2022-13"
     },
     {
-      "id": "a1-2026-138",
       "status": "keep",
       "reason": "GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1016/j.caeo.2026.100368",
+      "id": "a1-2026-138"
     },
     {
-      "id": "a4conferenceproceedings-2026-rf260",
       "status": "keep",
       "reason": "GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://www.learntechlib.org/p/2129706/",
+      "id": "a4conferenceproceedings-2026-rf260"
     },
     {
-      "id": "a1journalarticlerefereedoriginalresearch-2023-rf262",
       "status": "keep",
       "reason": "GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1016/j.caeai.2023.100155",
+      "id": "a1journalarticlerefereedoriginalresearch-2023-rf262"
     },
     {
-      "id": "d3professionalconferenceproceedings-2022-rf264",
       "status": "keep",
       "reason": "GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "http://rpf.io/seminar-proceedings-vol-3-vartiainen",
+      "id": "d3professionalconferenceproceedings-2022-rf264"
     },
     {
-      "id": "a3c-2026-527",
       "status": "keep",
       "reason": "GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.48550/arxiv.2601.08380",
+      "id": "a3c-2026-527"
     },
     {
-      "id": "a1-2026-559",
       "status": "keep",
       "reason": "GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1016/j.caeo.2026.100422",
+      "id": "a1-2026-559"
     },
     {
-      "id": "a4-2023-4",
       "status": "rejected",
       "reason": "Not GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "pre-service teachers' understandings of privacy in social media environments|2023|vartiainen et al",
+      "id": "a4-2023-4"
     },
     {
-      "id": "a1-2023-7",
       "status": "rejected",
       "reason": "Not GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.23860/jmle-2023-15-2-2",
+      "id": "a1-2023-7"
     },
     {
-      "id": "a1-2025-133",
       "status": "rejected",
       "reason": "Not GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1080/13504622.2025.2585869",
+      "id": "a1-2025-133"
     },
     {
-      "id": "a1-2025-135",
       "status": "rejected",
       "reason": "Not GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1111/jade.12550",
+      "id": "a1-2025-135"
     },
     {
-      "id": "a1-2024-134",
       "status": "rejected",
       "reason": "Not GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.58459/rptel.2025.20004",
+      "id": "a1-2024-134"
     },
     {
-      "id": "a1-2024-137",
       "status": "rejected",
       "reason": "Not GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.7577/technea.5921",
+      "id": "a1-2024-137"
     },
     {
-      "id": "a1-2023-131",
       "status": "rejected",
       "reason": "Not GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1080/10508406.2023.2263845",
+      "id": "a1-2023-131"
     },
     {
-      "id": "a1-2023-132",
       "status": "rejected",
       "reason": "Not GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.7577/technea.4998",
+      "id": "a1-2023-132"
     },
     {
-      "id": "a1-2022-127",
       "status": "rejected",
       "reason": "Not GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1007/s10639-022-11426-5",
+      "id": "a1-2022-127"
     },
     {
-      "id": "a1-2022-128",
       "status": "rejected",
       "reason": "Not GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1111/bjet.13186",
+      "id": "a1-2022-128"
     },
     {
-      "id": "a1-2022-130",
       "status": "rejected",
       "reason": "Not GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1080/13562517.2022.2122791",
+      "id": "a1-2022-130"
     },
     {
-      "id": "a1journalarticlerefereedoriginalresearch-2022-rf265",
       "status": "rejected",
       "reason": "Not GenAI-relevant (Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/s10639-022-11426-5",
+      "id": "a1journalarticlerefereedoriginalresearch-2022-rf265"
     },
     {
-      "id": "a1-2024-32",
       "status": "keep",
       "reason": "GenAI-relevant (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "datafikoituva peruskoulu - tasapainoilua lapsen henkilötietojen suojan ja opetuksen tavoitteiden valilla|2024|silvennoinen, e.",
+      "id": "a1-2024-32"
     },
     {
-      "id": "a4-2025-47",
       "status": "keep",
       "reason": "GenAI-relevant (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/educon62633.2025.11016359",
+      "id": "a4-2025-47"
     },
     {
-      "id": "a1-2026-121",
       "status": "keep",
       "reason": "GenAI-relevant (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/educon67543.2026.11574161",
+      "id": "a1-2026-121"
     },
     {
+      "status": "keep",
+      "reason": "GenAI-relevant (Silvennoinen review)",
+      "decidedAt": "2026-10-01",
+      "decidedBy": "jlaru",
       "id": "e3editedpopularbook-2025-rf511",
+      "fallbackKey": "50 myyttiä tekoälystä ja datasta|2025|mäkelin, marianne"
+    },
+    {
       "status": "keep",
       "reason": "GenAI-relevant (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://journal.fi/lakimies/article/view/143755/",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf234"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf234",
-      "status": "keep",
-      "reason": "GenAI-relevant (Silvennoinen review)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
-    },
-    {
-      "id": "a4conferenceproceedings-2023-rf519",
       "status": "rejected",
       "reason": "Assessment analytics - not GenAI (user override)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://ceur-ws.org/Vol-3383/FLAIEC22_paper_3875.pdf",
+      "id": "a4conferenceproceedings-2023-rf519"
     },
     {
-      "id": "b1nonrefereedjournalarticles-2022-rf526",
       "status": "rejected",
       "reason": "Assessment analytics - not GenAI (user override)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://www.edilex.fi/artikkelit/25527",
+      "id": "b1nonrefereedjournalarticles-2022-rf526"
     },
     {
-      "id": "a1-2023-220",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.7146/ntfk.v110i3.141462",
+      "id": "a1-2023-220"
     },
     {
-      "id": "b1nonrefereedjournalarticles-2025-rf514",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://urn.fi/URN:NBN:fi-fe2025090995088",
+      "id": "b1nonrefereedjournalarticles-2025-rf514"
     },
     {
-      "id": "d1articleinatradejournal-2025-rf515",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://www.edilex.fi/uutiset/99406",
+      "id": "d1articleinatradejournal-2025-rf515"
     },
     {
-      "id": "b2booksection-2024-rf516",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://uef.cris.fi/publications/19314575-1dfd-40ea-8112-5e16b787401a",
+      "id": "b2booksection-2024-rf516"
     },
     {
-      "id": "a1journalarticlerefereedoriginalresearch-2024-rf517",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://oikeus.journal.fi/article/view/152410",
+      "id": "a1journalarticlerefereedoriginalresearch-2024-rf517"
     },
     {
-      "id": "d4publisheddevelopmentorresearchreportorstudy-2024-rf518",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://urn.fi/URN:ISBN:978-952-400-943-0",
+      "id": "d4publisheddevelopmentorresearchreportorstudy-2024-rf518"
     },
     {
-      "id": "b2booksection-2023-rf520",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://uef.cris.fi/publications/3f172e40-edb0-4bf8-91e0-6f1757d6e4ce",
+      "id": "b2booksection-2023-rf520"
     },
     {
-      "id": "b2booksection-2023-rf521",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://uef.cris.fi/publications/a41eb52c-cfd2-4a05-832c-341023e950f9",
+      "id": "b2booksection-2023-rf521"
     },
     {
-      "id": "d4publisheddevelopmentorresearchreportorstudy-2023-rf523",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "http://urn.fi/URN:ISBN:978-952-400-675-0",
+      "id": "d4publisheddevelopmentorresearchreportorstudy-2023-rf523"
     },
     {
-      "id": "a1journalarticlerefereedoriginalresearch-2023-rf524",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://journal.fi/lakimies/article/view/128219",
+      "id": "a1journalarticlerefereedoriginalresearch-2023-rf524"
     },
     {
-      "id": "b2booksection-2022-rf525",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://uef.cris.fi/publications/613ba394-247c-4e00-9d71-f6a8d0c1db46",
+      "id": "b2booksection-2022-rf525"
     },
     {
-      "id": "i1audiovisualmaterial-nodate-rf522",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://www.eoppiva.fi/koulutukset/lapsen-oikeudet-esitutkinnassa/",
+      "id": "i1audiovisualmaterial-nodate-rf522"
     },
     {
-      "id": "b2booksection-2025-rf551",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://uef.cris.fi/publications/59331d9e-6ec6-48dd-8a91-a834bb89cd88",
+      "id": "b2booksection-2025-rf551"
     },
     {
-      "id": "d1articleinatradejournal-2025-rf552",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://rikoksentorjunta.fi/-/haaste-1-2-2025-kouluvakivalta-johtaa-lopulta-harvoin-tuomioon",
+      "id": "d1articleinatradejournal-2025-rf552"
     },
     {
-      "id": "b2booksection-2026-rf548",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://uef.cris.fi/publications/9aa3d1e0-23b1-4a37-b5b0-eee6afbe2f60",
+      "id": "b2booksection-2026-rf548"
     },
     {
-      "id": "b2booksection-2026-rf549",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://uef.cris.fi/publications/0742f8fc-9111-406f-8f1c-488f34dbc53f",
+      "id": "b2booksection-2026-rf549"
     },
     {
-      "id": "a1journalarticlerefereedoriginalresearch-2026-rf550",
       "status": "rejected",
       "reason": "Legal/criminal law - not GenAI (Silvennoinen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://uef.cris.fi/publications/8e33d4df-714b-4ed3-84b1-0dce22b33e83",
+      "id": "a1journalarticlerefereedoriginalresearch-2026-rf550"
     },
     {
-      "id": "a1-2023-1",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1080/14626268.2023.2174557",
+      "id": "a1-2023-1"
     },
     {
-      "id": "b3-2023-8",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3587102.3593796",
+      "id": "b3-2023-8"
     },
     {
-      "id": "a1-2024-20",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/mcg.2024.3355808",
+      "id": "a1-2024-20"
     },
     {
-      "id": "a4-2024-23",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3649217.3653596",
+      "id": "a4-2024-23"
     },
     {
-      "id": "a1-2024-40",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1016/j.tsc.2024.101742",
+      "id": "a1-2024-40"
     },
     {
-      "id": "a4-2025-46",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "integrating ai education into democracy education classes facilitates critical ai literacy among pre-service teachers|2025|vartiainen, h.",
+      "id": "a4-2025-46"
     },
     {
-      "id": "a4-2025-56",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3689187.3709612",
+      "id": "a4-2025-56"
     },
     {
-      "id": "a4-2025-62",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.22318/icls2025.362276",
+      "id": "a4-2025-62"
     },
     {
-      "id": "a4-2025-64",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3769994.3770026",
+      "id": "a4-2025-64"
     },
     {
-      "id": "a4-2025-67",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "towards transformative ai education through cross-boundary co-design|2025|vartiainen, h.",
+      "id": "a4-2025-67"
     },
     {
-      "id": "a1-2025-114",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/fie63693.2025.11328532",
+      "id": "a1-2025-114"
     },
     {
-      "id": "a1-2025-115",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.14221/1835-517x.6925",
+      "id": "a1-2025-115"
     },
     {
-      "id": "a1-2024-99",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3649405.3659532",
+      "id": "a1-2024-99"
     },
     {
-      "id": "a4artikkelikonferenssijulkaisussa-2025-rf231",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.22318/icls2025.362276",
+      "id": "a4artikkelikonferenssijulkaisussa-2025-rf231"
     },
     {
-      "id": "a2-2025-75",
       "status": "keep",
       "reason": "GenAI-relevant (Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.5210/fm.v30i8.14160",
+      "id": "a2-2025-75"
     },
     {
-      "id": "a2-2025-76",
       "status": "keep",
       "reason": "GenAI-relevant (Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/access.2025.3633584",
+      "id": "a2-2025-76"
     },
     {
-      "id": "a2-2024-77",
       "status": "keep",
       "reason": "GenAI-relevant (Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1007/s44217-024-00138-2",
+      "id": "a2-2024-77"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf532",
       "status": "keep",
       "reason": "GenAI-relevant (Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/s10758-026-09998-z",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf532"
     },
     {
-      "id": "a1-2026-562",
       "status": "keep",
       "reason": "GenAI-relevant (Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1007/s10758-026-09998-z",
+      "id": "a1-2026-562"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf358",
       "status": "rejected",
       "reason": "Not GenAI - VR/holograms (Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/s10758-024-09797-4",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf358"
     },
     {
-      "id": "a3c-2022-525",
       "status": "rejected",
       "reason": "Not GenAI - VR/holograms (Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1007/978-3-030-97986-7_20",
+      "id": "a3c-2022-525"
     },
     {
-      "id": "a1-2022-526",
       "status": "rejected",
       "reason": "Not GenAI - VR/holograms (Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3505284.3532821",
+      "id": "a1-2022-526"
     },
     {
-      "id": "a4-2023-3",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "exploration on how co-designing with ai facilitates critical evaluation of ethics of ai in craft education|2023|tedre, m.",
+      "id": "a4-2023-3"
     },
     {
-      "id": "a3c-2024-19",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "sourceId": "isbn:9781939797735",
+      "id": "a3c-2024-19"
     },
     {
-      "id": "a1-2024-31",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1108/ils-10-2023-0146",
+      "id": "a1-2024-31"
     },
     {
-      "id": "a1-2026-117",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.15388/infedu.2506.023",
+      "id": "a1-2026-117"
     },
     {
-      "id": "a1-2022-86",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1177/14614448221079626",
+      "id": "a1-2022-86"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2023-rf241",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.23860/JMLE-2023-15-2-2",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2023-rf241"
     },
     {
-      "id": "a4artikkelikonferenssijulkaisussa-2023-rf242",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://www.learntechlib.org/p/221856/",
+      "id": "a4artikkelikonferenssijulkaisussa-2023-rf242"
     },
     {
-      "id": "poster-2023-15",
       "status": "keep",
       "reason": "GenAI-relevant (Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3631802.3631844",
+      "id": "poster-2023-15"
     },
     {
-      "id": "poster-2024-33",
       "status": "keep",
       "reason": "GenAI-relevant (Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3677619.3677642",
+      "id": "poster-2024-33"
     },
     {
-      "id": "poster-2025-60",
       "status": "keep",
       "reason": "GenAI-relevant (Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://www.learntechlib.org/primary/p/226145/",
+      "id": "poster-2025-60"
     },
     {
-      "id": "a1-2023-199",
       "status": "rejected",
       "reason": "Not GenAI - practicum/gaming/leadership (Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1080/10901027.2023.2223145",
+      "id": "a1-2023-199"
     },
     {
-      "id": "a1-2023-200",
       "status": "rejected",
       "reason": "Not GenAI - practicum/gaming/leadership (Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.58955/jecer.126208",
+      "id": "a1-2023-200"
     },
     {
-      "id": "b1kirjoitustieteellisessaikakauslehdess-2023-rf348",
       "status": "rejected",
       "reason": "Not GenAI - practicum/gaming/leadership (Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://pelitutkimus.journal.fi/article/view/136358",
+      "id": "b1kirjoitustieteellisessaikakauslehdess-2023-rf348"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2023-rf349",
       "status": "rejected",
       "reason": "Not GenAI - practicum/gaming/leadership (Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1080/10901027.2023.2223145",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2023-rf349"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf517",
       "status": "rejected",
       "reason": "Not GenAI - practicum/gaming/leadership (Kahila review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1080/02568543.2026.2664889",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf517"
     },
     {
-      "id": "a3-2024-49",
       "status": "keep",
       "reason": "GenAI-relevant (Mäkitalo+Laru review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1108/978-1-83608-852-320241015",
+      "id": "a3-2024-49"
     },
     {
-      "id": "a1-submitted-50",
       "status": "keep",
       "reason": "GenAI-relevant (Mäkitalo+Laru review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1080/02619768.2025.2535623",
+      "id": "a1-submitted-50"
     },
     {
-      "id": "a4-2025-51",
       "status": "keep",
       "reason": "GenAI-relevant (Mäkitalo+Laru review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "pre-service teachers' profiles from ml knowledge and ai attitude: relations with ai literacy|2025|laru, j.",
+      "id": "a4-2025-51"
     },
     {
-      "id": "a4-2025-52",
       "status": "keep",
       "reason": "GenAI-relevant (Mäkitalo+Laru review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "improving ai-related knowledge and skills in teacher education: a synthesis of empirical research|2025|celik, i.",
+      "id": "a4-2025-52"
     },
     {
-      "id": "d2-2026-74",
       "status": "keep",
       "reason": "GenAI-relevant (Mäkitalo+Laru review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "ohjelmoinnista ohjelmoinnilliseen ajatteluun ja tekoälytaitojen edistämiseen|2026|laru, jari",
+      "id": "d2-2026-74"
     },
     {
-      "id": "a3c-2024-104",
       "status": "keep",
       "reason": "GenAI-relevant (Mäkitalo+Laru review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.7551/mitpress/14041.003.0013",
+      "id": "a3c-2024-104"
     },
     {
-      "id": "pub-2023-124",
       "status": "rejected",
       "reason": "Editorial/research topic - not GenAI (Mäkitalo+Laru review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.3389/feduc.2023.1248509",
+      "id": "pub-2023-124"
     },
     {
-      "id": "c2-2023-rf529",
       "status": "rejected",
       "reason": "Editorial/research topic - not GenAI (Mäkitalo+Laru review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "research topic: looking ahead: computational thinking in k12 education|2023|mäkitalo, kati",
+      "id": "c2-2023-rf529"
     },
     {
-      "id": "a4-2024-30",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila+Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3677619.3677635",
+      "id": "a4-2024-30"
     },
     {
-      "id": "a1-2025-43",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila+Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/tlt.2025.3529994",
+      "id": "a1-2025-43"
     },
     {
-      "id": "a4-2025-58",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila+Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "wip: explainable ai is not self-explainable: findings from design-based k-12 ai education|2025|pope, n.",
+      "id": "a4-2025-58"
     },
     {
-      "id": "a3c-2025-113",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila+Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1007/978-3-032-03977-4_8",
+      "id": "a3c-2025-113"
     },
     {
-      "id": "a4artikkelikonferenssijulkaisussa-2024-rf235",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila+Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1145/3677619.3677635",
+      "id": "a4artikkelikonferenssijulkaisussa-2024-rf235"
     },
     {
-      "id": "a4c-2024-26",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila+Jormanainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/icalt61570.2024.00067",
+      "id": "a4c-2024-26"
     },
     {
-      "id": "a3c-2023-103",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila+Jormanainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.5040/9781350296947.ch-006",
+      "id": "a3c-2023-103"
     },
     {
-      "id": "a1-2022-91",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila+Jormanainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3491101.3503574",
+      "id": "a1-2022-91"
     },
     {
-      "id": "a1-2022-107",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Kahila+Jormanainen review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.33348/kvt.107970",
+      "id": "a1-2022-107"
     },
     {
-      "id": "poster-2025-65",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Roos+Kahila+Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3769994.3770062",
+      "id": "poster-2025-65"
     },
     {
-      "id": "pub-2026-116",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Roos+Kahila+Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.48448/zay1-a505",
+      "id": "pub-2026-116"
     },
     {
-      "id": "conferencepaper-2026-rf270",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Roos+Kahila+Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1609/aaai.v40i47.41525",
+      "id": "conferencepaper-2026-rf270"
     },
     {
-      "id": "a1-2025-534",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre+Vartiainen+Roos+Kahila+Pope review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.48550/arxiv.2508.14201",
+      "id": "a1-2025-534"
     },
     {
-      "id": "a1-2026-118",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.3389/fcomp.2026.1789829",
+      "id": "a1-2026-118"
     },
     {
-      "id": "a1-2025-84",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1016/j.caeai.2025.100460",
+      "id": "a1-2025-84"
     },
     {
-      "id": "a1-2025-85",
       "status": "keep",
       "reason": "GenAI-relevant (Tedre review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1007/s40593-025-00524-3",
+      "id": "a1-2025-85"
     },
     {
-      "id": "a3kirjantaimuunkokoomateoksenosa-nodate-rf258",
       "status": "rejected",
       "reason": "Ethnocomputing 2003 - not GenAI (Tedre review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://uef.cris.fi/publications/UEF-35392",
+      "id": "a3kirjantaimuunkokoomateoksenosa-nodate-rf258"
     },
     {
-      "id": "a3c-2023-2",
       "status": "keep",
       "reason": "GenAI-relevant (batch review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "learning machine learning in k-12|2023|jormanainen et al",
+      "id": "a3c-2023-2"
     },
     {
-      "id": "a1-2022-207",
       "status": "keep",
       "reason": "GenAI-relevant (batch review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3564721.3565961",
+      "id": "a1-2022-207"
     },
     {
-      "id": "a1-2026-546",
       "status": "keep",
       "reason": "GenAI-relevant (batch review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.57813/eleed.v1ise2026.271.g473",
+      "id": "a1-2026-546"
     },
     {
-      "id": "a3-2024-28",
       "status": "keep",
       "reason": "GenAI-relevant (batch review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1007/978-3-031-55272-4_12",
+      "id": "a3-2024-28"
     },
     {
-      "id": "b1-2024-530",
       "status": "keep",
       "reason": "GenAI-relevant (batch review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1007/978-3-031-55272-4",
+      "id": "b1-2024-530"
     },
     {
-      "id": "a1-2026-547",
       "status": "keep",
       "reason": "GenAI-relevant (batch review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1177/07356331261479569",
+      "id": "a1-2026-547"
     },
     {
-      "id": "a3c-2023-537",
       "status": "rejected",
       "reason": "Not GenAI - legal/craft/leadership (batch review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://openalex.org/W7199203982",
+      "id": "a3c-2023-537"
     },
     {
-      "id": "g5-2026-545",
       "status": "rejected",
       "reason": "Not GenAI - legal/craft/leadership (batch review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.13140/rg.2.2.29800.43523",
+      "id": "g5-2026-545"
     },
     {
-      "id": "rf-2025-rf557",
       "status": "rejected",
       "reason": "Not GenAI - legal/craft/leadership (batch review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/fi/publications/childrens-rights-to-personal-data-protection-why-the-gdpr-falls-s/",
+      "id": "rf-2025-rf557"
     },
     {
-      "id": "a1-2026-552",
       "status": "rejected",
       "reason": "Not GenAI - legal/craft/leadership (batch review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.7577/technea.6622",
+      "id": "a1-2026-552"
     },
     {
-      "id": "pub-2026-560",
       "status": "rejected",
       "reason": "Not GenAI - legal/craft/leadership (batch review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.3102/2272837",
+      "id": "pub-2026-560"
     },
     {
-      "id": "pub-2024-561",
       "status": "rejected",
       "reason": "Not GenAI - legal/craft/leadership (batch review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.5040/9781509971626.ch-004",
+      "id": "pub-2024-561"
     },
     {
-      "id": "poster-2025-66",
       "status": "keep",
       "reason": "GenAI-relevant (batch review 2)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3769994.3770061",
+      "id": "poster-2025-66"
     },
     {
-      "id": "a1-2026-120",
       "status": "keep",
       "reason": "GenAI-relevant (batch review 2)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/educon67543.2026.11574425",
+      "id": "a1-2026-120"
     },
     {
-      "id": "a1-2024-95",
       "status": "keep",
       "reason": "GenAI-relevant (batch review 2)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.17083/ijsg.v11i2.744",
+      "id": "a1-2024-95"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf233",
       "status": "keep",
       "reason": "GenAI-relevant (batch review 2)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.17083/ijsg.v11i2.744",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf233"
     },
     {
-      "id": "a1-2023-6",
       "status": "keep",
       "reason": "GenAI-relevant (single-pub review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1386/eta_00143_1",
+      "id": "a1-2023-6"
     },
     {
-      "id": "a1-2024-21",
       "status": "keep",
       "reason": "GenAI-relevant (single-pub review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.15388/infedu.2024.15",
+      "id": "a1-2024-21"
     },
     {
-      "id": "a4c-2024-25",
       "status": "keep",
       "reason": "GenAI-relevant (single-pub review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/icalt61570.2024.00037",
+      "id": "a4c-2024-25"
     },
     {
-      "id": "a4-2025-41",
       "status": "keep",
       "reason": "GenAI-relevant (single-pub review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1609/aaai.v39i28.35189",
+      "id": "a4-2025-41"
     },
     {
-      "id": "a4-2025-53",
       "status": "keep",
       "reason": "GenAI-relevant (single-pub review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "teachable machine and social media emulator somekone - tools for k9 students to learn about ai|2025|laru, j.",
+      "id": "a4-2025-53"
     },
     {
-      "id": "a1-2025-224",
       "status": "keep",
       "reason": "GenAI-relevant (single-pub review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3713043.3728853",
+      "id": "a1-2025-224"
     },
     {
-      "id": "a1-2025-225",
       "status": "keep",
       "reason": "GenAI-relevant (single-pub review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.22318/icls2025.547397",
+      "id": "a1-2025-225"
     },
     {
-      "id": "a4artikkelikonferenssijulkaisussa-2025-rf230",
       "status": "keep",
       "reason": "GenAI-relevant (single-pub review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://www.learntechlib.org/primary/p/226243/",
+      "id": "a4artikkelikonferenssijulkaisussa-2025-rf230"
     },
     {
-      "id": "rf-2025-rf554",
       "status": "keep",
       "reason": "GenAI-relevant (single-pub review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/fi/publications/technological-competence-in-formal-education-collaborative-maker-/",
+      "id": "rf-2025-rf554"
     },
     {
-      "id": "pub-2026-558",
       "status": "keep",
       "reason": "GenAI-relevant (single-pub review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.22318/icls2026.998977",
+      "id": "pub-2026-558"
     },
     {
-      "id": "conferencepresentation-2025-rf551",
       "status": "rejected",
       "reason": "Not GenAI - space weather/craft/EU law (single-pub review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.48550/arxiv.2509.19605",
+      "id": "conferencepresentation-2025-rf551"
     },
     {
-      "id": "rf-2026-rf553",
       "status": "rejected",
       "reason": "Not GenAI - space weather/craft/EU law (single-pub review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/fi/publications/k%C3%A4sity%C3%B6oppiaineen-vahvuus-on-laaja-alaisuudessa-vastine-lakialoit/",
+      "id": "rf-2026-rf553"
     },
     {
-      "id": "bookchapter-2026-rf563",
       "status": "rejected",
       "reason": "Not GenAI - space weather/craft/EU law (single-pub review)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.5040/9781509982059.ch-009",
+      "id": "bookchapter-2026-rf563"
     },
     {
-      "id": "poster-2023-5",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "generation ai: ai education for the security mindset (genai)|2023|kahila et al",
+      "id": "poster-2023-5"
     },
     {
-      "id": "poster-2023-9",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3587103.3594171",
+      "id": "poster-2023-9"
     },
     {
-      "id": "a4-2024-14",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://2024.isls.org/proceedings/",
+      "id": "a4-2024-14"
     },
     {
-      "id": "a3-2023-16",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "certain legal aspects of children's right to protect personal data in the context of ai under the european union data protection laws|2023|faisal, k",
+      "id": "a3-2023-16"
     },
     {
-      "id": "a2-2024-18",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1016/j.chb.2023.108076",
+      "id": "a2-2024-18"
     },
     {
-      "id": "a4c-2024-24",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/icalt61570.2024.00038",
+      "id": "a4c-2024-24"
     },
     {
-      "id": "a1-2024-27",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1177/14614448241252820",
+      "id": "a1-2024-27"
     },
     {
-      "id": "a1-submitted-29",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "metaphors in young children's learning with and about ai: the case of superheroes||sormunen, k.",
+      "id": "a1-submitted-29"
     },
     {
-      "id": "a4-2025-42",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1609/aaai.v39i28.35194",
+      "id": "a4-2025-42"
     },
     {
-      "id": "a1-2025-44",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/mc.2024.3349913",
+      "id": "a1-2025-44"
     },
     {
-      "id": "a4-2025-45",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "pre-service teachers' experiences with using an (x)ai education tool for teaching social media mechanisms|2025|pope, n.",
+      "id": "a4-2025-45"
     },
     {
+      "status": "keep",
+      "reason": "GenAI core publication (C-class)",
+      "decidedAt": "2026-10-01",
+      "decidedBy": "jlaru",
       "id": "b2-2025-54",
+      "fallbackKey": "tekoalytaitojen opettaminen generation ai -sovellusten avulla|2025|laru, j"
+    },
+    {
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
-    },
-    {
+      "decidedBy": "jlaru",
       "id": "b2-2025-55",
+      "fallbackKey": "generation ai -projekti|2025|laru, j"
+    },
+    {
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/mipro65660.2025.11131841",
+      "id": "a4-2025-57"
     },
     {
-      "id": "a4-2025-57",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "long-term impacts of k-12 ai education interventions on social media mechanisms|2025|vartiainen, h.",
+      "id": "a4-2025-59"
     },
     {
-      "id": "a4-2025-59",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "generation ai: pedagogical frameworks and tools for ai education|2025|tedre, m.",
+      "id": "a4-2025-63"
     },
     {
-      "id": "a4-2025-63",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "how to train your own language model in the browser: learning by doing|2025|pope, n.",
+      "id": "a4-2025-68"
     },
     {
-      "id": "a4-2025-68",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "fallbackKey": "an explainable ai tools for k-12 classroom: generation ai teachable machine|2025|iwata, megumi",
+      "id": "b3-2025-69"
     },
     {
-      "id": "b3-2025-69",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1016/j.compedu.2025.105485",
+      "id": "a1-2026-73"
     },
     {
-      "id": "a1-2026-73",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1109/educon67543.2026.11574053",
+      "id": "a1-2026-119"
     },
     {
-      "id": "a1-2026-119",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1007/s10798-026-10061-2",
+      "id": "a1-2026-163"
     },
     {
-      "id": "a1-2026-163",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1007/s10639-026-14074-1",
+      "id": "a1-2026-175"
     },
     {
-      "id": "a1-2026-175",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1007/s43681-025-00899-y",
+      "id": "a1-2026-198"
     },
     {
-      "id": "a1-2026-198",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3773077.3806128",
+      "id": "a1-2026-226"
     },
     {
-      "id": "a1-2026-226",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.22318/cscl2024.114185",
+      "id": "a1-2024-161"
     },
     {
-      "id": "a1-2024-161",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.4324/9781003207085-7",
+      "id": "a3c-2023-194"
     },
     {
-      "id": "a3c-2023-194",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/8cda0ad8-038e-41c3-8567-78fa03eac40f",
+      "id": "journalarticle-2026-rf284"
     },
     {
-      "id": "journalarticle-2026-rf284",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "doi": "10.2139/ssrn.6278616",
+      "id": "preprint-2026-rf315"
     },
     {
-      "id": "preprint-2026-rf315",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/98c5ce2e-d3ad-4649-8933-07050f1fa289",
+      "id": "journalarticle-2026-rf336"
     },
     {
-      "id": "journalarticle-2026-rf336",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
-    },
-    {
+      "decidedBy": "jlaru",
       "id": "e1yleistajuinenartikkelisanomalehtiartikkeli-2025-rf228",
+      "fallbackKey": "mikä tekoäly?|2025|davies, sini"
+    },
+    {
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
-    },
-    {
+      "decidedBy": "jlaru",
       "id": "e1yleistajuinenartikkelisanomalehtiartikkeli-2025-rf229",
-      "status": "keep",
-      "reason": "GenAI core publication (C-class)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "fallbackKey": "mitä tekoälyllä ja datalla tehdään?|2025|alastalo, marja"
     },
     {
-      "id": "a4artikkelikonferenssijulkaisussa-2025-rf374",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1109/ICALT64023.2025.00073",
+      "id": "a4artikkelikonferenssijulkaisussa-2025-rf374"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf384",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1109/TLT.2025.3568599",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf384"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf394",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1080/01443410.2025.2553639",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf394"
     },
     {
-      "id": "a4artikkelikonferenssijulkaisussa-2025-rf412",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://ceur-ws.org/Vol-3994/paper1.pdf",
+      "id": "a4artikkelikonferenssijulkaisussa-2025-rf412"
     },
     {
-      "id": "conferencepaper-2024-rf268",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/4a4d41ab-9fe6-4300-977a-5d862ccd9abb",
+      "id": "conferencepaper-2024-rf268"
     },
     {
-      "id": "journalarticle-2024-rf290",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/b7f75b0c-466e-4bf9-b541-a4d1486a46f6",
+      "id": "journalarticle-2024-rf290"
     },
     {
-      "id": "d1artikkeliammattilehdess-2024-rf347",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://www.raspberrypi.org/hello-world/issues/23",
+      "id": "d1artikkeliammattilehdess-2024-rf347"
     },
     {
-      "id": "bookchapter-2023-rf298",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://researchportal.helsinki.fi/en/publications/bd6f2792-c6c0-4375-9d92-a0fb09ce1cee",
+      "id": "bookchapter-2023-rf298"
     },
     {
-      "id": "g5-2026-538",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://openalex.org/W7199215563",
+      "id": "g5-2026-538"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf541",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1002/jcal.70285",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf541"
     },
     {
-      "id": "a1-2025-536",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://openalex.org/W7198722787",
+      "id": "a1-2025-536"
     },
     {
-      "id": "a2katsausartikkelitieteellisessaikakauslehdess-2025-rf539",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.18608/jla.2025.8591",
+      "id": "a2katsausartikkelitieteellisessaikakauslehdess-2025-rf539"
     },
     {
-      "id": "a4artikkelikonferenssijulkaisussa-2025-rf546",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1109/ICALT64023.2025.00044",
+      "id": "a4artikkelikonferenssijulkaisussa-2025-rf546"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf534",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1007/s10758-026-10005-8",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf534"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf535",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.1016/j.caeai.2026.100649",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf535"
     },
     {
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf546",
       "status": "keep",
       "reason": "GenAI core publication (C-class)",
       "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru"
+      "decidedBy": "jlaru",
+      "url": "https://doi.org/10.6018/red.711091",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf546"
     }
   ]
 }

@@ -40,6 +40,24 @@ function buildSourceId(source, stableId) {
   return `${source}:${String(stableId).trim()}`;
 }
 
+function normalizeSourceId(raw) {
+  if (!raw) return "";
+  return String(raw).trim().toLowerCase();
+}
+
+function normalizeUrl(raw) {
+  if (!raw) return "";
+  return String(raw).trim().toLowerCase();
+}
+
+function derivePublicationSourceId(publication) {
+  if (publication.sourceId) return normalizeSourceId(publication.sourceId);
+  if (publication.isbn) {
+    return normalizeSourceId(buildSourceId("isbn", String(publication.isbn).replace(/[-\s]/g, "")));
+  }
+  return "";
+}
+
 function loadDecisions() {
   try {
     const raw = fs.readFileSync(DECISIONS_PATH, "utf8");
@@ -50,35 +68,58 @@ function loadDecisions() {
   }
 }
 
+/**
+ * Match priority:
+ *   1. primary DOI
+ *   2. alias DOI
+ *   3. sourceId        (also derived from publication.isbn when available)
+ *   4. primary URL
+ *   5. alias URL
+ *   6. exact fallbackKey
+ *   7. local id        (last-resort fallback — volatile)
+ */
 function findPublicationDecision(publication, decisions) {
   if (!Array.isArray(decisions) || !decisions.length) return null;
 
   const doi = normalizeDoi(publication.doi);
-  const sourceId = publication.sourceId ? String(publication.sourceId).trim().toLowerCase() : "";
-  const url = publication.url ? String(publication.url).trim().toLowerCase() : "";
+  const sourceId = derivePublicationSourceId(publication);
+  const url = normalizeUrl(publication.url);
   const fallbackKey = buildFallbackKey(publication.title, publication.year, publication.authorsText);
+  const pubId = publication.id ? String(publication.id) : "";
 
-  for (const decision of decisions) {
-    if (decision.id && publication.id && decision.id === publication.id) {
-      return decision;
+  if (doi) {
+    for (const decision of decisions) {
+      if (decision.doi && normalizeDoi(decision.doi) === doi) return decision;
     }
-    if (decision.doi && doi && normalizeDoi(decision.doi) === doi) {
-      return decision;
+    for (const decision of decisions) {
+      if (decision.aliasDoi && normalizeDoi(decision.aliasDoi) === doi) return decision;
     }
-    if (decision.sourceId && sourceId && String(decision.sourceId).trim().toLowerCase() === sourceId) {
-      return decision;
+  }
+
+  if (sourceId) {
+    for (const decision of decisions) {
+      if (decision.sourceId && normalizeSourceId(decision.sourceId) === sourceId) return decision;
     }
-    if (decision.url && url && String(decision.url).trim().toLowerCase() === url) {
-      return decision;
+  }
+
+  if (url) {
+    for (const decision of decisions) {
+      if (decision.url && normalizeUrl(decision.url) === url) return decision;
     }
-    if (decision.fallbackKey && fallbackKey && String(decision.fallbackKey).trim() === fallbackKey) {
-      return decision;
+    for (const decision of decisions) {
+      if (decision.aliasUrl && normalizeUrl(decision.aliasUrl) === url) return decision;
     }
-    if (decision.aliasDoi && doi && normalizeDoi(decision.aliasDoi) === doi) {
-      return decision;
+  }
+
+  if (fallbackKey && fallbackKey !== "||") {
+    for (const decision of decisions) {
+      if (decision.fallbackKey && String(decision.fallbackKey).trim() === fallbackKey) return decision;
     }
-    if (decision.aliasUrl && url && String(decision.aliasUrl).trim().toLowerCase() === url) {
-      return decision;
+  }
+
+  if (pubId) {
+    for (const decision of decisions) {
+      if (decision.id && decision.id === pubId) return decision;
     }
   }
 
@@ -89,9 +130,12 @@ module.exports = {
   DECISIONS_PATH,
   normalizeDoi,
   normalizeTitle,
+  normalizeUrl,
+  normalizeSourceId,
   firstAuthorName,
   buildFallbackKey,
   buildSourceId,
+  derivePublicationSourceId,
   loadDecisions,
   findPublicationDecision
 };
