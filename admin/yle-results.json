@@ -1,13 +1,13 @@
 {
-  "fetchedAt": "2026-10-02T10:48:53.978Z",
+  "fetchedAt": "2026-10-03T10:08:44.807Z",
   "count": 26,
   "articles": [
     {
       "personName": "tekoäly",
-      "datePublished": "2026-10-02T00:00:01Z",
-      "title": "Open AI irtisanoi kolme työntekijäänsä arkaluonteisen tiedon huolimattomasta käsittelystä",
-      "url": "https://yle.fi/a/74-20249439",
-      "lead": "Työntekijät työskentelivät yhtiön turvallisuustiimissä ja ryhmässä, joka varmistaa tekoälymallien toimivan suunnitellulla tavalla."
+      "datePublished": "2026-10-03T09:08:05Z",
+      "title": "​Kuopiolainen tanssinopettaja nauraa poliitikoille – tekoälyn avulla tehdyt parodiavideot Arkadianmäeltä uppoavat kansaan",
+      "url": "https://yle.fi/a/74-20248647",
+      "lead": "Tekoälyllä tuotettu musiikki ja humoristiset videot suora­toisto­palveluissa ovat lisääntyneet ja keräävät yleisöä."
     },
     {
       "personName": "tekoäly",
@@ -22,13 +22,6 @@
       "title": "Xamk ja Googlen hyväntekeväisyysjärjestö­ alkavat tarjota maksutonta tekoälykoulutusta­",
       "url": "https://yle.fi/a/74-20249105",
       "lead": "Koulutus on suunnattu erityisesti niille, jotka eivät ole juurikaan käyttäneet tekoälyä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-30T05:33:05Z",
-      "title": "Tekoälytutkija ja ihmisoikeusaktivistit saivat ”vaihtoehto-Nobelin”",
-      "url": "https://yle.fi/a/74-20249017",
-      "lead": ""
     },
     {
       "personName": "tekoäly",
@@ -70,7 +63,7 @@
       "datePublished": "2026-09-27T06:17:34Z",
       "title": "Tekoälyn uhkakuvia korostavat Piilaakson pomot kuuluvat kulttiin, josta leviää synkkiä tietoja",
       "url": "https://yle.fi/a/74-20247760",
-      "lead": "Anthropicin ja Open AI:n vaatimukset säädellä tekoälyä vaikuttavat pelottelulta, joka hyödyttää yrityksiä."
+      "lead": "Anthropicin ja Open AI:n vaatimukset säädellä tekoälyä vaikuttavat suomalais­professorin mukaan pelottelulta, joka hyödyttää yrityksiä."
     },
     {
       "personName": "tekoäly",
@@ -120,6 +113,13 @@
       "title": "Suvi Auvinen huomasi, että Storytel teki tekoälytiivistelmiä hänen kirjastaan",
       "url": "https://yle.fi/a/74-20247235",
       "lead": "Storytelin mukaan tiivistelmät helpottavat äänikirjan kuuntelua, jos ajatukset harhailevat. Kirjailija Suvi Auvisen mielestä tekoäly ei palvele kuuntelijaa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-09-23T13:00:39Z",
+      "title": "Jotkut kansanedustajat kirjoittavat jo puheitaan suoraan tekoälyllä, sanoo Anna Kontula",
+      "url": "https://yle.fi/a/74-20247802",
+      "lead": "Vasemmistoliiton kansanedustajan Anna Kontulan mukaan poliittikojen keinot vaikuttaa tekoälyn uhkiin ovat tällä hetkellä vähäiset."
     },
     {
       "personName": "tekoäly",
