@@ -2398,32 +2398,32 @@
       "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf540"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (Vartiainen review)",
+      "status": "rejected",
+      "reason": "Dissertation sub-study (Paper V) of Sanusi (2023, Univ. of Eastern Finland), funded by SCITECO Doctoral Programme; no Generation AI attribution in dissertation acknowledgments",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "doi": "10.1016/j.caeai.2023.100155",
       "id": "a1-2023-10"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (Vartiainen review)",
+      "status": "rejected",
+      "reason": "Dissertation sub-study (Paper III) of Sanusi (2023, Univ. of Eastern Finland), funded by SCITECO Doctoral Programme; no Generation AI attribution in dissertation acknowledgments",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "doi": "10.1109/access.2023.3269025",
       "id": "a1-2023-11"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (Vartiainen review)",
+      "status": "rejected",
+      "reason": "Dissertation sub-study (Paper II) of Sanusi (2023, Univ. of Eastern Finland), funded by SCITECO Doctoral Programme; no Generation AI attribution in dissertation acknowledgments",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "doi": "10.1080/08993408.2023.2175559",
       "id": "a1-2023-12"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (Vartiainen review)",
+      "status": "rejected",
+      "reason": "Dissertation sub-study (Paper I) of Sanusi (2023, Univ. of Eastern Finland), funded by SCITECO Doctoral Programme; no Generation AI attribution in dissertation acknowledgments",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "doi": "10.1007/s10639-022-11416-7",
@@ -2446,8 +2446,8 @@
       "id": "a4conferenceproceedings-2026-rf260"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (Vartiainen review)",
+      "status": "rejected",
+      "reason": "Dissertation sub-study (Paper V) of Sanusi (2023, Univ. of Eastern Finland), funded by SCITECO Doctoral Programme; no Generation AI attribution in dissertation acknowledgments",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "url": "https://doi.org/10.1016/j.caeai.2023.100155",
