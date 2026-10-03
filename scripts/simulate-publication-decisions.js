@@ -43,8 +43,8 @@ console.log(`  reject: ${baseline.reject}  keep: ${baseline.keep}  unmatched: ${
 const noId = rawRecords.map(r => ({ ...r, id: undefined }));
 const noIdMatches = countMatches(noId);
 console.log("\nID DROPPED (publication.id removed):");
-console.log(`  reject matched without id: ${noIdMatches.reject} / 391`);
-console.log(`  keep   matched without id: ${noIdMatches.keep} / 172`);
+console.log(`  reject matched without id: ${noIdMatches.reject} / ${baseline.reject}`);
+console.log(`  keep   matched without id: ${noIdMatches.keep} / ${baseline.keep}`);
 console.log(`  unmatched: ${noIdMatches.unmatched.length}`);
 if (noIdMatches.unmatched.length) {
   console.log("  unmatched sample:");
@@ -111,5 +111,5 @@ for (const r of rawRecords) {
   }
 }
 console.log("\nRE-IMPORT PROTECTION (REJECT re-arriving with a new local id):");
-console.log(`  re-import protected REJECT: ${reimportProtected} / 391`);
+console.log(`  re-import protected REJECT: ${reimportProtected} / ${baseline.reject}`);
 console.log(`  re-import LOST (would resurface): ${reimportLost}`);

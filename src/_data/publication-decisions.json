@@ -2015,8 +2015,8 @@
       "id": "journalarticle-2024-rf292"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (no-member-match review)",
+      "status": "rejected",
+      "reason": "HY Research Portal binds publication to Maker@STEAM / MaDe / CreaTE",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "url": "https://researchportal.helsinki.fi/en/publications/9ee282b6-9aba-4d6f-ac70-eb5005add1ac",
@@ -2286,8 +2286,8 @@
       "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf398"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (López-Pernas review)",
+      "status": "rejected",
+      "reason": "Conference preface / editorial, not a research publication",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "url": "https://ceur-ws.org/Vol-3938/Preface.pdf",
@@ -2302,8 +2302,8 @@
       "id": "a4artikkelikonferenssijulkaisussa-2025-rf400"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (López-Pernas review)",
+      "status": "rejected",
+      "reason": "Other projects: TOPEILA #350560 and CRETIC #360746",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "url": "https://doi.org/10.1145/3769994.3770043",
@@ -2326,32 +2326,32 @@
       "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf236"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (López-Pernas review)",
+      "status": "rejected",
+      "reason": "Other project: TOPEILA #350560",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "url": "https://doi.org/10.1016/j.lindif.2024.102499",
       "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf439"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (López-Pernas review)",
+      "status": "rejected",
+      "reason": "Conference preface / editorial, not a research publication",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "url": "https://ceur-ws.org/Vol-3696/preface.pdf",
       "id": "b3vertaisarvioimatonartikkelikonferenssijulkaisussa-2024-rf456"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (López-Pernas review)",
+      "status": "rejected",
+      "reason": "Other project: TOPEILA #350560",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "url": "https://doi.org/10.1186/s40561-024-00343-4",
       "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2024-rf466"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (López-Pernas review)",
+      "status": "rejected",
+      "reason": "Other project: ISILA #2023-1-FI01-KA220-HED-000159757",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "url": "https://github.com/sonsoleslp/chatgptscrapeR/",
@@ -2390,8 +2390,8 @@
       "id": "a3kirjantaimuunkokoomateoksenosa-2025-rf545"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (López-Pernas review)",
+      "status": "rejected",
+      "reason": "Other project: TOPEILA #350560",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "url": "https://doi.org/10.1016/j.iheduc.2026.101087",
@@ -2894,8 +2894,8 @@
       "id": "a2-2025-76"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (Pope review)",
+      "status": "rejected",
+      "reason": "Other project: TOPEILA #350560",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "doi": "10.1007/s44217-024-00138-2",
@@ -3102,8 +3102,8 @@
       "id": "d2-2026-74"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (Mäkitalo+Laru review)",
+      "status": "rejected",
+      "reason": "Other project: Academy of Finland project #318930 (GenZ)",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "doi": "10.7551/mitpress/14041.003.0013",
@@ -3286,16 +3286,16 @@
       "id": "a1-2026-546"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (batch review)",
+      "status": "rejected",
+      "reason": "Other project: ANR CreaMaker #ANR-18-CE38-0001",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "doi": "10.1007/978-3-031-55272-4_12",
       "id": "a3-2024-28"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (batch review)",
+      "status": "rejected",
+      "reason": "Other project: ANR CreaMaker #ANR-18-CE38-0001",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "doi": "10.1007/978-3-031-55272-4",
@@ -3454,8 +3454,8 @@
       "id": "a4artikkelikonferenssijulkaisussa-2025-rf230"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (single-pub review)",
+      "status": "rejected",
+      "reason": "HY Research Portal binds publication to Maker@STEAM / MaDe / CreaTE",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "url": "https://researchportal.helsinki.fi/fi/publications/technological-competence-in-formal-education-collaborative-maker-/",
