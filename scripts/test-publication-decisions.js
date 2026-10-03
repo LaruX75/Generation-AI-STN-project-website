@@ -16,6 +16,7 @@ const path = require("node:path");
 
 const {
   normalizeDoi,
+  normalizeUrl,
   buildFallbackKey,
   buildSourceId,
   findPublicationDecision
@@ -65,6 +66,57 @@ test("returns empty for null/undefined", () => {
   assert.strictEqual(normalizeDoi(null), "");
   assert.strictEqual(normalizeDoi(undefined), "");
   assert.strictEqual(normalizeDoi(""), "");
+});
+
+// ── normalizeUrl ──────────────────────────────────────────────────────
+console.log("\nnormalizeUrl:");
+
+test("trims and lowercases", () => {
+  assert.strictEqual(normalizeUrl("  https://Example.ORG/A  "), "https://example.org/a");
+});
+
+test("promotes http to https", () => {
+  assert.strictEqual(normalizeUrl("http://example.org/a"), "https://example.org/a");
+});
+
+test("strips one trailing slash", () => {
+  assert.strictEqual(normalizeUrl("https://example.org/a/"), "https://example.org/a");
+});
+
+test("strips multiple trailing slashes", () => {
+  assert.strictEqual(normalizeUrl("https://example.org/a////"), "https://example.org/a");
+});
+
+test("http + trailing slash normalize together", () => {
+  assert.strictEqual(normalizeUrl("http://example.org/a/"), "https://example.org/a");
+});
+
+test("preserves query string distinctions", () => {
+  const a = normalizeUrl("https://example.org/a?x=1");
+  const b = normalizeUrl("https://example.org/a?x=2");
+  assert.notStrictEqual(a, b);
+});
+
+test("preserves hash fragment distinctions", () => {
+  const a = normalizeUrl("https://example.org/a#x");
+  const b = normalizeUrl("https://example.org/a#y");
+  assert.notStrictEqual(a, b);
+});
+
+test("does not strip slash before a query string", () => {
+  // slash before '?' is a path segment, not a trailing slash
+  assert.strictEqual(normalizeUrl("https://example.org/a/?x=1"), "https://example.org/a/?x=1");
+});
+
+test("returns empty for null/undefined/empty", () => {
+  assert.strictEqual(normalizeUrl(null), "");
+  assert.strictEqual(normalizeUrl(undefined), "");
+  assert.strictEqual(normalizeUrl(""), "");
+});
+
+test("does not touch scheme-less strings", () => {
+  // Not expected input, but shouldn't be mangled
+  assert.strictEqual(normalizeUrl("example.org/a"), "example.org/a");
 });
 
 // ── buildFallbackKey ──────────────────────────────────────────────────
@@ -499,6 +551,52 @@ test("re-import of a REJECT with new local id but same DOI is still blocked", ()
   const reimported = { id: "new-id-after-sync", doi: "10.5555/reimport", title: "T", year: 2026, authorsText: "A" };
   const d = findPublicationDecision(reimported, decs);
   assert.strictEqual(d?.status, "rejected", "re-imported REJECT must still be filtered");
+});
+
+// ── URL-only / fallbackKey-only re-import regression ──────────────────
+console.log("\nURL-only / fallbackKey-only REJECT re-import regression:");
+
+test("URL-only REJECT survives new local id + full metadata churn (https identical)", () => {
+  const decs = [{ url: "https://portal.example/pub/abc", status: "rejected", reason: "x", date: "2026-01-01" }];
+  const reimported = { id: "fresh-" + Date.now(), url: "https://portal.example/pub/abc", title: "ANY NEW TITLE", year: 2099, authorsText: "ANY" };
+  assert.strictEqual(findPublicationDecision(reimported, decs)?.status, "rejected");
+});
+
+test("URL-only REJECT survives trailing-slash variation", () => {
+  const decs = [{ url: "https://portal.example/pub/abc", status: "rejected", reason: "x", date: "2026-01-01" }];
+  const reimported = { id: "fresh", url: "https://portal.example/pub/abc/", title: "T", year: 2099, authorsText: "A" };
+  assert.strictEqual(findPublicationDecision(reimported, decs)?.status, "rejected");
+});
+
+test("URL-only REJECT survives http scheme on candidate side", () => {
+  const decs = [{ url: "https://portal.example/pub/abc", status: "rejected", reason: "x", date: "2026-01-01" }];
+  const reimported = { id: "fresh", url: "http://portal.example/pub/abc", title: "T", year: 2099, authorsText: "A" };
+  assert.strictEqual(findPublicationDecision(reimported, decs)?.status, "rejected");
+});
+
+test("URL-only REJECT survives http + trailing-slash combined", () => {
+  const decs = [{ url: "https://portal.example/pub/abc", status: "rejected", reason: "x", date: "2026-01-01" }];
+  const reimported = { id: "fresh", url: "http://portal.example/pub/abc/", title: "T", year: 2099, authorsText: "A" };
+  assert.strictEqual(findPublicationDecision(reimported, decs)?.status, "rejected");
+});
+
+test("URL-only REJECT survives stored URL with trailing slash + candidate without", () => {
+  // The stored side also goes through normalizeUrl now, so this must work in both directions
+  const decs = [{ url: "https://portal.example/pub/abc/", status: "rejected", reason: "x", date: "2026-01-01" }];
+  const reimported = { id: "fresh", url: "https://portal.example/pub/abc", title: "T", year: 2099, authorsText: "A" };
+  assert.strictEqual(findPublicationDecision(reimported, decs)?.status, "rejected");
+});
+
+test("fallbackKey-only REJECT survives re-import with no DOI and no URL", () => {
+  const decs = [{ fallbackKey: "stable title|2024|smith, j", status: "rejected", reason: "x", date: "2026-01-01" }];
+  const reimported = { id: "fresh", doi: "", url: "", title: "Stable Title", year: 2024, authorsText: "Smith, J" };
+  assert.strictEqual(findPublicationDecision(reimported, decs)?.status, "rejected");
+});
+
+test("URL normalization does NOT merge different query strings", () => {
+  const decs = [{ url: "https://example.org/a?x=1", status: "rejected", reason: "x", date: "2026-01-01" }];
+  const reimported = { id: "fresh", url: "https://example.org/a?x=2", title: "T", year: 2099, authorsText: "A" };
+  assert.strictEqual(findPublicationDecision(reimported, decs), null, "different query strings must not collapse");
 });
 
 // ── Summary ───────────────────────────────────────────────────────────

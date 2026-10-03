@@ -47,7 +47,10 @@ function normalizeSourceId(raw) {
 
 function normalizeUrl(raw) {
   if (!raw) return "";
-  return String(raw).trim().toLowerCase();
+  let u = String(raw).trim().toLowerCase();
+  if (u.startsWith("http://")) u = "https://" + u.slice(7);
+  u = u.replace(/\/+$/, "");
+  return u;
 }
 
 function derivePublicationSourceId(publication) {
