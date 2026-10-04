@@ -553,6 +553,39 @@ test("re-import of a REJECT with new local id but same DOI is still blocked", ()
   assert.strictEqual(d?.status, "rejected", "re-imported REJECT must still be filtered");
 });
 
+// ── Explicit-KEEP render gate ─────────────────────────────────────────
+console.log("\nExplicit-KEEP render gate:");
+
+test("render filter emits only publications with status === 'keep'", () => {
+  const records = [
+    { id: "k", doi: "10.1/k", title: "Kept", year: 2026, authorsText: "A", status: "Published" },
+    { id: "r", doi: "10.1/r", title: "Rejected", year: 2026, authorsText: "A", status: "Published" },
+    { id: "u", doi: "10.1/u", title: "Undecided", year: 2026, authorsText: "A", status: "Published" }
+  ];
+  const decs = [
+    { doi: "10.1/k", status: "keep",     reason: "x", date: "2026-01-01" },
+    { doi: "10.1/r", status: "rejected", reason: "x", date: "2026-01-01" }
+  ];
+  const rendered = records.filter(r => {
+    const d = findPublicationDecision(r, decs);
+    return d?.status === "keep";
+  });
+  assert.strictEqual(rendered.length, 1);
+  assert.strictEqual(rendered[0].id, "k");
+});
+
+test("render filter hides publications with no decision", () => {
+  const records = [
+    { id: "u", doi: "10.1/u", title: "No decision", year: 2026, authorsText: "A", status: "Published" }
+  ];
+  const decs = [];
+  const rendered = records.filter(r => {
+    const d = findPublicationDecision(r, decs);
+    return d?.status === "keep";
+  });
+  assert.strictEqual(rendered.length, 0, "no-decision publications must stay hidden until explicit KEEP");
+});
+
 // ── URL-only / fallbackKey-only re-import regression ──────────────────
 console.log("\nURL-only / fallbackKey-only REJECT re-import regression:");
 

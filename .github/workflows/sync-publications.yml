@@ -10,6 +10,7 @@ env:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   sync:
@@ -43,3 +44,8 @@ jobs:
             && echo "Ei uusia julkaisuja — ei commitoida" \
             || git commit -m "Päivitä tieteelliset julkaisut (OpenAlex + Research.fi) [skip-tests]" \
             && git push
+
+      - name: Update publication-review issue
+        run: node scripts/update-publication-review-issue.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -217,7 +217,10 @@ module.exports = function scientificPublicationsData() {
   const items = records
     .filter(record => {
       const decision = findPublicationDecision(record, decisions);
-      return decision?.status !== "rejected";
+      // Explicit KEEP gate: only publications with an explicit editorial KEEP
+      // decision are rendered. New raw records without a decision stay hidden
+      // until reviewed via the publication-review GitHub Issue flow.
+      return decision?.status === "keep";
     })
     .map((record, index) => {
     const link = buildLink(record);

@@ -1,0 +1,45 @@
+name: Publication review — process comment
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  # One comment-processing run at a time per issue to avoid race conditions
+  group: publication-review-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    # Guards:
+    #   - comment is on an issue (not a PR)
+    #   - issue has the publication-review label
+    #   - comment author is the authorized reviewer
+    if: >
+      github.event.issue.pull_request == null &&
+      contains(github.event.issue.labels.*.name, 'publication-review') &&
+      github.event.comment.user.login == 'LaruX75'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install dependencies
+        run: npm ci --omit=dev
+
+      - name: Apply decisions from comment
+        run: node scripts/apply-publication-decisions-from-comment.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
