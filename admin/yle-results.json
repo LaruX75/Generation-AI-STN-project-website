@@ -1,13 +1,20 @@
 {
-  "fetchedAt": "2026-10-05T11:57:17.088Z",
+  "fetchedAt": "2026-10-06T11:36:57.359Z",
   "count": 26,
   "articles": [
     {
       "personName": "tekoäly",
-      "datePublished": "2026-10-04T05:03:49Z",
-      "title": "Pohjois-Korea väitti uuden ohjuksensa käyttävän tekoälyä",
-      "url": "https://yle.fi/a/74-20249692",
-      "lead": ""
+      "datePublished": "2026-10-06T08:38:24Z",
+      "title": "EK haluaa muuttaa perustuslakia: lisää vapautta tekoälylle",
+      "url": "https://yle.fi/a/74-20250056",
+      "lead": "Tällä hetkellä jokaisen päätöksen takana täytyy olla virkaa toimittava ihminen. EK haluaa lakimuutoksella hyödyntää tekoälyä laajemmin julkishallinnossa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-06T07:47:36Z",
+      "title": "Suomen virkavastuun lainsäädäntöä pitää ehkä muuttaa, jos tekoälyä halutaan käyttää enemmän julkishallinnossa",
+      "url": "https://yle.fi/a/74-20250039",
+      "lead": "Vaasan yliopiston professori Niina Mäntylä  teki asiasta lausunnon Elinkeinoelämän keskusliitolle eli EK:lle."
     },
     {
       "personName": "tekoäly",
@@ -113,13 +120,6 @@
       "title": "Ranskassa pohditaan, onko syksyn bestseller tehty tekoälyllä – kustantaja puhuu vihakampanjasta",
       "url": "https://yle.fi/a/74-20247795",
       "lead": "Somessa leviää väite, jonka mukaan kanadalais-haitilaisen kirjailijan Thélyson Orélienin uutuusromaani olisi tekoälyn kirjoittama. Kirjailija kiistää syytökset."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-23T15:34:55Z",
-      "title": "Suvi Auvinen huomasi, että Storytel teki tekoälytiivistelmiä hänen kirjastaan",
-      "url": "https://yle.fi/a/74-20247235",
-      "lead": "Storytelin mukaan tiivistelmät helpottavat äänikirjan kuuntelua, jos ajatukset harhailevat. Kirjailija Suvi Auvisen mielestä tekoäly ei palvele kuuntelijaa."
     },
     {
       "personName": "tekoäly",
