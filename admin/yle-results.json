@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-10-06T11:36:57.359Z",
+  "fetchedAt": "2026-10-07T11:26:40.220Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-07T06:37:29Z",
+      "title": "IMF: Tekoäly vie maailmantaloutta yhteen suuntaan, velkaantuminen toiseen",
+      "url": "https://yle.fi/a/74-20250205",
+      "lead": "Yhdysvallat on tällä hetkellä suurin syyllinen velkaantumisen kasvuun, sanoo IMF:n pääjohtaja."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-06T18:30:35Z",
+      "title": "Humppilan kunta ja tekoäly",
+      "url": "https://yle.fi/v/video/91-20249966",
+      "lead": "Humppilan kunta korvasi virkamiehet tekoälyllä. Voisiko botti korvata poliitikot? 🧐"
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-06T08:38:24Z",
@@ -29,13 +43,6 @@
       "title": "”Tervetuloa superälyn maailmaan” – Trump luottaa tekoäly-yhtiöiden itsesäätelyyn",
       "url": "https://yle.fi/a/74-20249064",
       "lead": "Teknologia-alan suuryhtiöt kykenevät mahdillaan sanelemaan tekoäly­kehityksen suuntaa ja tapaa. Yhdysvaltain hallinto ei aio asettaa esteitä tekoäly­kilvalle."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-30T11:13:02Z",
-      "title": "Xamk ja Googlen hyväntekeväisyysjärjestö­ alkavat tarjota maksutonta tekoälykoulutusta­",
-      "url": "https://yle.fi/a/74-20249105",
-      "lead": "Koulutus on suunnattu erityisesti niille, jotka eivät ole juurikaan käyttäneet tekoälyä."
     },
     {
       "personName": "tekoäly",
@@ -113,13 +120,6 @@
       "title": "Tekoäly murtautui valtion sivuille Australiassa",
       "url": "https://yle.fi/v/video/91-20248114",
       "lead": "OpenAI:n tekoälyagentti tunkeutui luvatta Australian hallituksen verkkosivulle.Se pääsi terveyden­huollon järjestelmään ja sai tietoja, jotka eivät ole julkisia. Video: Anni Kavander, Alina Räisänen"
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-24T12:18:48Z",
-      "title": "Ranskassa pohditaan, onko syksyn bestseller tehty tekoälyllä – kustantaja puhuu vihakampanjasta",
-      "url": "https://yle.fi/a/74-20247795",
-      "lead": "Somessa leviää väite, jonka mukaan kanadalais-haitilaisen kirjailijan Thélyson Orélienin uutuusromaani olisi tekoälyn kirjoittama. Kirjailija kiistää syytökset."
     },
     {
       "personName": "tekoäly",
