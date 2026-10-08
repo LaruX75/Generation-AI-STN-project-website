@@ -3868,6 +3868,54 @@
       "decidedBy": "jlaru",
       "url": "https://doi.org/10.6018/red.711091",
       "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf546"
+    },
+    {
+      "status": "keep",
+      "reason": "Editorial decision via GitHub publication review issue #5",
+      "decidedAt": "2026-10-08",
+      "decidedBy": "LaruX75",
+      "doi": "10.15388/infedu.2601.025",
+      "id": "a1-2026-564"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision via GitHub publication review issue #5",
+      "decidedAt": "2026-10-08",
+      "decidedBy": "LaruX75",
+      "doi": "10.1088/2632-2153/aead48",
+      "id": "a1-2026-565"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision via GitHub publication review issue #5",
+      "decidedAt": "2026-10-08",
+      "decidedBy": "LaruX75",
+      "doi": "10.5281/zenodo.19732527",
+      "id": "b3-2026-566"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision via GitHub publication review issue #5",
+      "decidedAt": "2026-10-08",
+      "decidedBy": "LaruX75",
+      "sourceId": "uefconnect:https://doi.org/10.1109/mitp.2026.3712183",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf568"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision via GitHub publication review issue #5",
+      "decidedAt": "2026-10-08",
+      "decidedBy": "LaruX75",
+      "sourceId": "uefconnect:https://doi.org/10.57813/eleed.v1ise2026.263",
+      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf569"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision via GitHub publication review issue #5",
+      "decidedAt": "2026-10-08",
+      "decidedBy": "LaruX75",
+      "sourceId": "openalex:https://openalex.org/w7215500657",
+      "id": "pub-2022-567"
     }
   ]
 }
