@@ -1,20 +1,27 @@
 {
-  "fetchedAt": "2026-10-10T10:53:17.248Z",
+  "fetchedAt": "2026-10-11T11:07:46.436Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-10T13:33:36Z",
+      "title": "Tutkijat löysivät kolme tapaa käyttää tekoälyä opinnoissa – yhdestä olisi etua",
+      "url": "https://yle.fi/a/74-20250262",
+      "lead": "Itä-Suomen yliopiston tutkimuksessa selvisi, että opiskelijat käyttävät tekoälyä pääasiassa kolmella tavalla."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-10T11:30:06Z",
+      "title": "Anthropicin tekoälymalli antoi poliisille perättömän vinkin ratkaisemat­tomasta henki­rikoksesta",
+      "url": "https://yle.fi/a/74-20250844",
+      "lead": "Anthropicin tekoälymalli Claude antoi vihjeen heinäkuussa Philadelphian poliisin vihjesivuston kautta."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-09T17:16:25Z",
       "title": "Tekoäly ja lämpökamera paljastivat hirvieläinten liikkumisrytmin Riihimäellä",
       "url": "https://yle.fi/a/74-20250489",
       "lead": "Kantatiellä 54 sattuu paljon hirvi­eläinonnettomuuksia. Lämpökamera havaitsi kesän aikana yli 200 hirvieläinten tienylitystä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-06T18:30:35Z",
-      "title": "Humppilan kunta ja tekoäly",
-      "url": "https://yle.fi/v/video/91-20249966",
-      "lead": "Humppilan kunta korvasi virkamiehet tekoälyllä. Voisiko botti korvata poliitikot? 🧐"
     },
     {
       "personName": "tekoäly",
@@ -71,13 +78,6 @@
       "title": "Apulaisoikeusasiamies selvittää tekoälyn käyttöä kunnissa",
       "url": "https://yle.fi/a/74-20248574",
       "lead": "Laillisuusvalvoja on huolissaan siitä, miten perusoikeuksien sekä virkavastuun toteutuminen varmistetaan, kun tekoälyä hyödynnetään viranomaistoiminnassa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-27T10:18:04Z",
-      "title": "Israelissa käydään rumaa vaalikampanjaa – ministerin tekoälyvideossa palestiinalaisia vietiin vankileirille",
-      "url": "https://yle.fi/a/74-20247314",
-      "lead": "Israelissa järjestetään lokakuun lopussa parlamenttivaalit, joita pidetään tilinteon hetkenä pääministeri Benjamin Netanjahulle."
     },
     {
       "personName": "tekoäly",
