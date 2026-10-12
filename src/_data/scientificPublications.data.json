@@ -6753,5 +6753,47 @@
     "notes": "",
     "sourceId": "openalex:https://openalex.org/W7215500657",
     "source": "openalex"
+  },
+  {
+    "id": "pub-2026-570",
+    "code": "",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "İsmail Çelik; Jari Laru; Kateryna Zabolotna; Iiris Jokela; Kati Mäkitalo",
+    "title": "How Trust and Fear Mediate the Relationship between AI Literacy and Intelligent-TPACK: Evidence from Teacher Education",
+    "venue": "Lecture notes in computer science",
+    "doi": "10.1007/978-3-032-37979-5_9",
+    "url": "",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W7220729024",
+    "source": "openalex"
+  },
+  {
+    "id": "g5-2026-571",
+    "code": "G5",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Nicolas Pope",
+    "title": "Supporting the migration from construal to program : rethinking software development",
+    "venue": "Warwick Research Archive Portal (University of Warwick)",
+    "doi": "10.82444/warw.33667144",
+    "url": "",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W2140409259",
+    "source": "openalex"
+  },
+  {
+    "id": "a1-2026-572",
+    "code": "A1",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Alanur Ahsen Dalyanci; İsmail Çelik; Sini Kontkanen; Jari Laru; Pirkko Siklander",
+    "title": "Beyond AI Literacy: Exploring Pre-Service Teachers' Pedagogical and Ethical Reasoning in Generative AI Integration in Education",
+    "venue": "UEF eRepo (University of Eastern Finland)",
+    "doi": "",
+    "url": "https://openalex.org/W7221263778",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W7221263778",
+    "source": "openalex"
   }
 ]
