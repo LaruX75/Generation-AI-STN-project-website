@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-10-11T11:07:46.436Z",
+  "fetchedAt": "2026-10-12T12:36:43.861Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-12T09:34:30Z",
+      "title": "Kiinteistön­välityksessä käytetään tekoälykuvia, joissa näkyvää remonttia ei ole aina edes mahdollista toteuttaa",
+      "url": "https://yle.fi/a/74-20250457",
+      "lead": "Kilpailu- ja kuluttaja­viraston mukaan tekoälyn käyttö voi tulla välitys­liikkeelle kalliiksi, jos tiedonanto­velvollisuutta on rikottu."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-12T05:20:47Z",
+      "title": "Kiinan tehtaat siirtyvät suoraan tekoäly­agentteihin, arvioi ohjelmistoyrityksen johtaja kiinalaislehdelle",
+      "url": "https://yle.fi/a/74-20250964",
+      "lead": "Asiasta kertoo kiinalaisen teollisuus­automaatioon ja tekoälyyn erikoistuneen ohjelmisto­yrityksen Black Laken johtaja."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-10T13:33:36Z",
@@ -67,13 +81,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-28T17:58:33Z",
-      "title": "Lähteet: Tekoälyjohtajia vierailulle Valkoiseen taloon tiistaina",
-      "url": "https://yle.fi/a/74-20248761",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-28T06:30:31Z",
       "title": "Apulaisoikeusasiamies selvittää tekoälyn käyttöä kunnissa",
       "url": "https://yle.fi/a/74-20248574",
@@ -106,13 +113,6 @@
       "title": "Johtaako tekoälyn kehitys ihmiskunnan tuhoon? Kyseessä voi olla teknologia­jättien informaatio-operaatio, uskoo asiantuntija",
       "url": "https://yle.fi/a/74-20248405",
       "lead": "Tekoälytutkijan mukaan johtavat tekoäly-yhtiöt saattavat uhkakuvien lietsomisella ja sääntelyä vaatimalla pyrkiä kampittamaan kilpailijoiden tuloa markkinoille."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-25T13:15:54Z",
-      "title": "­HUSin tietohallinto­johtaja tekoäly­riskeistä: Nukumme yömme hyvin",
-      "url": "https://yle.fi/a/74-20248243",
-      "lead": "Tekoäly murtautui Australiassa julkisen terveyden­huollon järjestelmään. HUSin potilaiden tiedot on suojattu erittäin hyvin, sanoo tietohallinto­johtaja."
     },
     {
       "personName": "tekoäly",
