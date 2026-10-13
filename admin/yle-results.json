@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-10-12T12:36:43.861Z",
+  "fetchedAt": "2026-10-13T12:22:22.871Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-13T03:37:21Z",
+      "title": "Meta esitteli uudet tekoäly­mallinsa",
+      "url": "https://yle.fi/a/74-20251156",
+      "lead": "Yhtiön mukaan mallit toimivat samalla tasolla kuin muiden yhtiöiden Chat GPT ja Claude."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-12T09:34:30Z",
@@ -134,13 +141,6 @@
       "title": "Tekoälykirjuri auttaa nyt lääkäriä Riihimäellä niin, että tunnin homma hoituu vartissa",
       "url": "https://yle.fi/a/74-20245626",
       "lead": "Tekoälystä toivotaan pelastusta moneen julkisen sektorin palveluun. Tekoälyn tulo jakaa suomalaisia. Uusi tekniikka epäilyttää nuoria enemmän kuin vanhoja."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-18T20:37:19Z",
-      "title": "Tekoäly-yhtiö OpenAI:n toimitusjohtaja Altman puhuu YK:n turvallisuusneuvostolle ensi viikolla",
-      "url": "https://yle.fi/a/74-20247141",
-      "lead": "Turvallisuusneuvoston keskiviikkona järjestettävässä tapaamisessa käsitellään tekoälyä ja kansainvälistä turvallisuutta."
     },
     {
       "personName": "Teemu Roos",
