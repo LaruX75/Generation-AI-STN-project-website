@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-10-13T12:22:22.871Z",
+  "fetchedAt": "2026-10-14T09:51:15.937Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-13T16:02:35Z",
+      "title": "Tekoälyn väitteet Provinssirockista saivat toimittaja Risto Vuorisen hämmentymään",
+      "url": "https://yle.fi/a/74-20248137",
+      "lead": "Tekoäly on kaikkien kaveri, mutta sen antamat vastaukset voivat viedä kysyjän harhapolulle, koska osa tiedoista ei välttämättä ole totta."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-13T16:02:35Z",
+      "title": "Kohuttu Gaza-dokumentti kertoo, kuinka israelilaiset sotivat tekoälyn avulla",
+      "url": "https://yle.fi/a/74-20250986",
+      "lead": "Naza-dokumentin tekijät haluaisivat markkinoida elokuvaansa Israelissa, mutta eivät ainakaan vielä uskalla palata kotimaahansa."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-13T03:37:21Z",
@@ -53,13 +67,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-10-06T07:47:36Z",
-      "title": "Suomen virkavastuun lainsäädäntöä pitää ehkä muuttaa, jos tekoälyä halutaan käyttää enemmän julkishallinnossa",
-      "url": "https://yle.fi/a/74-20250039",
-      "lead": "Vaasan yliopiston professori Niina Mäntylä  teki asiasta lausunnon Elinkeinoelämän keskusliitolle eli EK:lle."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-10-03T09:08:05Z",
       "title": "​Kuopiolainen tanssinopettaja nauraa poliitikoille – tekoälyn avulla tehdyt parodiavideot Arkadianmäeltä uppoavat kansaan",
       "url": "https://yle.fi/a/74-20248647",
@@ -106,13 +113,6 @@
       "title": "Riku Rantalan uusi sarja kuvittaa rikoksia tekoälyllä – vaarana on faktan ja fiktion sekoittuminen",
       "url": "https://yle.fi/a/74-20248340",
       "lead": "Sarjan tekijöiden mukaan rikoksiin liittyviltä henkilöiltä ei kysytty tekoälyn käytöstä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-26T12:44:55Z",
-      "title": "Tatuoija kohtaa nykyään tekoälykuvia päivittäin: ”Kutsun sitä varastetun taiteen pikaruoaksi”",
-      "url": "https://yle.fi/a/74-20247350",
-      "lead": "Moni hyödyntää tekoälyä suunni­tellessaan tatuointia. Sen avulla luodut kuvat ovat kuitenkin usein käyttö­kelvottomia sellaisenaan."
     },
     {
       "personName": "tekoäly",
