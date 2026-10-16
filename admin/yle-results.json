@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-10-15T09:31:59.923Z",
+  "fetchedAt": "2026-10-16T09:24:43.348Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-16T05:35:05Z",
+      "title": "Tappaako tekoäly ihmiskunnan? Listasimme Piilaakson tärkeimpien tyyppien kannat",
+      "url": "https://yle.fi/a/74-20251009",
+      "lead": "Suhtautuminen tekoälyn aiheuttamaan uhkaan riippuu paljon siitä, mikä hyödyttää taloudellisesti puhujaa."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-13T16:02:35Z",
@@ -106,13 +113,6 @@
       "title": "Tekoälyn uhkakuvia korostavat Piilaakson pomot kuuluvat kulttiin, josta leviää synkkiä tietoja",
       "url": "https://yle.fi/a/74-20247760",
       "lead": "Anthropicin ja Open AI:n vaatimukset säädellä tekoälyä vaikuttavat suomalais­professorin mukaan pelottelulta, joka hyödyttää yrityksiä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-27T05:11:24Z",
-      "title": "Riku Rantalan uusi sarja kuvittaa rikoksia tekoälyllä – vaarana on faktan ja fiktion sekoittuminen",
-      "url": "https://yle.fi/a/74-20248340",
-      "lead": "Sarjan tekijöiden mukaan rikoksiin liittyviltä henkilöiltä ei kysytty tekoälyn käytöstä."
     },
     {
       "personName": "tekoäly",
