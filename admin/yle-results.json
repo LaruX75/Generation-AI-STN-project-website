@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-10-16T09:24:43.348Z",
+  "fetchedAt": "2026-10-17T08:56:48.619Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-16T21:35:38Z",
+      "title": "Pohjois-Korea sanoo testanneensa tekoälyllä varustettua torpedoa",
+      "url": "https://yle.fi/a/74-20251904",
+      "lead": ""
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-16T05:35:05Z",
@@ -85,13 +92,6 @@
       "title": "”Tervetuloa superälyn maailmaan” – Trump luottaa tekoäly-yhtiöiden itsesäätelyyn",
       "url": "https://yle.fi/a/74-20249064",
       "lead": "Teknologia-alan suuryhtiöt kykenevät mahdillaan sanelemaan tekoäly­kehityksen suuntaa ja tapaa. Yhdysvaltain hallinto ei aio asettaa esteitä tekoäly­kilvalle."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-29T17:40:15Z",
-      "title": "Trump esitteli tekoälyä käyttävän palvelun asiointiin viranomaisten kanssa",
-      "url": "https://yle.fi/a/74-20248981",
-      "lead": "America.gov-palvelun toiminnot ovat toistaiseksi rajalliset"
     },
     {
       "personName": "tekoäly",
