@@ -6795,5 +6795,33 @@
     "notes": "",
     "sourceId": "openalex:https://openalex.org/W7221263778",
     "source": "openalex"
+  },
+  {
+    "id": "a1-2026-573",
+    "code": "A1",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Anssi Lin; Henriikka Vartiainen; Anssi Salonen; Matti Tedre",
+    "title": "Interaction Patterns and Embodied Design Processes Using an AI Robotics Kit for K–12 Education",
+    "venue": "ACM Transactions on Computing Education",
+    "doi": "10.1145/3856302",
+    "url": "",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W7222086176",
+    "source": "openalex"
+  },
+  {
+    "id": "a1-2025-574",
+    "code": "A1",
+    "year": 2025,
+    "status": "Published",
+    "authorsText": "Satu Piispa-Hakala; Korhonen Tiina; Kontkanen Sini; Marjaana Veermans; Jussi-Pekka Järvinen; Lahti Aleksi; Kati Sormunen; Valtonen Teemu",
+    "title": "Oppimisen muuntuvat maisemat",
+    "venue": "UTUPub (University of Turku)",
+    "doi": "",
+    "url": "https://openalex.org/W7137623103",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W7137623103",
+    "source": "openalex"
   }
 ]
