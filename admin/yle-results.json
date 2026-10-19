@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-10-18T09:15:37.280Z",
+  "fetchedAt": "2026-10-19T10:24:56.419Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-19T08:10:06Z",
+      "title": "Pohde otti tekoälyn avuksi ajanvaraukseen",
+      "url": "https://yle.fi/a/74-20252091",
+      "lead": "Apurin avulla täysi-ikäinen asiakas voi perua ja siirtää oman aikansa puhelimessa ilman jonottamista."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-16T21:35:38Z",
@@ -134,13 +141,6 @@
       "title": "Tekoäly epäilyttää nuoria",
       "url": "https://yle.fi/v/video/91-20247800",
       "lead": "Nuoret suhtautuvat tekoälyyn epäluuloisemmin kuin vanhemmat. Tämä ilmenee Ylen teettämästä selvityksestä. Video: Jaakko Mannermaa, Tero Nikulainen"
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-23T02:30:36Z",
-      "title": "Tekoälykirjuri auttaa nyt lääkäriä Riihimäellä niin, että tunnin homma hoituu vartissa",
-      "url": "https://yle.fi/a/74-20245626",
-      "lead": "Tekoälystä toivotaan pelastusta moneen julkisen sektorin palveluun. Tekoälyn tulo jakaa suomalaisia. Uusi tekniikka epäilyttää nuoria enemmän kuin vanhoja."
     },
     {
       "personName": "Teemu Roos",
