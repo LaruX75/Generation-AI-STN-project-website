@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-10-19T10:24:56.419Z",
+  "fetchedAt": "2026-10-20T09:44:17.660Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-19T17:17:56Z",
+      "title": "Korealaiset julkkikset deittailivat tekoälyhahmoja – tunteet yllättivät osallistujat",
+      "url": "https://yle.fi/a/74-20252134",
+      "lead": "Korealaisessa tv-ohjelmassa julkisuuden henkilöt kokeilivat, miltä tuntuu tapailla vain tabletin ruudulla näkyviä hahmoja."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-19T17:13:30Z",
+      "title": "Syyte: Salakuuntelusta epäilty entinen Open AI:n insinööri sai tukea Saudi-Arabiasta",
+      "url": "https://yle.fi/a/74-20252230",
+      "lead": ""
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-19T08:10:06Z",
@@ -120,20 +134,6 @@
       "title": "Tekoälyn uhkakuvia korostavat Piilaakson pomot kuuluvat kulttiin, josta leviää synkkiä tietoja",
       "url": "https://yle.fi/a/74-20247760",
       "lead": "Anthropicin ja Open AI:n vaatimukset säädellä tekoälyä vaikuttavat suomalais­professorin mukaan pelottelulta, joka hyödyttää yrityksiä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-26T07:23:48Z",
-      "title": "Johtaako tekoälyn kehitys ihmiskunnan tuhoon? Kyseessä voi olla teknologia­jättien informaatio-operaatio, uskoo asiantuntija",
-      "url": "https://yle.fi/a/74-20248405",
-      "lead": "Tekoälytutkijan mukaan johtavat tekoäly-yhtiöt saattavat uhkakuvien lietsomisella ja sääntelyä vaatimalla pyrkiä kampittamaan kilpailijoiden tuloa markkinoille."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-25T11:01:35Z",
-      "title": "Tekoäly murtautui valtion sivuille Australiassa",
-      "url": "https://yle.fi/v/video/91-20248114",
-      "lead": "OpenAI:n tekoälyagentti tunkeutui luvatta Australian hallituksen verkkosivulle.Se pääsi terveyden­huollon järjestelmään ja sai tietoja, jotka eivät ole julkisia. Video: Anni Kavander, Alina Räisänen"
     },
     {
       "personName": "tekoäly",
