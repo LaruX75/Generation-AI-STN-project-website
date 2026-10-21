@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-10-20T09:44:17.660Z",
+  "fetchedAt": "2026-10-21T09:45:33.012Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-20T11:04:48Z",
+      "title": "Tekoäly soittaa luuriin ja kysyy kuulumisia – tällainen on ikäihmisille suunnattu Aapo",
+      "url": "https://yle.fi/a/74-20251091",
+      "lead": "Erilaisia ikäihmisten käyttöön tarkoitettuja tekoälyapureita hiotaan nyt kovalla vauhdilla. Juttukumppanina tekoäly on vielä hieman viipyilevä."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-19T17:17:56Z",
@@ -43,13 +50,6 @@
       "title": "Tekoälyn väitteet Provinssirockista saivat toimittaja Risto Vuorisen hämmentymään",
       "url": "https://yle.fi/a/74-20248137",
       "lead": "Tekoäly on kaikkien kaveri, mutta sen antamat vastaukset voivat viedä kysyjän harhapolulle, koska osa tiedoista ei välttämättä ole totta."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-13T16:02:35Z",
-      "title": "Kohuttu Gaza-dokumentti kertoo, kuinka israelilaiset sotivat tekoälyn avulla",
-      "url": "https://yle.fi/a/74-20250986",
-      "lead": "Naza-dokumentin tekijät haluaisivat markkinoida elokuvaansa Israelissa, mutta eivät ainakaan vielä uskalla palata kotimaahansa."
     },
     {
       "personName": "tekoäly",
