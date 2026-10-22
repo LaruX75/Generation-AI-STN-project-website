@@ -1,7 +1,49 @@
 {
-  "fetchedAt": "2026-10-21T09:45:33.012Z",
+  "fetchedAt": "2026-10-22T09:45:23.011Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-22T08:34:30Z",
+      "title": "Barclays-pankki vähentää noin 5 000 työpaikkaa tekoälyn myötä",
+      "url": "https://yle.fi/a/74-20252782",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-22T08:16:12Z",
+      "title": "Nokian uusi suunta: tekoälyä, avaruutta ja puolustusta",
+      "url": "https://yle.fi/a/74-20252764",
+      "lead": "Nokia hakee kasvua konesalien yhdistämisestä ja valtiollisesta turvallisuusviestinnästä. Yhtiön tekoäly- ja pilviliiketoiminnan myynti kasvoi vuodessa yli kaksinkertaiseksi."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-22T05:09:07Z",
+      "title": "Nokian tulos kasvoi vahvasti: tekoälybuumi näkyy tilauskannassa",
+      "url": "https://yle.fi/a/74-20252689",
+      "lead": "Liikevaihto tekoäly- ja pilvipalvelu­asiakkailta yli kaksin­kertaistui heinä-syyskuussa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-21T21:06:44Z",
+      "title": "Kysely: Lähes puolet lapsista ja nuorista käyttää tekoälyä joka päivä",
+      "url": "https://yle.fi/a/74-20252678",
+      "lead": "Lähes kaksi viidestä ala- ja yläaste­ikäisestä vastaajasta ilmoitti, ettei erota tekoälyn tekemiä sisältöjä aidoista kuvista ja videoista."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-21T16:34:58Z",
+      "title": "Kustantaja: Kanadalais­kirjailija käytti tekoälyä romaaninsa kirjoittamisessa",
+      "url": "https://yle.fi/a/74-20252659",
+      "lead": "Kustantaja kertoo lopettavansa yhteistyön kirjailija Thélyson Orélienin kanssa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-21T14:50:50Z",
+      "title": "Suomen poliisi perusti tekoäly­toimiston",
+      "url": "https://yle.fi/a/74-20252648",
+      "lead": "Yksi tekoäly­toimiston tavoitteista on lyhentää rikos­tutkintojen kestoa."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-20T11:04:48Z",
@@ -29,13 +71,6 @@
       "title": "Pohde otti tekoälyn avuksi ajanvaraukseen",
       "url": "https://yle.fi/a/74-20252091",
       "lead": "Apurin avulla täysi-ikäinen asiakas voi perua ja siirtää oman aikansa puhelimessa ilman jonottamista."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-16T21:35:38Z",
-      "title": "Pohjois-Korea sanoo testanneensa tekoälyllä varustettua torpedoa",
-      "url": "https://yle.fi/a/74-20251904",
-      "lead": ""
     },
     {
       "personName": "tekoäly",
@@ -88,24 +123,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-10-09T17:16:25Z",
-      "title": "Tekoäly ja lämpökamera paljastivat hirvieläinten liikkumisrytmin Riihimäellä",
-      "url": "https://yle.fi/a/74-20250489",
-      "lead": "Kantatiellä 54 sattuu paljon hirvi­eläinonnettomuuksia. Lämpökamera havaitsi kesän aikana yli 200 hirvieläinten tienylitystä."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-10-06T08:38:24Z",
       "title": "EK haluaa muuttaa perustuslakia: lisää vapautta tekoälylle",
       "url": "https://yle.fi/a/74-20250056",
       "lead": "Tällä hetkellä jokaisen päätöksen takana täytyy olla virkaa toimittava ihminen. EK haluaa lakimuutoksella hyödyntää tekoälyä laajemmin julkishallinnossa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-03T09:08:05Z",
-      "title": "​Kuopiolainen tanssinopettaja nauraa poliitikoille – tekoälyn avulla tehdyt parodiavideot Arkadianmäeltä uppoavat kansaan",
-      "url": "https://yle.fi/a/74-20248647",
-      "lead": "Tekoälyllä tuotettu musiikki ja humoristiset videot suora­toisto­palveluissa ovat lisääntyneet ja keräävät yleisöä."
     },
     {
       "personName": "tekoäly",
@@ -116,31 +137,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-09-29T09:48:26Z",
-      "title": "Tekoäly-yhtiö Anthropic teki viime vuonna yli 8 miljardin dollarin liiketappion",
-      "url": "https://yle.fi/a/74-20248867",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-28T06:30:31Z",
-      "title": "Apulaisoikeusasiamies selvittää tekoälyn käyttöä kunnissa",
-      "url": "https://yle.fi/a/74-20248574",
-      "lead": "Laillisuusvalvoja on huolissaan siitä, miten perusoikeuksien sekä virkavastuun toteutuminen varmistetaan, kun tekoälyä hyödynnetään viranomaistoiminnassa."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-09-27T06:17:34Z",
       "title": "Tekoälyn uhkakuvia korostavat Piilaakson pomot kuuluvat kulttiin, josta leviää synkkiä tietoja",
       "url": "https://yle.fi/a/74-20247760",
       "lead": "Anthropicin ja Open AI:n vaatimukset säädellä tekoälyä vaikuttavat suomalais­professorin mukaan pelottelulta, joka hyödyttää yrityksiä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-23T12:46:54Z",
-      "title": "Tekoäly epäilyttää nuoria",
-      "url": "https://yle.fi/v/video/91-20247800",
-      "lead": "Nuoret suhtautuvat tekoälyyn epäluuloisemmin kuin vanhemmat. Tämä ilmenee Ylen teettämästä selvityksestä. Video: Jaakko Mannermaa, Tero Nikulainen"
     },
     {
       "personName": "Teemu Roos",
