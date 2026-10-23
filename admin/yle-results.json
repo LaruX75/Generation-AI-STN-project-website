@@ -1,7 +1,35 @@
 {
-  "fetchedAt": "2026-10-22T09:45:23.011Z",
+  "fetchedAt": "2026-10-23T09:41:06.053Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-23T02:30:35Z",
+      "title": "Moni epäilee, että korkeakouluun voi päästä huijaamalla tekoälyllä – testasimme, onko se totta",
+      "url": "https://yle.fi/a/74-20252423",
+      "lead": "Korkeakoulut ympäri Suomen käyttävät digitaalisia valintakokeita. Seuraavat kokeet ovat jo ensi viikolla. Testasimme, voiko niissä huijata."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-22T13:40:37Z",
+      "title": "PHP-haavoittuvuus on vasta alkusoittoa – tekoälyn kyky löytää ja käyttää hyväkseen haavoittu­vuuksia haastaa tietoturvan",
+      "url": "https://yle.fi/a/74-20252859",
+      "lead": "Tekoäly ei kuitenkaan muuta hakkerointia perustavan­laatuisesti, sanoo tietoturva-asiantuntija Laura Kankaala."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-22T13:35:35Z",
+      "title": "Mitä tekoälylle kävisi ilman ihmistä?",
+      "url": "https://yle.fi/v/video/91-20252877",
+      "lead": "Markku ja Kerttu haastattelevat tekoälyä ja kysyvät mm. olisiko se ihmisten vika jos tekoäly tuhoaisi meidät."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-22T13:30:35Z",
+      "title": "Tekoäly vakuuttaa päättäjät",
+      "url": "https://yle.fi/v/video/91-20252874",
+      "lead": "Uusimmassa Me Kuollaan Kaikki -podcastin jaksossa puhutaan tekoälystä ja sen ympäristövaikutuksista. Markun ja Kertun kysymyksiin vastaa itse tekoäly."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-22T08:34:30Z",
@@ -60,13 +88,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-10-19T17:13:30Z",
-      "title": "Syyte: Salakuuntelusta epäilty entinen Open AI:n insinööri sai tukea Saudi-Arabiasta",
-      "url": "https://yle.fi/a/74-20252230",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-10-19T08:10:06Z",
       "title": "Pohde otti tekoälyn avuksi ajanvaraukseen",
       "url": "https://yle.fi/a/74-20252091",
@@ -120,27 +141,6 @@
       "title": "Anthropicin tekoälymalli antoi poliisille perättömän vinkin ratkaisemat­tomasta henki­rikoksesta",
       "url": "https://yle.fi/a/74-20250844",
       "lead": "Anthropicin tekoälymalli Claude antoi vihjeen heinäkuussa Philadelphian poliisin vihjesivuston kautta."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-06T08:38:24Z",
-      "title": "EK haluaa muuttaa perustuslakia: lisää vapautta tekoälylle",
-      "url": "https://yle.fi/a/74-20250056",
-      "lead": "Tällä hetkellä jokaisen päätöksen takana täytyy olla virkaa toimittava ihminen. EK haluaa lakimuutoksella hyödyntää tekoälyä laajemmin julkishallinnossa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-01T05:56:20Z",
-      "title": "”Tervetuloa superälyn maailmaan” – Trump luottaa tekoäly-yhtiöiden itsesäätelyyn",
-      "url": "https://yle.fi/a/74-20249064",
-      "lead": "Teknologia-alan suuryhtiöt kykenevät mahdillaan sanelemaan tekoäly­kehityksen suuntaa ja tapaa. Yhdysvaltain hallinto ei aio asettaa esteitä tekoäly­kilvalle."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-09-27T06:17:34Z",
-      "title": "Tekoälyn uhkakuvia korostavat Piilaakson pomot kuuluvat kulttiin, josta leviää synkkiä tietoja",
-      "url": "https://yle.fi/a/74-20247760",
-      "lead": "Anthropicin ja Open AI:n vaatimukset säädellä tekoälyä vaikuttavat suomalais­professorin mukaan pelottelulta, joka hyödyttää yrityksiä."
     },
     {
       "personName": "Teemu Roos",
