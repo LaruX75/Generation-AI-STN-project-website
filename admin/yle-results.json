@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-10-23T09:41:06.053Z",
+  "fetchedAt": "2026-10-24T09:13:35.583Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-24T07:46:09Z",
+      "title": "Huijari teki virheen ja suostui puheluun toimittajan kanssa – näin tarina romahti",
+      "url": "https://yle.fi/a/74-20252368",
+      "lead": "Nettihuijaukset ovat yleistyvä vitsaus. Uusi piirre niissä on aidon tuntuinen henkilö­kohtaisuus."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-24T04:36:12Z",
+      "title": "Asuntoja kaupataan mahdottomilla tekoälykuvilla – liitto yrittää puuttua ohjeistamalla",
+      "url": "https://yle.fi/a/74-20253059",
+      "lead": "Ostajaehdokkaan tulee pystyä vertailemaan alkuperäisiä ja tekoälyllä tehtyjä kuvia, ohjeistaa Kiinteistönvälitysalan keskusliitto."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-24T02:30:35Z",
+      "title": "Kiinalla on ylivertainen herruus muusta maailmasta teknologiassa – asiantuntija: Eurooppa on pulassa",
+      "url": "https://yle.fi/a/74-20249866",
+      "lead": "Maailmaa pyörittää 74 kriittistä teknologiaa, joista 69:ssä Kiina on ykkönen. Kriisitilanteessa Kiina voisi käyttää asemaansa länttä vastaan, professori sanoo."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-23T02:30:35Z",
@@ -102,13 +123,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-10-13T16:02:35Z",
-      "title": "Tekoälyn väitteet Provinssirockista saivat toimittaja Risto Vuorisen hämmentymään",
-      "url": "https://yle.fi/a/74-20248137",
-      "lead": "Tekoäly on kaikkien kaveri, mutta sen antamat vastaukset voivat viedä kysyjän harhapolulle, koska osa tiedoista ei välttämättä ole totta."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-10-13T03:37:21Z",
       "title": "Meta esitteli uudet tekoäly­mallinsa",
       "url": "https://yle.fi/a/74-20251156",
@@ -127,20 +141,6 @@
       "title": "Kiinan tehtaat siirtyvät suoraan tekoäly­agentteihin, arvioi ohjelmistoyrityksen johtaja kiinalaislehdelle",
       "url": "https://yle.fi/a/74-20250964",
       "lead": "Asiasta kertoo kiinalaisen teollisuus­automaatioon ja tekoälyyn erikoistuneen ohjelmisto­yrityksen Black Laken johtaja."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-10T13:33:36Z",
-      "title": "Tutkijat löysivät kolme tapaa käyttää tekoälyä opinnoissa – yhdestä olisi etua",
-      "url": "https://yle.fi/a/74-20250262",
-      "lead": "Itä-Suomen yliopiston tutkimuksessa selvisi, että opiskelijat käyttävät tekoälyä pääasiassa kolmella tavalla."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-10T11:30:06Z",
-      "title": "Anthropicin tekoälymalli antoi poliisille perättömän vinkin ratkaisemat­tomasta henki­rikoksesta",
-      "url": "https://yle.fi/a/74-20250844",
-      "lead": "Anthropicin tekoälymalli Claude antoi vihjeen heinäkuussa Philadelphian poliisin vihjesivuston kautta."
     },
     {
       "personName": "Teemu Roos",
