@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-10-24T09:13:35.583Z",
+  "fetchedAt": "2026-10-25T09:30:41.260Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-25T08:01:33Z",
+      "title": "Tamperelaisteatteri käytti tekoälyä suurmusikaali Wickedissä, mutta unohti kertoa siitä yleisölle",
+      "url": "https://yle.fi/a/74-20252881",
+      "lead": "Tampereella kaksi suurinta teatteria ovat eri linjoilla tekoälyn käytöstä. Aihe on herättänyt keskustelua myös Helsingin teattereissa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-24T17:30:43Z",
+      "title": "Cat in the Hat -pelotteluilmiö haastaa myös aikuiset: tässä asiantuntijan vinkit asian käsittelyyn lasten kanssa",
+      "url": "https://yle.fi/a/74-20252773",
+      "lead": "Asiantuntijan mukaan suurin osa pelottelu­videoista on tekoälyllä tehtyjä. Jos lasta pelottaa, siitä on syytä puhua."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-24T07:46:09Z",
@@ -81,13 +95,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-10-21T16:34:58Z",
-      "title": "Kustantaja: Kanadalais­kirjailija käytti tekoälyä romaaninsa kirjoittamisessa",
-      "url": "https://yle.fi/a/74-20252659",
-      "lead": "Kustantaja kertoo lopettavansa yhteistyön kirjailija Thélyson Orélienin kanssa."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-10-21T14:50:50Z",
       "title": "Suomen poliisi perusti tekoäly­toimiston",
       "url": "https://yle.fi/a/74-20252648",
@@ -134,13 +141,6 @@
       "title": "Kiinteistön­välityksessä käytetään tekoälykuvia, joissa näkyvää remonttia ei ole aina edes mahdollista toteuttaa",
       "url": "https://yle.fi/a/74-20250457",
       "lead": "Kilpailu- ja kuluttaja­viraston mukaan tekoälyn käyttö voi tulla välitys­liikkeelle kalliiksi, jos tiedonanto­velvollisuutta on rikottu."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-12T05:20:47Z",
-      "title": "Kiinan tehtaat siirtyvät suoraan tekoäly­agentteihin, arvioi ohjelmistoyrityksen johtaja kiinalaislehdelle",
-      "url": "https://yle.fi/a/74-20250964",
-      "lead": "Asiasta kertoo kiinalaisen teollisuus­automaatioon ja tekoälyyn erikoistuneen ohjelmisto­yrityksen Black Laken johtaja."
     },
     {
       "personName": "Teemu Roos",
