@@ -2902,20 +2902,11 @@
       "id": "a2-2024-77"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (Pope review)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://doi.org/10.1007/s10758-026-09998-z",
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf532"
-    },
-    {
-      "status": "keep",
-      "reason": "GenAI-relevant (Pope review)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-10-26)",
+      "date": "2026-10-26",
       "doi": "10.1007/s10758-026-09998-z",
-      "id": "a1-2026-562"
+      "aliasUrl": "https://doi.org/10.1007/s10758-026-09998-z"
     },
     {
       "status": "rejected",
@@ -3230,28 +3221,22 @@
       "id": "a1-2025-534"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (Tedre review)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "doi": "10.3389/fcomp.2026.1789829",
-      "id": "a1-2026-118"
+      "status": "rejected",
+      "reason": "Nathaniel/Oyelere/Suhonen/Tedre PhD line, not Generation AI (reviewer confirmation 2026-10-26)",
+      "date": "2026-10-26",
+      "doi": "10.3389/fcomp.2026.1789829"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (Tedre review)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "doi": "10.1016/j.caeai.2025.100460",
-      "id": "a1-2025-84"
+      "status": "rejected",
+      "reason": "Nathaniel/Oyelere/Suhonen/Tedre PhD line, not Generation AI (reviewer confirmation 2026-10-26)",
+      "date": "2026-10-26",
+      "doi": "10.1016/j.caeai.2025.100460"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (Tedre review)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "doi": "10.1007/s40593-025-00524-3",
-      "id": "a1-2025-85"
+      "status": "rejected",
+      "reason": "Nathaniel/Oyelere/Suhonen/Tedre PhD line, not Generation AI (reviewer confirmation 2026-10-26)",
+      "date": "2026-10-26",
+      "doi": "10.1007/s40593-025-00524-3"
     },
     {
       "status": "rejected",
@@ -3302,12 +3287,11 @@
       "id": "b1-2024-530"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (batch review)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-10-26)",
+      "date": "2026-10-26",
       "doi": "10.1177/07356331261479569",
-      "id": "a1-2026-547"
+      "aliasUrl": "https://openalex.org/W7221263778"
     },
     {
       "status": "rejected",
@@ -3638,12 +3622,10 @@
       "id": "b3-2025-69"
     },
     {
-      "status": "keep",
-      "reason": "GenAI core publication (C-class)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "doi": "10.1016/j.compedu.2025.105485",
-      "id": "a1-2026-73"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-10-26)",
+      "date": "2026-10-26",
+      "doi": "10.1016/j.compedu.2025.105485"
     },
     {
       "status": "keep",
@@ -3846,12 +3828,11 @@
       "id": "a4artikkelikonferenssijulkaisussa-2025-rf546"
     },
     {
-      "status": "keep",
-      "reason": "GenAI core publication (C-class)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://doi.org/10.1007/s10758-026-10005-8",
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf534"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-10-26)",
+      "date": "2026-10-26",
+      "doi": "10.1007/s10758-026-10005-8",
+      "aliasUrl": "https://doi.org/10.1007/s10758-026-10005-8"
     },
     {
       "status": "keep",
@@ -3862,12 +3843,11 @@
       "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf535"
     },
     {
-      "status": "keep",
-      "reason": "GenAI core publication (C-class)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://doi.org/10.6018/red.711091",
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf546"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-10-26)",
+      "date": "2026-10-26",
+      "doi": "10.6018/red.711091",
+      "aliasUrl": "https://doi.org/10.6018/red.711091"
     }
   ]
 }
