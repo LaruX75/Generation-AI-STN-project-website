@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-10-25T09:30:41.260Z",
+  "fetchedAt": "2026-10-26T10:40:06.299Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-26T04:56:02Z",
+      "title": "Tekoälybuumi sai piensijoittajat innostumaan Nokiasta",
+      "url": "https://yle.fi/a/74-20253260",
+      "lead": "Yhtiö sai Helsingin pörssissä heinä-syyskuun aikana jopa 13 000 uutta omistajaa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-26T03:30:35Z",
+      "title": "Opiskelijoille on tullut uusi ongelma – nyt pitää keksiä, miten erottua tekoälystä",
+      "url": "https://yle.fi/a/74-20251212",
+      "lead": "Nea Oksanen ei käytä tekoälyä, mutta ponnistelee silti erottautuakseen tekoälystä. Asetelma on ristiriitainen, sillä tekoäly matkii ihmisen tapaa kirjoittaa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-25T17:06:49Z",
+      "title": "Tekoälyjätti Anthropic haastettiin oikeuteen Elviksen musiikin käytöstä",
+      "url": "https://yle.fi/a/74-20253239",
+      "lead": "Elviksen musiikin omistajat syyttävät Anthropicia tekoäly­mallien koulut­tamisesta rock-legendan musiikin avulla."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-25T08:01:33Z",
@@ -18,24 +39,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-10-24T07:46:09Z",
-      "title": "Huijari teki virheen ja suostui puheluun toimittajan kanssa – näin tarina romahti",
-      "url": "https://yle.fi/a/74-20252368",
-      "lead": "Nettihuijaukset ovat yleistyvä vitsaus. Uusi piirre niissä on aidon tuntuinen henkilö­kohtaisuus."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-10-24T04:36:12Z",
       "title": "Asuntoja kaupataan mahdottomilla tekoälykuvilla – liitto yrittää puuttua ohjeistamalla",
       "url": "https://yle.fi/a/74-20253059",
       "lead": "Ostajaehdokkaan tulee pystyä vertailemaan alkuperäisiä ja tekoälyllä tehtyjä kuvia, ohjeistaa Kiinteistönvälitysalan keskusliitto."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-24T02:30:35Z",
-      "title": "Kiinalla on ylivertainen herruus muusta maailmasta teknologiassa – asiantuntija: Eurooppa on pulassa",
-      "url": "https://yle.fi/a/74-20249866",
-      "lead": "Maailmaa pyörittää 74 kriittistä teknologiaa, joista 69:ssä Kiina on ykkönen. Kriisitilanteessa Kiina voisi käyttää asemaansa länttä vastaan, professori sanoo."
     },
     {
       "personName": "tekoäly",
@@ -127,13 +134,6 @@
       "title": "Tappaako tekoäly ihmiskunnan? Listasimme Piilaakson tärkeimpien tyyppien kannat",
       "url": "https://yle.fi/a/74-20251009",
       "lead": "Suhtautuminen tekoälyn aiheuttamaan uhkaan riippuu paljon siitä, mikä hyödyttää taloudellisesti puhujaa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-13T03:37:21Z",
-      "title": "Meta esitteli uudet tekoäly­mallinsa",
-      "url": "https://yle.fi/a/74-20251156",
-      "lead": "Yhtiön mukaan mallit toimivat samalla tasolla kuin muiden yhtiöiden Chat GPT ja Claude."
     },
     {
       "personName": "tekoäly",
