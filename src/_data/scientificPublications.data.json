@@ -6823,5 +6823,47 @@
     "notes": "",
     "sourceId": "openalex:https://openalex.org/W7137623103",
     "source": "openalex"
+  },
+  {
+    "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf575",
+    "code": "A1 Alkuperäisartikkeli tieteellisessä aikakauslehdessä",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Vartiainen, Henriikka; Kahila, Juho; Pope, Nicolas; Tedre, Matti",
+    "title": "Understanding AI Mechanisms Supports Disciplinary Reasoning and Ethical Judgment in K-12 AI Literacy Education",
+    "venue": "Informatics in education, 25, 3, 115-150",
+    "doi": "",
+    "url": "https://doi.org/10.15388/infedu.2601.025",
+    "notes": "",
+    "sourceId": "uefconnect:https://doi.org/10.15388/infedu.2601.025",
+    "source": "uefconnect"
+  },
+  {
+    "id": "a1journalarticlerefereedoriginalresearch-2026-rf576",
+    "code": "A1 Journal article (refereed), original research",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Malyn-Smith, Joyce; Torrington, Jodie; Webb, Mary; Butler, Deirdre; Lee, Jihyun; Tiernan, Peter; Chtouki, Yousra; Bower, Matt; Ahmad, Manal Yazbak Abu; Carvalho, Ana Amélia; Cohen, Jonathan D.; Gorissen, Pierre; Linden, Tanya; MacCallum, Kathryn; Raffagheli, Juliana E.; Røkenes, Fredrik Mørk; Ronci, Martina; Shelton, Chris; Smith, David; Vartiainen, Henriikka",
+    "title": "Navigating AI's educational future: expert scenarios and implications for teaching and teacher preparation",
+    "venue": "Computers and education open, 11, 100422",
+    "doi": "",
+    "url": "https://doi.org/10.1016/j.caeo.2026.100422",
+    "notes": "",
+    "sourceId": "uefconnect:https://doi.org/10.1016/j.caeo.2026.100422",
+    "source": "uefconnect"
+  },
+  {
+    "id": "journalarticle-2026-rf577",
+    "code": "journal-article",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "",
+    "title": "Quantifying Non-Maxwellian Properties of Ion Populations During Reconnection at Earth's Magnetopause",
+    "venue": "Geophysical Research Letters",
+    "doi": "10.1029/2026gl122882",
+    "url": "",
+    "notes": "",
+    "sourceId": "orcid:231215087",
+    "source": "orcid"
   }
 ]
