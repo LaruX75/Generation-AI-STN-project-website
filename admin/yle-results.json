@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-10-27T10:08:19.130Z",
+  "fetchedAt": "2026-10-28T10:54:43.011Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-28T05:54:38Z",
+      "title": "Tekoäly-yhtiö Anthropic julkisti odotetun listautumis­esitteen – poimimme viisi mielen­kiintoista seikkaa siitä",
+      "url": "https://yle.fi/a/74-20253538",
+      "lead": "Anthropic esitteli vakuuttavaa kasvua esitteessään. Yhtiön osakkeen listautumis­hinta tai -päivä ei ole vielä tiedossa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-27T16:31:47Z",
+      "title": "Perinteisestä suomalaisesta konepajasta tuli digiyhtiö – tekoälybuumi käänsi Wärtsilän tilauskirjat ennätyslukemiin",
+      "url": "https://yle.fi/a/74-20253603",
+      "lead": "Wärtsilän osavuosikatsaus näytti lähes joka mittarilla vihreää, mutta osakekurssi painui punaiselle."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-27T12:12:38Z",
+      "title": "Opiskelija yrittää kirjoittaa toisin kuin tekoäly",
+      "url": "https://yle.fi/v/video/91-20252869",
+      "lead": "Tekoäly on tuonut opiskelijoille oudon ongelman. Opiskelijat näkevät vaivaa, jotta oma teksti erottuisi tekoälystä. Video: Silja Viitala / Yle"
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-27T07:05:24Z",
@@ -14,20 +35,6 @@
       "datePublished": "2026-10-26T18:18:54Z",
       "title": "Tekoälyjätti Anthropic listautuu pörssiin",
       "url": "https://yle.fi/a/74-20253454",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-26T17:38:40Z",
-      "title": "Kävijät vaativat rahojaan takaisin – halloween-tapahtuman tekoäly­mainosten takaa paljastui pettymys",
-      "url": "https://yle.fi/a/74-20253323",
-      "lead": "Raisiolaisen kauppakeskuksen parkkihallissa lauantaina avautunut tapahtuma on ollut kävijöille pettymys. Järjestäjä kertoo tehneensä useita parannuksia."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-26T12:05:34Z",
-      "title": "Hollanti pyrkii leikkaamaan 20 prosenttia valtion työpaikoista vuosikymmenen aikana",
-      "url": "https://yle.fi/a/74-20253371",
       "lead": ""
     },
     {
@@ -134,13 +141,6 @@
       "title": "Korealaiset julkkikset deittailivat tekoälyhahmoja – tunteet yllättivät osallistujat",
       "url": "https://yle.fi/a/74-20252134",
       "lead": "Korealaisessa tv-ohjelmassa julkisuuden henkilöt kokeilivat, miltä tuntuu tapailla vain tabletin ruudulla näkyviä hahmoja."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-16T05:35:05Z",
-      "title": "Tappaako tekoäly ihmiskunnan? Listasimme Piilaakson tärkeimpien tyyppien kannat",
-      "url": "https://yle.fi/a/74-20251009",
-      "lead": "Suhtautuminen tekoälyn aiheuttamaan uhkaan riippuu paljon siitä, mikä hyödyttää taloudellisesti puhujaa."
     },
     {
       "personName": "Teemu Roos",
