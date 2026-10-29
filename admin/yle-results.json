@@ -1,20 +1,41 @@
 {
-  "fetchedAt": "2026-10-28T10:54:43.011Z",
+  "fetchedAt": "2026-10-29T11:12:07.713Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-29T10:44:42Z",
+      "title": "Googlen tekoäly juksasi: asiakkaat erehtyivät tulemaan rokotukseen vääränä päivänä",
+      "url": "https://yle.fi/a/74-20253999",
+      "lead": "Pohjois-Pohjanmaan hyvinvointialue varoittaa, että Googlen tapaiset hakukoneet voivat tarjota väärää tietoa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-29T09:06:28Z",
+      "title": "Ulkoministeri Valtonen solmii tänään teknologia­sopimuksia Yhdysvaltain kanssa",
+      "url": "https://yle.fi/a/74-20253756",
+      "lead": "Suomi ja Yhdysvallat aikovat tiivistää muun muassa tekoäly-yhteistyötä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-29T08:07:59Z",
+      "title": "New York rajoittaa lailla lasten tekoäly-chatbottien käyttöä",
+      "url": "https://yle.fi/a/74-20253981",
+      "lead": "Laki velvoittaa tekoäly-yrityksiä tarkistamaan käyttäjän iän."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-29T03:08:15Z",
+      "title": "Tekoälybuumi siivitti Samsungin tuloksen huimaan nousuun",
+      "url": "https://yle.fi/a/74-20253936",
+      "lead": "Tulosta vauhditti tekoälyyn käytettävien puolijohteiden räjähdysmäinen kysyntä."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-10-28T05:54:38Z",
       "title": "Tekoäly-yhtiö Anthropic julkisti odotetun listautumis­esitteen – poimimme viisi mielen­kiintoista seikkaa siitä",
       "url": "https://yle.fi/a/74-20253538",
       "lead": "Anthropic esitteli vakuuttavaa kasvua esitteessään. Yhtiön osakkeen listautumis­hinta tai -päivä ei ole vielä tiedossa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-27T16:31:47Z",
-      "title": "Perinteisestä suomalaisesta konepajasta tuli digiyhtiö – tekoälybuumi käänsi Wärtsilän tilauskirjat ennätyslukemiin",
-      "url": "https://yle.fi/a/74-20253603",
-      "lead": "Wärtsilän osavuosikatsaus näytti lähes joka mittarilla vihreää, mutta osakekurssi painui punaiselle."
     },
     {
       "personName": "tekoäly",
@@ -36,13 +57,6 @@
       "title": "Tekoälyjätti Anthropic listautuu pörssiin",
       "url": "https://yle.fi/a/74-20253454",
       "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-26T04:56:02Z",
-      "title": "Tekoälybuumi sai piensijoittajat innostumaan Nokiasta",
-      "url": "https://yle.fi/a/74-20253260",
-      "lead": "Yhtiö sai Helsingin pörssissä heinä-syyskuun aikana jopa 13 000 uutta omistajaa."
     },
     {
       "personName": "tekoäly",
@@ -71,13 +85,6 @@
       "title": "Asuntoja kaupataan mahdottomilla tekoälykuvilla – liitto yrittää puuttua ohjeistamalla",
       "url": "https://yle.fi/a/74-20253059",
       "lead": "Ostajaehdokkaan tulee pystyä vertailemaan alkuperäisiä ja tekoälyllä tehtyjä kuvia, ohjeistaa Kiinteistönvälitysalan keskusliitto."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-23T02:30:35Z",
-      "title": "Moni epäilee, että korkeakouluun voi päästä huijaamalla tekoälyllä – testasimme, onko se totta",
-      "url": "https://yle.fi/a/74-20252423",
-      "lead": "Korkeakoulut ympäri Suomen käyttävät digitaalisia valintakokeita. Seuraavat kokeet ovat jo ensi viikolla. Testasimme, voiko niissä huijata."
     },
     {
       "personName": "tekoäly",
@@ -134,13 +141,6 @@
       "title": "Tekoäly soittaa luuriin ja kysyy kuulumisia – tällainen on ikäihmisille suunnattu Aapo",
       "url": "https://yle.fi/a/74-20251091",
       "lead": "Erilaisia ikäihmisten käyttöön tarkoitettuja tekoälyapureita hiotaan nyt kovalla vauhdilla. Juttukumppanina tekoäly on vielä hieman viipyilevä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-19T17:17:56Z",
-      "title": "Korealaiset julkkikset deittailivat tekoälyhahmoja – tunteet yllättivät osallistujat",
-      "url": "https://yle.fi/a/74-20252134",
-      "lead": "Korealaisessa tv-ohjelmassa julkisuuden henkilöt kokeilivat, miltä tuntuu tapailla vain tabletin ruudulla näkyviä hahmoja."
     },
     {
       "personName": "Teemu Roos",
