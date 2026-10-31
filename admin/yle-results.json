@@ -1,13 +1,34 @@
 {
-  "fetchedAt": "2026-10-30T11:06:30.465Z",
+  "fetchedAt": "2026-10-31T10:40:29.531Z",
   "count": 26,
   "articles": [
     {
       "personName": "tekoäly",
-      "datePublished": "2026-10-30T08:36:28Z",
-      "title": "Ylen lausunto Tekoäly ja tekijänoikeus: vastuullinen tekoälyn kehittäminen ja käyttö",
-      "url": "https://yle.fi/a/20-10009823",
-      "lead": "Yle antoi lausunnon opetus ja kulttuuriministeriölle."
+      "datePublished": "2026-10-30T16:35:01Z",
+      "title": "Mittavat investoinnit tekoälyyn huolestuttavat markkinoilla",
+      "url": "https://yle.fi/a/74-20254338",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-30T16:27:44Z",
+      "title": "Kuka tai mikä on taiteilija? Kiinalaistaiteilija haluaa herättää keskustelua tekoälystä",
+      "url": "https://yle.fi/a/74-20248924",
+      "lead": "Kiinan nouseviin mediataiteilijoihin kuuluva Liu Jiayu hyödyntää teoksissaan tekoälyä ja ympäristödataa professori Jussi Parikan kuratoimassa näyttelyssä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-30T14:33:28Z",
+      "title": "Lappeenrannassa alkaa syksyllä tekoälyyn painottuva insinööri­koulutus",
+      "url": "https://yle.fi/a/74-20254263",
+      "lead": "Englannin­kielisellä koulutuksella on tarkoitus vastata työelämän tarpeisiin."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-30T12:57:07Z",
+      "title": "Tekoälyllä toteutettu kuva kouluampujasta johti poliisioperaatioon Turengissa",
+      "url": "https://yle.fi/a/74-20254268",
+      "lead": "Turengin koululla Janakkalassa epäiltiin koulu-uhkausta perjantaiaamuna. Paikalla oli useita poliisipartioita."
     },
     {
       "personName": "tekoäly",
@@ -120,27 +141,6 @@
       "title": "Tekoäly vakuuttaa päättäjät",
       "url": "https://yle.fi/v/video/91-20252874",
       "lead": "Uusimmassa Me Kuollaan Kaikki -podcastin jaksossa puhutaan tekoälystä ja sen ympäristövaikutuksista. Markun ja Kertun kysymyksiin vastaa itse tekoäly."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-22T08:16:12Z",
-      "title": "Nokian uusi suunta: tekoälyä, avaruutta ja puolustusta",
-      "url": "https://yle.fi/a/74-20252764",
-      "lead": "Nokia hakee kasvua konesalien yhdistämisestä ja valtiollisesta turvallisuusviestinnästä. Yhtiön tekoäly- ja pilviliiketoiminnan myynti kasvoi vuodessa yli kaksinkertaiseksi."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-21T14:50:50Z",
-      "title": "Suomen poliisi perusti tekoäly­toimiston",
-      "url": "https://yle.fi/a/74-20252648",
-      "lead": "Yksi tekoäly­toimiston tavoitteista on lyhentää rikos­tutkintojen kestoa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-20T11:04:48Z",
-      "title": "Tekoäly soittaa luuriin ja kysyy kuulumisia – tällainen on ikäihmisille suunnattu Aapo",
-      "url": "https://yle.fi/a/74-20251091",
-      "lead": "Erilaisia ikäihmisten käyttöön tarkoitettuja tekoälyapureita hiotaan nyt kovalla vauhdilla. Juttukumppanina tekoäly on vielä hieman viipyilevä."
     },
     {
       "personName": "Teemu Roos",
