@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-31T10:40:29.531Z",
+  "fetchedAt": "2026-11-01T11:35:26.771Z",
   "count": 26,
   "articles": [
     {
@@ -50,13 +50,6 @@
       "title": "Googlen osake syöksyy, Microsoft sinnittelee – tilanne kertoo siitä, mitä tekoälybuumi tuo sijoittajille jatkossa",
       "url": "https://yle.fi/a/74-20253903",
       "lead": "Teknologia­yhtiöt kertovat taas jättivoitoista, mutta pörssissä moni niiden osakkeista on painunut viime viikkoina. Kysyimme strategilta, miksi näin käy."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-29T12:03:21Z",
-      "title": "Tekoälybuumi siivitti Samsungin huimaan tulosloikkaan",
-      "url": "https://yle.fi/a/74-20254060",
-      "lead": ""
     },
     {
       "personName": "tekoäly",
@@ -141,6 +134,13 @@
       "title": "Tekoäly vakuuttaa päättäjät",
       "url": "https://yle.fi/v/video/91-20252874",
       "lead": "Uusimmassa Me Kuollaan Kaikki -podcastin jaksossa puhutaan tekoälystä ja sen ympäristövaikutuksista. Markun ja Kertun kysymyksiin vastaa itse tekoäly."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-20T11:04:48Z",
+      "title": "Tekoäly soittaa luuriin ja kysyy kuulumisia – tällainen on ikäihmisille suunnattu Aapo",
+      "url": "https://yle.fi/a/74-20251091",
+      "lead": "Erilaisia ikäihmisten käyttöön tarkoitettuja tekoälyapureita hiotaan nyt kovalla vauhdilla. Juttukumppanina tekoäly on vielä hieman viipyilevä."
     },
     {
       "personName": "Teemu Roos",
