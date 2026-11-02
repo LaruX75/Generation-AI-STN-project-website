@@ -6865,5 +6865,33 @@
     "notes": "",
     "sourceId": "orcid:231215087",
     "source": "orcid"
+  },
+  {
+    "id": "pub-2026-578",
+    "code": "",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Anssi Vanhala; Pirjo Aunio; Tanja Pigg; Pinja Tähti; Donna Niemistö; Kati Sormunen",
+    "title": "Associations of Physical Outdoor Environmental Characteristics With Physical Activity and Fundamental Motor, Cognitive, and Academic Skills Among Children Aged 2–8 Years",
+    "venue": "Open Science Framework",
+    "doi": "10.17605/osf.io/vmea2",
+    "url": "",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W7223810771",
+    "source": "openalex"
+  },
+  {
+    "id": "a3c-2026-579",
+    "code": "A3c",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Anu Lahteenmäki‐Uutela; Claudia Ituarte‐Lima; Siva Barathi Marimuthu; Milka Sormunen",
+    "title": "Enforcing the Rights of the Child to Strengthen the Global Biodiversity Framework",
+    "venue": "RUNE (Research UNE)",
+    "doi": "",
+    "url": "https://openalex.org/W7224693091",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W7224693091",
+    "source": "openalex"
   }
 ]
