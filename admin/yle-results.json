@@ -1,20 +1,20 @@
 {
-  "fetchedAt": "2026-11-03T12:31:04.266Z",
+  "fetchedAt": "2026-11-04T12:41:16.741Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-03T12:47:15Z",
+      "title": "Yksi hetki laboratoriossa muutti professorin mielen: ”Herran tähden” – tekoäly onkin uhka",
+      "url": "https://yle.fi/a/74-20250995",
+      "lead": "Professori pyörsi puheensa tekoälyn vaaratto­muudesta, kun agentit alkoivat työskennellä omavaltaisesti ryhmissä hänen omassa labora­toriossaan."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-03T06:48:49Z",
       "title": "Open AI palkkasi Yhdysvaltain entisen maavoimaministerin",
       "url": "https://yle.fi/a/74-20254741",
       "lead": "Yhtiön mukaan hän neuvoo, miten kehittynyt tekoäly voi vahvistaa kansallista turvallisuutta ja kyber­turvallisuutta."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-02T17:03:53Z",
-      "title": "Unohda varma ammatti: tekoäly muuttaa työmarkkinat",
-      "url": "https://yle.fi/a/74-20254606",
-      "lead": "Kysyimme, mitä kannattaisi opiskella, kun melkein minkä tahansa alan työllisyystilanne voi muuttua hetkessä."
     },
     {
       "personName": "tekoäly",
