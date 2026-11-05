@@ -1,20 +1,20 @@
 {
-  "fetchedAt": "2026-11-04T12:41:16.741Z",
+  "fetchedAt": "2026-11-05T12:51:35.445Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-04T13:02:07Z",
+      "title": "Tekoäly oppi penkomaan suomalaista jätevuorta, mutta ihmisen roolia lajittelussa se ei pysty vielä poistamaan",
+      "url": "https://yle.fi/a/74-20254054",
+      "lead": "Tekoälykamera analysoi polttojätettä satojen kuvien sekunti­vauhdilla. Konekaan ei pelasta tilannetta, jos lajittelu keittiön roskakorilla on tehty huonosti."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-03T12:47:15Z",
       "title": "Yksi hetki laboratoriossa muutti professorin mielen: ”Herran tähden” – tekoäly onkin uhka",
       "url": "https://yle.fi/a/74-20250995",
       "lead": "Professori pyörsi puheensa tekoälyn vaaratto­muudesta, kun agentit alkoivat työskennellä omavaltaisesti ryhmissä hänen omassa labora­toriossaan."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-03T06:48:49Z",
-      "title": "Open AI palkkasi Yhdysvaltain entisen maavoimaministerin",
-      "url": "https://yle.fi/a/74-20254741",
-      "lead": "Yhtiön mukaan hän neuvoo, miten kehittynyt tekoäly voi vahvistaa kansallista turvallisuutta ja kyber­turvallisuutta."
     },
     {
       "personName": "tekoäly",
