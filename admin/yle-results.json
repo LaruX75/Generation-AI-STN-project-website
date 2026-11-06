@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-11-05T12:51:35.445Z",
+  "fetchedAt": "2026-11-06T12:36:58.648Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-06T07:57:27Z",
+      "title": "13 prosenttia nuorista kohdannut teko­älyllä tehtyä kiusaamis­sisältöä – digioppi tarpeen ala­koulu­laisillekin",
+      "url": "https://yle.fi/a/74-20255063",
+      "lead": "Mannerheimin Lasten­suojelu­liiton ja Elisan Digiturva­koulu laajeni ala­kouluihin, sillä teko­älyn riskit koskettavat yhä nuorempia lapsia."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-06T01:20:06Z",
+      "title": "Wall Streetin tekoälyhuolet heijastuivat Aasian pörsseihin",
+      "url": "https://yle.fi/a/74-20255416",
+      "lead": "Torstaina New Yorkin pörssit sulkeutuivat niin ikään jyrkässä laskussa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-05T21:13:01Z",
+      "title": "USA:n pörssit syöksyvät – taustalla pelko tekoälysääntelystä",
+      "url": "https://yle.fi/a/74-20255408",
+      "lead": "Raju myyntiaalto pyyhkäisi torstaina noin 2,5 biljoonaa dollaria Nasdaq-indeksin markkinarvosta."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-04T13:02:07Z",
@@ -74,13 +95,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-10-29T03:08:15Z",
-      "title": "Tekoälybuumi siivitti Samsungin tuloksen huimaan nousuun",
-      "url": "https://yle.fi/a/74-20253936",
-      "lead": "Tulosta vauhditti tekoälyyn käytettävien puolijohteiden räjähdysmäinen kysyntä."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-10-28T05:54:38Z",
       "title": "Tekoäly-yhtiö Anthropic julkisti odotetun listautumis­esitteen – poimimme viisi mielen­kiintoista seikkaa siitä",
       "url": "https://yle.fi/a/74-20253538",
@@ -127,20 +141,6 @@
       "title": "Tamperelaisteatteri käytti tekoälyä suurmusikaali Wickedissä, mutta unohti kertoa siitä yleisölle",
       "url": "https://yle.fi/a/74-20252881",
       "lead": "Tampereella kaksi suurinta teatteria ovat eri linjoilla tekoälyn käytöstä. Aihe on herättänyt keskustelua myös Helsingin teattereissa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-24T04:36:12Z",
-      "title": "Asuntoja kaupataan mahdottomilla tekoälykuvilla – liitto yrittää puuttua ohjeistamalla",
-      "url": "https://yle.fi/a/74-20253059",
-      "lead": "Ostajaehdokkaan tulee pystyä vertailemaan alkuperäisiä ja tekoälyllä tehtyjä kuvia, ohjeistaa Kiinteistönvälitysalan keskusliitto."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-22T13:30:35Z",
-      "title": "Tekoäly vakuuttaa päättäjät",
-      "url": "https://yle.fi/v/video/91-20252874",
-      "lead": "Uusimmassa Me Kuollaan Kaikki -podcastin jaksossa puhutaan tekoälystä ja sen ympäristövaikutuksista. Markun ja Kertun kysymyksiin vastaa itse tekoäly."
     },
     {
       "personName": "Teemu Roos",
