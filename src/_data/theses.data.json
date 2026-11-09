@@ -2210,5 +2210,19 @@
     "keywords": "Educational Sciences; Kasvatustiede",
     "abstract": "",
     "notes": ""
+  },
+  {
+    "id": "oulu-masterthesis-2026-159",
+    "type": "pro gradu",
+    "year": 2026,
+    "title": "5.-luokkalaisten oppilaiden kokemuksia liikunnan yhteydestä keskittymiskykyyn",
+    "author": "Rajala, Topias",
+    "language": "fin",
+    "supervisors": "Laru, Jari",
+    "university": "Oulun yliopisto",
+    "url": "https://oulurepo.oulu.fi/handle/10024/66023",
+    "keywords": "Kasvatustiede (luokanopettaja)",
+    "abstract": "Tässä pro gradu -tutkielmassa tarkastellaan 5.-luokkalaisten oppilaiden kokemaa keskittymiskykyä koulukontekstissa sekä liikunta-aktiivisuuden yhteyttä oppilaiden koettuun keskittymiskykyyn. Teoreettinen viitekehys rakentuu keskittymiskyvyn, toiminnanohjauksen ja fyysisen aktiivisuuden käsitteistä sekä niiden yhteyksiä käsittelevistä tutkimuksista. Keskittymiskykyä jäsennetään tarkkaavuuden suuntaamisen, työskentelyn ylläpitämisen ja häiriötekijöiden hallinnan näkökulmista. Tarkastelussa huomioidaan myös oppilaiden arki ja koulussa koettu hyvinvointi. Tutkimuksen kohteena ovat oppilaiden omat kokemukset keskittymiskyvystään.\n\nTutkimus toteutettiin määrällisenä kyselytutkimuksena. Aineisto kerättiin keväällä 2026 sähköisellä Google Forms -kyselylomakkeella, ja lopullinen aineisto koostui 55 viidennen luokan oppilaan vastauksesta. Kyselyssä kartoitettiin oppilaiden liikunta-aktiivisuutta, vapaa-ajan liikunnan useutta, liikunnan mielekkyyttä, koettua keskittymiskykyä sekä arkeen liittyviä taustatekijöitä. Aineisto analysoitiin frekvenssien, prosenttiosuuksien, kuvailevien tunnuslukujen ja Spearmanin järjestyskorrelaatiokertoimen avulla.\n\nTulosten perusteella oppilaat arvioivat keskittymiskykynsä keskimäärin melko myönteisesti. Koetun keskittymiskyvyn summamuuttujan keskiarvo oli 3,39 ja keskihajonta 0,85. Summamuuttujan Cronbachin alfa oli 0,67, joten tuloksia tulee tulkita varovaisesti. Liikunta-aktiivisuuden ja koetun keskittymiskyvyn väliset yhteydet jäivät aineistossa heikoiksi, eivätkä liikuntapäivien määrän, vapaa-ajan liikunnan useuden tai liikunnan mielekkyyden yhteydet koettuun keskittymiskykyyn olleet tilastollisesti merkitseviä.\n\nTutkimuksen perusteella ei voida päätellä, että liikunta-aktiivisuus olisi vahvasti yhteydessä 5.-luokkalaisten oppilaiden koettuun keskittymiskykyyn. Tulokset kuvaavat oppilaiden itsearvioihin perustuvia havaintoja, eivätkä ne mahdollista syy-seurauspäätelmien tekemistä. Jatkossa aihetta olisi perusteltua tutkia laajemmalla aineistolla sekä täydentämällä oppilaiden itsearvioita esimerkiksi opettaja-arvioilla, havainnoinnilla tai objektiivisemmilla mittareilla.",
+    "notes": ""
   }
 ]
