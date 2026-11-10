@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-11-08T11:37:21.031Z",
+  "fetchedAt": "2026-11-10T13:09:23.867Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-10T07:09:17Z",
+      "title": "Tekoäly lukee ja kääntää nyt Keski-Suomen hyvinvointi­alueen verkkosivuja – esimerkiksi venäjälle ja arabialle on kysyntää",
+      "url": "https://yle.fi/a/74-20255317",
+      "lead": "Hyvin­vointialueen mukaan verkkosivujen tekoäly­käännöksiä voidaan muokata, jos niissä havaitaan virheitä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-10T06:15:00Z",
+      "title": "Kiinan kauppaylijäämä nousi yli biljoonan dollarin tekoälybuumin vauhdittamana",
+      "url": "https://yle.fi/a/74-20255998",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-09T08:03:38Z",
+      "title": "Lukiolaiset eivät enää kirjoita esseitä kotona – syy siihen on tekoäly",
+      "url": "https://yle.fi/a/74-20255230",
+      "lead": "Tekoäly on mullistanut lukioiden arjen: nyt esseet ja kirjoitelmat tehdään valvotusti, vilppi lisääntyy ja opettajat joutuvat muuttamaan tehtävänantoja."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-08T05:00:35Z",
@@ -15,13 +36,6 @@
       "title": "Euroopan pörssit välttyivät jyrkältä alamäeltä, syynä yksi rakenteellinen ero",
       "url": "https://yle.fi/a/74-20255546",
       "lead": "Pörssit Euroopassa olivat tänään parin prosentin laskussa. Tekoälyyn liittyvät firmat ottivat muita enemmän takkiin."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-06T01:20:06Z",
-      "title": "Wall Streetin tekoälyhuolet heijastuivat Aasian pörsseihin",
-      "url": "https://yle.fi/a/74-20255416",
-      "lead": "Torstaina New Yorkin pörssit sulkeutuivat niin ikään jyrkässä laskussa."
     },
     {
       "personName": "tekoäly",
@@ -71,13 +85,6 @@
       "title": "Yle kysyi venäläiseltä tekoälyltä, haluaako Suomi vallata alueita Venäjältä – tutkija ei yllättynyt vastauksesta",
       "url": "https://yle.fi/a/74-20252761",
       "lead": "Venäläisten laajasti käyttämä Alice-tekoälymalli toistaa Kremlin propagandaa, jonka mukaan Suomi uhkaa Venäjää."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-29T12:23:12Z",
-      "title": "Googlen osake syöksyy, Microsoft sinnittelee – tilanne kertoo siitä, mitä tekoälybuumi tuo sijoittajille jatkossa",
-      "url": "https://yle.fi/a/74-20253903",
-      "lead": "Teknologia­yhtiöt kertovat taas jättivoitoista, mutta pörssissä moni niiden osakkeista on painunut viime viikkoina. Kysyimme strategilta, miksi näin käy."
     },
     {
       "personName": "tekoäly",
@@ -134,13 +141,6 @@
       "title": "Tekoälyjätti Anthropic haastettiin oikeuteen Elviksen musiikin käytöstä",
       "url": "https://yle.fi/a/74-20253239",
       "lead": "Elviksen musiikin omistajat syyttävät Anthropicia tekoäly­mallien koulut­tamisesta rock-legendan musiikin avulla."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-25T08:01:33Z",
-      "title": "Tamperelaisteatteri käytti tekoälyä suurmusikaali Wickedissä, mutta unohti kertoa siitä yleisölle",
-      "url": "https://yle.fi/a/74-20252881",
-      "lead": "Tampereella kaksi suurinta teatteria ovat eri linjoilla tekoälyn käytöstä. Aihe on herättänyt keskustelua myös Helsingin teattereissa."
     },
     {
       "personName": "Teemu Roos",
