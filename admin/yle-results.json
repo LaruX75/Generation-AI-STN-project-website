@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-11T12:19:00.796Z",
+  "fetchedAt": "2026-11-12T13:28:19.790Z",
   "count": 26,
   "articles": [
     {
@@ -29,13 +29,6 @@
       "title": "Sanoittajakonkari Heikki Salo luottaa tekoälyyn: ”Mitä sillä on väliä, vaikka lyriikan kirjoittaisi kissa”",
       "url": "https://yle.fi/a/74-20249346",
       "lead": "Kulttuurivieras on opettanut laulunkirjoittamista yli kolme vuosikymmentä. Nyt hän kehittää tekoälytyökalua sanoitusten tekijöille."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-06T16:03:07Z",
-      "title": "Euroopan pörssit välttyivät jyrkältä alamäeltä, syynä yksi rakenteellinen ero",
-      "url": "https://yle.fi/a/74-20255546",
-      "lead": "Pörssit Euroopassa olivat tänään parin prosentin laskussa. Tekoälyyn liittyvät firmat ottivat muita enemmän takkiin."
     },
     {
       "personName": "tekoäly",
@@ -85,6 +78,13 @@
       "title": "Yle kysyi venäläiseltä tekoälyltä, haluaako Suomi vallata alueita Venäjältä – tutkija ei yllättynyt vastauksesta",
       "url": "https://yle.fi/a/74-20252761",
       "lead": "Venäläisten laajasti käyttämä Alice-tekoälymalli toistaa Kremlin propagandaa, jonka mukaan Suomi uhkaa Venäjää."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-10-29T12:23:12Z",
+      "title": "Googlen osake syöksyy, Microsoft sinnittelee – tilanne kertoo siitä, mitä tekoälybuumi tuo sijoittajille jatkossa",
+      "url": "https://yle.fi/a/74-20253903",
+      "lead": "Teknologia­yhtiöt kertovat taas jättivoitoista, mutta pörssissä moni niiden osakkeista on painunut viime viikkoina. Kysyimme strategilta, miksi näin käy."
     },
     {
       "personName": "tekoäly",
