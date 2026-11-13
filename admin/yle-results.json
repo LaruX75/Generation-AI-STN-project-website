@@ -1,7 +1,49 @@
 {
-  "fetchedAt": "2026-11-12T13:28:19.790Z",
+  "fetchedAt": "2026-11-13T12:43:55.706Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-13T10:42:45Z",
+      "title": "Bloomberg: Alice Huangin yhtiö sai haltuunsa kiellettyjä tekoälysiruja",
+      "url": "https://yle.fi/a/74-20256824",
+      "lead": "Yhdysvallat on kieltänyt sirujen viennin Kiinaan."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-13T06:00:35Z",
+      "title": "Huomaisitko tekoälyhuijarin haastattelussa?",
+      "url": "https://yle.fi/v/video/91-20254591",
+      "lead": "Testasimme, meneekö deepfake-hakija läpi kokeneen IT-alan rekrytoijan seulasta."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-13T04:30:35Z",
+      "title": "Jotkut väärentävät kasvonsa saadakseen töitä – näin outo huijaus toimii",
+      "url": "https://yle.fi/a/74-20254592",
+      "lead": "Suomalais­rekrytoijat kohtaavat etä­haastatteluissa hakijoita, jotka yrittävät huijata tekoälyn avulla. Yle testasi kasvojen ja äänen väärentämistä videopuhelussa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-13T01:38:21Z",
+      "title": "EU-johtajilla tänään huippukokous – aiheina Ukraina, budjetti ja tekoäly",
+      "url": "https://yle.fi/a/74-20256711",
+      "lead": "Epävirallinen huippukokous pidetään Irlannin Dublinissa. Suomea kokouksessa edustaa pääministeri Petteri Orpo."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-12T15:50:22Z",
+      "title": "Asiantuntija: Valtava riski realisoitui Nvidiassa – osakekurssi syöksynyt",
+      "url": "https://yle.fi/a/74-20256669",
+      "lead": "OP:n Lippo Suomisen mukaan yhden miehen vallankäyttö osoittautui yhtiölle valtavaksi riskiksi, mutta nopea ero voi auttaa tilanteen yli pääsyssä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-12T14:33:26Z",
+      "title": "Hunaja-ansaan astunut Jensen Huang jättää Nvidian – tämä juttu kertoo, miksi koko tapaus on merkittävä",
+      "url": "https://yle.fi/a/74-20256504",
+      "lead": "Jensen Huangin luotsaama Nvidia on tekoälykehityksen kannalta erittäin keskeinen yhtiö. Nyt yhtiö etsii uutta toimitusjohtajaa."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-10T07:09:17Z",
@@ -29,13 +71,6 @@
       "title": "Sanoittajakonkari Heikki Salo luottaa tekoälyyn: ”Mitä sillä on väliä, vaikka lyriikan kirjoittaisi kissa”",
       "url": "https://yle.fi/a/74-20249346",
       "lead": "Kulttuurivieras on opettanut laulunkirjoittamista yli kolme vuosikymmentä. Nyt hän kehittää tekoälytyökalua sanoitusten tekijöille."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-04T13:02:07Z",
-      "title": "Tekoäly oppi penkomaan suomalaista jätevuorta, mutta ihmisen roolia lajittelussa se ei pysty vielä poistamaan",
-      "url": "https://yle.fi/a/74-20254054",
-      "lead": "Tekoälykamera analysoi polttojätettä satojen kuvien sekunti­vauhdilla. Konekaan ei pelasta tilannetta, jos lajittelu keittiön roskakorilla on tehty huonosti."
     },
     {
       "personName": "tekoäly",
@@ -67,31 +102,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-10-30T07:48:48Z",
-      "title": "Venäläinen tekoäly levittää propagandaa Suomesta",
-      "url": "https://yle.fi/v/video/91-20253843",
-      "lead": "Yle testasi venäläistä Alice-tekoälyapuria."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-10-30T04:28:13Z",
       "title": "Yle kysyi venäläiseltä tekoälyltä, haluaako Suomi vallata alueita Venäjältä – tutkija ei yllättynyt vastauksesta",
       "url": "https://yle.fi/a/74-20252761",
       "lead": "Venäläisten laajasti käyttämä Alice-tekoälymalli toistaa Kremlin propagandaa, jonka mukaan Suomi uhkaa Venäjää."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-29T12:23:12Z",
-      "title": "Googlen osake syöksyy, Microsoft sinnittelee – tilanne kertoo siitä, mitä tekoälybuumi tuo sijoittajille jatkossa",
-      "url": "https://yle.fi/a/74-20253903",
-      "lead": "Teknologia­yhtiöt kertovat taas jättivoitoista, mutta pörssissä moni niiden osakkeista on painunut viime viikkoina. Kysyimme strategilta, miksi näin käy."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-29T10:44:42Z",
-      "title": "Rokotteen ottajat uskoivat tekoälyä ja tulivat vääränä päivänä paikalle Himangalla",
-      "url": "https://yle.fi/a/74-20253999",
-      "lead": "Pohjois-Pohjanmaan hyvinvointialue varoittaa, että Googlen tapaiset hakukoneet voivat tarjota väärää tietoa."
     },
     {
       "personName": "tekoäly",
@@ -116,24 +130,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-10-27T07:05:24Z",
-      "title": "Viisi ohjelmistoyhtiötä perustanut Tuomo Riekki ei suostu uskomaan, että tekoäly vie hänen alansa",
-      "url": "https://yle.fi/a/74-20252196",
-      "lead": "Ohjelmisto­yhtiöiden pörssikurssit ovat viimeisen vuoden aikana tippuneet roimasti, kun tekoälyn ennustetaan mullistavan liiketoiminnan täysin."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-10-26T18:18:54Z",
       "title": "Tekoälyjätti Anthropic listautuu pörssiin",
       "url": "https://yle.fi/a/74-20253454",
       "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-26T03:30:35Z",
-      "title": "Opiskelijoille on tullut uusi ongelma – nyt pitää keksiä, miten erottua tekoälystä",
-      "url": "https://yle.fi/a/74-20251212",
-      "lead": "Nea Oksanen ei käytä tekoälyä, mutta ponnistelee silti erottautuakseen tekoälystä. Asetelma on ristiriitainen, sillä tekoäly matkii ihmisen tapaa kirjoittaa."
     },
     {
       "personName": "tekoäly",
