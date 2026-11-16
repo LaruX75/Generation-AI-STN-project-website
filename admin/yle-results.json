@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-11-15T12:23:14.596Z",
+  "fetchedAt": "2026-11-16T13:16:31.163Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-16T07:22:26Z",
+      "title": "YK:n ilmastopäällikkö korostaa tekoälyn mahdollisuuksia ja vaaroja",
+      "url": "https://yle.fi/a/74-20257139",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-16T06:30:03Z",
+      "title": "Analyysi: Tekoäly uhkaa töitä – hallitus tarjoaa ratkaisua, joka hyödyttäisi harvoja ja varakkaita",
+      "url": "https://yle.fi/a/74-20256675",
+      "lead": "Tapoja päivittää osaamista on karsittu samaan aikaan, kun työelämän muutos on kiihtynyt, kirjoittaa taloustoimittaja Karla Kempas."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-16T05:33:34Z",
+      "title": "Työnantajat arvioivat nuoren ja tekoälyn tekemät kesätyö­hakemukset: katso satoja hakemuksia lukeneiden mielipiteet",
+      "url": "https://yle.fi/a/74-20255968",
+      "lead": "Tässä jutussa pääset ottamaan mallia kahdesta kehutusta hakemuksesta ja kuulemaan työnantajien vinkkejä kevään kesätyöhakua varten."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-14T05:46:07Z",
@@ -12,7 +33,7 @@
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-13T14:51:21Z",
-      "title": "HS: Lapinlahden sairaalan vuokraamisesta neuvotellaan tekoäly-yhtiö NestAI:n kanssa",
+      "title": "HS: Helsinki neuvottelee Lapinlahden sairaalan vuokraamisesta tekoäly-yritykselle",
       "url": "https://yle.fi/a/74-20256896",
       "lead": "Kaupunki on suunnitellut rahoittavansa Lapinlahden sairaala-alueen lähes 50 miljoonan euron remontin pääosin vuokraamalla alueen tiloja yrityksille."
     },
@@ -88,13 +109,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-10-30T16:35:01Z",
-      "title": "Mittavat investoinnit tekoälyyn huolestuttavat markkinoilla",
-      "url": "https://yle.fi/a/74-20254338",
-      "lead": ""
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-10-30T16:27:44Z",
       "title": "Kuka tai mikä on taiteilija? Kiinalaistaiteilija haluaa herättää keskustelua tekoälystä",
       "url": "https://yle.fi/a/74-20248924",
@@ -113,20 +127,6 @@
       "title": "New York rajoittaa lailla lasten tekoäly-chatbottien käyttöä",
       "url": "https://yle.fi/a/74-20253981",
       "lead": "Laki velvoittaa tekoäly-yrityksiä tarkistamaan käyttäjän iän."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-28T05:54:38Z",
-      "title": "Tekoäly-yhtiö Anthropic julkisti odotetun listautumis­esitteen – poimimme viisi mielen­kiintoista seikkaa siitä",
-      "url": "https://yle.fi/a/74-20253538",
-      "lead": "Anthropic esitteli vakuuttavaa kasvua esitteessään. Yhtiön osakkeen listautumis­hinta tai -päivä ei ole vielä tiedossa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-27T12:12:38Z",
-      "title": "Opiskelija yrittää kirjoittaa toisin kuin tekoäly",
-      "url": "https://yle.fi/v/video/91-20252869",
-      "lead": "Tekoäly on tuonut opiskelijoille oudon ongelman. Opiskelijat näkevät vaivaa, jotta oma teksti erottuisi tekoälystä. Video: Silja Viitala / Yle"
     },
     {
       "personName": "tekoäly",
