@@ -7033,5 +7033,61 @@
     "notes": "",
     "sourceId": "openalex:https://openalex.org/W4308834102",
     "source": "openalex"
+  },
+  {
+    "id": "pub-2026-592",
+    "code": "",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Josephina Mikka-Muntuumo; Michelle Victoria Weber Larsen; Jacob Nielsen; Simone Emma Frank Pedersen; Ilkka Jormanainen; Markku Tukiainen; Gabriel Tuhafeni Nhinda",
+    "title": "Teknologiskolen robotics camp surveys 2024: de-identified data and analysis code",
+    "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+    "doi": "10.5281/zenodo.24093817",
+    "url": "",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W7225658104",
+    "source": "openalex"
+  },
+  {
+    "id": "journalarticle-2026-rf593",
+    "code": "journal-article",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "",
+    "title": "Poliittista riitaa ei voi ratkaista rikosoikeudellisesti",
+    "venue": "Suomen Kuvalehti",
+    "doi": "",
+    "url": "https://researchportal.helsinki.fi/en/publications/d46997c5-a079-4aaa-9dfc-1abb6c33a56a",
+    "notes": "",
+    "sourceId": "orcid:232609657",
+    "source": "orcid"
+  },
+  {
+    "id": "pub-2025-590",
+    "code": "",
+    "year": 2025,
+    "status": "Published",
+    "authorsText": "Danie Holmberg; Ivan Zaitsev; Markku Alho; Ioanna Bouri; Fanni Franssila; Haewon Jeong; Minna Palmroth; Teemu Roos",
+    "title": "spacecast-data",
+    "venue": "Hugging Face",
+    "doi": "10.57967/hf/7027",
+    "url": "",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W7106134279",
+    "source": "openalex"
+  },
+  {
+    "id": "a1-2022-591",
+    "code": "A1",
+    "year": 2022,
+    "status": "Published",
+    "authorsText": "Andrew Petersen; Ilkka Jormanainen",
+    "title": "Koli Calling 2022: Call for Participation",
+    "venue": "ACM SIGCSE Bulletin",
+    "doi": "10.1145/3577871.3577873",
+    "url": "",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W4312411783",
+    "source": "openalex"
   }
 ]
