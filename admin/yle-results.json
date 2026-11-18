@@ -1,7 +1,42 @@
 {
-  "fetchedAt": "2026-11-17T14:00:24.182Z",
+  "fetchedAt": "2026-11-18T13:35:14.101Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-18T13:13:40Z",
+      "title": "Helsingin palaute­järjestelmä ruuhkautui – nyt kaupunki hakee tekoälystä apua valitusten käsittelyyn",
+      "url": "https://yle.fi/a/74-20255816",
+      "lead": "Kaupunki väitti kesällä netin palautekanavan ruuhkautuneen, koska kesätyöntekijät eivät onnistuneet käsittelemään palautteita tarpeeksi nopeasti."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-18T11:54:45Z",
+      "title": "Ryvettynyt Nvidia toi tekoäly­sijoittajille helpotuksen huokauksen – seuraava kompastinkivi odottaa huomisiltana",
+      "url": "https://yle.fi/a/74-20257598",
+      "lead": "Pörssit nousuun singonnut tekoälysektori on taitekohdassa. Hermostunut markkina sai hetkellisen helpotuksen, mutta seuraava jännityksen hetki odottaa huomenna."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-18T04:25:50Z",
+      "title": "Xi kehotti tehostamaan yhteistyötä tekoälyalalla",
+      "url": "https://yle.fi/a/74-20257577",
+      "lead": "Aasian ja Tyynenmeren maiden talousjärjestö Apecin kaksipäiväinen huippukokous alkoi tänään Kiinassa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-18T04:00:35Z",
+      "title": "Tällainen oli Nvidian Jensen Huangin johtamistyyli, joka toimi 33 vuotta – epäonnistumisen pelko kaiken takana",
+      "url": "https://yle.fi/a/74-20256783",
+      "lead": "Johtamisen professori arvioi, miksi Jensen Huangin poikkeuk­sellinen tyyli nosti Nvidian maailman arvokkaimmaksi ja mitä tapahtuu nyt, kun perustaja on poissa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-17T14:00:37Z",
+      "title": "Turussa kehitetään entistä luonnollisempia robotteja – näin liikkuu lonkkavikainen koirarobotti Tatu",
+      "url": "https://yle.fi/a/74-20254389",
+      "lead": "Turun yliopiston tutkimusryhmässä kehitetään lemmikin lailla käyttäytyvää koirarobottia ja siipiä räpyttelevää droonia."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-17T11:20:41Z",
@@ -60,24 +95,10 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-11-13T04:30:35Z",
-      "title": "Jotkut väärentävät kasvonsa saadakseen töitä – näin outo huijaus toimii",
-      "url": "https://yle.fi/a/74-20254592",
-      "lead": "Suomalais­rekrytoijat kohtaavat etä­haastatteluissa hakijoita, jotka yrittävät huijata tekoälyn avulla. Yle testasi kasvojen ja äänen väärentämistä videopuhelussa."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-11-13T01:38:21Z",
       "title": "EU-johtajilla tänään huippukokous – aiheina Ukraina, budjetti ja tekoäly",
       "url": "https://yle.fi/a/74-20256711",
       "lead": "Epävirallinen huippukokous pidetään Irlannin Dublinissa. Suomea kokouksessa edustaa pääministeri Petteri Orpo."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-12T15:50:22Z",
-      "title": "Asiantuntija: Valtava riski realisoitui Nvidiassa – osakekurssi syöksynyt",
-      "url": "https://yle.fi/a/74-20256669",
-      "lead": "OP:n Lippo Suomisen mukaan yhden miehen vallankäyttö osoittautui yhtiölle valtavaksi riskiksi, mutta nopea ero voi auttaa tilanteen yli pääsyssä."
     },
     {
       "personName": "tekoäly",
@@ -120,27 +141,6 @@
       "title": "Kuka tai mikä on taiteilija? Kiinalaistaiteilija haluaa herättää keskustelua tekoälystä",
       "url": "https://yle.fi/a/74-20248924",
       "lead": "Kiinan nouseviin mediataiteilijoihin kuuluva Liu Jiayu hyödyntää teoksissaan tekoälyä ja ympäristödataa professori Jussi Parikan kuratoimassa näyttelyssä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-30T04:28:13Z",
-      "title": "Yle kysyi venäläiseltä tekoälyltä, haluaako Suomi vallata alueita Venäjältä – tutkija ei yllättynyt vastauksesta",
-      "url": "https://yle.fi/a/74-20252761",
-      "lead": "Venäläisten laajasti käyttämä Alice-tekoälymalli toistaa Kremlin propagandaa, jonka mukaan Suomi uhkaa Venäjää."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-29T08:07:59Z",
-      "title": "New York rajoittaa lailla lasten tekoäly-chatbottien käyttöä",
-      "url": "https://yle.fi/a/74-20253981",
-      "lead": "Laki velvoittaa tekoäly-yrityksiä tarkistamaan käyttäjän iän."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-25T17:06:49Z",
-      "title": "Tekoälyjätti Anthropic haastettiin oikeuteen Elviksen musiikin käytöstä",
-      "url": "https://yle.fi/a/74-20253239",
-      "lead": "Elviksen musiikin omistajat syyttävät Anthropicia tekoäly­mallien koulut­tamisesta rock-legendan musiikin avulla."
     },
     {
       "personName": "Teemu Roos",
