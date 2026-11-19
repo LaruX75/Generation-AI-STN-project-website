@@ -1,7 +1,35 @@
 {
-  "fetchedAt": "2026-11-18T13:35:14.101Z",
+  "fetchedAt": "2026-11-19T14:01:41.943Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-19T09:34:33Z",
+      "title": "Tekoälyjätti Anthropic listautui vihdoin pörssiin – tämän takia koko maailma katsoo nyt sen kurssia",
+      "url": "https://yle.fi/a/74-20257680",
+      "lead": "Pörssikaupan aloittaminen Claude-tekoälystä tunnetun Anthropicin osakkeilla on testi sille, kestääkö sijoittajien usko tekoälyhuuman."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-19T04:35:40Z",
+      "title": "Omalääkäri, tekoäly ja muutokset ajoissa – näin Etelä-Savo rakensi kotihoidon, joka toteutuu parhaiten Suomessa",
+      "url": "https://yle.fi/a/74-20252653",
+      "lead": "Etelä-Savon hyvinvointi­alueen palvelualue­päällikön mukaan muun muassa omalääkärimalli ja tekoäly ovat parantaneet kotihoidon toteutumista."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-18T22:18:19Z",
+      "title": "Tekoälyjätti Anthropic teki kaikkien aikojen listautumisennätyksen",
+      "url": "https://yle.fi/a/74-20257789",
+      "lead": "Yhtiö listautuu tänään teknologiapainotteiseen Nasdaq-pörssiin Yhdysvalloissa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-18T16:05:03Z",
+      "title": "Suhdekohu ei pysäyttänyt tekoälyjätti Nvidiaa",
+      "url": "https://yle.fi/v/video/91-20257223",
+      "lead": "Nvidia julkaisi ensi kertaa tuloksensa ilman perustajaansa. Liikevaihto yli tuplaantui, mutta kuka korvaa Jensen Huangin? Video: Sini Vuorikivi"
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-18T13:13:40Z",
@@ -29,13 +57,6 @@
       "title": "Tällainen oli Nvidian Jensen Huangin johtamistyyli, joka toimi 33 vuotta – epäonnistumisen pelko kaiken takana",
       "url": "https://yle.fi/a/74-20256783",
       "lead": "Johtamisen professori arvioi, miksi Jensen Huangin poikkeuk­sellinen tyyli nosti Nvidian maailman arvokkaimmaksi ja mitä tapahtuu nyt, kun perustaja on poissa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-17T14:00:37Z",
-      "title": "Turussa kehitetään entistä luonnollisempia robotteja – näin liikkuu lonkkavikainen koirarobotti Tatu",
-      "url": "https://yle.fi/a/74-20254389",
-      "lead": "Turun yliopiston tutkimusryhmässä kehitetään lemmikin lailla käyttäytyvää koirarobottia ja siipiä räpyttelevää droonia."
     },
     {
       "personName": "tekoäly",
@@ -81,13 +102,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-11-13T10:42:45Z",
-      "title": "Bloomberg: Alice Huangin yhtiö sai haltuunsa kiellettyjä tekoälysiruja",
-      "url": "https://yle.fi/a/74-20256824",
-      "lead": "Yhdysvallat on kieltänyt sirujen viennin Kiinaan."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-11-13T06:00:35Z",
       "title": "Huomaisitko tekoälyhuijarin haastattelussa?",
       "url": "https://yle.fi/v/video/91-20254591",
@@ -102,13 +116,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-11-12T14:33:26Z",
-      "title": "Hunaja-ansaan astunut Jensen Huang jättää Nvidian – tämä juttu kertoo, miksi koko tapaus on merkittävä",
-      "url": "https://yle.fi/a/74-20256504",
-      "lead": "Jensen Huangin luotsaama Nvidia on tekoälykehityksen kannalta erittäin keskeinen yhtiö. Nyt yhtiö etsii uutta toimitusjohtajaa."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-11-09T08:03:38Z",
       "title": "Lukiolaiset eivät enää kirjoita esseitä kotona – syy siihen on tekoäly",
       "url": "https://yle.fi/a/74-20255230",
@@ -120,13 +127,6 @@
       "title": "Sanoittajakonkari Heikki Salo luottaa tekoälyyn: ”Mitä sillä on väliä, vaikka lyriikan kirjoittaisi kissa”",
       "url": "https://yle.fi/a/74-20249346",
       "lead": "Kulttuurivieras on opettanut laulunkirjoittamista yli kolme vuosikymmentä. Nyt hän kehittää tekoälytyökalua sanoitusten tekijöille."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-03T12:47:15Z",
-      "title": "Yksi hetki laboratoriossa muutti professorin mielen: ”Herran tähden” – tekoäly onkin uhka",
-      "url": "https://yle.fi/a/74-20250995",
-      "lead": "Professori pyörsi puheensa tekoälyn vaaratto­muudesta, kun agentit alkoivat työskennellä omavaltaisesti ryhmissä hänen omassa labora­toriossaan."
     },
     {
       "personName": "tekoäly",
