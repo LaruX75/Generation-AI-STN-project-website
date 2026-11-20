@@ -1,7 +1,49 @@
 {
-  "fetchedAt": "2026-11-19T14:01:41.943Z",
+  "fetchedAt": "2026-11-20T13:44:44.826Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-20T07:11:21Z",
+      "title": "Anthropicin listautuminen teki lähes kaikista tekoälyjätin työntekijöistä miljonäärejä",
+      "url": "https://yle.fi/a/74-20258044",
+      "lead": "Yhtiön listautumisanti oli suurin koskaan."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-19T20:30:35Z",
+      "title": "Uusia nimiä",
+      "url": "https://yle.fi/v/video/91-20258029",
+      "lead": "Datakeskuksia vihataan niin paljon, että tekoälyfirmat kyhäävät niille kovaa kyytiä uusia nimiä. 😬"
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-19T17:05:24Z",
+      "title": "Saitko potkut tekoälyn vuoksi? Kerro Ylelle, teemme juttua",
+      "url": "https://yle.fi/a/74-20258000",
+      "lead": "Useat työnantajat ovat perustelleet muutos­neuvotteluja tänä vuonna tekoälyn nopean kehityksen aiheuttamilla muutoksilla."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-19T16:55:09Z",
+      "title": "Kuvatoimistot jakoivat tekoälyn tekemää kuvaa Kertšinsalmen sillasta uutiskuvana",
+      "url": "https://yle.fi/a/74-20258002",
+      "lead": "Ylen verifiointitiimi havaitsi, että kuva oli tehty tekoälyllä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-19T16:32:32Z",
+      "title": "Anthropicin osake päätyi lähes sataan dollariin",
+      "url": "https://yle.fi/a/74-20258013",
+      "lead": ""
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-19T14:33:57Z",
+      "title": "Olli Lahtisen miljoonat syntyivät pelialalla – hän epäilee, että vastaava ei ole kohta enää mahdollista",
+      "url": "https://yle.fi/a/74-20257280",
+      "lead": "Kitka Gamesin toimitusjohtaja Olli Lahtinen arvioi tekoälyn kehityksen voivan vähentää merkittävästi pelialan työpaikkoja ja muuttaa koko alan toimintaa."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-19T09:34:33Z",
@@ -25,20 +67,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-11-18T16:05:03Z",
-      "title": "Suhdekohu ei pysäyttänyt tekoälyjätti Nvidiaa",
-      "url": "https://yle.fi/v/video/91-20257223",
-      "lead": "Nvidia julkaisi ensi kertaa tuloksensa ilman perustajaansa. Liikevaihto yli tuplaantui, mutta kuka korvaa Jensen Huangin? Video: Sini Vuorikivi"
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-18T13:13:40Z",
-      "title": "Helsingin palaute­järjestelmä ruuhkautui – nyt kaupunki hakee tekoälystä apua valitusten käsittelyyn",
-      "url": "https://yle.fi/a/74-20255816",
-      "lead": "Kaupunki väitti kesällä netin palautekanavan ruuhkautuneen, koska kesätyöntekijät eivät onnistuneet käsittelemään palautteita tarpeeksi nopeasti."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-11-18T11:54:45Z",
       "title": "Ryvettynyt Nvidia toi tekoäly­sijoittajille helpotuksen huokauksen – seuraava kompastinkivi odottaa huomisiltana",
       "url": "https://yle.fi/a/74-20257598",
@@ -50,20 +78,6 @@
       "title": "Xi kehotti tehostamaan yhteistyötä tekoälyalalla",
       "url": "https://yle.fi/a/74-20257577",
       "lead": "Aasian ja Tyynenmeren maiden talousjärjestö Apecin kaksipäiväinen huippukokous alkoi tänään Kiinassa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-18T04:00:35Z",
-      "title": "Tällainen oli Nvidian Jensen Huangin johtamistyyli, joka toimi 33 vuotta – epäonnistumisen pelko kaiken takana",
-      "url": "https://yle.fi/a/74-20256783",
-      "lead": "Johtamisen professori arvioi, miksi Jensen Huangin poikkeuk­sellinen tyyli nosti Nvidian maailman arvokkaimmaksi ja mitä tapahtuu nyt, kun perustaja on poissa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-17T11:20:41Z",
-      "title": "Kyber­hyökkäyksen uhriksi joutunut kauppias kertoo soitosta aamuyöllä – tällaista minuuttipeliä kyberiskuista on tullut",
-      "url": "https://yle.fi/a/74-20256414",
-      "lead": "Kyber­hyökkäyksistä on tullut aiempaa nopeampia tekoälyn avulla. Tietoturva-asiantuntija pitää muutosta huoles­tuttavana."
     },
     {
       "personName": "tekoäly",
@@ -127,20 +141,6 @@
       "title": "Sanoittajakonkari Heikki Salo luottaa tekoälyyn: ”Mitä sillä on väliä, vaikka lyriikan kirjoittaisi kissa”",
       "url": "https://yle.fi/a/74-20249346",
       "lead": "Kulttuurivieras on opettanut laulunkirjoittamista yli kolme vuosikymmentä. Nyt hän kehittää tekoälytyökalua sanoitusten tekijöille."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-02T13:46:56Z",
-      "title": "Tekoäly lisäsi Helsingin tuomiokirkon asunnon ­myyntikuvaan: ”Tässä kävi vahinko”, sanoo välitys­toimiston johtaja",
-      "url": "https://yle.fi/a/74-20254615",
-      "lead": "Kiinteistön­välitystoimisto poisti kuvan pian Ylen yhteydenoton jälkeen. Tekoäly oli muokannut Helsingin maisemaa välittäjän sitä huomaamatta."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-10-30T16:27:44Z",
-      "title": "Kuka tai mikä on taiteilija? Kiinalaistaiteilija haluaa herättää keskustelua tekoälystä",
-      "url": "https://yle.fi/a/74-20248924",
-      "lead": "Kiinan nouseviin mediataiteilijoihin kuuluva Liu Jiayu hyödyntää teoksissaan tekoälyä ja ympäristödataa professori Jussi Parikan kuratoimassa näyttelyssä."
     },
     {
       "personName": "Teemu Roos",
