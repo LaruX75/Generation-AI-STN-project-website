@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-11-20T13:44:44.826Z",
+  "fetchedAt": "2026-11-21T13:09:50.475Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-20T13:45:10Z",
+      "title": "Analyysi: Tekoälypelissä alkoi uusi vaihe",
+      "url": "https://yle.fi/a/74-20258138",
+      "lead": "Anthropicin ennätys­listautuminen paljasti – raha virtaa nyt laitteista sovelluksiin, kirjoittaa talous­toimittaja Ville Kolari."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-20T07:11:21Z",
@@ -29,13 +36,6 @@
       "title": "Kuvatoimistot jakoivat tekoälyn tekemää kuvaa Kertšinsalmen sillasta uutiskuvana",
       "url": "https://yle.fi/a/74-20258002",
       "lead": "Ylen verifiointitiimi havaitsi, että kuva oli tehty tekoälyllä."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-19T16:32:32Z",
-      "title": "Anthropicin osake päätyi lähes sataan dollariin",
-      "url": "https://yle.fi/a/74-20258013",
-      "lead": ""
     },
     {
       "personName": "tekoäly",
