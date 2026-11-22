@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-11-21T13:09:50.475Z",
+  "fetchedAt": "2026-11-22T12:57:11.518Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-22T10:52:09Z",
+      "title": "Liki 170 vuotta vanha pulma ratkesi tekoälyn avulla – matemaatikko: Tulkittava vielä ihmisille ymmärrettävästi",
+      "url": "https://yle.fi/a/74-20258338",
+      "lead": "Riemannin hypoteesia on jo kauan sovellettu käytännössä, mutta sen todistaminen on ollut matematiikan suurimpia ongelmia."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-22T04:45:35Z",
+      "title": "Pekka Juntin kolumni: Tekoälyä rouskuttavat datakeskukset tarvitsevat älyttömän määrän tuulivoimaloita Suomen metsiin",
+      "url": "https://yle.fi/a/74-20257949",
+      "lead": "Kuinka paljon tekoälyä ja sitä pyörittäviä datakeskuksia tarvitsemme – pärjäisimmekö mitenkään vähemmällä, Juntti kysyy."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-20T13:45:10Z",
@@ -15,13 +29,6 @@
       "title": "Anthropicin listautuminen teki lähes kaikista tekoälyjätin työntekijöistä miljonäärejä",
       "url": "https://yle.fi/a/74-20258044",
       "lead": "Yhtiön listautumisanti oli suurin koskaan."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-19T20:30:35Z",
-      "title": "Uusia nimiä",
-      "url": "https://yle.fi/v/video/91-20258029",
-      "lead": "Datakeskuksia vihataan niin paljon, että tekoälyfirmat kyhäävät niille kovaa kyytiä uusia nimiä. 😬"
     },
     {
       "personName": "tekoäly",
@@ -71,13 +78,6 @@
       "title": "Ryvettynyt Nvidia toi tekoäly­sijoittajille helpotuksen huokauksen – seuraava kompastinkivi odottaa huomisiltana",
       "url": "https://yle.fi/a/74-20257598",
       "lead": "Pörssit nousuun singonnut tekoälysektori on taitekohdassa. Hermostunut markkina sai hetkellisen helpotuksen, mutta seuraava jännityksen hetki odottaa huomenna."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-18T04:25:50Z",
-      "title": "Xi kehotti tehostamaan yhteistyötä tekoälyalalla",
-      "url": "https://yle.fi/a/74-20257577",
-      "lead": "Aasian ja Tyynenmeren maiden talousjärjestö Apecin kaksipäiväinen huippukokous alkoi tänään Kiinassa."
     },
     {
       "personName": "tekoäly",
