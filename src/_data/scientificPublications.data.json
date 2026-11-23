@@ -7089,5 +7089,61 @@
     "notes": "",
     "sourceId": "openalex:https://openalex.org/W4312411783",
     "source": "openalex"
+  },
+  {
+    "id": "pub-2027-594",
+    "code": "",
+    "year": 2027,
+    "status": "Published",
+    "authorsText": "Mary Webb; Matt Bower; Ana Amélia Carvalho; Fredrik Mørk Røkenes; Jodie Torrington; Jonathan David Cohen; Yousra Chtouki; Kathryn MacCallum; Tanya Linden; Deirdre Butler; Juliana E. Raffagheli; Henriikka Vartiainen; Martina Ronci; Peter Tiernan; David M. Smith; Chris Shelton; Joyce Malyn‐Smith; Pierre Gorissen",
+    "title": "Artificial Intelligence (AI) Literacy for Teaching and Learning: Towards a Pedagogical Framework",
+    "venue": "IFIP advances in information and communication technology",
+    "doi": "10.1007/978-3-032-34120-4_5",
+    "url": "",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W7236608110",
+    "source": "openalex"
+  },
+  {
+    "id": "pub-2026-595",
+    "code": "",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "A. E. Rodrigues de Camargo; Kaiju Kangas; Sini Davies",
+    "title": "Fostering Game Design in K-12 Education: A Framework for Teachers' Game Design Literacy",
+    "venue": "Communications in computer and information science",
+    "doi": "10.1007/978-3-032-44529-2_37",
+    "url": "",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W7234022309",
+    "source": "openalex"
+  },
+  {
+    "id": "a1-2026-597",
+    "code": "A1",
+    "year": 2026,
+    "status": "Published",
+    "authorsText": "Alanur Ahsen Dalyanci; Sini Kontkanen; Piia Näykki; Jari Laru; Pirkko Siklander; İsmail Çelik",
+    "title": "GenAI integration by teacher educators: analysis of their knowledge, perceptions, needs, and use",
+    "venue": "Teachers and Teaching",
+    "doi": "10.1080/13540602.2026.2764119",
+    "url": "",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W7234017591",
+    "source": "openalex"
+  },
+  {
+    "id": "a1-2024-596",
+    "code": "A1",
+    "year": 2024,
+    "status": "Published",
+    "authorsText": "Tarja Koskela; Elisa Silvennoinen; Mikko Aaltonen",
+    "title": "Nuorten väliset rikokset rikosprosessissa – syyttäjän päätös toimenpiteistä luopumisesta",
+    "venue": "Oikeus-lehti",
+    "doi": "",
+    "url": "https://openalex.org/W7215186508",
+    "notes": "",
+    "sourceId": "openalex:https://openalex.org/W7215186508",
+    "source": "openalex"
   }
 ]
