@@ -1,7 +1,21 @@
 {
-  "fetchedAt": "2026-11-22T12:57:11.518Z",
+  "fetchedAt": "2026-11-23T15:33:42.049Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-23T15:18:55Z",
+      "title": "Analyysi: Yksi mies voi olla satojen miljardien arvoinen – siksi Nvidian ja OpenAI:n johtajat palasivat vallan kahvaan",
+      "url": "https://yle.fi/a/74-20258551",
+      "lead": "Kuuluisa sijoittaja kertoi jo vuosia sitten kolme syytä, miksi perustaja­johtajat ovat ylivoimaisia, kirjoittaa talous­toimittaja Juha-Matti Mäntylä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-22T15:07:35Z",
+      "title": "Lahti-peli on Mikko Meriläiselle ensimmäinen – tekoälyn avulla ilman koodauskokemustakin voi kehittää itse kokonaisen pelin",
+      "url": "https://yle.fi/a/74-20257855",
+      "lead": "Tekoälyn ansiosta oman tietokonepelin kehittäminen on tänä päivänä mahdollista myös ilman pelialan kokemusta. Aikaa se kuitenkin vaatii."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-22T10:52:09Z",
@@ -57,13 +71,6 @@
       "title": "Tekoälyjätti Anthropic listautui vihdoin pörssiin – tämän takia koko maailma katsoo nyt sen kurssia",
       "url": "https://yle.fi/a/74-20257680",
       "lead": "Pörssikaupan aloittaminen Claude-tekoälystä tunnetun Anthropicin osakkeilla on testi sille, kestääkö sijoittajien usko tekoälyhuuman."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-19T04:35:40Z",
-      "title": "Omalääkäri, tekoäly ja muutokset ajoissa – näin Etelä-Savo rakensi kotihoidon, joka toteutuu parhaiten Suomessa",
-      "url": "https://yle.fi/a/74-20252653",
-      "lead": "Etelä-Savon hyvinvointi­alueen palvelualue­päällikön mukaan muun muassa omalääkärimalli ja tekoäly ovat parantaneet kotihoidon toteutumista."
     },
     {
       "personName": "tekoäly",
@@ -127,13 +134,6 @@
       "title": "EU-johtajilla tänään huippukokous – aiheina Ukraina, budjetti ja tekoäly",
       "url": "https://yle.fi/a/74-20256711",
       "lead": "Epävirallinen huippukokous pidetään Irlannin Dublinissa. Suomea kokouksessa edustaa pääministeri Petteri Orpo."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-09T08:03:38Z",
-      "title": "Lukiolaiset eivät enää kirjoita esseitä kotona – syy siihen on tekoäly",
-      "url": "https://yle.fi/a/74-20255230",
-      "lead": "Tekoäly on mullistanut lukioiden arjen: nyt esseet ja kirjoitelmat tehdään valvotusti, vilppi lisääntyy ja opettajat joutuvat muuttamaan tehtävänantoja."
     },
     {
       "personName": "tekoäly",
