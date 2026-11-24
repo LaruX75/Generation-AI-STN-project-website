@@ -1,7 +1,14 @@
 {
-  "fetchedAt": "2026-11-23T15:33:42.049Z",
+  "fetchedAt": "2026-11-24T15:26:34.053Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-24T13:02:32Z",
+      "title": "Analyysi: Jensen Huangin paluu pelasti pörssikurssit, mutta tekoälyn korttitalo huojuu yhä",
+      "url": "https://yle.fi/a/74-20258705",
+      "lead": "Jensen Huangin paluu Nvidian johtoon ei ratkaise tekoälybuumin ongelmia, kirjoittaa teknologia­toimittaja Teemu Hallamaa."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-23T15:18:55Z",
@@ -134,13 +141,6 @@
       "title": "EU-johtajilla tänään huippukokous – aiheina Ukraina, budjetti ja tekoäly",
       "url": "https://yle.fi/a/74-20256711",
       "lead": "Epävirallinen huippukokous pidetään Irlannin Dublinissa. Suomea kokouksessa edustaa pääministeri Petteri Orpo."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-08T05:00:35Z",
-      "title": "Sanoittajakonkari Heikki Salo luottaa tekoälyyn: ”Mitä sillä on väliä, vaikka lyriikan kirjoittaisi kissa”",
-      "url": "https://yle.fi/a/74-20249346",
-      "lead": "Kulttuurivieras on opettanut laulunkirjoittamista yli kolme vuosikymmentä. Nyt hän kehittää tekoälytyökalua sanoitusten tekijöille."
     },
     {
       "personName": "Teemu Roos",
