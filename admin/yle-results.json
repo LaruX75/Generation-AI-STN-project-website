@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-11-25T15:12:32.649Z",
+  "fetchedAt": "2026-11-26T14:37:09.560Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-26T09:10:31Z",
+      "title": "Ykkösaamun vieraana on Ulkopoliittisen instituutin johtaja Hiski Haukkala – mitä haluat kysyä?",
+      "url": "https://yle.fi/a/74-20258639",
+      "lead": "Maailma muuttuu nyt ennen näkemätöntä vauhtia. Millaiseen maailmanjärjestykseen olemme menossa?"
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-26T08:30:25Z",
+      "title": "Suomi on tekoälyn laskenta­tehon kärki­maita, mutta julkisten palvelujen uudistamiseen riittää vain murusia",
+      "url": "https://yle.fi/a/74-20259004",
+      "lead": "Pääministerin tilaamassa selvityksessä ehdotetaan, että kansalainen voisi jatkossa valtuuttaa oman tekoäly­agenttinsa asioimaan viranomaisissa."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-25T20:19:00Z",
+      "title": "Asiantuntijat: tekoäly-yhtiö Nvidian käänteet olleet ”omituinen tilanne”",
+      "url": "https://yle.fi/a/74-20259011",
+      "lead": ""
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-24T16:33:44Z",
@@ -15,13 +36,6 @@
       "title": "Analyysi: Huang joutuu olemaan uskollinen Trumpille aivan eri tavalla kuin vaimolleen",
       "url": "https://yle.fi/a/74-20258705",
       "lead": "Jensen Huangin paluu Nvidian johtoon ei ratkaise tekoälybuumin ongelmia, kirjoittaa teknologia­toimittaja Teemu Hallamaa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-23T15:18:55Z",
-      "title": "Analyysi: Yksi mies voi olla satojen miljardien arvoinen – siksi Nvidian ja OpenAI:n johtajat palasivat vallan kahvaan",
-      "url": "https://yle.fi/a/74-20258551",
-      "lead": "Kuuluisa sijoittaja kertoi jo vuosia sitten kolme syytä, miksi perustaja­johtajat ovat ylivoimaisia, kirjoittaa talous­toimittaja Juha-Matti Mäntylä."
     },
     {
       "personName": "tekoäly",
@@ -43,13 +57,6 @@
       "title": "Pekka Juntin kolumni: Tekoälyä rouskuttavat datakeskukset tarvitsevat älyttömän määrän tuulivoimaloita Suomen metsiin",
       "url": "https://yle.fi/a/74-20257949",
       "lead": "Kuinka paljon tekoälyä ja sitä pyörittäviä datakeskuksia tarvitsemme – pärjäisimmekö mitenkään vähemmällä, Juntti kysyy."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-20T13:45:10Z",
-      "title": "Analyysi: Tekoälypelissä alkoi uusi vaihe",
-      "url": "https://yle.fi/a/74-20258138",
-      "lead": "Anthropicin ennätys­listautuminen paljasti – raha virtaa nyt laitteista sovelluksiin, kirjoittaa talous­toimittaja Ville Kolari."
     },
     {
       "personName": "tekoäly",
@@ -127,13 +134,6 @@
       "title": "Helsinki neuvottelee Lapinlahden sairaalan vuokraamisesta tekoäly-yritykselle",
       "url": "https://yle.fi/a/74-20256896",
       "lead": "Kaupunki on suunnitellut rahoittavansa Lapinlahden sairaala-alueen lähes 50 miljoonan euron remontin pääosin vuokraamalla alueen tiloja yrityksille."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-13T06:00:35Z",
-      "title": "Huomaisitko tekoälyhuijarin haastattelussa?",
-      "url": "https://yle.fi/v/video/91-20254591",
-      "lead": "Testasimme, meneekö deepfake-hakija läpi kokeneen IT-alan rekrytoijan seulasta."
     },
     {
       "personName": "tekoäly",
