@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-11-26T14:37:09.560Z",
+  "fetchedAt": "2026-11-27T14:31:30.402Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-27T08:03:25Z",
+      "title": "Selvitys: Yli puolet suomalaisista käyttää jo tekoälyä",
+      "url": "https://yle.fi/a/74-20259316",
+      "lead": "Jopa 85 prosenttia 16–24-vuotiaista oli käyttänyt generatiivista tekoälyä viimeisen kolmen kuukauden aikana."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-27T05:40:03Z",
+      "title": "SAP suunnittelee 10 000 työpaikan vähentämistä tekoälyn vuoksi",
+      "url": "https://yle.fi/a/74-20259285",
+      "lead": "Mediatietojen mukaan kustannussäästö­toimenpiteet keskittyvät erityisesti tuotekehitys-, suunnittelu- ja myynti­osastoihin."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-26T15:35:59Z",
+      "title": "Kaija Koo laulaa netissä kappaleita, joita hän ei ole koskaan esittänyt – villi ilmiö uhkaa artistien elantoa",
+      "url": "https://yle.fi/a/74-20259189",
+      "lead": "Opetus- ja kulttuuriministeriön selvitys ehdottaa muutoksia tekijänoikeuslakiin syväväärennösten takia."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-26T09:10:31Z",
@@ -88,13 +109,6 @@
     },
     {
       "personName": "tekoäly",
-      "datePublished": "2026-11-18T22:18:19Z",
-      "title": "Tekoälyjätti Anthropic teki kaikkien aikojen listautumisennätyksen",
-      "url": "https://yle.fi/a/74-20257789",
-      "lead": "Yhtiö listautuu tänään teknologiapainotteiseen Nasdaq-pörssiin Yhdysvalloissa."
-    },
-    {
-      "personName": "tekoäly",
       "datePublished": "2026-11-18T11:54:45Z",
       "title": "Ryvettynyt Nvidia toi tekoäly­sijoittajille helpotuksen huokauksen – seuraava kompastinkivi odottaa huomisiltana",
       "url": "https://yle.fi/a/74-20257598",
@@ -127,20 +141,6 @@
       "title": "Analyysi: Mitä tapahtuu tekoäly­buumille, kun sen suurin hypettäjä on poissa?",
       "url": "https://yle.fi/a/74-20256737",
       "lead": "Jensen Huang vaikutti vuosien ajan tekoälyn suuntaan. Nyt vaihtoehtoisille visioille aukeaa tilaa, kirjoittaa teknologiatoimittaja Teemu Hallamaa."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-13T14:51:21Z",
-      "title": "Helsinki neuvottelee Lapinlahden sairaalan vuokraamisesta tekoäly-yritykselle",
-      "url": "https://yle.fi/a/74-20256896",
-      "lead": "Kaupunki on suunnitellut rahoittavansa Lapinlahden sairaala-alueen lähes 50 miljoonan euron remontin pääosin vuokraamalla alueen tiloja yrityksille."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-13T01:38:21Z",
-      "title": "EU-johtajilla tänään huippukokous – aiheina Ukraina, budjetti ja tekoäly",
-      "url": "https://yle.fi/a/74-20256711",
-      "lead": "Epävirallinen huippukokous pidetään Irlannin Dublinissa. Suomea kokouksessa edustaa pääministeri Petteri Orpo."
     },
     {
       "personName": "Teemu Roos",
