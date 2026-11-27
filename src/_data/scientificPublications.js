@@ -213,6 +213,7 @@ function sortTableItems(items) {
 
 module.exports = function scientificPublicationsData() {
   const decisions = loadDecisions();
+  const displayedDecisions = new Set();
 
   const items = records
     .filter(record => {
@@ -220,7 +221,9 @@ module.exports = function scientificPublicationsData() {
       // Explicit KEEP gate: only publications with an explicit editorial KEEP
       // decision are rendered. New raw records without a decision stay hidden
       // until reviewed via the publication-review GitHub Issue flow.
-      return decision?.status === "keep";
+      if (decision?.status !== "keep" || displayedDecisions.has(decision)) return false;
+      displayedDecisions.add(decision);
+      return true;
     })
     .map((record, index) => {
     const link = buildLink(record);

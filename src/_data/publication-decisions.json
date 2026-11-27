@@ -1963,6 +1963,7 @@
       "reason": "GenAI-relevant (no-member-match review)",
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
+      "doi": "10.21428/9885764c.799b4d2d",
       "url": "https://researchportal.helsinki.fi/en/publications/6e5b5d9c-5ac9-4a31-88f9-be9bb09d6803",
       "id": "journalarticle-2023-rf297"
     },
@@ -2214,12 +2215,11 @@
       "id": "a1-2024-105"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (López-Pernas review)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://doi.org/10.30191/ETS.202604_29(2).RP06",
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf372"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-11-27)",
+      "date": "2026-11-27",
+      "doi": "10.30191/ets.202604_29(2).rp06",
+      "aliasUrl": "https://doi.org/10.30191/ets.202604_29(2).rp06"
     },
     {
       "status": "rejected",
@@ -2294,12 +2294,11 @@
       "id": "b3vertaisarvioimatonartikkelikonferenssijulkaisussa-2025-rf399"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (López-Pernas review)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://doi.org/10.1007/978-981-96-5658-5_45",
-      "id": "a4artikkelikonferenssijulkaisussa-2025-rf400"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-11-27)",
+      "date": "2026-11-27",
+      "doi": "10.1007/978-981-96-5658-5_45",
+      "aliasUrl": "https://doi.org/10.1007/978-981-96-5658-5_45"
     },
     {
       "status": "rejected",
@@ -2358,20 +2357,18 @@
       "id": "i2tietojaviestinttekninenohjelmataiohjelmisto-nodate-rf467"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (López-Pernas review)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://doi.org/10.1016/j.chbr.2026.101130",
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf520"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-11-27)",
+      "date": "2026-11-27",
+      "doi": "10.1016/j.chbr.2026.101130",
+      "aliasUrl": "https://doi.org/10.1016/j.chbr.2026.101130"
     },
     {
-      "status": "keep",
-      "reason": "GenAI-relevant (López-Pernas review)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://doi.org/10.1016/j.chb.2025.108769",
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf537"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-11-27)",
+      "date": "2026-11-27",
+      "doi": "10.1016/j.chb.2025.108769",
+      "aliasUrl": "https://doi.org/10.1016/j.chb.2025.108769"
     },
     {
       "status": "rejected",
@@ -2475,7 +2472,9 @@
       "decidedAt": "2026-10-01",
       "decidedBy": "jlaru",
       "doi": "10.1016/j.caeo.2026.100422",
-      "id": "a1-2026-559"
+      "id": "a1-2026-559",
+      "sourceId": "uefconnect:https://doi.org/10.1016/j.caeo.2026.100422",
+      "aliasUrl": "https://doi.org/10.1016/j.caeo.2026.100422"
     },
     {
       "status": "rejected",
@@ -3510,12 +3509,11 @@
       "id": "a3-2023-16"
     },
     {
-      "status": "keep",
-      "reason": "GenAI core publication (C-class)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-11-27)",
+      "date": "2026-11-27",
       "doi": "10.1016/j.chb.2023.108076",
-      "id": "a2-2024-18"
+      "aliasUrl": "https://doi.org/10.1016/j.chb.2023.108076"
     },
     {
       "status": "keep",
@@ -3550,12 +3548,11 @@
       "id": "a4-2025-42"
     },
     {
-      "status": "keep",
-      "reason": "GenAI core publication (C-class)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-11-27)",
+      "date": "2026-11-27",
       "doi": "10.1109/mc.2024.3349913",
-      "id": "a1-2025-44"
+      "aliasUrl": "https://doi.org/10.1109/mc.2024.3349913"
     },
     {
       "status": "keep",
@@ -3732,28 +3729,24 @@
       "id": "a4artikkelikonferenssijulkaisussa-2025-rf374"
     },
     {
-      "status": "keep",
-      "reason": "GenAI core publication (C-class)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://doi.org/10.1109/TLT.2025.3568599",
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf384"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-11-27)",
+      "date": "2026-11-27",
+      "doi": "10.1109/tlt.2025.3568599",
+      "aliasUrl": "https://doi.org/10.1109/tlt.2025.3568599"
     },
     {
-      "status": "keep",
-      "reason": "GenAI core publication (C-class)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://doi.org/10.1080/01443410.2025.2553639",
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2025-rf394"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-11-27)",
+      "date": "2026-11-27",
+      "doi": "10.1080/01443410.2025.2553639",
+      "aliasUrl": "https://doi.org/10.1080/01443410.2025.2553639"
     },
     {
-      "status": "keep",
-      "reason": "GenAI core publication (C-class)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://ceur-ws.org/Vol-3994/paper1.pdf",
-      "id": "a4artikkelikonferenssijulkaisussa-2025-rf412"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-11-27)",
+      "date": "2026-11-27",
+      "url": "https://ceur-ws.org/Vol-3994/paper1.pdf"
     },
     {
       "status": "keep",
@@ -3796,12 +3789,11 @@
       "id": "g5-2026-538"
     },
     {
-      "status": "keep",
-      "reason": "GenAI core publication (C-class)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://doi.org/10.1002/jcal.70285",
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf541"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-11-27)",
+      "date": "2026-11-27",
+      "doi": "10.1002/jcal.70285",
+      "aliasUrl": "https://doi.org/10.1002/jcal.70285"
     },
     {
       "status": "keep",
@@ -3812,20 +3804,18 @@
       "id": "a1-2025-536"
     },
     {
-      "status": "keep",
-      "reason": "GenAI core publication (C-class)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://doi.org/10.18608/jla.2025.8591",
-      "id": "a2katsausartikkelitieteellisessaikakauslehdess-2025-rf539"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-11-27)",
+      "date": "2026-11-27",
+      "doi": "10.18608/jla.2025.8591",
+      "aliasUrl": "https://doi.org/10.18608/jla.2025.8591"
     },
     {
-      "status": "keep",
-      "reason": "GenAI core publication (C-class)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://doi.org/10.1109/ICALT64023.2025.00044",
-      "id": "a4artikkelikonferenssijulkaisussa-2025-rf546"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-11-27)",
+      "date": "2026-11-27",
+      "doi": "10.1109/icalt64023.2025.00044",
+      "aliasUrl": "https://doi.org/10.1109/icalt64023.2025.00044"
     },
     {
       "status": "rejected",
@@ -3835,12 +3825,11 @@
       "aliasUrl": "https://doi.org/10.1007/s10758-026-10005-8"
     },
     {
-      "status": "keep",
-      "reason": "GenAI core publication (C-class)",
-      "decidedAt": "2026-10-01",
-      "decidedBy": "jlaru",
-      "url": "https://doi.org/10.1016/j.caeai.2026.100649",
-      "id": "a1alkuperisartikkelitieteellisessaikakauslehdess-2026-rf535"
+      "status": "rejected",
+      "reason": "Not a Generation AI project publication (reviewer confirmation 2026-11-27)",
+      "date": "2026-11-27",
+      "doi": "10.1016/j.caeai.2026.100649",
+      "aliasUrl": "https://doi.org/10.1016/j.caeai.2026.100649"
     },
     {
       "status": "rejected",
@@ -3848,6 +3837,257 @@
       "date": "2026-10-26",
       "doi": "10.6018/red.711091",
       "aliasUrl": "https://doi.org/10.6018/red.711091"
+    },
+    {
+      "status": "keep",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.15388/infedu.2601.025",
+      "sourceId": "openalex:https://openalex.org/W7214976805",
+      "aliasUrl": "https://doi.org/10.15388/infedu.2601.025"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1088/2632-2153/aead48",
+      "sourceId": "openalex:https://openalex.org/W7125162857"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.5281/zenodo.19732527",
+      "sourceId": "openalex:https://openalex.org/W7155491406"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1109/mitp.2026.3712183",
+      "sourceId": "uefconnect:https://doi.org/10.1109/MITP.2026.3712183",
+      "aliasUrl": "https://doi.org/10.1109/MITP.2026.3712183"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.57813/eleed.v1ise2026.263",
+      "sourceId": "uefconnect:https://doi.org/10.57813/eleed.v1ise2026.263",
+      "aliasUrl": "https://doi.org/10.57813/eleed.v1ise2026.263"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "sourceId": "openalex:https://openalex.org/w7215500657",
+      "aliasUrl": "https://openalex.org/W7215500657"
+    },
+    {
+      "status": "keep",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1007/978-3-032-37979-5_9",
+      "sourceId": "openalex:https://openalex.org/W7220729024"
+    },
+    {
+      "status": "keep",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.82444/warw.33667144",
+      "sourceId": "openalex:https://openalex.org/W2140409259"
+    },
+    {
+      "status": "keep",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3856302",
+      "sourceId": "openalex:https://openalex.org/W7222086176"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "sourceId": "openalex:https://openalex.org/w7137623103",
+      "aliasUrl": "https://openalex.org/W7137623103"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1029/2026gl122882",
+      "sourceId": "orcid:231215087"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.17605/osf.io/vmea2",
+      "sourceId": "openalex:https://openalex.org/W7223810771"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "sourceId": "openalex:https://openalex.org/w7224693091",
+      "aliasUrl": "https://openalex.org/W7224693091"
+    },
+    {
+      "status": "keep",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3856208.3856284",
+      "sourceId": "openalex:https://openalex.org/W7225228382"
+    },
+    {
+      "status": "keep",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3856208.3856281",
+      "sourceId": "openalex:https://openalex.org/W7225233524"
+    },
+    {
+      "status": "keep",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3856208.3856285",
+      "sourceId": "openalex:https://openalex.org/W7225238633"
+    },
+    {
+      "status": "keep",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3856208.3856286",
+      "sourceId": "openalex:https://openalex.org/W7225241891"
+    },
+    {
+      "status": "keep",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3856208.3856213",
+      "sourceId": "openalex:https://openalex.org/W7225248035"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3856208.3856287",
+      "sourceId": "openalex:https://openalex.org/W7225270289"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "sourceId": "orcid:232608963",
+      "aliasUrl": "https://researchportal.helsinki.fi/en/publications/6a586fc0-5fee-4932-a2d5-a34815adddb1"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "sourceId": "orcid:232608962",
+      "aliasUrl": "https://researchportal.helsinki.fi/en/publications/1444215c-8330-4ee5-b46f-9f18aa9dc01f"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.24377/dteij.article1593",
+      "sourceId": "openalex:https://openalex.org/W2993069471"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3564721",
+      "sourceId": "openalex:https://openalex.org/W4308834102"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.5281/zenodo.24093817",
+      "sourceId": "openalex:https://openalex.org/W7225658104"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "sourceId": "orcid:232609657",
+      "aliasUrl": "https://researchportal.helsinki.fi/en/publications/d46997c5-a079-4aaa-9dfc-1abb6c33a56a"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.57967/hf/7027",
+      "sourceId": "openalex:https://openalex.org/W7106134279"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1145/3577871.3577873",
+      "sourceId": "openalex:https://openalex.org/W4312411783"
+    },
+    {
+      "status": "keep",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1007/978-3-032-34120-4_5",
+      "sourceId": "openalex:https://openalex.org/W7236608110"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1007/978-3-032-44529-2_37",
+      "sourceId": "openalex:https://openalex.org/W7234022309"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "doi": "10.1080/13540602.2026.2764119",
+      "sourceId": "openalex:https://openalex.org/W7234017591"
+    },
+    {
+      "status": "rejected",
+      "reason": "Editorial decision for GitHub publication review #5",
+      "decidedAt": "2026-11-27",
+      "decidedBy": "jlaru",
+      "sourceId": "openalex:https://openalex.org/w7215186508",
+      "aliasUrl": "https://openalex.org/W7215186508"
     }
   ]
 }
