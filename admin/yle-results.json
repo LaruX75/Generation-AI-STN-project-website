@@ -1,7 +1,28 @@
 {
-  "fetchedAt": "2026-11-27T14:31:30.402Z",
+  "fetchedAt": "2026-11-28T13:47:14.681Z",
   "count": 26,
   "articles": [
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-28T10:58:48Z",
+      "title": "Tekoälyn käyttäminen suomeksi kuluttaa enemmän laskentaa – tehokäyttäjät siirtyneet kommunikoimaan luolamiesten tyylillä",
+      "url": "https://yle.fi/a/74-20259080",
+      "lead": "Ruotsalaisen tekoäly-yrityksen selvityksen mukaan suomeksi kirjoitettu teksti kuluttaa tokeneita jopa kaksi kertaa enemmän kuin englannin kielellä."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-28T03:30:35Z",
+      "title": "Susanna pelkää irtisanomista: ”Tehtäväni on opettaa tekoälyä tekemään työni, jotta minulle voidaan antaa potkut”",
+      "url": "https://yle.fi/a/74-20253386",
+      "lead": "Asian­tuntijoiden mukaan tekoäly on lisännyt uudelleen­kouluttautumisen tarvetta."
+    },
+    {
+      "personName": "tekoäly",
+      "datePublished": "2026-11-27T17:05:25Z",
+      "title": "Sosten pääsihteeri: Tekoäly tuo hoidon tarpeen arviointiin paljon hyvää",
+      "url": "https://yle.fi/a/74-20259422",
+      "lead": "Pääsihteerin mukaan tekoälyyn pitää kuitenkin suhtautua varauskella."
+    },
     {
       "personName": "tekoäly",
       "datePublished": "2026-11-27T08:03:25Z",
@@ -22,13 +43,6 @@
       "title": "Kaija Koo laulaa netissä kappaleita, joita hän ei ole koskaan esittänyt – villi ilmiö uhkaa artistien elantoa",
       "url": "https://yle.fi/a/74-20259189",
       "lead": "Opetus- ja kulttuuriministeriön selvitys ehdottaa muutoksia tekijänoikeuslakiin syväväärennösten takia."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-26T09:10:31Z",
-      "title": "Ykkösaamun vieraana on Ulkopoliittisen instituutin johtaja Hiski Haukkala – mitä haluat kysyä?",
-      "url": "https://yle.fi/a/74-20258639",
-      "lead": "Maailma muuttuu nyt ennen näkemätöntä vauhtia. Millaiseen maailmanjärjestykseen olemme menossa?"
     },
     {
       "personName": "tekoäly",
@@ -120,20 +134,6 @@
       "title": "YK:n ilmastopäällikkö korostaa tekoälyn mahdollisuuksia ja vaaroja",
       "url": "https://yle.fi/a/74-20257139",
       "lead": ""
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-16T06:30:03Z",
-      "title": "Analyysi: Tekoäly uhkaa töitä – hallitus tarjoaa ratkaisua, joka hyödyttäisi harvoja ja varakkaita",
-      "url": "https://yle.fi/a/74-20256675",
-      "lead": "Tapoja päivittää osaamista on karsittu samaan aikaan, kun työelämän muutos on kiihtynyt, kirjoittaa taloustoimittaja Karla Kempas."
-    },
-    {
-      "personName": "tekoäly",
-      "datePublished": "2026-11-16T05:33:34Z",
-      "title": "Työnantajat arvioivat nuoren ja tekoälyn tekemät kesätyö­hakemukset: katso satoja hakemuksia lukeneiden mielipiteet",
-      "url": "https://yle.fi/a/74-20255968",
-      "lead": "Tässä jutussa pääset ottamaan mallia kahdesta kehutusta hakemuksesta ja kuulemaan työnantajien vinkkejä kevään kesätyöhakua varten."
     },
     {
       "personName": "tekoäly",
